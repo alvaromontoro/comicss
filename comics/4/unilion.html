@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://comicss.com" />
+		<meta property="og:image" content="http://comicss.com/images/thumb.png" />
+		<meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:url" content="http://www.textivities.com/">
+		<meta name="twitter:title" content="comiCSS">
+		<meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+		<meta name="twitter:image" content="http://comicss.com/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+
+
+.canvas {
+  width: 90vmin;
+  height: 90vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.canvas div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/* Unicorn */
+.unicorn {
+  --skin: white;
+  --contrast: pink;
+  width: 35%;
+  height: 45%;
+  bottom: 10%;
+  right: 0;
+}
+
+.unicorn .mouth {
+  width: 90%;
+  height: 50%;
+  background:
+    radial-gradient(circle at 27% 57%, #000 5%, #0000 0),
+    radial-gradient(circle at 73% 57%, #000 5%, #0000 0),
+    radial-gradient(circle at 50% 100%, #0000 18%, #000 0 25%, #0000 0) 4% 7% / 50% 50%,
+    radial-gradient(circle at 50% 100%, #0000 18%, #000 0 25%, #0000 0) 96% 7% / 50% 50%
+    ;
+  background-repeat: no-repeat;
+  background-color: var(--skin);
+  border-radius: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border: 0.75vmin solid;
+  border-bottom: 1vmin solid;
+}
+
+.unicorn .face {
+  width: 80%;
+  height: 80%;
+  background:
+    radial-gradient(circle at 31% 51.5%, #fff 3%, #0000 0),
+    radial-gradient(circle at 61% 51.5%, #fff 3%, #0000 0),
+    radial-gradient(circle at 35% 54%, #000 10%, #0000 0),
+    radial-gradient(circle at 65% 54%, #000 10%, #0000 0)
+    ;
+  background-color: var(--skin);
+  border-radius: 100% / 130% 130% 60% 60%;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  box-shadow: 0 -0.25vmin 0 0.75vmin;
+  clip-path: polygon(-10% -10%, 110% -10%, 110% 70.5%, -10% 70.5%);
+}
+
+.unicorn .ear {
+  width: 20%;
+  height: 25%;
+  border: 0.75vmin solid;
+  background:
+    radial-gradient(at 100% 70%, var(--contrast) 50%, #0000 0) 0 0 / 70% 100%
+    ;
+  background-repeat: no-repeat;
+  background-color: var(--skin);
+  border-radius: 100% 20% 50% 50% / 60%;
+  transform: rotate(-35deg);
+  top: 0%;
+  left: 5%;
+}
+
+.unicorn .ear + .ear {
+  transform: scaleX(-1) rotate(-30deg);
+  left: auto;
+  right: 7%;
+}
+
+.unicorn .mane {
+  width: 70%;
+  height: 30%;
+  border: 0.75vmin solid;
+  border-radius: 100% / 100% 140% 40% 100%; 
+  top: 7%;
+  left: 57%;
+  transform: translateX(-50%) rotate(30deg);
+  background-color: skyblue;
+  box-shadow: 
+    inset -2vmin 4vmin 0 -2vmin purple,
+    inset 2vmin -3vmin 0 -2vmin gold
+}
+
+.unicorn .horn {
+  width: 15%;
+  height: 35%;
+  border: 0.75vmin solid;
+  border-radius: 100% / 130% 130% 30% 30%;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    gold repeating-linear-gradient(155deg, #0000 0 25%, #0002 0 27%);
+}
+
+.unicorn .teeth {
+  border: 0.75vmin solid;
+  width: 20%;
+  height: 7%;
+  border-radius: 60% / 20% 20% 100% 100%;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f88;
+}
+
+.unicorn .wig {
+  --mane: #c84;
+  top: -10%;
+  left: -5%;
+  width: 110%;
+  height: 130%;
+  background:
+    radial-gradient(circle at 50% 20%, var(--mane) 13%, #0000 0),
+    radial-gradient(circle at 20% 20%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 35% 20%, var(--mane) 14%, #0000 0),
+    radial-gradient(circle at 50% 13%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 65% 15%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 80% 20%, var(--mane) 12%, #0000 0),
+    radial-gradient(circle at 80% 36%, var(--mane) 13%, #0000 0),
+    radial-gradient(circle at 90% 45%, var(--mane) 06%, #0000 0),
+    radial-gradient(circle at 93% 50%, var(--mane) 04%, #0000 0),
+    radial-gradient(circle at 85% 60%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 82% 55%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 83% 75%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 70% 83%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 58% 80%, var(--mane) 14%, #0000 0),
+    radial-gradient(circle at 40% 82%, var(--mane) 12%, #0000 0),
+    radial-gradient(circle at 27% 80%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 16% 70%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 13% 60%, var(--mane) 06%, #0000 0),
+    radial-gradient(circle at 12% 53%, var(--mane) 08%, #0000 0),
+    radial-gradient(circle at 14% 43%, var(--mane) 08%, #0000 0),
+    radial-gradient(circle at 15.5% 33%, var(--mane) 10%, #0000 0),
+    
+    radial-gradient(circle at 20% 20%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 35% 20%, #000 15.5%, #0000 0),
+    radial-gradient(circle at 50% 13%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 65% 15%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 80% 20%, #000 13.5%, #0000 0),
+    radial-gradient(circle at 80% 36%, #000 14.5%, #0000 0),
+    radial-gradient(circle at 90% 45%, #000 07.5%, #0000 0),
+    radial-gradient(circle at 93% 50%, #000 05.5%, #0000 0),
+    radial-gradient(circle at 85% 60%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 83% 75%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 70% 83%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 58% 80%, #000 16.0%, #0000 0),
+    radial-gradient(circle at 40% 82%, #000 14.0%, #0000 0),
+    radial-gradient(circle at 27.5% 80%, #000 12%, #0000 0),
+    radial-gradient(circle at 16% 70%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 13% 60%, #000 07.5%, #0000 0),
+    radial-gradient(circle at 12% 53%, #000 09.5%, #0000 0),
+    radial-gradient(circle at 14% 43%, #000 09.5%, #0000 0),
+    radial-gradient(circle at 15.5% 33%, #000 11.5%, #0000 0)
+    ;
+}
+
+.unicorn .tag {
+  width: 30%;
+  height: 15%;
+  background: #ff8;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 2.5vmin;
+  border: 0.75vmin solid;
+  transform: rotate(-60deg);
+  top: 98%;
+  left: -15%;
+}
+
+.unicorn .tag::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  border: 0.75vmin solid transparent;
+  border-top-color: #000;
+  left: 80%;
+  position: absolute;
+  display: block;
+  top: 30%;
+}
+
+/* Lion */
+.lion {
+  --skin: #fc8;
+  --mane: #d83;
+  width: 55%;
+  height: 45%;
+  bottom: 8%;
+  left: 0;
+}
+
+.lion .face {
+  width: 70%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: 
+    drop-shadow(0 0.75vmin) drop-shadow(0 -0.5vmin)
+    drop-shadow(0.6vmin 0) drop-shadow(-0.6vmin 0)
+}
+
+.lion .face::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 85.5%;
+  height: 95%;
+  background: var(--skin);
+  border-radius: 100% / 40%;
+  top: 50.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lion .face::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 71.75%;
+  background:
+    linear-gradient(to right, #0000 49%, #000 0 51%, #0000 0) no-repeat 50% 95% / 100% 20%,
+    radial-gradient(circle at 32% 49%, #fff 3%, #0000 0),
+    radial-gradient(circle at 62% 49%, #fff 3%, #0000 0),
+    radial-gradient(circle at 35% 52%, #000 10%, #0000 0),
+    radial-gradient(circle at 65% 52%, #000 10%, #0000 0)
+    ;
+  background-color: var(--skin);
+  border-radius: 20% / 100%;
+}
+
+.lion .mane {
+  top: -3%;
+  color: var(--mane);
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 20%, var(--mane) 13%, #0000 0),
+    radial-gradient(circle at 20% 20%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 35% 20%, var(--mane) 14%, #0000 0),
+    radial-gradient(circle at 50% 13%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 65% 15%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 80% 20%, var(--mane) 12%, #0000 0),
+    radial-gradient(circle at 85% 36%, var(--mane) 13%, #0000 0),
+    radial-gradient(circle at 93% 50%, var(--mane) 04%, #0000 0),
+    radial-gradient(circle at 88% 60%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 83% 75%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 70% 83%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 58% 80%, var(--mane) 14%, #0000 0),
+    radial-gradient(circle at 40% 82%, var(--mane) 12%, #0000 0),
+    radial-gradient(circle at 27% 80%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 14% 70%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 12% 53%, var(--mane) 08%, #0000 0),
+    radial-gradient(circle at 12% 33%, var(--mane) 10%, #0000 0),
+    radial-gradient(circle at 20% 20%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 35% 20%, #000 15.5%, #0000 0),
+    radial-gradient(circle at 50% 13%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 65% 15%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 80% 20%, #000 13.5%, #0000 0),
+    radial-gradient(circle at 85% 36%, #000 14.5%, #0000 0),
+    radial-gradient(circle at 93% 50%, #000 05.5%, #0000 0),
+    radial-gradient(circle at 88% 60%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 83% 75%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 70% 83%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 58% 80%, #000 16.0%, #0000 0),
+    radial-gradient(circle at 40% 82%, #000 14.0%, #0000 0),
+    radial-gradient(circle at 27.5% 80%, #000 12%, #0000 0),
+    radial-gradient(circle at 14% 70%, #000 11.5%, #0000 0),
+    radial-gradient(circle at 12% 53%, #000 09.5%, #0000 0),
+    radial-gradient(circle at 12% 33%, #000 11.5%, #0000 0)
+    ;
+}
+
+.lion .mouth {
+  border: 0.75vmin solid;
+  width: 20%;
+  height: 7%;
+  border-radius: 60% /  100% 100% 20% 20%;
+  top: 67%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f88;
+}
+
+.lion .nose {
+  border: 0.75vmin solid;
+  width: 10%;
+  height: 7%;
+  border-radius: 60% / 20% 20% 100% 100%;
+  top: 57%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+}
+
+.lion .ear {
+  width: 20%;
+  height: 15%;
+  border: 0.75vmin solid;
+  border-radius: 50% / 100% 100% 0 0;
+  background: var(--skin) radial-gradient(circle at 50% 100%, pink 30%, #0000 0);
+  top: 6%;
+  left: 15%;
+  transform: rotate(-10deg);
+}
+
+.lion .ear + .ear {
+  left: auto;
+  right: 16%;
+  transform: scaleX(-1) rotate(-14deg);
+}
+.lion .drop {
+  width: 10vmin;
+  height: 10vmin;
+  background: skyblue radial-gradient(circle at 30% 70%, #fff 15%, #0000 0);
+  border-radius: 0 100% 100% 100%;
+  border: 0.75vmin solid;
+  transform: rotate(45deg);
+  top: 35%;
+  left: 7%;
+}
+
+/* Bubble */
+.bubble {
+  --skin: skyblue;
+  width: 85%;
+  height: 50%;
+  top: -10%;
+  left: 5%;
+}
+
+.bubble .bg {
+  width: 70%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: 
+    drop-shadow(0 0.75vmin) drop-shadow(0 -0.5vmin)
+    drop-shadow(0.6vmin 0) drop-shadow(-0.6vmin 0)
+}
+
+.bubble .bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 85.5%;
+  height: 95%;
+  background: var(--skin);
+  border-radius: 100% / 40%;
+  top: 50.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bubble .bg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 71.75%;
+  background-color: var(--skin);
+  border-radius: 20% / 100%;
+}
+
+.bubble .line {
+  width: 15%;
+  height: 35%;
+  bottom: 0;
+  left: 61%;
+  background: conic-gradient(at 0% 100%, skyblue 20deg, #0000 0);
+  transform: scaleX(-1);
+}
+
+.bubble .line-bg {
+  width: 18%;
+  height: 35%;
+  bottom: -4%;
+  left: 61%;
+  background: conic-gradient(at 10% 100%, #0000 1deg, #000 2deg 27deg, #0000 0);
+  transform: scaleX(-1) rotate(-4deg);
+}
+
+.bubble .text {
+  font-family: 'Carter One', fantasy, serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 4vmin;
+  text-align: center;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <div class="unicorn">
+        
+        <div class="wig"></div>
+        <div class="ear"></div>
+        <div class="ear"></div>
+        <div class="mouth"></div>
+        <div class="face"></div>
+        <div class="mane"></div>
+        <div class="horn"></div>
+        <div class="teeth"></div>
+        <div class="tag">Wig</div>
+      </div>
+        
+      <div class="lion">
+        <div class="mane"></div>
+        <div class="ear"></div>
+        <div class="ear"></div>
+        <div class="face"></div>
+        <div class="mouth"></div>
+        <div class="nose"></div>
+        <div class="drop"></div>
+      </div>
+        
+      <div class="bubble">
+        <div class="line-bg"></div>
+        <div class="bg"></div>
+        <div class="line"></div>
+        <div class="text">Look! I'm a Lion!<br/>...Roar and so forth!</div>
+      </div>
+    </div>
+    
+    <a id="youtube" href="https://www.youtube.com/watch?v=3MIMN8fUPUU" target="_blank">
+      <span>See how this demo was coded</span>
+    </a>
+  </body>
+  </html>

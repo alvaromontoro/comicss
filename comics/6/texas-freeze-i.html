@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://comicss.com" />
+		<meta property="og:image" content="http://comicss.com/images/thumb.png" />
+		<meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:url" content="http://www.textivities.com/">
+		<meta name="twitter:title" content="comiCSS">
+		<meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+		<meta name="twitter:image" content="http://comicss.com/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+:root {
+  --skin: #fca;
+  --skin-shadow: #c003;
+  --hair: #963;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.comic-strip {
+  display: flex;
+  gap: 1vmin;
+  font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  transform: translateY(-100%);
+  height: 3vmin;
+  line-height: 3vmin;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2.5vmin;
+  width: 100%;
+}
+
+h1 span {
+  font-size: 0.75em;
+  float: right;
+}
+
+h1 a,
+h1 a:link,
+h1 a:visited {
+  color: #369;
+}
+
+.box {
+  width: 45vmin;
+  aspect-ratio: 1 / 1;
+  border: 0.5vmin solid;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#a0a3, #0000 70%);
+}
+
+.box *,
+.box *::before,
+.box *::after {
+  position: absolute;
+  box-sizing: border-box;
+  font-size: 2vmin;
+}
+
+.desc {
+  padding: 0.5vmin 1vmin;
+  background: #ffc;
+  width: 100%;
+  border-bottom: 0.5vmin solid;
+  font-weight: bold;
+  font-style: italic;
+  z-index: 1;
+  line-height: 3vmin;
+}
+
+.box {
+  aspect-ratio: 1.3;
+  aoverflow: visible;
+}
+
+.character {
+  width: 60%;
+  aspect-ratio: 2 / 3;
+  top: 15%;
+  left: -3%;
+}
+
+.character .face {
+  width: 40%;
+  aspect-ratio: 3 / 4;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 0.4vmin solid;
+  border-bottom: 0.6vmin solid;
+  border-top: 0.6vmin solid;
+  border-radius: 100% 60% 100% 120% / 80% 70% 150% 120%;
+ background: var(--skin);
+}
+
+.character .ear {
+  width: 15%;
+  aspect-ratio: 2 / 3;
+  border-radius: 100% / 80% 80% 120% 120%;
+  border: 0.4vmin solid;
+  border-top: 0.7vmin solid;
+  border-bottom: 0.5vmin solid;
+  border-left: 0.125vmin solid #0000;
+  top: 23%;
+  left: 57.5%;
+  transform: rotate(10deg);
+  background: var(--skin);
+}
+
+.character .ear::before {
+  content: "";
+  width: 60%;
+  height: 60%;
+  border-radius: 90%;
+  border: 0.4vmin solid;
+  border-right: 0.125vmin solid #0000;
+  border-bottom: 0.25vmin solid #0000;
+  top: 20%;
+  left: 20%;
+  box-shadow: inset 0.5vmin 0 0.5vmin var(--skin-shadow);
+}
+
+.character .ear::after {
+  content: "";
+  width: 40%;
+  height: 25%;
+  border-radius: 90%;
+  border: 0.4vmin solid;
+  border-bottom: 0.25vmin solid #0000;
+  border-right: 0.25vmin solid #000;
+  top: 52%;
+  left: 25%;
+  transform: rotate(-10deg);
+  background: var(--skin)
+
+}
+
+.character .face .ear {
+  width: 40%;
+  transform: scaleX(-1) rotate(12deg);
+  left: -25%;
+  top: 37%;
+  background: var(--skin);
+}
+
+.character .hair {
+  border: 0.4vmin solid;
+  border-left: 0.5vmin solid;
+  border-radius: 100%;
+  background: var(--hair);
+}
+
+.character .hair-side {
+  width: 50%;
+  height: 50%;
+  top: -2%;
+  left: -25%;
+  transform: rotate(7deg);
+  box-shadow: 
+    inset 0.5vmin -0.5vmin 0.25vmin #0002;
+}
+
+.character .hair-side::before {
+  content: "";
+  border-radius: 50%;
+  width: 60%;
+  aspect-ratio: 1;
+  background: var(--hair);
+  transform: translate(-50%, -50%);
+  left: 60%;
+  top: 0;
+}
+
+.character .hair-top {
+  width: 120%;
+  height: 35%;
+  border-radius: 120% 0% 130% 40%;
+  transform: rotate(15deg);
+  left: -10%;
+  top: -20%;
+  box-shadow: 
+    inset 0.5vmin 0.25vmin 0.25vmin #0002, 
+    inset -0.5vmin -0.25vmin 0.25vmin #fff1;
+}
+
+.character .hair-back {
+  width: 10%;
+  height: 15%;
+  top: 12%;
+  left: 62%;
+  transform: rotate(0deg);
+}
+
+.character .eye {
+  width: 8%;
+  height: 11%;
+  border-radius: 50%;
+  top: 49%;
+  left: 82%;
+  transform: rotate(6deg);
+  background: radial-gradient(circle at 30% 25%, #fff 15%, #0000 0);
+  background-color: black;
+  border: 0.125vmin solid;
+}
+
+.character .eye ~ .eye {
+  left: 50%;
+  top: 48%;
+}
+
+.character .eyebrow {
+  width: 37%;
+  height: 20%;
+  border-radius: 100% / 50% 70% 50% 50%;;
+  box-shadow: 
+    -0.2vmin -0.6vmin 0 -0.3vmin,
+    -0.2vmin -1.1vmin 0 -0.3vmin var(--hair),
+    -0.4vmin -1.5vmin 0 -0.3vmin,
+    -0vmin -1.3vmin 0 -0.3vmin
+    ;
+  top: 38%;
+  left: 34%;
+}
+
+.character .eyebrow + .eyebrow {
+  border-radius: 100% / 30% 60% 30% 30%;;
+  transform: scaleX(-1) rotate(-7deg);
+  left: 70%;
+  width: 33%;
+  top: 40.25%;
+}
+
+.character .nose {
+  width: 18%;
+  height: 32%;
+  border-right: 0.4vmin solid;
+  border-bottom: 0.5vmin solid;
+  border-top: 0.125vmin solid #0000;
+  border-radius: 0 100% 40% 20%;
+  top: 50%;
+  left: 64%;
+  transform: rotate(7deg);
+}
+
+.character .neck {
+  width: 12%;
+  height: 12%;
+  background: linear-gradient(-150deg, var(--skin-shadow) 40%, #0000 70%);
+  background-color: var(--skin);
+  border:0.4vmin solid;
+  border-left: 0.5vmin solid;
+  border-radius: 100% / 30%;
+  left: 43%;
+  top: 39%;
+  transform: translate(-50%, 0)
+}
+
+.character .mouth {
+  width: 20%;
+  height: 5%;
+  border-radius: 50%;
+  border: 0.125vmin solid #0000;
+  border-top: 0.5vmin solid;
+top: 85%;
+left: 53%;
+}
+
+.character .body {
+  border: 0.5vmin solid;
+  border-top: 0.6vmin solid;
+  width: 60%;
+  height: 40%;
+  top: 47%;
+  border-radius: 120% 90% 100% 100% / 40% 70% 40% 40%;
+  border-right-color: #0000;
+  left: 12%;
+  background: 
+    radial-gradient(70% 45% at 52% 0%, #0000 20%, #000 0 23%, #0000 0),
+    linear-gradient(90deg, #fff 50%, #fff 0 88%, #000 0 90%, #0000 0) no-repeat 100% 100% / 100% 75%,
+    linear-gradient(90deg, #f000 50%, #fff 0 88%, #0000 0);
+}
+
+
+.character .body::before {
+  content: "CSS IS AWESOME";
+  width: 32%;
+  line-height: 100%;
+  aspect-ratio: 1;
+  border: 0.25vmin solid;
+  overflow: visible;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: 55%;
+  font-size: 1.5vmin;
+}
+
+.character .body .arm {
+  width: 35%;
+  height: 50%;
+  border-radius: 100% / 90% 30% 20% 20%;
+  border: 0.5vmin solid;
+  border-top: 0.5vmin solid #0000;
+  background: white;
+  clip-path: polygon(0 12%, 100% 40%, 100% 300%, 0% 300%);
+  top: 5%;
+  left: -7%;
+  transform: rotate(2deg);
+}
+
+.character .body .arm::before {
+  content:"";
+  width: 90%;
+  border: 0.4vmin solid;
+  border-left: 0.5vmin solid;
+  background: var(--skin);
+  height: 100%;
+  top: 95%;
+  left: 5%;
+  z-index: -1
+}
+
+.character .body .arm + .arm {
+  left: 80%;
+  transform: scaleX(-1) rotate(10deg) translate(2%);
+  width: 20%;
+  z-index: -1;
+  background: #fff;
+  border-left: 0.6vmin solid;
+  clip-path: none;
+}
+
+.bubble {
+  width: 50%;
+  height: 55%;
+  background: #beeeef;
+  padding: 2vmin;
+  border: 0.45vmin solid;
+  padding-top: 5vmin;
+  right: -1vmin;
+  transform: skew(2deg);
+  font-family: 'Courier New', Courier, monospace, monospace;
+}
+
+.bubble::after {
+  content: "";
+  background:#beeeef;
+  width: 10%;
+  height: 20%;
+  transform: skew(-10deg);
+  top: 100%;
+  left: 10%;
+  border: 0.4vmin solid;
+  border-top: 0;
+}
+
+.bubble::before {
+  content: "";
+  background:#beeeef;
+  width: 10%;
+  height: 8%;
+  transform: skew(-10deg);
+  top: 122%;
+  left: 7.5%;
+  border: 0.4vmin solid;
+}
+
+.bubble span {
+  position: relative;
+  font-size: 0.66em;
+  font-weight: bold;
+}
+
+.phone {
+  width: 20%;
+  height: 20%;
+  background: radial-gradient(circle at 20% 20%, #000 10%, #0000 0);
+  background-color: #222;
+  border-radius: 0.25vmin;
+  top: 50%;
+  left: 84%;
+  transform: rotate(5deg) skew(-4deg);
+}
+
+.hand {
+  width: 25%;
+  height: 12%;
+  background: var(--skin);
+  border: 0.4vmin solid;
+  border-radius: 100% 20% 100% 50% / 100%;
+  top: 63%;
+  left: 79%;
+  transform: rotate(20deg);
+}
+
+.hand::before {
+  content: "";
+  height: 60%;
+  width: 35%;
+  border: 0.4vmin solid;
+  border-bottom: 0;
+  border-radius: 2vmin 2vmin 0 0;
+  left: 72%;
+  transform: translate(0, -100%) rotate(12deg);
+  z-index: -1;
+  background: var(--skin);
+}
+
+/* second box */
+.box:nth-of-type(2) .character .mouth {
+  height: 9%;
+  border-radius: 2vmin;
+  border: 0.4vmin solid;
+  width: 30%;
+  transform: rotate(5deg);
+  left: 43%;
+  background:
+  linear-gradient(#0000 38%, #000 0 62%, #0000 0),
+  repeating-linear-gradient(to right, #0000 0 20%, #000 0 25%)
+  ;
+  background-color: #fff;
+}
+
+.box:nth-of-type(2) .bubble {
+  padding-top: 1.5vmin;
+  top: -1vmin;
+}
+
+.text, .text::before {
+  content: "*tap*";
+  top: 50%;
+  left: 110%;
+  font-size: 1vmin;
+  transform: rotate(-10deg);
+}
+
+.text::before {
+  left: 0;
+  top: -100%;
+}
+
+.text::after {
+  content: "**Send**";
+  transform: rotate(10deg);
+  left: 0;
+  top: 150%;
+  font-size: 1.5vmin;
+}
+    </style>
+  </head>
+  <body>
+    <article class="comic-strip" role="img" aria-label="Comic strip titled 'CSS Life: Texas Freeze (I)' with two panels. The first one reads: 'A cold front approaches Texas... again...'' and it has a white man reading a text message on his phone: *message from parents* It is freezing in Texas. What are you doing to stay warm?. In the second panel, the man replies: Don't worry. I'm fine. I'm holding a laptop and opened one of my CSS animations.">
+      <h1>CSS Life: Texas Freeze (I) <span>by <a target="_blank" href="https://twitter.com/alvaro_montoro">Alvaro Montoro</a></span></h1>
+      <div class="box long">
+        <div class="desc">A cold front approaches Texas... again...</div>
+        <div class="bubble"><span class="bold">*Message from parents*</span> It is freezing in Texas. What are you doing to stay warm?</div>
+        <div class="character">
+          <div class="ear"></div>
+          <div class="hair hair-back"></div>
+          <div class="body">
+            <div class="arm"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="hair hair-top"></div>
+            <div class="hair hair-side"></div>
+            <div class="ear"></div>
+            <div class="mouth"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="eye"></div>
+          </div>
+    
+          <div class="phone"></div>
+          <div class="hand"></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="bubble">Don't worry, I'm fine. I'm holding my laptop and opened one of my CSS animations.</div>
+    
+        <div class="character">
+          <div class="ear"></div>
+          <div class="hair hair-back"></div>
+          <div class="body">
+            <div class="arm"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="hair hair-top"></div>
+            <div class="hair hair-side"></div>
+            <div class="ear"></div>
+            <div class="mouth"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="eye"></div>
+          </div>
+    
+          <div class="phone"></div>
+          <div class="hand"></div>
+    
+          <div class="text">*tap*</div>
+        </div>
+      </div>
+    </article>
+  </body>
+  </html>

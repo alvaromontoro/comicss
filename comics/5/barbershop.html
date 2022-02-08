@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://comicss.com" />
+		<meta property="og:image" content="http://comicss.com/images/thumb.png" />
+		<meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:url" content="http://www.textivities.com/">
+		<meta name="twitter:title" content="comiCSS">
+		<meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+		<meta name="twitter:image" content="http://comicss.com/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+:root {
+  --skin: #fca;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+.comic-strip {
+  display: flex;
+  gap: 1vmin;
+}
+
+.box {
+  width: 49vmin;
+  aspect-ratio: 1 / 1;
+  border: 0.5vmin solid;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#a0a3, #0000 70%);
+}
+
+.box *,
+.box *::before,
+.box *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.barber {
+  width: 60%;
+  height: 85%;
+  bottom: 0;
+  left: 5%;
+}
+
+.face {
+  width: 49%;
+  height: 38%;
+  background: #00f4;
+  border-radius: 50% 140% 35% 120%;
+  transform: rotate(35deg);
+  left: 29%;
+  top: 13%;
+  border: 0.4vmin solid;
+  border-top-width: 0.75vmin;
+  border-right-width: 0.5vmin;
+  background:
+    radial-gradient(at 100% 100%, #0001 28%, #0000 28.5%),
+    radial-gradient(70% 60% at 86% 51%, #f001, #0000 20%),
+    radial-gradient(60% 70% at 55% 70%, #f001, #0000 20%)
+    ;
+  background-color: var(--skin);
+}
+
+.eye {
+  width: 5%;
+  height: 10%;
+  background: #000;
+  transform: rotate(-35deg);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+}
+
+.eye + .eye {
+  top: 36%;
+  left: 70%;
+}
+
+.nose {
+  width: 25%;
+  height: 14%;
+  border: 0.25vmin solid #0000;
+  border-top: 0.4vmin solid;
+  border-right: 0.6vmin solid;
+  border-radius: 50%;
+  transform: rotate(40deg);
+  left: 62%;
+  top: 52%;
+  background: var(--skin)
+}
+
+.mouth {
+  width: 25%;
+  height: 10%;
+  border: 0.25vmin solid #0000;
+  border-left: 0.75vmin solid;
+  border-top: 0.5vmin solid;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+  top: 75%;
+  left: 72%;
+}
+
+.neck {
+  width: 7%;
+  height: 20%;
+  border: 0.4vmin solid;
+  border-left: 0.5vmin solid;
+  background:
+    linear-gradient(45deg, #0000 30%, #d003 50%)
+    ;
+  background-color: var(--skin);
+  top: 40%;
+  left: 41%;
+  border-radius: 100% / 15%;
+}
+
+.ear {
+  width: 10%;
+  height: 12%;
+  border: 0.5vmin solid;
+  border-radius: 100% / 80% 80% 120% 120%;
+  transform: rotate(25deg);
+  background: var(--skin);
+  top: 29%;
+  left: 67%;
+}
+
+.face .ear {
+  width: 28%;
+  height: 40%;
+  border: 0.5vmin solid;
+  border-right: 0.25vmin solid var(--skin);
+  border-radius: 100% / 80% 80% 120% 120%;
+  transform: rotate(-45deg);
+  background: var(--skin);
+  top: 63%;
+  left: 3%;
+}
+
+.face .ear::before {
+  content: "";
+  width: 60%;
+  height: 70%;
+  border: 0.25vmin solid #0000;
+  border-bottom: 1vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-right: 0.33vmin solid;
+  border-radius: 50%;
+  top: 20%;
+  left: 20%;
+  box-shadow: inset -0.75vmin 0.75vmin 0.5vmin #d002
+}
+
+.face .ear::after {
+  content: "";
+  width: 40%;
+  height: 25%;
+  border: 0.25vmin solid #000;
+  border-bottom: 0.5vmin solid #0000;
+  border-radius: 50%;
+  top: 60%;
+  left: 34%;
+  background: var(--skin)
+}
+
+.hair.top {
+  width: 100%;
+  height: 60%;
+  background:
+    radial-gradient(90% 60% at 20% 40%, #000 50%, #0000 0),
+    radial-gradient(circle, #000 40%, #0000 0) -10% 110% / 50% 50%,
+    radial-gradient(100% 60% at 50% 21%, #000 50%, #0000 0),
+    radial-gradient(50% 60% at 100% 40%, #000 50%, #0000 0),
+    radial-gradient(50% 100% at 0% 50%, #000 40%, #0000 0) 120% 10% / 50% 70%,
+    conic-gradient(from 0.9turn at 80% 70% , #000 30deg, #0000 0)
+    ;
+  background-repeat: no-repeat;
+  transform: rotate(-35deg) translate(-20%, -25%);
+}
+
+.barber .hair.back {
+  width: 80%;
+  height: 40%;
+  background:
+    conic-gradient(from 0.45turn at 82% 7%, #000 85deg, #0000 0) 50% 0 / 100% 30%,
+    conic-gradient(from 0.54turn at 96% 7%, #000 55deg, #0000 0) 100% 0 / 80% 80%,
+    conic-gradient(#0000 150deg, #000 0 200deg, #0000 0) 58% -50% / 50% 50%,
+    radial-gradient(70% 60% at 40% 100%, #000 50%, #0000 0) -20% -100% / 80% 80%,
+    radial-gradient(35% 80% at 0% 50%, #000 50%, #0000 0) 410% 40% / 80% 80%,
+    radial-gradient(60% 60% at 100% 40%, #000 50%, #0000 0) -130% -40% / 80% 80%,
+    conic-gradient(from 0.4turn at 20% 0, #000 56deg, #0000 0) 38% 5% / 80% 60%,
+    conic-gradient(from 0.05turn at 0 80%, #000 90deg, #0000 0) 5% 80% / 50% 30%,
+    conic-gradient(from 0.02turn at 0 80%, #000 90deg, #0000 0) 20% 95% / 50% 30%,
+    conic-gradient(from -0.1turn at 0 80%, #000 120deg, #0000 0) 27% 101% / 50% 10%,
+    conic-gradient(from 0.4turn at 54% 5%, #000 80deg, #0000 0) 97% 10% / 80% 40%
+    ;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 8%;
+}
+
+.barber .body {
+  width: 45%;
+  height: 100%;
+  border: 0.5vmin solid;
+  border-left: 0.75vmin solid;
+  border-radius: 100%  130% 0 0/ 100%;;
+  top: 56%;
+  left: 24%;
+  background: radial-gradient(90% 20% at 45% 0, #0000 17%, #000 0 22%, #0000 0);
+  background-color: #fff;
+  font-size: 2vmin;
+  text-align: center;
+  padding-top: 10vmin;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.barber .arm {
+  width: 14%;
+  height: 50%;
+  border: 0.5vmin solid;
+  background: var(--skin);
+  border-radius: 100%;;
+  bottom: -25%;
+  transform: rotate(15deg);
+  left: 15%;
+}
+.barber .arm::after {
+  content:"";
+  width: 160%;
+  height: 35%;
+  border: 0.5vmin solid;
+  border-bottom: 0.125vmin solid #0000;
+  border-radius: 50%;
+  transform: translate(-17%, -65%);
+  background: var(--skin)
+}
+
+.barber .arm::before {
+  content:"";
+  width: 100%;
+  height: 25%;
+  border: 0.5vmin solid;
+  border-bottom: 0.125vmin solid #0000;
+  border-radius: 50%;
+  top: 2%;
+  transform: translate(-45%, -65%) rotate(-20deg);
+  background: var(--skin);
+}
+
+.barber .arm-top {
+  width: 20%;
+  height: 26%;
+  background: #fff; 
+  border-radius: 150% 0 20% 0%;
+  border: 0.5vmin solid;
+  border-right: 0;
+  top: 57.5%;
+  left: 16%;
+  transform: rotate(7deg);
+  clip-path: polygon(0 0, 99% 0%, 99% 1000%, 0% 1000%)
+}
+
+.barber .arm-top::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 0.5vmin solid;
+  border-radius: 30% / 100%;
+  top: 100%;
+  left: -5%;
+  background: var(--skin);
+
+}
+
+.barber .razor {
+  width: 14%;
+  height: 24%;
+  background:
+    linear-gradient(to bottom left, #0000 50%, #000 0) 0 0 / 15% 20% repeat-x,
+    radial-gradient(farthest-side at 0 0, #000 99.9%, #0000 0) 0 30% / 100% 40% no-repeat,
+    radial-gradient(farthest-side at 0 0, #000 99.9%, #0000 0) 0 100% / 90% 80% no-repeat
+    ;
+  top: 50%;
+  left: 25%;
+  transform: rotate(-9deg);
+  clip-path: polygon(0 1%, 100% 1%, 100% 100%, 0% 100%);
+}
+
+.bubble {
+  width: 43%;
+  height: 30%;
+  top: -0.75vmin;
+  right: -0.75vmin;
+  border-radius:  20% 0 0 50% / 50%;
+  border: 0.5vmin solid;
+  border-bottom: 0.75vmin solid;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-size: 1.75vmin;
+  font-family: 'Courier New', Courier, monospace, monospace;
+  font-weight: bold;
+  background: #beeeef;
+  box-sizing: border-box;
+  padding: 2vmin;
+}
+
+.bubble::before {
+  content:"";
+  background: conic-gradient(from 0.1turn at 30% 100%, #beeeef 20deg, #0000 0) 0 100% / 40% 30%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 20%;
+}
+
+.bubble::after {
+  content:"";
+  background: conic-gradient(from 0.09turn at 30% 100%, #000 27deg, #0000 0) 0 100% / 40% 30%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 25%;
+  left: -3%;
+  z-index: -1;
+}
+
+.client {
+  width: 50%;
+  height: 60%;
+  bottom: 0;
+  right: 0;
+}
+
+.client .face {
+  height: 60%;
+  width: 55%;
+  border-radius: 100% / 80% 80% 120% 120%;
+  transform: rotate(-15deg);
+  top: 10%;
+  left: 25%;
+  background: radial-gradient(at 0 0, #0003 35% , #0000 0);
+  background-color: var(--skin);
+  border-bottom-width: 0.6vmin;
+}
+
+.client .face * {
+  transform: rotate(15deg);
+}
+
+.client > .ear {
+  top: 42%;
+  left: 72%;
+  height: 15%;
+}
+
+.client .face .ear {
+  transform: rotate(-10deg);
+  top: 40%;
+  left: -12%;
+}
+
+.client .mouth {
+  border-radius: 0;
+  border-left: 0;
+  top: 85%;
+  left: 40%;
+  width: 15%;
+}
+
+.client .eye + .eye {
+  top: 55%;
+  left: 80%;
+}
+
+.client .nose {
+  transform: rotate(85deg);
+  top: 62%;
+  left: 52%;
+}
+
+.client .hair.top {
+  background: 
+    conic-gradient(from -0.1turn at 50% 100%, #000 40deg, #0000 0) 0 100% / 5% 15%,
+    conic-gradient(from 0.1turn at 50% 100%, #000 20deg, #0000 0) 0 100% / 11% 100%,
+    radial-gradient(100% 90% at 50% 0%, #000 99.9%, #0000 0),
+    radial-gradient(100% 90% at 65% 0%, #000 99.9%, #0000 0),
+    radial-gradient(100% 90% at 30% 0%, #000 99.9%, #0000 0)
+    ;
+  border-radius: 50% / 90% 90% 20% 20%;
+  height:35%;
+  width: 115%;
+  top: -8%;
+  transform: rotate(10deg);
+  border-width: 40px;
+  border-image: conic-gradient(at 50% 100%, #000 10deg, #0000 0)
+}
+
+.client .neck {
+  width: 12%;
+  top: 55%;
+}
+
+.client .neck::before {
+  content: "";
+  border: 0.5vmin solid;
+  width: 250%;
+  height: 50%;
+  bottom: -20%;
+  left: -75%;
+  border-radius: 100% / 0 0 80% 80%;
+  background: #258;
+}
+
+.client .body {
+  width: 100%;
+  height: 90%;
+  border-radius: 100% / 130% 130% 50% 50%;
+  border: 0.5vmin solid;
+  border-top: 0.75vmin solid;
+  top: 70%;
+  background:
+    conic-gradient(from -0.1turn at 60% 20%, #0002 30deg, #0000 0),
+    conic-gradient(from 0.05turn at 20% 25%, #0003 20deg, #0000 0),
+    conic-gradient(from -0.05turn at 65% 30%, #0002 20deg, #0000 0),
+    conic-gradient(from 0.03turn at 30% 30%, #0003 20deg, #0000 0),
+    conic-gradient(from -0.05turn at 50% 40%, #0002 0.1turn, #0000 0) 0 0 / 20% 50% repeat-x
+    ;
+  background-color: #369;
+}
+
+
+/* second box */
+.box:nth-child(2) .barber .mouth {
+  width: 5%;
+  height: 8%;
+  background: #000;
+  transform: rotate(-20deg) translate(1vmin, 0.5vmin);
+  border-radius: 50%;
+  border: 0;
+}
+.box:nth-child(2) .bubble {
+  background: #fe9;
+}
+
+.box:nth-child(2) .bubble::before {
+  background: conic-gradient(at 50% 100%, #fe9 20deg, #0000 0) 0 100% / 40% 40% no-repeat;
+  top: 40%;
+  left: 50%;
+}
+
+.box:nth-child(2) .bubble::after {
+  background: conic-gradient(from -0.02turn at 50% 100%, #000 30deg, #0000 0) 0 100% / 40% 50% no-repeat;
+  top: 48%;
+  left: 49.5%;
+}
+
+.box:nth-child(2) .barber .eyebrow {
+  width: 20%;
+  height: 40%;
+  border: 0.125vmin solid #0000;
+  border-top: 0.5vmin solid;
+  top: 38%;
+  left: 43%;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+.box:nth-child(2) .barber .eyebrow + .eyebrow {
+  height: 15%;
+  border: 0.125vmin solid #0000;
+  border-bottom: 0.5vmin solid;
+  top: 24%;
+  left: 60%;
+}
+
+.box:nth-child(2) .client .mouth {
+  height: 10%;
+  width: 25%;
+  border: 0.4vmin solid;
+  border-radius: 5vmin 0 10vmin 5vmin;
+  background: 
+    linear-gradient(to right, #0000 80%, #000 0) 0 0 / 25% 50% repeat-x,
+    linear-gradient(#0000 35%, #000 0 65%, #d006 0)
+    ;
+  background-color: #ffe;
+}
+    </style>
+  </head>
+  <body>
+    <div class="comic-strip" role="img" aria-label="A comic strip with two panels showing a barber with a razor and a client. In the first one, the barber asks 'do you prefer the neckline square or rounded?'. In the second one, the client replies 'border-radius: 100% / 20%' to the surprise of the barber.">
+      <div class="box">
+        <div class="barber">
+          <div class="body"></div>
+          <div class="arm-top"></div>
+          <div class="razor"></div>
+          <div class="arm"></div>
+          <div class="hair back"></div>
+          <div class="ear"></div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="hair top"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+        <div class="client">
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="ear"></div>
+          <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="hair top"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+        <div class="bubble">
+          Do you prefer the neckline square or rounded?
+        </div>
+      </div>
+    
+    
+      <div class="box">
+        <div class="barber">
+          <div class="body"></div>
+          <div class="arm-top"></div>
+          <div class="razor"></div>
+          <div class="arm"></div>
+          <div class="hair back"></div>
+          <div class="ear"></div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="hair top"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+        <div class="client">
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="ear"></div>
+          <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="hair top"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+        <div class="bubble">
+          border-radius:<br/>
+          100% / 20%
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>

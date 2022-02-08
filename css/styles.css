@@ -1,0 +1,241 @@
+/* Almond custom styles */
+:root {
+  --accent: #939;
+  --font-weight-bolder: 900;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+}
+
+a {
+  display: inline-block;
+}
+
+nav a {
+  position: relative;
+  overflow: hidden;
+  font-size: 0.875rem;
+}
+
+nav span {
+  position: absolute;
+  left: -1000in;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+nav a svg path {
+  stroke: currentColor;
+  stroke-width: 20;
+  fill: none;
+}
+
+nav a svg.random path {
+  stroke-width: 15;
+}
+
+nav a svg.random path.random {
+  stroke-width: 0;
+  fill: currentColor;
+  stroke: none;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 2rem;
+}
+
+.page-title {
+  margin: 0;
+  color: #333;
+}
+
+.page-title span {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.page-title span:nth-of-type(1) {
+  font-weight: bolder;
+}
+
+header .page-title + p {
+  margin: 0;
+  line-height: 1;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+
+header nav[aria-label] ul svg {
+  width: 2em;
+  min-width: 2em;
+  max-width: 1em;
+  aspect-ratio: 1;
+}
+
+header nav ul svg path,
+header nav ul svg rect,
+header nav ul svg circle {
+  stroke-width: 10;
+  fill: none;
+  stroke: currentColor;
+}
+
+/* main */
+.home main {
+  text-align: center;
+}
+
+main h1 {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.home main > p {
+  margin: 0.75rem auto;
+  line-height: 1.25;
+  font-size: 0.875em;
+}
+
+.home main > p:first-of-type {
+  margin-top: 2rem;
+}
+
+.home main > p:last-child {
+  margin-bottom: 3rem;
+}
+
+.home main nav a {
+  display: inline-block;
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration-color: transparent;
+}
+
+#comic-strip {
+  min-height: 250px;
+  border: 1px solid #ddd;
+  background: #eee;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+#comic-strip img {
+  margin: 0.25rem;
+  max-height: 1200px;
+}
+
+/* blog */
+.blog article {
+  margin-bottom: 3rem;
+}
+
+.blog article footer {
+  background: linear-gradient(#ccc 0 0) 0 0 / 25% 1px no-repeat;
+  margin-top: 1rem;
+  padding-top: 0.25rem;
+}
+
+/* footer */
+body > footer {
+  margin-top: 2rem;
+}
+
+/* various */
+.sitename {
+  color: #222;
+}
+
+.sitename span {
+  font-weight: bolder;
+  color: var(--accent);
+}
+
+a.skip-link {
+  margin: 0.5rem;
+  padding: 0.25rem;
+  color: #000;
+  background: #fff;
+  font-size: 1.25rem;
+  position: absolute;
+  left: -1000in;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+a.skip-link:focus {
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  clip: auto;
+}
+
+/* archive */
+.archive table a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.archive table a span {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  left: -10000in;
+}
+
+.archive table tr th {
+  text-align: left;
+}
+
+.archive table tr th:first-of-type {
+  width: 70%;
+}
+
+.archive table tbody tr:hover {
+  outline: 1px dashed var(--primary);
+  outline-offset: -0.25px;
+}
+
+/* layout */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* Responsive */
+@media (min-width:768px) {
+  header nav ul a svg { display: none; }
+  header nav ul a span { all: unset; }
+  main nav a:nth-child(3) span { 
+    all: unset; 
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 1200px) {
+  header nav[aria-label] ul a svg { 
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1em;
+    min-width: 1em;
+    max-width: 1em;
+    margin-right: 0.25em;
+  }
+}

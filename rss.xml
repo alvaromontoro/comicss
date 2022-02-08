@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>comiCSS</title>
+    <link>https://comicss.com</link>
+    <description>A webcomic about CSS. Coded in CSS.</description>
+    <language>en</language>
+    <atom:link href="https://comicss.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <guid isPermaLink="true">https://comicss.com/?id=1</guid>
+      <title>Flexing</title>
+      <link>https://comicss.com/?id=1</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.com/comics/1/flexing.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.com/?id=2</guid>
+      <title>Word breaking</title>
+      <link>https://comicss.com/?id=2</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.com/comics/2/word-breaking.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.com/?id=3</guid>
+      <title>Lioncorn</title>
+      <link>https://comicss.com/?id=3</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.com/comics/3/lioncorn.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.com/?id=4</guid>
+      <title>Unilion</title>
+      <link>https://comicss.com/?id=4</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 03 Jan 2022 00:30:00 +0000</pubDate>
+      <enclosure url="https://comicss.com/comics/4/unilion.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.com/?id=5</guid>
+      <title>At the barbershop</title>
+      <link>https://comicss.com/?id=5</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.com/comics/5/barbershop.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.com/?id=6</guid>
+      <title>Texas Freeze (I)</title>
+      <link>https://comicss.com/?id=6</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.com/comics/6/texas-freeze-i.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.com/?id=7</guid>
+      <title>Texas Freeze (II)</title>
+      <link>https://comicss.com/?id=7</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 04 Feb 2022 01:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.com/comics/7/texas-freeze-ii.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.com/?id=8</guid>
+      <title>Texas Freeze (III)</title>
+      <link>https://comicss.com/?id=8</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 04 Feb 2022 02:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.com/comics/8/texas-freeze-iii.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+  </channel>
+</rss>
