@@ -2,20 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>comiCSS</title>
   <subtitle>A webcomic about CSS. Coded in CSS.</subtitle>
-  <link href="http://comicss.art/atom.xml" rel="self" />
-  <link href="http://comicss.art/" />
-  <id>http://comicss.art/</id>
+  <link href="https://comicss.art/atom.xml" rel="self" />
+  <link href="https://comicss.art/" />
+  <id>https://comicss.art/</id>
   <updated>2022-02-08T00:30:00Z</updated>
   <entry>
     <title>Flexing</title>
-    <link href="http://comicss.art/?id=1" />
-    <link rel="alternate" type="text/html" href="http://comicss.art/comics/1/flexing.html"/>
-    <id>http://comicss.art/?id=1</id>
+    <link href="https://comicss.art/?id=1" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/1/flexing.html"/>
+    <id>https://comicss.art/?id=1</id>
     <updated>2021-01-09T00:00:00Z</updated>
     <summary>New cartoon: flexing.</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="http://comicss.art/comics/1/flexing.png" alt="A cartoon with two panels. In the first one, there's a black-and-white character small in the box, and says 'sometimes I feel quite small'. In the second panel, the character looks big in the box, and says 'then I flex a little'" /></p>
+        <p><img src="https://comicss.art/comics/1/flexing.png" alt="A cartoon with two panels. In the first one, there's a black-and-white character small in the box, and says 'sometimes I feel quite small'. In the second panel, the character looks big in the box, and says 'then I flex a little'" /></p>
       </div>
     </content>
     <rights>Copyright 2021 Alvaro Montoro</rights>
@@ -27,14 +27,14 @@
   </entry>
   <entry>
     <title>Word Breaking</title>
-    <link href="http://comicss.art/?id=2" />
-    <link rel="alternate" type="text/html" href="http://comicss.art/comics/2/word-breaking.html"/>
-    <id>http://comicss.art/?id=2</id>
+    <link href="https://comicss.art/?id=2" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/2/word-breaking.html"/>
+    <id>https://comicss.art/?id=2</id>
     <updated>2021-01-07T00:00:00Z</updated>
     <summary>New cartoon: word breaking.</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="http://comicss.art/comics/2/word-breaking.png" alt="A cartoon with one panel. A serious-looking black-and-white character over the repeating message 'The world is a really peculiar place. There are times when you feel like break-dancing, and some other times, when you just feel like word-breaking...'" /></p>
+        <p><img src="https://comicss.art/comics/2/word-breaking.png" alt="A cartoon with one panel. A serious-looking black-and-white character over the repeating message 'The world is a really peculiar place. There are times when you feel like break-dancing, and some other times, when you just feel like word-breaking...'" /></p>
       </div>
     </content>
     <rights>Copyright 2021 Alvaro Montoro</rights>
@@ -46,14 +46,14 @@
   </entry>
   <entry>
     <title>Lioncorn</title>
-    <link href="http://comicss.art/?id=3" />
-    <link rel="alternate" type="text/html" href="http://comicss.art/comics/3/lioncorn.html"/>
-    <id>http://comicss.art/?id=3</id>
+    <link href="https://comicss.art/?id=3" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/3/lioncorn.html"/>
+    <id>https://comicss.art/?id=3</id>
     <updated>2022-01-03T00:00:00Z</updated>
     <summary>New cartoon: Lioncorn.</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="http://comicss.art/comics/3/lioncorn.png" alt="Cartoon showing a lion with a unicorn hat saying 'I am a unicorn! Roar!... and so forth'. And an ashamed unicorn smiling next to it." /></p>
+        <p><img src="https://comicss.art/comics/3/lioncorn.png" alt="Cartoon showing a lion with a unicorn hat saying 'I am a unicorn! Roar!... and so forth'. And an ashamed unicorn smiling next to it." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
@@ -65,14 +65,14 @@
   </entry>
   <entry>
     <title>Unilion</title>
-    <link href="http://comicss.art/?id=4" />
-    <link rel="alternate" type="text/html" href="http://comicss.art/comics/4/unilion.html"/>
-    <id>http://comicss.art/?id=4</id>
+    <link href="https://comicss.art/?id=4" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/4/unilion.html"/>
+    <id>https://comicss.art/?id=4</id>
     <updated>2022-01-03T00:30:00Z</updated>
     <summary>New cartoon: Unilion.</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="http://comicss.art/comics/4/unilion.png" alt="Cartoon showing a unicorn with a lion mane wig hat saying 'I am a lion! Roar!... and so forth'. And an ashamed lion smiling next to it." /></p>
+        <p><img src="https://comicss.art/comics/4/unilion.png" alt="Cartoon showing a unicorn with a lion mane wig hat saying 'I am a lion! Roar!... and so forth'. And an ashamed lion smiling next to it." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
@@ -84,14 +84,14 @@
   </entry>
   <entry>
     <title>At the barbershop</title>
-    <link href="http://comicss.art/?id=5" />
-    <link rel="alternate" type="text/html" href="http://comicss.art/comics/5/barbershop.html"/>
-    <id>http://comicss.art/?id=5</id>
+    <link href="https://comicss.art/?id=5" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/5/barbershop.html"/>
+    <id>https://comicss.art/?id=5</id>
     <updated>2022-01-30T00:00:00Z</updated>
     <summary>New cartoon: barbershop.</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="http://comicss.art/comics/5/barbershop.png" alt="A comic strip with two panels showing a barber with a razor and a client. In the first one, the barber asks 'do you prefer the neckline square or rounded?'. In the second one, the client replies 'border-radius: 100% / 20%' to the surprise of the barber." /></p>
+        <p><img src="https://comicss.art/comics/5/barbershop.png" alt="A comic strip with two panels showing a barber with a razor and a client. In the first one, the barber asks 'do you prefer the neckline square or rounded?'. In the second one, the client replies 'border-radius: 100% / 20%' to the surprise of the barber." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
@@ -104,14 +104,14 @@
 
   <entry>
     <title>Texas Freeze I</title>
-    <link href="http://comicss.art/?id=6" />
-    <link rel="alternate" type="text/html" href="http://comicss.art/comics/6/texas-freeze-i.html"/>
-    <id>http://comicss.art/?id=6</id>
+    <link href="https://comicss.art/?id=6" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/6/texas-freeze-i.html"/>
+    <id>https://comicss.art/?id=6</id>
     <updated>2022-02-04T00:00:00Z</updated>
     <summary>New cartoon: Texas Freeze I.</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="http://comicss.art/comics/6/texas-freeze-i.png" alt="Comic strip with two panels. The first one reads: 'A cold front approaches Texas... again...'' and it has a white man reading a text message on his phone: *message from parents* It is freezing in Texas. What are you doing to stay warm?. In the second panel, the man replies: Don't worry. I'm fine. I'm holding a laptop and opened one of my CSS animations." /></p>
+        <p><img src="https://comicss.art/comics/6/texas-freeze-i.png" alt="Comic strip with two panels. The first one reads: 'A cold front approaches Texas... again...'' and it has a white man reading a text message on his phone: *message from parents* It is freezing in Texas. What are you doing to stay warm?. In the second panel, the man replies: Don't worry. I'm fine. I'm holding a laptop and opened one of my CSS animations." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
@@ -123,14 +123,14 @@
   </entry>
   <entry>
     <title>Texas Freeze II</title>
-    <link href="http://comicss.art/?id=7" />
-    <link rel="alternate" type="text/html" href="http://comicss.art/comics/7/texas-freeze-ii.html"/>
-    <id>http://comicss.art/?id=7</id>
+    <link href="https://comicss.art/?id=7" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/7/texas-freeze-ii.html"/>
+    <id>https://comicss.art/?id=7</id>
     <updated>2022-02-04T10:00:00Z</updated>
     <summary>New cartoon: Texas Freeze II.</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="http://comicss.art/comics/7/texas-freeze-ii.png" alt="Comic strip with two panels. The first one reads: 'A cold front approaches Texas... again...' and it has a white man reading a text message on his phone: *message from parents* Temperatures will drop to the single digits. In the second panel, the man replies: Got it! Then I'll open the 3D animations." /></p>
+        <p><img src="https://comicss.art/comics/7/texas-freeze-ii.png" alt="Comic strip with two panels. The first one reads: 'A cold front approaches Texas... again...' and it has a white man reading a text message on his phone: *message from parents* Temperatures will drop to the single digits. In the second panel, the man replies: Got it! Then I'll open the 3D animations." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
@@ -142,14 +142,14 @@
   </entry>
   <entry>
     <title>Texas Freeze III</title>
-    <link href="http://comicss.art/?id=8" />
-    <link rel="alternate" type="text/html" href="http://comicss.art/comics/8/texas-freeze-iii.html"/>
-    <id>http://comicss.art/?id=8</id>
+    <link href="https://comicss.art/?id=8" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/8/texas-freeze-iii.html"/>
+    <id>https://comicss.art/?id=8</id>
     <updated>2022-02-04T02:00:00Z</updated>
     <summary>New cartoon: Texas Freeze III.</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="http://comicss.art/comics/8/texas-freeze-iii.png" alt="Comic strip with two panels. The first one reads: 'A cold front approaches Texas... again...' and it has a white man reading a text message on his phone: *message from parents* This is serious!! It could get really cold!!!. In the second panel, the man replies: Ok, ok. I'll use Chrome to open the animations." /></p>
+        <p><img src="https://comicss.art/comics/8/texas-freeze-iii.png" alt="Comic strip with two panels. The first one reads: 'A cold front approaches Texas... again...' and it has a white man reading a text message on his phone: *message from parents* This is serious!! It could get really cold!!!. In the second panel, the man replies: Ok, ok. I'll use Chrome to open the animations." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
