@@ -42,9 +42,12 @@ function changeImages(num, changeHistory = true) {
     rand[x].href = `/?id=${randomPost + 1}`;
   }
 
-  document.title = `comiCSS - ${post.title}`;
-
   if (changeHistory) {
+    document.title = `comiCSS - ${post.title}`;
+    document.querySelector("head title").textContent = `comiCSS - ${post.title}`;
+    document.querySelector("head meta[property='og:image']").setAttribute("content", `https://comicss.art/comics/${post.id}/${post.uid}.png`);
+    document.querySelector("head meta[name='twitter:image']").setAttribute("content", `https://comicss.art/comics/${post.id}/${post.uid}.png`);
+
     history.pushState({ id: post.id }, post.title, `/?id=${post.id}`);
   }
 }
