@@ -5,7 +5,7 @@ const last = document.querySelectorAll("main nav a:last-child");
 const rand = document.querySelectorAll("main nav a.random-post");
 let current = posts.length - 1;
 
-function changeImages(num, changeHistory = true) {
+function changeImages(num, changeHistory = true, urlId = null) {
   const comic = document.querySelector("#comic-strip");
   const post = posts[num];
   const permanentLink = document.querySelector("#permanent-link");
@@ -42,12 +42,14 @@ function changeImages(num, changeHistory = true) {
     rand[x].href = `/?id=${randomPost + 1}`;
   }
 
-  if (changeHistory) {
+  if (urlId || changeHistory) {
     document.title = `comiCSS - ${post.title}`;
     document.querySelector("head title").textContent = `comiCSS - ${post.title}`;
     document.querySelector("head meta[property='og:image']").setAttribute("content", `https://comicss.art/comics/${post.id}/${post.uid}.png`);
     document.querySelector("head meta[name='twitter:image']").setAttribute("content", `https://comicss.art/comics/${post.id}/${post.uid}.png`);
+  }
 
+  if (changeHistory) {
     history.pushState({ id: post.id }, post.title, `/?id=${post.id}`);
   }
 }
@@ -95,7 +97,7 @@ const urlId = url.searchParams.get("id");
 if (urlId && parseInt(urlId)) {
   current = parseInt(urlId) - 1;
 }
-changeImages(current, false);
+changeImages(current, false, urlId);
 
 window.addEventListener("popstate", function(e) {
   current = e.state && e.state.id ? e.state.id - 1 : posts.length - 1;
