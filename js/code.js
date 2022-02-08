@@ -15,11 +15,11 @@ function changeImages(num, changeHistory = true) {
   document.querySelector("main h1").textContent = post.title;
   
   permanentLink.href = `/?id=${post.id}`;
-  permanentLink.textContent = `https://comicss.com/?id=${post.id}`;
+  permanentLink.textContent = `https://comicss.art/?id=${post.id}`;
   imageLink.href = `/comics/${post.id}/${post.uid}.png`;
-  imageLink.textContent = `https://comicss.com/comics/${post.id}/${post.uid}.png`;
+  imageLink.textContent = `https://comicss.art/comics/${post.id}/${post.uid}.png`;
   codeLink.href= `/comics/${post.id}/${post.uid}.html`;
-  codeLink.textContent = `https://comicss.com/comics/${post.id}/${post.uid}.html`;
+  codeLink.textContent = `https://comicss.art/comics/${post.id}/${post.uid}.html`;
 
   comic.innerHTML = "";
   comic.ariaLabel = post.ariaLabel;
