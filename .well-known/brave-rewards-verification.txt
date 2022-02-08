@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: comicss.art
+Token: 9c8151fe7a7117331ef6bdd882d088966b42f7728aac6dfdfd44977f94a77d1a
