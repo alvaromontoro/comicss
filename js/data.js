@@ -56,5 +56,12 @@ const posts = [
     boxes: 2,
     title: "Texas Freeze (III)",
     ariaLabel: "Comic strip with two panels. The first one reads: 'A cold front approaches Texas... again...' and it has a white man reading a text message on his phone: *message from parents* This is serious!! It could get really cold!!!. In the second panel, the man replies: Ok, ok. I'll use Chrome to open the animations."
+  },
+  {
+    id: 9,
+    uid: "accessory",
+    boxes: 2,
+    title: "You cannot write...",
+    ariaLabel: "Comic strip with two panels. The first one shows a white man saying: 'You cannot write accessibility without CSS'. The second panel is a view of the same white man from behind, he is holding a blood-soaked knife and says: nor accessory to murder... but let's put a display:none on that one for now."
   }
 ]

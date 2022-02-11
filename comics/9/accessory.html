@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+    <style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  perspective: 1000px;
+}
+
+:root {
+  --skin: #fca;
+  --hair: #963;
+  --shirt: #396;
+  --shirt-dark: #275;
+}
+
+input {
+  position: absolute;
+  left: -10000in;
+  appearance: none;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-32.5vmin, -25vmin);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vmin;
+  line-height: 2vmin;
+  cursor: pointer;
+}
+
+label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: bottom;
+  margin-right: 0.35vmin;
+  background:
+    conic-gradient(from 0.6turn at 60% 50%, currentColor 0.3turn, #0000 0) no-repeat 52% 100% / 35% 35%,
+    radial-gradient(circle at 50% 100%, #fff 20%, #0000 0),
+    radial-gradient(farthest-side, #0000 70%, currentColor 72% 90%, #0000 92%)
+    ;
+}
+
+/* 
+label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 1px solid;
+  vertical-align: bottom;
+  margin-right: 0.5vmin;
+} 
+
+input:checked + label::before {
+  background: black;
+  box-shadow: inset 0 0 0 0.2em white;
+} 
+*/
+
+.comic-strip {
+  display: flex;
+  gap: 1vmin;
+  position: relative;
+  width: 65vmin;
+  aspect-ratio: 3 / 2;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+input:checked ~ .comic-strip .card {
+  transform: rotateY(-180deg);
+} 
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  overflow: hidden;
+}
+
+.back {
+  background: #191619;
+  transform: rotateY(180deg);
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  border: 0.5vmin solid;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#d9d, #fff 70%);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg) scaleX(-1);
+}
+
+.comic-strip *,
+.comic-strip *::before,
+.comic-strip *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 28%;
+  height: 35%;
+  background-color: var(--shirt);
+  bottom: 0;
+  left: 70%;
+  border-radius: 10% 10% 0 0 / 100%;
+  border-left: 0.75vmin solid;
+  border-right: 0.75vmin solid;
+  border-top: 1vmin solid #0000;
+  transform: translateX(-50%);
+}
+
+
+.shoulders {
+  width: 26%;
+  height: 24%;
+  border-radius: 100% / 50%;
+  border: 0.5vmin solid #0000;
+  border-top: 0.75vmin solid;
+  bottom: 28.65%;
+  right: 17%;
+  background: 
+  conic-gradient(from 0.88turn at 50% 20%, #000 0.24turn, #0000 0),
+    conic-gradient(from 0.88turn at 50% 35%, #fff 0.24turn, #0000 0),
+    conic-gradient(from 0.88turn at 50% 42%, #000 0.24turn, #0000 0),
+    conic-gradient(from 0.88turn at 50% 46%, var(--shirt-dark) 0.24turn, #0000 0),
+    conic-gradient(from 0.88turn at 50% 51%, #000 0.24turn, #0000 0),
+    conic-gradient(from 0.89turn at 50% 100%, var(--shirt) 0.22turn, #0000 0);
+}
+
+
+.arm {
+  width: 20%;
+  height: 45%;
+  top: 50%;
+  right: 10%;
+  background: conic-gradient(from 0.50turn at 70% 35%, #0002, #0000 0.25turn);
+  background-color: var(--shirt);
+  border-radius: 80% 80% 60% 80% / 100%;
+  border: 0.5vmin solid;
+  border-right: 0.75vmin solid;
+  transform: skew(7deg) rotate(-4deg);
+}
+
+.arm + .arm {
+  transform: scaleX(-1) skew(7deg) rotate(-4deg);
+  right: 30%;
+}
+
+.arm-1 {
+  height: 60%;
+  border-radius: 80% 65% 60% 80% / 100%;
+  border-right: 0.6vmin solid;
+}
+
+.back .arm-1 {
+  height: 51%;
+  transform: skew(7deg);
+  border-radius: 80% 65% 10% 80% / 100%;
+  right: 11%;
+}
+
+.box.front {
+  overflow: hidden;
+}
+
+.ear {
+  width: 6%;
+  height: 14%;
+  border: 0.5vmin solid;
+  background: radial-gradient( at 50% 60%, #c002 15%, black 0 25%, #c002 0, #0000 100%);
+  background-color: var(--skin);
+  border-radius: 100% / 90% 70% 20% 120%;
+  top: 24%;
+  left: 58%;
+  transform: rotate(-15deg);
+  border-top: 0.75vmin solid;
+}
+
+.ear + .ear {
+  left: 75.75%;
+  background: radial-gradient( at 50% 60%, #c002 20%, black 0 30%, #c001 0, var(--skin)) var(--skin);
+  transform: scaleX(-1) rotate(-16deg);
+  border-bottom: 0.6vmin solid;
+}
+
+.hair {
+  background: var(--hair);
+  border: 0.5vmin solid;
+}
+
+.hair-back {
+  width: 23%;
+  height: 24%;
+  border-radius: 40% 30% 50% 50% / 100%;
+  left: 70%;
+  bottom: 67%;
+  transform: translate(-50%, 0);
+}
+
+.hair-top {
+  width: 110%;
+  height: 36%;
+  border-radius: 60% 120% 110% 80% / 120% 80% 120% 60%;
+  border-radius: 120% 120% 120% 80% / 100% 140% 120% 80%;
+  top: -14%;
+  transform: rotate(7deg);
+  border-right: 0.45vmin solid;
+}
+
+.hair-top::before {
+  content: "";
+  background: var(--hair);
+  width: 8.5%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 70%;
+  left: 0;
+  transform: translate(-50%, 0)
+}
+
+.head {
+  width: 20%;
+  height: 37%;
+  border: 0.5vmin solid;
+  border-bottom: 0.65vmin solid;
+  border-radius: 100% / 66% 60% 140% 140%;
+  left: 70%;
+  bottom: 54%;
+  transform: translate(-50%, 0);
+  background:
+  radial-gradient(100% 20% at 50% 60%, #f002, #0000 80%)
+    ;
+  background-color: var(--skin);
+  box-shadow: 
+    inset -0.5vmin 0 #fff4,
+    inset 0.5vmin 0 #c001
+}
+
+.eyebrow {
+  --pos: 10%;
+  width: 30%;
+  height: 8%;
+  background: var(--hair);
+  border: 0.4vmin solid;
+  top: 27%;
+  border-radius: 120% 80% 20% 20%;
+  left: var(--pos);
+  transform: rotate(-3deg);
+}
+
+.eyebrow + .eyebrow {
+  transform: scaleX(-1) rotate(-4deg);
+  left: auto;
+  right: var(--pos);
+}
+
+.neck {
+  width: 8%;
+  height: 13%;
+  border: 0.5vmin solid;
+  border-radius: 100% / 35%;
+  background: linear-gradient(#c003 40%, #0000 80%);
+  background-color: var(--skin);
+  bottom: 48%;
+  right: 26%;
+}
+
+.shirt-neck {
+  width: 6%;
+  height: 7%;
+  background: white;
+  border: 0.5vmin solid;
+  transform:  translate(-115%,0) rotate(36deg) skew(-10deg);
+  top: 47%;
+  left: 70%;
+}
+
+.shirt-neck + .shirt-neck {
+  top: 47%;
+  transform:  translate(20%,0) scaleX(-1) rotate(38deg) skew(-12deg);
+}
+
+.eye {
+  --pos: 24%;
+  width: 10%;
+  height: 12%;
+  background: radial-gradient(circle at 30% 20%, #fff 12%, #0000 13%);
+  background-color: #222;
+  border-radius: 50%;
+  top: 43%;
+  left: var(--pos);
+  border: 0.25vmin solid;
+  abox-shadow: 0 -0.1vmin 0 0.3vmin #fff, 0 -0.1vmin 0 0.6vmin #000;;
+}
+
+.eye + .eye {
+  left: auto;
+  right: var(--pos);
+}
+
+.nose {
+  width: 15%;
+  height: 10%;
+  border-top: 0.5vmin solid;
+  border-right: 0.3vmin solid;
+  border-radius: 50% 60% 30% 0;
+  top: 60%;
+  left: 52%;
+  transform: translate(-50%,0);
+  background: var(--skin);
+}
+
+.nose::before {
+  content: "";
+  height: 200%;
+  width: 40%;
+  border-left: 0.35vmin solid;
+  border-radius: 50%;
+  left: 50%;
+  top: -220%;
+}
+
+.mouth {
+  width: 35%;
+  height: 12%;
+  background: linear-gradient(#fff 40%, #0000 0);
+  background-color: #c00;
+  border: 0.5vmin solid;
+  border-bottom-width: 0.35vmin;
+  border-radius: 60% 60% 100% 100% / 20% 20% 150% 150%;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+.bubble {
+  top: 0;
+  left: 0;
+  width: 45%;
+  background: #beeeef;
+  padding: 1.5vmin;
+  padding-bottom: 3vmin;
+  font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+  font-size: 3vmin;
+  text-align: center;
+  border-radius: 100% / 0 0 50% 50%;
+  filter: drop-shadow(0.5vmin 0) drop-shadow(0 0.5vmin) drop-shadow(-0.25vmin 0)
+}
+
+.bubble::before {
+  content: "";
+  width: 100%;
+  height: 83%;
+  background: #beeeef;
+  top: 0;
+  left: 0;
+  left: 5%;
+  border-radius: 0 5% 20% / 100%;
+}
+
+.bubble-line {
+  width: 20%;
+  height: 20%;
+  border-radius: 0 50% / 100%;
+  box-shadow: -2.5vmin 0 0 -0.5vmin #000;
+  left: 48%;
+  top: 18%;
+  transform: rotate(-15deg);
+}
+
+.bubble-line ~ .bubble-line {
+  left: 47%;
+  box-shadow: -1.5vmin 0 0 -0.5vmin #beeeef;
+}
+
+.bubble span {
+  position: relative;
+  display: block;
+} 
+
+.back .bubble span {
+  transform: scaleX(-1)
+}
+
+.bubble span code {
+  position: relative;
+  display: inline-block;
+  background: #ddd;
+  font-family: monospace, monospace;
+  padding: 0.25vmin 0.75vmin;
+}
+
+.back .arm {
+  background: var(--shirt);
+}
+
+.back .head {
+  background: var(--hair);
+  box-shadow: none;
+  border-radius: 100% / 40% 40% 190% 180%;
+}
+
+.back .hair-top {
+  border-bottom-color: var(--hair);
+}
+
+.back .neck {
+  bottom: 51%;
+  border-radius: 0;
+}
+
+.back .shirt-neck {
+  height: 3%;
+  width: 12%;
+  bottom: 50.5%;
+  top: auto;
+  transform: translate(-50%);
+  border-radius: 100% 100% 0 0;
+}
+
+.back .shoulders {
+  background: conic-gradient(from 0.89turn at 50% 100%, var(--shirt) 0.22turn, #0000 0);
+}
+
+.back .ear {
+  background: var(--skin)
+}
+
+.back .hair-top {
+  z-index: -1;
+}
+
+.back .hair-top::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  background: var(--hair);
+  right: -0.5vmin;
+  border-radius: 50%;
+  top: 50%;
+}
+
+.back .fix-borders {
+  width: 110%;
+  height: 63%;
+  background: var(--hair);
+  border-radius:20% 27% 30% 30%  / 100%;
+  left: 49.5%;
+  top: 0%;
+  transform: translate(-50%, 0);
+}
+
+.back .hair-fix,
+.back .hair-fix-2 {
+  width: 17%;
+  background: var(--hair);
+  box-shadow: 0 0 0 0.5vmin;
+  height: 20%;
+  border-radius: 25% 25% 80% 80% / 100%;
+  border: 0;
+  left: 70.25%;
+  top: 22%;
+  transform: translate(-50%, 0);
+}
+
+.back .hair-fix-2 {
+  height: 10%;
+  width: 18%;
+  top: 27%;
+  left: 70%;
+}
+
+
+.back .hair-fix-1 ~ .hair-fix-1,
+.back .hair-fix-2 ~ .hair-fix-2 {
+  box-shadow: none;
+}
+
+.fore-arm {
+  width: 12%;
+  height: 12%;
+  background: var(--shirt);
+  border: 0.5vmin solid;
+  border-right: 0;
+  top: 82.4%;
+  right: 15%;
+  transform: scaleX(-1) rotate(1deg);
+  right: 33%;
+}
+
+.box.back {
+  overflow: visible;
+}
+
+.knife {
+  width: 8%;
+  height: 25%;
+  border: 0.5vmin solid;
+  border-radius: 0 0 120% 0;
+  top: 95%;
+  right: 25%;
+  background: 
+    radial-gradient(100% 40% at 100% 100%, #d00 100%, #0000 0),
+    radial-gradient(100% 30% at 60% 105%, #d00 100%, #0000 0),
+    linear-gradient(97deg, #ccc 60%, #ddd 0)
+}
+
+.knife::before {
+  content: "";
+  width: 39%;
+  aspect-ratio:1;
+  border: 0.5vmin solid;
+  background: #d00;
+  border-radius: 100% / 140% 140% 80% 80%;
+  top: 105%;
+}
+
+.knife::after {
+  content: "";
+  width: 70%;
+  background: #000;
+  height: 80%;
+  border-radius: 100% / 20% 100% 120% 0%;
+  transform: translate(0, -100%);
+}
+
+.hand {
+  width: 9%;
+  height: 13%;
+  background: var(--skin);
+  border: 0.5vmin solid;
+  top: 81%;
+  right: 26%;
+  border-radius: 100% / 80%;
+}
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="flip-card" />
+    <label for="flip-card">Flip comic</label>
+    <div class="comic-strip" role="img" aria-label="Comic strip with two panels. The first one shows a white man saying: 'You cannot write accessibility without CSS'. The second panel is a view of the same white man from behind, he is holding a blood-soaked knife and says: nor accessory to murder... but let's put a display:none on that one for now.">
+      <div class="card">
+        <div class="front box">
+          <div class="bubble-line"></div>
+          <div class="bubble"><span>You cannot write "accessibility" without CSS</span></div>
+          <div class="bubble-line"></div>
+          <div class="arm arm-1"></div>
+          <div class="arm"></div>
+          <div class="shoulders"></div>
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="shirt-neck"></div>
+          <div class="shirt-neck"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="hair hair-back"></div>
+          <div class="head">
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="hair hair-top"></div>
+          </div>
+        </div>
+        <div class="back box">
+          <div class="bubble-line"></div>
+          <div class="bubble"><span>Nor "accessory to murder"... but let's better put a <code>display: none</code> on that one for now...</code></span></div>
+          <div class="bubble-line"></div>
+          <div class="arm arm-1"></div>
+          <div class="arm"></div>
+          <div class="shoulders"></div>
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="shirt-neck"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="hair hair-back"></div>
+          <div class="hair hair-fix hair-fix-1"></div>
+          <div class="hair hair-fix hair-fix-2"></div>
+          <div class="head">
+            <div class="hair hair-top"></div>
+            <div class="fix-borders"></div>
+          </div>
+          <div class="hair hair-fix hair-fix-1"></div>
+          <div class="hair hair-fix hair-fix-2"></div>
+          <div class="knife"></div>
+          <div class="hand"></div>
+          <div class="thumb"></div>
+          <div class="fore-arm"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>

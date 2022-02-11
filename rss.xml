@@ -86,5 +86,15 @@
       <enclosure url="https://comicss.art/comics/8/texas-freeze-iii.png" length="118000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=9</guid>
+      <title>You cannot write...</title>
+      <link>https://comicss.art/?id=9</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/9/accessory.png" length="188000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
