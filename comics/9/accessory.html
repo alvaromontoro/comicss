@@ -552,6 +552,11 @@ input:checked ~ .comic-strip .card {
   overflow: visible;
 }
 
+input:checked ~ .comic-strip .knife {
+  opacity: 1;
+}
+
+
 .knife {
   width: 8%;
   height: 25%;
@@ -560,9 +565,11 @@ input:checked ~ .comic-strip .card {
   top: 95%;
   right: 25%;
   background: 
-    radial-gradient(100% 40% at 100% 100%, #d00 100%, #0000 0),
-    radial-gradient(100% 30% at 60% 105%, #d00 100%, #0000 0),
-    linear-gradient(97deg, #ccc 60%, #ddd 0)
+    radial-gradient(100% 40% at 100% 100%, #d00 99.9%, #0000 0),
+    radial-gradient(100% 30% at 60% 105%, #d00 99.9%, #0000 0),
+    linear-gradient(97deg, #ccc 60%, #ddd 0);
+  opacity: 0;
+  transition-delay: 0.25s
 }
 
 .knife::before {
