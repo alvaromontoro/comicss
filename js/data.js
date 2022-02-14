@@ -63,5 +63,14 @@ const posts = [
     boxes: 2,
     title: "You cannot write...",
     ariaLabel: "Comic strip with two panels. The first one shows a white man saying: 'You cannot write accessibility without CSS'. The second panel is a view of the same white man from behind, he is holding a blood-soaked knife and says: nor accessory to murder... but let's put a display:none on that one for now."
+  },
+  {
+    id: 10,
+    uid: "impossible-love",
+    boxes: 1,
+    title: "Their love was impossible",
+    vertical: true,
+    ariaLabel: "Comic strip with a single panel showing a fly and a spider smiling at each other with a heart in between them."
   }
+
 ]

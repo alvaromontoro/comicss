@@ -159,7 +159,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>You cannot write...</title>
     <link href="https://comicss.art/?id=9" />
@@ -170,6 +169,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/9/accessory.png" alt="Comic strip with two panels. The first one shows a white man saying: 'You cannot write accessibility without CSS'. The second panel is a view of the same white man from behind, he is holding a blood-soaked knife and says: nor accessory to murder... but let's put a display:none on that one for now." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Their love was impossible</title>
+    <link href="https://comicss.art/?id=10" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/10/impossible-love.html"/>
+    <id>https://comicss.art/?id=10</id>
+    <updated>2022-02-14T00:00:00Z</updated>
+    <summary>New cartoon: Their love was impossible</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/10/impossible-love.png" alt="Comic strip with a single panel showing a fly and a spider smiling at each other with a heart in between them." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
