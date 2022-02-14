@@ -135,6 +135,10 @@ main h1 {
   max-height: 1200px;
 }
 
+#comic-strip.vertical img {
+  width: 500px;
+}
+
 /* blog */
 .blog article {
   margin-bottom: 3rem;

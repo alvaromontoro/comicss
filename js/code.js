@@ -20,6 +20,7 @@ function changeImages(num, changeHistory = true, urlId = null) {
   imageLink.textContent = `https://comicss.art/comics/${post.id}/${post.uid}.png`;
   codeLink.href= `/comics/${post.id}/${post.uid}.html`;
   codeLink.textContent = `https://comicss.art/comics/${post.id}/${post.uid}.html`;
+  comic.className = post.vertical ? "vertical" : "";
 
   comic.innerHTML = "";
   comic.ariaLabel = post.ariaLabel;
