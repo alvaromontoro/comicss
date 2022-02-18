@@ -5,7 +5,7 @@
   <link href="https://comicss.art/atom.xml" rel="self" />
   <link href="https://comicss.art/" />
   <id>https://comicss.art/</id>
-  <updated>2022-02-08T00:30:00Z</updated>
+  <updated>2022-02-18T00:00:00Z</updated>
   <entry>
     <title>Flexing</title>
     <link href="https://comicss.art/?id=1" />
@@ -178,7 +178,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Their love was impossible</title>
     <link href="https://comicss.art/?id=10" />
@@ -189,6 +188,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/10/impossible-love.png" alt="Comic strip with a single panel showing a fly and a spider smiling at each other with a heart in between them." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Superheroes.css</title>
+    <link href="https://comicss.art/?id=11" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/11/superherocss.html"/>
+    <id>https://comicss.art/?id=11</id>
+    <updated>2022-02-18T00:00:00Z</updated>
+    <summary>New cartoon: Superheroes.css</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/11/superherocss.png" alt="Comic strip showing CSS code that describes different superheroes based on CSS properties" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

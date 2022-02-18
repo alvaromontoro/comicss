@@ -70,7 +70,13 @@ const posts = [
     boxes: 1,
     title: "Their love was impossible",
     vertical: true,
-    ariaLabel: "Comic strip with a single panel showing a fly and a spider smiling at each other with a heart in between them."
+    ariaLabel: "Comic strip with a single panel showing a fly and a spider smiling at each other with a heart in between"
+  },
+  {
+    id: 11,
+    uid: "superherocss",
+    boxes: 2,
+    title: "Superheroes.css",
+    ariaLabel: "Comic strip showing CSS code that describes different comic superheroes. The code is too long to put in an alt text, please see the demo."
   }
-
 ]

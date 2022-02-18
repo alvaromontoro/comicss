@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: #23282c;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+article {
+  margin: auto auto;
+  display: inline-block;
+  text-align: left;
+}
+
+h1 {
+  color: gold;
+  text-shadow: -2px 2px 2px #000;
+  opacity: 0.8;
+}
+
+section {
+  margin-bottom: 3vmin;
+}
+
+code {
+  font-size: 1.25rem;
+  white-space: pre;
+  line-height: 1.25;
+}
+
+.css-id,
+.css-class {
+  color: #ddbb77;
+}
+
+.css-mod,
+.css-del {
+  color: #ddd;
+}
+
+.css-prop {
+  color: #5bc;
+}
+
+.css-val {
+  color: #b8c;
+}
+
+.css-val.number {
+  color: #aed0a4;
+}
+
+.css-comment {
+  color: #999;
+}
+
+.css-func {
+  color: #eedd99;
+}
+
+    </style>
+  </head>
+  <body>
+ <main>
+    <article>
+      <h1>superheroes.css</h1>
+      
+      <!--
+      <section id="">
+        <code><span class="css-id">#Base</span> <span class="css-del">{</span>
+  <span class="css-prop">property</span><span class="css-del">:</span> <span class="css-val">value</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+      -->
+
+      <p>
+        <code><span class="css-comment">/* DC */</span></code>
+      </p>
+
+      <section id="orphans">
+        <code><span class="css-id">#BruceWayne</span><span class="css-del">,</span>
+<span class="css-id">#DickGrayson</span><span class="css-del">,</span>
+<span class="css-id">#ClarkKent</span> <span class="css-del">{</span>
+  <span class="css-prop">orphans</span><span class="css-del">:</span> <span class="css-val number">3</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="bizarro">
+        <code><span class="css-id">#Bizarro</span> <span class="css-del">{</span>
+  <span class="css-prop">content</span><span class="css-del">:</span> <span class="css-val">"Superman"</span><span class="css-del">;</span>
+  <span class="css-prop">transform</span><span class="css-del">:</span> <span class="css-func">scaleX</span><span class="css-del">(</span><span class="css-val number">-1</span><span class="css-del">)</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="flash">
+        <code><span class="css-id">#JayGarrick</span> <span class="css-del">{</span>
+<span class="css-id">#WallyWest</span><span class="css-del">,</span>
+<span class="css-id">#BarryAllen</span><span class="css-del">,</span>
+<span class="css-id">#BartAllen</span><span class="css-del">,</span>
+<span class="css-id">#AveryHo</span> <span class="css-del">{</span>
+  <span class="css-prop">animation-duration</span><span class="css-del">:</span> <span class="css-val number">0.000000001s</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="blackcanary">
+        <code><span class="css-id">#DinahDrake</span><span class="css-del">,</span>
+<span class="css-id">#DinahLance</span> <span class="css-del">{</span>
+  <span class="css-prop">color</span><span class="css-del">:</span> <span class="css-val">#000</span><span class="css-del">;</span>
+  <span class="css-prop">volume</span><span class="css-del">:</span> <span class="css-val">x-loud</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="oliverqueen">
+        <code><span class="css-id">#OliverQueen</span> <span class="css-del">{</span>
+  <span class="css-prop">content</span><span class="css-del">:</span> <span class="css-val">"\2192"</span><span class="css-del">;</span>
+  <span class="css-prop">color</span><span class="css-del">:</span> <span class="css-val">#008000</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <p>
+        <code><span class="css-comment">/* Marvel */</span></code>
+      </p>
+
+      <section id="peterparker">
+        <code><span class="css-id">#PeterParker</span> <span class="css-del">{</span>
+  <span class="css-prop">position</span><span class="css-del">:</span> <span class="css-val">sticky</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="natasharomanoff">
+        <code><span class="css-id">#NatashaRomanoff</span> <span class="css-del">{</span>
+  <span class="css-prop">color</span><span class="css-del">:</span> <span class="css-val">#000</span><span class="css-del">;</span>
+  <span class="css-prop">widows</span><span class="css-del">:</span> <span class="css-val number">1</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="reedrichards">
+        <code><span class="css-id">#ReedRichards</span> <span class="css-del">{</span>
+  <span class="css-prop">flex</span><span class="css-del">:</span> <span class="css-val">1</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="suerichards">
+        <code><span class="css-id">#SueStorm</span><span class="css-del">, </span>
+<span class="css-id">#SueRichards</span> <span class="css-del">{</span>
+  <span class="css-prop">visibility</span><span class="css-del">:</span> <span class="css-val">hidden</span><span class="css-del">;</span>
+  <span class="css-prop">opacity</span><span class="css-del">:</span> <span class="css-val number">1</span><span class="css-del">;</span>
+  <span class="css-prop">will-change</span><span class="css-del">:</span> <span class="css-val">opacity</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="black-bold">
+        <code><span class="css-id">#BlackBolt</span> <span class="css-del">{</span>
+  <span class="css-prop">speak</span><span class="css-del">:</span> <span class="css-val">never</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="pietromaximoff">
+        <code><span class="css-id">#PietroMaximoff</span> <span class="css-del">{</span>
+  <span class="css-prop">animation-duration</span><span class="css-del">:</span> <span class="css-val number">0.000001s</span><span class="css-del">;</span>
+  <span class="css-prop">color</span><span class="css-del">:</span> <span class="css-val">#c0c0c0</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+
+      <section id="wandamaximoff">
+        <code><span class="css-id">#WandaMaximoff</span> <span class="css-mod">~</span> <span class="css-class">.mutant</span> <span class="css-del">{</span>
+  <span class="css-prop">all</span><span class="css-del">:</span> <span class="css-val">unset</span><span class="css-del">;</span>
+<span class="css-del">}</span></code>
+      </section>
+    </article>
+    </main>   
+  </body>
+  </html>
