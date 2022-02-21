@@ -87,13 +87,4 @@ const posts = [
     vertical: true,
     ariaLabel: "Comic strip showing the surprised Pikachu meme, with the text: Me: *builds CSS animation*. *Computer fan goes crazy*"
   }
-  ,
-  {
-    id: 13,
-    uid: "scroll-snap",
-    boxes: 6,
-    title: "That's not how it works!",
-    ariaLabel: "Comic strip with 6 panels. The first one shows a white man in front of a computer, using a mouse. The second panel shows the man snapping his finger. The third one shows the man in front of a computer, using a mouse. The fourth panel shows the man snapping his finger. The fifth one shows the man in front of a computer, using a mouse. The sixth panel shows the man with a scared face as someone off the panel is yelling 'For the hundredth time... That is NOT how you do CSS Scroll Snap!!! Stop the finger snapping!'",
-    vertical: true
-  }
 ]
