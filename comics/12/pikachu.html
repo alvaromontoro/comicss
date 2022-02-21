@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+#desc {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: -10000in;
+}
+
+.cartoon {
+  --border: #5a1106;
+  --skin: #ebbc3e;
+  color: var(--border);
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+  overflow: visible;
+}
+
+/* .cartoon::before {
+width: 100%;
+height: 100%;
+background-color: #eee;
+background-image: linear-gradient(to right, transparent 99%, gray 0), linear-gradient(to bottom, transparent 99%, gray 0), url(https://i.imgur.com/qsutbgg.jpg);
+background-size: 10% 100%, 100% 10%, contain;
+background-repeat: repeat, repeat, no-repeat;
+background-position: top left, top left, center bottom;
+opacity: 0.5
+} */
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.4vmin solid #5a1106;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+html, body {
+  background: #ebbc3e22;
+  overflow: hidden;
+}
+
+.mouth {
+  border-width: 0.6vmin;
+  width: 11.33%;
+  height: 9.25%;
+  border-color: #7c2a09;
+  background: #f18061;
+  border-radius: 80% 60% 65% 100% / 70% 85% 70% 100%;
+  top: 79%;
+  left: 49.4%;
+}
+
+.cheek {
+  border-width: 0.6vmin;
+  border-color: #bc5118;
+  background: #ce5522;
+}
+
+.cheek-1 {
+  width: 9.75%;
+  height: 8.5%;
+  top: 74%;
+  left: 27%;
+}
+
+.cheek-2 {
+  width: 10.75%;
+  height: 9%;
+  top: 74.25%;
+  left: 72%;
+}
+
+.nose {
+  width: 4.6%;
+  height: 2.1%;
+  top: 72%;
+  left: 50.75%;
+  border-color: #631407;
+  background: #7d280b;
+}
+
+.eye {
+  border-color: #5b0e0a;
+  background: #7d280f;
+  height: 7.75%;
+  width: 6.75%;
+}
+
+.eye::after {
+  border-radius: 50%;
+  border: 0.4vmin solid #e9cbb5;
+  width: 36.5%;
+  height: 30.5%;
+  top: 7.5%;
+  left: 6.5%;
+  background: #f8eae2;
+}
+
+.eye-1 {
+  top: 62.75%;
+  left: 38%;
+}
+
+.eye-2 {
+  top: 62.75%;
+  left: 66%;
+}
+
+.ear {
+  width: 50%;
+  height: 20%;
+  border-radius: 100% 80% 100% 100%;
+  transform: rotate(33.5deg);
+  top: 35.5%;
+  overflow: hidden;
+  clip-path: polygon(15.75% 0%, 100% 0%, 100% 100%, 0% 100%);
+  border-color: transparent;
+  border-top-color: var(--border);
+}
+
+.ear::after {
+  width: 100%;
+  height: 100%;
+  border: 0.4vmin solid;
+  border-radius: 100% 100% 95% 120%;
+  transform: rotate(20deg);
+  top: -35%;
+  background: var(--skin);
+  box-shadow: inset 0 4vmin var(--skin), inset 8vmin 1.5vmin 0 0.5vmin #7a250b, inset 8vmin 1.5vmin 0 0.9vmin var(--border);
+  border-top-color: var(--skin);
+  border-right-color: var(--skin);
+}
+
+.ear-2 {
+  transform: scaleX(-1) rotate(24deg);
+  left: 63%;
+  top: 39.5%;
+  width: 50%;
+  border-radius: 100% 100% 0% 100% / 80% 40% 0% 50%;
+  border-right-color: transparent;
+  box-shadow: inset -11vmin 1vmin var(--skin);
+}
+
+.ear-2::after {
+  border-radius: 100% 100% 100% 100%;
+  transform: rotate(33deg);
+  top: -55%;
+  height: 120%;
+  width: 90%;
+  box-shadow: inset 0 4vmin var(--skin), inset 6vmin 1.5vmin 0 1.5vmin #7a250b, inset 6vmin 1.5vmin 0 1.9vmin var(--border);
+}
+
+.forehead {
+  opacity: 10.5;
+  width: 28.25%;
+  height: 30%;
+  border: 0.4vmin solid transparent;
+  border-top: 0.4vmin solid;
+  background: var(--skin);
+  top: 46.75%;
+  left: 45.5%;
+  border-radius: 0% 70% 10% 0 /  5% 20% 0 0;
+  transform: rotate(-7deg);
+  box-shadow: -1vmin 15vmin 0 9vmin var(--skin);
+}
+
+.back {
+  height: 70%;
+  width: 30%;
+  border-color: transparent;
+  border-right-color: var(--border);
+  border-radius: 100% 70% 100% 100% / 100% 45% 100% 100%;
+  transform: rotate(-13deg);
+  top: 55.5%;
+  left: 61.5%;
+  background: var(--skin);
+}
+
+.face {
+  height: 44%;
+  width: 50%;
+  border-color: transparent;
+  border-left-color: var(--border);
+  border-bottom-color: var(--border);
+  border-radius: 30% 100% 100% 100%;
+  transform: rotate(17deg);
+  transform-origin: top left;
+  top: 53%;
+  left: 32.5%;
+  background: var(--skin);
+  clip-path: polygon(0% 0%, 50% 0%, 30% 100%, 0% 100%)
+}
+
+.neck {
+  width: 2%;
+  height: 20%;
+  transform: rotate(19deg) skewY(40deg);
+  border-radius: 0 100% 100% 100%;
+  top: 93.1%;
+  left: 26%;
+  box-shadow: 0.4vmin -0.4vmin, 6vmin 0 0 5.5vmin var(--skin);
+}
+
+/* Animation: text from imgflip memes */
+@keyframes line1 {
+  0%, 100% { content: "Me: *builds CSS animation*"; }
+  10% { content: "Me: *draws popular meme using just HTML and CSS*"; }
+  20% { content: "Me: I don't need to write that down, I'll remember it"; }
+  30% { content: "Phone: Low battery. Please charge."; }
+  40% { content: "Me: *sneezes*"; }
+  50% { content: "Me: *Flip pillow to the cold side*"; }
+  60% { content: "Humans: *cut too many trees*"; }
+  70% { content: "Me: *hammers a nail*"; }
+  80% { content: "Britain: *overtaxes America*"; }
+  90%, 99% { content: "8-year-old me seeing the moon during daytime:"; }
+}
+
+@keyframes line2 {
+  0%, 100% { content: "*Computer fan goes crazy*"; }
+  10% { content: "Codepen: *2 upvotes*"; }
+  20% { content: "Also me: *forgets it*"; }
+  30% { content: "Me: *keep using phone*"; }
+  40% { content: "Something: Bless you!"; }
+  50% { content: "Everyone at my funeral:"; }
+  60% { content: "Humans: *cut trees for paper for save-the-trees poster*"; }
+  70% { content: "Everyone at the nail salon:"; }
+  80% { content: "America: REVOLUTION!"; }
+  90%, 99% { content: ""; }
+}
+
+@keyframes line3 {
+  0%, 100% { content: "Me: "; }
+  10% { content: "Me: "; }
+  20% { content: ""; }
+  30% { content: "Phone: *dies*"; }
+  40% { content: "Me: *home alone*"; }
+  50% { content: ""; }
+  60% { content: "Earth:"; }
+  70% { content: ""; }
+  80% { content: "Britain:"; }
+  90%, 99% { content: ""; }
+}
+
+.lines {
+  --shadow: #fff;
+  --color: #000;
+  font-family: "Impact Condensed", Impact, sans-serif;
+  color: var(--color);
+  font-size: 6vmin;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 33vmin;
+  width: 100%;
+  top: -15vmin;
+  filter: drop-shadow(0 0.5vmin var(--shadow)) drop-shadow(0 -0.5vmin var(--shadow))  drop-shadow(-0.5vmin 0 var(--shadow)) drop-shadow(0.5vmin 0 var(--shadow));
+}
+
+.lines span {
+  margin-bottom: 1vmin;
+  line-height: 6.25vmin;
+}
+
+.line-1::before,
+.line-2::before,
+.line-3::before{
+  content: "";
+}
+
+.line-1::before {
+  animation: line1 70s infinite linear;
+}
+
+.line-2::before {
+  animation: line2 70s infinite linear;
+}
+
+.line-3::before {
+  animation: line3 70s infinite linear;
+}
+    </style>
+  </head>
+  <body>
+    <div class="cartoon hb" role="img" aria-labelledby="desc">
+      <div id="desc">Meme of Pikachu (from the TV show Pokemon) with a surprised face</div>
+      <span class="lines">
+        <span class="line-1"></span>
+        <span class="line-2"></span>
+        <span class="line-3"></span>
+      </span>
+      <div class="ear ear-1 ha b"></div>
+      <div class="ear ear-2 ha b"></div>
+      <div class="forehead"></div>
+      <div class="back b"></div>
+      <div class="face b"></div>
+      <div class="neck"></div>
+      <div class="mouth b"></div>
+      <div class="cheek cheek-1 b r"></div>
+      <div class="cheek cheek-2 b r"></div>
+      <div class="nose r b"></div>
+      <div class="eye eye-1 ha r b"></div>
+      <div class="eye eye-2 ha r b"></div>
+    </div>  
+  </body>
+  </html>
