@@ -306,10 +306,14 @@ html, body {
   line-height: 6.25vmin;
 }
 
-.line-1::before,
-.line-2::before,
+.line-1::before {
+  content: "Me: *builds CSS animation*";
+}
+.line-2::before {
+  content: "*Computer fan goes crazy*";
+}
 .line-3::before{
-  content: "";
+  content: "Me:";
 }
 
 .line-1::before {
