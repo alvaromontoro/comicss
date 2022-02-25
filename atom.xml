@@ -216,7 +216,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Surprised Pikachu</title>
     <link href="https://comicss.art/?id=12" />
@@ -227,6 +226,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/12/pikachu.png" alt="Comic strip showing a surprised Pikachu meme, with a surprise little Pokemon next to the text: 'Me: *builds CSS animatrion*. *Computer fan goes crazy* Me:' and the drawing" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Scroll Snap</title>
+    <link href="https://comicss.art/?id=13" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/13/scroll-snap.html"/>
+    <id>https://comicss.art/?id=13</id>
+    <updated>2022-02-25T00:00:00Z</updated>
+    <summary>New cartoon: Scroll Snap</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/13/scroll-snap.png" alt="Comic strip with 6 stacked panels. The first, third, and fifth one show a man scrolling a mouse in front of the computer. The second and fourth show the man snapping his fingers. The sixth shows the man worried as someones says 'that's not how you do scroll snap!'" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

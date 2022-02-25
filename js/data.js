@@ -86,5 +86,13 @@ const posts = [
     title: "Surprised Pikachu",
     vertical: true,
     ariaLabel: "Comic strip showing the surprised Pikachu meme, with the text: Me: *builds CSS animation*. *Computer fan goes crazy*"
+  },
+  {
+    id: 13,
+    uid: "scroll-snap",
+    boxes: 6,
+    title: "Scroll Snap",
+    vertical: true,
+    ariaLabel: "Comic strip with 6 stacked panels. The first, third, and fifth one show a man scrolling a mouse in front of the computer. The second and fourth show the man snapping his fingers. The sixth shows the man worried as someones says 'that's not how you do scroll snap!'"
   }
 ]
