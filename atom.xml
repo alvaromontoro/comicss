@@ -101,7 +101,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Texas Freeze I</title>
     <link href="https://comicss.art/?id=6" />
@@ -235,7 +234,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Scroll Snap</title>
     <link href="https://comicss.art/?id=13" />
@@ -246,6 +244,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/13/scroll-snap.png" alt="Comic strip with 6 stacked panels. The first, third, and fifth one show a man scrolling a mouse in front of the computer. The second and fourth show the man snapping his fingers. The sixth shows the man worried as someones says 'that's not how you do scroll snap!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Accent Colors</title>
+    <link href="https://comicss.art/?id=14" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/14/accent-color.html"/>
+    <id>https://comicss.art/?id=14</id>
+    <updated>2022-02-28T00:00:00Z</updated>
+    <summary>New cartoon: Accent Colors</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/14/accent-color.png" alt="Comic strip with 5 panels showing a white man getting angrier and angrier while updating the color value on CSS to green in Spanish, German, French, and Ukranian. In the final panel he asks 'Hey, honey! How did you say accent-color worked in CSS?'" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

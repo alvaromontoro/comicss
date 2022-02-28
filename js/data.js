@@ -18,7 +18,7 @@ const posts = [
     uid: "lioncorn",
     boxes: 1,
     title: "Look I'm a unicorn!",
-    video: "https://www.youtube.com/watch?v=3MIMN8fUPUU",
+    video: "3MIMN8fUPUU",
     ariaLabel: "Cartoon showing a lion with a unicorn hat saying 'I am a unicorn! Roar!... and so forth'. And an ashamed unicorn smiling next to it."
   },
   {
@@ -26,7 +26,7 @@ const posts = [
     uid: "unilion",
     boxes: 1,
     title: "Look I'm a lion!",
-    video: "https://www.youtube.com/watch?v=3MIMN8fUPUU",
+    video: "3MIMN8fUPUU",
     ariaLabel: "Cartoon showing a unicorn with a lion mane wig hat saying 'I am a lion! Roar!... and so forth'. And an ashamed lion smiling next to it."
   },
   {
@@ -70,6 +70,7 @@ const posts = [
     boxes: 1,
     title: "Their love was impossible",
     vertical: true,
+    video: "0FxH1GdRLWs",
     ariaLabel: "Comic strip with a single panel showing a fly and a spider smiling at each other with a heart in between"
   },
   {
@@ -93,6 +94,16 @@ const posts = [
     boxes: 6,
     title: "Scroll Snap",
     vertical: true,
+    video: "vLVBlxXD2dw",
     ariaLabel: "Comic strip with 6 stacked panels. The first, third, and fifth one show a man scrolling a mouse in front of the computer. The second and fourth show the man snapping his fingers. The sixth shows the man worried as someones says 'that's not how you do scroll snap!'"
+  },
+  {
+    id: 14,
+    uid: "accent-color",
+    boxes: 5,
+    title: "Accent Colors",
+    vertical: true,
+    video: "i_B6LI2fq2Y",
+    ariaLabel: "Comic strip with 5 panels showing a white man getting angrier and angrier while updating the color value on CSS to verde, grün, vert, and зелений. In the final panel he asks 'Hey, honey! How did you say accent-color worked in CSS?'"
   }
 ]

@@ -136,5 +136,15 @@
       <enclosure url="https://comicss.art/comics/13/scroll-snap.png" length="508000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=14</guid>
+      <title>Accent Colors</title>
+      <link>https://comicss.art/?id=14</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/14/accent-color.png" length="280000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.comic-strip {
+  display: flex;
+  gap: 1vmin;
+  position: relative;
+  flex-direction: column;
+  width: 60vmin;
+  margin: 8vmin auto;
+}
+
+.panel {
+  border: 0.75vmin solid;
+  border-radius: 0.5vmin;
+  aspect-ratio: 5 / 3;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#c9c9, #0000 70%)
+}
+
+.panel div,
+.panel div::before,
+.panel div::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.comic-strip {
+  /* colors and variables */
+  --skin: #fca;
+  --skin-shadow: #da8;
+  --shirt: #fff;
+  --shirt-shadow: #ddd;
+  --laptop: darkgray;
+  --laptop-light: lightgray;
+  --bubble1: #345;
+  --bubble2: #fdc;
+}
+
+.bubble {
+  top: 5%;
+  right: 6%;
+  width: 45%;
+  height: 35%;
+  background: var(--bubble1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25vmin;
+}
+
+.bubble::before {
+  content: "";
+  width: 10%;
+  height: 40%;
+  top: 90%;
+  left: 45%;
+  background: conic-gradient(from 0.96turn at 50% 100%, var(--bubble1) 0.08turn, #0000 0);
+}
+
+.css-prop {
+  color: #c9c;
+}
+
+.css-del {
+  color: #eee;
+}
+
+.css-val {
+  color: #6c6;
+}
+
+.computer {
+  width: 40%;
+  height: 45%;
+  background:
+    radial-gradient(circle at 52% 58%, var(--laptop-light) 10%, #0000 0),
+    radial-gradient(circle at 52% 48%, var(--laptop-light) 6%, #0000 0),
+    linear-gradient(lightgray 0 0) 52% 45% / 1% 20% no-repeat,
+    radial-gradient(at 70% 100%, var(--laptop-light) 6%, #0000 0) 41% 20% / 50% 25% no-repeat,
+    radial-gradient(at 70% 0%, var(--laptop-light) 6%, #0000 0) 41% 52% / 50% 25% no-repeat
+    ;
+  background-color: var(--laptop);
+  transform: skew(-6deg);
+  border: 0.5vmin solid;
+  bottom: -0.5vmin;
+  right: 10%;
+  border-radius: 0.5vmin;
+}
+
+.character {
+  width: 50%;
+  height: 95%;
+  left: 6%;
+  bottom: 0;
+}
+
+.head {
+  width: 37%;
+  height: 45%;
+  background-color: var(--skin);
+  border-radius: 80% 100% 120% 110%;
+  border: 0.5vmin solid;
+  border-right: 0.75vmin solid;
+  top: 7%;
+  left: 22%;
+  transform: rotate(-6deg);
+}
+
+.body {
+  width: 60%;
+  height: 70%;
+  border: 0.5vmin solid;
+  border-radius: 100% / 50% 170% 30% 30%;
+  top: 55%;
+  left: 12%;
+  background-color: var(--shirt);
+}
+
+.arm-1 {
+  width: 45%;
+  height: 40%;
+  border: 0.5vmin solid;
+  border-radius: 100% 0 0 0;
+  top: 1%;
+  left: -20%;
+  transform-origin: top right;
+  transform: rotate(-3deg);
+  background: var(--shirt)
+}
+
+.arm-1::after {
+  content: "";
+  width: 20%;
+  height: 60%;
+  background: var(--shirt);
+  right: -15%;
+}
+
+.arm-1::before,
+.arm-2::before {
+  content: "";
+  width: 90%;
+  height: 200%;
+  top: 100%;
+  left: 5%;
+  border: 0.5vmin solid;
+  border-radius: 30% 0 0 100% / 100%;
+  background: var(--skin);
+  box-shadow: inset 0.75vmin 0.5vmin var(--skin-shadow);
+}
+
+.arm-2 {
+  width: 25%;
+  height: 30%;
+  background: var(--shirt);
+  border: 0.5vmin solid;
+  border-radius: 0 100% 0 0;
+  top: 53%;
+  left: 42%;
+  transform: rotate(-20deg);
+}
+
+
+.neck {
+  width: 16%;
+  height: 20%;
+  background:
+    radial-gradient(150% 130% at 75% 10%, var(--skin-shadow) 55%, #0000 0)
+    ;
+  background-color: var(--skin);
+  border: 0.5vmin solid;
+  border-radius: 100% / 20%;
+  top: 40%;
+  left: 30%;
+}
+
+.ear {
+  width: 40%;
+  height: 40%;
+  border: 0.5vmin solid;
+  border-radius: 100% 100% 90% 120%;
+  border-right: 0.125vmin solid var(--skin);
+  top: 38%;
+  left: -28%;
+  transform: rotate(-6deg);
+  background-color: var(--skin);
+}
+
+.ear::before {
+  content: "";
+  width: 70%;
+  height: 70%;
+  border: 0.5vmin solid;
+  border-left: 0.25vmin solid var(--skin);
+  border-bottom: 0.125vmin solid var(--skin);
+  border-radius: 50%;
+  top: 15%;
+  transform: rotate(-15deg);
+  right: 10%;
+}
+
+.ear::after {
+  content: "";
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.35vmin solid;
+  border-right: 0.25vmin solid var(--skin);
+  border-left: 0.5vmin solid;
+  top: 60%;
+  right: 10%;
+  background: var(--skin);
+  transform: rotate(10deg);
+}
+
+.nose {
+  width: 70%;
+  height: 35%;
+  border-radius: 100% 120% 120% 100%;
+  border: 0.5vmin solid;
+  border-left: 0.25vmin solid var(--skin);
+  left: 55%;
+  top: 47%;
+  background-color: var(--skin)
+}
+
+.eye {
+  width: 13%;
+  height: 14%;
+  background: radial-gradient(circle at 20% 30%, #fff 20%, #0000 0);
+  background-color: black;
+  border-radius: 50%;
+  border: 0.25vmin solid;
+  top: 36%;
+  left: 40%;
+}
+
+.eye + .eye {
+  left: 75%;
+  top: 36.5%;
+}
+
+.eyebrow {
+  width: 30%;
+  height: 20%;
+  border-radius: 50%;
+  border: 0.25vmin solid #0000;
+  border-top: 0.5vmin solid;
+  top: 25%;
+  left: 32%;
+}
+
+.eyebrow + .eyebrow {
+  left: 69%;
+  top: 26%;
+}
+
+.mouth {
+  width: 40%;
+  height: 14%;
+  border: 0.125vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-left: 0.75vmin solid #0000;
+  border-radius: 80% 100% 100% 60%;
+  top: 82%;
+  left: 30%;
+  transform: rotate(8deg);
+}
+
+.hair-side {
+  width: 35%;
+  height: 55%;
+  background: black;
+  border-radius: 100% 40% 100% 100%;
+  top: 0%;
+  left: -20%;
+}
+
+.hair-top {
+  width: 130%;
+  height: 30%;
+  background: black;
+  border-radius: 80% 120% 120% 80% / 100%;
+  left: -5%;
+  top: -15%;
+  transform: rotate(5deg);
+  clip-path: polygon(0 0, 100% 0%, 85% 35%, 100% 50%,90% 65%, 100% 100%, 0 100%);
+}
+
+.hair-back {
+  width: 10%;
+  height: 20%;
+  background: black;
+  border-radius: 50%;
+  top: 10%;
+  left: 48%;
+  box-shadow: -6vmin 6vmin 0 1vmin
+}
+
+.hand {
+  width: 25%;
+  height: 7%;
+  background: var(--skin);
+  border: 0.5vmin solid;
+  bottom: -0.5vmin;
+  left: 55%;
+  border-radius: 50% / 100% 100% 0 0;
+}
+
+.speech {
+  font-family: arial, verdana, sans-serif;
+  font-size: 1.25vmin;
+  top: 45%;
+  left: 60%;
+  transform: rotate(4deg);
+}
+
+.action {
+  font-family: arial, verdana, sans-serif;
+  font-size: 1.25vmin;
+  bottom: 5%;
+  left: 45%;
+  transform: rotate(-8deg);
+}
+
+.action::before {
+  content: "*Write*";
+  transform: rotate(15deg);
+  top: -60%;
+  left: 60%;
+}
+
+.tongue {
+  width: 20%;
+  height: 10%;
+  border: 0.25vmin solid;
+  border-bottom: 0.5vmin solid;
+  border-radius: 0 0 5vmin 5vmin;
+  background:
+    linear-gradient(to right, #0000 45%, #000 0 55%, #0000 0) 50% 0 / 100% 60% no-repeat;
+    ;
+  background-color: #d00;
+  top: 83%;
+  left: 38%;
+  transform: rotate(17deg);
+}
+
+/* panel 2 */
+.panel-2 .head {
+  background:
+    linear-gradient(#f001, #0000 60%)
+    ;
+  background-color: var(--skin)
+}
+
+.panel-2 .action::before {
+  content: "*Delete*";
+  left: 50%;
+}
+
+.panel-2 .mouth {
+  left: 33%;
+  width: 35%;
+}
+
+.panel-2 .eyebrow {
+  height: 15%;
+}
+
+/* panel 3 */
+.panel-3 .head {
+  background:
+    linear-gradient(#f003, #0000 60%)
+    ;
+  background-color: var(--skin)
+}
+
+.panel-3 .action::before {
+  content: "*Delete*";
+  left: 50%;
+}
+
+.panel-3 .mouth {
+  left: 33%;
+  width: 25%;
+}
+
+.panel-3 .eyebrow {
+  height: 12%;
+  transform: rotate(7deg);
+}
+
+.panel-3 .eyebrow + .eyebrow {
+  transform: rotate(-4deg);
+}
+
+/* panel 4 */
+.panel-4 .head {
+  background:
+    linear-gradient(#f007, #0000 60%)
+    ;
+  background-color: var(--skin)
+}
+
+.panel-4 .action::before {
+  content: "*Delete*";
+  left: 50%;
+}
+
+.panel-4 .mouth {
+  left: 33%;
+  width: 25%;
+}
+
+.panel-4 .eyebrow {
+  height: 8%;
+  transform: rotate(12deg);
+}
+
+.panel-4 .eyebrow + .eyebrow {
+  transform: rotate(-8deg);
+}
+
+/* panel 5 */
+.panel-5 .mouth {
+  border-left: 0.5vmin solid;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.bubble-speech {
+  font-family: 'Comic Neue', arial, verdana, sans-serif;;
+  border: 0.5vmin solid;
+  width: 50%;
+  padding: 2vmin;
+  font-size: 2.25vmin;
+  top: 6%;
+  right: 2%;
+  border-radius: 3vmin;
+  text-align: center;
+  background-color: #fff8ee;
+}
+
+.bubble-speech::before {
+  content: "";
+  width: 15%;
+  height: 20%;
+  background: red;
+  top: 60%;
+  left: 0;
+  transform: translate(-100%, 0);
+  border-bottom: 0.5vmin solid;
+  background:
+    linear-gradient(to bottom right, #0000 50%, #000 0 62%, #fff8ee 0)
+    ;
+}
+
+.bubble-speech code {
+  display: inline-block;
+  background: #ccc;
+  padding: 0 0.5vmin;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, -110%); }
+  50% { transform: translate(0, -125%); }
+}
+
+#youtube span {
+  animation: float 3s infinite;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1vmin;
+  font-size: 1.75vmin;
+  font-family: Arial, sans-serif;
+  background: #222;
+  color: #eee;
+  border-radius: 10%;
+  transform: translate(0, -120%);
+  text-align: center;
+}
+    </style>
+  </head>
+  <body>
+    <div class="comic-strip" role="img" aria-label="Comic strip with 5 panels showing a white man getting angrier and angrier while updating the color value on CSS to verde, grün, vert, and зелений. In the final panel he asks 'Hey, honey! How did you say accent-color worked in CSS?'">
+      <div class="panel panel-1">
+        <div class="bubble">
+          <code><span class="css-prop">color</span><span class="css-del">:</span> <span class="css-val">verde</span><span class="css-del">;</span></code>
+        </div>
+        <div class="character">
+          <div class="arm-2"></div>
+          <div class="body">
+            <div class="arm-1"></div>
+          </div>
+          <div class="hair-back"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="ear"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="tongue"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="hand"></div>
+          <div class="speech">...Hmmm...</div>
+          <div class="action">*Write*</div>
+        </div>
+        <div class="computer"></div>
+      </div>
+      <div class="panel panel-2">
+        <div class="bubble">
+          <code><span class="css-prop">color</span><span class="css-del">:</span> <span class="css-val">grün</span><span class="css-del">;</span></code>
+        </div>
+        <div class="character">
+          <div class="arm-2"></div>
+          <div class="body">
+            <div class="arm-1"></div>
+          </div>
+          <div class="hair-back"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="ear"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="hand"></div>
+          <div class="speech">...Nope...</div>
+          <div class="action">*Write*</div>
+        </div>
+        <div class="computer"></div>
+      </div>
+      <div class="panel panel-3">
+        <div class="bubble">
+          <code><span class="css-prop">color</span><span class="css-del">:</span> <span class="css-val">vert</span><span class="css-del">;</span></code>
+        </div>
+        <div class="character">
+          <div class="arm-2"></div>
+          <div class="body">
+            <div class="arm-1"></div>
+          </div>
+          <div class="hair-back"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="ear"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="hand"></div>
+          <div class="speech">tsk-tsk</div>
+          <div class="action">*Write*</div>
+        </div>
+        <div class="computer"></div>
+      </div>
+      <div class="panel panel-4">
+        <div class="bubble">
+          <code><span class="css-prop">color</span><span class="css-del">:</span> <span class="css-val">зелений</span><span class="css-del">;</span></code>
+        </div>
+        <div class="character">
+          <div class="arm-2"></div>
+          <div class="body">
+            <div class="arm-1"></div>
+          </div>
+          <div class="hair-back"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="ear"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="hand"></div>
+          <div class="speech">...grrrr...</div>
+          <div class="action">*Write*</div>
+        </div>
+        <div class="computer"></div>
+      </div>
+      <div class="panel panel-5">
+        <div class="bubble-speech">
+          <span>Hey, honey!<br/>How did you say <code>accent-color</code> worked in CSS?</span>
+        </div>
+        <div class="character">
+          <div class="arm-2"></div>
+          <div class="body">
+            <div class="arm-1"></div>
+          </div>
+          <div class="hair-back"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="ear"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="hand"></div>
+        </div>
+        <div class="computer"></div>
+      </div>
+    </div>
+    
+    <a id="youtube" href="https://www.youtube.com/watch?v=i_B6LI2fq2Y" target="_blank">
+      <span>See how this was coded</span>
+    </a>
+  </body>
+  </html>

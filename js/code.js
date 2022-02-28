@@ -6,11 +6,13 @@ const rand = document.querySelectorAll("main nav a.random-post");
 let current = posts.length - 1;
 
 function changeImages(num, changeHistory = true, urlId = null) {
+  const main = document.querySelector("main");
   const comic = document.querySelector("#comic-strip");
   const post = posts[num];
   const permanentLink = document.querySelector("#permanent-link");
   const codeLink = document.querySelector("#code-link");
   const imageLink = document.querySelector("#image-link");
+  const videoLink = document.querySelector(".video a");
 
   document.querySelector("main h1").textContent = post.title;
   
@@ -20,7 +22,22 @@ function changeImages(num, changeHistory = true, urlId = null) {
   imageLink.textContent = `https://comicss.art/comics/${post.id}/${post.uid}.png`;
   codeLink.href= `/comics/${post.id}/${post.uid}.html`;
   codeLink.textContent = `https://comicss.art/comics/${post.id}/${post.uid}.html`;
-  comic.className = post.vertical ? "vertical" : "";
+  videoLink.href = `https://www.youtube.com/watch?v=${post.video}`;
+  videoLink.style.display = post.video ? "block" : "none";
+
+
+  comic.className = post.vertical ? `vertical` : ``;
+  
+  if (num === posts.length - 1) {
+    main.classList.add('latest');
+  } else {
+    main.classList.remove('latest')
+  }
+  if (num === 0) {
+    main.classList.add('first');
+  } else {
+    main.classList.remove('first')
+  }
 
   comic.innerHTML = "";
   comic.ariaLabel = post.ariaLabel;
