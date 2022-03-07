@@ -253,7 +253,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Accent Colors</title>
     <link href="https://comicss.art/?id=14" />
@@ -264,6 +263,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/14/accent-color.png" alt="Comic strip with 5 panels showing a white man getting angrier and angrier while updating the color value on CSS to green in Spanish, German, French, and Ukranian. In the final panel he asks 'Hey, honey! How did you say accent-color worked in CSS?'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>My CSS is to Democracy</title>
+    <link href="https://comicss.art/?id=15" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/15/democracy.html"/>
+    <id>https://comicss.art/?id=15</id>
+    <updated>2022-03-07T00:00:00Z</updated>
+    <summary>New cartoon: My CSS is to Democracy</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/15/democracy.png" alt="Cartoon of a man looking at a laptop and saying 'My CSS is to Web Development what Communism is to Democracy!' (based on a classic Mafalda cartoon)" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

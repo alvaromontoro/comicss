@@ -105,5 +105,14 @@ const posts = [
     vertical: true,
     video: "i_B6LI2fq2Y",
     ariaLabel: "Comic strip with 5 panels showing a white man getting angrier and angrier while updating the color value on CSS to verde, grün, vert, and зелений. In the final panel he asks 'Hey, honey! How did you say accent-color worked in CSS?'"
+  },
+  {
+    id: 15,
+    uid: "democracy",
+    boxes: 1,
+    vertical: true,
+    title: "My CSS is to development",
+    video: "icKWKEcsAIE",
+    ariaLabel: "Cartoon of a man looking at a laptop and saying 'My CSS is to Web Development what Communism is to Democracy!' (based on a classic Mafalda cartoon)"
   }
 ]
