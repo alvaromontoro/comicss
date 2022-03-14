@@ -114,5 +114,13 @@ const posts = [
     title: "My CSS is to development",
     video: "icKWKEcsAIE",
     ariaLabel: "Cartoon of a man looking at a laptop and saying 'My CSS is to Web Development what Communism is to Democracy!' (based on a classic Mafalda cartoon)"
+  },
+  {
+    id: 16,
+    uid: "fastest",
+    boxes: 3,
+    vertical: true,
+    title: "Fast, Faster, Fastest",
+    ariaLabel: "Cartoon with 3 panels. The first one shows the IE11 logo crossing a finish line. The second panel shows the IE logo taunting 'SUCK IT, LOSERS!! I WON!!! IE IS THE FASTEST!! IE IS THE BEST!!!!' at other browsers logos that discuss about who will talk to IE. In the third and last panel, the Chrome logo is whispering to IE logo's ear. The IE logo looks shocked and says: 'What do you mean Rio was over six years ago?.... Tokyo? That's like 11,000 miles away!'"
   }
 ]

@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  text-align: center;
+  background: #ccc;
+}
+
+article {
+  margin: auto auto;
+  font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1vmin;
+  padding-bottom: 5vmin;
+  padding-top: 5vmin;
+}
+
+.box {
+  width: 80vmin;
+  aspect-ratio: 2.25;
+  border: 0.5vmin solid;
+  border-radius: 0.25vmin;
+  position: relative;
+  background: linear-gradient(#eae8, #ffff 45%);
+}
+
+.box div,
+.box div::before,
+.box div::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sideways {
+  transform: perspective(1000px) rotateY(-30deg);
+}
+
+.chrome-face {
+  --s: 80vmin;
+  --b: #0071f0;
+  --r: #f11718;
+  --g: #00a944;
+  --y: #ffbe01;
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(var(--b) 28.75%, #fff 29% 35.25%, #0000 35.5%),
+    linear-gradient(var(--r) 25%, #0000 0),
+    linear-gradient(60deg, var(--g) 31.75%, #0000 0),
+    linear-gradient(-60deg, var(--y) 31.75%, #0000 0),
+    conic-gradient(var(--y) 33.33%, var(--g) 0 66.66%, var(--r) 0)
+    ;
+  border-radius: 50%;
+}
+
+.ie-face {
+  --c: #1EBBEE;
+  --s: 50vw;
+  width: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.ie-face::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:
+    linear-gradient(#0000 57.5%, #fff 0 66%, #0000 0) 100% 50% / 25% 100% no-repeat,
+    radial-gradient(135% 130% at 50% 100%, #fff 30%, #0000 30.25%) 63% 0% / 50% 46% no-repeat,
+    radial-gradient(135% 145% at 50% 0%, #fff 30%, #0000 30.25%) 64% 100% / 50% 42.5% no-repeat,
+    radial-gradient(88% 88% at 56% 52%,  var(--c) 50%, #0000 50.25%)
+    ;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 75%, 10% 50%);
+}
+
+div.ie-face::after {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  width: 115%;
+  height: 44%;
+  border: calc(var(--s) * 0.04) solid var(--c);
+  border-top: calc(var(--s) * 0.1) solid var(--c);
+  border-bottom: calc(var(--s) * 0.01) solid #0000;
+  border-left: calc(var(--s) * 0.06) solid var(--c);
+border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  box-shadow: calc(var(--s) * -0.25) calc(var(--s) * -0.055) #fff;
+}
+
+.safari-face {
+  --s: 20vmin;
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(#2fa4d4 10%, #277ec2 50% 65.5%, #0000 65.66%),
+    linear-gradient(#f2f2f2, #dad9da)
+    ;
+  background-color: #f002;
+  position: relative;
+}
+
+.safari-face::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    /* circle cutting long lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57%, #0000 57.25%),
+    /* long lines */
+    linear-gradient(#0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(11.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(22.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(33.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(45deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(56.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(67.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(78.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(90deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(101.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(112.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(123.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(135.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(146.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(157.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(168.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    /* circle cutting short lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57% 63.5%, #0000 63.75%),
+    /* short lines */
+    linear-gradient(5.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(16.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(28.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(39.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(50.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(61.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(73.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(84.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(95.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(106.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(118.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(129.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(140.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(151.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(163.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(174.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0)
+    ;
+}
+
+.safari-face::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 13%;
+  height: 89%;
+  background:
+    linear-gradient(to bottom right, #0000 50%, #ff2d3a 0) 0 0,
+    linear-gradient(to bottom left, #0000 50%, #dd0017 0) 100% 0,
+    linear-gradient(to top right, #0000 50%, #dbdadb 0) 0 100%,
+    linear-gradient(to top left, #0000 50%, #abaaab 0) 100% 100%
+    ;
+  background-size: 50.125% 50.125%;
+  background-repeat: no-repeat;
+}
+
+/* box 1 */
+.box-1 {
+  margin-top: 10vmin;
+}
+
+.box-1 .ie-face {
+  --s: 25vmin;
+  transform: translateX(-30%) rotate(-15deg);
+  left: 45%;
+  top: 20%;
+}
+
+.box-1 .ie-mouth {
+  width: 7%;
+  height: 7%;
+  border: 0.4vmin solid;
+  border-radius: 3vmin 50% 200% 3vmin;
+  top: 69%;
+  left: 53%;
+  background:
+    linear-gradient(#0000 42%, #000 0 58%, #0000 0),
+    repeating-linear-gradient(90deg, #0000 0 18%, #000 0 20%)
+  ;
+  background-color: #eee;
+}
+
+.box-1 .ie-eye {
+  width: 2%;
+  height: 7%;
+  background: #000;
+  border-radius: 50%;
+  left: 49%;
+  top: 48%;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  transform: rotate(-10deg);
+}
+
+.box-1 .ie-eye + .ie-eye {
+  top: 44%;
+  left: 56.5%;
+  transform: scaleX(-1) rotate(10deg);
+}
+
+.box-1 .ie-arm {
+  width: 14%;
+  height: 33%;
+  border: 1vmin solid;
+  border-radius: 50%;
+  border-top: 1vmin solid #0000;
+  border-left: 1vmin solid #0000;
+  left: 62%;
+  top: 45%;
+}
+
+.box-1 .ie-arm::before {
+  content: "";
+  width: 3vmin;
+  height: 3vmin;
+  background: black;
+  border-radius: 50%;
+  top: 5%;
+  left: 75%;
+}
+
+.box-1 .ie-arm + .ie-arm {
+  transform: rotate(170deg);
+  top: 75%;
+  left: 33%;
+  width: 15%;
+  height: 30%;
+}
+
+.box-1 .ie-leg-back {
+  width: 20%;
+  height: 70%;
+  border-top: 1.5vmin solid #000;
+  border-right: 1.5vmin solid;
+  border-left: 2vmin solid #0000;
+  border-radius: 50%;
+  top: 75%;
+  left: 46%;
+}
+
+.box-1 .ie-leg {
+  width: 1.5vmin;
+  height: 20%;
+  background: #000;
+  transform: rotate(20deg);
+  bottom: -4.5%;
+  left: 48%;
+  border-radius: 0 0.5vmin 0 0;
+}
+
+
+.box-1 .pole {
+  width: 2%;
+  background: black;
+  bottom: -0.25vmin;
+}
+
+.box-1 .pole-1 {
+  height: 120%;
+  right: 14%;
+}
+
+.box-1 .pole-2 {
+  right: 84%;
+  height: 110%;
+}
+
+.box-1 .panel {
+  width: 70%;
+  height: 25%;
+  background: #fff;
+  right: 15%;
+  top: -18%;
+  transform-origin: 100% 50%;
+  transform: skewY(-3.5deg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vmin;
+  font-size: 4vmin;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444;
+}
+
+.box-1 .panel span:first-child,
+.box-1 .panel span:last-child {
+  width: 22%;
+  height: 100%;
+  background:
+   radial-gradient(circle at 1.75vmin 35%, #0000 1.4vmin, blue 0 1.6vmin, #0000 0),
+   radial-gradient(circle at 5.2vmin 35%, #0000 1.4vmin, black 0 1.6vmin, #0000 0),
+   radial-gradient(circle at 8.65vmin 35%, #0000 1.4vmin, red 0 1.6vmin, #0000 0),
+   radial-gradient(circle at 3.5vmin 55%, #0000 1.4vmin, gold 0 1.6vmin, #0000 0),
+   radial-gradient(circle at 6.9vmin 55%, #0000 1.4vmin, green 0 1.6vmin, #0000 0)
+  ;
+}
+
+.box-1 .speed-line {
+  width: 5%;
+  height: 20%;
+  border: 0.25vmin solid #0000;
+  border-left: 0.5vmin solid;
+  border-radius: 50%;
+}
+
+.box-1 .speed-line::before {
+  content: "";
+  width: 100%;
+  height: 80%;
+  top: 10%;
+  left: -60%;
+  border: 0.25vmin solid #0000;
+  border-left: 0.5vmin solid;
+  border-radius: 50%;
+}
+
+.box-1 .speed-line-1 {
+  top: 40%;
+  left: 37%;
+  height: 25%;
+  transform: rotate(6deg);
+}
+.box-1 .speed-line-2 {
+  top: 77%;
+  left: 31%;
+  transform: rotate(10deg)
+}
+
+
+/* box 2 */
+.box-2 .ie-face {
+  --s: 30vmin;
+  right: 5%;
+  top: 10%;
+}
+
+.box-2 .mouth {
+  width: 15%;
+  height: 15%;
+  border: 0.5vmin solid;
+  background: #eee;
+  border-radius: 50% / 0 0 100% 100%;
+  top: 66%;
+  right: 16%;
+}
+
+.box-2 .eye {
+  width: 2%;
+  height: 7%;
+  background: #000;
+  border-radius: 50%;
+  right: 20%;
+  top: 45%;
+}
+
+.box-2 .eye::before {
+  content: "";
+  width: 200%;
+  height: 20%;
+  background: #000;
+  left: -20%;
+  top: -5%;
+  transform: rotate(-9deg);
+}
+
+.box-2 .eye +  .eye {
+  transform: scaleX(-1);
+  right: 28%;
+}
+
+.box-2 .leg {
+  width: 2%;
+  height: 20%;
+  background: #000;
+  bottom: -5%;
+  right: 15%;
+}
+
+.box-2 .leg + .leg {
+  right: 24%;
+}
+
+.box-2 .arm {
+  width: 10%;
+  height: 40%;
+  border-radius: 50%;
+  border: 1vmin solid;
+  border-left-color: #0000;
+  right: 8%;
+  top: 67%;
+  transform: rotate(-25deg);
+}
+
+.box-2 .arm-2 {
+  width: 15%;
+  height: 1vmin;
+  background: #000;
+  top: 72%;
+  right: 33%;
+  transform-origin: 100% 50%;
+  transform: rotate(-10deg);
+  border-radius: 0 0.5vmin 0 0;
+}
+
+.box-2 .arm-2::before {
+  content: "";
+  width: 6vmin;
+  height: 6vmin;
+  background: 
+    linear-gradient(90deg, #0000 33.33%, #0008 0 66.6%, #0000 0),
+    linear-gradient(#0006 0 0) 100% 100% / 33.33% 33.33% no-repeat,
+    linear-gradient(#ddd 33.33%, #aaa 0 66.66%, #888 0)
+  ;
+  left: 0;
+  transform: translate(-80%, -80%);
+}
+
+.box-2 .bubble {
+  width: 50%;
+  border: 0.5vmin solid;
+  padding: 1vmin 2vmin 3vmin 2vmin;
+  top: -0.5vmin;
+  left: 20%;
+  border-radius:  5% 5% 60% 60% / 20% 6% 100% 100%;
+  font-size: 2.7vmin;
+  text-transform: uppercase;
+  background: #ffe;
+}
+
+.box-2 .bubble-line {
+  width: 5%;
+  height: 15%;
+  background: conic-gradient(from 0.9turn at 100% 100%, #000 0.1turn, #0000 0);
+  top: 32%;
+  left: 57.25%;
+  transform: rotate(-15deg);
+}
+
+.box-2 .bubble-line ~ .bubble-line {
+  top: 30%;
+  left: 57%;
+  background: conic-gradient(from 0.9turn at 100% 100%, #ffe 0.07turn, #0000 0);
+  transform: rotate(-10deg);
+}
+
+.box-2 .convo {
+  font-size: 1.5vmin;
+}
+
+.box-2 .convo-1 {
+  left: 3%;
+  top: 25%;
+}
+
+.box-2 .convo-2 {
+  left: 14%;
+  top: 40%;
+}
+
+.box-2 .convo-3 {
+  left: 4.5%;
+  top: 55%;
+  background: #fff;
+}
+
+.box-2 .convo-4 {
+  left: 26%;
+  bottom: 5%;
+  font-size: 1.25vmin;
+}
+
+.box-2 .safari-face, 
+.box-2 .chrome-face {
+  width: 8vmin;
+  bottom: -5%;
+  left: 15%;
+}
+
+.box-2 .safari-face {
+  left: 3%;
+  bottom: -5.5%;
+}
+
+.box-2 .line {
+  border-radius: 50%;
+  border: 0.2vmin solid #0000;
+  width: 2%;
+  bottom: 18%;
+}
+
+.box-2 .line-1 {
+  height: 37%;
+  left: 17%;
+  border-left: 0.2vmin solid;
+}
+
+.box-2 .line-2 {
+  height: 53%;
+  bottom: 17%;
+  left: 7%;
+  border-right: 0.2vmin solid;
+}
+
+.box-2 .eyes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 16%;
+  height: 2%;
+  bottom: 8%;
+  left: 6%;
+}
+
+.box-2 .eyes::before,
+.box-2 .eyes::after {
+  content: "";
+  position: relative;
+  width: 27%;
+  height: 100%;
+  background: 
+    radial-gradient(50% 150% at 50% 0, #000 70%, #0000 0) 0 0 / 40% 100% no-repeat,
+    radial-gradient(50% 150% at 50% 0, #000 70%, #0000 0) 100% 0 / 40% 100% no-repeat
+    ;
+  clip-path: polygon(0 0, 50% 20%, 100% 0, 100% 100%, 0 100%);
+}
+
+.box-2 .eyes::before {
+  clip-path: none;
+}
+
+/* panel 3 */
+.box-3 .chrome-face {
+  --s: 25vmin;
+  bottom: 5%;
+  left: 4%;
+  transform: rotate(10deg);
+}
+
+.box-3 .ie-face {
+  --s: 28vmin;
+  bottom: 2%;
+  left: 33%;
+  transform: rotate(-10deg);
+  transform: rotate(0deg);
+}
+
+.box-3 .ie-eye {
+  width: 8.5vmin;
+  aspect-ratio: 1;
+  background: white radial-gradient(at 50% 48%, #000 4%, #0000 0);
+  border-radius: 50%;
+  top: 42%;
+  left: 41%;
+  top: 39%;
+}
+
+.box-3 .ie-eye + .ie-eye {
+  width: 9vmin;
+  top: 36%;
+  left: 52%;
+  transform: rotate(-160deg);
+  top: 37%;
+}
+
+.box-3 .ie-eye::before,
+.box-3 .ie-eye::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 0.2vmin solid;
+  border-radius: 50%;
+  left: -0.15vmin;
+}
+
+.box-3 .ie-eye::after {
+  left: 0.15vmin;
+  top: 0.1vmin;
+}
+
+.box-3 .ie-mouth {
+  width: 11%;
+  height: 4.5%;
+  background: black;
+  border-radius: 100% / 150% 150% 30% 40%;
+  top: 75%;
+  left: 49%;
+  transform: rotate(-20deg);
+  transform: rotate(-2deg);
+  left: 49%;
+  width: 8%;
+  top: 76%;
+}
+
+.box-3 .ie-eyebrow {
+  width: 7%;
+  height: 4%;
+  top: 41%;
+  left: 41%;
+  transform: rotate(-12deg);
+  border-radius: 50%;
+  border: 0.2vmin solid #0000;
+  border-top: 0.5vmin solid;
+
+  transform: rotate(1deg);
+  top: 37%;
+  left: 43%;
+}
+
+.box-3 .ie-eyebrow + .ie-eyebrow {
+  top: 35%;
+  left: 52%;
+  transform: rotate(-24deg);
+  transform: rotate(-1deg);
+  left: 54%;
+}
+
+.box-3 .ie-cheek {
+  width: 27%;
+  height: 11%;
+  background: radial-gradient(farthest-side, #f008 40%, #0000);
+  border-radius: 50%;
+  afilter: blur(1vmin);
+  top: 57%;
+  lefT: 40%;
+  transform: rotate(-14deg);
+  display: flex;
+  justify-content: space-between;
+  transform: rotate(0);
+  left: 39%;
+}
+
+.box-3 .ie-cheek::before,
+.box-3 .ie-cheek::after {
+  content: "";
+  position: relative;
+  width: 40%;
+  height: 100%;
+  background: repeating-linear-gradient(60deg, #0000 0 11%, #b00 0 13%);
+  border-radius: 50%;
+}
+
+.box-3 .bubble {
+  width: 35%;
+  border: 0.5vmin solid;
+  padding: 1vmin 2vmin 3vmin 2vmin;
+  top: -0.5vmin;
+  right: -0.5vmin;
+  border-radius:  10% 5% 50% 60% / 40% 6% 40% 70%;
+  font-size: 2.4vmin;
+  text-transform: uppercase;
+  /* background: 
+    repeating-linear-gradient(90deg, #0000 0 4%, #08c4 0 4.2%) 100% 0 / 100% 20% no-repeat,
+    linear-gradient(#08c2, #0000 40%); */
+  background-color: #ffe;
+}
+
+.box-3 .bubble-line {
+  width: 5%;
+  height: 15%;
+  background: conic-gradient(from 0.9turn at 100% 100%, #000 0.1turn, #0000 0);
+  top: 31.5%;
+  left: 69%;
+  transform: scaleX(-1) rotate(-15deg) ;
+}
+
+.box-3 .bubble-line ~ .bubble-line {
+  top: 30%;
+  left: 69%;
+  background: conic-gradient(from 0.9turn at 100% 100%, #ffe 0.07turn, #0000 0);
+  transform: scaleX(-1) rotate(-10deg) ;
+}
+
+.box-3 .ie-leg {
+  width: 2%;
+  height: 10%;
+  background: black;
+  bottom: -0.5vmin;
+  left: 55%;
+}
+
+.box-3 .ie-leg + .ie-leg {
+  left: 48%;
+}
+
+.box-3 .ie-arm {
+  width: 1.25%;
+  height: 16%;
+  background: black;
+  bottom: -0.5vmin;
+  left: 62%;
+  z-index: 1;
+  border-radius: 4vmin 0 0 0;
+}
+
+.box-3 .ie-arm + .ie-arm {
+  left: 42%;
+  border-radius: 0 4vmin 0 0;
+}
+
+.box-3 .ie-talk {
+  font-size: 1.4vmin;
+  top: 70%;
+  left: 70%;
+  text-align: left;
+}
+
+.box-3 .chrome-talk {
+  font-size: 1.5vmin;
+}
+
+.box-3 .chrome-talk-1 {
+  top: 5%;
+  left: 10%;
+  transform: rotate(-5deg);
+}
+
+.box-3 .chrome-talk-2 {
+  top: 12%;
+  left: 25%;
+}
+
+.box-3 .chrome-talk-3 {
+  top: 35%;
+  left: 33%;
+  transform: rotate(3deg);
+}
+
+.box-3 .chrome-talk-4 {
+  top: 82%;
+  left: 24%;
+  transform: rotate(6deg);
+}
+
+.box-3 .chrome-talk-3::before {
+  content: "Tokyo";
+  top: -90%;
+  left: 33%;
+  transform: rotate(-10deg);
+  font-size: 0.75em;
+}
+
+.box-3 .chrome-talk-4::before {
+  content: "Whisper";
+  top: -100%;
+  left: 33%;
+  transform: rotate(-10deg);
+}
+
+.box-3 .chrome-talk-3::after {
+  content: "Whisper";
+  top: -190%;
+  left: -10%;
+  transform: rotate(-20deg);
+}
+
+.box-3 .chrome-mouth {
+  --size: 0.5vmin;
+  width:3%;
+  aspect-ratio: 1;
+  border: var(--size) solid;
+  border-left-color: #0000;
+  border-bottom-color: #0000;
+  border-radius: 50%;
+  transform: rotate(55deg);
+  top: 75%;
+  left: 20%;
+}
+
+.box-3 .chrome-mouth::before {
+  content: "";
+  width: 140%;
+  height: 140%;
+  border: var(--size) solid;
+  border-left-color: #0000;
+  border-bottom-color: #0000;
+  border-radius: 50%;
+  top: calc(100% - var(--size));
+  left: calc(100% - var(--size));
+}
+
+.box-3 .chrome-eye {
+  width: 3%;
+  aspect-ratio: 2;
+  border-radius: 50% / 0 0 100% 100%;
+  background: black;
+  transform: rotate(10deg);
+  top: 53%;
+  left: 14%;
+}
+
+.box-3 .chrome-eye + .chrome-eye {
+  left: 23%;
+  top: 57%;
+}
+
+.box-3 .chrome-eyebrow {
+  width: 10%;
+  aspect-ratio: 1;
+  border-radius: 50% / 0 0 100% 100%;
+  border: 0.75vmin solid #0000;
+  border-top: 0.75vmin solid;
+  transform: rotate(10deg);
+  border-radius: 50%;
+  top: 43%;
+  left: 10%;
+}
+
+.box-3 .chrome-eyebrow + .chrome-eyebrow {
+  aspect-ratio: 2;
+  border-right: 0.25vmin solid #0000;
+  border-left: 1.25vmin solid #0000;
+  border-top: 0.75vmin solid #0000;
+  border-bottom: 0.75vmin solid;
+  transform: rotate(4deg);
+  border-radius: 50%;
+  top: 43%;
+  left: 20%;
+}
+
+.box-3 .chrome-arms {
+  width: 29%;
+  height: 80%;
+  border: 1vmin solid;
+  border-radius: 50%;
+  transform: rotate(20deg);
+  top: 60%;
+}
+
+.box-3 .chrome-legs {
+  width: 14%;
+  height: 80%;
+  border: 1.75vmin solid;
+  transform: rotate(20deg);
+  top: 60%;
+  left: 7%;
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon with 3 panels. The first one shows the IE11 logo crossing a finish line. The second panel shows the IE logo taunting 'SUCK IT, LOSERS!! I WON!!! IE IS THE FASTEST!! IE IS THE BEST!!!!' at other browsers logos that discuss about who will talk to IE. In the third and last panel, the Chrome logo is whispering to IE logo's ear. The IE logo looks shocked and says: 'What do you mean Rio was over six years ago?.... Tokyo? That's like 11,000 miles away!'">
+      <div class="box box-1">
+        <div class="pole pole-1"></div>
+        <div class="panel">
+          <span>&nbsp;</span>
+          <span>FINISH</span>
+          <span>&nbsp;</span>
+        </div>
+        <div class="pole pole-2"></div>
+        <div class="frame">
+          <div class="ie-leg-back"></div>
+          <div class="ie-face"></div>
+          <div class="ie-mouth"></div>
+          <div class="ie-eye"></div>
+          <div class="ie-eye"></div>
+          <div class="ie-leg"></div>
+          <div class="ie-arm"></div>
+          <div class="ie-arm"></div>
+          <div class="speed-line speed-line-1"></div>
+          <div class="speed-line speed-line-2"></div>
+        </div>
+      </div>
+      <div class="box box-2">
+        <div class="frame">
+          <div class="bubble-line"></div>
+          <div class="bubble">
+            Suck it, losers!! <b>I won!!!</b><br/>
+            IE is the fastest!!<br/>
+            <b>IE is the best!!!!</b>
+          </div>
+          <div class="bubble-line"></div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="convo convo-1">You tell him</div>
+          <div class="convo convo-2">Why me?</div>
+          <div class="convo convo-3">I did it<br/>last time!</div>
+          <div class="convo convo-4">Oh, fudge!<br/>Ok...ok...</div>
+          <div class="chrome-face"></div>
+          <div class="safari-face"></div>
+          <div class="eyes"></div>
+          <div class="leg"></div>
+          <div class="leg"></div>
+          <div class="arm"></div>
+          <div class="ie-face sideways"></div>
+          <div class="mouth sideways"></div>
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="arm-2"></div>
+        </div>
+      </div>
+      <div class="box box-3">
+        <div class="frame">
+          <div class="bubble-line"></div>
+          <div class="bubble">W-w-w-what...<br/>what do you mean Rio was over six years ago?</div>
+          <div class="bubble-line"></div>
+          <div class="ie-leg"></div>
+          <div class="ie-leg"></div>
+          <div class="ie-arm"></div>
+          <div class="ie-arm"></div>
+          <div class="ie-face"></div>
+          <div class="ie-cheek"></div>
+          <div class="ie-eyebrow"></div>
+          <div class="ie-eyebrow"></div>
+          <div class="ie-eye"></div>
+          <div class="ie-eye"></div>
+          <div class="ie-mouth"></div>
+          <!-- <div class="ie-talk">.......and 11,000 miles away....?</div> -->
+          <div class="ie-talk">...Tokyo? But that's like... <br/>&nbsp;&nbsp;&nbsp;....10,000 miles away from here....</div>
+          <div class="chrome-arms"></div>
+          <div class="chrome-legs"></div>
+          <div class="chrome-face"></div>
+          <div class="chrome-eye"></div>
+          <div class="chrome-eye"></div>
+          <div class="chrome-eyebrow"></div>
+          <div class="chrome-eyebrow"></div>
+          <div class="chrome-mouth"></div>
+          <div class="chrome-talk chrome-talk-1">Come here,<br/>little $#&%!</div>
+          <div class="chrome-talk chrome-talk-2">Listen...</div>
+          <div class="chrome-talk chrome-talk-3">Whisper</div>
+          <div class="chrome-talk chrome-talk-4">Whisper</div>
+        </div>
+      </div>
+    </article>
+  </body>
+  </html>

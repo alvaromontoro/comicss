@@ -156,5 +156,15 @@
       <enclosure url="https://comicss.art/comics/15/democracy.png" length="128000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=16</guid>
+      <title>Fast, Faster, Fastest</title>
+      <link>https://comicss.art/?id=16</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/16/fastest.png" length="224000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
