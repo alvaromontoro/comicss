@@ -139,6 +139,11 @@ main h1 {
   width: 500px;
 }
 
+#comic-strip.horizontal img {
+  width: auto;
+  max-height: 225px;
+}
+
 /* blog */
 .blog article {
   margin-bottom: 3rem;

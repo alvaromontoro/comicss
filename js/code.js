@@ -25,8 +25,7 @@ function changeImages(num, changeHistory = true, urlId = null) {
   videoLink.href = `https://www.youtube.com/watch?v=${post.video}`;
   videoLink.style.display = post.video ? "block" : "none";
 
-
-  comic.className = post.vertical ? `vertical` : ``;
+  comic.className = post.horizontal ? `horizontal` : post.vertical ? `vertical` : ``;
   
   if (num === posts.length - 1) {
     main.classList.add('latest');
