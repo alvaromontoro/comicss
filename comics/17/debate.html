@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+article {
+  --bubble: #def;
+  --bubble2: #fdc;
+  --color: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 91vmin;
+  gap: 1vmin;
+  font-size: 1.75vmin;
+  font-family: Arial, Verdana, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+article div, article div::before, article div::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+article .box {
+  color: var(--color);
+  border: 0.5vmin solid;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25vmin;
+  background: linear-gradient(#cac8, #cac0 70%);
+}
+article .box.box-1 {
+  width: 30vmin;
+  aspect-ratio: 1;
+}
+article .box.box-2 {
+  width: 60vmin;
+  aspect-ratio: 2;
+}
+article .box .person {
+  width: 10vmin;
+  height: 15vmin;
+  overflow: hidden;
+}
+article .box .person .head {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 40%;
+  background: white;
+  border: 0.4vmin solid;
+  border-radius: 95% 90% 110% 95%/90% 110% 90% 100%;
+}
+article .box .person .head .eye {
+  width: 10%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, 0);
+}
+article .box .person .head .eye + .eye {
+  left: 70%;
+}
+article .box .person .head .mouth {
+  width: 30%;
+  aspect-ratio: 0.75;
+  border: 0.4vmin solid #0000;
+  border-bottom: 0.4vmin solid;
+  border-radius: 50%;
+  top: 20%;
+  left: 55%;
+  transform: translateX(-50%);
+}
+article .box .person .neck {
+  width: 12%;
+  height: 25%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+  border: 0.4vmin solid;
+}
+article .box .person .body {
+  width: 12%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  background: black;
+  border: 0.5vmin solid;
+  transform-origin: 50% 0;
+  transform: translateX(-50%) perspective(50px) rotateX(60deg);
+}
+article .box:nth-child(1) .table, article .box:nth-child(4) .table {
+  width: 150%;
+  height: 15%;
+  left: -25%;
+  bottom: 0;
+  background: #dde;
+  border-radius: 50%/100% 100% 0 0;
+  box-shadow: 0 -0.4vmin;
+  z-index: 3;
+  transform: perspective(1000px) rotateX(0deg);
+}
+article .box:nth-child(1) .bubble, article .box:nth-child(4) .bubble {
+  width: calc(100% + 2vmin);
+  left: -1vmin;
+  box-shadow: 0 0.4vmin;
+  padding: 0.5vmin 2vmin 1vmin 2vmin;
+  border-radius: 0 0 100% 100%;
+  text-align: center;
+  top: 11%;
+  background: #def;
+  font-family: "Comic Neue", "Comic Sans", sans-serif;
+}
+article .box:nth-child(1) .bubble-line, article .box:nth-child(4) .bubble-line {
+  width: 8.5%;
+  height: 16%;
+  background: linear-gradient(to top right, #0000 50%, var(--color) 0);
+  top: 37.5%;
+  left: 45%;
+  transform: rotate(-10deg);
+}
+article .box:nth-child(1) .bubble-line ~ .bubble-line, article .box:nth-child(4) .bubble-line ~ .bubble-line {
+  width: 7%;
+  height: 15%;
+  background: linear-gradient(to top right, #0000 50%, var(--bubble) 0);
+  top: 35%;
+}
+article .box:nth-child(1) .commentator-1, article .box:nth-child(4) .commentator-1 {
+  bottom: 5%;
+  left: 10%;
+}
+article .box:nth-child(1) .commentator-2, article .box:nth-child(4) .commentator-2 {
+  bottom: 6%;
+  right: 10%;
+  transform: scaleX(-1);
+}
+article .box:nth-child(1) .commentator-2 .head, article .box:nth-child(4) .commentator-2 .head {
+  border-radius: 95% 110% 90% 100%/95% 95% 110% 95%;
+}
+article .box:nth-child(1) .commentator-2 .head .mouth, article .box:nth-child(4) .commentator-2 .head .mouth {
+  border: 0;
+  width: 17%;
+  aspect-ratio: 1;
+  top: 55%;
+  background: linear-gradient(#0000 0 50%, #000 0);
+}
+article .box:nth-child(2) .bubble,
+article .box:nth-child(2) .speech, article .box:nth-child(3) .bubble,
+article .box:nth-child(3) .speech {
+  text-align: center;
+  font-family: "Comic Neue", "Comic Sans", sans-serif;
+}
+article .box:nth-child(2) .person, article .box:nth-child(3) .person {
+  bottom: 5%;
+  left: 23%;
+  transform: translateX(-50%);
+}
+article .box:nth-child(2) .person .head, article .box:nth-child(3) .person .head {
+  border-radius: 110% 95% 100% 95%/95% 90% 110% 95%;
+}
+article .box:nth-child(2) .person + .person, article .box:nth-child(3) .person + .person {
+  left: 77%;
+  transform: translateX(-50%) scaleX(-1);
+}
+article .box:nth-child(2) .person + .person .head, article .box:nth-child(3) .person + .person .head {
+  border-radius: 90% 95% 110% 95%/95% 90% 90% 95%;
+}
+article .box:nth-child(2) .person + .person .mouth, article .box:nth-child(3) .person + .person .mouth {
+  border: 0;
+  width: 15%;
+  aspect-ratio: 1.4;
+  top: 63%;
+  background: linear-gradient(160deg, #000 50%, #0000 0);
+  box-shadow: inset 0.3vmin 0.2vmin;
+}
+article .box:nth-child(2) .podium, article .box:nth-child(3) .podium {
+  width: 12%;
+  height: 20%;
+  border: 0.4vmin solid;
+  border-bottom: 0;
+  background: indianred;
+  bottom: 0;
+  left: 25%;
+  transform: translate(-50%, 0) perspective(1000px) rotateX(0deg);
+}
+article .box:nth-child(2) .podium::before, article .box:nth-child(3) .podium::before {
+  content: "";
+  width: 30%;
+  height: 70%;
+  border-radius: 50% 50% 0 0;
+  border: 0.4vmin solid #0000;
+  border-bottom: 0;
+  border-right: 0.4vmin solid;
+  top: -70%;
+  right: 20%;
+}
+article .box:nth-child(2) .podium::after, article .box:nth-child(3) .podium::after {
+  content: "";
+  width: 20%;
+  height: 20%;
+  background: black;
+  border-radius: 50%;
+  top: -75%;
+  right: 20%;
+}
+article .box:nth-child(2) .podium + .podium, article .box:nth-child(3) .podium + .podium {
+  left: 75%;
+  transform: translate(-50%, 0) perspective(1000px) rotateX(0deg) scaleX(-1);
+}
+article .box:nth-child(1) .commentator-1 .eye,
+article .box:nth-child(1) .commentator-2 .eye {
+  left: 35%;
+}
+article .box:nth-child(1) .commentator-1 .eye + .eye,
+article .box:nth-child(1) .commentator-2 .eye + .eye {
+  left: 65%;
+}
+article .box:nth-child(1) .commentator-1 .mouth,
+article .box:nth-child(1) .commentator-2 .mouth {
+  left: 50%;
+}
+article .box:nth-child(2) .bubble-1 {
+  width: 35%;
+  border: 0.4vmin solid;
+  top: -0.4vmin;
+  background: var(--bubble2);
+  padding: 1vmin 2vmin;
+  border-radius: 20% 10% 100% 100%/100%;
+  left: 5%;
+}
+article .box:nth-child(2) .bubble-2 {
+  width: 50%;
+  border: 0.4vmin solid;
+  top: -0.4vmin;
+  background: var(--bubble);
+  padding: 1vmin 2vmin;
+  border-radius: 20% 10% 100% 100%/100%;
+  right: 5%;
+}
+article .box:nth-child(2) .bubble-line1 {
+  width: 3.5%;
+  height: 12%;
+  background: linear-gradient(to bottom right, var(--color) 50%, #0000 0);
+  top: 32.25%;
+  left: 29.35%;
+  transform: rotate(-6deg);
+}
+article .box:nth-child(2) .bubble-line1 ~ .bubble-line1 {
+  width: 2%;
+  background: linear-gradient(to bottom right, var(--bubble2) 50%, #0000 0);
+  top: 30%;
+  left: 30%;
+  transform: rotate(0deg);
+}
+article .box:nth-child(2) .bubble-line2 {
+  width: 3.5%;
+  height: 12%;
+  background: linear-gradient(to bottom left, var(--color) 50%, #0000 0);
+  top: 41%;
+  left: 64%;
+}
+article .box:nth-child(2) .bubble-line2 ~ .bubble-line2 {
+  width: 2%;
+  background: linear-gradient(to bottom left, var(--bubble) 50%, #0000 0);
+  top: 39%;
+  left: 65%;
+  transform: rotate(-6deg);
+}
+article .box:nth-child(3) .speech {
+  width: 100%;
+  height: 100%;
+  background: var(--bubble);
+  font-size: 2.5vmin;
+  line-height: 2.5vmin;
+  text-align: justify;
+}
+article .box:nth-child(3) .bubble-line2 {
+  background: linear-gradient(to top right, #0000 50%, var(--color) 0);
+  width: 6%;
+  height: 4%;
+  top: 59.5%;
+  left: 30%;
+}
+article .box:nth-child(3) .bubble-line2 ~ .bubble-line2 {
+  background: linear-gradient(to top right, #0000 50%, var(--bubble2) 0);
+  width: 5%;
+  height: 2%;
+  top: 60%;
+  left: 31%;
+  transform: rotate(3deg);
+}
+article .box:nth-child(3) .bubble-line1 {
+  background: linear-gradient(to top left, #0000 50%, var(--color) 0);
+  width: 1.5%;
+  height: 8%;
+  top: 33%;
+  left: 21.2%;
+}
+article .box:nth-child(3) .bubble-line1 ~ .bubble-line1 {
+  background: linear-gradient(to top left, #0000 50%, var(--bubble2) 0);
+  width: 1%;
+  height: 8%;
+  top: 31.5%;
+  left: 21.5%;
+  transform: rotate(3deg);
+}
+article .box:nth-child(3) .bubble {
+  background: var(--bubble2);
+  padding: 1vmin 0.5vmin;
+  font-size: 1.25vmin;
+  border: 0.3vmin solid;
+  border-radius: 50%;
+  text-align: center;
+}
+article .box:nth-child(3) .bubble.bubble-1 {
+  top: 20%;
+  left: 13%;
+}
+article .box:nth-child(3) .bubble.bubble-2 {
+  padding: 1vmin 0.75vmin;
+  top: 50%;
+  width: 23%;
+  left: 35%;
+}
+article .box:nth-child(3) .politician-1 .mouth {
+  border: 0;
+  width: 14%;
+  aspect-ratio: 1.25;
+  top: 60%;
+  background: linear-gradient(#000 50%, #0000 0);
+}
+article .box:nth-child(3) .politician-2 .eye {
+  clip-path: polygon(-20% 0%, 120% 40%, 120% 120%, 0 120%);
+}
+article .box:nth-child(3) .politician-2 .eye + .eye {
+  clip-path: polygon(-20% 40%, 120% -10%, 120% 120%, 0 120%);
+}
+article .box:nth-child(4) .bubble {
+  top: 0;
+}
+article .box:nth-child(4) .bubble-line {
+  top: 26.5%;
+  left: 55%;
+}
+article .box:nth-child(4) .bubble-line ~ .bubble-line {
+  top: 24%;
+}
+article .narrator {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5vmin;
+  border-bottom: 0.4vmin solid;
+  background: #eec;
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="comic strip with 4 panels. The first one has the title '2022 CSS Presidential Debate', there are two comentators and one says 'next question is for both candidates: what is the main issue impacting CSS today?' In the second panel, one candidate replies 'Definitely, the lack of support of key features by some browsers', the other candidate goes in a non-sensical attack to the first candidate using a lot of CSS terms. In the third panel, the second candidate floods the conversation with his nonsensical speech while the first candidate looks confused and says 'wait... what? are you just chaining random CSS keywords?'. In the last panel, the moderators are back and one says smiling: 'Wow! I dont want to influence people, but I think we have a clear winner.'">
+      <div class="box box-1">
+        <div class="bubble-line"></div>
+        <div class="bubble">Next question is for both candidates: what is the main issue impacting CSS today?</div>
+        <div class="bubble-line"></div>
+        <div class="narrator">2022 CSS Presidential Debate...</div>
+        <div class="person commentator-1">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="person commentator-2">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="table"></div>
+      </div>
+      <div class="box box-2">
+        <div class="bubble-line1"></div>
+        <div class="bubble bubble-1">Definitely, the lack of support of key features by some browsers.</div>
+        <div class="bubble-line1"></div>
+        <div class="bubble-line2"></div>
+        <div class="bubble bubble-2">My oponent is far from <b>right</b>. His <b>block</b> <b>position</b> changes <b>relative</b> to the <b>fixed</b> mentality of the audience. To see what <b>sticks</b> and what doesn't.</div>
+        <div class="bubble-line2"></div>
+        <div class="person politician-1">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="person politician-2">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="podium"></div>
+        <div class="podium"></div>
+      </div>
+      <div class="box box-2">
+        <div class="speech">In fact, my oponent's <b>display</b> of ideas is <b>unset</b>-tling. It <b>float</b>s a narrative of <b>block</b>s and <b>grid</b>s of hate. It is <b>all</b> <b>clear</b>. His <b>background</b> is <b>border</b>-line dangerous. He doesn't have a <b>filter</b> or a <b></b> <b>left</b>. There is no <b>margin</b> for error. His <b>position</b> is <b>"font"</b> and <b>center</b> what we don't need. I have a <b>hidden</b> <b>clip</b> that shows his true <b>color</b>s. I will make it <b>visible</b> and show how he <b>align</b> him<b>self</b>. We <b>all</b> need to get to the <b>bottom</b> of it, and find the <b>direction</b> and <b>overflow</b> of the moral <b>order</b> he follows. I am on <b>top</b> of it, and won't <b>skew</b> the results. I will <b>transform</b> this country and make sure that <b>all</b> the fake news are away and <b>hidden</b>. Not <b>visible</b>. As a <b>first-child</b> I'll make <b>right</b> of that.</div>
+        <div class="bubble-line1"></div>
+        <div class="bubble bubble-1">Wait... What?!</div>
+        <div class="bubble-line1"></div>
+        <div class="bubble-line2"></div>
+        <div class="bubble bubble-2">Are you... Are you<br/> just chaining random<br/>CSS keywords?</div>
+        <div class="bubble-line2"></div>
+        <div class="person politician-1">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="person politician-2">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="podium"></div>
+        <div class="podium"></div>
+      </div>
+      <div class="box box-1">
+        <div class="bubble-line"></div>
+        <div class="bubble">Wow! I don't want to influence people, but I think we have a clear winner here!</div>
+        <div class="bubble-line"></div>
+        <div class="person commentator-1">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="person commentator-2">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="table"></div>
+      </div>
+    </article>
+  </body>
+  </html>
