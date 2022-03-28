@@ -329,4 +329,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Ghost Costume</title>
+    <link href="https://comicss.art/?id=18" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/18/ghost-costume.html"/>
+    <id>https://comicss.art/?id=18</id>
+    <updated>2022-03-28T00:00:00Z</updated>
+    <summary>New cartoon: Ghost Costume</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/18/ghost-costume.png" alt="Comic strip with 4 panels. The first one shows the IE logo dressed up with a white blanket on top and saying 'Hey!' to a confused Chrome logo that says 'Errr.... hello?' and murmurs 'is it summer already?'. The second panel shows the IE logo saying 'sup?' to a scary-looking Safari logo yelling AIEEEE! In the third panel, the IE logo says 'morning' to the Opera logo that looks intrigued saying 'What the...'. In the final panel, the IE logo smiles happily saying 'Wow! my new ghost costume is going to kill it this Halloween', while a conversation happens off-panel: 'Halloween?', 'Mhmm', 'But June 15', 'I know', 'We need to tell IE', 'Why? Look how happy it is', 'But...', 'No!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

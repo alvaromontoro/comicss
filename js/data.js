@@ -130,5 +130,13 @@ const posts = [
     boxes: 4,
     title: "2022 CSS Presidential Debate",
     ariaLabel: "Comic strip with 4 panels. The first one has the title '2022 CSS Presidential Debate', there are two comentators and one says 'next question is for both candidates: what is the main issue impacting CSS today?' In the second panel, one candidate replies 'Definitely, the lack of support of key features by some browsers', the other candidate goes in a non-sensical attack to the first candidate using a lot of CSS terms. In the third panel, the second candidate floods the conversation with his nonsensical speech while the first candidate looks confused and says 'wait... what? are you just chaining random CSS keywords?'. In the last panel, the moderators are back and one says smiling: 'Wow! I dont want to influence people, but I think we have a clear winner.'"
+  },
+  {
+    id: 18,
+    uid: "ghost-costume",
+    vertical: true,
+    boxes: 4,
+    title: "Ghost Costume",
+    ariaLabel: "Comic strip with 4 panels. The first one shows the IE logo dressed up with a white blanket on top and saying 'Hey!' to a confused Chrome logo that says 'Errr.... hello?' and murmurs 'is it summer already?'. The second panel shows the IE logo saying 'sup?' to a scary-looking Safari logo yelling AIEEEE! In the third panel, the IE logo says 'morning' to the Opera logo that looks intrigued saying 'What the...'. In the final panel, the IE logo smiles happily saying 'Wow! my new ghost costume is going to kill it this Halloween', while a conversation happens off-panel: 'Halloween?', 'Mhmm', 'But June 15', 'I know', 'We need to tell IE', 'Why? Look how happy it is', 'But...', 'No!'"
   }
 ]
