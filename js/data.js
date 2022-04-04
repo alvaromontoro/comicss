@@ -138,5 +138,13 @@ const posts = [
     boxes: 4,
     title: "Ghost Costume",
     ariaLabel: "Comic strip with 4 panels. The first one shows the IE logo dressed up with a white blanket on top and saying 'Hey!' to a confused Chrome logo that says 'Errr.... hello?' and murmurs 'is it summer already?'. The second panel shows the IE logo saying 'sup?' to a scary-looking Safari logo yelling AIEEEE! In the third panel, the IE logo says 'morning' to the Opera logo that looks intrigued saying 'What the...'. In the final panel, the IE logo smiles happily saying 'Wow! my new ghost costume is going to kill it this Halloween', while a conversation happens off-panel: 'Halloween?', 'Mhmm', 'But June 15', 'I know', 'We need to tell IE', 'Why? Look how happy it is', 'But...', 'No!'"
+  },
+  {
+    id: 19,
+    uid: "eeny-meeny-miny-moe",
+    vertical: true,
+    boxes: 4,
+    title: "Eeny Meeny Miny Moe",
+    ariaLabel: "Cartoon with the lyrics of the song 'Eeny, meeny, miny, moe. Catch a tiger by the toe. If he hollers, let him go. Eeny, meeny, miny, moe!' printed over different browser logos (with scared faces): Chrome, Samsung Internet, Opera, Yandex, Maxthon, Tor, Vivaldi, and Safari (where there the song ends). In the last panel, a bubble has the text 'It is decided! Safari, from now on, youll be known as The New IE' And a crying Safari logo replies 'But... but... I am a fine browser. I am not as bad as before, I support many things... please... I support Lab and LCH... container queries... cascade layers... I swear, 15.4 is amazing... Dont do this to me...' And in a corner of the panel the IE logo says from a distance 'Hey, friends, Not trying to rain on your parade, but... I am still alive, you know?' and a voice in off says 'shut up, IE!'"
   }
 ]

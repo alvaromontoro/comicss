@@ -186,5 +186,15 @@
       <enclosure url="https://comicss.art/comics/18/ghost-costume.png" length="433000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=19</guid>
+      <title>Eeny, Meeny, Miny, Moe</title>
+      <link>https://comicss.art/?id=19</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/19/eeny-meeny-miny-moe.png" length="244000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
