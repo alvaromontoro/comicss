@@ -150,7 +150,7 @@ const posts = [
   {
     id: 20,
     uid: "private",
-    boxes: 1,
+    boxes: 2,
     title: "A Very Private Browser",
     ariaLabel: "Cartoon with two panels. The first one shows the Chrome and Safari browser logos talking. Chrome says: 'So... what do we know about the new guy?' and Safari replies 'Not much...'. In the second panel, the Tor logo is covered with sun glasses, a coat and a hat. The Safari logo continues talking: 'but you can tell they are really private'"
   }
