@@ -196,5 +196,15 @@
       <enclosure url="https://comicss.art/comics/19/eeny-meeny-miny-moe.png" length="244000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=20</guid>
+      <title>A Very Private Browser</title>
+      <link>https://comicss.art/?id=20</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/20/private.png" length="182000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

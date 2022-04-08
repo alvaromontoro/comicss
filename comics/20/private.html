@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  height: 100vh;
+}
+
+article {
+  --c: #ca7;
+  --s: 30vmin;
+  display: flex;
+  gap: 1vmin;
+  font-family: 'Comic Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+.box {
+  width: 40vmin;
+  aspect-ratio: 0.75;
+  border: 0.5vmin solid;
+  border-radius: 0.33vmin;
+  overflow: hidden;
+  background: linear-gradient(#c9ca, #c9c0 80%);
+  position: relative;
+}
+
+.box div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.chrome-logo {
+  bottom: -10%;
+  left: -23%;
+}
+
+.safari-logo {
+  bottom: -10%;
+  right: -23%;
+}
+
+.tor-logo {
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bubble {
+  font-size: 3vmin;
+  padding: 2vmin;
+  text-align: center;
+}
+
+.chrome-bubble {
+  background: #ffd;
+  width: 100%;
+  border-radius: 100% / 0 0 40% 40%;
+  top: 0;
+  left: 0;
+}
+
+.chrome-bubble::before {
+  content: "";
+  position: absolute;
+  height: 150%;
+  width: 20%;
+  top: 85%;
+  border-radius: 30% 10% 50% / 80%;
+  box-shadow: inset -1.2vmin 1vmin #ffd;
+}
+
+.safari-bubble {
+  top: 19%;
+  right: 0;
+  background: #cfc !important;
+  border-radius: 50% 80% 40% 80% / 100% 50% 30% 100%;
+  padding: 2.4vmin 2vmin 2vmin 3vmin;
+}
+
+.safari-bubble::before {
+  content: "";
+  position: absolute;
+  height: 150%;
+  width: 20%;
+  top: 85%;
+  border-radius: 30% 10% 50% 50% / 80%;
+  box-shadow: inset 0.75vmin 1vmin #cfc;
+}
+
+.box:nth-child(2) .safari-bubble {
+  top: 0;
+  width: 100%;
+  border-radius: 80% / 0 0 60% 50%;
+  padding: 2vmin 2vmin 3vmin 2vmin;
+}
+
+.box:nth-child(2) .safari-bubble::before {
+  display: none;
+}
+
+.bubble-connection {
+  width: 10vmin;
+  height: 7vmin;
+  position: absolute;
+  top: 16%;
+  left: 40vmin;
+  border-radius: 0 0 100% 0;
+  box-shadow: inset -0.8vmin -0.8vmin #cfc;
+}
+
+.hat {
+  background:
+    radial-gradient(150% 100% at 50% 0, #0000 75%, #3333 75.5% 87%, #0000 87.5%);
+  background-color: var(--c);
+  width: 93%;
+  height: 40%;
+  bottom: 34%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(2deg);
+  border-radius: 100% / 20%;
+  clip-path:
+    polygon(0 100%, 0 90%, 23% 85%, 32% 45%, 50% 50%, 69% 40%, 78% 85%, 100% 90%, 100% 100%);
+}
+
+.coat {
+  width: 100%;
+  height: 18%;
+  background: var(--c);
+  bottom: 0;
+  clip-path: polygon(10% 100%, 5% 10%, 34% 0, 30% 64%, 40% 65%, 38% 100%, 60% 100%, 60% 66%, 68% 62%, 65% 0%, 96% 5%, 90% 100%)
+}
+
+.glasses {
+  width: 70%;
+  height: 20%;
+  background: radial-gradient(circle at 50% 100%, #0000 40%, #111 0 55%, #0000 0) 50% 30% / 30% 40% no-repeat;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  
+}
+
+.glasses::before,
+.glasses::after {
+  content: "";
+  position: absolute;
+  height: 90%;
+  width: 44%;
+  left: 3%;
+  background: #111;
+  border-radius: 100% / 60% 40% 110% 120%;
+}
+
+.glasses::after {
+  transform: scaleX(-1);
+  left: auto;
+  right: 3%;
+}
+
+.eye {
+  width: 6%;
+  height: 7%;
+  background: black;
+  border-radius: 50%;
+}
+
+.chrome-eye {
+  top: 71%;
+  left: 4%;
+}
+
+.chrome-eye + .chrome-eye {
+  left: 23%;
+}
+
+.safari-eye {
+  top: 70%;
+  right: 6%;
+  transform: rotate(-5deg);
+}
+
+.safari-eye + .safari-eye {
+  right: 25%;
+  top: 71%;
+}
+
+.chrome-mouth {
+  width: 19%;
+  height: 6%;
+  border: 0.25vmin solid #0000;
+  border-right: 0.5vmin solid #0000;
+  bottom: 5%;
+  left: 7%;
+  border-radius: 50%;
+  transform: rotate(5deg);
+  box-shadow: inset 2vmin 1vmin;
+}
+
+.safari-mouth {
+  width: 4%;
+  height: 10%;
+  background:
+    radial-gradient(farthest-side at 95% 50%, #0000 60%, #000 0 99.9%, #0000 0) 100% 0 / 100% 50% repeat-y
+    ;
+  bottom: 3%;
+  left: 79%;
+  transform: rotate(-10deg);
+}
+
+/* BROWSER LOGOS */
+/* Chrome */
+.chrome-logo {
+  --b: #0071f0;
+  --r: #f11718;
+  --g: #00a944;
+  --y: #ffbe01;
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(var(--b) 28.75%, #fff 29% 35.25%, #0000 35.5%),
+    linear-gradient(var(--r) 25%, #0000 0),
+    linear-gradient(60deg, var(--g) 31.75%, #0000 0),
+    linear-gradient(-60deg, var(--y) 31.75%, #0000 0),
+    conic-gradient(var(--y) 33.33%, var(--g) 0 66.66%, var(--r) 0)
+    ;
+  border-radius: 50%;
+}
+
+
+/* Safari */
+.safari-logo {
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(#2fa4d4 10%, #277ec2 50% 65.5%, #0000 65.66%),
+    linear-gradient(#f2f2f2, #dad9da)
+    ;
+  background-color: #f002;
+  position: relative;
+}
+
+.safari-logo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    /* circle cutting long lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57%, #0000 57.25%),
+    /* long lines */
+    linear-gradient(#0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(11.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(22.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(33.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(45deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(56.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(67.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(78.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(90deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(101.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(112.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(123.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(135.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(146.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(157.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(168.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    /* circle cutting short lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57% 63.5%, #0000 63.75%),
+    /* short lines */
+    linear-gradient(5.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(16.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(28.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(39.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(50.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(61.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(73.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(84.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(95.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(106.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(118.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(129.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(140.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(151.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(163.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(174.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0)
+    ;
+}
+
+.safari-logo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 13%;
+  height: 89%;
+  background:
+    linear-gradient(to bottom right, #0000 50%, #ff2d3a 0) 0 0,
+    linear-gradient(to bottom left, #0000 50%, #dd0017 0) 100% 0,
+    linear-gradient(to top right, #0000 50%, #dbdadb 0) 0 100%,
+    linear-gradient(to top left, #0000 50%, #abaaab 0) 100% 100%
+    ;
+  background-size: 50.125% 50.125%;
+  background-repeat: no-repeat;
+}
+
+/* Tor */
+.tor-logo {
+  width: var(--s);
+  aspect-ratio: 1;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 0 50%, #f5e3ff 0 15%, #0000 15.25% 28%, #f5e3ff 28.25% 37%, #0000 37.25% 49.5%, #f5e3ff 49.75% 57.5%, #0000 58%) 100% 50% / 50% 100% no-repeat,
+   linear-gradient(#a300d8, #4a0062)
+    ;
+  background-color: #f002;
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon with two panels. The first one shows the Chrome and Safari browser logos talking. Chrome says: 'So... what do we know about the new guy?' and Safari replies 'Not much...'. In the second panel, the Tor logo is covered with sun glasses, a coat and a hat. The Safari logo continues talking: 'but you can tell they are really private'">
+      <div class="box">
+        <div class="bubble safari-bubble">Not much...</div>
+        <div class="bubble chrome-bubble">So... What do we know about the new guy?</div>
+        <div class="chrome-logo"></div>
+        <div class="eye chrome-eye"></div>
+        <div class="eye chrome-eye"></div>
+        <div class="chrome-mouth"></div>
+        <div class="safari-logo"></div>
+        <div class="eye safari-eye"></div>
+        <div class="eye safari-eye"></div>
+        <div class="safari-mouth"></div>
+      </div>
+      <div class="box">
+        <div class="bubble safari-bubble">But you can tell<br/> they are really private</div>
+        <div class="tor-logo"></div>
+        <div class="glasses"></div>
+        <div class="hat"></div>
+        <div class="coat"></div>
+      </div>
+      <div class="bubble-connection"></div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>
