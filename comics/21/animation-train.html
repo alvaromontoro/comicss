@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  display: grid;
+  margin: 0;
+  place-items: center;
+  min-height: 100vh;
+  padding: 2vmin;
+}
+
+article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+}
+
+.box {
+  width: 80vmin;
+  aspect-ratio: 3;
+  border: 0.5vmin solid;
+  border-radius: 0.25vmin;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+}
+
+.box > div {
+  flex: 1;
+  overflow: hidden;
+}
+
+.code {
+  background: #282420;
+  font-family: 'courier new', courier, verdana, sans-serif;
+  font-size: 2vmin;
+  line-height: 2.25vmin;
+  font-weight: bold;
+  padding: 2vmin;
+  display: flex;
+  align-items: center;
+}
+
+.css-sel {
+  color: #fc8;
+}
+
+.css-del {
+  color: #eee;
+}
+
+.css-prop {
+  color: #a8a;
+}
+
+.css-val {
+  color: #fea;
+}
+
+.css-val.string {
+  color: #ada;
+}
+
+.css-perc,
+.css-val.time {
+  color: #fa4;
+}
+
+.css-var,
+.css-at {
+  color: #79c;
+}
+
+.landscape {
+  background:
+    radial-gradient(circle at 100% 0, yellow 10%, #ff08 0, #0000 25%),
+    repeating-linear-gradient(90deg, #0000 0 2.5%, maroon 0 5%) 10% 80% / 90% 4% repeat-x,
+    linear-gradient(#0000 78.5%, gray 0 81%, #0000 0),
+    /* tree */
+    radial-gradient(50% 120% at 50% 50%, seagreen 14%, #0000 0),
+    linear-gradient(brown 0 0) 50% 75% / 5% 20% no-repeat,
+    radial-gradient(seagreen 20%, #0000 0),
+    radial-gradient(at 40% 55%, seagreen 10%, #0000 0),
+    radial-gradient(at 45% 40%, seagreen 10%, #0000 0),
+    radial-gradient(at 56% 44%, seagreen 12%, #0000 0),
+    radial-gradient(circle at 56% 44%, seagreen 12%, #0000 0),
+    radial-gradient(circle at 52% 58%, seagreen 14%, #0000 0),
+    radial-gradient(circle at 44% 59%, seagreen 10%, #0000 0),
+    
+    linear-gradient(lightblue, skyblue 81%, mediumseagreen 0, seagreen);
+  position: relative;
+}
+
+@keyframes move {
+  0% { 
+    left: 0; 
+    transform: translateX(-90%); 
+  }
+  100% { 
+    left: 100%;
+    transform: translateX(-10%); 
+  }
+}
+
+.train {
+  --d: 8s;
+  animation: move var(--d);
+  width: 100%;
+  height: 25%;
+  background:
+    linear-gradient(#0000, #0003),
+    linear-gradient(lightskyblue 0 0) 100% 0 / 15% 70% no-repeat,
+    repeating-linear-gradient(90deg, #0000 0 8%, lightskyblue 0 11%) 50% 50% / 100% 20% no-repeat
+    ;
+  background-color: white;
+  border-radius: 3vmin 30% 1vmin 1vmin / 2vmin 100% 1vmin 1vmin;
+  position: absolute;
+  bottom: 21%;
+  transform: translateX(-80%);
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+
+.train::before,
+.train::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 80%;
+  border: 1px solid #0004;
+  bottom: -5%;
+  left: 16.125%;
+}
+
+.train::after {
+  left: 60.25%;
+}
+
+#Japan .train {
+  animation-duration:
+    calc(var(--d) * 0.5);
+}
+
+#USA .train {
+  animation-duration:
+    calc(var(--d) * 1.5);
+}
+
+#Iceland .train {
+  display: none;
+}
+
+#UK .train {
+  animation-delay: 2s;
+  animation-play-state: paused;
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon with 5 panels divided in two parts, one showing CSS code and the other a landscape with a train. The first panel code is an animation from left 0 to 100% applied to an element of class .train with a duration of 8s. The second panel is for a #Japan .train, the duration is 0.7 the regular duration. The third panel is for a #USA .train, the duration is 1.5 the regular duration. The fourth panel is for a #Iceland .train, it has a display none and no train is displayed. The last panel is for #UK .train, it has am animation delay of 2s and the animation-play-state is 'paused'.">
+      <div class="box">
+        <div class="code">
+          <div>
+            <span class="css-at">@keyframes</span> <span class="css-sel">move</span> <span class="css-del">{</span><br/>
+            <span class="css-perc">&nbsp;&nbsp;0%</span> <span class="css-del">{</span> <span class="css-prop">left</span><span class="css-del">:</span> <span class="css-val time">0</span><span class="css-del">; }</span><br/>
+            <span class="css-perc">&nbsp;&nbsp;100%</span> <span class="css-del">{</span> <span class="css-prop">left</span><span class="css-del">:</span> <span class="css-val time">100%</span><span class="css-del">; }</span><br/>
+            <span class="css-del">}</span><br/><br/>
+            <span class="css-sel">.train</span> <span class="css-del">{</span><br/>
+            <span class="css-var">&nbsp;&nbsp;--d</span><span class="css-del">:</span> <span class="css-val time">8s</span><span class="css-del">;</span><br/>
+            <span class="css-prop">&nbsp;&nbsp;content</span><span class="css-del">:</span> <span class="css-val string">"choo-choo"</span><span class="css-del">;</span><br/>
+            <span class="css-prop">&nbsp;&nbsp;animation</span><span class="css-del">:</span> <span class="css-val">move</span> <span class="css-val">var</span><span class="css-del">(</span><span class="css-var">--d</span><span class="css-del">)</span><span class="css-del">;</span><br/>
+            <span class="css-del">}</span>
+          </div>
+        </div>
+        <div class="landscape">
+          <div class="train"></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="code">
+          <div>
+            <span class="css-sel">#Japan .train</span> <span class="css-del">{</span><br/>
+            <span class="css-prop">&nbsp;&nbsp;animation-duration</span><span class="css-del">:</span><br/>
+            <span class="css-val">&nbsp;&nbsp;&nbsp;&nbsp;calc</span><span class="css-del">(</span><span class="css-val">var</span><span class="css-del">(</span><span class="css-var">--d</span><span class="css-del">) * </span><span class="css-val time">0.5</span><span class="css-del">);</span><br/>
+            <span class="css-del">}</span>
+          </div>
+        </div>
+        <div id="Japan" class="landscape">
+          <div class="train"></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="code">
+          <div>
+            <span class="css-sel">#USA .train</span> <span class="css-del">{</span><br/>
+            <span class="css-prop">&nbsp;&nbsp;animation-duration</span><span class="css-del">:</span><br/>
+            <span class="css-val">&nbsp;&nbsp;&nbsp;&nbsp;calc</span><span class="css-del">(</span><span class="css-val">var</span><span class="css-del">(</span><span class="css-var">--d</span><span class="css-del">) * </span><span class="css-val time">1.5</span><span class="css-del">);</span><br/>
+            <span class="css-del">}</span>
+          </div>
+        </div>
+        <div id="USA" class="landscape">
+          <div class="train"></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="code">
+          <div>
+            <span class="css-sel">#Iceland .train</span> <span class="css-del">{</span><br/>
+            <span class="css-prop">&nbsp;&nbsp;display</span><span class="css-del">:</span> <span class="css-val">none</span><span class="css-del">;</span><br/>
+            <span class="css-del">}</span>
+          </div>
+        </div>
+        <div id="Iceland" class="landscape">
+          <div class="train"></div>
+        </div>
+      </div>
+        <div class="box">
+        <div class="code">
+          <div>
+            <span class="css-sel">#UK .train</span> <span class="css-del">{</span><br/>
+            <span class="css-prop">&nbsp;&nbsp;animation-delay</span><span class="css-del">:</span> <span class="css-val time">2s</span><span class="css-del">;</span><br/>
+            <span class="css-prop">&nbsp;&nbsp;animation-play-state</span><span class="css-del">:</span> <span class="css-val">paused</span><span class="css-del">;</span><br/>
+            <span class="css-del">}</span>
+          </div>
+        </div>
+        <div id="UK" class="landscape">
+          <div class="train"></div>
+        </div>
+      </div>
+    </article>
+    
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>
