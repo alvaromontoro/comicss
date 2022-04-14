@@ -161,5 +161,12 @@ const posts = [
     vertical: true,
     title: "Animation Train",
     ariaLabel: "Cartoon with 5 panels divided in two parts, one showing CSS code and the other a landscape with a train. The first panel code is an animation from left 0 to 100% applied to an element of class .train with a duration of 8s. The second panel is for a #Japan .train, the duration is 0.7 the regular duration. The third panel is for a #USA .train, the duration is 1.5 the regular duration. The fourth panel is for a #Iceland .train, it has a display none and no train is displayed. The last panel is for #UK .train, it has am animation delay of 2s and the animation-play-state is 'paused'."
+  },
+  {
+    id: 22,
+    uid: "grandpa",
+    boxes: 1,
+    title: "Grandpa Browser",
+    ariaLabel: "Cartoon showing the Netscape Navigator logo using a walker and saying 'And for a while, I was the most popular browser on the Internet. Even more than IE! And everyone loved my cool icon animation with shooting stars...'. The Chrome logo is helping and rolling its eyes says 'Sure, grandpa. Now let's get you to bed...'"
   }
 ]

@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.box {
+  /* personalize the text by changing the speech for netscape and chrome! */
+  /* add \a for a new line */
+  --netscape-speech: "And for a while, I was the most popular browser on the Internet.\a Even more than IE!\a And everyone loved my cool icon animation with shooting stars...";
+  --chrome-speech: "Sure, grandpa. Now let's get you to bed...";
+  --bubble-1: #ce9;
+  --bubble-2: #fe8;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  height: 80vmin;
+  aspect-ratio: 0.6;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#c8c5, #c8c0 60%);
+  font-family: 'Comic Neue', Helvetica, Arial, sans-serif;
+}
+
+.box div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.speech {
+  padding: 2vmin;
+  text-align: center;
+  white-space: pre-wrap;
+  font-size: 2.75vmin;
+}
+
+.netscape-speech {
+  width: 100%;
+  background: var(--bubble-1);
+  border-radius: 100% / 0 0 20% 30%;
+  padding-bottom: 3vmin;
+}
+
+.netscape-speech::before {
+  content: var(--netscape-speech);
+}
+
+.chrome-speech {
+  width: 50%;
+  bottom: 50%;
+  right: 5%;
+  background: var(--bubble-2);
+  font-size: 2.5vmin;
+  border-radius: 100%;
+  padding-top: 3vmin;
+}
+
+.chrome-speech::before {
+  content: var(--chrome-speech);
+}
+
+.speech-line-1 {
+  width: 20%;
+  height: 65%;
+  border-radius: 50%;
+  box-shadow: -1vmin -1vmin var(--bubble-1);
+  top: 0%;
+  left: 15%;
+}
+
+.speech-line-2 {
+  width: 6%;
+  height: 11%;
+  border-radius: 50%;
+  box-shadow: 0.75vmin -1.5vmin var(--bubble-2);
+  bottom: 40%;
+  right: 25%;
+}
+
+
+.netscape-logo {
+  --s: 19.5vmin !important;
+  transform: rotateY(40deg) rotate(-10deg) skew(6deg);
+  bottom: 10%;
+  left: 13%;
+  filter: brightness(1.125) grayscale(0.25) sepia(0.25);
+}
+
+.netscape-leg {
+  width: 15%;
+  height: 15%;
+  border: 1vmin solid #0000;
+  border-left: 1vmin solid;
+  border-radius: 50%;
+  bottom: -1.5%;
+  left: 25%;
+}
+
+.netscape-leg + .netscape-leg {
+  left: 38%;
+  height: 15.5%;
+}
+
+.netscape-leg::before {
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  bottom: 0;
+  left: -70%;
+}
+
+.netscape-leg + .netscape-leg::before {
+  left: -75%;
+}
+
+.netscape-leg::after {
+  content: "";
+  position: absolute;
+  width: 28%;
+  height: 40%;
+  background:
+    radial-gradient(140% 160% at 120% 50%, #0000 25%, #000 0 30%, #0000 0 40%, #000 0 45%, #0000 0)
+    ;
+  top: 48%;
+  left: -42%;
+  transform: translate(0,-50%);
+}
+
+.netscape-leg + .netscape-leg::after {
+  top: 45%;
+  width: 30%;
+  left: -12%;
+  background:
+    radial-gradient(140% 140% at 120% 50%, #0000 25%, #000 0 30%, #0000 0 40%, #000 0 45%, #0000 0)
+    ;
+}
+
+.netscape-hand {
+  width: 4.75%;
+  aspect-ratio: 1;
+  background: #000;
+  border-radius: 50%;
+  bottom: 14.25%;
+  left: 11%;
+}
+
+.netscape-hand ~ .netscape-hand {
+  left: 22.5%;
+  bottom: 13.75%;
+}
+
+.netscape-arm {
+  width: 29%;
+  height: 10%;
+  border: 0.75vmin solid #0000;
+  border-bottom: 0.75vmin solid;
+  border-radius: 50%;
+  bottom: 13.5%;
+  left: 11%;
+}
+
+.netscape-arm ~ .netscape-arm {
+  left: 22%;
+  bottom: 12.5%;
+  height: 16%;
+}
+
+.netscape-mouth {
+  width: 5%;
+  height: 1.5%;
+  background:
+    radial-gradient(150% 140% at 80% 100%, #d00 30%, #0000 0)
+    ;
+  background-color: black;
+  border-radius: 100% 100% 100% 150% / 0 120% 90% 150%;
+  transform: rotate(-20deg);
+  bottom: 17%;
+  left: 31%;
+}
+
+.netscape-eye {
+  width: 2.5%;
+  height: 2.5%;
+  background: black;
+  border-radius: 50%;
+  bottom: 20%;
+  left: 26%;
+  transform: rotate(-15deg);
+}
+
+.netscape-eye + .netscape-eye {
+  left: 33%;
+  bottom: 21%;
+  transform: scaleX(-1) rotate(15deg);
+}
+
+.netscape-eye::before {
+  content: "";
+  position: absolute;
+  border-left: 0.5vmin solid;
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -0.5vmin;
+  border-radius: 50%;
+  transform: rotate(30deg);
+}
+
+.chrome-logo {
+  --s: 21vmin !important;
+  bottom: 13%;
+  left: 50%;
+}
+
+.walker {
+  width: 7vmin;
+  height: 12vmin;
+  border: 1vmin solid #aaa;#37a;
+  border-bottom: 0;
+  border-radius: 2vmin 50% 0 0;
+  bottom: 1%;
+  left: 5%;
+  transform-origin: 50% 100%;
+  transform: skew(-5deg);
+}
+
+.walker::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, #eee 20%, #222 0);
+  border-radius: 50%;
+  transform: skew(5deg) translate(-65%, 50%) rotateY(-30deg);
+  box-shadow: -0.5vmin 0 black;
+  bottom: 0;
+}
+
+.walker::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(80% 120% at 0% 50%, #0000 30%, #fff 0 40%, #0000 0),
+    radial-gradient(90% 130% at 100% 50%, #0000 30%, #fff 0 40%, #0000 0);
+  background-color: gold;
+  border-radius: 50%;
+  transform: skew(5deg) translate(66.6%, 50%) rotateY(-30deg);
+  bottom: 0;
+  right: 0;
+}
+
+.walker ~ .walker {
+  border-color: #ccc;
+  left: 15%;
+}
+
+.bar {
+  width: 10%;
+  bottom: 10%;
+  left: 7%;
+  height: 1vmin;
+  border-radius: 2vmin;
+  background: linear-gradient(90deg, #bbb, #ddd);
+}
+
+.chrome-eye {
+  width: 8%;
+  height: 6%;
+  border: 0.25vmin solid #0000;
+  border-top: 0.75vmin solid;
+  border-radius: 50%;
+  background: radial-gradient(50% 60% at 60% 12%, #000 30%, #0000 0) no-repeat;
+  bottom: 24.5%;
+  left: 60%;
+  transform: rotate(-10deg);
+}
+
+.chrome-eye + .chrome-eye {
+  left: 71%;
+  bottom: 25%;
+}
+
+.chrome-mouth {
+  width: 12%;
+  height: 2.5%;
+  border-radius: 50%;
+  bottom: 20%;
+  left: 65%;
+  transform: rotate(-5deg);
+  border: 0.5vmin solid #0000;
+  border-right: 1vmin solid;
+  border-top: 0.5vmin solid;
+}
+
+.chrome-leg {
+  width: 20%;
+  height: 20%;
+  border-radius:50% 0 0 50%;
+  border:1vmin solid;
+  bottom: -5%;
+  left: 60%;
+  transform: rotate(-5deg);
+}
+
+.chrome-leg::before,
+.chrome-leg::after {
+  content: "";
+  position: absolute;
+  left: -65%;
+  top: 66%;
+  width: 70%;
+  height: 15%;
+  border-radius: 50% / 100% 100% 0 0;
+  background: #000;
+}
+
+.chrome-leg::after {
+  left: 53%;
+  top: 70%;
+  transform: rotate(5deg);
+}
+
+.chrome-arm {
+  width: 29%;
+  height: 10%;
+  border: 0.75vmin solid #0000;
+  border-bottom: 0.85vmin solid;
+  border-radius: 50%;
+  bottom: 18%;
+  left: 37%;
+  z-index: -1;
+}
+
+.chrome-arm ~ .chrome-arm {
+  z-index: unset;
+  transform: rotate(-90deg);
+  bottom: 9%;
+  left: 72%;
+}
+
+.chrome-arm ~ .chrome-arm::before,
+.chrome-arm ~ .chrome-arm::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: black;
+  border-radius: 50%;
+  top: 66.6%;
+  left: -10%;
+  transform: rotate(30deg);
+}
+
+.chrome-arm ~ .chrome-arm::after {
+  width: 15%;
+  height: 20%;
+  top: 71%;
+  left: -6%;
+  transform-origin: 100% 100%;
+  transform: rotate(45deg);
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+/* Chrome */
+.chrome-logo {
+  --s: 20vmin;
+  --b: #0071f0;
+  --r: #f11718;
+  --g: #00a944;
+  --y: #ffbe01;
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(var(--b) 28.75%, #fff 29% 35.25%, #0000 35.5%),
+    linear-gradient(var(--r) 25%, #0000 0),
+    linear-gradient(60deg, var(--g) 31.75%, #0000 0),
+    linear-gradient(-60deg, var(--y) 31.75%, #0000 0),
+    conic-gradient(var(--y) 33.33%, var(--g) 0 66.66%, var(--r) 0)
+    ;
+  border-radius: 50%;
+}
+
+/* Netscape Navigator */
+.netscape-logo {
+  --s: 20vmin;
+  --light: #f002;
+  --dark: #0000;
+  --gray: #0000;
+  width: var(--s);
+  aspect-ratio: 1;
+  display: inline-block;
+  position: relative;
+  background:
+    radial-gradient(circle at 0 0, #0000 70%, #fff 0) 20% 71% / 8% 11% no-repeat,
+    radial-gradient(circle at 100% 0, #0000 70%, #fff 0) 32% 71% / 8% 11% no-repeat,
+    radial-gradient(circle at 100% 100%, #0000 70%, #fff 0) 72.75% 27.5% / 8% 11% no-repeat,
+    radial-gradient(circle at 0 100%, #0000 70%, #fff 0) 61.25% 27.5% / 8% 11% no-repeat,
+    radial-gradient(circle at 0 100%, #0000 70%, #fff 0) 20% 28.125% / 8% 11% no-repeat,
+    linear-gradient(#fff 0 0) 69% 25% / 8% 2% no-repeat,
+    linear-gradient(#fff 0 0) 27% 49.75% / 3.5% 48.5% no-repeat,
+    linear-gradient(#fff 0 0) 66.25% 44% / 3% 42.4% no-repeat,
+    radial-gradient(150% 100% at 54% 148%, #333 80%, #0000 80.25%),
+    radial-gradient(140% 100% at 46.5% 143.75%, #fff 80%, #0000 80.25%),
+    linear-gradient(90deg, #0000 66%, #007e87 0),
+    linear-gradient(48deg, #0000 43.25%, #fff 43.5% 55%, #0000 55.25%) 50% 50% / 50% 50% no-repeat
+    ;
+  background-color: #007e87;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 
+    inset 0 0 0 calc(var(--s) * 0.017) #a2a4a4,
+    inset 0 0 0 calc(var(--s) * 0.0515) #6ac3c6
+    ;
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon showing the Netscape Navigator logo using a walker and saying 'And for a while, I was the most popular browser on the Internet. Even more than IE! And everyone loved my cool icon animation with shooting stars...'. The Chrome logo is helping and rolling its eyes says 'Sure, grandpa. Now let's get you to bed...'">
+      <div class="box">
+        <div class="speech-line speech-line-1"></div>
+        <div class="speech-line speech-line-2"></div>
+        <div class="speech netscape-speech"></div>
+        <div class="speech chrome-speech"></div>
+        
+        <div class="chrome-arm"></div>
+        
+        <div class="netscape-arm"></div>
+        <div class="netscape-logo"></div>
+        <div class="walker"></div>
+        <div class="netscape-hand"></div>
+        <div class="netscape-leg"></div>
+        <div class="netscape-leg"></div>
+        <div class="bar"></div>
+        <div class="walker"></div>
+        <div class="netscape-hand"></div>
+        <div class="netscape-arm"></div>
+        <div class="netscape-mouth"></div>
+        <div class="netscape-eye"></div>
+        <div class="netscape-eye"></div>
+        
+        <div class="chrome-leg"></div>
+        <div class="chrome-logo"></div>
+        <div class="chrome-arm"></div>
+        <div class="chrome-mouth"></div>
+        <div class="chrome-eye"></div>
+        <div class="chrome-eye"></div>
+      </div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

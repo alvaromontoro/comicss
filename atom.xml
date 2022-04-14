@@ -405,4 +405,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Grandpa Browser</title>
+    <link href="https://comicss.art/?id=22" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/22/grandpa.html"/>
+    <id>https://comicss.art/?id=22</id>
+    <updated>2022-04-14T00:00:00Z</updated>
+    <summary>New cartoon: Grandpa Browser</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/22/grandpa.png" alt="Cartoon showing the Netscape Navigator logo using a walker and saying 'And for a while, I was the most popular browser on the Internet. Even more than IE! And everyone loved my cool icon animation with shooting stars...'. The Chrome logo is helping and rolling its eyes says 'Sure, grandpa. Now let's get you to bed...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
