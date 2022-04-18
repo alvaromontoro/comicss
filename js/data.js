@@ -168,5 +168,12 @@ const posts = [
     boxes: 1,
     title: "Grandpa Browser",
     ariaLabel: "Cartoon showing the Netscape Navigator logo using a walker and saying 'And for a while, I was the most popular browser on the Internet. Even more than IE! And everyone loved my cool icon animation with shooting stars...'. The Chrome logo is helping and rolling its eyes says 'Sure, grandpa. Now let's get you to bed...'"
+  },
+  {
+    id: 23,
+    uid: "css-artists",
+    boxes: 5,
+    title: "Types of CSS Artists",
+    ariaLabel: "Recognize the CSS artist by their style!"
   }
 ]

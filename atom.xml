@@ -424,4 +424,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Types of CSS Artists</title>
+    <link href="https://comicss.art/?id=23" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/23/css-artists.html"/>
+    <id>https://comicss.art/?id=23</id>
+    <updated>2022-04-18T00:00:00Z</updated>
+    <summary>New cartoon: Types of CSS Artists</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/23/css-artists.png" alt="Recognize the CSS artist by their style!" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
