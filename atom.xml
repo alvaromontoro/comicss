@@ -443,4 +443,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>The Slap</title>
+    <link href="https://comicss.art/?id=24" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/24/the-slap.html"/>
+    <id>https://comicss.art/?id=24</id>
+    <updated>2022-04-19T00:00:00Z</updated>
+    <summary>New cartoon: The Slap</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/24/the-slap.png" alt="Cartoon with 4 panels similar to a previous cartoon by Stephan Pastis. In the first panel two men are talking: 'hey, Al! What are you doing?' and 'Drawing a silly joke about this devs wife who has some weird styles on a main element'. The second panel has Will Smith slapping the man that said the last part (who drops to the floor). In the third panel (outside of frame), Will Smith yells 'Keep my wifes main out of your [expletive] mouth!'. In the last panel, the first man says to the one on the floor: 'There is a lesson in all this, but I fear it may not be the one you think'." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
