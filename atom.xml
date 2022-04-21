@@ -462,4 +462,61 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Soy Milk (I)</title>
+    <link href="https://comicss.art/?id=25" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/25/soy-milk-i.html"/>
+    <id>https://comicss.art/?id=25</id>
+    <updated>2022-04-21T00:00:00Z</updated>
+    <summary>New cartoon: Soy Milk (I)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/25/soy-milk-i.png" alt="Cartoon showing a cute milk carton and a stick of butter. The milk says 'Hi, Soy Milk' and the butter replies 'Hola, soy Mantequilla'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Soy Milk (II)</title>
+    <link href="https://comicss.art/?id=26" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/26/soy-milk-i.html"/>
+    <id>https://comicss.art/?id=26</id>
+    <updated>2022-04-21T00:00:00Z</updated>
+    <summary>New cartoon: Soy Milk (II)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/26/soy-milk-ii.png" alt="Cartoon showing a cute soy milk carton and a stick of butter. The butter says 'Hi, Soy Milk' and the butter replies 'No, tu eres Mantequilla'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Soy Milk (3D)</title>
+    <link href="https://comicss.art/?id=27" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/27/soy-milk-3d.html"/>
+    <id>https://comicss.art/?id=27</id>
+    <updated>2022-04-21T00:00:00Z</updated>
+    <summary>New cartoon: Soy Milk (3D)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/27/soy-milk-3d.png" alt="Cartoon showing a cute soy milk carton and a stick of butter. The butter says 'Hi, Soy Milk' and the butter replies 'No, tu eres Mantequilla'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

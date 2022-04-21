@@ -183,5 +183,32 @@ const posts = [
     // horizontal: true,
     title: "The Slap",
     ariaLabel: "Cartoon with 4 panels similar to a previous cartoon by Stephan Pastis. In the first panel two men are talking: 'hey, Al! What are you doing?' and 'Drawing a silly joke about this devs wife who has some weird styles on a main element'. The second panel has Will Smith slapping the man that said the last part (who drops to the floor). In the third panel (outside of frame), Will Smith yells 'Keep my wifes main out of your [expletive] mouth!'. In the last panel, the first man says to the one on the floor: 'There is a lesson in all this, but I fear it may not be the one you think'."
+  },
+  {
+    id: 25,
+    uid: "soy-milk-i",
+    boxes: 4,
+    vertical: true,
+    title: "Soy Milk (I)",
+    video: "0Aqid1I6vFE",
+    ariaLabel: "Cartoon showing a cute milk carton and a stick of butter. The milk says 'Hi, Soy Milk' and the butter replies 'Hola, soy Mantequilla'"
+  },
+  {
+    id: 26,
+    uid: "soy-milk-ii",
+    boxes: 4,
+    vertical: true,
+    video: "0Aqid1I6vFE",
+    title: "Soy Milk (II)",
+    ariaLabel: "Cartoon showing a cute soy milk carton and a stick of butter. The butter says 'Hi, Soy Milk' and the butter replies 'No, tu eres Mantequilla'"
+  },
+  {
+    id: 27,
+    uid: "soy-milk-3d",
+    boxes: 4,
+    vertical: true,
+    video: "Hme50KUMqZY",
+    title: "Soy Milk (3D)",
+    ariaLabel: "Cartoon showing a cute soy milk carton and a stick of butter. The butter says 'Hi, Soy Milk' and the butter replies 'No, tu eres Mantequilla'"
   }
 ]

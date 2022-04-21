@@ -246,5 +246,35 @@
       <enclosure url="https://comicss.art/comics/24/the-slap.png" length="493000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=25</guid>
+      <title>Soy Milk (I)</title>
+      <link>https://comicss.art/?id=25</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/25/soy-milk-i.png" length="62000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=26</guid>
+      <title>Soy Milk (II)</title>
+      <link>https://comicss.art/?id=26</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/25/soy-milk-ii.png" length="66000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=27</guid>
+      <title>Soy Milk (3D)</title>
+      <link>https://comicss.art/?id=27</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/25/soy-milk-3d.png" length="88000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  perspective: 1000px;
+  background: #9db;
+}
+
+article {
+  width: 80vmin;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(75deg) translate3d(0, -10vmin, -20vmin) rotate3d(0,0,1,var(--horizontal)) rotate3d(1,0,0,var(--vertical));
+  transform-style: preserve-3d;
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.cube {
+  width: var(--w);
+  height: var(--d);
+  background: var(--c)
+}
+
+.cube > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--c);
+  transform: translateZ(var(--h));
+}
+
+.cube::before,
+.cube::after,
+.cube > div::before,
+.cube > div::after {
+  content: "";
+  width: var(--w);
+  height: var(--h);
+  background: var(--c);
+  bottom: 100%;
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg) rotateY(180deg);
+  filter: brightness(1.12);
+}
+
+.cube::after {
+  width: var(--d);
+  transform-origin: 0% 100%;
+  transform: rotateX(-90deg) rotateY(-90deg);
+  filter: brightness(1.05);
+}
+
+.cube > div::before {
+  top: 100%;
+  transform-origin: 50% 0%;
+  transform: rotateX(-90deg);
+  filter: brightness(1.02);
+}
+
+.cube > div::after {
+  width: var(--d);
+  top: 0%;
+  left: 100%;
+  transform: none;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg) rotateY(90deg) translateX(-100%);
+}
+
+.lid {
+  --w: 20vmin;
+  --d: 20vmin;
+  --h: 33vmin;
+  --c: skyblue;
+  width: var(--w);
+  height: var(--d);
+  top: 50%;
+  right: 20%;
+  background: green;
+  transform: translate(50%, -50%) rotate(220deg) translateZ(var(--h)) rotateX(90deg);
+  background: 
+    repeating-linear-gradient(90deg, #0000 0 4%, #0003 0 4.5%) 50% 100% / 100% 9% no-repeat,
+    linear-gradient(#0000 91%, #f0f0f0 0)
+}
+
+/* Milk carton */
+.milk {
+  --w: 20vmin;
+  --d: 20vmin;
+  --h: 33vmin;
+  --c: skyblue;
+  --bg: radial-gradient(100% 80% at 50% 100%, green 20%, #0000 0),
+    radial-gradient(100% 80% at 25% 103%, green 20%, #0000 0),
+    radial-gradient(100% 80% at 80% 95%, green 20%, #0000 0),
+    radial-gradient(100% 80% at 100% 100%, green 20%, #0000 0),
+    radial-gradient(140% 80% at 0% 100%, green 20%, #0000 0),
+    radial-gradient(100% 80% at 50% 10%, white 20%, #0000 0),
+    radial-gradient(100% 80% at 25% 7%, white 20%, #0000 0),
+    radial-gradient(100% 80% at 80% 5%, white 25%, #0000 0),
+    radial-gradient(100% 80% at 100% 10%, white 19%, #0000 0),
+    radial-gradient(140% 80% at 0% 10%, white 19%, #0000 0);
+  top: 50%;
+  right: 20%;
+  transform: translate(50%, -50%) rotate(220deg);
+  box-shadow: 0 0 10vmin #0005;
+  background: #eee;
+  box-shadow: 
+    inset 0 0 0 100vmin #0002,
+    inset 0 0 0 1vmin green,
+    0 0 10vmin #0005;
+}
+
+.milk.shadow {
+  transform: translate(50%, -50%) rotate(220deg) scale(1.6);
+  width: var(--w);
+  height: var(--d);
+  background: #0702;
+  border-radius: 50%;
+  box-shadow: none;
+  filter: blur(0.25vmin);
+}
+
+.butter.shadow {
+  --w: 10vmin;
+  --d: 40vmin;
+  --h: 10vmin;
+  width: var(--w);
+  height: var(--d);
+  background: #3631;
+  transform: translate(-100%, -50%) rotate(220deg) scaleX(1.8) scaleY(1.2);
+  border-radius: 100% / 50%;
+  box-shadow: none;
+  filter: blur(0.25vmin);
+}
+
+.shadow::before,
+.shadow::after {
+  display: none !important;
+}
+
+.milk > div::before,
+.milk > div::after {
+  background:
+    var(--bg)
+    ;
+  background-color: var(--c);
+}
+
+.milk::before {
+  content: "Soy";
+  display: flex;
+  justify-content: center;
+  padding-top: 0.75vmin;
+  font-size: 5vmin;
+  font-style: italic;
+/*   font-family: Helvetica, Arial, sans-serif; */
+  background:
+    radial-gradient(circle at 42% 39%, white 1%, #0000 1.5%),
+    radial-gradient(circle at 56% 39%, white 1%, #0000 1.5%),
+    radial-gradient(circle at 43% 40%, black 3%, #0000 3.5%),
+    radial-gradient(circle at 57% 40%, black 3%, #0000 3.5%),
+    radial-gradient(circle at 50% 100%, red 10%, #000 0 30%, #0000 0) 50% 42% / 10% 10% no-repeat,
+    radial-gradient(100% 50% at 41% 43%, #f002, #f000 10%),
+    radial-gradient(100% 50% at 58% 43%, #f002, #f000 10%),
+    var(--bg)
+    ;
+  background-color: var(--c);
+}
+
+.milk::after {
+  background:
+    linear-gradient(90deg, #0000 40%, var(--c) 0 48%, #0000 0) 30% 43% / 40% 4% no-repeat,
+    linear-gradient(45deg, #0000 40%, var(--c) 0 48%, #0000 0) 50% 54% / 40% 6% no-repeat,
+    linear-gradient(-65deg, #0000 43%, var(--c) 0 48%, #0000 0) 56% 55% / 40% 3% no-repeat,
+    linear-gradient(75deg, #0000 40%, var(--c) 0 46%, #0000 0) 65% 65% / 40% 5% no-repeat,
+    linear-gradient(75deg, #0000 40%, var(--c) 0 46%, #0000 0) 65% 36% / 40% 5% no-repeat,
+    linear-gradient(75deg, #0000 40%, var(--c) 0 46%, #0000 0) 39% 42% / 40% 5% no-repeat,
+    linear-gradient(75deg, #0000 40%, var(--c) 0 46%, #0000 0) 73% 46% / 40% 3% no-repeat,
+    linear-gradient(var(--c) 8%, #0000 0 20%, var(--c) 0 26%, #0000 0 68%, var(--c) 0 74%, #0000 0) 51% 66% / 3% 40% no-repeat,
+    linear-gradient(var(--c) 8%, #0000 0 20%, var(--c) 0 26%, #0000 0 68%, var(--c) 0 74%, #0000 0) 37% 94% / 3% 40% no-repeat,
+    linear-gradient(var(--c) 8%, #0000 0 20%, var(--c) 0 26%, #0000 0 68%, var(--c) 0 74%, #0000 0) 65% 89% / 3% 40% no-repeat,
+    repeating-linear-gradient(#0000 0 5%, #333 0 8%) 50% 55% / 40% 35% no-repeat,
+    var(--bg)
+    ;
+  background-color: var(--c);
+}
+
+.milk > div::before {
+  background:
+    repeating-linear-gradient(#0000 0 9%, #000 0 12%) 12.5% 87.5% / 25% 20% no-repeat,
+    repeating-linear-gradient(#0000 0 6%, #000 0 7%) 12.5% 87.5% / 25% 20% no-repeat,
+    repeating-linear-gradient(#0000 0 8%, #000 0 9%) 12.5% 87.5% / 25% 20% no-repeat,
+    linear-gradient(#fff 0 0) 10% 90% / 30% 25% no-repeat,
+    var(--bg)
+    ;
+  background-color: var(--c);
+}
+
+.milk > div, .milk::before, .milk::after { opacity: 1; }
+
+.milk-lid {
+  --w: 20vmin;
+  --d: 20vmin;
+  --h: 33vmin;
+  --a: 40deg;
+  --s: calc(var(--w) * 0.655);
+  width: var(--w);
+  height: var(--d);
+  top: 50%;
+  right: 20%;
+  transform: translate(50%, -50%) rotate(220deg) translateZ(var(--h));
+}
+
+.milk-lid + .milk-lid {
+  transform: translate(50%, -50%) rotate(310deg) translateZ(var(--h));
+}
+
+.milk-lid::before,
+.milk-lid::after {
+  content: "";
+  width: var(--w);
+  top: 0;
+  left: 0;
+  height: var(--s);
+  background: white;
+  transform-origin: 50% 0%;
+  transform: rotateX(var(--a));
+  background: linear-gradient(#f8f8f8, #fff 50%);
+}
+.milk-lid::after {
+  top: auto;
+  bottom: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(calc(-1 * var(--a)));
+  background: linear-gradient(#fafafa, #fff);
+}
+
+.milk-lid + .milk-lid::after {
+  background: red;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  background: linear-gradient(#ddd, #fff)
+}
+
+.milk-lid + .milk-lid::before {
+  background: red;
+  clip-path: polygon(50% 100%, 0% 0, 100% 0);
+  background: linear-gradient(#fff, #ddd)
+}
+
+/* Butter package */
+.butter {
+  --w: 10vmin;
+  --d: 40vmin;
+  --h: 10vmin;
+  --c: #f0f0f0;
+  top: 55%;
+  right: 60%;
+  transform: translate(-100%, -50%) rotate(220deg);
+  box-shadow: 0 0 10vmin #0005;
+}
+
+.butter::after {
+  background:
+    radial-gradient(circle at 45.5% 37%, white 1%, #0000 1.5%),
+    radial-gradient(circle at 53.5% 37%, white 1%, #0000 1.5%),
+    radial-gradient(circle at 46% 40%, black 3%, #0000 3.5%),
+    radial-gradient(circle at 54% 40%, black 3%, #0000 3.5%),
+    radial-gradient(circle at 50% 0%, #0000 30%, #000 0 45%, #0000 0) 50% 55% / 10% 10% no-repeat,
+    radial-gradient(60% 100% at 45% 50%, #f003, #f000 10%),
+    radial-gradient(60% 100% at 55% 50%, #f003, #f000 10%)
+    ;
+  background-color: var(--c);
+}
+
+.butter::before,
+.butter > div::before{
+  background: 
+    conic-gradient(at 50% 100%, var(--c) 27deg, #0003 0 29deg, #0000 0 333deg, #0003 0 335deg, var(--c) 0) 50% 0 / 90% 90% no-repeat,
+    linear-gradient(-60deg, #0000 63%, #0003 0 65%, #0000 0),
+    linear-gradient(60deg, #0000 63%, #0003 0 65%, #0000 0)
+    ;
+  background-color: var(--c);
+}
+
+.butter > div {
+  background: 
+    repeating-linear-gradient(#0000 0 2.5%, #f00 0 3.5%, #0000 0 5%) 100% 0 / 18% 100% no-repeat,
+    repeating-linear-gradient(#0000 0 7.5%, #f00 0 8.5%, #0000 0 15%) 100% 0 / 33% 100% no-repeat
+    ;
+  background-color: var(--c);
+  writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 5vmin;
+  padding-left: 0.5vmin;
+  font-weight: bold;
+  letter-spacing: -0.125vmin;
+  color: red;
+}
+
+/* bubbles */
+.bubble {
+  padding: 3vmin;
+  background: #ffd;
+  border-radius: 50%;
+  top: 50%;
+  font-family: 'Comic Neue', Helvetica, Arial, Sans-serif;
+  font-size: 3vmin;
+  transform: rotateX(-90deg) translateY(-30vmin);
+  max-width: 40%;
+  text-align: center;
+}
+
+.bubble::before {
+  content: "";
+  width: 10%;
+  height: 120%;
+  background: red;
+  left: 50%;
+  top: 90%;
+  background: linear-gradient(to bottom right, #ffd 50%, #0000 0);
+}
+
+.bubble-2::before {
+  height: 50%;
+  background: linear-gradient(to bottom left, #ffd 50%, #0000 0);
+  background: conic-gradient(from 0.98turn at 50% 100%, #ffd 0.04turn, #0000 0);
+  left: 50%;
+  height: 45%;
+}
+
+.bubble-1 {
+  top: 50%;
+  left: 10%;
+  transform: rotateX(-90deg) translateY(-40vmin) rotate3d(0,1,0,var(--horizontal));
+}
+
+.bubble-2 {
+  right: 5%;
+  left: auto;
+  top: 35%;
+  transform: rotateX(-90deg) translateY(-57vmin) rotate3d(0,1,0,var(--horizontal));
+/*   background: linear-gradient(to bottom left, #ffd 50%, #0000 0); */
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+    </style>
+  </head>
+  <body>
+
+    <input type="range" id="horizontal" value="0" min="0" max="360" />
+    <!-- <input type="range" id="vertical" value="0" min="0" max="360" /> -->
+
+    <article style="--horizontal: 0deg; --vertical: 0deg;" role="img" aria-label="Cartoon showing a cute soy milk carton and a stick of butter. The butter says 'Hi, Soy Milk' and the butter replies 'No, tu eres Mantequilla'">
+      <div class="butter shadow"></div>
+      <div class="milk shadow"></div>
+      <div class="cube milk"><div></div></div>
+      <div class="milk-lid"></div>
+      <div class="milk-lid"></div>
+      <div class="lid"></div>
+      <div class="cube butter"><div>Butter</div></div>
+      <div class="bubble bubble-1">Yo, Soy Milk!</div>
+      <div class="bubble bubble-2">No, tú eres Mantequilla!</div>
+    </article>
+
+    <a id="youtube" href="https://www.youtube.com/watch?v=Hme50KUMqZY" target="_blank">
+      <span>See how this video was made</span>
+    </a>
+
+    <a href="/" style="position: fixed; top: 1rem; right: 1rem;">See more comics</a>
+
+    <script>
+      const article = document.querySelector("article");
+      const horizontal = document.querySelector("#horizontal");
+      // const vertical = document.querySelector("#vertical");
+
+      function updateValues() {
+        // article.style = `--horizontal: ${horizontal.value || 0}deg; --vertical: ${vertical.value || 0}deg;`;
+        article.style = `--horizontal: ${horizontal.value || 0}deg; --vertical: 0;`;
+      }
+
+      horizontal.addEventListener("input", updateValues);
+      // vertical.addEventListener("input", updateValues);
+    </script>
+
+  </body>
+  </html>
