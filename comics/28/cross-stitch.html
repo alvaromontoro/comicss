@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+body {
+  perspective: 1000px;
+  margin: 0;
+  height: 100vh;
+}
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0);
+}
+
+.box {
+   background:
+    radial-gradient(#0001 15%, #0000 0) 0 0 / 2vmin 2vmin
+    ;
+  background-color: #fff;
+  width: 96vmin;
+  height: 48vmin;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  overflow: hidden;
+}
+
+.box *,
+.box *::before,
+.box *::after {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+
+.stitch,
+.stitch::before {
+  left: calc(var(--x) * 2vmin);
+  top: calc(var(--y) * 2vmin);
+  width: 3vmin;
+  height: 0.75vmin;
+  background:
+    linear-gradient(90deg, var(--c), #0000 10% 25%, #0006 50%, #0000 75% 90%, var(--c)),
+    repeating-linear-gradient(#0000 0 20%, #0003 0 25%),
+    repeating-linear-gradient(#0000 0 15%, #fff4 0 20%, #0000 0 25%),
+    var(--c);
+  border-radius: 100vmin;
+  transform: translate(-33.333%, 0.133333%) rotate(45deg);
+}
+
+.stitch::before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  background:
+    linear-gradient(90deg, var(--c), #0000 20% 80%, var(--c)),
+    repeating-linear-gradient(#0000 0 20%, #0003 0 25%),
+    repeating-linear-gradient(#0000 0 15%, #fff4 0 20%, #0000 0 25%),
+    var(--c)
+    ;
+  transform: translate(-50%, -50%) rotate(90deg);
+  filter: brightness(1.2);
+}
+
+.needle {
+  width: 35%;
+  height: 1.5%;
+  background: 
+    radial-gradient( 30% 200% at 95% 50%, white 10%, #0000 0),
+    linear-gradient(90deg, #0000 90%, #fc58)
+    silver;
+  border-radius: 170% 2vmin 2vmin 170% / 100%;
+  top: 31.125vmin;
+  left: 51.25vmin;
+  transform: rotate(-20deg);
+  -webkit-mask:
+    radial-gradient(circle at 0 50%, #000 16%, #0000 0),
+    radial-gradient(circle at 100% 50%, #000 33.5%, #0000 0);
+}
+
+.needle::before {
+  content: "";
+  width: 60%;
+  height: 30vmin;
+  background: #f004;
+  overflow: visible;
+  left: 100%;
+}
+
+input:checked ~ article {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+input:checked ~ article .needle {
+  -webkit-mask:
+    radial-gradient(circle at 41% 50%, #000 43%, #0000 0)
+}
+
+input:checked ~ article .stitch {
+  width: 2.125vmin;
+  height: 0.55vmin;
+  transform: translate(-33.333%, -133.33%);
+  background:
+    linear-gradient(90deg, var(--c), #0000 20% 80%, var(--c)),
+    repeating-linear-gradient(#0000 0 20%, #0003 0 30%),
+    repeating-linear-gradient(#0000 0 15%, #fff4 0 24%, #0000 0 25%),
+    var(--c)
+    ;
+}
+
+input:checked ~ article .stitch::before {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width:100%;
+  transform-origin: 0% 50%;
+  transform: rotate(90deg); translate(-0.5vmin, -0.4vmin);
+  filter: brightness(1.2);
+  display: none;
+}
+
+input:checked ~ article .stitch:nth-child(5n)::before {
+  display: block;
+}
+
+input:checked ~ article .stitch:nth-child(9n)::before {
+  width: 70%;
+  aspect-ratio: 1.1;
+  border-radius: 80% 50% 120% 38%;
+  height: auto;
+  display: block;
+  box-shadow: inset -0.1vmin 0.1vmin 0.1vmin #0004;
+  transform: translate(-50%, -20%);
+}
+
+input:checked ~ article .stitch:nth-child(20n)::before {
+  width: 300%;
+  aspect-ratio:2.5;
+  height: auto;
+  border-radius: 10% 130% 100% 120%;
+  background: #0000;
+  box-shadow: 
+    -0.25vmin -0.25vmin var(--c),
+    0.25vmin -0.25vmin var(--c),
+    -0.25vmin 0.25vmin 0 0.1vmin #0004,
+    -0.25vmin 0.25vmin 0 0.1vmin var(--c);
+  display: block;
+  transform: translate(0, 0.4vmin)  rotate(calc((var(--x) + var(--y)) * -60deg)) skew(30deg);
+  transform-origin: top left;
+  filter: drop-shadow(0.4vmin 0 var(--c))
+}
+
+input:checked ~ article .stitch:nth-child(40n)::before {
+  transform: translate(0, 0.4vmin) rotate(calc((var(--x) + var(--y)) * -30deg)) skew(40deg);
+  filter: drop-shadow(0.4vmin 0 var(--c)) drop-shadow(-0.3vmin 0.4vmin var(--c))
+    
+}
+input:checked ~ article .stitch:nth-child(40n)::after {
+  content: "";
+  width: 1vmin;
+  height: 1vmin;
+  background: var(--c);
+  border-radius: 50%;
+  transform: translate(-0.5vmin, 0.2vmin);
+}
+
+input:checked ~ article .stitch:nth-child(15n)::after {
+  content: "";
+  width: 320%;
+  height: 0.5vmin;
+  background: var(--c);
+  border-radius: 50%;
+  transform-origin: top left;
+  transform: translate(-0.5vmin, 0.2vmin) rotate(calc((var(--x) + var(--y)) * -93deg));
+}
+
+input:checked ~ article .stitch:nth-child(15n)::before {
+  content: "";
+  width: 320%;
+  height: 0.5vmin;
+  background: var(--c);
+  border-radius: 50%;
+  atransform-origin: top left;
+  transform: translate(-0.5vmin, 0.2vmin) rotate(calc((var(--x) + var(--y)) * -93deg + 3deg) );
+}
+
+.text {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  padding: 2vmin;
+  font-family: 'Comic Neue', Helvetica,Arial, sans-serif;
+  font-size: 3vmin;
+  background: #ffd;
+  border: 0.5vmin solid;
+  padding-right: 4vmin;
+}
+
+.text::before {
+  position: relative;
+  top: auto;
+  left: auto;
+  content: "How the web page looks like 😎"
+}
+
+input:checked ~ article .text {
+  transform: scaleX(-1);
+  right: 0;
+  left: auto;
+}
+
+input:checked ~ article .text::before {
+  content: "...how the CSS code actually looks like 😰"
+}
+
+input {
+  position: absolute;
+  left: -1000px;
+}
+
+label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-48.5vmin, -30vmin);
+  line-height: 2vmin;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #def8;
+  display: inline-block;
+  padding: 1vmin;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  cursor: pointer;
+  font-size: 2vmin;
+}
+    </style>
+  </head>
+  <body>
+
+    <input id="back" type="checkbox" />
+    <label for="back">↻ Flip the CSS art</label>
+    <article role="img" aria-label="Cartoon with two panels. The first one shows a nice cross-stitch pattern that reads CSStitch ART, with the legend 'how the web page looks like'. The second panel is the back of the cross-stitch, really messy, and a legend says 'how the CSS code actually looks like'">
+      <div class="box">
+        <div class="text"></div>
+        <div style="--c:red">
+          <!-- C -->
+          <div class="stitch" style="--x:4;--y:3"></div>
+          <div class="stitch" style="--x:5;--y:3"></div>
+          <div class="stitch" style="--x:6;--y:3"></div>
+          <div class="stitch" style="--x:3;--y:4"></div>
+          <div class="stitch" style="--x:7;--y:4"></div>
+          <div class="stitch" style="--x:3;--y:5"></div>
+          <div class="stitch" style="--x:3;--y:6"></div>
+          <div class="stitch" style="--x:3;--y:7"></div>
+          <div class="stitch" style="--x:3;--y:8"></div>
+          <div class="stitch" style="--x:7;--y:8"></div>
+          <div class="stitch" style="--x:4;--y:9"></div>
+          <div class="stitch" style="--x:5;--y:9"></div>
+          <div class="stitch" style="--x:6;--y:9"></div>
+          <!-- S -->
+          <div class="stitch" style="--x:10;--y:3"></div>
+          <div class="stitch" style="--x:11;--y:3"></div>
+          <div class="stitch" style="--x:12;--y:3"></div>
+          <div class="stitch" style="--x:9;--y:4"></div>
+          <div class="stitch" style="--x:13;--y:4"></div>
+          <div class="stitch" style="--x:9;--y:5"></div>
+          <div class="stitch" style="--x:10;--y:6"></div>
+          <div class="stitch" style="--x:11;--y:6"></div>
+          <div class="stitch" style="--x:12;--y:6"></div>
+          <div class="stitch" style="--x:13;--y:7"></div>
+          <div class="stitch" style="--x:9;--y:8"></div>
+          <div class="stitch" style="--x:13;--y:8"></div>
+          <div class="stitch" style="--x:10;--y:9"></div>
+          <div class="stitch" style="--x:11;--y:9"></div>
+          <div class="stitch" style="--x:12;--y:9"></div>
+          <!-- S -->
+          <div class="stitch" style="--x:16;--y:3"></div>
+          <div class="stitch" style="--x:17;--y:3"></div>
+          <div class="stitch" style="--x:18;--y:3"></div>
+          <div class="stitch" style="--x:15;--y:4"></div>
+          <div class="stitch" style="--x:19;--y:4"></div>
+          <div class="stitch" style="--x:15;--y:5"></div>
+          <div class="stitch" style="--x:16;--y:6"></div>
+          <div class="stitch" style="--x:17;--y:6"></div>
+          <div class="stitch" style="--x:18;--y:6"></div>
+          <div class="stitch" style="--x:19;--y:7"></div>
+          <div class="stitch" style="--x:15;--y:8"></div>
+          <div class="stitch" style="--x:19;--y:8"></div>
+          <div class="stitch" style="--x:16;--y:9"></div>
+          <div class="stitch" style="--x:17;--y:9"></div>
+          <div class="stitch" style="--x:18;--y:9"></div>
+          <!-- T -->
+          <div class="stitch" style="--x:21;--y:3"></div>
+          <div class="stitch" style="--x:22;--y:3"></div>
+          <div class="stitch" style="--x:23;--y:3"></div>
+          <div class="stitch" style="--x:24;--y:3"></div>
+          <div class="stitch" style="--x:25;--y:3"></div>
+          <div class="stitch" style="--x:23;--y:4"></div>
+          <div class="stitch" style="--x:23;--y:5"></div>
+          <div class="stitch" style="--x:23;--y:6"></div>
+          <div class="stitch" style="--x:23;--y:7"></div>
+          <div class="stitch" style="--x:23;--y:8"></div>
+          <div class="stitch" style="--x:23;--y:9"></div>
+          <!-- I -->
+          <div class="stitch" style="--x:27;--y:3"></div>
+          <div class="stitch" style="--x:27;--y:4"></div>
+          <div class="stitch" style="--x:27;--y:5"></div>
+          <div class="stitch" style="--x:27;--y:6"></div>
+          <div class="stitch" style="--x:27;--y:7"></div>
+          <div class="stitch" style="--x:27;--y:8"></div>
+          <div class="stitch" style="--x:27;--y:9"></div>
+          <!-- T -->
+          <div class="stitch" style="--x:29;--y:3"></div>
+          <div class="stitch" style="--x:30;--y:3"></div>
+          <div class="stitch" style="--x:31;--y:3"></div>
+          <div class="stitch" style="--x:32;--y:3"></div>
+          <div class="stitch" style="--x:33;--y:3"></div>
+          <div class="stitch" style="--x:31;--y:4"></div>
+          <div class="stitch" style="--x:31;--y:5"></div>
+          <div class="stitch" style="--x:31;--y:6"></div>
+          <div class="stitch" style="--x:31;--y:7"></div>
+          <div class="stitch" style="--x:31;--y:8"></div>
+          <div class="stitch" style="--x:31;--y:9"></div>
+          <!-- C -->
+          <div class="stitch" style="--x:36;--y:3"></div>
+          <div class="stitch" style="--x:37;--y:3"></div>
+          <div class="stitch" style="--x:38;--y:3"></div>
+          <div class="stitch" style="--x:35;--y:4"></div>
+          <div class="stitch" style="--x:39;--y:4"></div>
+          <div class="stitch" style="--x:35;--y:5"></div>
+          <div class="stitch" style="--x:35;--y:6"></div>
+          <div class="stitch" style="--x:35;--y:7"></div>
+          <div class="stitch" style="--x:35;--y:8"></div>
+          <div class="stitch" style="--x:39;--y:8"></div>
+          <div class="stitch" style="--x:36;--y:9"></div>
+          <div class="stitch" style="--x:37;--y:9"></div>
+          <div class="stitch" style="--x:38;--y:9"></div>
+          <!-- H -->
+          <div class="stitch" style="--x:41;--y:3"></div>
+          <div class="stitch" style="--x:41;--y:4"></div>
+          <div class="stitch" style="--x:41;--y:5"></div>
+          <div class="stitch" style="--x:41;--y:6"></div>
+          <div class="stitch" style="--x:41;--y:7"></div>
+          <div class="stitch" style="--x:41;--y:8"></div>
+          <div class="stitch" style="--x:41;--y:9"></div>
+          <div class="stitch" style="--x:45;--y:3"></div>
+          <div class="stitch" style="--x:45;--y:4"></div>
+          <div class="stitch" style="--x:45;--y:5"></div>
+          <div class="stitch" style="--x:45;--y:6"></div>
+          <div class="stitch" style="--x:45;--y:7"></div>
+          <div class="stitch" style="--x:45;--y:8"></div>
+          <div class="stitch" style="--x:45;--y:9"></div>
+          <div class="stitch" style="--x:42;--y:6"></div>
+          <div class="stitch" style="--x:43;--y:6"></div>
+          <div class="stitch" style="--x:44;--y:6"></div>
+        </div>
+        <div style="--c:#36c">
+          <!-- A -->
+          <div class="stitch" style="--x:5;--y:11"></div>
+          <div class="stitch" style="--x:4;--y:12"></div>
+          <div class="stitch" style="--x:3;--y:13"></div>
+          <div class="stitch" style="--x:3;--y:14"></div>
+          <div class="stitch" style="--x:3;--y:15"></div>
+          <div class="stitch" style="--x:3;--y:16"></div>
+          <div class="stitch" style="--x:3;--y:17"></div>
+          <div class="stitch" style="--x:6;--y:12"></div>
+          <div class="stitch" style="--x:7;--y:13"></div>
+          <div class="stitch" style="--x:7;--y:14"></div>
+          <div class="stitch" style="--x:7;--y:15"></div>
+          <div class="stitch" style="--x:7;--y:16"></div>
+          <div class="stitch" style="--x:7;--y:17"></div>
+          <div class="stitch" style="--x:4;--y:15"></div>
+          <div class="stitch" style="--x:5;--y:15"></div>
+          <div class="stitch" style="--x:6;--y:15"></div>
+          <!-- R -->
+          <div class="stitch" style="--x:9;--y:11"></div>
+          <div class="stitch" style="--x:10;--y:11"></div>
+          <div class="stitch" style="--x:11;--y:11"></div>
+          <div class="stitch" style="--x:12;--y:11"></div>
+          <div class="stitch" style="--x:9;--y:12"></div>
+          <div class="stitch" style="--x:13;--y:12"></div>
+          <div class="stitch" style="--x:9;--y:13"></div>
+          <div class="stitch" style="--x:13;--y:13"></div>
+          <div class="stitch" style="--x:9;--y:14"></div>
+          <div class="stitch" style="--x:10;--y:14"></div>
+          <div class="stitch" style="--x:11;--y:14"></div>
+          <div class="stitch" style="--x:12;--y:14"></div>
+          <div class="stitch" style="--x:9;--y:15"></div>
+          <div class="stitch" style="--x:12;--y:15"></div>
+          <div class="stitch" style="--x:9;--y:16"></div>
+          <div class="stitch" style="--x:13;--y:16"></div>
+          <div class="stitch" style="--x:9;--y:17"></div>
+          <div class="stitch" style="--x:13;--y:17"></div>
+          <!-- T -->
+          <div class="stitch" style="--x:15;--y:11"></div>
+          <div class="stitch" style="--x:16;--y:11"></div>
+          <div class="stitch" style="--x:17;--y:11"></div>
+          <div class="stitch" style="--x:18;--y:11"></div>
+          <div class="stitch" style="--x:19;--y:11"></div>
+          <div class="stitch" style="--x:17;--y:12"></div>
+          <div class="stitch" style="--x:17;--y:13"></div>
+          <div class="stitch" style="--x:17;--y:14"></div>
+          <div class="stitch" style="--x:17;--y:15"></div>
+          <div class="stitch" style="--x:17;--y:16"></div>
+          <div class="stitch" style="--x:17;--y:17"></div>
+        </div>
+        <div class="needle"></div>
+      </div>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

@@ -519,4 +519,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Cross-Stitch</title>
+    <link href="https://comicss.art/?id=27" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/28/cross-stitch.html"/>
+    <id>https://comicss.art/?id=28</id>
+    <updated>2022-04-25T00:00:00Z</updated>
+    <summary>New cartoon: Cross-Stitch</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/28/cross-stitch.png" alt="Cartoon with two panels. The first one shows a nice cross-stitch pattern that reads CSStitch ART, with the legend 'how the web page looks like'. The second panel is the back of the cross-stitch, really messy, and a legend says 'how the CSS code actually looks like'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

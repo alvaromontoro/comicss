@@ -276,5 +276,15 @@
       <enclosure url="https://comicss.art/comics/25/soy-milk-3d.png" length="88000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=28</guid>
+      <title>Cross-Stitch</title>
+      <link>https://comicss.art/?id=28</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 25 Apr 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/25/cross-stitch.png" length="265000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

@@ -210,5 +210,13 @@ const posts = [
     video: "Hme50KUMqZY",
     title: "Soy Milk (3D)",
     ariaLabel: "Cartoon showing a cute soy milk carton and a stick of butter. The butter says 'Hi, Soy Milk' and the butter replies 'No, tu eres Mantequilla'"
+  },
+  {
+    id: 28,
+    uid: "cross-stitch",
+    boxes: 2,
+    vertical: true,
+    title: "Cross-Stitch",
+    ariaLabel: "Cartoon with two panels. The first one shows a nice cross-stitch pattern that reads CSStitch ART, with the legend 'how the web page looks like'. The second panel is the back of the cross-stitch, really messy, and a legend says 'how the CSS code actually looks like'"
   }
 ]
