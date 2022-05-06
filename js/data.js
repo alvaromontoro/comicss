@@ -218,5 +218,13 @@ const posts = [
     vertical: true,
     title: "Cross-Stitch",
     ariaLabel: "Cartoon with two panels. The first one shows a nice cross-stitch pattern that reads CSStitch ART, with the legend 'how the web page looks like'. The second panel is the back of the cross-stitch, really messy, and a legend says 'how the CSS code actually looks like'"
+  },
+  {
+    id: 29,
+    uid: "combinators",
+    boxes: 5,
+    horizontal: true,
+    title: "Four Combinators walk into a bar...",
+    ariaLabel: "Cartoon with 5 stacked panels. All panels show a bar with 4 stools with people, a CSS combinator saying 'hey waiter! our next round on me!', and another 4 stools with people. In the first panel, the child combinator (>) invites to the rounds and someone off-panel says 'thanks, dad!'. In the second panel, the adjacent sibling combinator (+) invites to the next round, and the person to its right says 'thanks, bro'. In the third panel, the general sibling combinator (~) invites to the next round, and all the people to its right yell 'woohoo!, Thank you, dude!'. In the fourth panel, the universal selector (*) invites to the next round and all the people in the panel (to its right and left) start celebrating. In the final panel, the column combinator (||) invites to the next round, and the other combinators (off-panel) say 'Thank you!'"
   }
 ]

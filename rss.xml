@@ -263,7 +263,7 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/25/soy-milk-ii.png" length="66000" type="image/png" />
+      <enclosure url="https://comicss.art/comics/26/soy-milk-ii.png" length="66000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
@@ -273,7 +273,7 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/25/soy-milk-3d.png" length="88000" type="image/png" />
+      <enclosure url="https://comicss.art/comics/27/soy-milk-3d.png" length="88000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
@@ -283,7 +283,17 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 25 Apr 2022 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/25/cross-stitch.png" length="265000" type="image/png" />
+      <enclosure url="https://comicss.art/comics/28/cross-stitch.png" length="265000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=29</guid>
+      <title>Four CSS Combinators walk into a bar...</title>
+      <link>https://comicss.art/?id=29</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/29/cross-stitch.png" length="529000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
   </channel>

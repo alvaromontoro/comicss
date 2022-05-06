@@ -521,7 +521,7 @@
   </entry>
   <entry>
     <title>Cross-Stitch</title>
-    <link href="https://comicss.art/?id=27" />
+    <link href="https://comicss.art/?id=28" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/28/cross-stitch.html"/>
     <id>https://comicss.art/?id=28</id>
     <updated>2022-04-25T00:00:00Z</updated>
@@ -529,6 +529,25 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/28/cross-stitch.png" alt="Cartoon with two panels. The first one shows a nice cross-stitch pattern that reads CSStitch ART, with the legend 'how the web page looks like'. The second panel is the back of the cross-stitch, really messy, and a legend says 'how the CSS code actually looks like'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Four CSS Combinators walk into a bar...</title>
+    <link href="https://comicss.art/?id=29" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/29/combinators.html"/>
+    <id>https://comicss.art/?id=29</id>
+    <updated>2022-05-06T00:00:00Z</updated>
+    <summary>New cartoon: Four CSS Combinators walk into a bar...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/29/combinators.png" alt="Cartoon with 5 stacked panels. All panels show a bar with 4 stools with people, a CSS combinator saying 'hey waiter! our next round on me!', and another 4 stools with people. In the first panel, the child combinator (>) invites to the rounds and someone off-panel says 'thanks, dad!'. In the second panel, the adjacent sibling combinator (+) invites to the next round, and the person to its right says 'thanks, bro'. In the third panel, the general sibling combinator (~) invites to the next round, and all the people to its right yell 'woohoo!, Thank you, dude!'. In the fourth panel, the universal selector (*) invites to the next round and all the people in the panel (to its right and left) start celebrating. In the final panel, the column combinator (||) invites to the next round, and the other combinators (off-panel) say 'Thank you!'" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
