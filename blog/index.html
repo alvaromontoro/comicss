@@ -99,6 +99,57 @@
         </footer>
       </article>
       -->
+      <article id="combinators">
+        <h2>Four combinators walk into a bar...</h2>
+        <p>
+          Today's comic strip is about <b>CSS combinators</b> (and the universal selector). But, what are they? 
+          A CSS combinator is something that, combined with the selectors, gives them a relationship.
+        </p>
+        <p>
+          There are five CSS combinators (but one is at risk of not making the cut to the standard):
+        </p>
+        <ul>
+          <li style="margin-bottom: 1rem;">
+            <b>Descendant combinator (<code>&nbsp;</code>)</b>: indicates that the second element is a descendant (at any level) of the first one.
+            <!-- <br/>
+            For example, <code>p span</code>: will select all the <code>&lt;span&gt;</code> inside a <code>&lt;p&gt;</code>. -->
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <b>Child combinator (<code>&gt;</code>)</b>: indicates that the second element is a direct descendant (first level only) of the first one.
+            <!-- <br/>
+            For example, <code>p &gt; span</code>: will select all the <code>&lt;span&gt;</code> that are directly inside the <code>&lt;p&gt;</code>.
+            But if the <code>&lt;span&gt;</code> is say inside a <code>&lt;button&gt;</code>, then it won't select it, because the direct descendant is the button. -->
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <b>Adjacent sibling combinator (<code>+</code>)</b>: indicates that the second element follows the first one directly in the code (first sibling).
+            <!-- <br/>
+            For example, <code>p &gt; span</code>: will select all the <code>&lt;span&gt;</code> that are directly inside the <code>&lt;p&gt;</code>.
+            But if the <code>&lt;span&gt;</code> is say inside a <code>&lt;button&gt;</code>, then it won't select it, because the direct descendant is the button. -->
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <b>General sibling combinator (<code>~</code>)</b>: indicates that the second element follows the first one in the code (any sibling as long as it's after the first element).
+            <!-- <br/>
+            For example, <code>p &gt; span</code>: will select all the <code>&lt;span&gt;</code> that are directly inside the <code>&lt;p&gt;</code>.
+            But if the <code>&lt;span&gt;</code> is say inside a <code>&lt;button&gt;</code>, then it won't select it, because the direct descendant is the button. -->
+          </li>
+          <li>
+            <b>Column combinator (<code>||</code>)</b>: indicates that the second element is in the same column specified as the first element (this combinator is experimental and at risk of being removed)
+            <!-- <br/>
+            For example, <code>p &gt; span</code>: will select all the <code>&lt;span&gt;</code> that are directly inside the <code>&lt;p&gt;</code>.
+            But if the <code>&lt;span&gt;</code> is say inside a <code>&lt;button&gt;</code>, then it won't select it, because the direct descendant is the button. -->
+          </li>
+        </ul>
+        <p>The <b>universal selector</b> (<code>*</code>) selects everything (and that's why everyone in the bar cheers when the next round is on the universal selector.)</p>
+        <p>This was just a simple introduction to the CSS combinators. For more information, check the following MDN resources:</p>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">CSS Combinators</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Column_combinator">Column Combinators</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors">Universal Selector</a></li>
+        </ul>
+        <footer>
+          Published on <time datetime="2022-05-06">May 6, 2022</time>
+        </footer>
+      </article>
       <article id="mafalda-inspired-cartoon">
         <h2>Mafalda-inspired cartoon</h2>
         <p>
