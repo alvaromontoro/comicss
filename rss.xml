@@ -306,5 +306,15 @@
       <enclosure url="https://comicss.art/comics/30/electronic-party.png" length="206000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=31</guid>
+      <title>Superheroes.CSS (v2)</title>
+      <link>https://comicss.art/?id=31</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/31/superherocss-v2.png" length="198000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
