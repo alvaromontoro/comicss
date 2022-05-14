@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  display: inline-block;
+  max-width: 95vmin;
+}
+
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vmin;
+}
+
+li {
+  --skin: #fca;
+  position: relative;
+  border: 0.4vmin solid;
+  width: 30vmin;
+  aspect-ratio: 0.7;
+  overflow: hidden;
+}
+
+span {
+  width: 100%;
+  background: #ffc;
+  height: 15%;
+  border-bottom: 0.4vmin solid;
+  display: grid;
+  place-items: center;
+  font-size: 3vmin;
+  font-family: arial, sans-serif;
+  text-transform: uppercase;
+}
+
+li *,
+li *::before,
+li *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.head {
+  width: 60%;
+  height: 50%;
+  border: 0.35vmin solid;
+  border-bottom: 0.5vmin solid;
+  border-top: 0.5vmin solid;
+  border-radius: 100% / 80% 80% 100% 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    radial-gradient(farthest-side, #f003, #f000) 10% 59% / 40% 20% no-repeat,
+    radial-gradient(farthest-side, #f003, #f000) 90% 59% / 40% 20% no-repeat,
+    var(--skin);
+}
+
+.head::after {
+  content: "";
+  width: 35%;
+  height: 10%;
+  border: 0.5vmin solid;
+  border-top: 0;
+  border-radius: 0 0 45% 45% / 0 0 100% 100%;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--skin);
+}
+
+.nose {
+  width: 15%;
+  height: 12%;
+  border-radius: 50%;
+  border: 0.2vmin solid #0000;
+  border-top: 0.4vmin solid;
+  border-right: 0.5vmin solid;
+  top: 52%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--skin)
+}
+
+.mouth {
+  width: 45%;
+  height: 17%;
+  border: 0.4vmin solid;
+  border-radius: 40% 0 0 30% / 100%;
+  border-right: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(#fff 0 0) 0 0 / calc(80% - 0.4vmin) calc(40% - 0.4vmin) no-repeat,
+    linear-gradient(#000 0 0) 0 0 / 80% 40% no-repeat,
+    radial-gradient(130% 120% at 10% 100%, #d00 40%, #000 0 calc(40% + 0.5vmin), #0000 0),
+    linear-gradient(100deg, #a00, #c00 50%, #000 0 calc(50% + 0.35vmin), #0000 0)
+    ;
+  clip-path: polygon(0 -100%, 200% -100%, 100% 50%, 80% 100%, 0 100%);
+}
+
+.mouth::before {
+  content: "";
+  border: 0.4vmin solid;
+  border-radius: 0 4vmin 4vmin 0;
+  border-left: 0;
+  right: -0.5vmin;
+  top: 0vmin;
+  height: 1.5vmin;
+  width: 20%;
+  transform: translateY(-100%);
+}
+
+.eyes {
+  width: 90%;
+  height: 25%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+}
+
+.center .eyes { justify-content: center; }
+.flex-start .eyes { justify-content: flex-start; }
+.flex-end .eyes { justify-content: flex-end; }
+.space-around .eyes { justify-content: space-around; }
+.space-between .eyes { justify-content: space-between; }
+.space-evenly .eyes { justify-content: space-evenly; }
+
+.eye {
+  height: 100%;
+  aspect-ratio: 1;
+  border: 0.35vmin solid;
+  border-radius: 50%;
+  position: relative;
+  background: 
+    radial-gradient(circle at 45% 45%, #fff 6%, #0000 0),
+    radial-gradient(#000 15%, #fff 0)
+}
+
+.eye::before {
+  content: "";
+  width: 100%;
+  height: 20%;
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  top: -50%;
+  transform: rotate(-10deg) translateX(-1vmin);
+}
+
+.eye + .eye::before {
+  transform: rotate(10deg) translateX(1vmin);
+}
+
+.neck {
+  width: 13%;
+  height: 20%;
+  border: 0.4vmin solid;
+  border-radius: 100% / 20%;
+  background: var(--skin);
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.body {
+  width: 90%;
+  height: 100%;
+  border-radius: 45%;
+  border: 0.4vmin solid;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: 
+    radial-gradient(100% 50% at 50% 1%, #0000 10%, #000 10.2% 11.8%, #0000 12%),
+    #beeeef;
+}
+
+.ear {
+  width: 15%;
+  height: 9%;
+  background: vaR(--skin);
+  border: 0.4vmin solid;
+  border-radius: 100% / 100% 70% 70% 100%;
+  top: 50%;
+  left: 10%;
+}
+
+.ear + .ear {
+  transform: scaleX(-1);
+  right: 10%;
+  left: auto;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>Justify-Content Values</h1>
+      <ul>
+        <li class="flex-start">
+          <span>flex-start</span>
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="head">
+            <div class="mouth"></div>
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+            <div class="nose"></div>
+          </div>
+        </li>
+        <li class="center">
+          <span>center</span>
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="head">
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+          </div>
+        </li>
+        <li class="flex-end">
+          <span>flex-end</span>
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="head">
+            <div class="mouth"></div>
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+            <div class="nose"></div>
+          </div>
+        </li>
+        <li class="space-evenly">
+          <span>space-evenly</span>
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="head">
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+          </div>
+        </li>
+        <li class="space-around">
+          <span>space-around</span>
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="head">
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+          </div>
+        </li>
+        <li class="space-between">
+          <span>space-between</span>
+          <div class="body"></div>
+          <div class="neck"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="head">
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+    </article>
+    
+    <a id="youtube" href="https://www.youtube.com/watch?v=KX8hr2QksXA" target="_blank">
+      <span>See how this demo was coded</span>
+    </a>
+
+    <a href="/" style="position: fixed; top: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

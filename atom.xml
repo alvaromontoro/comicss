@@ -576,7 +576,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Superheroes.CSS (v2)</title>
     <link href="https://comicss.art/?id=31" />
@@ -587,6 +586,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/31/superherocss-v2.png" alt="Cartoon with CSS code used to describe different superheroes" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>justify-content</title>
+    <link href="https://comicss.art/?id=32" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/32/justify-content.html"/>
+    <id>https://comicss.art/?id=32</id>
+    <updated>2022-05-13T00:00:00Z</updated>
+    <summary>New cartoon: justify-content</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/32/justify-content.png" alt="Cartoon with six panels showing different values of justify-content by placing the eyes of a cartoon character in different positions" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

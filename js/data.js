@@ -240,5 +240,14 @@ const posts = [
     boxes: 2,
     title: "Superhero.CSS v2.0",
     ariaLabel: "Cartoon with CSS code used to describe different superheroes"
+  },
+  {
+    id: 32,
+    uid: "justify-content",
+    boxes: 6,
+    horizontal: true,
+    title: "justify-content",
+    video: "KX8hr2QksXA",
+    ariaLabel: "Cartoon with six panels showing the different values of justify-content by placing the eyes of a cartoon character in different positions."
   }
 ]
