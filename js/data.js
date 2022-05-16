@@ -249,5 +249,13 @@ const posts = [
     title: "justify-content",
     video: "KX8hr2QksXA",
     ariaLabel: "Cartoon with six panels showing the different values of justify-content by placing the eyes of a cartoon character in different positions."
+  },
+  {
+    id: 33,
+    uid: "cssoomba",
+    boxes: 3,
+    vertical: true,
+    title: "CSSoomba",
+    ariaLabel: "Cartoon with three panels. The firs one has some verbose CSS code. The second one shows a Roomba with the text CSSoomba going over the code. The third panel has the same code as the first panel but in a less verbose way."
   }
 ]

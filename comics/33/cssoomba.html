@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@keyframes changeText {
+  0%, 49.9% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.sel {
+  color: maroon;
+}
+
+.prop {
+  color: purple;
+}
+
+.val {
+  color: green;
+}
+
+.del {
+  color: #222;
+}
+
+code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5vmin;
+  animation: changeText 10s linear 1 forwards;
+}
+
+code + code {
+  animation-direction: reverse;
+}
+
+@keyframes vacuum {
+  0% { transform: translate(-50%, -50%) translateY(100vh) rotate(0) ; }
+  80% { transform: translate(-50%, -50%) translateY(-60vh) rotate(0deg) ; }
+  83% { transform: translate(-50%, -50%) translateY(-60vh) rotate(-8deg); }
+  89% { transform: translate(-50%, -50%) translateY(-60vh) rotate(8deg); }
+  92% { transform: translate(-50%, -50%) translateY(-60vh) rotate(0); }
+  100% { transform: translate(-50%, -50%) translateY(-80vh) rotate(0); }
+}
+
+.roomba {
+  animation: vacuum 10s linear 1 forwards;
+  width: 60vmin;
+  height: 60vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, #0000 84.5%, #111 84.7% 97%, #0000 97.2%),
+    radial-gradient(circle at 50% 5%, #111 6%, #0000 0),
+    
+    radial-gradient(circle at 50% 40%, #999 5%, #aaa 8%, #0f07 8.2% 9%, #0f04 0, #0000 11%),
+    
+    linear-gradient(#111, #222 50%, #444 0, #222 51%, #111) 50% 0 / 40% 50% no-repeat,
+    radial-gradient(farthest-side, #111 99%, #0000 99.9%) 50% 50% / 40% 10% no-repeat,
+    
+    radial-gradient(100% 54% at 50% 99.5%, #0000, #6664 20%, #0000 0),
+    linear-gradient(#0000 93%, #111 0),
+    linear-gradient(#ccc, #aaa) 50% 50% / 90% 90% no-repeat
+    ;
+  box-sizing: border-box;
+  padding-top: 10vmin;
+  color: #999;
+  text-align: center;
+  font-size: 2vmin;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: italic;
+/*   box-shadow: 1vmin 2vmin 3vmin #0002; */
+  filter: drop-shadow(1vmin 2vmin 3vmin #0003);
+}
+
+.roomba::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #f004;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(closest-side, #000 50%, #333  98%, #0000 98.2%),
+    linear-gradient(#666, #222)
+    ;
+  clip-path: polygon(0 0, 100% 0, 100% 46%, 90% 43%, 90% 45%, 100% 48%, 100% 100%, 66% 100%, 62% 90%, 61% 90%, 65% 100%, 35% 100%, 39% 90%, 38% 90%, 34% 100%, 0 100%, 0 48%, 10% 45%, 10% 43%, 0% 46%);
+  -webkit-mask: radial-gradient(closest-side, #0000 88%, #000 0);
+  mask: radial-gradient(closest-side, #0000 88%, #000 0);
+}
+
+.roomba::after {
+  white-space: pre;
+  content: "START";
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  border-radius: 50%;
+  width: 9%;
+  height: 9%;
+  background:
+    radial-gradient(closest-side, #111 50%, #333  90%, #0000 90.2%),
+    linear-gradient(#666, #111);
+  transform: translateX(-50%);
+  box-shadow: 0.2vmin 0.2vmin 1vmin #000a;
+  box-sizing: content-box;
+  text-align: center;
+  line-height: 3775%;
+  font-size: 1.25vmin;
+  overflow: visible;
+  display: flex;
+  color: #4448;
+  justify-content: center;
+  font-style: normal;
+}
+
+    </style>
+  </head>
+  <body>
+<code><pre>
+<span class="sel">.myclass</span> <span class="del">{</span>
+  <span class="prop">background-image</span><span class="del">:</span> <span class="val">url(a.png)</span><span class="del">;</span>
+  <span class="prop">background-repeat</span><span class="del">:</span> <span class="val">no-repeat</span><span class="del">;</span>
+  <span class="prop">margin-top</span><span class="del">:</span> <span class="val">1rem</span><span class="del">;</span>
+  <span class="prop">margin-right</span><span class="del">:</span> <span class="val">1rem</span><span class="del">;</span>
+  <span class="prop">margin-bottom</span><span class="del">:</span> <span class="val">1rem</span><span class="del">;</span>
+  <span class="prop">margin-left</span><span class="del">:</span> <span class="val">1rem</span><span class="del">;</span>
+}<span>
+</pre></code>
+<code><pre>
+<span class="sel">.myclass</span> <span class="del">{</span>
+  <span class="prop">background</span><span class="del">:</span> <span class="val">url(a.png) no-repeat</span><span class="del">;</span>
+  <span class="prop">margin</span><span class="del">:</span> <span class="val">1rem</span><span class="del">;</span>
+<span class="del">}</span></pre></code>
+      
+      <div class="roomba">CSSoomba</div>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

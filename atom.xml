@@ -595,7 +595,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>justify-content</title>
     <link href="https://comicss.art/?id=32" />
@@ -606,6 +605,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/32/justify-content.png" alt="Cartoon with six panels showing different values of justify-content by placing the eyes of a cartoon character in different positions" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>CSSoomba</title>
+    <link href="https://comicss.art/?id=33" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/33/cssoomba.html"/>
+    <id>https://comicss.art/?id=33</id>
+    <updated>2022-05-16T00:00:00Z</updated>
+    <summary>New cartoon: CSSoomba</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/33/cssoomba.png" alt="Cartoon with three panels. In the first one there's some verbose CSS code. In the second one a Roomba-styled vaccum cleaner passes on top of the CSS code. In the third panel, there's some CSS code that does the same thing as the code from panel one, but it is shorter and cleaner." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
