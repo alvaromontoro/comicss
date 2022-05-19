@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Raleway:wght@900&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #369;
+  background: linear-gradient(#147, #369);
+}
+
+article {
+  width: 80vmin;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+article div,
+article div::before,
+article div::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.math {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 25vmin;
+  color: #abd;
+  line-height: 0;
+}
+
+sup {
+  font-size: 0.5em;
+}
+
+.ex {
+  top: 70%;
+  left: 60%;
+}
+
+.a {
+  top: 25%;
+  left: 8%;
+}
+
+.x2 {
+  top: 20%;
+  left: 30%;
+}
+
+.eye {
+  width: 2%;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(at 30% 30%, #fff 10%, #0000 0),
+    black;
+  border-radius: 50%;
+}
+
+.ex-eye {
+  top: 77.5%;
+  left: 70.5%;
+  clip-path: polygon(0 0, 50% 10%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.ex-eye + .ex-eye {
+  left: 66%;
+  clip-path: polygon(0 40%, 50% 10%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.mouth {
+  width: 4%;
+  height: 2%;
+  background: black;
+  background:
+    radial-gradient(at 90% 100%, #c00 30%, #300 0)
+}
+
+.ex-mouth {
+  top: 81%;
+  left: 68%;
+  border-radius: 50% / 100% 100% 0 0;
+  transform: rotate(10deg);
+}
+
+.legs {
+  width: 7%;
+  height: 16%;
+  border: 0.75vmin solid;
+  border-radius: 50% / 100%;
+  clip-path: polygon(-200% 0, 200% 0, 200% 93%, -200% 93%);
+}
+
+.legs::before,
+.legs::after {
+  content: "";
+  width: 100%;
+  height: 10%;
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  top: 90%;
+  transform: translate(-100%,0)
+}
+
+.legs::after {
+  left: 100%;
+  transform: none;
+}
+
+.ex-legs {
+  bottom: -1%;
+  left: 66%;
+}
+
+.shadow { 
+  width: 20%;
+  height: 5%;
+  border-radius: 50% / 0 0 100% 100%;
+  background:
+    radial-gradient(farthest-side at 50% 0, #147a, #0000)
+}
+
+.ex-shadow {
+  top: 100%;
+  left: 60%;
+}
+
+.a-legs {
+  left: 15%;
+  top: 33%;
+}
+
+.x2-legs {
+  width: 8%;
+  top: 31%;
+  left: 34.5%;
+  height: 18.125%;
+}
+
+.x2-legs::before {
+  transform: translateX(-90%);
+}
+.x2-legs::after {
+  left: 95%;
+}
+
+.a-shadow {
+  top: 48%;
+  left: 9%;
+}
+
+.x2-shadow {
+  top: 48%;
+  left: 30%;
+}
+
+.a-eye {
+  top: 26.5%;
+  left: 15%;
+}
+
+.a-eye + .a-eye {
+  left: 19%;
+}
+
+.x2-eye {
+  top: 26.5%;
+  left: 36%;
+}
+.x2-eye + .x2-eye {
+  left: 39.5%;
+}
+
+.a-mouth {
+  top: 30%;
+  left: 16%;
+  border-radius: 50% / 0 0 100% 100%;
+  background: radial-gradient(at 0 100%, #c00 40%, #300 0);
+  transform: rotate(4deg);
+}
+
+.x2-mouth {
+  top: 29.25%;
+  left: 36.75%;
+  border-radius: 50% / 0 0 100% 100%;
+}
+
+.bubble {
+  --color: #9cd;
+  border-radius: 49%;
+  background: var(--color);
+  font-family: 'Comic Neue', Raleway, Arial, sans-serif;
+  padding: 3vmin 3vmin;
+  font-size: 3vmin;
+}
+
+.bubble-1 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.bubble-1::before,
+.bubble-1::after {
+  content: "";
+  width: 10%;
+  height: 80%;
+  top: 90%;
+  background: red;
+  left: 27%;
+  background:
+    conic-gradient(from 0.97turn at 50% 70%, var(--color) 0.06turn, #0000 0)
+    ;
+}
+
+.bubble-1::after {
+  left: 58%;
+}
+
+.bubble-2 {
+  top: 50%;
+  left: 55%;
+  font-size: 2.5vmin;
+}
+
+.bubble-2::after {
+  content: "";
+  width: 10%;
+  height: 50%;
+  top: 90%;
+  background: red;
+  left: 40%;
+  background:
+    conic-gradient(from 0.97turn at 50% 70%, var(--color) 0.06turn, #0000 0)
+    ;
+}
+
+.section-ex {
+  left: 13%;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <article role="img" aria-label="Cartoon showing mathematical expressions 'a' and 'x to the square' saying 'Cmon mate!  Join the party! Integrate!' to another mathematical expression 'e to the power of x' that replies 'What's the point? it will be the same'">
+      <section>
+        <div class="bubble bubble-1">C'mon, mate! Join the party! <b>Integrate!</b></div>
+    
+        <div class="legs x2-legs"></div>
+        <div class="math x2">x<sup>2</sup></div>
+        <div class="shadow x2-shadow"></div>
+        <div class="eye x2-eye"></div>
+        <div class="eye x2-eye"></div>
+        <div class="mouth x2-mouth"></div>
+    
+        <div class="legs a-legs"></div>
+        <div class="math a">a</div>
+        <div class="shadow a-shadow"></div>
+        <div class="eye a-eye"></div>
+        <div class="eye a-eye"></div>
+        <div class="mouth a-mouth"></div>
+      </section>
+      
+      <section class="section-ex">
+        <div class="bubble bubble-2">What's the point?<br/>It will be <b>the same</b></div>
+    
+        <div class="legs ex-legs"></div>
+        <div class="math ex">e<sup>x</sup></div>
+        <div class="eye ex-eye"></div>
+        <div class="eye ex-eye"></div>
+        <div class="mouth ex-mouth"></div>
+        <div class="shadow ex-shadow"></div>
+      </section>
+    </article>
+    
+    <a id="youtube" href="https://www.youtube.com/watch?v=X7v5BUryOxo" target="_blank">
+      <span>See how this demo was coded</span>
+    </a>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

@@ -336,5 +336,15 @@
       <enclosure url="https://comicss.art/comics/33/cssoomba.png" length="113000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=34</guid>
+      <title>Integrate</title>
+      <link>https://comicss.art/?id=34</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/34/integrate.png" length="159000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

@@ -257,5 +257,14 @@ const posts = [
     vertical: true,
     title: "CSSoomba",
     ariaLabel: "Cartoon with three panels. The firs one has some verbose CSS code. The second one shows a Roomba with the text CSSoomba going over the code. The third panel has the same code as the first panel but in a less verbose way."
+  },
+  {
+    id: 34,
+    uid: "integrate",
+    boxes: 1,
+    vertical: true,
+    video: "X7v5BUryOxo",
+    title: "Integrate",
+    ariaLabel: "Cartoon showing mathematical expressions 'a' and 'x to the square' saying 'Cmon mate!  Join the party! Integrate!' to another mathematical expression 'e to the power of x' that replies 'What's the point? it will be the same'"
   }
 ]
