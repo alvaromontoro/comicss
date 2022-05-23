@@ -266,5 +266,13 @@ const posts = [
     video: "X7v5BUryOxo",
     title: "Integrate",
     ariaLabel: "Cartoon showing mathematical expressions 'a' and 'x to the square' saying 'Cmon mate!  Join the party! Integrate!' to another mathematical expression 'e to the power of x' that replies 'What's the point? it will be the same'"
+  },
+  {
+    id: 35,
+    uid: "decaf",
+    boxes: 2,
+    horizontal: true,
+    title: "Decaf",
+    ariaLabel: "Cartoon with 2 panels. The first one shows two people talking. One says: the 'CSS is not a programming language are really quiet lately'. The other one replies: 'I know!', and in the second panel he adds 'I switched the coffee with decaf'. In the background there's a room full of people sleeping."
   }
 ]

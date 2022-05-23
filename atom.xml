@@ -633,7 +633,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Integrate!</title>
     <link href="https://comicss.art/?id=34" />
@@ -644,6 +643,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/34/integrate.png" alt="Cartoon showing mathematical expressions 'a' and 'x to the square' saying 'Cmon mate!  Join the party! Integrate!' to another mathematical expression 'e to the power of x' that replies 'What's the point? it will be the same'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Decaf</title>
+    <link href="https://comicss.art/?id=34" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/35/decaf.html"/>
+    <id>https://comicss.art/?id=35</id>
+    <updated>2022-05-23T00:00:00Z</updated>
+    <summary>New cartoon: Decaf</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/35/decaf.png" alt="Cartoon with 2 panels. The first one shows two people talking. One says: the 'CSS is not a programming language are really quiet lately'. The other one replies: 'I know!', and in the second panel he adds 'I switched the coffee with decaf'. In the background there's a room full of people sleeping." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
