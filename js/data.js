@@ -274,5 +274,13 @@ const posts = [
     horizontal: true,
     title: "Decaf",
     ariaLabel: "Cartoon with 2 panels. The first one shows two people talking. One says: the 'CSS is not a programming language are really quiet lately'. The other one replies: 'I know!', and in the second panel he adds 'I switched the coffee with decaf'. In the background there's a room full of people sleeping."
+  },
+  {
+    id: 36,
+    uid: "flex-pikachu",
+    vertical: true,
+    boxes: 3,
+    title: "Flex Pikachu",
+    ariaLabel: "Cartoon with three panels, all of them showing the Surprised Pikachu meme. The first one is 'regular'. The second one has all the face elements in a row and has the title 'after adding flex'. The third panel has all the face elements in a column and has the title 'after adding flex-direction:column'"
   }
 ]

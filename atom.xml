@@ -671,4 +671,24 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+
+  <entry>
+    <title>Flex Pikachu</title>
+    <link href="https://comicss.art/?id=36" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/36/flex-pikachu.html"/>
+    <id>https://comicss.art/?id=36</id>
+    <updated>2022-05-26T00:00:00Z</updated>
+    <summary>New cartoon: Flex Pikachu</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/36/flex-pikachu.png" alt="Cartoon with three panels, all of them showing the Surprised Pikachu meme. The first one is 'regular'. The second one has all the face elements in a row and has the title 'after adding flex'. The third panel has all the face elements in a column and has the title 'after adding flex-direction:column'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
