@@ -366,5 +366,15 @@
       <enclosure url="https://comicss.art/comics/36/flex-pikachu.png" length="240000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=37</guid>
+      <title>Blend In</title>
+      <link>https://comicss.art/?id=37</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/37/blend-in.png" length="650000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

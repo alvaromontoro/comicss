@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+article {
+  display: flex;
+  gap: 1vmin;
+  flex-wrap: wrap;
+  max-width: 95vmin;
+  margin: auto auto;
+}
+
+section {
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  width: 30vmin;
+  height: 45vmin;
+  position: relative;
+}
+
+section * {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+section::before {
+  content: "background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background background";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #c9c;
+  background: linear-gradient(#c9cf 50%, #c9c6);
+  word-break: break-all;
+  overflow: hidden;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-size: 2vmin;
+  text-align: center;
+  color: #0001;
+}
+
+section.normal::before {
+  content: "normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal normal "
+}
+
+section.luminosity::before {
+  content: "luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity luminosity"
+}
+
+section.multiply::before {
+  content: "multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply multiply "
+}
+
+section.overlay::before {
+  content: " overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay overlay"
+}
+
+section.saturation::before {
+  content: " saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color saturation color"
+}
+
+.bubble {
+  width: 100%;
+  padding: 2vmin;
+  font-size: 2.25vmin;
+  font-family: 'Comic Neue', 'Comic Sans', serif;
+  background: #ffc;
+  box-shadow: 0 0.35vmin;
+  border-radius: 130% / 0 0 30% 20%;
+  text-align: center;
+}
+
+.bubble::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  height: 8vmin;
+  width: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: 
+    conic-gradient(at 50% 70%, #ffc 7deg, #0000 8deg 353deg, #ffc 354deg),
+    conic-gradient(at 50% 100%, #000 7deg, #0000 8deg 353deg, #000 354deg);
+}
+
+.character {
+  width: 80%;
+  height: 60%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+
+section.normal .character { mix-blend-mode: normal; }
+section.luminosity .character { mix-blend-mode: luminosity; }
+section.multiply .character { mix-blend-mode: multiply; }
+section.overlay .character { mix-blend-mode: overlay; }
+section.plus-lighter .character { mix-blend-mode: plus-lighter; }
+section.saturation .character { mix-blend-mode: saturation; }
+
+/* section.normal > * { mix-blend-mode: normal; }
+section.luminosity > * { mix-blend-mode: luminosity; }
+section.multiply > * { mix-blend-mode: multiply; }
+section.overlay > * { mix-blend-mode: overlay; }
+section.plus-lighter > * { mix-blend-mode: plus-lighter; }
+section.saturation > * { mix-blend-mode: saturation; } */
+
+.head {
+  width: 75%;
+  height: 40%;
+  border: 0.4vmin solid;
+  border-radius: 100% 95% 100% 85% / 95% 110% 100% 105%;
+  background:
+    radial-gradient(circle at 35% 63%, #000 0.5vmin, #0000 0),
+    radial-gradient(circle at 58% 63%, #000 0.5vmin, #0000 0),
+    #eee;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.neck {
+  width: 8%;
+  height: 20%;
+  left: 50%;
+  top: 35%;
+  transform: translateX(-50%);
+  background: #eee;
+  border: 0.4vmin solid;
+}
+
+.body {
+  width: 50%;
+  height: 100%;
+  background: blue;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    conic-gradient(at 50% -12%, #0000 170deg, #333 0 190deg, #0000 0),
+    conic-gradient(at 50% -20%, #0000 170deg, #000 170.25deg 190deg, #0000 190.25deg);
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon with 6 panels showing a minimalistic character that says 'Sometimes I feel awkward and out of place... then I try to blend in... until... no on... can barely... see me.'. Different mix-blend-modes have been applied to the character so in each panel it looks more transparent or with grayer/paler colors.">
+      <section>
+        <div class="bubble">Sometimes I feel awkward and out of place...</div>
+        <div class="character">
+          <div class="neck"></div>
+          <div class="body"></div>
+          <div class="head"></div>
+        </div>
+      </section>
+      <section class="normal">
+        <div class="bubble">...Then I try to blend in...</div>
+        <div class="character">
+          <div class="neck"></div>
+          <div class="body"></div>
+          <div class="head"></div>
+        </div>
+      </section>
+      <section class="overlay">
+        <div class="bubble">...until...</div>
+        <div class="character">
+          <div class="neck"></div>
+          <div class="body"></div>
+          <div class="head"></div>
+        </div>
+      </section>
+      <section class="luminosity">
+        <div class="bubble">...no one...</div>
+        <div class="character">
+          <div class="neck"></div>
+          <div class="body"></div>
+          <div class="head"></div>
+        </div>
+      </section>
+      <section class="multiply">
+        <div class="bubble">...can barely...</div>
+        <div class="character">
+          <div class="neck"></div>
+          <div class="body"></div>
+          <div class="head"></div>
+        </div>
+      </section>
+      <section class="saturation">
+        <div class="bubble">...see me.</div>
+        <div class="character">
+          <div class="neck"></div>
+          <div class="body"></div>
+          <div class="head"></div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

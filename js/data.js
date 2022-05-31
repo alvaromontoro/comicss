@@ -282,5 +282,13 @@ const posts = [
     boxes: 3,
     title: "Flex Pikachu",
     ariaLabel: "Cartoon with three panels, all of them showing the Surprised Pikachu meme. The first one is 'regular'. The second one has all the face elements in a row and has the title 'after adding flex'. The third panel has all the face elements in a column and has the title 'after adding flex-direction:column'"
+  },
+  {
+    id: 37,
+    uid: "blend-in",
+    horizontal: true,
+    boxes: 6,
+    title: "Blend in",
+    ariaLabel: "Cartoon with 6 panels showing a minimalistic character that says 'Sometimes I feel awkward and out of place... then I try to blend in... until... no on... can barely... see me.'. Different mix-blend-modes have been applied to the character so in each panel it looks more transparent or with grayer/paler colors."
   }
 ]

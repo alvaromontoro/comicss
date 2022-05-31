@@ -671,7 +671,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Flex Pikachu</title>
     <link href="https://comicss.art/?id=36" />
@@ -682,6 +681,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/36/flex-pikachu.png" alt="Cartoon with three panels, all of them showing the Surprised Pikachu meme. The first one is 'regular'. The second one has all the face elements in a row and has the title 'after adding flex'. The third panel has all the face elements in a column and has the title 'after adding flex-direction:column'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Blend in</title>
+    <link href="https://comicss.art/?id=37" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/37/blend-in.html"/>
+    <id>https://comicss.art/?id=37</id>
+    <updated>2022-05-31T00:00:00Z</updated>
+    <summary>New cartoon: Blend in</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/37/blend-in.png" alt="Cartoon with 6 panels showing a minimalistic character that says 'Sometimes I feel awkward and out of place... then I try to blend in... until... no on... can barely... see me.'. Different mix-blend-modes have been applied to the character so in each panel it looks more transparent or with grayer/paler colors." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
