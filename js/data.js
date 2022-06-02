@@ -295,6 +295,7 @@ const posts = [
     id: 38,
     uid: "roses-are-f00",
     boxes: 1,
+    vertical: true,
     title: "Roses are #f00",
     ariaLabel: "Roses are #FF0000. Violets are #EE82EE. If you see them #0000FF, you may need glasses."
   }
