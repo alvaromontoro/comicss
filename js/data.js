@@ -290,5 +290,12 @@ const posts = [
     boxes: 6,
     title: "Blend in",
     ariaLabel: "Cartoon with 6 panels showing a minimalistic character that says 'Sometimes I feel awkward and out of place... then I try to blend in... until... no on... can barely... see me.'. Different mix-blend-modes have been applied to the character so in each panel it looks more transparent or with grayer/paler colors."
+  },
+  {
+    id: 38,
+    uid: "roses-are-f00",
+    boxes: 1,
+    title: "Roses are #f00",
+    ariaLabel: "Roses are #FF0000. Violets are #EE82EE. If you see them #0000FF, you may need glasses."
   }
 ]

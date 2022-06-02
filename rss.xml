@@ -376,5 +376,15 @@
       <enclosure url="https://comicss.art/comics/37/blend-in.png" length="650000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=38</guid>
+      <title>Roses are #f00</title>
+      <link>https://comicss.art/?id=38</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/38/roses-are-f00.png" length="114000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
