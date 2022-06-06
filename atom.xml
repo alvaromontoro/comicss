@@ -709,7 +709,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Roses are #f00</title>
     <link href="https://comicss.art/?id=38" />
@@ -720,6 +719,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/38/roses-are-f00.png" alt="Roses are #FF0000. Violets are #EE82EE. If you see them #0000FF, you may need glasses." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Not important</title>
+    <link href="https://comicss.art/?id=39" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/39/not-important.html"/>
+    <id>https://comicss.art/?id=39</id>
+    <updated>2022-06-06T00:00:00Z</updated>
+    <summary>New cartoon: Not important</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/39/not-important.png" alt="Cartoon with three panels. The first two show a white man in front of a computer with the text: 'A back-end software developer merrily working on a front-end project with HTML and CSS, getting confused af because the color of the text is not correct. Even when he clearly specified that the text color should be blue, because the orange value is not important' Followed by some CSS code where a paragraph has the style color: orange !important;" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

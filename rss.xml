@@ -386,5 +386,15 @@
       <enclosure url="https://comicss.art/comics/38/roses-are-f00.png" length="114000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=39</guid>
+      <title>Not important</title>
+      <link>https://comicss.art/?id=39</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/39/not-important.png" length="574000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

@@ -298,5 +298,12 @@ const posts = [
     vertical: true,
     title: "Roses are #f00",
     ariaLabel: "Roses are #FF0000. Violets are #EE82EE. If you see them #0000FF, you may need glasses."
+  },
+  {
+    id: 39,
+    uid: "not-important",
+    boxes: 3,
+    title: "Not Important",
+    ariaLabel: "Cartoon with three panels. The first two show a white man in front of a computer with the text: 'A back-end software developer merrily working on a front-end project with HTML and CSS, getting confused af because the color of the text is not correct. Even when he clearly specified that the text color should be blue, because the orange value is not important' Followed by some CSS code where a paragraph has the style color: orange !important;"
   }
 ]
