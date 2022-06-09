@@ -728,7 +728,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Not important</title>
     <link href="https://comicss.art/?id=39" />
@@ -739,6 +738,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/39/not-important.png" alt="Cartoon with three panels. The first two show a white man in front of a computer with the text: 'A back-end software developer merrily working on a front-end project with HTML and CSS, getting confused af because the color of the text is not correct. Even when he clearly specified that the text color should be blue, because the orange value is not important' Followed by some CSS code where a paragraph has the style color: orange !important;" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Magic Trick</title>
+    <link href="https://comicss.art/?id=40" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/40/magic-trick.html"/>
+    <id>https://comicss.art/?id=40</id>
+    <updated>2022-06-09T00:00:00Z</updated>
+    <summary>New cartoon: Magic Trick</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/40/magic-trick.png" alt="Cartoon of a magician saying 'go to the code to see the magic trick in action" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

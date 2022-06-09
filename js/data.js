@@ -305,5 +305,13 @@ const posts = [
     boxes: 3,
     title: "Not Important",
     ariaLabel: "Cartoon with three panels. The first two show a white man in front of a computer with the text: 'A back-end software developer merrily working on a front-end project with HTML and CSS, getting confused af because the color of the text is not correct. Even when he clearly specified that the text color should be blue, because the orange value is not important' Followed by some CSS code where a paragraph has the style color: orange !important;"
+  },
+  {
+    id: 40,
+    uid: "magic-trick",
+    boxes: 1,
+    vertical: true,
+    title: "Magic Trick",
+    ariaLabel: "Cartoon of a magician with the text: 'Visit the code to see this interactive magic trick in action. Will The Great Al guess your card?'"
   }
 ]
