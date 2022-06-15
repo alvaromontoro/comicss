@@ -747,7 +747,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Magic Trick</title>
     <link href="https://comicss.art/?id=40" />
@@ -758,6 +757,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/40/magic-trick.png" alt="Cartoon of a magician saying 'go to the code to see the magic trick in action" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>The Death of IE</title>
+    <link href="https://comicss.art/?id=41" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/41/the-death-of-ie.html"/>
+    <id>https://comicss.art/?id=41</id>
+    <updated>2022-06-15T00:00:00Z</updated>
+    <summary>New cartoon: The Death of IE</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/41/the-death-of-ie.png" alt="Cartoon showing the death of IE" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

@@ -313,5 +313,13 @@ const posts = [
     vertical: true,
     title: "Magic Trick",
     ariaLabel: "Cartoon of a magician with the text: 'Visit the code to see this interactive magic trick in action. Will The Great Al guess your card?'"
+  },
+  {
+    id: 41,
+    uid: "the-death-of-ie",
+    boxes: 9,
+    vertical: true,
+    title: "The Death of IE",
+    ariaLabel: "Cartoon page divided in 3 sections with multiple panels each. In the first section, IE is dead and the rest of the browsers get together to honor it. In the second section, two suited men (Big and Corp) visit the necromancer asking to bring IE back to life because it's their favorite way of torturing employees. In the last section, IE is back as a ghost, the other browsers run scared to IE despair, and the ghost of the Flash logo tries to cheer IE up... to be continued?"
   }
 ]
