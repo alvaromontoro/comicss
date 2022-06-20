@@ -766,7 +766,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>The Death of IE</title>
     <link href="https://comicss.art/?id=41" />
@@ -777,6 +776,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/41/the-death-of-ie.png" alt="Cartoon page divided in 3 sections with multiple panels each. In the first section, IE is dead and the rest of the browsers get together to honor it. In the second section, two suited men (Big and Corp) visit the necromancer asking to bring IE back to life because it's their favorite way of torturing employees. In the last section, IE is back as a ghost, the other browsers run scared to IE despair, and the ghost of the Flash logo tries to cheer IE up... to be continued?" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Moses Flexing the Read Sea</title>
+    <link href="https://comicss.art/?id=42" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/42/moses-flexing-the-read-sea.html"/>
+    <id>https://comicss.art/?id=42</id>
+    <updated>2022-06-20T00:00:00Z</updated>
+    <summary>New cartoon: Moses Flexing the Read Sea</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/42/moses-flexing-the-read-sea.png" alt="Cartoon of a man (Moses) wearing a tunic and holding a stick between a body of water parted in two. He is saying '#red.sea { display: flex; justify-content: space-between; }'" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

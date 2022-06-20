@@ -321,5 +321,13 @@ const posts = [
     vertical: true,
     title: "The Death of IE",
     ariaLabel: "Cartoon page divided in 3 sections with multiple panels each. In the first section, IE is dead and the rest of the browsers get together to honor it. In the second section, two suited men (Big and Corp) visit the necromancer asking to bring IE back to life because it's their favorite way of torturing employees. In the last section, IE is back as a ghost, the other browsers run scared to IE despair, and the ghost of the Flash logo tries to cheer IE up... to be continued?"
+  },
+  {
+    id: 42,
+    uid: "moses-flexing-the-read-sea",
+    boxes: 1,
+    vertical: true,
+    title: "Moses Flexing the Red Sea",
+    ariaLabel: "Cartoon of a man (Moses) wearing a tunic and holding a stick between a body of water parted in two. He is saying '#red.sea { display: flex; justify-content: space-between; }'"
   }
 ]
