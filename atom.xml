@@ -785,7 +785,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Moses Flexing the Read Sea</title>
     <link href="https://comicss.art/?id=42" />
@@ -796,6 +795,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/42/moses-flexing-the-read-sea.png" alt="Cartoon of a man (Moses) wearing a tunic and holding a stick between a body of water parted in two. He is saying '#red.sea { display: flex; justify-content: space-between; }'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Pandora's Box Model</title>
+    <link href="https://comicss.art/?id=43" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/43/pandoras-box-model.html"/>
+    <id>https://comicss.art/?id=43</id>
+    <updated>2022-06-27T00:00:00Z</updated>
+    <summary>New cartoon: Pandora's Box Model</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/43/pandoras-box-model.png" alt="Comic with 4 panels. All of them showing a Greek woman with a tunic opening a box. The first one is titled Pandora's box and out of the box comes words like 'death', 'illness', 'pestilence'. The second panel is titled Pandora's box model and the words are 'margin', 'border', 'padding', and 'content'. The third panel is titled Pandora's box-shadow, the words coming out of the box are 'offset', 'blur', 'spread', and 'color', the panel has three shadows. The last panel is titled Pandora's CodeSandBox, out of the box there's the codesandbox logo (a three-dimensional cube)." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

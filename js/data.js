@@ -329,5 +329,12 @@ const posts = [
     vertical: true,
     title: "Moses Flexing the Red Sea",
     ariaLabel: "Cartoon of a man (Moses) wearing a tunic and holding a stick between a body of water parted in two. He is saying '#red.sea { display: flex; justify-content: space-between; }'"
+  },
+  {
+    id: 43,
+    uid: "pandoras-box-model",
+    boxes: 2,
+    title: "Pandora's Box Model",
+    ariaLabel: "Comic with 4 panels. All of them showing a Greek woman with a tunic opening a box. The first one is titled Pandora's box and out of the box comes words like 'death', 'illness', 'pestilence'. The second panel is titled Pandora's box model and the words are 'margin', 'border', 'padding', and 'content'. The third panel is titled Pandora's box-shadow, the words coming out of the box are 'offset', 'blur', 'spread', and 'color', the panel has three shadows. The last panel is titled Pandora's CodeSandBox, out of the box there's the codesandbox logo (a three-dimensional cube)."
   }
 ]
