@@ -360,6 +360,12 @@ h2 {
   transform: rotate(-80deg);
 }
 
+.text-5 {
+  --d: 3vmin;
+  top: 80%;
+  left: 40%;
+}
+
 .text-1 span {
   offset-path: path('M0,0 C30,50 100,-40 100,0');
 }
@@ -374,6 +380,10 @@ h2 {
 
 .text-4 span {
   offset-path: path('M0,0 C50,30 100,30 150,0');
+}
+
+.text-5 span {
+  offset-path: path('M0,0 C50,-30 100,30 80,0');
 }
 
 .text-lines {
@@ -476,7 +486,7 @@ h2 {
   --from: 0.25turn;
   --color: #ddd;
   width: var(--size);
-  aspect-ratio: 1;
+  aspect-ratio: 0.9;
   background: 
     conic-gradient(from var(--from), #000 0 25%, #0000 0),
     var(--color);
@@ -507,6 +517,65 @@ h2 {
   aspect-ratio: 1.08;
   transform-origin: 50% 0%;
   transform: skewX(48deg) translate(0%, -99%) ;
+}
+
+/* Flexbox */
+.flexbox .face {
+--mouth: 
+  radial-gradient(farthest-side at 50% 100%, var(--skin) 20%, #0000 0) 30% 84.5% / 150% 15% no-repeat,
+  radial-gradient(farthest-side at 50% 100%, #fff 20%, #0000 0) 0% 77% / 120% 40% no-repeat,
+  radial-gradient(200% 50% at 60% 65%, #f001, #f000 30%),
+  linear-gradient(#00f6, #00f0 50%)
+  ;
+  --eye-size: 5.25%;
+}
+
+.flexbox .text-1 { --d: 0vmin; }
+.flexbox .text-1 span:nth-child(6) { offset-distance: calc(var(--d) + 9.25vmin); }
+.flexbox .text-2 {
+  --d: 0pc;
+  top: 53%;
+  left: 58%;
+}
+.flexbox .text-2 span:nth-child(4) { offset-distance: calc(var(--d) + 7vmin); }
+.flexbox .text-4 span:nth-child(4) { offset-distance: calc(var(--d) + 6.5vmin); }
+.flexbox .text-4 span:nth-child(5) { offset-distance: calc(var(--d) + 8vmin); }
+
+.flexbox .text-6 { 
+  transform: rotate(-30deg);
+  top: 65%;
+  left: 58%;
+  white-space: pre;
+}
+
+.flexbox .text-7 {
+  top: 30%;
+  left: 65%;
+  transform: rotate(-95deg) perspective(50vmin) rotateY(20deg) rotateX(15deg);
+  white-space: pre;
+}
+
+.flexbox .text-8 {
+  transform: rotate(83deg);
+  top: 55%;
+  left: 86%;
+}
+
+.flexbox .text-9 {
+  transform: rotate(15deg);
+  top: 62%;
+  left: 55%;
+}
+.flexbox .drop {
+  width: 11%;
+  aspect-ratio: 1;
+  border-radius: 0 100% 100% 100%;
+  background: 
+    radial-gradient(circle at 40% 80%, white 13%, #0000 0),
+    #beeeef;
+  transform: rotate(50deg) skew(10deg);
+  top: 27%;
+  left: 25%;
 }
     </style>
   </head>
@@ -588,6 +657,33 @@ h2 {
         <div class="text-lines"></div>
         <div class="box"></div>
         <div class="logo"></div>
+      </section>
+      <section class="flexbox">
+        <h2>Pandora's FlexBox...</h2>
+        <div class="hair-back"></div>
+        <div class="arm"></div>
+        <div class="body"></div>
+        <div class="tunic"></div>
+        <div class="face">
+          <div class="eyebrow"></div>
+          <div class="eyebrow"></div>
+          <div class="nose"></div>
+          <div class="ear"></div>
+        </div>
+        <div class="box-glow"></div>
+        <div class="text-lines"></div>
+        <div class="text text-6">justify-content</div>
+        <div class="text text-8">flex-</div>
+        <div class="box"></div>
+        <div class="logo"></div>
+        <div class="text text-1"><span>s</span><span>h</span><span>r</span><span>i</span><span>n</span><span>k</span></div>
+        <div class="text text-2"><span>g</span><span>r</span><span>o</span><span>w</span></div>
+        <div class="text text-3"><span>b</span><span>a</span><span>s</span><span>i</span><span>s</span></div>
+        <div class="text text-4"><span>o</span><span>r</span><span>d</span><span>e</span><span>r</span></div>
+        <div class="text text-5"><span>w</span><span>r</span><span>a</span><span>p</span></div>
+        <div class="text text-7">align-items</div>
+        <div class="text text-9">gap</div>
+        <div class="drop"></div>
       </section>
     </article>
     <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
