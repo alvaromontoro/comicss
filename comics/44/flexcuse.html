@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  font-family: 'Comic Neue', Arial, sans-serif;
+}
+
+section {
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  margin: 1vmin;
+  width: 80vmin;
+  height: 40vmin;
+  position: relative;
+  overflow: hidden;
+}
+
+section *,
+section *::after,
+section *::before {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.table {
+  width: 70%;
+  height: 30%;
+  border: 0.5vmin solid;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 100% 0 0 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+
+.person {
+  --mouth: linear-gradient(#0000 0 0);
+  --head: 105% 100% 110% 95%;
+  width: 15%;
+  height: 70%;
+  background:
+    conic-gradient(at 50% -19%, #0000 170deg, #000 0 190deg, #0000 0) 50% 100% / 100% 66% no-repeat,
+    linear-gradient(90deg, #000 25%, #fff 0 75%, #000 0) 50% 50% / 10% 50% no-repeat;
+}
+
+.person::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 28%;
+  border: 0.4vmin solid;
+  border-radius: var(--head);
+  background:
+    var(--mouth),
+    radial-gradient(circle at 30% 50%, #000 0.5vmin, #0000 0),
+    radial-gradient(circle at 56% 50%, #000 0.5vmin, #0000 0),
+    white;
+}
+
+.person-1 {
+  right: 5%;
+  top: 30%;
+}
+
+.person-2 {
+  --head: 100% 105% 95% 105%;
+  transform: scaleX(-1);
+  left: 30%;
+  top: 45%;
+}
+
+.panel-1 .person-2 {
+  --mouth: radial-gradient(at 50% 0%, #000 30%, #0000 0) 40% 90% / 30% 20% no-repeat;
+}
+
+.panel-2 .person-1 {
+  --mouth: radial-gradient(at 50% 100%, #000 30%, #0000 0) 40% 80% / 30% 20% no-repeat;
+}
+
+.panel-2 .person-2 {
+  --mouth: linear-gradient(#0000 0 20%, #000 0 30%, #0000 0) 40% 120% / 10% 50% no-repeat
+}
+
+.poster {
+  top: 30%;
+  left: 2%;
+  transform: skewY(-10deg);
+  width: 30%;
+  height: 40%;
+  border: 0.5vmin solid;
+  background: 
+    radial-gradient(circle at 45% 70%, #000 0.5vmin, #fff 0 0.675vmin, #0000 0),
+    radial-gradient(circle at 55% 70%, #000 0.5vmin, #fff 0 0.675vmin, #0000 0),
+    radial-gradient(circle at 52% 100%, #000 80%, #fff 0 0.675vmin, #0000 0) 50% 68% / 30% 10% no-repeat,
+    radial-gradient(circle at 54% 100%, #000 80%, #fff 0 0.675vmin, #0000 0) 50% 63% / 15% 15% no-repeat
+}
+
+.poster::before,
+.poster::after {
+  content: "";
+  width: 20%;
+  height: 50%;
+  border: 0.35vmin solid;
+  top: 25%;
+  right: 5%;
+  background: repeating-linear-gradient(#0000 0 10%, #000 0 11%),
+    repeating-linear-gradient(90deg, #0000 0 23%, #000 0 26%)
+}
+
+.poster::after {
+  left: 5%;
+}
+
+.bubble {
+  font-size: 2vmin;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  padding: 5vmin 4vmin 2vmin 4vmin;
+  text-align: center;
+  background: white;
+  width: 97%;
+  top: -5vmin;
+  line-height: 2.4vmin;
+}
+
+.bubble::before {
+  content: "";
+  border: 0.4vmin solid;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0 0 100% 0;
+  width: 10%;
+  height: 30%;
+  top: 99%;
+  left: 50%;
+}
+
+.panel-2 .bubble {
+  width: 60%;
+  left: 30%;
+}
+
+.panel-2 .bubble::before {
+  border: 0.4vmin solid;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0 0 0 100% ;
+  left: 70%;
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Comic strip with two panels showing two characters talking. In the first panel, a character is in front of a poster showing two buildings and a car in between, ane explains in a complex way using CSS Flexbox that the car cannot reach one of the buildings because the building has a margin. In the second panel, the other person replies with something in the line of 'why not just say you were late due to traffic?'">
+      <section class="panel panel-1">
+        <div class="poster"></div>
+        <div class="person person-1"></div>
+        <div class="person person-2"></div>
+        <div class="table"></div>
+        <div class="bubble">As you may have noticed, the building has a margin (aka sidewalk) around it, there is no value for justify-content that will effectively make the elements touch each other. Making it impossible for the car to actually reach the building. Same principle applies to Grid or Flexbox. If it was a padding, then it would be different... but as it is a margin, they won't touch.</div>
+      </section>
+      <section class="panel panel-2">
+        <div class="poster"></div>
+        <div class="person person-1"></div>
+        <div class="person person-2"></div>
+        <div class="table"></div>
+        <div class="bubble">That sounds great, but why not just say you were late because of bad traffic... you know, like the rest of us?</div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

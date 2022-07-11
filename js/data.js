@@ -336,5 +336,13 @@ const posts = [
     boxes: 2,
     title: "Pandora's Box Model",
     ariaLabel: "Comic with 4 panels. All of them showing a Greek woman with a tunic opening a box. The first one is titled Pandora's box and out of the box comes words like 'death', 'illness', 'pestilence'. The second panel is titled Pandora's box model and the words are 'margin', 'border', 'padding', and 'content'. The third panel is titled Pandora's box-shadow, the words coming out of the box are 'offset', 'blur', 'spread', and 'color', the panel has three shadows. The last panel is titled Pandora's CodeSandBox, out of the box there's the codesandbox logo (a three-dimensional cube)."
+  },
+  {
+    id: 44,
+    uid: "flexcuse",
+    boxes: 2,
+    vertical: true,
+    title: "Flexcuses",
+    ariaLabel: "Comic strip with two panels showing two characters talking. In the first panel, a character is in front of a poster showing two buildings and a car in between, ane explains in a complex way using CSS Flexbox that the car cannot reach one of the buildings because the building has a margin. In the second panel, the other person replies with something in the line of 'why not just say you were late due to traffic?'"
   }
 ]
