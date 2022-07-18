@@ -344,5 +344,13 @@ const posts = [
     vertical: true,
     title: "Flexcuses",
     ariaLabel: "Comic strip with two panels showing two characters talking. In the first panel, a character is in front of a poster showing two buildings and a car in between, ane explains in a complex way using CSS Flexbox that the car cannot reach one of the buildings because the building has a margin. In the second panel, the other person replies with something in the line of 'why not just say you were late due to traffic?'"
+  },
+  {
+    id: 45,
+    uid: "nightmare",
+    boxes: 5,
+    vertical: true,
+    title: "Nightmare",
+    ariaLabel: "Comic strip showing two characters talking. One says 'great news! we got a new project supporting IE11!'. the other character replies 'that is gr... wait... what?!' and its face goes more and more concerned."
   }
 ]

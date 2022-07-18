@@ -823,7 +823,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Flexcuses</title>
     <link href="https://comicss.art/?id=44" />
@@ -834,6 +833,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/44/flexcuse.png" alt="Comic strip with two panels showing two characters talking. In the first panel, a character is in front of a poster showing two buildings and a car in between, ane explains in a complex way using CSS Flexbox that the car cannot reach one of the buildings because the building has a margin. In the second panel, the other person replies with something in the line of 'why not just say you were late due to traffic?'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Nightmare</title>
+    <link href="https://comicss.art/?id=45" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/45/nightmare.html"/>
+    <id>https://comicss.art/?id=45</id>
+    <updated>2022-07-18T00:00:00Z</updated>
+    <summary>New cartoon: Nightmare</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/45/nightmare.png" alt="Comic strip showing two characters talking. One says 'great news! we got a new project supporting IE11!'. the other character replies 'that is gr... wait... what?!' and its face goes more and more concerned." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
