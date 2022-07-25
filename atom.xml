@@ -842,7 +842,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Nightmare</title>
     <link href="https://comicss.art/?id=45" />
@@ -853,6 +852,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/45/nightmare.png" alt="Comic strip showing two characters talking. One says 'great news! we got a new project supporting IE11!'. the other character replies 'that is gr... wait... what?!' and its face goes more and more concerned." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Black Coffee</title>
+    <link href="https://comicss.art/?id=46" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/46/black-coffee.html"/>
+    <id>https://comicss.art/?id=46</id>
+    <updated>2022-07-25T00:00:00Z</updated>
+    <summary>New cartoon: Black Coffee</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/46/black-coffee.png" alt="cartoon showing a man asking a barista 'I'll take a #000 coffee'" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

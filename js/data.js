@@ -352,5 +352,13 @@ const posts = [
     vertical: true,
     title: "Nightmare",
     ariaLabel: "Comic strip showing two characters talking. One says 'great news! we got a new project supporting IE11!'. the other character replies 'that is gr... wait... what?!' and its face goes more and more concerned."
+  },
+  {
+    id: 46,
+    uid: "black-coffee",
+    boxes: 1,
+    vertical: true,
+    title: "Black Coffee",
+    ariaLabel: "cartoon showing a man asking a barista 'I'll take a #000 coffee'"
   }
 ]
