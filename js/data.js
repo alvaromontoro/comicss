@@ -360,5 +360,13 @@ const posts = [
     vertical: true,
     title: "Black Coffee",
     ariaLabel: "cartoon showing a man asking a barista 'I'll take a #000 coffee'"
+  },
+  {
+    id: 47,
+    uid: "css-angry-wojak",
+    boxes: 1,
+    vertical: true,
+    title: "CSS Angry NPC Wojak",
+    ariaLabel: "Poor version of the Angry Wojak meme showing 4 panels with two people talking. The first panel shows a person saying 'You cannot create memes in CSS'. The second panel has the other person replying 'Of course you can!' The third and fourth panels show the first person, first normal (without saying anything) and then with an angry look."
   }
 ]

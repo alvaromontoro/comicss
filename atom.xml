@@ -861,7 +861,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Black Coffee</title>
     <link href="https://comicss.art/?id=46" />
@@ -872,6 +871,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/46/black-coffee.png" alt="cartoon showing a man asking a barista 'I'll take a #000 coffee'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>CSS Angry NPC Wojak</title>
+    <link href="https://comicss.art/?id=47" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/47/css-angry-wojak.html"/>
+    <id>https://comicss.art/?id=47</id>
+    <updated>2022-08-01T00:00:00Z</updated>
+    <summary>New cartoon: CSS Angry NPC Wojak</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/47/css-angry-wojak.png" alt="Poor version of the Angry Wojak meme showing 4 panels with two people talking. The first panel shows a person saying 'You cannot create memes in CSS'. The second panel has the other person replying 'Of course you can!' The third and fourth panels show the first person, first normal (without saying anything) and then with an angry look." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
