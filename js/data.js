@@ -303,6 +303,7 @@ const posts = [
     id: 39,
     uid: "not-important",
     boxes: 3,
+    vertical: true,
     title: "Not Important",
     ariaLabel: "Cartoon with three panels. The first two show a white man in front of a computer with the text: 'A back-end software developer merrily working on a front-end project with HTML and CSS, getting confused af because the color of the text is not correct. Even when he clearly specified that the text color should be blue, because the orange value is not important' Followed by some CSS code where a paragraph has the style color: orange !important;"
   },
@@ -368,5 +369,13 @@ const posts = [
     vertical: true,
     title: "CSS Angry NPC Wojak",
     ariaLabel: "Poor version of the Angry Wojak meme showing 4 panels with two people talking. The first panel shows a person saying 'You cannot create memes in CSS'. The second panel has the other person replying 'Of course you can!' The third and fourth panels show the first person, first normal (without saying anything) and then with an angry look."
+  },
+  {
+    id: 48,
+    uid: "oop",
+    boxes: 7,
+    vertical: true,
+    title: "CSS OOP",
+    ariaLabel: "Modified version of the Angry Wojak meme showing 4 panels with two people talking. The first panel shows a person saying 'CSS is not a programming language'. The second panel has the other person replying 'Of course it is! What are the main concepts of OOP?' Then proceeds to 'explain' how CSS 'has' encapsulation, inheritance, abstraction, and polymorphism, so it should be considered an object-oriented programming language.The last two panels show the first person, first normal (without saying anything) and then with an angry look."
   }
 ]
