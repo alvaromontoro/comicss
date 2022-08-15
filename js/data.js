@@ -377,5 +377,12 @@ const posts = [
     vertical: true,
     title: "CSS OOP",
     ariaLabel: "Modified version of the Angry Wojak meme showing 4 panels with two people talking. The first panel shows a person saying 'CSS is not a programming language'. The second panel has the other person replying 'Of course it is! What are the main concepts of OOP?' Then proceeds to 'explain' how CSS 'has' encapsulation, inheritance, abstraction, and polymorphism, so it should be considered an object-oriented programming language.The last two panels show the first person, first normal (without saying anything) and then with an angry look."
+  },
+  {
+    id: 49,
+    uid: "js-hulk",
+    boxes: 5,
+    title: "JS Hulk",
+    ariaLabel: "A man turns into the hulk (a big green version of himself) after getting angry because someone suggested he used CSS for doing animations instead of JavaScript."
   }
 ]

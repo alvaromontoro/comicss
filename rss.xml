@@ -486,5 +486,15 @@
       <enclosure url="https://comicss.art/comics/48/oop.png" length="408000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=49</guid>
+      <title>JS Hulk</title>
+      <link>https://comicss.art/?id=49</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/49/js-hulk.png" length="477000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

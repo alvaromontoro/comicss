@@ -899,7 +899,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>CSS OOP</title>
     <link href="https://comicss.art/?id=48" />
@@ -910,6 +909,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/48/oop.png" alt="Modified version of the Angry Wojak meme showing 4 panels with two people talking. The first panel shows a person saying 'CSS is not a programming language'. The second panel has the other person replying 'Of course it is! What are the main concepts of OOP?' Then proceeds to 'explain' how CSS 'has' encapsulation, inheritance, abstraction, and polymorphism, so it should be considered an object-oriented programming language.The last two panels show the first person, first normal (without saying anything) and then with an angry look." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>JS Hulk</title>
+    <link href="https://comicss.art/?id=49" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/49/js-hulk.html"/>
+    <id>https://comicss.art/?id=49</id>
+    <updated>2022-08-15T00:00:00Z</updated>
+    <summary>New cartoon: JS Hulk</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/49/js-hulk.png" alt="A man turns into the hulk (a big green version of himself) after getting angry because someone suggested he used CSS for doing animations instead of JavaScript." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
