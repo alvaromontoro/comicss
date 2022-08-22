@@ -918,7 +918,6 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>JS Hulk</title>
     <link href="https://comicss.art/?id=49" />
@@ -929,6 +928,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/49/js-hulk.png" alt="A man turns into the hulk (a big green version of himself) after getting angry because someone suggested he used CSS for doing animations instead of JavaScript." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Wedding Invitation</title>
+    <link href="https://comicss.art/?id=50" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/50/wedding-invitation.html"/>
+    <id>https://comicss.art/?id=50</id>
+    <updated>2022-08-22T00:00:00Z</updated>
+    <summary>New cartoon: Wedding Invitation</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/50/wedding-invitation.png" alt="artoon with multiple panels showing Robin and Batman fighting over Batman being a penny pincher and writing #000 Canary instead of Black Canary in some wedding invitations in order to save money." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

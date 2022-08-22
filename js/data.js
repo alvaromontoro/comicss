@@ -384,5 +384,13 @@ const posts = [
     boxes: 5,
     title: "JS Hulk",
     ariaLabel: "A man turns into the hulk (a big green version of himself) after getting angry because someone suggested he used CSS for doing animations instead of JavaScript."
+  },
+  {
+    id: 50,
+    uid: "wedding-invitation",
+    horizontal: true,
+    boxes: 14,
+    title: "Wedding Invitation",
+    ariaLabel: "Cartoon with multiple panels showing Robin and Batman fighting over Batman being a penny pincher and writing #000 Canary instead of Black Canary in some wedding invitations in order to save money."
   }
 ]
