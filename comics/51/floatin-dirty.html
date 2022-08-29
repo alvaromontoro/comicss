@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+article {
+  --bg: #cda8c9;
+  --bg-light: #fff5ff;
+  --water: #aae0e8;
+  --shadow: #b190ae;
+  font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  display: flex;
+  gap: 1vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section {
+  position: relative;
+  width: 45vmin;
+  aspect-ratio: 1;
+  border: 0.5vmin solid;
+  background: var(--bg);
+}
+
+section * {
+  position: absolute;
+}
+
+.fishbowl {
+  --water-line: 
+    radial-gradient(100% 100% at 50% 0%, var(--bg-light) 76%, #000 80% 95.9%, var(--water) 99.9%) 50% 23% / 27% 5%,
+    radial-gradient(100% 100% at 50% 100%, var(--water) 76%, #000 80% 95.9%, var(--bg-light) 99.9%) 85.75% 25.25% / 26% 5%,
+    radial-gradient(100% 100% at 50% 100%, var(--water) 76%, #000 80% 95.9%, var(--bg-light) 99.9%) 14.25% 25.25% / 26% 5%;
+  width: 68%;
+  aspect-ratio: 7 / 6;
+  top: 42.5%;
+  left: 50%;
+  padding: 10%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  border-radius: 100% / 20% 20% 0 0;
+  background:
+    /* light */
+    radial-gradient(circle at 24% 25%, #fff7 8%, #0000 0),
+    radial-gradient(circle at 14% 36%, #fff7 5%, #0000 0),
+/*     radial-gradient(150% 350% at 180% 180%, #0000 75%, #fff5 0 80%, #0000 0 90%, #fff5 0 120%, #0000 0) 14% 24% / 25% 20%, */
+    
+    /* water-line */
+    var(--water-line),
+    
+    /* horizontal lines */
+    radial-gradient(100% 95% at 50% 100%, #0000 95.5%, #000 96.5% 99.9%) 50% 0 / 67% 18%,
+    linear-gradient(#000 0 0) 50% 95% / 63% 1.25%,
+    linear-gradient(#000 0 0) 50% 25% / 79% 1.25%,
+    linear-gradient(to top, #000 25%, var(--bg-light) 0) 50% 100% / 63% 6%,
+    /* bowl surface*/
+    conic-gradient(at 50% -200%, #0000 147deg, var(--bg-light) 0 213deg, #0000 0) 50% 0 / 100% 25%,
+    radial-gradient(50% 130% at 50% 0%, #0000 90%, #000 90.5% 92%, var(--bg-light) 92.5% 97%, #000 97.5% 99.5%, #0000 99.9%) 50% 100% / 100% 40%,
+    radial-gradient(50% 130% at 50% 100%, var(--water) 90%, #000 90.5% 92%, var(--bg-light) 92.5% 97%, #000 97.5% 99.5%, #0000 99.9%) 50% 0% / 100% 60%,
+    /* decoration */
+    radial-gradient(100% 80% at 30% 95%, gray 7%, #000 7.25% 8%, #0000 8.25%),
+    radial-gradient(100% 100% at 50% 95%, gray 7%, #000 7.25% 8%, #0000 8.25%),
+    radial-gradient(80% 90% at 40% 95%, gray 7%, #000 7.25% 8%, #0000 8.25%),
+    radial-gradient(100% 80% at 63% 95%, gray 7%, #000 7.25% 8%, #0000 8.25%),
+    radial-gradient(90% 95% at 76% 95%, gray 7%, #000 7.25% 8%, #0000 8.25%),
+    radial-gradient(70% 85% at 23% 96%, gray 7%, #000 7.25% 8%, #0000 8.25%),
+    linear-gradient(#000 0 0) 25% 90% / 0.75% 6%,
+    linear-gradient(#000 0 0) 29% 90% / 0.75% 10%,
+    radial-gradient(40% 160% at 25% 90%, green 7%, #000 7.35% 8%, #0000 8.35%),
+    radial-gradient(40% 200% at 29% 90%, darkgreen 7%, #000 7.35% 8%, #0000 8.35%),
+    /* background bottom water */
+    radial-gradient(50% 130% at 50% 0%, var(--water) 99%, #0000 0) 50% 100% / 100% 41%,
+    #fff0;
+  background-repeat: no-repeat;
+}
+
+.fishbowl::before,
+.fishbowl::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  background: #0002;
+  width: 80%;
+  height: 5%;
+  border-radius: 100vmin;
+/*   box-shadow: -0.5vmin 0 var(--bg), -1.25vmin 0 var(--shadow) */
+}
+
+.fishbowl::after {
+  width: 70%;
+  background: var(--shadow);
+  transform: translate(-50%, 25%);
+  box-shadow: none;
+/*   box-shadow: -0.25vmin 0 var(--bg), -1vmin 0 var(--shadow) */
+}
+
+.text {
+  margin: 0;
+  top: 80%;
+  font-size: 3.75vmin;
+  width: 100%;
+  text-align: center;
+}
+
+.fish {
+  --spot: radial-gradient(100% 100% at 100% 10%, white 20%,  #0000 0);
+  --angle: 200deg;
+  width: 28%;
+  height: 32%;
+  border: 0.33vmin solid;
+  position: relative;
+  top: 40%;
+  box-sizing: border-box;
+  border-radius:100% 100% 100% 30%;
+  transform: rotate(35deg) skew(-20deg);
+  float: right;
+  background: 
+    /* eyes */
+    radial-gradient(50% 55% at 60% 50%, #000 10%, #0000 0),
+    radial-gradient(50% 55% at 75% 35%, #000 10%, #0000 0),
+    /* colors */
+    radial-gradient(200% 100% at -10% 10%, white 30%, #0000 0),
+    var(--spot),
+    radial-gradient(100% 55% at 75% 105%, darkorange 40%, #0000 0),
+    orange;
+}
+
+.fish::before,
+.fish::after {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  border: 0.35vmin solid;
+  border-radius: 100% 20%;
+  background: white;
+  bottom: 0.25vmin;
+  left: 0.25vmin;
+  transform-origin: 0 100%;
+  transform: rotate(160deg)
+}
+
+.fish::before {
+  transform: rotate(var(--angle))
+}
+
+section:nth-child(2) .fishbowl {
+  --water-line: 
+    radial-gradient(100% 100% at 50% 100%, var(--water) 76%, #000 80% 95.9%, var(--bg-light) 99.9%) 50% 25.5% / 27% 5%,
+    radial-gradient(100% 100% at 50% 0%, var(--bg-light) 76%, #000 80% 95.9%, var(--water) 99.9%) 85.75% 23.25% / 26% 5%,
+    radial-gradient(100% 100% at 50% 0%, var(--bg-light) 76%, #000 80% 95.9%, var(--water) 99.9%) 14.25% 23.25% / 26% 5%;
+}
+
+section:nth-child(2) .fish {
+  --spot: radial-gradient(100% 100% at 40% 70%, white 10%,  #0000 0);
+  --angle: 210deg;
+  float: left;
+  transform: scaleX(-1) rotate(35deg) skew(-20deg)
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <div class="fishbowl">
+          <div class="fish"></div>
+        </div>
+        <p class="text">They see me floatin'</p>
+      </section>
+      <section>
+        <div class="fishbowl">
+          <div class="fish"></div>
+        </div>
+        <p class="text">They hatin'</p>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>
