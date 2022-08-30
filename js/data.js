@@ -399,5 +399,12 @@ const posts = [
     boxes: 2,
     title: "Floatin' Dirty",
     ariaLabel: "Cartoon with two panels showing a fish in a fishbowl with the captions: They see me floatin' They Hatin'"
+  },
+  {
+    id: 52,
+    uid: "clear-both",
+    boxes: 4,
+    title: "Clear Both",
+    ariaLabel: "Cartoon with four panels showing two fish swimming"
   }
 ]
