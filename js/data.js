@@ -405,6 +405,6 @@ const posts = [
     uid: "clear-both",
     boxes: 4,
     title: "Clear Both",
-    ariaLabel: "Cartoon with four panels showing two fish swimming"
+    ariaLabel: "Cartoon with 4 panels showing two fish swimming at the same level. One complains that the fishbowl is too small for both of them. The other one replies that it has a solution: clear:both! And now they are at different levels."
   }
 ]
