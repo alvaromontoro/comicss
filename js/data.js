@@ -406,5 +406,13 @@ const posts = [
     boxes: 4,
     title: "Clear Both",
     ariaLabel: "Cartoon with 4 panels showing two fish swimming at the same level. One complains that the fishbowl is too small for both of them. The other one replies that it has a solution: clear:both! And now they are at different levels."
+  },
+  {
+    id: 53,
+    uid: "anchor",
+    boxes: 1,
+    vertical: true,
+    title: "Anchor",
+    ariaLabel: "Why did the web developer struggle to style the link? Because anchors don't float"
   }
 ]

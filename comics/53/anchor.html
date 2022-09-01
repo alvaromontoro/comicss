@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+@layer layout;
+@layer comic;
+
+@layer layout {
+  article {
+    position: absolute;
+    width: 90em;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1em solid;
+    font: 600 1vmin 'Amatic SC', Helvetica, Arial, sans-serif;
+  }
+  
+  article *,
+  article *::before,
+  article *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  p {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 6.66em;
+  }
+}
+
+@layer comic {
+  article {
+    background: 
+      radial-gradient(circle at 30% 30%, #fff4 3%, #0000 3.1%),
+      radial-gradient(circle at 28% 35.5%, #fff4 2%, #0000 2.1%),
+      radial-gradient(circle at 27.5% 24%, #fff4 2.5%, #0000 2.6%),
+      #8ececf;
+  }
+  
+  p:first-child {
+    top: 7%;
+  }
+  
+  p:last-child {
+    bottom: 7%;
+  }
+  
+  div[role] {
+    width: 60%;
+    height: 55%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+  
+  .anchor {
+    --bg: #8f9faa;
+    height: 100%;
+    aspect-ratio: 1;
+    left: 55%;
+    top: 0;
+    transform: translate(-50%, 0);
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    display: grid;
+    place-items: center;
+    font-size: 4em;
+    font-family: courier, 'courier new', monospace, monospace;
+    padding-top: 2em;
+    color: #0004;
+    line-height: 0;
+    background:
+      radial-gradient(circle at 50% 14%, #0000 5%, var(--bg) 5.1% 13.9%, #0000 14%),
+      linear-gradient(var(--bg) 0 0) 50% 75% / 11% 70% no-repeat,
+      radial-gradient(farthest-side at 50% 0%, #0000 72%, var(--bg) 72.5% 99.4%, #0000 99.9%) 50% 100% / 80% 35% no-repeat;
+    transform:  translate(-50%, 0) rotate(15deg);
+  }
+  
+  .anchor::before,
+  .anchor::after {
+    --pos: 20%;
+    content: "";
+    width: 20%;
+    aspect-ratio: 1;
+    background: var(--bg);
+    border-radius: 100% 20% 10% 20%;
+    top: 47%;
+    right: var(--pos);
+    transform: translateX(50%);
+  }
+  
+  .anchor::after {
+    left: var(--pos);
+    transform: scaleX(-1) translateX(50%);
+  }
+  
+  .floor {
+    --ground: #8a6152;
+    height: 3.5em;
+    width: 80%;
+    background: var(--ground);
+    bottom: 0;
+    left: 48%;
+    transform: translateX(-50%);
+    border-radius: 3.5vmin;
+  }
+  
+  .floor::before {
+    content: "";
+    height: 100%;
+    aspect-ratio: 1;
+    background: var(--ground);
+    border-radius: 3.5em;
+    transform: translateX(-120%);
+  }
+  
+  .floor::after {
+    content: "";
+    height: 100%;
+    width: 13%;
+    background: var(--ground);
+    border-radius: 3.5em;
+    right: 0;
+    transform: translateX(110%);
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <p>Why did the dev struggle to style a link?</p>
+      <div role="img" aria-image="drawing of an anchor at the bottom of the sea">
+        <div class="anchor">&lt;a&gt;nchor</div>
+        <div class="floor"></div>
+      </div>
+      <p>Because anchors don't float</p>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>
