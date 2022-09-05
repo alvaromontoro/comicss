@@ -414,5 +414,13 @@ const posts = [
     vertical: true,
     title: "Anchor",
     ariaLabel: "Why did the web developer struggle to style the link? Because anchors don't float"
+  },
+  {
+    id: 54,
+    uid: "interwebs",
+    boxes: 1,
+    vertical: true,
+    title: "Interwebs",
+    ariaLabel: "Cartoon with a group of spiders hanging from a spider web. The ones at the extremes move like in a Newton's cradle, and one in the middle says 'To be honest, I dont know what people find so great about the interwebs.'"
   }
 ]
