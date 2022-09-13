@@ -1013,17 +1013,36 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
-
   <entry>
     <title>Interwebs</title>
     <link href="https://comicss.art/?id=54" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/54/interwebs.html"/>
     <id>https://comicss.art/?id=54</id>
-    <updated>2022-09-06T00:00:00Z</updated>
+    <updated>2022-09-05T00:00:00Z</updated>
     <summary>New cartoon: Interwebs</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/54/interwebs.png" alt="Cartoon with a group of spiders hanging from a spider web. The ones at the extremes move like in a Newton's cradle, and one in the middle says 'To be honest, I dont know what people find so great about the interwebs.'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Yellow Snow</title>
+    <link href="https://comicss.art/?id=55" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/55/yellow-snow.html"/>
+    <id>https://comicss.art/?id=55</id>
+    <updated>2022-09-12T00:00:00Z</updated>
+    <summary>New cartoon: Yellow Snow</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/55/yellow-snow.png" alt="Cartoon of a yeti saying 'Trust an expert: never eat #ff0 snow!'" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

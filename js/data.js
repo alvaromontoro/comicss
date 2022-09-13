@@ -423,5 +423,13 @@ const posts = [
     vertical: true,
     title: "Interwebs",
     ariaLabel: "Cartoon with a group of spiders hanging from a spider web. The ones at the extremes move like in a Newton's cradle, and one in the middle says 'To be honest, I dont know what people find so great about the interwebs.'"
+  },
+  {
+    id: 55,
+    uid: "yellow-snow",
+    boxes: 1,
+    vertical: true,
+    title: "Yellow Snow",
+    ariaLabel: "Cartoon of a yeti saying 'Trust an expert: never eat #ff0 snow!'"
   }
 ]

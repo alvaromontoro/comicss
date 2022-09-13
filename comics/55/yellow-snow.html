@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+article {
+  width: 80vmin;
+  aspect-ratio: 3 / 2;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Arial, sans-serif;
+  background: linear-gradient(#c9c8, #c9c0);
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: content-box;
+}
+
+/* Firefox needs this */
+br {
+  position: relative;
+}
+
+.bubble {
+  border: 0.4vmin solid;
+  border-radius: 50%;
+  top: 0;
+  right: -6vmin;
+  transform: translate(0, -5.5vmin);
+  padding: 6vmin 8vmin 2vmin 4vmin;
+  text-align: center;
+  font-size: 3vmin;
+  background: #ff0;
+}
+
+.bubble::before {
+  content: "";
+  width: 20%;
+  height: 40%;
+  border-radius: 0 0 100% 0;
+  box-shadow: inset -0.5vmin 0;
+  top: 100.5%;
+  left: 50%;
+  transform: translateX(-100%);
+}
+
+.yeti {
+  --blue: #ace;
+  width: 80%;
+  height: 90%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.face {
+  width: 66%;
+  height: 66%;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    /* hair */
+    radial-gradient(at 25% -10%, #fff 20%, #0000 20.2%),
+    radial-gradient(100% 100% at 82% 0%, #fff 30%, #0000 30.2%),
+    radial-gradient(at 26% -8.5%, #000 20%, #0000 20.2%),
+    radial-gradient(95% 100% at 80% 0%, #000 30.5%, #0000 30.7%),
+    /* nose */
+    linear-gradient(var(--blue) 0 0) 50% 57.5% / 4% 10% no-repeat,
+    radial-gradient(circle at 50% 92%, #000 2%, #0000 2.2% 8%, #000 8.2% 10%, #0000 10.2%) 43% 16% / 50% 50% no-repeat,
+    radial-gradient(circle at 50% 92%, #000 2%, #0000 2.2% 8%, #000 8.2% 10%, #0000 10.2%) 57% 16% / 50% 50% no-repeat,
+    /* eyes */
+    radial-gradient(circle at 36% 39%, #fffe 1.25%, #0000 1.5%),
+    radial-gradient(circle at 62% 39%, #fffe 1.25%, #0000 1.5%),
+    radial-gradient(circle at 37% 40%, #000 4%, #0000 4.2%),
+    radial-gradient(circle at 63% 40%, #000 4%, #0000 4.2%),
+    /* cheeks */
+    radial-gradient(30% 20% at 32% 46%, #f002 21%, #0000 21.2%),
+    radial-gradient(30% 20% at 68% 46%, #f002 21%, #0000 21.2%),
+    /* side cheeks */
+    radial-gradient(100% 110% at 30% 65%, var(--blue) 21%, #0000 21.2%),
+    radial-gradient(100% 110% at 70% 65%, var(--blue) 21%, #0000 21.2%),
+    /* face */
+    radial-gradient(100% 150% at 50% 50%, var(--blue) 31%, #0000 31.2%),
+    /* lines */
+    radial-gradient(100% 110% at 30% 65.2%, #000 22%, #0000 22.2%),
+    radial-gradient(100% 110% at 70% 65.5%, #000 22%, #0000 22.2%),
+    radial-gradient(100% 150% at 50% 50.125%, #000 32%, #0000 32.2%)
+/*    ,
+     radial-gradient(100% 110% at 30% 65.2%, #fff 22%, #0000 22.2%),
+    radial-gradient(100% 110% at 70% 65.5%, #fff 22%, #0000 22.2%),
+    radial-gradient(100% 150% at 50% 50.125%, #fff 32%, #0000 32.2%) */
+    ;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  clip-path: polygon(0 25%, 50% 1%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.face::before {
+  content: "";
+  width: 15%;
+  height: 25%;
+  border-radius: 0 0 100% 0;
+  box-shadow: 
+    0.4vmin 0,
+    2.5vmin -0.5vmin #fff,
+    3vmin -0.5vmin,
+    2.5vmin -0.5vmin 0 0.25vmin
+    ;
+  clip-path: polygon(0 0%, 200% 0%, 200% 150%, 50% 150%);
+  left: 30%;
+  top: -1%;
+}
+
+.upper-lip {
+  width: 50%;
+  height: 10%;
+  background: var(--blue);
+  border-radius: 50% / 80% 90% 100% 100%;
+  border: 0.4vmin solid;
+  border-top-color: #0000;
+  border-bottom: 0.55vmin solid;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(4deg);
+}
+
+.upper-lip::before,
+.upper-lip::after {
+  content: "";
+  width: 7%;
+  aspect-ratio: 1;
+  border: 0.3vmin solid #0000;
+  border-top: 0.4vmin solid;
+  border-left-color: #000;
+  border-radius: 50%;
+  transform: rotate(65deg);
+  left: -5%;
+  top: 5%;
+}
+
+.upper-lip::after { 
+  width: 6.5%;
+  left: auto;
+  right: -5%;
+  transform: rotate(14deg);
+}
+
+.mouth {
+  width: 39%;
+  height: 18%;
+  border: 0.4vmin solid;
+  border-bottom: 0.5vmin solid;
+  border-radius: 50% / 0 0 100% 100%;
+  transform: translateX(-50%) rotate(5deg) skew(-15deg);
+  top: 68%;
+  left: 49%;
+  background:
+    radial-gradient(at 30% 120%, #624 40%, #000 0 43%, #0000 0),
+    #246;
+  overflow: hidden;
+}
+
+.mouth::before,
+.mouth::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  border: 0.4vmin solid;
+  border-radius: 20%;
+  transform: rotate(-65deg);
+  top: 55%;
+  left: 72%;
+  background: #edb;
+}
+
+.mouth::after {
+  top: -45%;
+  left: 2%;
+  transform: rotate(-55deg);
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(100% 110% at 38% 50%, var(--blue) 21%, #0000 21.2%),
+    radial-gradient(100% 110% at 62% 50%, var(--blue) 21%, #0000 21.2%),
+    radial-gradient(100% 110% at 38% 50%, #000 21.7%, #0000 21.9%),
+    radial-gradient(100% 110% at 62% 49.85%, #000 21.7%, #0000 21.9%),
+    #fff;
+  border-radius: 100% / 120% 120% 60% 60%;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.4vmin solid;
+  border-top: 0.5vmin solid;
+}
+
+.body::before {
+  content: "";
+  border: 0.4vmin solid;
+  border-top: 0.5vmin solid;
+  border-bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 70%;
+  height: 85%;
+  border-radius: 50% / 100% 105% 0% 0%;
+  background: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
+
+.hair-front {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(farthest-side at 0 100%, #fff 99.9%, #0000 0) 59.5% 2.75% / 18% 6.25%,
+    radial-gradient(farthest-side at 100% 100%, #fff 99.9%, #0000 0) 26.75% 17% / 7% 16%,
+    conic-gradient(at 50% 0, #0000 120deg, #fff 0 190deg, #0000 0) 46.5% 1.25% / 5% 5%,
+    conic-gradient(at 50% 0, #0000 180deg, #fff 0 240deg, #0000 0) 49.25% 1% / 5% 5%,
+    conic-gradient(at 0 50%, #0000 62deg, #fff 0 80deg, #0000 0) 32% 10.25% / 10% 10%,
+    conic-gradient(at 0 50%, #0000 59.5deg, #fff 0 84deg, #0000 0) 23.5% 26% / 10% 10%,
+    conic-gradient(at 0 100%, #0000 32deg, #fff 0 50deg, #0000 0) 22% 30% / 10% 10%,
+    conic-gradient(at 0 100%, #0000 16deg, #fff 0 36deg, #0000 0) 16% 66% / 10% 10%,
+    conic-gradient(at 100% 100%, #0000 316deg, #fff 0 336deg, #0000 0) 82.125% 49% / 15% 15%,
+    conic-gradient(at 100% 100%, #0000 305deg, #fff 0 325.5deg, #0000 0) 77.75% 27% / 15% 15%,
+    conic-gradient(at 100% 80%, #0000 290deg, #fff 0 310deg, #0000 0) 73% 16.5% / 18% 18%,
+    conic-gradient(at 100% 70%, #0000 270deg, #fff 0 305.5deg, #0000 0) 74.5% 14.5% / 15% 15%,
+    #f000
+    ;
+  background-repeat: no-repeat;
+}
+
+.hair-back {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(farthest-side at 0 100%, #000 99.9%, #0000 0) 60% 1.5% / 20% 8%,
+    radial-gradient(farthest-side at 100% 100%, #000 99.9%, #0000 0) 26% 16.75% / 7% 16%,
+    conic-gradient(at 50% 0, #0000 120deg, #000 0 190deg, #0000 0) 46% 0 / 5% 5%,
+    conic-gradient(at 50% 0, #0000 170deg, #000 0 240deg, #0000 0) 49.5% 0 / 5% 5%,
+    conic-gradient(at 0 50%, #0000 59.5deg, #000 0 84deg, #0000 0) 30.5% 10.75% / 10% 10%,
+    conic-gradient(at 0 50%, #0000 59.5deg, #000 0 84deg, #0000 0) 21% 27% / 10% 10%,
+    conic-gradient(at 0 100%, #0000 32deg, #000 0 50deg, #0000 0) 20.25% 30.5% / 15% 15%,
+    conic-gradient(at 0 100%, #0000 16deg, #000 0 39deg, #0000 0) 15.5% 67% / 15% 15%,
+    conic-gradient(at 100% 100%, #0000 318deg, #000 0 337deg, #0000 0) 83% 50% / 20% 20%,
+    conic-gradient(at 100% 100%, #0000 306deg, #000 0 326.5deg, #0000 0) 78.75% 26.1% / 20% 20%,
+    conic-gradient(at 100% 80%, #0000 290deg, #000 0 310deg, #0000 0) 76% 18.5% / 18% 18%,
+    conic-gradient(at 100% 70%, #0000 270deg, #000 0 305.5deg, #0000 0) 76% 13% / 16% 18%
+    ;
+  background-repeat: no-repeat;
+}
+
+.correction {
+  width: 20.5%;
+  height: 10%;
+  background: linear-gradient(#0000 50%, #fff 0);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  top: 16%;
+  left: 25.5%;
+}
+
+.correction::before {
+  content: "";
+  background: #fff;
+  width: 130%;
+  height: 50%;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  left: 110%;
+  top: 160%;
+}
+
+.correction::after {
+  content: "";
+  background: #fff;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 105%;
+  top: 15%;
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon of a yeti saying 'Trust an expert: never eat #ff0 snow!'">
+      <section class="yeti">
+        <div class="hair-back"></div>
+        <div class="body"></div>
+        <div class="hair-front"></div>
+        <div class="face">
+          <div class="mouth"></div>
+          <div class="upper-lip"></div>
+        </div>
+        <div class="correction"></div>
+      </section>
+      <div class="bubble">
+        Trust an expert:<br/>never eat<br/>#ff0 snow!
+      </div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>
