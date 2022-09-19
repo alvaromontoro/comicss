@@ -431,5 +431,14 @@ const posts = [
     vertical: true,
     title: "Yellow Snow",
     ariaLabel: "Cartoon of a yeti saying 'Trust an expert: never eat #ff0 snow!'"
+  },
+  {
+    id: 56,
+    uid: "jaws",
+    boxes: 1,
+    vertical: true,
+    video: "U_tEyUmHlQQ",
+    title: "Jaws",
+    ariaLabel: "Cartoon parodying the Jaws poster, with a shark threatening a swimmer (in this case a laptop on a floatie) with the text FLEX"
   }
 ]

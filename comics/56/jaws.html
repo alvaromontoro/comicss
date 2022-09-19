@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+html {
+  font-family: 'Bowlby One', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: 100vh;
+  width: 100vw;
+  color: #d20;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 3vh;
+  font-size: 10vh;
+  background:
+    /* mouth */
+    radial-gradient(60% 100% at 50% 100%, #dde 89%, #610 0 99.5%, #0000 99.9%) 50% 93% / 22.95vh 4vh,
+    radial-gradient(farthest-side at 50% 100%, #0000 93%, #610 0 99.5%, #dde 99.9%) 50% 90% / 23vh 17vh,
+    conic-gradient(from -0.04turn at 41.5% 50% , #eee 0.08turn, #0000 0)  50% 90% / 23vh 17vh,
+    conic-gradient(from -0.04turn at 58% 50% , #eee 0.08turn, #0000 0)  50% 90% / 23vh 17vh,
+    conic-gradient(from -0.04turn at 25% 60% , #eee 0.08turn, #0000 0)  50% 90% / 23vh 17vh,
+    conic-gradient(from -0.04turn at 75% 60% , #eee 0.08turn, #0000 0)  50% 90% / 23vh 17vh,
+    conic-gradient(from -0.04turn at 10% 70% , #eee 0.08turn, #0000 0)  50% 90% / 23vh 17vh,
+    conic-gradient(from -0.04turn at 90% 70% , #eee 0.08turn, #0000 0)  50% 90% / 23vh 17vh,
+    radial-gradient(farthest-side at 50% 100%, #c20 99.5%, #0000 99.9%) 50% 90% / 23vh 17vh,
+    /* nose */
+    radial-gradient(farthest-side at 100% 50%, #0003 99.99%, #0000 0) calc(50% - 13vh) 65% / 0.75% 2%,
+    radial-gradient(farthest-side at 0% 50%, #0003 99.99%, #0000 0) calc(50% + 13vh) 65% / 0.75% 2%,
+    /* eyes */
+    radial-gradient(circle at calc(50% - 20vh) 78%, #fff 0.5vh, #0000 0),
+    radial-gradient(circle at calc(50% + 19.5vh) 78%, #fff 0.5vh, #0000 0),
+    radial-gradient(farthest-side at 100% 50%, #000 99.99%, #0000 0) calc(50% - 20vh) 80% / 2.5vh 4vh,
+    radial-gradient(farthest-side at 0% 50%, #000 99.99%, #0000 0) calc(50% + 20vh) 80% / 2.5vh 4vh,
+    /* shark body */
+    radial-gradient(120% 200% at 105% 200%, #dde 85%, #78b 85.1% 99.8%, #0000 99.9%) calc(50% - 14vh) 100% / 28.1vh 50vh,
+    radial-gradient(120% 200% at -5% 200%, #dde 85%, #78b 85.1% 99.8%, #0000 99.9%) calc(50% + 14vh) 100% / 28.1vh 50vh,
+    /* water line and background */
+    linear-gradient(#fff 25%, #bef 0, #369 150%);
+  background-repeat: no-repeat;
+}
+
+html::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  height: 10vh;
+  width: 20vh;
+  transform: translate(-50%, -8.75vh);
+  background: 
+    /* computer */
+    linear-gradient(silver 0 0) 30% calc(100% - 2vh) / 7vh 0.3vh,
+    linear-gradient(80deg, #0000 20%, #344 0 70%, #0000 0) 22% calc(100% - 2.25vh) / 8vh 3.5vh,
+    linear-gradient(80deg, #0000 20%, silver 0 70%, #0000 0) 20% calc(100% - 2vh) / 9vh 4vh,
+    /* floatie */
+    radial-gradient(farthest-side at 50% 50%, #293 99.99%, #0000) 100% 100% / 25% 3vh,
+    radial-gradient(farthest-side at 0 50%, #293 99.99%, #0000) 100% 100% / 5.5% 2vh,
+    radial-gradient(farthest-side at 100% 50%, #293 99.99%, #0000) 0% 100% / 5.5% 2vh,
+    
+    linear-gradient(#293 0 0) 50% 100% / 90% 2vh;
+  background-repeat: no-repeat;
+}
+
+/* demo */
+a {
+  font-size: 16px;
+  position: fixed; 
+  bottom: 1em; 
+  right: 1em; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+    </style>
+  </head>
+  <body>
+    FLEX
+    <a href="/">See more comics</a>
+  </body>
+  </html>

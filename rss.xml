@@ -553,7 +553,17 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/54/interwebs.gif" length="131000" type="image/gif" />
+      <enclosure url="https://comicss.art/comics/55/yellow-snow.png" length="131000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=56</guid>
+      <title>Jaws</title>
+      <link>https://comicss.art/?id=56</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/56/jaws.png" length="154000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
   </channel>
