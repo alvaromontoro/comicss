@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <!-- not proud of this code at all :( -->
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Piedra&display=swap');
+
+article {
+  position: relative;
+}
+
+section {
+  border: 0.75vmin solid;
+  border-radius: 0.5vmin;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 125vmin;
+  height: 75vmin;
+  background: linear-gradient(#c9c8, #c9c0);
+  margin-top: 0.5vmin;
+}
+
+.bubble {
+  font-family: 'Piedra', 'Creepster', serif;
+  font-weight: 100;
+  white-space: pre;
+  top: 10%;
+  left: 50%;
+  font-size: 4.5vmin;
+  text-align: center;
+}
+
+.bubble::before {
+  content: "";
+  height: 100%;
+  width: 50%;
+  border: 0;
+  border-right: 1vmin solid;
+  border-bottom: 0.25vmin solid #0000;
+  border-radius: 0 0 100% 0;
+  top: 100%;
+  left: 20%;
+  transform: translateX(-50%);
+}
+
+.person {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+section:first-child .text {
+  left: 25%;
+  top: 5%;
+}
+section:first-child .text2 {
+  left: 1%;
+  top: 15%;
+  font-size: 2.5vmin;
+}
+section:first-child .text2::before {
+  height: 300%;
+  border-right: 0.5vmin solid;
+  border-bottom: 0.125vmin solid;
+}
+
+section:last-child .cartoon-zombie {
+  transform: scaleX(-1);
+  left: -33%;
+
+}
+
+section:last-child .text {
+  font-size: 3.5vmin;
+  left: 10%;
+  top: 3%;
+}
+section:last-child .text::before {
+  width: 80%;
+  border: 0;
+  border-radius: 100% 0 0 0;;
+  border-top: 0.5vmin solid;
+  border-right: 0.5vmin solid #0000;
+  left: 0;
+  top: 0;
+  transform: translate(-105%, 40%);
+  clip-path: polygon(0 0, 99% 0, 99% 99%, 0 99%);
+}
+
+section:last-child .text2 {
+  font-size: 4vmin;
+  left: 13%;
+  top: 23%;
+}
+section:last-child .text2::before {
+  width: 120%;
+  left: -50%;
+}
+
+section:last-child .text3 {
+  font-size: 3.5vmin;
+  left: 37%;
+  top: 38%;
+}
+section:last-child .text3::before {
+  width: 27vmin;
+  height: 24vmin;
+  left: -67%;
+  border: 0.5vmin solid;
+  border-radius: 0 100% 0 0;
+  clip-path: polygon(0.75vmin 0, 100% 0, 100% 97%, 0.75vmin 97%);
+  top: 0;
+  transform: translate(13%, -100%);
+}
+
+section:last-child .cartoon:not(.cartoon-zombie) {
+  right: -10%;
+}
+
+.offscreen-hand {
+  background: var(--skin);
+  border: 0.6vmin solid;
+  border-right: 0.8vmin solid;
+  border-radius: 50%;
+  left: 0 !important;
+  top: 70%;
+  transform: translate(-70%, 0);
+  width: 9vmin;
+  height: 8vmin;
+}
+
+.hand-2 {
+  width: 15%;
+  height: 10%;
+  left: 70.5%;
+  top: 53.5%;
+}
+
+.hand-2::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 0.5vmin solid;
+  border-right-width: 0.75vmin;
+  background: var(--skin);
+  left: 0;
+  top: 0;
+  box-shadow:
+    inset 0.5vmin -0.5vmin var(--skin-shadow),
+    inset 0.25vmin 0.35vmin var(--skin-light);
+}
+
+.hand-2::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 0.4vmin solid;
+  border-right-width: 0.5vmin;
+  background: var(--skin);
+  transform: rotate(-40deg);
+  left: 10%;
+  top: -5%;
+}
+
+.correction {
+  width: 5%;
+  height: 4.5%;
+  background: var(--skin);
+  top: 56.5%;
+  left: 70.5%;
+  border-radius: 50%;
+}
+
+.movement {
+  width: 5%;
+  height: 12%;
+  border-radius: 50%;
+  border: 0.25vmin solid #0000;
+  border-left: 0.5vmin solid;
+  top: 40%;
+  left: 32%;
+  transform: rotate(9deg);
+}
+
+.movement::before,
+section:last-child .movement::after {
+  content: "";
+  width: 100%;
+  height: 80%;
+  border-radius: 50%;
+  border: 0.2vmin solid #0000;
+  border-left: 0.4vmin solid;
+  top: 50%;
+  left: -50%;
+  transform: translate(0, -50%);
+}
+
+section:last-child .movement {
+  top: 45%;
+  transform: rotate(2deg);
+  width: 3%;
+}
+section:last-child .movement::before {
+  left: -75%; 
+}
+
+section:last-child .movement::after {
+  top: 240%;
+  left: 20%;
+  transform:rotate(-5deg);
+}
+
+.cartoon {
+  --skin: #fca;
+  --skin-shadow: #f0b090;
+  --skin-light: #fdc;
+  --shirt: #eee;
+  --hair: #631;
+  --hair-light: #963;
+  --hair-dark: #520;
+  --pants: #69b;
+  --table: indianred;
+  width: 80vmin;
+  aspect-ratio: 1;
+  position: relative;
+  aoverflow: hidden;
+  position: absolute;
+  bottom: -38%;
+  right: 0%;
+}
+
+.cartoon-zombie {
+  --skin: #9d8;
+  --skin-shadow: #8c7;
+  --skin-light: #ae8;
+  --shirt: #bef;
+  --hair: #0000;
+  --hair-light: #0000;
+  --hair-dark: #0000;
+  --pants: #69b;
+  bottom: -10%;
+  left: -10%;
+}
+
+article div,
+article div::before,
+article div::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.face {
+  width: 20%;
+  height: 25%;
+  background: #f004;
+  border-radius: 100% / 110% 140% 60% 80%;
+  border: 0.5vmin solid;
+  border-bottom: 0.8vmin solid;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-30deg);
+  box-shadow:
+    inset 0.75vmin 1vmin var(--skin-shadow),
+    inset -0.5vmin -0.5vmin var(--skin-light)
+    ;
+  background: 
+    var(--skin);
+}
+
+.face::before,
+.cartoon-zombie .face::after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  background: var(--skin);
+  border: 0.5vmin solid;
+  border-top: 0.76vmin solid;
+  transform: rotate(30deg);
+  border-bottom: 0;
+  border-radius: 50% / 100% 100% 0 0;
+  left: 19.5%;
+  top: -10%;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  box-shadow:
+    inset 1.1vmin 1vmin var(--skin-shadow),
+    inset -0.5vmin 0vmin var(--skin-light)
+    ;
+}
+
+.cartoon-zombie .face::before  {
+  content: "";
+  width: 70%;
+  height: 30%;
+  background: 
+    radial-gradient(farthest-side at 100% 100%, #0000 70%, #000 0 90%, #0000 0) 20% -10% / 20% 40% no-repeat,
+    radial-gradient(farthest-side at 0% 100%, #0000 70%, #000 0 90%, #0000 0) 70% -10% / 20% 40% no-repeat,
+    radial-gradient(farthest-side at 50% 100%, #0000 60%, #000 0 90%, #0000 0) 40% 10% / 30% 30% no-repeat,
+    pink;
+  left: 10%;
+  top: -18%;
+  box-shadow: none;
+  transform: rotate(-10deg);
+  box-shadow: 
+    -1.5vmin 1vmin 0 -1vmin pink,
+    -1.5vmin 0.5vmin 0 -0.5vmin,
+    1.5vmin 0vmin 0 -1vmin pink,
+    1.5vmin 0vmin;
+  clip-path: none;
+}
+
+.face * {
+  z-index: 1;
+}
+
+.ear {
+  width: 8.5%;
+  aspect-ratio: 1;
+  border: 0.5vmin solid;
+  border-left: 0.75vmin solid;
+  border-radius: 50%;
+  transform: scaleX(-1) rotate(10deg);
+  background: #555;
+  left: 53%;
+  top: 17%;
+}
+
+.face .ear {
+  width: 40%;
+  height: 40%;
+  border: 0.5vmin solid;
+  box-shadow: 
+    inset -1vmin 0 #fff2,
+    inset 0.5vmin 0 #0002;
+  border-left: 0.75vmin solid;
+  border-radius: 50%;
+  transform: rotate(10deg);
+  top: 15%;
+  left: -22%;
+  background: #555;
+}
+
+.face .ear::before {
+  content: "";
+  width: 255%;
+  height: 200%;
+  background: 
+    radial-gradient(120% 115% at 130% 110%, #0000 90%, #000 0 96%, #0000 0);
+  transform: translate(0, -100%)
+}
+
+.cartoon-zombie .ear {
+  background: var(--skin);
+  border-right: 0.5vmin solid #0000;
+}
+
+.cartoon-zombie .ear::before {
+  content: "";
+  width: 60%;
+  height: 60%;
+  background: none;
+  border-radius: 50%;
+  border-top: 0.5vmin solid;
+  border-right: 0.5vmin solid;
+  border-bottom: 0.25vmin solid #0000;  
+  top: 25%;
+  left: 17%;
+  transform: rotate(-10deg);
+}
+
+.cartoon-zombie .ear::after {
+  content: "";
+  width: 40%;
+  aspect-ratio: 1;
+  border:0.5vmin solid;
+  border-radius: 50%;
+  border-bottom: 0.35vmin solid;
+  border-right-color: #0000;
+  background: var(--skin);
+  top: 60%;
+  left: 30%;
+  transform: rotate(50deg);
+  box-shadow: -0.5vmin -0.25vmin  var(--skin-shadow)
+}
+
+.hair {
+  width: 25%;
+  aspect-ratio: 1;
+  background: var(--hair);
+  border-radius: 50%;
+  box-shadow: 
+    /* color */
+    2vmin -4vmin 0 1vmin var(--hair),
+    2.2vmin -1.25vmin 0 -0.75vmin var(--hair),
+    0vmin 1.75vmin 0 -0.75vmin var(--hair),
+    7vmin -4.75vmin 0 0.75vmin var(--hair),
+    4.75vmin -3vmin 0 -1vmin var(--hair),
+    11vmin -4vmin 0 0.5vmin var(--hair),
+    13.75vmin -2.25vmin 0 0.125vmin var(--hair),
+    14vmin -2vmin 0 0.25vmin var(--hair-light),
+
+    -1.125vmin -3.3vmin 0 0.3vmin var(--hair),
+    -1.5vmin 0 0 -0.25vmin var(--hair),
+    0vmin -5.5vmin 0 -0.5vmin var(--hair),
+    3vmin -6vmin 0 0.5vmin var(--hair),
+    7vmin -7vmin 0 0.75vmin var(--hair),
+    11vmin -6.5vmin 0 0.25vmin var(--hair),
+    13.5vmin -5vmin 0 -0.75vmin var(--hair),
+
+    -1.5vmin -3vmin 0 0.5vmin var(--hair-dark),
+    -2vmin 0 var(--hair-dark),
+
+    /* lines */
+    0.125vmin 0.25vmin 0 0.2vmin,
+    2.25vmin -3.75vmin 0 1vmin,
+    2.5vmin -1vmin 0 -0.75vmin,
+    0.5vmin 1.75vmin 0 -0.75vmin,
+    7vmin -4.5vmin 0 0.9vmin,
+    5vmin -2.6vmin 0 -1vmin,
+    10.75vmin -3.75vmin 0 0.5vmin,
+    14.125vmin -2vmin 0 0.66vmin,
+
+    -1.5vmin -3.1vmin 0 1vmin,
+    -1.5vmin 0 0 0.8vmin,
+    0vmin -5.5vmin 0 0.12vmin,
+    3vmin -6vmin 0 1vmin,
+    7vmin -7vmin 0 1.2vmin,
+    11vmin -6.5vmin 0 0.75vmin,
+    13.5vmin -5vmin 0 -0.35vmin,
+    /* shadows */
+    7vmin -4vmin 0 0.9vmin var(--skin-shadow),
+    10.75vmin -3.5vmin 0 0.75vmin var(--skin-shadow)
+    ;
+}
+
+.hair-back {
+  width: 5%;
+  aspect-ratio: 1;
+  border: 0.5vmin solid;
+  background: var(--hair);
+  border-radius: 50%;
+  left: 40%;
+  top: 28%; 
+  box-shadow: 
+    10.75vmin -10.2vmin var(--hair),
+    10vmin -13vmin 0 0.25vmin var(--hair),
+    9.25vmin -15vmin var(--hair),
+    11vmin -10.25vmin var(--hair-light),
+
+    10.25vmin -13vmin 0 0.5vmin,
+    9.25vmin -15vmin 0 0.4vmin,
+    11.05vmin -10.25vmin 0 0.4vmin
+}
+
+.mouth {
+  width: 55%;
+  height: 30%;
+  border: 0.25vmin solid #0000;
+  border-left: 0.5vmin solid #0000;
+  border-bottom: 0.5vmin solid;
+  border-radius: 50%;
+  top: 50%;
+  left: 30%;
+  transform: rotate(15deg);
+}
+
+.mouth::before {
+  content: "";
+  aspect-ratio: 1;
+  width: 20%;
+  border: 0.4vmin solid;
+  border-radius: 50%;
+  border-right-color: #0000;
+  border-bottom-color: #0000;
+  top: 77%;
+  left: 5%;
+}
+
+.cartoon-zombie .mouth {
+  border: 0.25vmin solid #0000;
+  border-left: 0.5vmin solid;
+  border-right: 1vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-bottom: 0.25vmin solid;
+  height: 15%;
+  top: 70%;
+  left: 30%;
+  transform: rotate(25deg);
+  background:
+    radial-gradient(circle at 20% 0%, #ffa 18%, #000 0 25%, #0000 0) no-repeat,
+    radial-gradient(circle at 60% 5%, #ffa 17%, #000 0 25%, #0000 0) no-repeat,
+    radial-gradient(circle at 50% 115%, #ffa 17%, #000 0 25%, #0000 0) no-repeat,
+    linear-gradient(90deg, #4005 40%, #0000 85%) no-repeat;
+}
+
+.cartoon-zombie .mouth::before {
+  content: none;
+}
+
+.chin {
+  width: 15%;
+  height: 10%;
+  top: 85%;
+  left: 55%;
+  border-top: 0.25vmin solid #0000;
+  border-right: 0.4vmin solid;
+  border-radius: 50%;
+  box-shadow: 0.5vmin 0 0 -0.25vmin var(--skin-shadow)
+}
+
+.eye {
+  width: 28%;
+  height: 27%;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 50% 60%, #fff 9%, #0000 10%),
+    radial-gradient(circle at 60% 70%, #000 20%, #0000 21%),
+    white;
+  border: 0.45vmin solid;
+  transform: rotate(20deg);
+  left: 70%;
+  top: 30%;
+  box-shadow: 
+    inset 0.25vmin -0.25vmin #0001
+    /*     ,
+    -0.125vmin 0.125vmin 0 0.125vmin var(--skin-shadow); */
+}
+
+.cartoon-zombie .eye {
+  background: 
+    radial-gradient(circle at 65% 65%, #0000 5%, #000 0 8%, #0000 0),
+    #ffc;
+}
+
+.cartoon-zombie .eye::after {
+  content: "";
+  width: 150%;
+  height: 100%;
+  border-radius: 50%;
+  border: 0.125vmin solid #0000;
+  border-bottom: 0.33vmin solid;
+  border-right: 0.75vmin solid #0000;
+  z-index: -1;
+  transform: scaleX(-1)rotate(-60deg);
+  top: 25%;
+  left: -15%;
+}
+
+.cartoon-zombie .eye ~ .eye::after {
+  transform: rotate(-60deg);
+  top: 25%;
+  left: -30%;
+}
+
+/* .eye {
+background: 
+linear-gradient(160deg, var(--skin) 20%, #000 0 26%, #0000 27%),
+radial-gradient(circle at 50% 45%, #fff 9%, #0000 10%),
+radial-gradient(circle at 60% 55%, #000 20%, #0000 21%),
+white;
+}
+
+.eye ~ .eye {
+background: 
+linear-gradient(-170deg, var(--skin) 20%, #000 0 26%, #0000 27%),
+radial-gradient(circle at 50% 45%, #fff 9%, #0000 10%),
+radial-gradient(circle at 60% 55%, #000 20%, #0000 21%),
+white;
+} */
+
+.eye::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  border: 0.5vmin solid #0000;
+  border-top: 1vmin solid;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.eye ~ .eye {
+  width: 30%;
+  height: 28%;
+  left: 38%;
+  transform: rotate(15deg);
+  top: 25%;
+}
+
+.eye ~ .eye::before {
+  transform: translate(-60%, -50%) rotate(-10deg)
+}
+
+.nose {
+  width: 22%;
+  aspect-ratio: 1;
+  border: 0.25vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-right: 0.75vmin solid;
+  border-radius: 50%;
+  top: 50%;
+  left: 60%;
+  background: var(--skin);
+  box-shadow: 
+    inset -0.125vmin 0.25vmin var(--skin-light),
+    inset -0.5vmin 0vmin var(--skin-shadow)
+}
+
+.cheek {
+  width: 80%;
+  height: 15%;
+  background: #f002;
+  border-radius: 50%;
+  transform: rotate(10deg);
+  top: 40%;
+  left: 15%;
+  filter: blur(1vmin);
+}
+
+.neck {
+  width: 5%;
+  height: 20%;
+  border: 0.5vmin solid;
+  border-radius: 100% / 20% 20%;
+  background: 
+    radial-gradient(circle at 140% 50%, var(--skin-shadow) 60%, #0000 0),
+    var(--skin);
+  top: 20%;
+  left: 47%;
+  transform: translateX(-50%);
+}
+
+.neck {
+  width: 8%;
+  top: 19%;
+  border-radius: 0;
+  border-bottom-color: #0000;
+  background: 
+    radial-gradient(circle at 100% 58%, var(--skin-shadow) 60%, #0000 0),
+    var(--skin);
+}
+
+.body {
+  --deco: repeating-conic-gradient(at 52% -0%, #0000 0 2%, #000 0 3%);
+  width: 25%;
+  height: 34%;
+  border: 0.5vmin solid;
+  border-top: 0.75vmin solid;
+  border-right-width: 0.75vmin;
+  border-radius: 100% / 60% 70% 120% 40%;
+  top: 37%;
+  left: 46.5%;
+  transform: translateX(-50%);
+  background: 
+    radial-gradient(150% 80% at 70% 100%, #0000 60%, #0008 62% 65%, #0000 67%) 65% 64% / 50% 15% no-repeat,
+    radial-gradient(150% 80% at 60% 100%, #0000 60%, #0008 62% 65%, #0000 67%) 76% 65.5% / 40% 15% no-repeat,
+    radial-gradient(90% 50% at 52% 0, var(--skin) 20%, #000 21% 23%, #0000 24% 28%, #000 29% 31%, var(--shirt) 32%),
+    var(--deco),
+    var(--shirt);
+  box-shadow: 
+    inset -1vmin -0.75vmin white,
+    inset 1vmin 0 #0001
+}
+
+.cartoon-zombie .body {
+  --deco: linear-gradient(#0000 0 0);
+}
+
+.body::before {
+  content: "";
+  width: 104%;
+  height: 100%;
+  border: 0.5vmin solid;
+  border-right: 0.7vmin solid;
+  border-radius: 100% / 120% 160% 20% 24%;
+  top: 10%;
+  left: -0.5vmin;
+  background: var(--shirt);
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  box-shadow: 
+    inset -1vmin 0 white,
+    inset 1vmin 0 #0001
+}
+
+.body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 100% / 60% 50% 120% 40%;
+  top: 0vmin;
+  right: -0.6vmin;
+  /*   box-shadow: inset -1.5vmin 1.25vmin 0 -1.25vmin white; */
+  background: 
+    linear-gradient(var(--shirt) 20%, #0000 0),
+    linear-gradient(47deg, #0000 86%, var(--shirt) 86.25%);
+  clip-path: polygon(76% 5.5%, 100% 5.5%, 100% 30%, 75% 30%);
+}
+
+.pants {
+  width: 25%;
+  height: 50%;
+  border: 0.5vmin solid;
+  border-top: 0.75vmin solid;
+  border-right-width: 0.5vmin;
+  border-left-width: 0.75vmin;
+  border-radius: 100% / 120% 120% 15% 70%;
+  top: 45%;
+  left: 46.125%;
+  transform: translateX(-50%) rotate(-3deg);
+  background: 
+    radial-gradient(260% 80% at 0% 0, #0000 40%, #000 41% 50%, #0000 51%) 15% 55% / 30% 20% no-repeat,
+    radial-gradient(230% 80% at 20% 0, #0000 40%, #000 41% 50%, #0000 51%) 73% 80% / 14% 20% no-repeat,
+    var(--pants);
+  box-shadow: 
+    inset -1vmin 0 0 -0.125vmin #fff6,
+    inset 1vmin 0 #0001
+    ;
+}
+
+.pants::after {
+  content: "";
+  width: 65%;
+  height: 100%;
+  border: 0.66vmin solid;
+  border-right-width: 0.5vmin;
+  top: 33%;
+  left: -7%;
+  border-radius: 100% / 20%;
+  clip-path: polygon(0 40%, 100% 34.5%, 100% 100%, 0 100%);
+  background: var(--pants);
+  box-shadow: 
+    inset -1vmin 0 0 -0.125vmin #fff6,
+    inset 1.125vmin 0 #0001
+    ;
+  transform: rotate(10deg);
+}
+
+section:last-child .pants::after {
+  transform: rotate(20deg);
+  left: -11%;
+  top: 35%;
+}
+
+.arm-1 {
+  width:15%;
+  height: 20%;
+  border: 0.5vmin solid;
+  border-radius: 100% / 80% 150% 20% 40%;
+  background: var(--shirt);
+  box-shadow: inset -0.5vmin -0.2vmin white;
+  border-right-width: 0.75vmin;
+  top: 43%;
+  left: 44%;
+  transform-origin: top left;
+  transform: rotate(-30deg);
+}
+
+.arm-2 {
+  width: 13%;
+  height: 18%;
+  border: 0.5vmin solid;
+  border-radius: 100% / 170% 130% 20% 20%;
+  background: var(--shirt);
+  border-right-width: 0.75vmin;
+  border-left-width: 0.75vmin;
+  top: 44.5%;
+  left: 32.5%;
+  transform-origin: top right;
+  transform: rotate(40deg);
+  clip-path: polygon(0 0, 30% 0, 80% 40%, 100% 40%, 100% 100%, 0 100%);
+  box-shadow: 
+    inset -0.5vmin 0 0 -0.125vmin #fff6,
+    inset 1.125vmin 0 #0001,
+    0.25vmin 0 #0003
+    ;
+}
+
+.cartoon-zombie .arm-2 {
+  transform: rotate(-53deg);
+  top: 41%;
+  left: 25.5%;
+}
+
+.sleeve-2 {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 0.5vmin solid;
+  top: 40%;
+  left: 31%;
+  box-shadow: 
+    0 0 0 0.5vmin var(--skin-light),
+    0 -1vmin 0 4.5vmin var(--skin),
+    0 -1.5vmin 0 5.25vmin var(--skin-shadow),
+    0 -1.75vmin 0 6vmin;
+  clip-path: polygon(-100% 00%, 50% 30%, 50% 60%, -100% 120%);
+}
+
+.cartoon-zombie .sleeve-2 {
+  transform: rotate(-75deg);
+  top: 7%;
+  left: 40%;
+}
+
+.sleeve {
+  width: 80%;
+  bottom: 5%;
+  left: 10%;
+  height: 10%;
+  border: 0.5vmin solid;
+  border-bottom: 0.125vmin solid #0000;
+  border-radius: 50%;
+  background: #0002;
+}
+
+.sleeve::before {
+  content: "";
+  width: 100%;
+  height: 1500%;
+  background: var(--skin);
+  border: 0.5vmin solid;
+  border-right: 0.75vmin solid;
+  border-top: 0;
+  border-radius: 0% 30% 90% 80% / 100%;
+  box-shadow: 
+    inset -0.5vmin 0 0 -0.125vmin #fff6,
+    inset 0.75vmin 0 #0001
+    ;
+}
+
+.sleeve::after {
+  content: "";
+  width: 90%;
+  height: 1500%;
+  background: var(--skin);
+  border: 0.5vmin solid;
+  border-left: 0.5vmin solid;
+  border-radius: 100% / 120% 120% 80% 80%;
+  transform-origin: 50% 100%;
+  transform: rotate(90deg) translate(-34%, 18%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+  box-shadow: 
+    inset 0.5vmin 0 0 -0.125vmin #fff6,
+    inset -0.75vmin 0 #0001
+    ;
+}
+
+.table {
+  width: 57%;
+  height: 5%;
+  border: 0.5vmin solid;
+  background: var(--table);
+  border-right: 0;
+  border-radius: 0.5vmin 0 0 0.5vmin;
+  top: 63%;
+  right: 0;
+}
+
+.laptop {
+  width: 41%;
+  height: 3%;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  background: silver;
+  top: 60%;
+  left: 60%;
+  background: 
+    linear-gradient(#0003 0 0) 30% 50% / 8% 40% no-repeat,
+    linear-gradient(#0003 0 0) 23% 50% / 4% 40% no-repeat,
+    linear-gradient(#0003 0 0) 17% 50% / 4% 40% no-repeat,
+    linear-gradient(90deg, silver 40%, #ddd 0)
+}
+
+.laptop::before {
+  content: "";
+  width: 70%;
+  height: 1400%;
+  border: 0.5vmin solid;
+  top: 0vmin;
+  left: 40%;
+  transform: translate(0, -100%) skew(-5deg);
+  border-radius: 1vmin 1vmin 0.5vmin 0.5vmin;
+  background:
+    radial-gradient(circle at 55% 50%, #fff5 12%, #0000 13%),
+    silver;
+}
+
+.chair {
+  width: 40%;
+  height: 60%;
+  border: 0.5vmin solid;
+  border-radius: 100% / 30% 30% 120% 120%;
+  border-left: 0.75vmin solid;
+  background:
+    repeating-linear-gradient(#0000 0 1.5%, #0006 0 2%),
+    repeating-linear-gradient(90deg, #0000 0 1.5%, #0006 0 2%),
+    repeating-linear-gradient(45deg, #0000 0 1.5%, #0006 0 2%),
+    repeating-linear-gradient(-45deg, #0000 0 1.5%, #0006 0 2%),
+    #eee8
+    ;
+  box-shadow:
+    inset 0.75vmin 0.5vmin #0001,
+    inset 0 0 0 3.5vmin #ccc,
+    inset 0.1vmin 0.1vmin 0 4.1vmin #000
+    ;
+  top: 33.33%;
+  left: 12%;
+  transform: skew(6deg);
+  backdrop-filter: blur(3px)
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon with to panels showing zombies lurking around a person using a computer, they leave and one zombie asks 'why not eat?', another zombie replies 'JS developer', and the first zombie replies '*sigh* no brain'.">
+      <section>
+        <div class="cartoon-zombie offscreen-hand"></div>
+        <div class="cartoon cartoon-zombie">
+          <div class="person">
+            <div class="arm-1">
+              <div class="sleeve"></div>
+            </div>
+            <div class="pants"></div>
+            <div class="body"></div>
+            <div class="neck"></div>
+            <div class="ear"></div>
+            <div class="face">
+              <div class="cheek"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="chin"></div>
+              <div class="ear"></div>
+            </div>
+            <div class="hand-2"></div>
+            <div class="sleeve-2"></div>
+            <div class="arm-2"></div>
+            <div class="correction"></div>
+            <div class="movement"></div>
+          </div>
+        </div>
+        <div class="bubble text">Braiiiinnssss....</div>
+        <div class="bubble text2">Brainssss..!</div>
+        <div class="cartoon">
+          <div class="chair"></div>
+          <div class="person">
+            <div class="arm-1">
+              <div class="sleeve"></div>
+            </div>
+            <div class="sleeve-2"></div>
+            <div class="body"></div>
+            <div class="neck"></div>
+            <div class="ear"></div>
+            <div class="hair-back"></div>
+            <div class="face">
+              <div class="cheek"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="chin"></div>
+              <div class="hair"></div>
+              <div class="ear"></div>
+            </div>
+            <div class="arm-2"></div>
+          </div>
+          <div class="table"></div>
+          <div class="laptop"></div>
+        </div>
+      </section>
+        <section>
+        <div class="cartoon cartoon-zombie">
+          <div class="person">
+            <div class="arm-1">
+              <div class="sleeve"></div>
+            </div>
+            <div class="pants"></div>
+            <div class="body"></div>
+            <div class="neck"></div>
+            <div class="ear"></div>
+            <div class="face">
+              <div class="cheek"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="chin"></div>
+              <div class="ear"></div>
+            </div>
+            <div class="sleeve-2"></div>
+            <div class="arm-2"></div>
+            <div class="movement"></div>
+          </div>
+        </div>
+        <div class="bubble text">Why not eat?</div>
+        <div class="bubble text2">...JS Developerrr....</div>
+        <div class="bubble text3">*sigh* ...no brainsss...</div>
+        <div class="cartoon">
+          <div class="chair"></div>
+          <div class="person">
+            <div class="arm-1">
+              <div class="sleeve"></div>
+            </div>
+            <div class="sleeve-2"></div>
+            <div class="body"></div>
+            <div class="neck"></div>
+            <div class="ear"></div>
+            <div class="hair-back"></div>
+            <div class="face">
+              <div class="cheek"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="chin"></div>
+              <div class="hair"></div>
+              <div class="ear"></div>
+            </div>
+            <div class="arm-2"></div>
+          </div>
+          <div class="table"></div>
+          <div class="laptop"></div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

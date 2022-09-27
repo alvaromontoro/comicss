@@ -1055,12 +1055,31 @@
     <title>Jaws</title>
     <link href="https://comicss.art/?id=56" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/56/jaws.html"/>
-    <id>https://comicss.art/?id=55</id>
+    <id>https://comicss.art/?id=56</id>
     <updated>2022-09-19T00:00:00Z</updated>
     <summary>New cartoon: Jaws</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/56/jaws.png" alt="Cartoon parodying the Jaws poster, with a shark threatening a swimmer (in this case a laptop on a floatie) with the text FLEX" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Zombie Apocalypse</title>
+    <link href="https://comicss.art/?id=57" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/57/zombie-apocalypse.html"/>
+    <id>https://comicss.art/?id=57</id>
+    <updated>2022-09-26T00:00:00Z</updated>
+    <summary>New cartoon: Zombie Apocalypse</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/57/zombie-apocalypse.png" alt="Cartoon with to panels showing zombies lurking around a person using a computer, they leave and one zombie asks 'why not eat?', another zombie replies 'JS developer', and the first zombie replies '*sigh* no brain'." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

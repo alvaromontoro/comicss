@@ -440,5 +440,13 @@ const posts = [
     video: "U_tEyUmHlQQ",
     title: "Jaws",
     ariaLabel: "Cartoon parodying the Jaws poster, with a shark threatening a swimmer (in this case a laptop on a floatie) with the text FLEX"
+  },
+  {
+    id: 57,
+    uid: "zombie-apocalypse",
+    boxes: 2,
+    vertical: true,
+    title: "Zombie Apocalypse",
+    ariaLabel: "Cartoon with to panels showing zombies lurking around a person using a computer, they leave and one zombie asks 'why not eat?', another zombie replies 'JS developer', and the first zombie replies '*sigh* no brain'."
   }
 ]
