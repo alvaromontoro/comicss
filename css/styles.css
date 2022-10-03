@@ -53,6 +53,12 @@ header {
   color: #333;
 }
 
+.page-title a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
 .page-title span {
   color: var(--accent);
   font-weight: bold;
