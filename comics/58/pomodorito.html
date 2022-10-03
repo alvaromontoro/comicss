@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+body {
+  background: #ff634744;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
+  gap: 0.1vmin;
+  max-width: max(1000px, 90vh);
+  margin: auto auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 6vmin;
+  font-weight: 900;
+  background:
+    linear-gradient(#000 0 0) 50% 100% / 40% 0.25vmin no-repeat;
+  margin-bottom: 3vmin;
+}
+
+ol {
+  text-align: left;
+  max-width: 67%;
+  margin: 4vmin auto;
+  display: inline-block;
+}
+
+li {
+  font-size: 4.25vmin;
+  font-weight: 600;
+}
+
+div {
+  width: 50%;
+  aspect-ratio: 1.2;
+  margin: auto auto;
+  position: relative;
+}
+
+section:nth-child(1) div::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  background: 
+    /* timer lines */
+/*     radial-gradient(130% 100% at 50% 0, red 60%, #0000 0 66%, #a00 0 67%, red 0),
+    repeating-linear-gradient(90deg, #0000 0 5%, #a00 0 6%),
+    repeating-linear-gradient(90deg, #0000 0 22.25%, #a00 0 24.25%), */
+    /* base color */
+    red;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 0%);
+  border-radius: 90% / 94% 89% 105% 98%;
+  box-shadow: 
+    inset 1vmin 0.5vmin 0 0vmin red,
+    inset 8vmin 7vmin 0 -7.6vmin #fff2,
+    inset -0.75vmin -0.25vmin 0 0.25vmin #e00;
+}
+
+section:nth-child(1) div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(darkgreen 5%, #0000 0),
+    linear-gradient(90deg, #0000 51%, darkgreen 0 53%, #0000 0) 0 0 / 100% 20% no-repeat,
+    green;
+  clip-path: polygon(49% 18%, 46% 2%, 50% 1%, 52% 5%, 53% 19%, 64% 16%, 58% 21%, 73% 28%, 55% 26%, 57% 39%, 50% 28%, 43% 35%, 46% 26%, 30% 26%, 43% 22%, 34% 15%, 49% 19%);
+}
+
+section:nth-child(2) div {
+  --dot: #533c;
+  --dot2: #5338;
+  position: relative;
+  clip-path: polygon(10% 13%, 10% 12%, 11% 11%, 50% 7.5%,90% 2%, 91% 3%, 91% 4%, 56% 99%, 55% 100%, 54% 99%, 29% 50%);
+  background: 
+    /* dots */
+    radial-gradient(var(--dot) 5%, #0000 0) 50% 50% / 30% 30%,
+    radial-gradient(circle at 78.5% 18%, var(--dot) 1%, #0000 0),
+    radial-gradient(var(--dot) 4%, #0000 0) 33% 28% / 43% 37%,
+    radial-gradient(circle, var(--dot) 4.5%, #0000 0) 17% 7% / 35% 43%,
+    radial-gradient(var(--dot) 1%, #0000 0) 13% 11% / 23% 23%,
+    
+    radial-gradient(at 51% 50%, var(--dot) 2%, #0000 0),
+    radial-gradient(at 52% 81%, var(--dot2) 0.75%, #0000 0),
+    radial-gradient(circle at 69% 43%, var(--dot) 1.5%, #0000 0),
+    radial-gradient(at 72% 5%, var(--dot2) 1%, #0000 0),
+    /* light/dark areas */
+/*     radial-gradient(farthest-side, #ffd70088, #ffd70000) 20% 20% / 50% 50% no-repeat,
+    radial-gradient(farthest-side, #c002, #ffd70000) 80% 50% / 50% 50% no-repeat,
+    radial-gradient(farthest-side, #ffd70066, #ffd70000) 90% -60% / 50% 80% no-repeat,
+    radial-gradient(farthest-side, #ffd70088, #ffd70000) 50% 120% / 30% 60% no-repeat, */
+    /* shadows */
+    linear-gradient(-63deg, #0001 36%, #0000 0),
+    /* base color */
+    orange;
+}
+
+section:nth-child(2) div::before {
+  content: "";
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  width: 40%;
+  height: 15%;
+  background: #f003;
+  border-radius: 100% / 100% 30% 30% 40%;
+  background: linear-gradient(-10deg, #fff0 50%, #fff2 0);
+  transform: rotate(-6deg);
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h2>Pomodoro Technique</h2>
+        <div role="img" aria-label="cartoon of a tomato"></div>
+        <ol>
+          <li>Work for 25 minutes</li>
+          <li>Take a 5 minute break</li>
+          <li>Repeat steps 1-2 four times</li>
+          <li>Take a longer break</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Pomodorito Technique</h2>
+        <div role="img" aria-label="cartoon of a Dorito chip"></div>
+        <ol>
+          <li>Eat Doritos for 25 minutes</li>
+          <li>Work for 5 minutes</li>
+          <li>Repeat steps 1-2 four times</li>
+          <li>Take a longer break to go to the store and buy more Doritos</li>
+        </ol>
+      </section>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

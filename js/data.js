@@ -448,5 +448,13 @@ const posts = [
     vertical: true,
     title: "Zombie Apocalypse",
     ariaLabel: "Cartoon with to panels showing zombies lurking around a person using a computer, they leave and one zombie asks 'why not eat?', another zombie replies 'JS developer', and the first zombie replies '*sigh* no brain'."
+  },
+  {
+    id: 58,
+    uid: "pomodorito",
+    boxes: 1,
+    vertical: true,
+    title: "The Pomodorito Technique",
+    ariaLabel: "Cartoon comparing the pomodoro technique (25 minutes working, 5 minute break, repeat 4 times, then take longer break) and the Pomodorito technique (25 minutes eating doritos, 5 minutes work, repeat 4 times, then take a longer break to go buy more doritos."
   }
 ]

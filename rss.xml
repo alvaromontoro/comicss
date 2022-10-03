@@ -576,5 +576,15 @@
       <enclosure url="https://comicss.art/comics/57/zombie-apocalypse.png" length="451000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=58</guid>
+      <title>The Pomodorito Technique</title>
+      <link>https://comicss.art/?id=58</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/58/pomodorito.png" length="132000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
