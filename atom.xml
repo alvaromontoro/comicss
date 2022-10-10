@@ -1108,4 +1108,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>They Never Knew</title>
+    <link href="https://comicss.art/?id=59" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/59/they-never-knew.html"/>
+    <id>https://comicss.art/?id=59</id>
+    <updated>2022-10-10T00:00:00Z</updated>
+    <summary>New cartoon: They Never Knew</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/59/they-never-knew.png" alt="Cartoon with two panels, a UX Designer and a Developer meets at a tech conference and they immediately click. They decide to meet at the UID cafe, but one ends up in the User Interface Design Cafe, and the other at the Unique IDentifier Cafe. They never knew what went wrong." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
