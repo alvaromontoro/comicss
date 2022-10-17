@@ -1127,4 +1127,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Hobbits and Web Development</title>
+    <link href="https://comicss.art/?id=60" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/60/hobbits-and-web.html"/>
+    <id>https://comicss.art/?id=60</id>
+    <updated>2022-10-17T00:00:00Z</updated>
+    <summary>New cartoon: Hobbits and Web Development</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/60/hobbits-and-web.png" alt="Cartoon titled 'Hobbits biggest contribution to Web Development. It shows two hobbits, and one says 'We have had grid, yes. What about sub-grid?'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

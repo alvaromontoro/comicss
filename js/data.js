@@ -464,5 +464,13 @@ const posts = [
     vertical: true,
     title: "They Never Knew",
     ariaLabel: "Cartoon with two panels, a UX Designer and a Developer meets at a tech conference and they immediately click. They decide to meet at the UID cafe, but one ends up in the User Interface Design Cafe, and the other at the Unique IDentifier Cafe. They never knew what went wrong."
+  },
+  {
+    id: 60,
+    uid: "hobbits-and-web",
+    boxes: 2,
+    vertical: true,
+    title: "Hobbits and Web",
+    ariaLabel: "Two cartoons showing two hobbits. The first cartoon is titled 'Hobbits biggest contribution to web development' and one hobbit saying: 'We have had grid, yes. What about sub-grid?'. The second cartoon is titled 'the reason the hobbits were expelled of the CSSWG', one of the hobbits says and one hobbit saying: 'We have had grid and sub-grid, yes. What about sub-sub-grid?'"
   }
 ]

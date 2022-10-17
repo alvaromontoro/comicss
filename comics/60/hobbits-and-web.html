@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+article {
+  width: 95vmin;
+  height: 70vmin;
+  border: 0.5vmin solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background: linear-gradient(#c9c8, #c9c0 80%);
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.bubble {
+  --c: #ffc;
+  font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', sans-serif;
+  font-size: 3vmin;
+  background: var(--c);
+  border-radius: 50%;
+  padding: 6vmin 3vmin 4vmin 3vmin;
+  text-align: center;
+  top: -4vmin;
+  right: 7%;
+  width: 40%;
+}
+
+.bubble::before {
+  content: "";
+  width: 15%;
+  height: 70%;
+  border-radius: 0 0 100% 0;
+  box-shadow: 1vmin -1vmin var(--c);
+  top: 90%;
+  left: 40%;
+}
+
+.title {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 3vmin;
+  white-space: pre;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-shadow: 
+     0px -1px 1px #000, 
+     1px -1px 1px #000, 
+     1px  0px 1px #000,
+     1px  1px 1px #000,
+     0px  1px 1px #000, 
+    -1px  1px 1px #000, 
+    -1px  0px 1px #000, 
+    -1px -1px 1px #000;
+}
+
+.hobbit {
+  --skin: #fca;
+  --skin-dark: #8001;
+  --skin-darker: #8003;
+  width: 55%;
+  height: 85%;
+  bottom: 0;
+}
+
+.hobbit-1 {
+  --cape: #803;
+  --cape-dark: #702;
+  --jacket: #17a;
+  --jacket-dark: #069;
+  --scarf: #9b8;
+  --scarf-dark: #8a7;
+  left: 35%;
+}
+
+.hobbit-1 .body {
+  width: 106%;
+  height: 100%;
+  top: 57%;
+  left: -4%;
+  border-radius: 100% / 50% 120% 50% 30%;
+  atransform:  skew(20deg) rotate(50deg);
+  transform: rotate(40deg);
+  background: 
+    /* cape */
+    conic-gradient(#0000 35deg, var(--cape-dark) 0 39deg, #0000 0) 25% 5% / 20% 20%,
+    conic-gradient(at 50% 20%, #0000 55deg, var(--cape-dark) 0 64deg, #0000 0) 30% 10% / 20% 20%,
+    
+    radial-gradient(90% 98% at 60% 100%, #0000 90%, var(--cape) 0),
+    radial-gradient(90% 98% at 61.5% 100%, #0000 90%, var(--cape-dark) 0),
+    radial-gradient(90% 110% at 100% 60%, #0000 90%, var(--cape) 0),
+    /* scarf + back */
+    conic-gradient(#0000 115deg, var(--jacket-dark) 0 118deg, #0000 0) 60% 10% / 50% 20%,
+    linear-gradient(47deg, #0000 45%, var(--scarf-dark) 0 56%, #0000 0),
+    radial-gradient(130% 95% at 10% 20%, var(--jacket) 27%, var(--jacket-dark) 0 27.6%, var(--jacket) 0);
+  background-repeat: no-repeat;
+}
+
+.hobbit-1 .body::before {
+  content: "";
+  top: -8%;
+  left: 8%;
+  width: 100%;
+  height: 29%;
+  transform: rotate(50deg);
+  transform-origin: 0 50%;
+  border-radius: 5vmin 0 0 5vmin;
+  background: 
+    /* neck + scarf */
+    radial-gradient(15% 46% at 0% 54%, var(--skin-dark) 79%, #0000 0) 0 0 / 100% 99%,
+    radial-gradient(13% 40% at 0% 54%, #0000 99%, var(--scarf) 0 150%, #0000 130%) 0 0 / 100% 99%,
+    linear-gradient(1deg, #0000 13%, var(--skin) 0 79%, #0000 0) 0 0 / 13% 100%,
+    radial-gradient(15% 50% at 10% 50%, var(--scarf) 99%, #0000 0);
+  background-repeat: no-repeat;
+}
+
+.hobbit-1 .body::after {
+    content: "";
+    top: 4%;
+    left: 17%;
+    width: 100%;
+    height: 16%;
+    transform: rotate(50deg) skew(20deg) rotate(-5deg);
+    transform-origin: 0 50%;
+    border-radius: 100% / 40% 0 0 43%;
+    background: linear-gradient(90deg, var(--scarf-dark), var(--scarf) 20%), #f003;
+}
+
+.hobbit-1 .head {
+  width: 32%;
+  height: 37%;
+  background: var(--skin);
+  border-radius: 100% / 120% 120% 80% 90%;
+  top: 20%;
+  left: 45%;
+  transform: translate(-50%, 0) rotate(-5deg);
+  background: 
+    /* eyes */
+    linear-gradient(#000 0 0) 35% 46.25% / 25% 1.75%,
+    linear-gradient(#000 0 0) 84% 46.25% / 25% 1.75%,
+    radial-gradient(circle at 38% 49%, #fff 0.25vmin, #0000 0),
+    radial-gradient(circle at 73% 49%, #fff 0.25vmin, #0000 0),
+    radial-gradient(circle at 40% 50%, #000, #132 1vmin, #0000 0),
+    radial-gradient(circle at 75% 50%, #000, #132 1vmin, #0000 0),
+    /* nose */
+    radial-gradient(circle at 59% 69%, var(--skin) 6%, #0000 0),
+    radial-gradient(circle at 60.5% 67.5%, #000 6.25%, #0000 0),
+    /* mouth */
+    conic-gradient(from 0.25turn at 0 50%, #000 3deg, #0000 3.5deg) 55% 84% / 30% 6%,
+    radial-gradient(farthest-side at 50% 0, #ffe 99%, #0000 0) 54% 85.5% / 24% 3.5%,
+    radial-gradient(farthest-side at 50% 0, var(--skin-dark) 99%, #0000 0) 54.5% 88% / 28% 7%,
+    /* eyebrows */
+    linear-gradient(var(--skin) 0 0) 60% 33% / 15% 10%,
+    radial-gradient(90% 15% at 55% 44%, var(--skin) 45%, #0000 0),
+    radial-gradient(89% 20% at 55% 40%, #e90 40%, #0000 0),
+    /* hair forehead */
+    radial-gradient(101% 50% at 100% 0, #f8b008 40%, #0000 0),
+    radial-gradient(140% 55% at 0 0, #f8b008 40%, #0000 0),
+    radial-gradient(at 0 30%, #0000 20%, #f8b008 0 50%, #0000 0) 59% -1% / 15% 25%,
+    radial-gradient(farthest-side at 0 50%, var(--skin) 90%, #0000 0) 55% 20% / 10% 15%,
+    radial-gradient(farthest-side at 0 50%, #f8b008 90%, #0000 0) 57% 16% / 10% 15%,
+    /* hair ear */
+    radial-gradient(55% 60% at 0 40%, #f8b008 15%, #0000 0),
+    radial-gradient(70% 35% at -2% 51%, var(--skin) 15%, #0000 0),
+    radial-gradient(75% 35% at -2% 49%, #f8b008 15%, #0000 0),
+    var(--skin);
+  background-repeat: no-repeat;
+}
+
+.hobbit-1 .hair-back {
+  border-radius: 50% 50% 0 0 ;
+  width: 60%;
+  height: 48%;
+  background: 
+    radial-gradient(circle at 20% 40%, darkorange 14%, #0000 0),
+    radial-gradient(50% 50% at 14% 60%, darkorange 15%, #0000 0),
+    radial-gradient(50% 40% at 84% 55%, darkorange 18%, #0000 0),
+    linear-gradient(darkorange 0 0) 50% 50% / 75% 50% no-repeat,
+    radial-gradient(50% 40%, darkorange 99.99%, #0000 0) 50% 20% / 85% 30% repeat-y,
+    radial-gradient(farthest-side, darkorange 99.99%, #0000 0) 50% 0% / 85% 35% repeat-y,
+    #fff
+    ;
+  box-shadow: 
+    2vmin -10vmin 0 -8.5vmin darkorange,
+    -3vmin -11vmin 0 -9vmin darkorange,
+    0 0 0 3vmin #fff;
+  top: 14%;
+  left: 43%;
+  transform: translate(-50%, 0) rotate(1deg);
+  filter: blur(0.45vmin) contrast(20) hue-rotate(-40deg);
+  mix-blend-mode: multiply
+}
+
+.hobbit-2 {
+  --cape: #da0;
+  --cape-dark: #c90;
+  --jacket: #054;
+  --jacket-dark: #043;
+  left: -10%;
+}
+
+.hobbit-2 .head {
+  width: 35%;
+  height: 40%;
+  background: 
+    /* eyes */
+    radial-gradient(circle at 38% 48%, #fff 0.25vmin, #0000 0),
+    radial-gradient(circle at 73% 48%, #fff 0.25vmin, #0000 0),
+    radial-gradient(circle at 40% 50%, #000, #132 1vmin, #0000 0),
+    radial-gradient(circle at 75% 50%, #000, #132 1vmin, #0000 0),
+    /* nose */
+    radial-gradient(circle at 59% 69%, var(--skin) 7%, #0000 0),
+    radial-gradient(circle at 60.5% 67.5%, #000 7.25%, #0000 0),
+    /* mouth */
+    conic-gradient(from 0.25turn at 0 50%, #000 3deg, #0000 3.5deg) 55% 84% / 30% 6%,
+    radial-gradient(farthest-side at 50% 0, var(--skin-dark) 99%, #0000 0) 58% 85% / 30% 4%,
+    /* eyebrows */
+    linear-gradient(var(--skin) 0 0) 60% 33% / 15% 10%,
+    radial-gradient(90% 20% at 55% 43%, var(--skin) 45%, #0000 0),
+    radial-gradient(89% 25% at 55% 40%, #000 40%, #0000 0),
+    /* hair forehead */
+    radial-gradient(101% 50% at 100% 0, #000 40%, #0000 0),
+    radial-gradient(140% 55% at 0 0, #000 40%, #0000 0),
+    radial-gradient(at 0 30%, #0000 20%, #000 0 50%, #0000 0) 59% -1% / 15% 25%,
+    radial-gradient(farthest-side at 0 50%, var(--skin) 90%, #0000 0) 55% 20% / 10% 15%,
+    radial-gradient(farthest-side at 0 50%, #000 90%, #0000 0) 57% 16% / 10% 15%,
+    /* hair ear */
+    radial-gradient(55% 60% at 0 40%, #000 15%, #0000 0),
+    radial-gradient(70% 35% at -2% 51%, var(--skin) 15%, #0000 0),
+    radial-gradient(75% 35% at -2% 49%, #000 15%, #0000 0),
+    var(--skin);
+  background-repeat: no-repeat;
+  border-radius: 100% / 120% 120% 100% 95%;
+  top: 14%;
+  left: 51%;
+  transform: translate(-50%, 0) rotate(-2deg);
+}
+
+.hobbit .head::before {
+  content: "";
+  top: 34%;
+  left: -15%;
+  width: 20%;
+  height: 40%;
+  background: 
+    radial-gradient(farthest-side at 80% 50%, var(--skin) 70%, var(--skin-dark) 0 99%, #0000 0) 75% 75% / 25% 25%,
+    radial-gradient(farthest-side at 20% 80%, var(--skin) 88%, var(--skin-dark) 0 99%, #0000 0) 65% 20% / 55% 45%,
+    var(--skin);
+  background-repeat: no-repeat;
+  border-radius:  100% / 140% 60% 80% 80%;
+  transform: rotate(-6deg);
+}
+
+.hobbit-2 .head::after {
+  content: "";
+  top: -25%;
+  left: -15%;
+  width: 130%;
+  height: 90%;
+  background: 
+    radial-gradient(50% 10% at 47% 24%, #000 90%, #0000 91%),
+    radial-gradient(20% 15% at 60% 14%, #000 90%, #0000 91%),
+    radial-gradient(circle at 76% 17%, #000 9%, #0000 0),
+    radial-gradient(circle at 24% 18%, #000 12%, #0000 0),
+    radial-gradient(circle at 38% 14%, #000 12%, #0000 0);
+  background-repeat: no-repeat;
+}
+
+.hobbit-2 .body {
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 80% 90% 30% 100% / 50% 90% 100% 30%;
+  abox-shadow: 0.5vmin -9vmin 0 -8vmin var(--cape);
+  background: 
+    /* cape */
+    radial-gradient(80% 40% at 47% 0, var(--cape) 30%, #0000 0),
+    radial-gradient(80% 40% at 44% 0, var(--cape-dark) 29%, #0000 0),
+    radial-gradient(80% 39% at 50% 0, var(--cape-dark) 29%, #0000 0),
+    radial-gradient(80% 39% at 52% 0, var(--cape) 29%, #0000 0),
+    radial-gradient(80% 39% at 54% -0.5%, var(--cape-dark) 29%, #0000 0),
+    radial-gradient(130% 100% at 100% 100%, #0000 96%, var(--cape) 0),
+    radial-gradient(150% 110% at 0% 100%, #0000 85%, var(--cape) 0),
+    /* jacket */
+    conic-gradient(at 0 50%, #0000 45deg, var(--jacket-dark) 0 47deg, #0000 0 120deg, var(--jacket-dark) 0 123deg, #0000 0) 75% 23% / 14% 15% no-repeat,
+    linear-gradient(110deg, #0000 50%, var(--jacket-dark) 0 53%, #0000 0) 78% 42% / 15% 20% no-repeat,
+    linear-gradient(70deg, #0000 50%, var(--jacket-dark) 0 52%, #0000 0) 20% 42% / 15% 20% no-repeat,
+    linear-gradient(85deg, var(--jacket) 40%, #0000 40.25%),
+    radial-gradient(50% 100% at 100% 35%, var(--jacket) 85%, #0000 85.25%),
+    /* shirt and vest */
+    radial-gradient(circle at 47.5% 16%, #0002 0.5vmin, #0000 0),
+    radial-gradient(circle at 48% 23%, #0002 0.5vmin, #0000 0),
+    radial-gradient(circle at 48% 30%, #0002 0.5vmin, #0000 0),
+    radial-gradient(circle at 48% 40%, orange 0.75vmin, #0000 0),
+    radial-gradient(circle at 48% 48%, orange 0.75vmin, #0000 0),
+    conic-gradient(at 48% 35%, #fff 20deg, gold 0 335deg, #fff 0);
+  background-repeat: no-repeat;
+}
+
+.hobbit-2 .body::before {
+  content: "";
+  width: 23%;
+  height: 30%;
+  background: 
+    radial-gradient(130% 110% at 60% 0, var(--skin-dark) 80%, #0000 0),
+    var(--skin);
+  left: 37%;
+  top: -21%;
+  border-radius: 100% / 40%;
+  transform: rotate(5deg);
+}
+
+.hobbit-2 .body::after {
+  content: "";
+  width: 28%;
+  height: 6.5%;
+  border-radius: 5vmin;
+  background: 
+    radial-gradient(circle at 15% 50%, #0004 10%, #0000 0),
+    radial-gradient(circle at 85% 50%, #0004 10%, #0000 0),
+    var(--cape-dark);
+  left: 49%;
+  top: 11.75%;
+  transform: translate(-50%, -50%) rotate(4deg);
+}
+
+.hobbit-2 .hair-back {
+  border-radius: 50% 30% 0 0 ;
+  width: 60%;
+  height: 48%;
+  background: 
+    radial-gradient(50% 50% at 14% 60%, #000 15%, #0000 0),
+    radial-gradient(50% 40% at 84% 55%, #000 18%, #0000 0),
+    linear-gradient(#000 0 0) 50% 50% / 75% 50% no-repeat,
+    radial-gradient(50% 40%, #000 99.99%, #0000 0) 50% 20% / 90% 50% repeat-y,
+    radial-gradient(farthest-side, #000 99.99%, #0000 0) 50% 0% / 90% 30% repeat-y,
+    #fff
+    ;
+  box-shadow: 0 0 0 10px #fff;
+  top: 10%;
+  left: 49%;
+  transform: translate(-50%, 0) rotate(1deg);
+  filter: blur(0.25vmin) contrast(20) saturate(0) contrast(400%);
+  mix-blend-mode: multiply
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="hobbit hobbit-1">
+        <div class="hair-back"></div>
+        <div class="body"></div>
+        <div class="head"></div>
+      </div>
+      <div class="hobbit hobbit-2">
+        <div class="hair-back"></div>
+        <div class="body"></div>
+        <div class="head"></div>
+      </div>
+      <h1 class="title">Hobbits' biggest contribution to Web Development</h1>
+      <q class="bubble">We've had grid, yes. What about sub-grid?</q>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>
