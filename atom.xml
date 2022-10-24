@@ -1146,4 +1146,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Is that...?</title>
+    <link href="https://comicss.art/?id=61" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/61/is-that.html"/>
+    <id>https://comicss.art/?id=61</id>
+    <updated>2022-10-24T00:00:00Z</updated>
+    <summary>New cartoon: Is that...?</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/61/is-that.png" alt="Comic with 9 panels. A character walks carrying a panel with a diagonal line. Another character asks 'Is that a linear-gradient or are you happy to see me?'. The first character replies: 'It is obviously a 135deg yellow and black linear-gradient.' After an awkward exchange, the second character ends shyly: 'then you are not happy to see me?'. The last panel reads 'Web Developers and inappropriate innuendos... oil and water'." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

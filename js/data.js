@@ -472,5 +472,13 @@ const posts = [
     vertical: true,
     title: "Hobbits and Web",
     ariaLabel: "Two cartoons showing two hobbits. The first cartoon is titled 'Hobbits biggest contribution to web development' and one hobbit saying: 'We have had grid, yes. What about sub-grid?'. The second cartoon is titled 'the reason the hobbits were expelled of the CSSWG', one of the hobbits says and one hobbit saying: 'We have had grid and sub-grid, yes. What about sub-sub-grid?'"
+  },
+  {
+    id: 61,
+    uid: "is-that",
+    horizontal: true,
+    boxes: 9,
+    title: "Is that...?",
+    ariaLabel: "Comic with 9 panels. A character walks carrying a panel with a diagonal line. Another character asks 'Is that a linear-gradient or are you happy to see me?'. The first character replies: 'It is obviously a 135deg yellow and black linear-gradient.' After an awkward exchange, the second character ends shyly: 'then you are not happy to see me?'. The last panel reads 'Web Developers and inappropriate innuendos... oil and water'."
   }
 ]
