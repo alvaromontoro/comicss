@@ -616,5 +616,15 @@
       <enclosure url="https://comicss.art/comics/61/is-that.png" length="305000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=62</guid>
+      <title>Clank!</title>
+      <link>https://comicss.art/?id=62</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/62/clank.png" length="205000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

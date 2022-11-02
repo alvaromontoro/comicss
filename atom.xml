@@ -1165,4 +1165,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Clank!</title>
+    <link href="https://comicss.art/?id=62" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/62/clank.html"/>
+    <id>https://comicss.art/?id=62</id>
+    <updated>2022-10-31T00:00:00Z</updated>
+    <summary>New cartoon: Clank!</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/62/clank.png" alt="Comic with 2 panels. Sometimes while cooking, a pan slips and falls, and I feel terrible thinking about how annoying the noise must be to the neighbors...Then I remember how they are web developers who use <div> as buttons, and the pan 'mysteriously' slips through my fingers and falls again." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

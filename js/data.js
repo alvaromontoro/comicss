@@ -480,5 +480,12 @@ const posts = [
     boxes: 9,
     title: "Is that...?",
     ariaLabel: "Comic with 9 panels. A character walks carrying a panel with a diagonal line. Another character asks 'Is that a linear-gradient or are you happy to see me?'. The first character replies: 'It is obviously a 135deg yellow and black linear-gradient.' After an awkward exchange, the second character ends shyly: 'then you are not happy to see me?'. The last panel reads 'Web Developers and inappropriate innuendos... oil and water'."
+  },
+  {
+    id: 62,
+    uid: "clank",
+    boxes: 2,
+    title: "Clank",
+    ariaLabel: "Comic with 2 panels. Sometimes while cooking, a pan slips and falls, and I feel terrible thinking about how annoying the noise must be to the neighbors...Then I remember how they are web developers who use <div> as buttons, and the pan 'mysteriously' slips through my fingers and falls again."
   }
 ]

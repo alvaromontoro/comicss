@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+article {
+  display: flex;
+  gap: 1vmin;
+  font-family: 'Comic Neue', sans-serif;
+  font-size: 2vmin;
+}
+
+section {
+  border: 0.5vmin solid;
+  height: 50vmin;
+  width: 48vmin;
+  position: relative;
+  box-sizing: border-box;
+  background: linear-gradient(#c9c8 10%, #c9c0 70%);
+  overflow: hidden;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.box {
+  background: #ffc;
+  border-bottom: 0.5vmin solid;
+  padding: 1vmin;
+}
+
+.person {
+  --skin: #fca;
+  width: 70%;
+  aspect-ratio: 0.5;
+  background: #f000;
+  top: 22%;
+  right: 1%;
+}
+
+.head {
+  width: 37%;
+  height: 25%;
+  border: 0.45vmin solid;
+  border-bottom: 0.5vmin solid;
+  border-left: 0.6vmin solid;
+  border-radius: 100% / 70% 60% 120% 100%;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(5deg);
+  background: 
+    var(--skin);
+}
+
+.eye {
+  width: 11%;
+  height: 11%;
+  background: #000;
+  border-radius: 50%;
+  left: 15%;
+  top: 45%;
+}
+
+.eye + .eye {
+  left: 50%;
+  transform: scaleX(-1);
+}
+
+.nose {
+  width: 20%;
+  height: 16%;
+  border-radius: 50%;
+  border: 0.25vmin solid #0000;
+  border-left: 0.4vmin solid;
+  border-top: 0.5vmin solid;
+  top: 58%;
+  left: 30%;
+  transform: rotate(-30deg);
+}
+
+.hair {
+  width: 35%;
+  height: 45%;
+  background: black;
+  border-radius: 50%;
+  left: 85%;
+  top: 10%;
+  transform: rotate(-8deg);
+}
+
+.hair::before {
+  content: "";
+  width: 370%;
+  height: 90%;
+  box-shadow: inset 2vmin -1vmin;
+  background:
+    conic-gradient(at 30% 5%, #0000 200deg, #000 0 240deg, #0000 0),
+    radial-gradient(100% 140% at 60% 90%, #000 60%, #0000 0);
+  border-radius: 50%;
+  transform: translate(-80%, -80%) rotate(10deg);
+}
+
+.hair::after {
+  content: "";
+  width: 20%;
+  height: 40%;
+  background: #000;
+  transform: rotate(20deg);
+  top: 60%;
+  left: 3%;
+}
+
+.ear {
+  width: 30%;
+  height: 30%;
+  border: 0.4vmin solid;
+  border-right: 0.5vmin solid;
+  border-left-color: #0000;
+  border-radius: 50%;
+  background: var(--skin);
+  background-clip: content-box;
+  top: 45%;
+  left: 87%;
+  transform: rotate(12deg);
+}
+
+.ear::after {
+  content: "";
+  width: 50%;
+  aspect-ratio: 1;
+  border: 0.4vmin solid;
+  border-left: 0.25vmin solid #0000;
+  border-radius: 50%;
+  top: 55%;
+  left: 5%;
+  transform: rotate(-20deg);
+  background: var(--skin);
+}
+.ear::before {
+  content: "";
+  width: 70%;
+  height: 70%;
+  border: 0.25vmin solid #0000;
+  border-top: 0.4vmin solid ;
+  border-left: 0.4vmin solid;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  transform: rotate(10deg);
+  background: linear-gradient(90deg, #7003, #0000) no-repeat;
+}
+
+.neck {
+  width: 15%;
+  height: 15%;
+  border-left: 0.5vmin solid;
+  border-right: 0.5vmin solid;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, 0) skewY(4deg);
+  background: 
+    radial-gradient(90% 95% at 40% 0, #700, #7000),
+    var(--skin);
+}
+
+.body {
+  width: 60%;
+  height: 50%;
+  border: 0.5vmin solid;
+  left: 52%;
+  top: 31.5%;
+  transform: translateX(-50%) skewY(-1deg);
+  border-radius: 120% / 70% 70% 50% 50%;
+  background:
+    radial-gradient(100% 50% at 47% 2%, var(--skin) 15%, #000 15.25% 17%, #0000 17.25% 19%, #000 19.25% 21%, #fff 21.25%),
+    repeating-conic-gradient(at 47% -2%, #eee 0 3%, #000 0 4%)
+    ;
+  background-repeat: no-repeat;
+}
+
+.text {
+  font-size: 1.5vmin;
+  top: 50%;
+  left: 35%;
+}
+
+.clank {
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: -0.125vmin;
+  font-weight: 900;
+  font-size: 3.5vmin;
+  bottom: 10%;
+  left: 5%;
+  transform: rotate(-15deg);
+  z-index: 1;
+}
+
+.clank::before,
+.clank::after {
+  content: "CLANK!!";
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  color: #0003;
+  top: -0.25vmin;
+}
+
+.clank::after {
+  top: 0.25vmin;
+  transform: translateX(-50%) rotate(5deg);
+}
+
+.sleeve-2 {
+  width: 22%;
+  height: 20%;
+  border: 0.5vmin solid;
+  border-radius: 0% 200% 100% 100% / 0 140% 10% 10%;
+  background: #fff;
+  top: 35%;
+  left: 65%;
+  transform: rotate(12deg);
+}
+
+.sleeve-2::before {
+  content:"";
+  width: 0.7vmin;
+  height: 40%;
+  background: #fff;
+  top:0;
+  left: 0;
+  transform: translateX(-90%)
+}
+
+.sleeve-1 {
+  width: 22%;
+  height: 20%;
+  border: 0.5vmin solid;
+  border-radius: 200% 0 100% 100% / 140% 0 10% 10%;
+  background: #fff;
+  top: 33%;
+  left: 17%;
+  transform: rotate(12deg);
+}
+
+.arm {
+  width: 16%;
+  height: 20%;
+  border-left: 0.5vmin solid;
+  border-right: 0.5vmin solid;
+  background: var(--skin);
+
+  top: 48%;
+}
+
+.arm-1 {
+  left: 16%;
+    transform: rotate(10deg);
+}
+
+.arm-2 {
+  transform: rotate(15deg);
+  top: 48%;
+  left: 61.3%;
+  transform: rotate(15deg);
+}
+
+.drop {
+  width: 25%;
+  aspect-ratio: 1;
+  background: #beeeef;
+  border-radius: 0 50% 50% 50%;
+  top: 20%;
+  left: 85%;
+  transform: rotate(45deg);
+  border: 0.3vmin solid;
+}
+
+/* panel 1 specific */
+.panel-1 .eyebrow {
+  width: 30%;
+  height: 20%;
+  border-radius: 50%;
+  border: 0.25vmin solid #0000;
+  border-top: 0.5vmin solid;
+  top: 35%;
+  left: 4%;
+  transform: rotate(10deg);
+}
+
+.panel-1 .eyebrow + .eyebrow {
+  left: 43%;
+  transform: scaleX(-1);
+}
+
+.panel-1 .mouth {
+  width: 35%;
+  height: 12%;
+  background: 
+    /*     repeating-linear-gradient(90deg, #000 0 3%, #0000 0 24%), */
+    linear-gradient(#0000 42%, #000 43% 64%, #a00 60%),
+    #fff;
+  border: 0.4vmin solid;
+  border-radius: 0% 50% 50% 30%;
+  top: 77%;
+  left: 47%;
+  transform: translate(-50%, 0) rotate(-3deg) skew(6deg);
+
+}
+
+.panel-1 .eye {
+  width: 12%;
+}
+.panel-1 .sleeve-2 {
+  transform: rotate(-10deg);
+  clip-path: polygon(-5% 20%, 0 20%, 90% 10%, 100% 10%, 105% 100%, 0 100%);
+  top: 33%;
+  left: 63.25%;
+}
+
+.panel-1 .sleeve-2::before { width: 1vmin; }
+
+.panel-1 .arm-2 {
+  transform: rotate(-9deg);
+  left: 72%;
+}
+
+/* panel 2 specific */
+.panel-2 .head {
+  background: 
+    linear-gradient(#f004, #f000 50%),
+    var(--skin);
+}
+
+.panel-2 .eye {
+  clip-path: polygon(0% 10%, 100% 20%, 100% 100%, 0% 100%)
+}
+
+.panel-2 .mouth {
+  width: 35%;
+  height: 15%;
+  border: 0.25vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-radius: 50%;
+  top: 80%;
+  left: 25%;
+}
+
+.panel-2 .clank {
+  font-size: 5.5vmin;
+  bottom: 13%;
+}
+
+.panel-2 .clank::before {
+  transform: translateX(-50%) rotate(-3deg) scale(1.1);
+}
+
+.panel-2 .eyebrow {
+  width: 23%;
+  height: 4%;
+  background: radial-gradient(110% 100% at 0 100%, #000 99.99%, #0000 0);
+  top: 38%;
+  left: 8%;
+  transform: rotate(10deg);
+}
+
+.panel-2 .eyebrow + .eyebrow {
+  left: 47%;
+  transform: scaleX(-1) rotate(10deg);
+}
+    </style>
+  </head>
+  <body>
+    <article role="img">
+      <section class="panel-1">
+        <div class="box">Sometimes while cooking, a pan slips and falls, and I feel terrible thinking about how annoying the noise must be to the neighbors.</div>
+        <div class="text" aria-hidden="true">Ooops!</div>
+        <div class="clank" aria-hidden="true">CLANK!</div>
+        <div class="person">
+          <div class="arm arm-1"></div>
+          <div class="sleeve-1"></div>
+          <div class="body"></div>
+          <div class="arm arm-2"></div>
+          <div class="sleeve-2"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="hair"></div>
+            <div class="ear"></div>
+    <!--         <div class="drop"></div> -->
+          </div>
+        </div>
+      </section>
+      <section class="panel-2">
+        <div class="box">...Then I remember they are web developers who use &lt;div&gt; as buttons, and the pan "mysteriously" slips through my fingers and falls again.</div>
+        <div class="text" aria-hidden="true">. . .</div>
+        <div class="clank">CLANK!!</div>
+        <div class="person">
+          <div class="arm arm-1"></div>
+          <div class="sleeve-1"></div>
+          <div class="body"></div>
+          <div class="arm arm-2"></div>
+          <div class="sleeve-2"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="hair"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>
