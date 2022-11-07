@@ -487,5 +487,12 @@ const posts = [
     boxes: 2,
     title: "Clank",
     ariaLabel: "Comic with 2 panels. Sometimes while cooking, a pan slips and falls, and I feel terrible thinking about how annoying the noise must be to the neighbors...Then I remember how they are web developers who use <div> as buttons, and the pan 'mysteriously' slips through my fingers and falls again."
+  },
+  {
+    id: 63,
+    uid: "miss-me-yet",
+    boxes: 2,
+    title: "Miss me yet?",
+    ariaLabel: "Comic with 2 panels. Cartoon with two panels. In the first one the Internet Explorer logo is wearing sunglasses and holding a margarita while saying 'miss me yet?'. In the second panel there's a big yell 'NO!' and Safari logo small in a corner retorts: 'maybe a little... just because they call me the new IE'"
   }
 ]

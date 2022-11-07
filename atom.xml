@@ -1184,4 +1184,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Miss me yet?</title>
+    <link href="https://comicss.art/?id=63" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/63/miss-me-yet.html"/>
+    <id>https://comicss.art/?id=63</id>
+    <updated>2022-11-07T00:00:00Z</updated>
+    <summary>New cartoon: Miss me yet?</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/63/miss-me-yet.png" alt="Comic with 2 panels. Cartoon with two panels. In the first one the Internet Explorer logo is wearing sunglasses and holding a margarita while saying 'miss me yet?'. In the second panel there's a big yell 'NO!' and Safari logo small in a corner retorts: 'maybe a little... just because they call me the new IE'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

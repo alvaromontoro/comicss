@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+article {
+  font-size: 0.75vmin;
+  border: 0.5em solid;
+  width: 70em;
+  aspect-ratio: 7 / 9;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(#c9c8, #c9c0);
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', Helvetica, sans-serif;
+  margin: 0.5em;
+}
+
+article *,
+article *::before,
+article *::after {
+  box-sizing: border-box;
+  position: absolute;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: -7%;
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  top: -0.75em;
+  right: 10%;
+  font-size: 5em;
+  background: #ff8;
+  border-radius: 50%;
+  padding: 1em 1em 0.6em 1em;
+}
+
+.text::before {
+  content: "";
+  width: 30%;
+  height: 120%;
+  border-radius: 0 0 100% 0;
+  right: 20%;
+  top: 85%;
+  box-shadow: inset -0.25em 0.2em #ff8;
+}
+
+.mouth {
+  width: 20%;
+  height: 6%;
+  background: 
+    linear-gradient(#0000 45%,  #000 0 55%, #a00 0),
+    white;
+  border: 0.5em solid;
+  border-radius: 50% / 0 0 100% 100%;
+  top: 61%;
+  left: 45%;
+  transform: translate(-50%, -50%) rotate(8deg);
+}
+
+.arm-2 {
+  width: 12%;
+  height: 25%;
+  border: 1em solid #0000;
+  border-left: 1em solid;
+  border-radius: 50%;
+  top: 63%;
+  left: 22.5%;
+  transform: rotate(7deg);
+}
+
+.arm-2::after {
+  content: "";
+  width: 65%;
+  aspect-ratio: 1;
+  background: #000;
+  border-radius: 50%;
+  top: 84%;
+  left: 13%;
+}
+
+.arm-1 {
+  width: 20%;
+  height: 18%;
+  border: 1em solid;
+  border-radius: 50%;
+  border-top-color: #0000;
+  border-right-color: #0000;
+  transform: rotate(-40deg);
+  top: 58%;
+  left: 70%;
+}
+
+.arm-1::after {
+  content: "";
+  width: 40%;
+  aspect-ratio: 1;
+  background: #000;
+  border-radius: 50%;
+  left: 80%;
+  top: 70%;
+}
+
+.drink {
+  width: 17%;
+  height: 10%;
+  background: #f004;
+  left: 91.5%;
+  top: 58.5%;
+  transform: translate(-50%, -50%);
+  background: 
+    conic-gradient(from -0.1turn at 50% 100%, #cf0 0.2turn, #0000 0) 50% 70% / 90% 50%,
+    conic-gradient(from -0.1turn at 50% 100%, #aededf 0.2turn, #0000 0);
+  background-repeat: no-repeat;
+}
+
+.drink::before {
+  content: "";
+  width: 7%;
+  height: 80%;
+  background: #aededf;
+  top: 100%;
+  left: 50%;
+  transform: translatE(-50%, -5%);
+}
+
+.drink-front {
+  background: #aededf;
+  width: 6%;
+  height: 1%;
+  left: 91.5%;
+  top: 71%;
+  transform: translateX(-50%);
+}
+
+.sunglasses {
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 15%;
+  background: 
+    linear-gradient(#000 0 0) 50% 34% / 20% 8% no-repeat,
+    linear-gradient(#000 0 0) 3% 22% / 20% 10% no-repeat,
+    linear-gradient(#000 0 0) 97% 22% / 20% 10% no-repeat,
+    #fff;
+  filter: blur(1em) contrast(30);
+  mix-blend-mode: darken;
+}
+
+.sunglasses::before,
+.sunglasses:after {
+  content: "";
+  width: 40%;
+  height: 80%;
+  background: #000;
+  border-radius: 100% / 20% 20% 120% 120%;
+  top: 10%;
+  left: 7%;
+}
+
+.sunglasses:after {
+  left: 53%;
+}
+
+.sunglasses-reflection {
+  width: 6%;
+  height: 4.5%;
+  border-radius: 100% 50% 50% 50%;
+  top: 42.5%;
+  left: 31%;
+  box-shadow: inset 1em 0.5em #fff;
+  background: radial-gradient(circle closest-side at 70% 60%, #fff 70%, #0000 0);
+  filter: drop-shadow(16.25em 0 #fff);
+}
+
+.leg {
+  width: 12%;
+  height: 34%;
+  border-radius: 50%;
+  border: 0.5em solid #0000;
+  border-left: 1.5em solid;
+  border-top: 1em solid #0000;
+  bottom: -4%;
+  left: 36%;
+  transform: rotate(3deg);
+}
+
+.leg::before {
+  content: "";
+  width: 170%;
+  height: 15%;
+  border-radius: 50%;
+  background: #000;
+  top: 83%;
+  transform: rotate(-3deg) translateX(-90%);
+}
+
+.leg + .leg {
+  left: 49.5%;
+  transform: scaleX(-1) rotate(3deg);
+}
+
+.yell {
+  --c: #c8f; #8cf; #af5;
+  width: 95%;
+  height: 80%;
+  top: 1.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: grid;
+  place-items: center;
+  font-size: 35em;
+  font-family: 'Comic Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: -0.1em;
+  font-weight: 900;
+  background-repeat: no-repeat;
+}
+
+.yell::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 55% 8%, 59% 1%, 60% 11%, 74% 0%, 69% 13%, 77% 6%, 76% 13%, 90% 4%, 85% 13%, 95% 12%, 89% 17%, 93% 17%, 90% 19%, 99% 19%, 91% 25%, 99% 25%, 91% 31%, 96% 32%, 89% 35%, 98% 37%, 94% 40%, 98% 42%, 93% 47%, 98% 50%, 91% 51%, 98% 55%, 90% 56%, 99% 66%, 88% 62%, 99% 79%, 85% 73%, 88% 80%, 82% 78%, 89% 90%, 79% 87%, 75% 98%, 63% 86%, 60% 97%, 56% 88%, 50% 99%, 47% 87%, 39% 97%, 37% 86%, 24% 98%, 31% 84%, 16% 92%, 22% 82%, 6% 85%, 18% 75%, 7% 78%, 15% 74%, 2% 73%, 12% 65%, 2% 61%, 11% 54%, 2% 53%, 10% 52%, 1% 48%, 10% 44%, 2% 41%, 14% 39%, 2% 31%, 14% 34%, 5% 26%, 14% 26%, 1% 14%, 17% 21%, 6% 3%, 23% 18%, 25% 4%, 30% 16%, 32% 4%, 35% 15%, 39% 6%, 43% 12%, 46% 5%, 48% 8%, 50% 0);
+  background: 
+    var(--c);
+  display: grid;
+  place-items: center;
+  z-index: -1;
+}
+
+.yell::before,
+.yell::after {
+  content: "NO!";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(4deg) scale(1.1);
+  text-shadow: 0.02em 0.02em #0002;
+  color: #0002;
+}
+
+.yell::before {
+  transform: translate(-50%, -50%) rotate(-6deg) scale(1.1);
+  text-shadow: -0.02em 0.02em #0002;
+  color: #0002;
+}
+
+.safari-whisper {
+  bottom: 3%;
+  right: 25%;
+  font-size: 2em;
+  text-align: right;
+}
+
+.safari-logo {
+  bottom: -2%;
+  right: 7%;
+}
+
+.safari-mouth {
+  width: 2%;
+  height: 1%;
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  bottom: 1%;
+  right: 13%;
+}
+
+.safari-mouth::before,
+.safari-mouth::after {
+  content: "";
+  width: 200%;
+  height: 150%;
+  background: red;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) translate(-70%, -100%);
+  filter: blur(1em);
+  opacity: 0.75;
+}
+
+.safari-mouth::after {
+  transform: translate(-50%, -50%) translate(50%, -100%);
+}
+
+.safari-eyes {
+  width: 2.5%;
+  height: 1%;
+  background: black;
+  border-radius: 50% / 0 0 100% 100%;
+  bottom: 3.5%;
+  right: 11%;
+  box-shadow: -3em 0;
+}
+
+.safari-browser {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Internet Explorer */
+.ie-logo {
+  --c: #1EBBEE;
+  --s: 45em;
+  width: var(--s);
+  aspect-ratio: 1;
+  position: absolute;
+  left: 45%;
+  top: 25%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+  display: inline-block;
+  mix-blend-mode: darken;
+}
+
+.ie-logo::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:
+    linear-gradient(#0000 57.5%, #fff 0 66%, #0000 0) 100% 50% / 25% 100% no-repeat,
+    radial-gradient(135% 130% at 50% 100%, #fff 30%, #0000 30.25%) 63% 0% / 50% 46% no-repeat,
+    radial-gradient(135% 145% at 50% 0%, #fff 30%, #0000 30.25%) 64% 100% / 50% 42.5% no-repeat,
+    radial-gradient(88% 88% at 56% 52%,  var(--c) 50%, #0000 50.25%)
+    ;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 75%, 10% 50%);
+}
+
+.ie-logo::after {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  width: 115%;
+  height: 44%;
+  border: calc(var(--s) * 0.04) solid var(--c);
+  border-top: calc(var(--s) * 0.1) solid var(--c);
+  border-bottom: calc(var(--s) * 0.01) solid #0000;
+  border-left: calc(var(--s) * 0.06) solid var(--c);
+border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  box-shadow: calc(var(--s) * -0.25) calc(var(--s) * -0.055) #fff;
+}
+
+/* Safari */
+.safari-logo {
+  --s: 10em;
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(#2fa4d4 10%, #277ec2 50% 65.5%, #0000 65.66%),
+    linear-gradient(#f2f2f2, #dad9da)
+    ;
+  background-color: #f002;
+  position: absolute;
+}
+
+.safari-logo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    /* circle cutting long lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57%, #0000 57.25%),
+    /* long lines */
+    linear-gradient(#0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(11.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(22.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(33.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(45deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(56.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(67.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(78.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(90deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(101.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(112.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(123.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(135.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(146.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(157.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(168.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    /* circle cutting short lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57% 63.5%, #0000 63.75%),
+    /* short lines */
+    linear-gradient(5.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(16.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(28.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(39.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(50.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(61.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(73.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(84.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(95.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(106.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(118.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(129.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(140.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(151.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(163.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(174.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0)
+    ;
+}
+
+.safari-logo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 13%;
+  height: 89%;
+  background:
+    linear-gradient(to bottom right, #0000 50%, #ff2d3a 0) 0 0,
+    linear-gradient(to bottom left, #0000 50%, #dd0017 0) 100% 0,
+    linear-gradient(to top right, #0000 50%, #dbdadb 0) 0 100%,
+    linear-gradient(to top left, #0000 50%, #abaaab 0) 100% 100%
+    ;
+  background-size: 50.125% 50.125%;
+  background-repeat: no-repeat;
+}
+    </style>
+  </head>
+  <body>
+    <main>
+      <article role="img" aria-label="the IE logo with sunglasses saying 'miss me yet?'">
+        <div class="text">Miss me yet?</div>
+        <section>
+          <div class="leg"></div>
+          <div class="leg"></div>
+          <div class="drink"></div>
+          <div class="arm-1"></div>
+          <div class="drink-front"></div>
+          <div class="arm-2"></div>
+          <div class="ie-logo"></div>
+          <div class="mouth"></div>
+          <div class="sunglasses"></div>
+          <div class="sunglasses-reflection"></div>
+        </section>
+      </article>
+      <article role="img">
+        <div class="yell">NO!</div>
+        <div class="safari-browser">
+          <div class="safari-whisper">...Maybe a little...<br/><br/>But only because they<br/>call me the new IE...</div>
+          <div class="safari-logo"></div>
+          <div class="safari-mouth"></div>
+          <div class="safari-eyes"></div>
+        </div>
+      </article>
+    </main>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>
