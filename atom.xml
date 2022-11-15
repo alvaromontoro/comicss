@@ -1203,4 +1203,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Cubic Bezier Life</title>
+    <link href="https://comicss.art/?id=64" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/64/cubic-bezier-life.html"/>
+    <id>https://comicss.art/?id=64</id>
+    <updated>2022-11-14T00:00:00Z</updated>
+    <summary>New cartoon: Cubic Bezier Life</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/64/cubic-bezier-life.png" alt="A cartoonish character says 'Life is a like a cubic Bézier curve: sometimes it goes up, sometimes it goes down, sometimes it goes up & down... but it always moves forward.'. A smaller version of it pops up outside the panel saying 'Unless you change the value of animation-direction... then things can get real messy.'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

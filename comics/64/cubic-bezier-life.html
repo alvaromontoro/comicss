@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+article {
+  position: relative;
+  font-family: 'Comic Neue', 'Comic Sans Ms', 'Comic Sans', Comic, Helvetica, sans-serif;
+}
+
+section {
+  font-size: 1vmin;
+  width: 45em;
+  aspect-ratio: 1;
+  border: 0.75em solid;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(#c9c9, #c9c0);
+  display: inline-block;
+  float: left;
+}
+
+section div, 
+section div::before, 
+section div::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.text {
+  font-size: 2.5em;
+  width: 80%;
+  text-align: center;
+  top: 5%;
+  right: 3%;
+}
+
+.text::before {
+  content: "";
+  width: 12%;
+  height: 40%;
+  border-radius: 0 0 100% 0;
+  box-shadow: inset -0.4vmin 0;
+  top: 105%;
+  left: 25%;
+}
+
+.person {
+  bottom: -4%;
+  left: 10%;
+  width: 10em;
+  height: 20em;
+  transform-origin: 50% 100%;
+  transform: scale(1.25);
+}
+
+.person .head {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 30%;
+  background: white;
+  border: 0.4em solid;
+  border-radius: 95% 90% 110% 95%/90% 110% 90% 100%;
+}
+
+.person .head .eye {
+  width: 10%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, 0);
+}
+.person .head .eye + .eye {
+  left: 70%;
+  transform:  translate(-50%, 0) scaleX(-1);
+}
+.person .head .mouth {
+  width: 30%;
+  aspect-ratio: 0.75;
+  border: 0.4em solid #0000;
+  border-bottom: 0.4em solid;
+  border-radius: 50%;
+  top: 20%;
+  left: 55%;
+  transform: translateX(-50%);
+}
+.person .neck {
+  width: 12%;
+  height: 25%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+  border: 0.4em solid;
+}
+.person .body {
+  width: 45%;
+  height: 80%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: conic-gradient(at 50% -35%, #0000 173.5deg, #000 174deg 185.5deg, #0000 186deg);
+}
+
+.person .drop {
+  width: 25%;
+  aspect-ratio: 1;
+  background: #beeeef;
+  border-radius: 0 50% 50% 50%;
+  border: 0.3em solid;
+  transform: rotate(35deg);
+  top: 30%;
+  left: 0%;
+}
+
+section:nth-child(2) {
+  background: none;
+  border: 0;
+}
+
+section:nth-child(2) .person {
+  transform: scale(0.8) rotate(30deg);
+  left: -16%;
+  bottom: 4%;
+}
+
+section:nth-child(2) .head {
+  transform: translateX(-50%) rotate(-20deg);
+}
+
+section:nth-child(2) .text {
+  font-size: 1.5em;
+  left: 5%;
+  top: 50%;
+  width: 50%;
+}
+
+section:nth-child(2) .head .mouth {
+  background: black;
+  width: 10%;
+  top: 68%;
+  left: 50%;
+  aspect-ratio: 1;
+  border: 0 solid;
+}
+
+section:nth-child(2) .head .eye {
+  clip-path: polygon(0 30%, 100% 20%, 100% 100%, 0 100%);
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+         <div class="person person-1">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="text">
+          Life is a like a cubic B&eacute;zier curve: sometimes it goes up, sometimes it goes down, sometimes it goes up &amp; down... <b>but it always moves forward</b>.
+        </div>
+      </section>
+      <section>
+         <div class="person person-1">
+          <div class="neck"></div>
+          <div class="head">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+            <div class="drop"></div>
+          </div>
+          <div class="body"></div>
+        </div>
+        <div class="text">
+          Unless you change the value of<br/> <code>animation-direction</code>...<br/>Then $#&amp;@ can get real messy.
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
+  </body>
+  </html>

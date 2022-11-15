@@ -636,5 +636,15 @@
       <enclosure url="https://comicss.art/comics/63/miss-me-yet.png" length="265000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=64</guid>
+      <title>Cubic Bezier Life</title>
+      <link>https://comicss.art/?id=64</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/64/cubic-bezier-life.png" length="142000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

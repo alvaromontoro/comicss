@@ -494,5 +494,12 @@ const posts = [
     boxes: 2,
     title: "Miss me yet?",
     ariaLabel: "Comic with 2 panels. Cartoon with two panels. In the first one the Internet Explorer logo is wearing sunglasses and holding a margarita while saying 'miss me yet?'. In the second panel there's a big yell 'NO!' and Safari logo small in a corner retorts: 'maybe a little... just because they call me the new IE'"
+  },
+  {
+    id: 64,
+    uid: "cubic-bezier-life",
+    boxes: 2,
+    title: "Cubic Bézier Life",
+    ariaLabel: "A cartoonish character says 'Life is a like a cubic Bézier curve: sometimes it goes up, sometimes it goes down, sometimes it goes up & down... but it always moves forward.'. A smaller version of it pops up outside the panel saying 'Unless you change the value of animation-direction... then $#&% can get real messy.'"
   }
 ]
