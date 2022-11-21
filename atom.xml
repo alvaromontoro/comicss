@@ -1222,4 +1222,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Image Format Decision Tree</title>
+    <link href="https://comicss.art/?id=64" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/65/image-decision-tree.html"/>
+    <id>https://comicss.art/?id=65</id>
+    <updated>2022-11-21T00:00:00Z</updated>
+    <summary>New cartoon: Image Format Decision Tree</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/65/image-decision-tree.png" alt="A decision tree to pick the best file format for your project. Most of the options have been scratched and the only that remains is a handwritten question: 'Is it a cat video?' if yes, GIF; if not, PNG if you need transparency or JPG if you don't. Ignore the rest of formats." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

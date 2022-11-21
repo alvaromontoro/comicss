@@ -501,5 +501,13 @@ const posts = [
     boxes: 2,
     title: "Cubic Bézier Life",
     ariaLabel: "A cartoonish character says 'Life is a like a cubic Bézier curve: sometimes it goes up, sometimes it goes down, sometimes it goes up & down... but it always moves forward.'. A smaller version of it pops up outside the panel saying 'Unless you change the value of animation-direction... then $#&% can get real messy.'"
+  },
+  {
+    id: 65,
+    uid: "image-decision-tree",
+    boxes: 1,
+    vertical: true,
+    title: "Image Format Decision Tree",
+    ariaLabel: "A decision tree to pick the best file format for your project. Most of the options have been scratched and the only that remains is a handwritten question: 'Is it a cat video?' if yes, GIF; if not, PNG if you need transparency or JPG if you don't. Ignore the rest of formats."
   }
 ]
