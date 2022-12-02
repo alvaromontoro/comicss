@@ -1174,7 +1174,7 @@
     <summary>New cartoon: Clank!</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="https://comicss.art/comics/62/clank.png" alt="Comic with 2 panels. Sometimes while cooking, a pan slips and falls, and I feel terrible thinking about how annoying the noise must be to the neighbors...Then I remember how they are web developers who use <div> as buttons, and the pan 'mysteriously' slips through my fingers and falls again." /></p>
+        <p><img src="https://comicss.art/comics/62/clank.png" alt="Comic with 2 panels. Sometimes while cooking, a pan slips and falls, and I feel terrible thinking about how annoying the noise must be to the neighbors...Then I remember how they are web developers who use div as buttons, and the pan 'mysteriously' slips through my fingers and falls again." /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
@@ -1212,7 +1212,7 @@
     <summary>New cartoon: Cubic Bezier Life</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="https://comicss.art/comics/64/cubic-bezier-life.png" alt="A cartoonish character says 'Life is a like a cubic Bézier curve: sometimes it goes up, sometimes it goes down, sometimes it goes up & down... but it always moves forward.'. A smaller version of it pops up outside the panel saying 'Unless you change the value of animation-direction... then things can get real messy.'" /></p>
+        <p><img src="https://comicss.art/comics/64/cubic-bezier-life.png" alt="A cartoonish character says 'Life is a like a cubic Bézier curve: sometimes it goes up, sometimes it goes down, sometimes it goes up &amp; down... but it always moves forward.'. A smaller version of it pops up outside the panel saying 'Unless you change the value of animation-direction... then things can get real messy.'" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>
@@ -1224,7 +1224,7 @@
   </entry>
   <entry>
     <title>Image Format Decision Tree</title>
-    <link href="https://comicss.art/?id=64" />
+    <link href="https://comicss.art/?id=65" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/65/image-decision-tree.html"/>
     <id>https://comicss.art/?id=65</id>
     <updated>2022-11-21T00:00:00Z</updated>
