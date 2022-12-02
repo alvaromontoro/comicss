@@ -25,10 +25,193 @@
     <link rel="shortcut icon" href="/favicon.png" />
 
     <style>
+@media (prefers-color-scheme: dark) {
+  body {
+    background: black;
+  }
+}
 
     </style>
   </head>
   <body>
+    <svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+      <title id="title">Decision Chart: What Image Format Should I Use?</title>
+      <desc id="desc">A decision chart with different question to decide what image format should be picked when preparing a site.</desc>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&amp;family=Indie+Flower&amp;display=swap');
+        .yes { 
+          fill: #192;
+          stroke: #192;
+        }
+        .no { 
+          fill: #45c; 
+          stroke: #45c;
+        }
+        .line { 
+          fill: none;
+          stroke-width: 2;
+        }
+    
+        .final { fill: #fc5; }
+        text {
+          font-family: Helvetica, Arial, sans-serif;
+          letter-spacing: -1px;
+          font-weight: 200;
+          fill: #000;
+        }
+        text.title {
+          font-family: 'Bowlby One', Arial, Helvetica sans-serif;
+          text-transform: uppercase;
+          stroke: black;
+          stroke-width: 1.5;
+          fill: #fff;
+        }
+        text.answer {
+          font-family: 'Courier New', Courier, monospace, monospace;
+          font-weight: 400;
+          fill: #fff;
+        }
+        text.handwritten {
+          fill: red !important;
+          font-family: 'Indie Flower','Comic Neue','Comic Sans MS', 'Comic Sans', 'Comic', Helvetica, serif;
+          font-weight: bold;
+          stroke: red;
+        }
+        circle {
+          r: 21;
+        }
+        
+        .dark {
+          stroke: #000;
+          fill: #0001;
+        }
+        
+    @media (prefers-color-scheme: dark) {
+      text {
+        fill: white;
+      }
+      
+      .dark {
+        fill: #fff2;
+        stroke: #fff2;
+      }
+    }
+    
+      </style>
+    
+      <path stroke-width="1.5" stroke="#000" d="M600,210 600,260" class="dark" />
+      
+      <svg dominant-baseline="middle" text-anchor="middle" font-size="20">
+        <svg id="title" font-size="40" stroke="black" fill="white" viewBox="0 0 900 1200">
+          <rect x="160" y="10" width="580" height="200" rx="20" ry="20" class="dark"></rect>
+          <text class="title" x="50%" y="60">What Image Format</text>
+          <text class="title" x="50%" y="110">should you pick</text>
+          <text class="title" x="50%" y="160">for your project?</text>
+        </svg>
+    
+        <svg id="decision-1" viewBox="0 0 900 1200">
+          <text x="50%" y="280">is it for the web?</text>
+          <path class="line yes" d="M370,280 C300,280 300,280 250,280 200,280 200,300 200,350 M200,350 190,330 M200,350 210,330" />
+          <circle class="yes" cx="310" cy="280" />
+          <text class="answer" x="310" y="280" font-size="16">Yes</text>
+          <path class="line no" d="M530,280 C600,280 600,280 650,280 700,280 700,300 700,350 M700,350 690,330 M700,350 710,330" />
+          <circle class="no" cx="590" cy="280" />
+          <text class="answer" x="590" y="280" font-size="16">No</text>
+        </svg>
+        
+        <svg id="decision-2" viewBox="0 0 900 1200">
+          <text x="200" y="375">does it move?</text>
+          <path class="line yes" d="M160,395 C160,450 160,450 160,450 160,470 160,500 120,500 80,500 80,530 80,550 M80,550 70,530 M80,550 90,530" />
+          <circle class="yes" cx="160" cy="435" />
+          <text class="answer" x="160" y="435" font-size="16">Yes</text>
+          <path class="line no" d="M230,395 C230,450 230,450 230,450 230,470 230,500 290,500 360,500 350,530 350,650 M350,650 340,630 M350,650 360,630" />
+          <circle class="no" cx="230" cy="435" />
+          <text class="answer" x="230" y="435" font-size="16">No</text>
+        </svg>
+        
+        <svg id="decision-2" x="500" viewBox="0 0 900 1200">
+          <text x="200" y="375">for professional photography?</text>
+          <path class="line yes" d="M160,395 C160,450 160,450 160,450 160,470 160,500 120,500 80,500 80,530 80,550 M80,550 70,530 M80,550 90,530" />
+          <circle class="yes" cx="160" cy="435" />
+          <text class="answer" x="160" y="435" font-size="16">Yes</text>
+          <path class="line no" d="M230,395 C230,450 230,450 230,450 230,470 230,500 270,500 340,500 330,530 330,550 M330,550 320,530 M330,550 340,530" />
+          <circle class="no" cx="230" cy="435" />
+          <text class="answer" x="230" y="435" font-size="16">No</text>
+          <text class="title" x="80" y="590" font-size="40">TIFF</text>
+        </svg>
+        
+        <svg x="-120" y="200" id="decision-2" viewBox="0 0 900 1200">
+          <text x="200" y="375">is it vectorial?</text>
+          <path class="line yes" d="M160,395 C160,450 160,450 160,450 160,470 160,500 120,500 80,500 80,530 80,550 M80,550 70,530 M80,550 90,530" />
+          <circle class="yes" cx="160" cy="435" />
+          <text class="answer" x="160" y="435" font-size="16">Yes</text>
+          <path class="line no" d="M230,395 230,550 M230,550 220,530 M230,550 240,530"/>
+          <circle class="no" cx="230" cy="435" />
+          <text class="answer" x="230" y="435" font-size="16">No</text>
+          <text class="title" x="80" y="590" font-size="40">SVG</text>
+          <text class="title" x="230" y="590" font-size="40">GIF</text>
+        </svg>
+        
+        <svg x="635" y="200" id="decision-2" viewBox="0 0 900 1200">
+          <text x="200" y="375">are you using MS Paint?</text>
+          <path class="line yes" d="M160,395 C160,450 160,450 160,450 160,470 160,500 120,500 80,500 80,530 80,550 M80,550 70,530 M80,550 90,530" />
+          <circle class="yes" cx="160" cy="435" />
+          <text class="answer" x="160" y="435" font-size="16">Yes</text>
+          <path class="line no" d="M230,395 C230,395 230,640 230,640 230,660 210,690 180,690 200,690 0,690 0,690 -30,690 -40,700 -40,730 -40,730 -40,750 -40,752 M-40,752 -30,732M-40,752 -50,732"/>
+          <circle class="no" cx="230" cy="435" />
+          <text class="answer" x="230" y="435" font-size="16">No</text>
+          <text class="title" x="80" y="590" font-size="40">BMP</text>
+        </svg>
+        
+        <svg id="decision-2" x="155" y="300" viewBox="0 0 900 1200">
+          <text x="200" y="375">is file size important?</text>
+          <path class="line yes" d="M160,395 C160,450 160,430 160,470 160,550 160,550 20,550 -50,550 -50,570 -50,620 M-50,620 -60,600 M-50,620 -40,600" />
+          <circle class="yes" cx="160" cy="435" />
+          <text class="answer" x="160" y="435" font-size="16">Yes</text>
+          <path class="line no" d="M230,395 C230,450 230,450 230,450 230,470 220,500 300,500 380,500 370,530 370,650 M370,650 360,630 M370,650 380,630" />
+          <circle class="no" cx="230" cy="435" />
+          <text class="answer" x="230" y="435" font-size="16">No</text>
+        </svg>
+        
+        <svg id="decision-2" x="-90" y="570" viewBox="0 0 900 1200">
+          <text x="200" y="375">is support important?</text>
+          <path class="line yes" d="M160,395 C160,450 160,450 160,450 160,470 160,490 120,490 80,490 80,515 80,540 M80,540 70,520 M80,540 90,520" />
+          <circle class="yes" cx="160" cy="435" />
+          <text class="answer" x="160" y="435" font-size="16">Yes</text>
+          <path class="line no" d="M230,395 C230,450 230,450 230,450 230,470 230,490 270,490 340,490 330,515 330,540 M330,540 320,520 M330,540 340,520" />
+          <circle class="no" cx="230" cy="435" />
+          <text class="answer" x="230" y="435" font-size="16">No</text>
+          <text class="title" x="80" y="580" font-size="40">WEBP</text>
+          <text class="title" x="330" y="580" font-size="40">AVIF</text>
+        </svg>
+        
+        <svg id="decision-2" x="365" y="600" viewBox="0 0 900 1200">
+          <text x="200" y="375">does it have transparency?</text>
+          <path class="line yes" d="M160,395 C160,450 160,450 160,450 160,470 160,490 120,490 80,490 80,515 80,540 M80,540 70,520 M80,540 90,520" />
+          <circle class="yes" cx="160" cy="435" />
+          <text class="answer" x="160" y="435" font-size="16">Yes</text>
+          <path class="line no" d="M230,395 C230,450 230,450 230,450 230,470 230,490 270,490 340,490 330,515 330,540 M330,540 320,520 M330,540 340,520" />
+          <circle class="no" cx="230" cy="435" />
+          <text class="answer" x="230" y="435" font-size="16">No</text>
+          <text class="title" x="80" y="580" font-size="40">PNG</text>
+          <text class="title" x="330" y="580" font-size="40">JPG</text>
+        </svg>
+        <text x="580" y="370" font-size="32" class="handwritten">Is it a cat video?</text>
+        <text x="560" y="450" font-size="28" class="handwritten">Yes</text>
+        <text x="650" y="450" font-size="28" class="handwritten">No</text>
+        <text x="850" y="820" font-size="28" class="handwritten">I love you, BMP. But</text>
+        <text x="850" y="855" font-size="28" class="handwritten">our love is forbidden</text>
+        <text x="245" y="820" font-size="28" class="handwritten">pronounced "GIF"</text>
+        <text x="140" y="1185" font-size="28" class="handwritten">Web Pee? LOL</text>
+        <path id="scratches"
+            fill="none" stroke="red" stroke-width="5"
+            d="M 526,281 557,263 544,286 577,265 570,282 600,267 591,287 635,261 610,288 653,265 644,282 683,268M 924,606 1045,614 929,638 1030,643 918,656 1045,662 927,671 1061,690 868,695 1047,709 857,714 1038,729 857,732 1047,751 995,771 1045,775 1007,787 1040,801 983,804 1038,817 990,824 1042,844 964,844 1047,869 738,897 803,900 744,917M 161,937 343,946M 448,714 577,723 438,734 575,743 438,760 570,756 437,773 576,774 436,791 632,796 445,819 661,820 396,831 457,856 349,839 399,864 296,841 357,870 256,843 302,877 242,876 281,895 234,898M 337,296 383,273 346,309 412,278 332,329 453,279 336,349 486,278M 277,410 422,412 252,434 407,434 255,460 404,458 286,470 418,474 241,498 423,497 209,518M 155,616 301,614 144,635 264,636 164,654 283,662 137,673 271,675 158,691 261,692 97,722M 407,666 596,674M 164,574 289,563M 281,370 384,368M 721,368 978,374M 881,572 1082,564M 681,576 711,561 702,585 744,562 728,585 765,570 761,583 788,569M 818,777 843,759 834,785 871,761 855,788 893,762 886,792 913,770M 777,406 953,418 762,436 912,438 777,456 922,463 751,482 945,481 722,506 996,512 716,525 977,532M 50,788 81,761 78,790 111,760 97,786 130,769 119,786 156,756 140,790 174,782M 77,1140 111,1119 98,1145 128,1122 119,1150 158,1125 144,1144 171,1133 169,1153 189,1128M 340,1143 368,1126 362,1147 393,1129 379,1146 427,1119 408,1147 441,1136M 719,283 762,260 757,288 810,265 790,294 832,278 824,306 858,294 839,315 877,313 849,340M 204,977 314,981 199,1002 326,1008 173,1030 335,1031 178,1048 387,1064 144,1075 410,1086 123,1097 408,1104M 483,568 519,574 487,586 512,586 470,604 543,607 483,618 514,630 480,642" />
+      <path id="arrows"
+            fill="none" stroke="red" stroke-width="5"
+            d="M 572,388 277,748 281,728M 300,743 276,747M 614,386 708,952 693,938M 716,932 710,955" />
+      </svg>
+    </svg>
+
     <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;">See more comics</a>
   </body>
   </html>
