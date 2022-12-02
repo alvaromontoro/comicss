@@ -509,5 +509,13 @@ const posts = [
     vertical: true,
     title: "Image Format Decision Tree",
     ariaLabel: "A decision tree to pick the best file format for your project. Most of the options have been scratched and the only that remains is a handwritten question: 'Is it a cat video?' if yes, GIF; if not, PNG if you need transparency or JPG if you don't. Ignore the rest of formats."
+  },
+  {
+    id: 66,
+    uid: "blind-date",
+    boxes: 3,
+    horizontal: true,
+    title: "Blind Date",
+    ariaLabel: "Comic with three panels. In the first two a woman looks bored while a man talks and talks and talks nonstop. In the third panel, the woman is walking alone talking on the phone: 'I really appreciate you setting up the blind date. But, please, next time not a developer who just released a library!'"
   }
 ]

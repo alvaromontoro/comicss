@@ -1241,4 +1241,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Blind Date</title>
+    <link href="https://comicss.art/?id=66" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/66/blind-date.html"/>
+    <id>https://comicss.art/?id=66</id>
+    <updated>2022-12-02T00:00:00Z</updated>
+    <summary>New cartoon: Blind Date</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/66/blind-date.png" alt="Comic with three panels. In the first two a woman looks bored while a man talks and talks and talks nonstop. In the third panel, the woman is walking alone talking on the phone: 'I really appreciate you setting up the blind date. But, please, next time not a developer who just released a library!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
