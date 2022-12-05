@@ -517,5 +517,13 @@ const posts = [
     horizontal: true,
     title: "Blind Date",
     ariaLabel: "Comic with three panels. In the first two a woman looks bored while a man talks and talks and talks nonstop. In the third panel, the woman is walking alone talking on the phone: 'I really appreciate you setting up the blind date. But, please, next time not a developer who just released a library!'"
+  },
+  {
+    id: 67,
+    uid: "toothbrush",
+    boxes: 3,
+    horizontal: true,
+    title: "Toothbrush",
+    ariaLabel: "comic with three panels. In the first two an alligator looks sad while holding a tootbrush with a regular-size brush branded Colga-T (panel 1) and Oral-C (panel 2). In the third panel, the alligator is happy, holding a toothbrush with an oversized brush. The toothbrush brand is flex:1."
   }
 ]

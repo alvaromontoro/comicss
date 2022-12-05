@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+article {
+  font-size: 1vw;
+  width: 96em;
+  height: 30em;
+  display: flex;
+  gap: 0.5em;
+}
+
+section {
+  border: 0.5em solid;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#c9c8, #c9c0 50%);
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.alligator {
+  --green1: #cd3;
+  --green2: #9c1;
+  --green3: #5b3;
+  --green4: #094;
+  --yellow: #ff5;
+  width: 30em;
+  height: 25em;
+  bottom: 0;
+  left: 44%;
+  transform: translateX(-50%);
+}
+
+.spines {
+  width: 100%;
+  height: 100%;
+  background:
+    conic-gradient(from 0.26turn, var(--green4) 0.18turn, #0000 0) 11% 10% / 20% 20%,
+    conic-gradient(from 0.23turn, var(--green4) 0.18turn, #0000 0) 7% 20% / 20% 20%,
+    conic-gradient(from 0.2turn, var(--green4) 0.18turn, #0000 0) 2% 40% / 20% 20%,
+    conic-gradient(from 0.2turn, var(--green4) 0.15turn, #0000 0) 0% 50% / 20% 20%,
+    conic-gradient(from 0.2turn, var(--green4) 0.15turn, #0000 0) -0.5% 65% / 20% 20%;
+  background-repeat: no-repeat;
+}
+
+.head {
+  width: 70%;
+  height: 60%;
+  top: 20%;
+  left: 20%;
+}
+
+.snout {
+  width: 100%;
+  height: 50%;
+  background: var(--green2);
+  border-radius: 50%;
+}
+
+.snout::before {
+  content: "";
+  width: 20%;
+  aspect-ratio: 1;
+  background: var(--green2);
+  border-radius: 50% / 100% 100% 0 0;
+  right: 0;
+  box-shadow: -1.5em -0.1em var(--green2);
+}
+
+.snout::after {
+  content: "";
+  width: 2.5%;
+  aspect-ratio: 1;
+  right: 8%;
+  top: 7%;
+  border-radius: 50%;
+  background: var(--green4);
+  box-shadow: -1.5em 0 var(--green4);
+}
+
+.eye {
+  border: 0.75em solid var(--green2);
+  border-radius: 50%;
+  width: 4em;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(var(--green3) 30%, #0000 0),
+    radial-gradient(circle at 60% 40%, #000 20%, #0000 0),
+    #fff;
+  transform: translate(0, -50%);
+  left: 25%;
+}
+
+.eye + .eye {
+  left: 9%;
+  transform: translate(0, -50%) scale(1.05);
+}
+
+.mouth {
+  width: 80%;
+  height: 10%;
+  border-radius: 4em 0 0 0;
+  top: 27%;
+  right: 0;
+  border-top: 0.4em solid var(--green4);
+  background:
+    conic-gradient(from -0.1turn at 50% 100%, var(--yellow) 0.2turn, #0000 0) 100% 50% / 12% 100% repeat-x;
+}
+
+.body {
+  top: 15%;
+  left: 10%;
+  width: 45%;
+  height: 100%;
+  border-radius: 100% / 200% 200% 0 0;
+ background: 
+   linear-gradient(var(--green2) 25%, #0000 0),
+   radial-gradient(50% 100% at 100% 80%, #0000 90%, var(--green2) 0),
+   repeating-radial-gradient(100% 50% at 80% 0, #0000 0 20%, #0004 20.5% 21%, #0000 21.5%),
+   var(--green1);
+}
+
+.body::before {
+  content: "";
+  width: 1.6em;
+  aspect-ratio: 1.5;
+  background: 
+    radial-gradient(farthest-side at 50% 0, #0000 80%, var(--green3) 0 99.99%, #0000 0);
+  top: 45%;
+  left: 25%;
+  filter:
+    drop-shadow(1.6em 0 var(--green3))
+    drop-shadow(-1.6em 6em var(--green3))
+}
+.body::after {
+  content: "";
+  width: 1.6em;
+  aspect-ratio: 1.5;
+  background: 
+    radial-gradient(farthest-side at 50% 0, #0000 80%, var(--green3) 0 99.99%, #0000 0);
+  top: 45%;
+  left: 25%;
+  transform: translate(0.8em, 0.8em);
+}
+
+.arm {
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2.5em solid #0000;
+  border-bottom: 2.5em solid var(--green2);
+  border-right: 0.5em solid #0000;
+  top: 60%;
+  left: 27%;
+  transform: rotate(30deg)
+}
+
+.arm::before {
+  content: "";
+  width: 50%;
+  aspect-ratio: 1;
+  background: var(--green2);
+  border-radius: 50%;
+  bottom: 0;
+  left: 85%;
+}
+
+.toothbrush {
+  --color: #c00;
+  width: 50%;
+  height: 20%;
+  background: linear-gradient(#0000 75%, var(--color) 0);
+  transform: rotate(-20deg);
+  top: 60%;
+  left: 53%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 0 0 0.5em 0;
+}
+
+section:nth-child(2) .toothbrush {
+  --color: #22a;
+}
+
+
+section:nth-child(3) .toothbrush {
+  --color: #727;
+}
+
+.brush {
+  height: 75%;
+  width: 90%;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.brush::before {
+  --paste: radial-gradient(100% 110% at 100% 100%, #0cf 99.99%, #0000 0) 0.2em 0 / 50% 35% no-repeat,
+    radial-gradient(100% 150% at 0% 0%, #0cf 99.99%, #0000 0) 100% 0 / 60% 35% no-repeat;
+  content: "";
+  position: relative;
+  min-width: 35%;
+  height: 100%;
+  background:
+/*     radial-gradient(25% 100% at 50% 100%, #bbb 99.99%, #0000 0) 50% 100% / 0.2em 75% repeat-x,
+    radial-gradient(25% 100% at 50% 100%, #999 99.99%, #0000 0) 100% 100% / 0.2em 75% repeat-x, */
+    radial-gradient(at 90% 10%, #fff8 5%, #0000 0),
+    repeating-linear-gradient(90deg, #ccc 0 0.085em, #aaa 0 0.17em) 50% 100% / 100% 75% no-repeat,
+    var(--paste);
+}
+
+/* last panel */
+section:nth-child(3) .brush::before {
+  --paste: radial-gradient(100% 2em at 100% 100%, #0cf 99.99%, #0000 0) 0.2em 0 / 50% 35% no-repeat,
+    radial-gradient(100% 2.5em at 0% 0%, #0cf 99.99%, #0000 0) 100% 0 / 60% 35% no-repeat;
+    flex: 1;
+}
+
+section:nth-child(3) .eye {
+  background:
+    radial-gradient(at 60% 55%, #000 25%, #fff 0);
+}
+
+section:nth-child(3) .mouth {
+  border-color: #0000;
+  border-radius: 0;
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%);
+}
+
+section:nth-child(3) .mouth + .mouth {
+  clip-path: none;
+  border-radius: 0 0 0 4em;
+  border-bottom: 0.4em solid var(--green4);
+  top: 20%;
+  background: none;
+  width: 85%;
+}   
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="comic with three panels. In the first two an alligator looks sad while holding a tootbrush with a regular-size brush branded Colga-T (panel 1) and Oral-C (panel 2). In the third panel, the alligator is happy, holding a toothbrush with an oversized brush. The toothbrush brand is flex:1.">
+      <section>
+        <div class="alligator">
+          <div class="spines"></div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="snout"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="arm"></div>
+          <div class="toothbrush">
+            COLGA-T
+            <div class="brush"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="alligator">
+          <div class="spines"></div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="snout"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="arm"></div>
+          <div class="toothbrush">
+            ORAL-C
+            <div class="brush"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="alligator">
+          <div class="spines"></div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="snout"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="arm"></div>
+          <div class="toothbrush">
+            FLEX:1
+            <div class="brush"></div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

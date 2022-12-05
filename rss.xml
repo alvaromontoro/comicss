@@ -666,5 +666,15 @@
       <enclosure url="https://comicss.art/comics/66/blind-date.png" length="354000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=67</guid>
+      <title>Toothbrush</title>
+      <link>https://comicss.art/?id=67</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 06 Dec 2022 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/67/toothbrush.png" length="164000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
