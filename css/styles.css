@@ -166,6 +166,33 @@ body > footer {
   margin-top: 2rem;
 }
 
+.thumbs-nav {
+  max-width: 555px;
+  margin: auto;
+}
+
+.thumbs-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.thumbs-nav ul li {
+  display: inline-block;
+}
+
+.thumbs-nav ul li a {
+  padding: 0;
+  border: 2px solid;
+}
+
+.thumbs-nav a img {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
 /* various */
 .sitename {
   color: #222;
@@ -205,6 +232,7 @@ a.skip-link:focus {
   overflow: hidden;
 }
 
+.a11y-hidden,
 .archive table a span {
   position: absolute;
   overflow: hidden;
