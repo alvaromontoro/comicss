@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+article {
+  font-size: 1vmin;
+  position: absolute;
+  width: 90em;
+  height: 60em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.shadows {
+  width: 30%;
+  height: 6%;
+  background: #0003;
+  border-radius: 50%;
+  bottom: 20%;
+  left: 9%;
+  filter: blur(1em);
+}
+
+.ground {
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(70% 40% at 30% 70%, #00f 40%, #f000 0),
+    radial-gradient(70% 25% at 70% 70%, #00f 40%, #f000 0),
+    radial-gradient(80% 35% at 50% 69%, #00f 40%, #f000 0),
+    radial-gradient(circle at 55% 71%, #00f 15%, #f000 0),
+    #fff;
+  filter: blur(1.5em) contrast(60) hue-rotate(204deg) saturate(500%);
+  opacity: 0.1;
+  mix-blend-mode: darken;
+}
+
+.box {
+  width: 10%;
+  height: 20%;
+  transform: rotate(-5deg) skew(-50deg) ;
+  bottom: 25%;
+  left: 20%;
+  background:
+    linear-gradient(30deg, #705f43 30.5%, #806f53 0);
+}
+
+.box::before {
+  content: "";
+  width: 200%;
+  height: 100%;
+  background: #c3aa83; #D4BC89;
+  transform-origin: 100% 0;
+  transform: translate(-100%, 0) skewY(30deg);
+}
+
+.box::after {
+  content: "FRAGILE";
+  font-size: 1.25em;
+  text-align: center;
+  font-family: Arial, helvetica, sans-serif;
+  box-sizing: border-box;
+  padding-top: 0.75em;
+  color: #0004;
+  width: 100%;
+  height: 87%;
+  background: #D4BC89; #c3aa83;
+  transform-origin: 0 100%;
+  transform: translate(0%, -100%) skewX(60deg);
+}
+
+.stick {
+  width: 2%;
+  height: 22%;
+  background: #641;
+  border-radius: 3em /0 0 1em 1em;
+  bottom: 23%;
+  left: 32%;
+}
+
+.stick::before {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background: #641;
+  border-radius: 100% / 120% 120% 50% 50%;
+  box-shadow: 6em 7em 0 -0.5em #641;
+  transform-origin: 50% 90%;
+  transform: translate(0, -90%) rotate(40deg);
+}
+
+.stick::after {
+  content: "";
+  width: 100%;
+  height: 20%;
+  background: #641;
+  top: -3.33%;
+  transform-origin: 0 100%;
+  transform: skewX(30deg) rotate(-5deg)
+}
+
+.knot {
+  width: 4%;
+  height: 2%;
+  background:repeating-linear-gradient(-55deg, #0000 0 16%, #0004 0 17%, #0000 0 21%), #fc4;
+  border-radius: 5em;
+  left: 31%;
+  bottom: 33%;
+}
+
+.knot::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: translate(0, -100%);
+  background: repeating-linear-gradient(-45deg, #0000 0 20%, #0004 0 21.25%), #fc4;
+  border-radius: 5em;
+}
+
+.knot::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 50%;
+  transform: translate(0, -200%) rotate(-10deg);
+  background: 
+    repeating-linear-gradient(-65deg, #0000 0 20%, #0004 0 21%), 
+    #fc4;
+  border-radius: 5em;
+}
+
+/* .rope {
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(farthest-side at 90% -40%, #0000 calc(100% - 2em), #fc4 0 99.99%, #0000 0) 44% 75% / 30% 10%,
+    radial-gradient(farthest-side at 10% 140%, #0000 calc(100% - 2em), #fc4 0 99.99%, #0000 0) 86% 84.75% / 30% 10%,
+    radial-gradient(farthest-side at 90% -40%, #0000 calc(100% - 2em), #fc4 0 99.99%, #0000 0) 121.5% 95% / 30% 10%,
+    #f000;
+  background-repeat: no-repeat;
+} */
+
+.rope {
+  width: 100%;
+  height: 100%;
+  -webkit-mask: 
+    radial-gradient(farthest-side at 90% -40%, #0000 calc(100% - 2em), #fc4 0 99.99%, #0000 0) 44% 75% / 30% 10% no-repeat,
+    radial-gradient(farthest-side at 10% 140%, #0000 calc(100% - 2em), #fc4 0 99.99%, #0000 0) 86% 84.75% / 30% 10% no-repeat,
+    radial-gradient(farthest-side at 90% -40%, #0000 calc(100% - 2em), #fc4 0 99.99%, #0000 0) 121.5% 95% / 30% 10% no-repeat;
+  background: 
+    repeating-linear-gradient(-45deg, #0000 0 1%, #0002 0 1.1%),
+    #fc4;
+  background-repeat: no-repeat;
+} 
+
+.bubble {
+  font-size: 2.25em;
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', Comic, Helvetica, Arial, sans-serif;
+  padding: 1em 2.5em;
+  background: #df5;
+  border-radius: 50%;
+  text-align: center;
+  width: 47%;
+  left: 30%;
+}
+
+.bubble-2 {
+  width: 26%;
+  font-size: 2em;
+  padding: 1em;
+  background: #df5;
+  border-radius: 50%;
+  top: 24%;
+  left: 50%;
+}
+
+.bubble-1::before {
+  content: "";
+  width: 20em;
+  height: 250%;
+  border-radius: 0 0 0 100%;
+  top: 90%;
+  left: 60%;
+  box-shadow: -0.25em 0.25em #df5;
+}
+
+.bubble-3 {
+  top: 43%;
+  left: 63%;
+  width: 33%;
+  font-size: 1.75em;
+  padding: 1em 2em;
+}
+
+b, u {
+  position: relative;
+}
+
+.key {
+  width: 2.3em;
+  height: 1.8em;
+  background: #ccc;
+  transform: skewY(-5deg);
+  clip-path: polygon(-100% -100%, 90% -100%, 90% 0, 100% 100%, -100% 100%);
+}
+
+.key::before {
+  content: "";
+  width: 60%;
+  height: 100%;
+  background: #ddd;
+  transform-origin: 100% 0;
+  transform: translate(-100%, 0) skewY(30deg);
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.key::after {
+  content: "A";
+  width: 90%;
+  height: 33%;
+  background: #eee;
+  transform-origin: 0 100%;
+  transform: translate(0, -100%) skewX(60deg);
+  display: grid;
+  place-items: center;
+  font-size: 0.65em;
+  font-family: Arial, sans-serif;
+}
+
+.key:nth-of-type(7) {
+  top: 75%;
+  left: 28%;
+  filter: brightness(80%)
+}
+
+.key:nth-of-type(8) {
+  top: 80%;
+  left: 40%;
+}
+
+.key:nth-of-type(8)::after {
+  content: "J";
+}
+
+.key:nth-of-type(9) {
+  top: 88%;
+  left: 54%;
+}
+
+.key:nth-of-type(9)::after {
+  content: "C";
+}
+
+.key:nth-of-type(10) {
+  top: 84%;
+  left: 70%;
+}
+
+
+.key:nth-of-type(10)::after {
+  content: "E";
+}
+
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <div class="ground"></div>
+      <div class="shadows"></div>
+      <div class="box"></div>
+      <div class="rope"></div>
+      <div class="stick"></div>
+      <div class="knot"></div>
+      <div class="key"></div>
+      <div class="key"></div>
+      <div class="key"></div>
+      <div class="key"></div>
+      <div class="bubble bubble-1">
+        First: what you created is a keyboard trap, not a <b>focus trap</b>.
+      </div>
+      <div class="bubble bubble-2">
+        Second: that is <u>not</u> how it's done.
+      </div>
+      <div class="bubble bubble-3">
+        And third: <b>PUT THOSE KEYS BACK IN MY KEYBOARD!!!</b>
+      </div>
+    </article>
+
+    
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

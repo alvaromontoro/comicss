@@ -1279,4 +1279,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Keyboard Trap</title>
+    <link href="https://comicss.art/?id=68" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/68/keyboard-trap.html"/>
+    <id>https://comicss.art/?id=68</id>
+    <updated>2022-12-12T00:00:00Z</updated>
+    <summary>New cartoon: Keyboard Trap</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/68/keyboard-trap.png" alt="Cartoon showing an animal trap (a box held up with a stick, and keyboard keys as bait). Someone is talking off-panel: 'First: what you created is a keyboard trap, not a focus trap. Second: that is not how it's done. And third: PUT THOSE KEYS BACK IN MY KEYBOARD!!!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

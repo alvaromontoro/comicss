@@ -525,5 +525,13 @@ const posts = [
     horizontal: true,
     title: "Toothbrush",
     ariaLabel: "comic with three panels. In the first two an alligator looks sad while holding a tootbrush with a regular-size brush branded Colga-T (panel 1) and Oral-C (panel 2). In the third panel, the alligator is happy, holding a toothbrush with an oversized brush. The toothbrush brand is flex:1."
+  },
+  {
+    id: 68,
+    uid: "keyboard-trap",
+    boxes: 1,
+    vertical: true,
+    title: "Keyboard Trap",
+    ariaLabel: "Cartoon showing an animal trap (a box held up with a stick, and keyboard keys as bait). Someone is talking off-panel: 'First: what you created is a keyboard trap, not a focus trap. Second: that is not how it's done. And third: PUT THOSE KEYS BACK IN MY KEYBOARD!!!'"
   }
 ]
