@@ -533,5 +533,13 @@ const posts = [
     vertical: true,
     title: "Keyboard Trap",
     ariaLabel: "Cartoon showing an animal trap (a box held up with a stick, and keyboard keys as bait). Someone is talking off-panel: 'First: what you created is a keyboard trap, not a focus trap. Second: that is not how it's done. And third: PUT THOSE KEYS BACK IN MY KEYBOARD!!!'"
+  },
+  {
+    id: 69,
+    uid: "a-different-angle",
+    boxes: 1,
+    vertical: true,
+    title: "A Different Angle",
+    ariaLabel: "When I get lost, I try seeing things from a different 'angle'"
   }
 ]

@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+  font-size: 1vmin;
+  width: 70vmin;
+  height: 70vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-36deg);
+  }
+  to {
+    transform: rotate(-396deg);
+  }
+}
+
+.text {
+  animation: rotate 40s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 3vmin;
+  font-family: 'Courier', 'Courier New', monospace, monospace;
+  transform: rotate(-36deg);
+  abackground: radial-gradient(circle, #000 10%, #0000 0);
+  text-transform: uppercase;
+}
+
+.t {
+  position: absolute;
+  text-align: center;
+  width: 1em;
+  height: 50%;
+  left: calc(50% - 0.5em);
+  top: 0;
+  transform-origin: 50% 100%;
+  transform: rotate(calc(360deg * var(--a) / 62));
+} 
+
+.people {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+/*   animation: rotate 40s linear reverse infinite;
+  animation: rotate 40s steps(10, end) reverse infinite; */
+}
+
+@media (prefers-reduced-motion) {
+  .text, section {
+    animation-play-state: paused !important;
+  }
+}
+
+@keyframes showHide {
+  0%, 9.99% { opacity: 1; }
+  10%, 100% { opacity: 0; }
+}
+
+section {
+  width: 17%;
+  height: 50%;
+  position: absolute;
+  left: 41.5%;
+  top: 0;
+  transform-origin: 50% 100%;
+  animation: showHide 10s steps(10) infinite;
+}
+
+section:nth-child(2) {  transform: rotate(-036deg); animation-delay: -1s; }
+section:nth-child(3) {  transform: rotate(-072deg); animation-delay: -2s; }
+section:nth-child(4) {  transform: rotate(-108deg); animation-delay: -3s; }
+section:nth-child(5) {  transform: rotate(-144deg); animation-delay: -4s; }
+section:nth-child(6) {  transform: rotate(-180deg); animation-delay: -5s; }
+section:nth-child(7) {  transform: rotate(-216deg); animation-delay: -6s; }
+section:nth-child(8) {  transform: rotate(-252deg); animation-delay: -7s; }
+section:nth-child(9) {  transform: rotate(-288deg); animation-delay: -8s; }
+section:nth-child(10) { transform: rotate(-324deg); animation-delay: -9s; }
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+section > div {
+  width: 100%;
+  height: 80%;
+}
+
+.person {
+  bottom: 5%;
+  left: 50%;
+  width: 90%;
+  height: 78%;
+  transform-origin: 50% 100%;
+  transform: translate(-50%, 0);
+}
+
+.person .head {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 30%;
+  background: white;
+  border: 0.4em solid;
+  border-radius: 95% 90% 110% 95%/90% 110% 90% 100%;
+}
+
+.person .head .eye {
+  width: 10%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, 0);
+}
+.person .head .eye + .eye {
+  left: 65%;
+  transform:  translate(-50%, 0) scaleX(-1);
+}
+.person .head .mouth {
+  width: 30%;
+  aspect-ratio: 0.75;
+  border: 0.4em solid #0000;
+  border-bottom: 0.4em solid;
+  border-radius: 50%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section:nth-child(1) .person .head .mouth,
+section:nth-child(5) .person .head .mouth,
+section:nth-child(2) .person .head .mouth,
+section:nth-child(8) .person .head .mouth  {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+section:nth-child(2) .person .head .mouth,
+section:nth-child(8) .person .head .mouth{
+  width: 20%;
+  top: 35%;
+}
+
+section:nth-child(4) .person .head .mouth,
+section:nth-child(10) .person .head .mouth {
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) rotate(180deg);
+  top: 5%;
+}
+
+section:nth-child(7) .person .head .mouth {
+  aspect-ratio: 0.4;
+  width: 35%;
+  top: -50%;
+}
+
+.person .neck {
+  width: 12%;
+  height: 25%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+  border: 0.4em solid;
+}
+.person .body {
+  width: 45%;
+  height: 80%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: conic-gradient(at 50% -35%, #0000 173.5deg, #000 174deg 185.5deg, #0000 186deg);
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="people">
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="person person-1">
+              <div class="neck"></div>
+              <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="text">
+        <div class="t" style="--a:1;">w</div>
+        <div class="t" style="--a:2;">h</div>
+        <div class="t" style="--a:3;">e</div>
+        <div class="t" style="--a:4;">n</div>
+        <div class="t" style="--a:5;"></div>
+        <div class="t" style="--a:6;">I</div>
+        <div class="t" style="--a:7;"></div>
+        <div class="t" style="--a:8;">g</div>
+        <div class="t" style="--a:9;">e</div>
+        <div class="t" style="--a:10;">t</div>
+        <div class="t" style="--a:11;"></div>
+        <div class="t" style="--a:12;">l</div>
+        <div class="t" style="--a:13;">o</div>
+        <div class="t" style="--a:14;">s</div>
+        <div class="t" style="--a:15;">t</div>
+        <div class="t" style="--a:16;">,</div>
+        <div class="t" style="--a:17;"></div>
+        <div class="t" style="--a:18;">I</div>
+        <div class="t" style="--a:19;"></div>
+        <div class="t" style="--a:20;">t</div>
+        <div class="t" style="--a:21;">r</div>
+        <div class="t" style="--a:22;">y</div>
+        <div class="t" style="--a:23;"></div>
+        <div class="t" style="--a:24;">s</div>
+        <div class="t" style="--a:25;">e</div>
+        <div class="t" style="--a:26;">e</div>
+        <div class="t" style="--a:27;">i</div>
+        <div class="t" style="--a:28;">n</div>
+        <div class="t" style="--a:29;">g</div>
+        <div class="t" style="--a:30;"></div>
+        <div class="t" style="--a:31;">t</div>
+        <div class="t" style="--a:32;">h</div>
+        <div class="t" style="--a:33;">i</div>
+        <div class="t" style="--a:34;">n</div>
+        <div class="t" style="--a:35;">g</div>
+        <div class="t" style="--a:36;">s</div>
+        <div class="t" style="--a:37;"></div>
+        <div class="t" style="--a:38;">f</div>
+        <div class="t" style="--a:39;">r</div>
+        <div class="t" style="--a:40;">o</div>
+        <div class="t" style="--a:41;">m</div>
+        <div class="t" style="--a:42;"></div>
+        <div class="t" style="--a:43;">a</div>
+        <div class="t" style="--a:44;"></div>
+        <div class="t" style="--a:45;">d</div>
+        <div class="t" style="--a:46;">i</div>
+        <div class="t" style="--a:47;">f</div>
+        <div class="t" style="--a:48;">f</div>
+        <div class="t" style="--a:49;">e</div>
+        <div class="t" style="--a:50;">r</div>
+        <div class="t" style="--a:51;">e</div>
+        <div class="t" style="--a:52;">n</div>
+        <div class="t" style="--a:53;">t</div>
+        <div class="t" style="--a:54;"></div>
+        <div class="t" style="--a:55;">a</div>
+        <div class="t" style="--a:56;">n</div>
+        <div class="t" style="--a:57;">g</div>
+        <div class="t" style="--a:58;">l</div>
+        <div class="t" style="--a:59;">e</div>
+        <div class="t" style="--a:60;"></div>
+        <div class="t" style="--a:61;">-</div>
+        <div class="t" style="--a:62;"></div>
+      </div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

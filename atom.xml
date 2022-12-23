@@ -1298,4 +1298,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>A Different Angle</title>
+    <link href="https://comicss.art/?id=69" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/69/a-different-angle.html"/>
+    <id>https://comicss.art/?id=69</id>
+    <updated>2022-12-19T00:00:00Z</updated>
+    <summary>New cartoon: A Different Angle</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/69/a-different-angle.png" alt="When I feel lost, I try seeing things from a different angle" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
