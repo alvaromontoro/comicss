@@ -706,5 +706,15 @@
       <enclosure url="https://comicss.art/comics/70/twelfth-day-of-christmas.png" length="154000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=71</guid>
+      <title>Metamorphosis</title>
+      <link>https://comicss.art/?id=71</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/71/metamorphosis.png" length="222000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

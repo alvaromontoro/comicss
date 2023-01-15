@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+article {
+  position: absolute;
+  width: 80vmin;
+  aspect-ratio: 1.1;
+  background: radial-gradient(farthest-side, #8ff8 0%, transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 2px);
+  height: calc(100% - 3vmin);
+  outline: 1px solid #000;
+  outline-offset: -1px;
+  background: linear-gradient(#0ff0 50%, #0ff1);
+  z-index: 1;
+}
+
+article * {
+  position: absolute;
+  box-sizing:  border-box;
+}
+
+.background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: polygon(0 3vmin, 100% 3vmin, 100% calc(100% - 3vmin), 0 calc(100% - 3vmin));
+  mix-blend-mode: darken;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 0 4vmin #fff;
+  width: 100%;
+  height: 100%;
+  background:
+    /* twig */
+    conic-gradient(at 0 40%, #0000 110deg, #00f 0 120deg, #0000 0) -20% 30% / 40% 40% no-repeat,
+    /* caterpillar branch */
+    radial-gradient(farthest-side at 100% 100%, #0000 80%, #00f 0) 40% 96% / 50% 20% no-repeat,
+    radial-gradient(farthest-side at 100% 0%, #0000 80%, #00f 0) 40% 77.5% / 50% 5% no-repeat,
+    /* trunk bottom */
+    radial-gradient(15% 130% at 20% 120%, #00f 80%, #0000 0),
+    /* trunk top */
+    radial-gradient(80% 80% at 100% 0, #00f 85%, #0000 0) 5% 0 / 25% 100% no-repeat,
+    #fff
+    ;
+  filter: blur(1.75vmin) contrast(200) hue-rotate(170deg) brightness(2.5) grayscale(0.5);;
+  mix-blend-mode: darken;
+}
+
+.background .line {
+  width: 0.5%;
+  height: 70%;
+  background: #0004;
+  top: 20%;
+  left: 15%;
+  filter: blur(1vmin);
+  box-shadow: 
+    4vmin 15vmin #0002,
+    8vmin -20vmin #0004,
+    9vmin 45vmin 2vmin #0008
+}
+
+.background .leaf {
+  width: 10%;
+  height: 22%;
+  background: 
+    radial-gradient(150% 200% at 0 50%, #0000 39%, #0002 0 40%, #0000 0),
+    linear-gradient(45deg, #0000 45%, #0001 0 46%, #0000 0) 100% 0 / 42% 100% no-repeat,
+    linear-gradient(-45deg, #0000 45%, #0001 0 46%, #0000 0) 0 0 / 55% 60% no-repeat,
+    linear-gradient(-55deg, #0000 45%, #0001 0 46%, #0000 0) 0 100% / 55% 60% no-repeat,
+    #3b5;
+  border-radius: 100% / 80% 80% 130% 130% ;
+  top: 81%;
+  left: 64%;
+  transform-origin: 0 0;
+  transform: rotate(-30deg);
+}
+
+.caterpillar {
+  --color1: #4c6;
+  --color2: #5d7;
+  --color3: #2a4;
+  width: 7.5%;
+  aspect-ratio: 1;
+  top: 63%;
+  left: 50%;
+}
+
+.caterpillar .shadow {
+  background: radial-gradient(farthest-side at 50% 0, #630 50%, #0000);
+  width: 300%;
+  height: 60%;
+  border-radius: 50%;
+  filter: blur(1vmin);
+  top: 9vmin;
+  transform: translateX(-80%);
+}
+
+.caterpillar .body {
+  width: 100%;
+  height: 100%;
+  background: 
+    /* eyes */
+    radial-gradient(circle at 45% 25%, #000 5%, #0000 0),
+    radial-gradient(circle at 75% 20%, #000 4.5%, #0000 0),
+    radial-gradient(circle at 40% 30%, #fff 15%, #fff0 0),
+    radial-gradient(circle at 70% 25%, #fff 13%, #fff0 0),
+    /* mouth */
+    radial-gradient(farthest-side at 90% 120%, #0000 80%, #000c 0 90%, #0000 0) 65% 55% / 35% 20% no-repeat,
+    /* head */
+    #4c6;
+  border-radius: 50%;
+  box-shadow:
+    -2vmin 6.5vmin 0 -2.25vmin var(--color3),
+    -4vmin 8vmin 0 -2.25vmin var(--color3),
+    -7.5vmin 7.75vmin 0 -2.25vmin var(--color3),
+    -10vmin 6.5vmin 0 -2.35vmin var(--color3),
+    -12vmin 7vmin 0 -2.4vmin var(--color3),
+    -14vmin 7.5vmin 0 -2.45vmin var(--color3),
+    -1vmin 3vmin 0 -0.65vmin var(--color2),
+    -2.25vmin 4.75vmin 0 -0.65vmin var(--color1),
+    -4vmin 6vmin 0 -0.65vmin var(--color2),
+    -6.25vmin 6vmin 0 -0.7vmin var(--color1),
+    -8vmin 5vmin 0 -0.7vmin var(--color2),
+    -10vmin 4vmin 0 -0.75vmin var(--color1),
+    -12vmin 4.75vmin 0 -0.85vmin var(--color2),
+    -13.75vmin 5.75vmin 0 -1vmin var(--color1),
+    -0vmin 5vmin 0 -2.25vmin var(--color3)
+}
+
+.bubble {
+  background: #ee9;
+  border-radius: 50%;
+  padding: 8vmin 5vmin 1vmin 5vmin;
+  border-radius: 50% 100% 70% 30% / 100% 100% 100% 80%;
+  top: -5vmin;
+}
+
+.bubble::before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 70%;
+  width: 10%;
+  height: 30%;
+  border-radius: 0 0 0 100%;
+  box-shadow: inset 1.5vmin 0.5vmin #ee9;
+}
+
+.bubble * {
+  position: relative;
+  margin: 0;
+}
+
+.bubble pre {
+  white-space: pre-wrap;
+  display: static;
+  line-height: 0;
+  min-height: 8vmin;
+}
+
+.bubble code {
+  font-size: 1.75vmin;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.bubble p {
+  font-size: 2.5vmin;
+  margin: 0 0 1vmin 0;
+  font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, sans-serif;
+}
+
+@keyframes fly {
+  0%, 100% {
+    transform: rotate(-5deg) translate(0%, 0%) rotate(0deg);
+  }
+  33% {
+    transform: rotate(-5deg) translate(-1%, -2.5%) rotate(-2deg);
+  }
+  66% {
+    transform: rotate(-5deg) translate(1%, -5%) rotate(0.5deg);
+  }
+}
+
+.butterfly {
+  width: 45%;
+  height: 40%;
+  top: 25%;
+  right: 0%;
+  background: #fff;
+  mix-blend-mode: darken;
+  animation: fly 10s ease-in-out infinite;
+  transform-origin: 100% 100%;
+  transform: rotate(-5deg) translate(0%, 0%) rotate(0deg);
+}
+
+.butterfly::after {
+  content: "";
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  width: 12%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background:
+    /* eyes */
+    radial-gradient(circle at 20% 11%, #000 1%, #0000 0),
+    radial-gradient(circle at 60% 11%, #000 1%, #0000 0),
+    radial-gradient(circle at 25% 10%, #fff 3%, #fff0 0),
+    radial-gradient(circle at 65% 10%, #fff 3%, #fff0 0),
+    /* mouth */
+    radial-gradient(farthest-side at 50% 0, #600 99.99%, #0000 0) 45% 14% / 40% 2% no-repeat,
+    /* head and body */
+    radial-gradient(closest-side circle at 50% 10%, #963 99.99%, #0000 0),
+    radial-gradient(35% 80% at 50% 50%, #542 57%, #0000 58%),
+    #0000;
+}
+
+.butterfly::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 82%, #0f0 8.5%, #0000 0),
+    radial-gradient(circle at 75% 82%, #0f0 8.5%, #0000 0),
+    conic-gradient(#0000 30deg, #0f0 0 45deg, #0000 0 70deg, #0f0 0 110deg, #0000 0 250deg, #0f0 0 290deg, #0000 0 315deg, #0f0 0 330deg, #0000 0) 50% 50% / 90% 90% no-repeat,
+    radial-gradient(circle at 50% 50%, #0f0 15%, #0000 0),
+    radial-gradient(at 30% 45%, red 25%, #0000 0),
+    radial-gradient(at 70% 45%, red 25%, #0000 0),
+    radial-gradient(at 25% 75%, red 25%, #0000 0),
+    radial-gradient(at 75% 75%, red 25%, #0000 0),
+    #fff;
+  box-shadow: 0 0 0 2vmin #fff;
+  filter: blur(1.25vmin) contrast(1000) hue-rotate(200deg) brightness(1); grayscale(0.7);
+  transform: scaleY(-1);
+  amix-blend-mode: darken;
+}
+
+
+@media (prefers-reduced-motion) {
+  * {
+    animation: none !important;
+  }
+}
+
+.butterfly .antennae {
+  width: 6%;
+  height: 15%;
+  background: 
+    radial-gradient(farthest-side at 0 100%, #0000 95%, #000 0 99.99%, #0000 0);
+  left: 50%;
+  top: 0;
+  transform: translate(-120%, -100%);
+}
+
+.butterfly .antennae::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: 
+    radial-gradient(farthest-side at 100% 100%, #0000 94%, #000 0 99.99%, #0000 0);
+  left: 125%;
+  top: -2%;
+}
+    </style>
+  </head>
+  <body>
+<article>
+  <section class="background">
+    <div class="line"></div>
+    <div class="leaf"></div>
+  </section>
+  <section class="butterfly">
+    <div class="antennae"></div>
+  </section>
+  <section class="caterpillar">
+    <div class="shadow"></div>
+    <div class="body"></div> 
+  </section>
+  <section class="bubble">
+    <p>It's simpler than it looks. You add some colors and then:</p>
+    <pre><code>  filter: blur(1vmin) contrast(1000) hue-rotate(200deg);
+  transform: translateY(-100%) rotate(-20deg);
+  animation: fly 10s ease-in-out infinite;</code></pre>
+  </section>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

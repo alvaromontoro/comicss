@@ -1319,7 +1319,7 @@
   </entry>
   <entry>
     <title>On the twelfth day of christmas</title>
-    <link href="https://comicss.art/?id=69" />
+    <link href="https://comicss.art/?id=70" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/70/twelfth-day-of-christmas.html"/>
     <id>https://comicss.art/?id=70</id>
     <updated>2022-12-24T00:00:00Z</updated>
@@ -1327,6 +1327,25 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/70/twelfth-day-of-christmas.png" alt="On the twelfth day of Christmas, my CSS sent to me... Twelve image-renderings, Eleven pixels padding, Ten spans a-flexing, Nine letter-spacing, Eight divs with vmin, Seven none font-kernings, Six videos :playing, Five :not() with :is()! Four border-width, Three place-self, Two rules with :has(), And a column in a red grid." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Metamorphosis</title>
+    <link href="https://comicss.art/?id=71" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/71/metamorphosis.html"/>
+    <id>https://comicss.art/?id=71</id>
+    <updated>2023-01-16T00:00:00Z</updated>
+    <summary>New cartoon: Metamorphosis</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/71/metamorphosis.png" alt="A butterfly smiles at a caterpillar and says: 'It's simpler than it looks. You add some colors and then: filter, transform, and animation.'" /></p>
       </div>
     </content>
     <rights>Copyright 2022 Alvaro Montoro</rights>

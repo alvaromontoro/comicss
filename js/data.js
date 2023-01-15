@@ -549,5 +549,13 @@ const posts = [
     vertical: true,
     title: "Twelfth Day of Christmas",
     ariaLabel: "On the twelfth day of Christmas, my CSS sent to me... Twelve image-renderings, Eleven pixels padding, Ten spans a-flexing, Nine letter-spacing, Eight divs with vmin, Seven none font-kernings, Six videos :playing, Five :not() with :is()! Four border-width, Three place-self, Two rules with :has(), And a column in a red grid."
+  },
+  {
+    id: 71,
+    uid: "metamorphosis",
+    boxes: 1,
+    vertical: true,
+    title: "Metamorphosis",
+    ariaLabel: "A butterfly smiles at a caterpillar and says: 'It's simpler than it looks. You add some colors and then: filter, transform, and animation.'"
   }
 ]
