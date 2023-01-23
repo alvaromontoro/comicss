@@ -557,5 +557,13 @@ const posts = [
     vertical: true,
     title: "Metamorphosis",
     ariaLabel: "A butterfly smiles at a caterpillar and says: 'It's simpler than it looks. You add some colors and then: filter, transform, and animation.'"
+  },
+  {
+    id: 72,
+    uid: "tailwind-dog",
+    boxes: 1,
+    vertical: true,
+    title: "Tailwind Dog",
+    ariaLabel: "A man asks 'TailwindCSS? Isn't that a weird name for a dog?' The dog owners replies 'I have my reasons...' The dog stands besides them, next to a pile of dog poop bigger than the dog itself."
   }
 ]
