@@ -1374,4 +1374,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Wendy's</title>
+    <link href="https://comicss.art/?id=73" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/73/wendys.html"/>
+    <id>https://comicss.art/?id=73</id>
+    <updated>2023-02-08T00:00:00Z</updated>
+    <summary>New cartoon: Wendy's</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/73/wendys.png" alt="A man asks goes in a long rant about how CSS should be considered a drawing language. A person replies 'Sir... this is a Wendys'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

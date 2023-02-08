@@ -565,5 +565,12 @@ const posts = [
     vertical: true,
     title: "Tailwind Dog",
     ariaLabel: "A man asks 'TailwindCSS? Isn't that a weird name for a dog?' The dog owners replies 'I have my reasons...' The dog stands besides them, next to a pile of dog poop bigger than the dog itself."
+  },
+  {
+    id: 73,
+    uid: "wendys",
+    boxes: 2,
+    title: "Wendy's",
+    ariaLabel: "A man asks goes in a long rant about how CSS should be considered a drawing language. A person replies 'Sir... this is a Wendys'"
   }
 ]
