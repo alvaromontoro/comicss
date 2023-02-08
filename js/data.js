@@ -571,6 +571,6 @@ const posts = [
     uid: "wendys",
     boxes: 2,
     title: "Wendy's",
-    ariaLabel: "A man asks goes in a long rant about how CSS should be considered a drawing language. A person replies 'Sir... this is a Wendys'"
+    ariaLabel: "A man goes in a long rant about how CSS should be considered a drawing language. A person replies 'Sir... this is a Wendys'"
   }
 ]
