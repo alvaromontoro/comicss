@@ -572,5 +572,13 @@ const posts = [
     boxes: 2,
     title: "Wendy's",
     ariaLabel: "A man goes in a long rant about how CSS should be considered a drawing language. A person replies 'Sir... this is a Wendys'"
+  },
+  {
+    id: 74,
+    uid: "an-apple-a-day",
+    boxes: 1,
+    vertical: true,
+    title: "An Apple A Day...",
+    ariaLabel: "Cartoon with one panel with the headline 'They say an apple a day keeps the doctor away... But the CSS Developer has more faith in a margin.' It has a man in the position of the lotus smiles as a doctor tries to reach out to him unsuccessfully. A bubble has the code :has(.doctor) #me { margin: 15vmin; }."
   }
 ]

@@ -1348,7 +1348,7 @@
         <p><img src="https://comicss.art/comics/71/metamorphosis.png" alt="A butterfly smiles at a caterpillar and says: 'It's simpler than it looks. You add some colors and then: filter, transform, and animation.'" /></p>
       </div>
     </content>
-    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
     <author>
       <name>Alvaro Montoro</name>
       <email>alvaromontoro@gmail.com</email>
@@ -1367,7 +1367,7 @@
         <p><img src="https://comicss.art/comics/72/tailwind-dog.png" alt="A man asks 'TailwindCSS? Isn't that a weird name for a dog?' The dog owners replies 'I have my reasons...' The dog stands besides them, next to a pile of dog poop bigger than the dog itself." /></p>
       </div>
     </content>
-    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
     <author>
       <name>Alvaro Montoro</name>
       <email>alvaromontoro@gmail.com</email>
@@ -1386,7 +1386,26 @@
         <p><img src="https://comicss.art/comics/73/wendys.png" alt="A man goes in a long rant about how CSS should be considered a drawing language. A person replies 'Sir... this is a Wendys'" /></p>
       </div>
     </content>
-    <rights>Copyright 2022 Alvaro Montoro</rights>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>An Apple A Day...</title>
+    <link href="https://comicss.art/?id=74" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/74/an-apple-a-day.html"/>
+    <id>https://comicss.art/?id=74</id>
+    <updated>2023-02-17T00:00:00Z</updated>
+    <summary>New cartoon: An Apple A Day...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/74/an-apple-a-day.png" alt="Cartoon with one panel with the headline 'They say an apple a day keeps the doctor away... But the CSS Developer has more faith in a margin.' It has a man in the position of the lotus smiles as a doctor tries to reach out to him unsuccessfully. A bubble has the code :has(.doctor) #me { margin: 15vmin; }." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
     <author>
       <name>Alvaro Montoro</name>
       <email>alvaromontoro@gmail.com</email>
