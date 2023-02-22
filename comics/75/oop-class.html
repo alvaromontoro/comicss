@@ -1,0 +1,1360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      
+
+@layer general {
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vmin;
+  width: 207vmin;
+  transform-origin: 0 0;
+  transform: scale(0.6);
+}
+
+br {
+  display: block;
+}
+
+section {
+  --s: 75vmin;
+  position: relative;
+  border: 1vmin solid;
+  height: var(--s);
+  aspect-ratio: 0.90;
+  box-sizing: border-box;
+  background: #ffe;
+  background: linear-gradient(#c9c8, #c9c0 75%);
+  font: 400 4.75vmin / 1.25 'Comic Neue', sans-serif;
+  overflow: hidden;
+}
+
+section.span2 {
+  grid-column-end: span 2;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.speech {
+  padding: 2vmin;
+  text-align: center;
+}
+
+.speech::before {
+  content: "";
+  width: 20%;
+  height: 100%;
+  top: 95%;
+  left: 25%;
+  border-radius: 0 0 0 100%;
+  border: 0.25vmin solid #0000;
+  border-top: 0;
+  border-left: 1vmin solid;
+  clip-path: polygon(0 1%, 100% 1%, 100% 100%, 0 100%);
+}
+
+.professor {
+  --skin: #fca;
+  --mouth: 30%;
+  --mouth-pos: 27%;
+  --mustache: 4deg;
+  --eyebrow1-top: 23%;
+  --eyebrow1-angle: 4deg;
+  --eyebrow2-top: 25.5%;
+  --eyebrow2-angle: 4deg;
+  --eye-light: 33%;
+  --sweater: #6b7;
+  width: 50vmin;
+  aspect-ratio: 0.85;
+  bottom: 0;
+  right: 1%;
+}
+
+.head {
+  width: 55%;
+  height: 55%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.face {
+  width: 95%;
+  height: 100%;
+  border-radius: 100% / 100% 100% 70% 50%;
+  border: 0.75vmin solid;
+  border-bottom: 1vmin solid;
+  transform: rotate(6deg);
+  background: 
+    radial-gradient(farthest-side, #f001, #0000) 50% 56% / 30% 15% no-repeat,
+    radial-gradient(farthest-side, #f001, #0000) -10% 55% / 30% 15% no-repeat,
+    radial-gradient(50% 140% at 50% 0%, #c002 80%, #0000 0) 0% 100% / 70% 10% no-repeat,
+    var(--skin);
+  right: 0;
+  box-shadow:
+    inset 0.5vmin 0 #fff3,
+    inset -1vmin 0 #c002;
+}
+
+.nose {
+  width: 24%;
+  height: 32%;
+  border: 0.25vmin solid #0000;
+  border-left: 0.75vmin solid;
+  border-bottom: 1vmin solid;
+  border-radius: 100% / 90% 40% 40% 60%;
+  transform: skew(-10deg);
+  top: 37%;
+  left: 14%;
+  background: var(--skin);
+}
+
+.chin {
+  width: 65%;
+  height: 30%;
+  border-radius: 100%;
+  border: 0.25vmin solid #0000;
+  border-bottom: 0.75vmin solid;
+  top: 68%;
+  left: 0.75%;
+  transform: rotate(5deg);
+  background: var(--skin);
+  background-clip: content-box;
+}
+
+.eye {
+  width: 10%;
+  height: 10%;
+  background: 
+    radial-gradient(circle at var(--eye-light) 33%, white 15%, #0000 0),
+    black;
+  border-radius: 50%;
+  top: 35%;
+  left: 7%;
+  transform: rotate(9deg);
+}
+
+.eye + .eye {
+  left: 39%;
+  top: 37%;
+}
+
+.mustache {
+  width: 55%;
+  height: 18%;
+  background: 
+    repeating-linear-gradient(90deg, #0000 0 11%, #0002 0 12%) 50% 100% / 60% 40% repeat-x,
+    repeating-linear-gradient(90deg, #0000 0 11%, #0002 0 12%) 33% 100% / 33% 50% repeat-x,
+    repeating-linear-gradient(90deg, #0000 0 13%, #0003 0 15%) 29% 100% / 45% 30% repeat-x,
+    #ccc;
+  top: 64%;
+  left: -2%;
+  border-radius: 50% / 100% 100% 30% 30%;
+  border: 0.7vmin solid;
+  border-bottom: 1vmin solid;
+  transform: rotate(var(--mustache));
+}
+
+.eyebrow {
+  width: 30%;
+  height: 13%;
+  background: #ccc;
+  top: var(--eyebrow1-top);
+  left: -5%;
+  border-radius: 60% / 100% 100% 30% 30%;
+  border: 0.7vmin solid;
+  border-bottom: 0.8vmin solid;
+  transform: rotate(var(--eyebrow1-angle));
+}
+
+.eyebrow + .eyebrow {
+  left: 33%;
+  top: var(--eyebrow2-top);
+  width: 31%;
+  transform: rotate(var(--eyebrow2-angle));
+}
+
+.ear,
+.ear-back {
+  width: 32%;
+  height: 37%;
+  border: 0.75vmin solid;
+  border-left: 0.25vmin solid #0000;
+  border-top: 1vmin solid;
+  border-radius: 100% / 80% 80% 120% 100%;
+  top: 42%;
+  right: -13%;
+  transform: rotate(4deg);
+  background: var(--skin);
+  background-clip: content-box;
+}
+
+.ear-back {
+  left: 0;
+  transform: scaleX(-1);
+  top: 33%;
+}
+
+.ear::after {
+  content: "";
+  width: 40%;
+  aspect-ratio: 1;
+  border: 0.5vmin solid;
+  border-right: 0.8vmin solid;
+  border-radius: 50%;
+  border-left-color: #0000;
+  top: 43%;
+  left: 5%;
+  background: var(--skin);
+  background-clip: content-box;
+}
+
+.ear::before {
+  content: "";
+  width: 80%;
+  height: 60%;
+  border: 0.5vmin solid #0000;
+  border-left: 0.6vmin solid;
+  border-top: 0.8vmin solid;
+  border-radius: 50%;
+  top: 13%;
+  left: 7%;
+  transform: rotate(30deg);
+  box-shadow: inset 1vmin 0 #8002;
+}
+
+.body {
+  width: 100%;
+  height: 42%;
+  border: 0.75vmin solid;
+  border-radius: 40% / 110% 105% 0 0;
+  border-bottom: 0;
+  border-top: 1vmin solid;
+  border-right: 1vmin solid;
+  bottom: 0;
+  background:
+    radial-gradient(100% 400% at -10% 110%, #0803 20%, #000 20.25% 24%, #0000 24.25%) 105% 100% / 30% 50% no-repeat,
+    radial-gradient(100% 500% at 110% 110%, #0000 25%, #000 25.25% 29%, #0803 29.25% 31%, #0000 31.25%) -20% 100% / 30% 40% no-repeat,
+    radial-gradient(at 46% 0, var(--skin) 10%, #000 0 12%, #0000 0 15%, #000 0 17%, #0000 0),
+    repeating-conic-gradient(at 46% 0, #0000 0 10deg, #000 0 14deg) 45% 0% / 20% 21% no-repeat,
+    var(--sweater);
+  box-shadow:
+    inset 1.2vmin -0.5vmin 0 -0.5vmin #fff3,
+    inset -1.75vmin -0.5vmin 0 -0.5vmin #0602;
+}
+
+.body::before {
+  content: "";
+  width: 28%;
+  height: 28%;
+  background: white;
+  border: 0.75vmin solid;
+  border-radius: 20% 20% 100% 10%;
+  left: 48%;
+  top: -5%;
+  transform: rotate(-15deg);
+}
+
+
+.body::after {
+  content: "";
+  width: 15%;
+  height: 25%;
+  background: white;
+  border: 0.75vmin solid;
+  border-radius: 20% 20% 10% 100%;
+  left: 40%;
+  top: -5%;
+  transform: translate(-100%, 0) rotate(20deg);
+}
+
+.hair-side {
+  width: 30%;
+  height: 40%;
+  background: #ddd;
+  border-radius: 50%;
+  border: 0.7vmin solid;
+  border-right: 0.85vmin solid;
+  left: 80%;
+  top: 20%;
+}
+
+.lip {
+  width: var(--mouth);
+  height: 10%;
+  border: 0.7vmin solid;
+  border-radius: 50%;
+  background: #8003;
+  top: 76%;
+  left: var(--mouth-pos);
+  transform: translateX(-50%);
+}
+
+.extremity {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+.professor .arm {
+  width: 22%;
+  height: 50%;
+  background: red;
+  border: 0.75vmin solid;
+  background:
+    repeating-linear-gradient(90deg, #0000 0 5%, #0006 0 10%) 0 0 / 100% 15% no-repeat,
+    var(--sweater);
+  bottom: -30%;
+  left: -18%;
+  transform: rotate(-10deg);
+  border-radius: 10% 10% 20% 20%;
+  box-shadow: 
+    0 -4vmin 0 -2.2vmin var(--skin),
+    0 -3vmin 0 -1.5vmin black
+}
+
+.hand {
+  width: 25%;
+  height: 22%;
+  background: var(--skin);
+  border-radius: 50%;
+  
+  border: 0.75vmin solid;
+  bottom: 18%;
+  left: -27%
+}
+
+.hand::before {
+  content: "";
+  width: 35%;
+  height: 60%;
+  border: 0.7vmin solid;
+  background: var(--skin);
+ border-radius: 50%;
+  transform: rotate(-20deg);
+  left: 20%;
+  top: -20%;
+  box-shadow: 
+    -2.5vmin 0.5vmin 0 -0.7vmin var(--skin),
+    -2.5vmin 0.5vmin,
+    -4.5vmin 1vmin 0 -0.7vmin var(--skin),
+    -4.5vmin 1vmin;
+}
+
+.hand::after {
+  content: "";
+  width: 90%;
+  height: 38%;
+  background: var(--skin);
+  border-radius: 100% 0 0 100%;
+  border: 0.7vmin solid;
+  border-right:  0;
+  left: 0;
+  top: -5%;
+  transform: rotate(30deg);
+}
+
+.hand .finger {
+  width: 35%;
+  height:120%;
+  border: 0.7vmin solid;
+  border-bottom: 0;
+  background: var(--skin);
+  border-radius: 100% 100% 0 0;
+  left: 80%;
+  transform: rotate(-25deg) translate(0, -90%);
+}
+
+.blackboard {
+  width: 140vmin;
+  height: 80vmin;
+  border: 1vmin solid;
+  background:
+    linear-gradient(90deg, #fc7 3.5%, #0000 0 96.5%, #fc7 0),
+    linear-gradient(#fc7 0 7%, #000 0 8%, #0000 0 91.75%, #000 0 93%, #fc7 0),
+    linear-gradient(90deg, #000 4.1%, #0000 0 95.9%, #000 0),
+    #243;
+  font-family: 'Reenie Beanie', 'Comic Neue', 'Comic Sans', serif;
+  font-size: 4vmin;
+}
+
+.blackboard::before {
+  content: "";
+  border: 1vmin solid;
+  top: 93.5%;
+  background: #fff;
+  width: 6%;
+  height: 4%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 14vmin 0.75vmin white, 14vmin 0.75vmin 0 0.85vmin black;
+}
+
+.blackboard::after {
+  content: "";
+  border: 1vmin solid;
+  top: 95%;
+  background: #fc7;
+  width: 50%;
+  height: 7%;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+.blackboard .text {
+  font-size: 5vmin;
+  line-height: 1;
+  color: #fffc;
+  text-shadow:0 0 10vmin #fff;
+  white-space: pre-wrap;
+}
+}
+
+@layer panel1 {
+}
+
+@layer panel2 {
+.panel-02 {
+  aspect-ratio: 137 / 75;
+}
+
+.panel-02 .professor {
+  --mouth: 20%;
+  --mouth-pos: 30%;
+  --mustache: 6deg;
+  --eye-light: 66%;
+  --eyebrow1-top: 20%;
+  --eyebrow1-angle: 22deg;
+  --eyebrow2-top: 24%;
+  --eyebrow2-angle: 1deg;
+  left: 2%;
+  transform-origin: 50% 100%;
+  transform: scaleX(-1) scale(0.8)
+}
+
+.panel-02 .blackboard {
+  top: -11%;
+  left: -10%;
+}
+
+.panel-02 .text {
+  right: 15%;
+  bottom: 10%;
+}
+
+.panel-02 .speech {
+  color: white;
+  bottom: 70%;
+  left: 10%;
+}
+.panel-02 .speech::before {
+  transform: scaleX(-1);
+  left: 60%;
+  height: 130%;
+}
+}
+
+
+@layer panel3 {
+.panel-03 .professor {
+  --mouth: 10%;
+  --mouth-pos: 24%;
+  --mustache: 6deg;
+  --eye-light: 66%;
+/*     --eyebrow1-top: 20%;
+  --eyebrow1-angle: 15deg;
+  --eyebrow2-top: 24%;
+  --eyebrow2-angle: 1deg; */
+  left: 2%;
+  transform-origin: 50% 100%;
+  transform: scaleX(-1) scale(0.8)
+}
+
+.panel-03 .blackboard {
+  top: -11%;
+  left: -10%;
+}
+
+.panel-02 .text {
+  right: 15%;
+  bottom: 10%;
+}
+
+.panel-03 .speech {
+  color: white;
+  bottom: 70%;
+  left: 10%;
+}
+.panel-03 .speech::before {
+  transform: scaleX(-1);
+  left: 60%;
+  height: 130%;
+}
+}
+
+
+@layer panel4 {
+.panel-04 .professor {
+  --mouth: 17%;
+  --mouth-pos: 29%;
+  --mustache: 6deg;
+  --eye-light: 66%;
+  --eyebrow1-top: 18%;
+  --eyebrow1-angle: 10deg;
+  --eyebrow2-top: 20%;
+  --eyebrow2-angle: 1deg;
+  left: 0%;
+  bottom: -1%;
+  transform-origin: 50% 100%;
+  transform: scaleX(-1) scale(0.8) rotate(0.5deg)
+}
+
+.panel-04 .blackboard {
+  top: -11%;
+  left: -10%;
+}
+
+.panel-04 .text {
+  right: 15%;
+  bottom: 10%;
+}
+
+.panel-04 .speech {
+  color: white;
+  top: -2%;
+  left: 10%;
+}
+.panel-04 .speech::before {
+  transform: scaleX(-1);
+  left: 55%;
+  height: 50%;
+  width: 15%;
+}
+}
+
+@layer panel5 {
+.panel-05 .professor {
+  --mouth: 20%;
+  --mouth-pos: 25%;
+  --mustache: 6deg;
+  --eye-light: 66%;
+  --eyebrow1-top: 20.5%;
+  --eyebrow1-angle: 5deg;
+  --eyebrow2-top: 23%;
+  --eyebrow2-angle: 6deg;
+  left: 1%;
+  transform-origin: 50% 100%;
+  transform: scaleX(-1) scale(0.8)
+}
+
+.panel-05 .blackboard {
+  top: -11%;
+  left: -10%;
+}
+
+.panel-05 .text {
+  right: 15%;
+  bottom: 10%;
+}
+
+.panel-05 .speech {
+  color: white;
+  top: 0%;
+  left: 10%;
+}
+.panel-05 .speech::before {
+  transform: scaleX(-1);
+  left: 57%;
+  height: 60%;
+  width: 19%;
+}
+}
+
+@layer panel6 {
+.panel-06 {
+  aspect-ratio: 206.5 / 75;
+}
+
+.panel-06 .professor {
+  --mouth: 23%;
+  --mouth-pos: 25%;
+  --mustache: 6deg;
+  --eye-light: 66%;
+  --eyebrow1-top: 20%;
+  --eyebrow1-angle: 0deg;
+  --eyebrow2-top: 22.5%;
+  --eyebrow2-angle: 8deg;
+  left: 20%;
+  transform-origin: 50% 100%;
+  bottom: -1%;
+  transform: scaleX(-1) scale(0.8) rotate(1deg)
+}
+
+.panel-06 .blackboard {
+  top: -11%;
+  right: 3%;
+}
+
+.panel-06 .text {
+  left: 30%;
+  bottom: 10%;
+}
+
+.panel-06 .speech {
+  bottom: 70%;
+  left: 8%;
+}
+.panel-06 .speech::before {
+  left: 60%;
+  height: 130%;
+}
+
+.panel-06 .extremity {
+  transform: rotate(-70deg);
+  transform-origin: 0 100%;
+  left: -10%;
+}
+
+.panel-06 .hand::after {
+  content: none;
+}
+
+.panel-06 .finger {
+  height: 80%;
+  left: 70%;
+  top: 10%;
+  transform: rotate(-30deg);
+  transform: rotate(-30deg) translate(10%, -90%);
+}
+}
+
+@layer panel7 {
+.panel-07 {
+  aspect-ratio: 137 / 75;
+}
+
+.panel-07 .professor {
+  --mouth: 20%;
+  --mouth-pos: 30%;
+  --mustache: 6deg;
+  --eye-light: 33%;
+  --eyebrow1-top: 22%;
+  --eyebrow1-angle: 5deg;
+  --eyebrow2-top: 24%;
+  --eyebrow2-angle: -5deg;
+  left: 45%;
+  transform-origin: 50% 100%;
+  transform: scale(0.85)
+}
+
+.panel-07 .blackboard {
+  top: -11%;
+  left: auto;
+  right: -60%;
+}
+
+.panel-07 .text {
+  right: 15%;
+  bottom: 10%;
+}
+
+.panel-07 .speech {
+  bottom: 65%;
+  left: 0%;
+}
+.panel-07 .speech::before {
+  left: 72%;
+  height: 95%;
+}
+}
+
+@layer panel8 {
+.panel-08 .professor {
+  --mouth: 15%;
+  --mouth-pos: 25%;
+  --mustache: 6deg;
+  --eye-light: 66%;
+  --eyebrow1-top: 19%;
+  --eyebrow1-angle: 5deg;
+  --eyebrow2-top: 21%;
+  --eyebrow2-angle: 3deg;
+  left: 3%;
+  transform-origin: 50% 100%;
+  transform: scaleX(-1);
+}
+
+.panel-08 .blackboard {
+  top: -11%;
+  left: auto;
+  right: -60%;
+}
+
+.panel-08 .speech {
+  bottom: 75%;
+  left: 0%;
+}
+.panel-08 .speech::before {
+  left: 65%;
+  width: 15%;
+  height: 90%;
+  transform: scaleX(-1);
+}
+}
+
+@layer descriptions {
+.panel-09 .speech,
+.panel-10 .speech,
+.panel-11 .speech {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 100%;
+}
+
+.panel-09 .speech::before,
+.panel-10 .speech::before,
+.panel-11 .speech::before {
+  transform: scaleX(-1);
+  height: 40%;
+  top: 100%;
+}
+
+.panel-09 .speech::after,
+.panel-10 .speech::after{
+  content: "*Erase* \a        *Scribble*";
+  font-size: 0.5em;
+  white-space: pre-wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(-25deg);
+}
+
+.panel-10 .speech::after {
+  transform: translate(-50%, -100%) rotate(-15deg);
+}
+
+}
+
+@layer panel12 {
+.panel-12 {
+  aspect-ratio: 206.5 / 75;
+}
+
+.panel-12 .professor {
+  --mouth: 23%;
+  --mouth-pos: 25%;
+  --mustache: 6deg;
+  --eye-light: 66%;
+  --eyebrow1-top: 20%;
+  --eyebrow1-angle: 0deg;
+  --eyebrow2-top: 22.5%;
+  --eyebrow2-angle: 8deg;
+  left: 20%;
+  transform-origin: 50% 100%;
+  bottom: -1%;
+  transform: scaleX(-1) scale(0.8) rotate(1deg)
+}
+
+.panel-12 .blackboard {
+  top: -11%;
+  right: 3%;
+}
+
+.panel-12 .text {
+  left: 30%;
+  bottom: 10%;
+}
+
+.panel-12 .speech {
+  top: 10%;
+  left: 3%;
+  width: 26%;
+}
+.panel-12 .speech::before {
+  left: 60%;
+  height: 50%;
+}
+}
+
+@layer panel13 {
+.panel-13 {
+  
+}
+
+.panel-13 .speech::before {
+  width: 15%;
+  left: 20%;
+}
+}
+
+@layer panel14 {
+.panel-14 {
+  aspect-ratio: 137 / 75;
+}
+
+.panel-14 .professor {
+  --mouth: 10%;
+  --mouth-pos: 27%;
+  --mustache: 6deg;
+  --eye-light: 66%;
+  --eyebrow1-top: 14%;
+  --eyebrow1-angle: -5deg;
+  --eyebrow2-top: 15%;
+  --eyebrow2-angle: 5deg;
+  left: 2%;
+  transform-origin: 50% 100%;
+  transform: scaleX(-1) scale(0.8)
+}
+
+.panel-14 .face {
+  background: linear-gradient(#f003, #f000 40%), var(--skin);
+}
+.panel-14 .eye {
+  transform: scale(1.3);
+}
+
+.panel-14 .blackboard {
+  top: -11%;
+  left: -10%;
+}
+
+.panel-14 .text {
+  right: 20%;
+  bottom: 10%;
+}
+
+.panel-14 .speech {
+  color: white;
+  bottom: 70%;
+  left: 5%;
+}
+.panel-14 .speech::before {
+  left: 20%;
+  height: 100%;
+}
+
+.panel-14 .surprise,
+.panel-14 .surprise::before,
+.panel-14 .surprise::after {
+  content: "";
+  width: 5vmin;
+  border-top: 0.7vmin solid white;
+  transform: rotate(30deg);
+  left: -5%;
+  top: 0;
+  height: 2vmin;
+}
+
+.panel-14 .surprise::before {
+  top: -6vmin;
+  left: 2vmin;
+  transform: rotate(35deg);
+}
+
+.panel-14 .surprise::after {
+  transform: rotate(15deg);
+  top: -3.5vmin;
+  left: 0.75vmin;
+}
+
+.panel-14 .arm {
+  width: 8%;
+  height: 33%;
+  background: #000;
+  bottom: 0;
+  z-index: 1;
+  left: 32%;
+  box-shadow: 0.5vmin -6vmin 0 -2.5vmin
+}
+
+.panel-14 .arm::before {
+  content: "";
+  width: 150%;
+  aspect-ratio: 0.7;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -100%) rotate(-5deg);
+  background:
+    radial-gradient(38% 29% at 50% 70%, #000 99.99%, #0000 0),
+    radial-gradient(20% 70% at 20% 47%, #000 42%, #0000 0),
+    radial-gradient(20% 80% at 38% 42%, #000 45%, #0000 0),
+    radial-gradient(20% 94% at 56% 42%, #000 45%, #0000 0),
+    radial-gradient(20.5% 94% at 75% 47%, #000 45%, #0000 0);
+}
+
+.panel-14 .arm::after {
+  content: "";
+  width: 3vmin;
+  height: 7vmin;
+  background: #000;
+  border-radius: 100%;
+  transform: rotate(15deg);
+  top: -55%;
+  left: 98%;
+}
+
+.panel-14 .arm:nth-child(2) {
+  left: 5%;
+  bottom: -20%;
+  transform: scaleX(-1) rotate(-3deg);
+}
+.panel-14 .arm:nth-child(2)::after {
+  transform: rotate(30deg);
+  left: 99%;
+}
+
+.panel-14 .arm:nth-child(3) {
+  left: 49%;
+  bottom: -15%;
+  transform: scaleX(-1) scale(0.93) rotate(3deg);
+}
+
+.panel-14 .arm:nth-child(4) {
+  left: 65%;
+  bottom: -2%;
+  transform: scale(1.05) rotate(-3deg);
+}
+
+.panel-14 .arm:nth-child(4)::before {
+  transform: translate(-45%, -100%) rotate(6deg);
+}
+
+.panel-14 .arm:nth-child(4)::after {
+  left: 95%;
+  height: 9vmin;
+  transform: rotate(30deg);
+  top: -45%;
+}
+
+.panel-14 .arm:nth-child(5) {
+  left: 79%;
+  bottom: -16%;
+  transform: scaleX(-1) rotate(-3deg);
+}
+
+.panel-14 .arm:nth-child(5)::after {
+  height: 12vmin;
+  top: -60%;
+  left: 94%;
+}
+
+.panel-14 .arm:nth-child(6) {
+  left: 99%;
+  bottom: -16%;
+  transform: scaleX(-1) rotate(6deg);
+}
+
+.panel-14 .arm:nth-child(6)::after {
+  height: 9vmin;
+}
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <section class="panel-01">
+        <div class="speech">Good morning, class.<br/>And welcome to OOP 101.</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel-02 span2">
+        <div class="blackboard">
+          <div class="text">
+            .container {
+              background: blue;
+              color: red;
+            }
+            .container .text {
+              color: green;
+            }
+          </div>
+        </div>
+        <div class="speech">What is this? CSS from<br/>the previous class?</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel-03">
+        <div class="blackboard"></div>
+        <div class="speech">As you may know, CSS is not real programming.</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel-04">
+        <div class="blackboard"></div>
+        <div class="speech">In this class, we'll learn about the object-oriented paradigm and proper programming.</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel-05">
+        <div class="blackboard"></div>
+        <div class="speech">Abstraction, inheritance, polymorphism, classes... by the end of this course you'll master them!</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="extremity">
+            <div class="hand">
+              <div class="finger"></div>
+            </div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+            
+          </div>
+        </div>
+      </section>
+      <section class="panel-06 span2">
+        <div class="blackboard">
+          <div class="text">
+            class Vehicle {
+              protected String color = "red";
+              protected Int length = 200;
+              protected Int posX = 0;
+              
+              public void move() {
+                this.posX += 2;
+              }
+            }
+            
+            class Car extends Vehicle {
+              public String color = "blue";
+            }</div>
+        </div>
+        <div class="speech">That's a lot better!</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="extremity">
+            <div class="hand">
+              <div class="finger"></div>
+            </div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel-07 span2">
+        <div class="blackboard">
+        </div>
+        <div class="speech">Unfortunately, some of you seem<br/>to struggle with Java's notation...<br/>Too verbose, too much new syntax...</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel-08">
+        <div class="speech">So, I came up with a simpler beginners' notation for you</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="panel-09">
+        <div class="speech">Let's remove the class and inheritance keywords for now...<br/><br/><br/>...And replace them with something smaller, like a dot.</div>
+      </section>
+      
+      <section class="panel-10">
+        <div class="speech">Then, we remove the variable types and modifiers...<br/><br/><br/>...We'll reattach them once we view the access modifiers on chapter 4.</div>
+      </section>
+      
+      <section class="panel-11">
+        <div class="speech">And we simplify other things like the properties and values, the indentation, and the functions, and... there it is!</div>
+      </section>
+      
+      <section class="panel-12 span2">
+        <div class="blackboard">
+          <div class="text">
+            .vehicle {
+              color: red;
+              width: 200;
+              left: 0;
+            
+              &.move {
+                animation: moveLeft 2s;
+              }
+            }
+    
+            .car.vehicle {
+              color: blue;
+            }</div>
+        </div>
+        <div class="speech">I found that with these changes, students understand the concepts better...</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="panel-13">
+        <div class="speech">...While preserving all of the OOP core ideas perfectly.</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="extremity">
+            <div class="hand">
+              <div class="finger"></div>
+            </div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel-14 span2">
+        <div class="arm"></div>
+        <div class="arm"></div>
+        <div class="arm"></div>
+        <div class="arm"></div>
+        <div class="arm"></div>
+        <div class="arm"></div>
+        <div class="blackboard">
+          <div class="text">
+            .vehicle {
+              color: red;
+              width: 200;
+              left: 0;
+            
+              &.move {
+                animation: moveLeft 2s;
+              }
+            }
+    
+            .car.vehicle {
+              color: blue;
+            }</div>
+        </div>
+        <div class="speech">Any questio...?</div>
+        <div class="professor">
+          <div class="body"></div>
+          <div class="head">
+            <div class="surprise"></div>
+            <div class="ear-back"></div>
+            <div class="face">
+              <div class="chin"></div>
+              <div class="lip"></div>
+              <div class="mustache"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+            </div>
+            <div class="hair-side"></div>
+            <div class="hair-top"></div>
+            <div class="hair-details"></div>
+            <div class="ear"></div>
+          </div>
+        </div>
+        
+      </section>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

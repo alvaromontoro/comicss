@@ -1412,4 +1412,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>OOP Beginners' Class</title>
+    <link href="https://comicss.art/?id=75" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/75/oop-class.html"/>
+    <id>https://comicss.art/?id=75</id>
+    <updated>2023-02-22T00:00:00Z</updated>
+    <summary>New cartoon: OOP Beginners' Class...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/75/oop-class.png" alt="An Object-Oriented Programming professor berates CSS then goes explaining how OOP is real programming, but students don't fully understand the syntax so he came up with a new notation. After applying some changes, the notation looks exactly like CSS, so all the students raise the hands confused" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

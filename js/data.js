@@ -580,5 +580,14 @@ const posts = [
     vertical: true,
     title: "An Apple A Day...",
     ariaLabel: "Cartoon with one panel with the headline 'They say an apple a day keeps the doctor away... But the CSS Developer has more faith in a margin.' It has a man in the position of the lotus smiles as a doctor tries to reach out to him unsuccessfully. A bubble has the code :has(.doctor) #me { margin: 15vmin; }."
+  },
+  {
+    id: 75,
+    uid: "oop-class",
+    boxes: 14,
+    horizontal: true,
+    title: "OOP Beginners' Class",
+    ariaLabel: "An Object-Oriented Programming professor berates CSS then goes explaining how OOP is real programming, but students don't fully understand the syntax so he came up with a new notation. After applying some changes, the notation looks exactly like CSS, so all the students raise the hands confused",
+    maxWidth: 800
   }
 ]
