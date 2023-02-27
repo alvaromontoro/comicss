@@ -1431,4 +1431,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>CSS Game</title>
+    <link href="https://comicss.art/?id=76" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/76/game.html"/>
+    <id>https://comicss.art/?id=76</id>
+    <updated>2023-02-27T00:00:00Z</updated>
+    <summary>CSS Game: Guess the brand!</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><a src="https://comicss.art/comics/76/game.html">A CSS game where you need to guess the brand based on some CSS code.</a></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

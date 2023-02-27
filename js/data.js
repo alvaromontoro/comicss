@@ -589,5 +589,13 @@ const posts = [
     title: "OOP Beginners' Class",
     ariaLabel: "An Object-Oriented Programming professor berates CSS then goes explaining how OOP is real programming, but students don't fully understand the syntax so he came up with a new notation. After applying some changes, the notation looks exactly like CSS, so all the students raise the hands confused",
     maxWidth: 800
+  },
+  {
+    id: 76,
+    uid: "game",
+    boxes: 1,
+    vertical: true,
+    title: "CSS Game",
+    ariaLabel: "Today's cartoon is a CSS game! And I'm your host, Grid Harvey! In the game, you have to guess the name of different brand  based on a code provided in CSS. Click in the link to play!"
   }
 ]

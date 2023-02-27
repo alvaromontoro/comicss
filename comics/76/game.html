@@ -1,0 +1,1750 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* design inspired by https://dribbble.com/shots/14210403-Solitaire */
+
+:root {
+  counter-reset: hints correct logos;
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 85%;
+  }
+}
+
+.center {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 75%, #fff3, #fff2 10%, #fff0 0 15%, #fff1 0, #ffffff08 20%, #fff0 0),
+    
+    radial-gradient(farthest-side circle at 30% 20%, #fff0 5%, #ffffff08 8%, #fff0 0 15%, #ffffff08 0, #fff0 40%),
+    
+    repeating-radial-gradient(circle at 90% 60%, #fff0 0 23%, #fff2  23.1%),
+    radial-gradient(80% 15% at 100% 90%, #f6b4, #f6b0),
+    radial-gradient(at 0 100%, #fff3, #fff0),
+    radial-gradient(farthest-side at 100% 50%, #ffc5, #fff0),
+    linear-gradient(190deg, #4bf 5%, #78ecef, #cdf 90%);
+}
+
+form {
+  padding-top: 2rem;
+}
+
+h1, h2 {
+  margin: 0 auto 2rem auto;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  max-width: 20rem;
+  min-width: fit-content;
+  font-weight: 700;
+  box-sizing: border-box;
+  position: relative;
+  filter: drop-shadow(0 0.5rem 0.5rem #3694) drop-shadow(0 -0.5rem 0.5rem #def3)
+}
+
+h1::before,
+h1::after,
+h2::before,
+h2::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 20%;
+  left: 0;
+  transform: translate(-50%, 0);
+  border-radius: 0.5rem; 
+  background: 
+    radial-gradient(farthest-side at 0% 100%, #0000 99%, #0002) 100% 100% / 50% 20% no-repeat,
+    radial-gradient(at 100% 100%, #0002, #0000),
+    radial-gradient(80% 15% at 50% 0%, #ff02 40%, #3ae0),
+    radial-gradient(80% 15% at 50% 100%, #59f5 40%, #3ae0),
+    linear-gradient(90deg, #e35eb500, #d34ea5 60%),
+    linear-gradient(#f284b0, #e03cfe);
+  clip-path: polygon(0 10%, 16% 50%, 0 90%, 0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+h1::after,
+h2::after {
+  left: 100%;
+  transform: scaleX(-1) translate(50%, 0);
+}
+
+h1 div,
+h2 div {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff1fe;
+  border-radius: 0.5rem 0.5rem 0.25rem 0.25rem;
+  z-index: 1;
+  box-shadow:
+    inset 0 1.5rem 1rem -1.5rem #ff04,
+    inset 0 -1.5rem 1rem -1rem #e03cfe,
+    inset 0 0 1rem #e03cfe;
+  background: 
+    radial-gradient(80% 15% at 50% 0%, #ff03 40%, #3ae0),
+    radial-gradient(60% 15% at 50% 100%, #59f5 40%, #3ae0),
+    linear-gradient(#f284b0, #e03cfe);
+}
+
+h1 span,
+h2 span {
+  display: block;
+  color: #ffec84;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+
+ul {
+  --m: min(10vw, 80px);
+  display: flex;
+  position: relative;
+  margin: 3rem auto 0 auto;
+  width: 100vw;
+  max-width: 1200px;
+  overflow: scroll;
+  padding: 0;
+  list-style: none;
+  -webkit-mask: linear-gradient(90deg, #0000, #000 var(--m) calc(100% - var(--m)), #0000);
+  scroll-snap-type: x mandatory;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), 0 calc(100% - 2rem));
+}
+
+li {
+  counter-increment: logos;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: none;
+  flex: 1;
+  min-width: 100%;
+  padding: 3rem calc(var(--m) + 2rem) 2rem calc(var(--m) + 2rem);
+  list-style: none;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 1023px) {
+  li {
+    grid-template-columns: none;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(100% - var(--m) * 2);
+  height: 100%;
+  background: #fff6;
+  background: 
+    linear-gradient(#82e1ff77, #f1f8fe77),
+    #fff8
+    ;
+  box-shadow: 
+    inset 0 0.5rem 0.25rem -0.25rem #fff8,
+    0 0.5rem 1.5rem #1232; /* #96cef688; */
+  z-index: -1;
+  transform: translateX(-50%);
+  border-radius: 1rem;;
+}
+
+li::before {
+  content: "PUZZLE " counter(logos);
+  position: absolute;
+  top: 0;
+  left: calc(var(--m) + 2rem);
+  transform: translate(0, -50%);
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  padding: 1rem 3rem;
+  background: 
+    radial-gradient(circle at 1.75rem 50%, #fff9 3.5%, #fff0 0),
+    radial-gradient(circle at 1.8rem 53%, #00000008 3.5%, #3690 5%),
+    radial-gradient(circle at calc(100% - 1.75rem) 50%, #fff9 3.5%, #fff0 0),
+    radial-gradient(circle at calc(100% - 1.7rem) 53%, #00000008 3.5%, #3690 5%),
+    linear-gradient(#2cb6ff 15%, #53cbef 85%);
+  color: #eeee;
+  text-shadow: 1px 1px 2px #0001;
+  box-shadow: 
+    inset 0 0.25rem 0.25rem -0.25rem #fff,
+    inset 0 0 0 0.5rem #fff9,
+    0 0.5rem 1rem -0.25rem #3693
+}
+
+li > div:nth-child(2) {
+  flex: 1;
+  position: relative;
+}
+
+.brand {
+  width: 100%;
+  overflow: scroll;
+  height: 300px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #123;
+  color: #eee;
+  border-radius: 0.5rem;
+}
+
+.brand .s { color: #fd8; }
+.brand .c { color: #999; }
+.brand .p { color: #c9c; }
+.brand .n { color: #f80; }
+.brand .t { color: #7b7; }
+.brand .v { color: #88f; }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1rem;
+}
+
+:focus {
+  outline: 1px dashed #369;
+  outline-offset: 0.25rem;
+}
+
+input {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 4rem;
+  font-size: 1.75rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 0.25rem solid #fffc;
+  background: 
+    linear-gradient(#fff5, #fff8);
+  background-clip: padding-box;
+  border-radius: 0.5rem;
+}
+
+input:valid {
+  counter-increment: correct;
+  border-color: #52cba9;
+  background: 
+/*     linear-gradient(50deg, #0000 16%, #52cba9 0 26%, #0000 0) calc(100% - 0.5em) 50% / 1em 1em no-repeat,
+    linear-gradient(-50deg, #0000 30%, #52cba9 0 40%, #0000 0) calc(100% - 0.5em) 50% / 1em 1em no-repeat, */
+    #b6f8e4;
+}
+
+section {
+  display: flex;
+  flex-gap: 1rem;
+  gap: 1rem;
+}
+
+output {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: linear-gradient(50deg, #0000 16%, #52cba9 0 26%, #0000 0) 0 0,
+    linear-gradient(-50deg, #0000 30%, #52cba9 0 40%, #0000 0) 100% 0;
+  background-repeat: no-repeat;
+  display: none;
+  text-indent: -100px;
+  overflow: hidden;
+  font-size: 0;
+/*   position: absolute;
+  left: -10000in; */
+}
+
+input:valid + output {
+  display: block;
+}
+
+@media (max-width: 500px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+details {
+  flex: 1;
+  margin-bottom: 0rem;
+  max-width: 100%;
+  border-radius: 0.5rem 0.5rem 1rem 1rem;
+}
+
+input[type="reset"],
+summary {
+  padding: 0.75rem;
+  color: #ecf6fe;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  background: 
+    radial-gradient(80% 15% at 50% 0%, #ff01 40%, #3ae0),
+    radial-gradient(80% 15% at 50% 100%, #59f8 40%, #3ae0),
+    linear-gradient(#fff2, #fff0 25% 75%, #fff2),
+    #689cfd;
+  box-shadow:
+    inset 0 0.5rem 1rem -0.5rem #fff3,
+    inset 0 -0.5rem 1rem -0.5rem #36cc;
+  background:
+    linear-gradient(#2cb6ff 15%, #53cbef 85%);
+    ;
+  box-shadow:
+    inset 0 0.5rem 1rem -0.5rem #fff3,
+    inset 0 -0.5rem 1rem -0.5rem #36c7,
+    0 1rem 1rem -0.5rem #3693;
+}
+
+details:not(#instructions) > div {
+  padding: 1rem;
+  max-width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  background: #f0f3f6;
+  border-radius: 0 0 1rem 1rem;
+}
+
+details:not(#instructions)[open] {
+  counter-increment: hints;
+}
+
+details:not(#instructions)[open] > div {
+  box-shadow: 0 1rem 1rem -0.5rem #3693;
+}
+
+details:not(#instructions)[open] summary {
+  pointer-events: none;
+  box-shadow:
+    inset 0 0.5rem 1rem -0.5rem #fff2,
+    inset 0 -0.5rem 1rem -0.5rem #36c7,
+    0 0.5rem #f0f3f6;
+}
+
+#instructions {
+  max-width: 90vmin;
+  margin: 5rem auto 2rem auto;
+  border: 1px solid #32ab89;
+  border-radius: 0.5rem;
+  background: #b6f8e4;
+  color: #32ab89;
+  box-shadow: 0 1rem 1rem -0.5rem #1232;
+}
+
+#instructions summary {
+  background: none;
+  color: #32ab89;
+  box-shadow: none;
+  font-size: 1rem;
+  padding-left: 1.33rem;
+  background:
+    linear-gradient(45deg, #0000 45%, #32ab89 0 55%, #0000 0) 0.875rem 1rem / 0.75rem 0.75rem no-repeat,
+    linear-gradient(-45deg, #0000 45%, #32ab89 0 55%, #0000 0) 0.875rem 1rem / 0.75rem 0.75rem no-repeat,
+    radial-gradient(farthest-side circle, #0000 80%, #32ab89 0 99.99%, #0000) 0.75rem 0.875rem / 1rem 1rem no-repeat
+    ;
+}
+
+#instructions summary div {
+  padding-left: 0.75rem;
+  text-transform: none;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+#instructions summary::marker,
+#instructions summary::-webkit-details-marker {
+  adisplay: none;
+  color: #0000;
+}
+
+#instructions:not([open]) {
+  display: none;
+}
+
+#final {
+  display: none;
+}
+
+form:invalid #final {
+  display: none;
+}
+
+#final {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: #000c;
+  color: #eee;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+
+#final span::after {
+  content: counter(hints);
+  font-weight: bolder;
+}
+
+#final h2 {
+  transform: translate(0, -50%);
+  filter: drop-shadow(0 1rem 1rem #3697);
+}
+
+#final > div {
+  position: relative;
+  border-radius: 1rem;
+  max-width: 90%;
+  padding: 0rem calc(10vw + 2rem) 1rem calc(10vw + 2rem);
+  list-style: none;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  background: #fff6;
+  background: 
+    linear-gradient(#82e1ffcc, #f1f8fecc),
+    #fffc
+    ;
+  box-shadow: 
+    inset 0 0.5rem 0.25rem -0.25rem #fff8,
+    0 1rem 1.5rem #0004;
+  color: #222;
+}
+
+input[type="reset"] {
+  border: 0;
+}
+      
+    </style>
+  </head>
+  <body>
+
+    <form>
+  <h1>
+    <div>
+      Guess the Brand
+      <span>(CSS Edition)</span>
+    </div>
+  </h1>
+  <details open id="instructions">
+    <summary>
+      <span>Instructions</span>
+      <div>The idea of the game is to guess the name of the brand/company that is described by the CSS code in the dark box. The selectors, properties, and values will give you important hints to solve the puzzle.</div>
+      <div>Click anywhere on this banner to close these instructions.</div>
+    </summary>
+  </details>
+  <ul>
+    <li>
+      <div class="brand brand-01" id="code-01" role="text">
+        <pre>:target {
+  <span class="c">/* styles */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="brand-01" pattern="[Tt][Aa][Rr][Gg][Ee][Tt]" aria-labelledby="code-01" required />
+        <output id="correct-01" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>American retail corporation with a target as logo.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-02" id="code-02" role="text">
+        <pre><span class="s">.brand</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">1</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-02" pattern="[Ss]quare" aria-labelledby="code-02" required />
+        <output id="correct-02" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Company that provides payment system and commercial solutions.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-03" id="code-03" role="text">
+        <pre><span class="s">video</span> {
+  <span class="p">transform</span>: <span class="s">scale</span>(<span class="n">2</span>);
+}</pre>
+      </div>
+      <div>
+        <input id="brand-03" pattern="[Zz]oom" aria-labelledby="code-03" required />
+        <output id="correct-03" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>4 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A popular videoconference service.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-04" id="code-04" role="text">
+        <pre><span class="s">a</span>[<span class="s">href</span>^=<span class="t">"#"</span>] {
+  <span class="c">/* styles */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="brand-04" pattern="[Ll]inked[Ii][Nn]" aria-labelledby="code-04" required />
+        <output id="correct-04" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>8 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A professional site to connect with other workers, learn, or apply for jobs.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-05" id="code-05" role="text">
+        <pre><span class="s">.brand</span>::before {
+  <span class="p">content</span>: <span class="t">"🐄"</span>;
+  <span class="p">color</span>: <span class="s">#ff0000ff</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-05" pattern="[Rr]ed [Bb]ull" aria-labelledby="code-05" required />
+        <output id="correct-05" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>7 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This drink will give you wings.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+
+    <li>
+      <div class="brand brand-06" id="code-06" role="text">
+        <pre><span class="s">#fear</span> {
+  <span class="p">display</span>: <span class="s">none</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-06" pattern="[Nn]o [Ff]ear" aria-labelledby="code-06" required />
+        <output id="correct-06" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A clothing brand that is never scared.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-07" id="code-07" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="v">--b</span>: <span class="s">#0000</span> <span class="n">49%</span>, <span class="s">#fff</span> <span class="n">0 51%</span>, <span class="s">#0000</span> <span class="n">0</span>;
+  <span class="p">background</span>: 
+    <span class="s">linear-gradient</span>(<span class="s">var</span>(<span class="v">--b</span>)),
+    <span class="s">linear-gradient</span>(<span class="n">90deg</span>, <span class="s">var</span>(<span class="v">--b</span>)),
+    <span class="s">conic-gradient</span>(
+      <span class="s">#6dbf00</span> <span class="n">25%</span>, 
+      <span class="s">#ffb800</span> <span class="n">0 50%</span>,
+      <span class="s">#00a7f7</span> <span class="n">0 75%</span>,
+      <span class="s">#ff4200</span> <span class="n">0</span>
+    );
+  <span class="p">aspect-ratio</span>: <span class="n">1</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-07" pattern="[Mm]icro[Ss]oft" aria-labelledby="code-07" required />
+        <output id="correct-07" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>9 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The company that brought you Windows... and Internet Explorer.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-08" id="code-08" role="text">
+        <pre><span class="s">.brand</span> {
+  <span class="p">animation-duration</span>: <span class="v">0.00001s</span>;
+  <span class="p">color</span>: <span class="n">#c0c0c0</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-08" pattern="[Qq]uick[Ss]ilver" aria-labelledby="code-08" required />
+        <output id="correct-08" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>11 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A clothing retailer especialized in "surfing" attire.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-09" id="code-09" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">background</span>: 
+    <span class="s">radial-gradient</span>(
+      <span class="n">200% 100%</span> <span class="s">at</span> <span class="n">50% 0</span>, 
+      <span class="s">#0000</span> <span class="n">50%</span>,
+      <span class="s">mediumSeaGreen</span> <span class="n">0</span>
+    );
+  <span class="p">background-size</span>: <span class="n">20% 100%</span>;
+  <span class="p">transform</span>: <span class="s">scaleX</span>(<span class="n">-1</span>);
+}</pre>
+      </div>
+      <div>
+        <input id="brand-09" pattern="[Aa][Ee][Ss]" aria-labelledby="code-09" required />
+        <output id="correct-09" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>3 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The hint is a drawing of some waves.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-10" id="code-10" role="text">
+        <pre><span class="s">.brand</span>::before {
+  <span class="p">content</span>: <span class="t">"m"</span>;
+  <span class="p">text-shadow</span>: <span class="n">1em 0</span>, <span class="n">2em 0</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-10" pattern="3[Mm]" aria-labelledby="code-10" required />
+        <output id="correct-10" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2 letters (1 number and 1 letter)</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This Minnesota company specialized in Minery and Machinery before expanding their product line.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-11" id="code-11" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">1</span>;
+  <span class="p">background</span>: 
+    <span class="s">radial-gradient</span>(
+      <span class="n">23% 100%</span> <span class="s">at</span> <span class="n">28% 100%</span>, 
+      <span class="s">#0000</span> <span class="n">90%</span>, <span class="s">#ff0</span> <span class="n">0 99%</span>, <span class="s">#0000</span> <span class="n">0</span>
+    ),
+    <span class="s">radial-gradient</span>(
+      <span class="n">23% 100%</span> <span class="s">at</span> <span class="n">72% 100%</span>, 
+      <span class="s">#0000</span> <span class="n">90%</span>, <span class="s">#ff0</span> <span class="n">0 99%</span>, <span class="s">#0000</span> <span class="n">0</span>
+    ),
+    <span class="s">#f00</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-11" pattern="[Mm]c[Dd]onald'[Ss]" aria-labelledby="code-11" required />
+        <output id="correct-11" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>9 letters (and something else)</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>America's favorite hamburger chain.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-12" id="code-12" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">1</span>;
+  <span class="p">background</span>: 
+    <span class="s">radial-gradient</span>(
+      <span class="n">circle at</span> <span class="n">34% 50%</span>, 
+      <span class="s">#f00</span> <span class="n">30%</span>, <span class="s">#0000</span> <span class="n">0</span>
+    ),
+    <span class="s">radial-gradient</span>(
+      <span class="n">circle at</span> <span class="n">66% 50%</span>, 
+      <span class="s">#f90</span> <span class="n">30%</span>, <span class="s">#0000</span> <span class="n">0</span>
+    );
+  <span class="p">background-blend-mode</span>: <span class="s">soft-light</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-12" pattern="[Mm]aster[Cc]ard" aria-labelledby="code-12" required />
+        <output id="correct-12" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>10 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A popular credit card company.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-13" id="code-13" role="text">
+        <pre><span class="s">.brand</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">1</span>;
+}
+
+<span class="s">.brand</span>::before {
+  <span class="p">content</span>: <span class="t">"\00a0"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-13" pattern="[Ss]quare[Ss]pace" aria-labelledby="code-13" required />
+        <output id="correct-13" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>11 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A web creation and hosting service.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-14" id="code-14" role="text">
+        <pre><span class="s">hr</span> {
+  <span class="p">border</span>: <span class="n">1em</span> <span class="s">solid gray</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-14" pattern="[Gg]ray[Bb]a[Rr]" aria-labelledby="code-14" required />
+        <output id="correct-14" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>7 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>American wholesale electrical, communications and data networking business. The line is supposed to be a bar.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-15" id="code-15" role="text">
+        <pre><span class="s">.brand</span>::before {
+  <span class="p">content</span>: <span class="t">"⚑⚑⚑⚑⚑⚑"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-15" pattern="[Ss]ix [Ff]lags" aria-labelledby="code-15" required />
+        <output id="correct-15" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>8 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>One of USA's favorites theme parks.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-16" id="code-16" role="text">
+        <pre><span class="s">.brand</span>::before {
+  <span class="p">content</span>: <span class="t">"1"</span>;
+  <span class="p">text-transform</span>: <span class="s">uppercase</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-16" pattern="[Cc]apital [Oo]ne" aria-labelledby="code-16" required />
+        <output id="correct-16" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>10 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This bank wants to know what's in your wallet.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-17" id="code-17" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">background</span>: 
+    <span class="s">radial-gradient</span>(
+      <span class="n">closest-side circle</span>, 
+      <span class="s">#f00f</span> <span class="n">20%</span>, 
+      <span class="s">#0000</span> <span class="n">0 40%</span>,
+      <span class="s">#f00f</span> <span class="n">0 60%</span>, 
+      <span class="s">#0000</span> <span class="n">0</span>
+    );
+}</pre>
+      </div>
+      <div>
+        <input id="brand-17" pattern="[Tt]arget" aria-labelledby="code-17" required />
+        <output id="correct-17" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>You already answered this one before.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-18" id="code-18" role="text">
+        <pre><span class="s">#brand</span>::before {
+  <span class="p">content</span>: <span class="t">"🙈"</span>;
+  <span class="p">color</span>: <span class="s">hsl</span>(<span class="n">0 100% 50%</span>);
+}</pre>
+      </div>
+      <div>
+        <input id="brand-18" pattern="[Rr]ed [Mm]onkey" aria-labelledby="code-18" required />
+        <output id="correct-18" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>9 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>An apparel company from LA. The full name is --- ------ Lifestyle.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-19" id="code-19" role="text">
+        <pre><span class="s">#brand</span>::before {
+  <span class="p">content</span>: <span class="t">"vii"</span>;
+}
+
+<span class="s">#brand</span>::after {
+  <span class="p">content</span>: <span class="t">"xi"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-19" pattern="(7|[Ss]even)[- ][Ee]leven" aria-labelledby="code-19" required />
+        <output id="correct-19" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2 words, can be written with numbers or letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>America's "favorite" pit stop and gas station.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-20" id="code-20" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">font-family</span>: <span class="s">serif</span>;
+}
+
+<span class="s">#brand</span>::before {
+  <span class="p">content</span>: <span class="t">"J"</span>;
+  <span class="p">font-size</span>: <span class="n">4em</span>;
+  <span class="p">text-shadow</span>: <span class="n">0.5em 0</span>;
+  <span class="p">vertical-align</span>: <span class="s">-webkit-baseline-middle</span>
+}
+
+<span class="s">#brand</span>::after {
+  <span class="p">content</span>: <span class="t">"&"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-20" pattern="[Jj]ohnson(&| [Aa]nd | & )[Jj]ohnson" aria-labelledby="code-20" required />
+        <output id="correct-20" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>17 letters in 3 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This company makes many products, amont them, some no-tears baby shampoo.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-21" id="code-21" role="text">
+        <pre><span class="s">audio</span>, 
+<span class="s">video</span>, 
+<span class="s">article</span>, 
+<span class="s">.docs</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">7</span> / <span class="n">10</span>;
+  <span class="p">border</span>: <span class="n">15px</span> <span class="s">solid gold</span>;
+  <span class="p">width</span>: <span class="n">140px</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-21" pattern="[Nn]ational [Gg]eographic" aria-labelledby="code-21" required />
+        <output id="correct-21" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>18 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>You might have seen some publications or documentaries from this company.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-22" id="code-22" role="text">
+        <pre><span class="s">input</span>[<span class="s">type</span>=<span class="t">"checkbox"</span>]:checked {
+  <span class="c">/* styles */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="brand-22" pattern="[Xx][Bb][Oo][Xx]" aria-labelledby="code-22" required />
+        <output id="correct-22" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>4 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This is more of a gaming system/platform.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-23" id="code-23" role="text">
+        <pre><span class="s">article</span> {
+  <span class="p">font-weight</span>: <span class="n">500</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-23" pattern="[Mm]edium" aria-labelledby="code-23" required />
+        <output id="correct-23" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A popular website to write articles online.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-24" id="code-24" role="text">
+        <pre>[<span class="s">content</span>] {
+  <span class="c">/* styles */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="brand-24" pattern="[Mm]eta" aria-labelledby="code-24" required />
+        <output id="correct-24" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>4 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Facebook and Whatsapp are related to this company.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-25" id="code-25" role="text">
+        <pre><span class="s">.brand</span>::before {
+  <span class="p">content</span>: <span class="t">"T"</span>;
+  <span class="p">color</span>: <span class="s">hotpink</span>;
+  <span class="p">animation</span>: <span class="s">move</span> <span class="n">1s</span> <span class="s">infinite</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-25" pattern="[Tt][- ][Mm]obile" aria-labelledby="code-25" required />
+        <output id="correct-25" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>7 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A giant German telekom.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-26" id="code-26" role="text">
+        <pre>[<span class="s">lang</span>=<span class="s">es</span>]:<span class="s">nth-child</span>(<span class="n">5</span>)::after {
+  <span class="p">content</span>: <span class="t">"🛏️"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-26" pattern="[Ll]a [Qq]uinta" aria-labelledby="code-26" required />
+        <output id="correct-26" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>8 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A popular hotel chain with a Spanish name.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-27" id="code-27" role="text">
+        <pre>[<span class="s">href</span>^=<span class="t">"mailto:"</span>]::before {
+  <span class="p">content</span>: <span class="t">"🐵"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-27" pattern="[Mm]ail[Cc]himp" aria-labelledby="code-27" required />
+        <output id="correct-27" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>9 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A newsletter and mailing online service.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+
+    <li>
+      <div class="brand brand-28" id="code-28" role="text">
+        <pre><span class="s">sup</span>::before {
+  <span class="p">content</span>: <span class="t">"8"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-28" pattern="[Ss]uper (8|[Ee]ight)" aria-labelledby="code-28" required />
+        <output id="correct-28" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A cheap American motel chain.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-29" id="code-29" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">1</span>; 
+  <span class="p">border-radius</span>: <span class="n">50%</span>; 
+  <span class="p">background</span>: 
+    <span class="s">radial-gradient</span>(
+      <span class="n">farthest-side</span>, 
+      <span class="s">#0000</span> <span class="n">55%</span>, 
+      <span class="s">#000f</span> <span class="n">0</span>
+    ),
+    <span class="s">repeating-conic-gradient</span>(
+      <span class="s">#fff</span> <span class="n">0 25%</span>, 
+      <span class="s">#19d</span> <span class="n">0 50%</span>
+    );
+}</pre>
+      </div>
+      <div>
+        <input id="brand-29" pattern="[Bb][Mm][Ww]" aria-labelledby="code-29" required />
+        <output id="correct-29" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>3 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A luxury car brand (the hint is the logo).</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-30" id="code-30" role="text">
+        <pre><span class="s">q</span> + <span class="s">q</span> {
+  <span class="c">/* styles */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="brand-30" pattern="[Qq]2" aria-labelledby="code-30" required />
+        <output id="correct-30" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2 characters (1 letter + 1 number)</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>American fintech that provides electronic banking solutions. The Austin FC stadium sponsor.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-31" id="code-31" role="text">
+        <pre><span class="s">#brand</span>::before {
+  <span class="p">content</span>: <span class="t">"7"</span>;
+  <span class="p">vertical-align</span>: <span class="s">top</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-31" pattern="(7|[Ss]even)[- ][Uu][Pp]" aria-labelledby="code-31" required />
+        <output id="correct-31" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>7 characters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A refreshing soda. Fido Dido was the brand mascot for a while</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-32" id="code-32" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">top</span>: <span class="n">0</span>;
+  <span class="p">vertical-align</span>: <span class="s">top</span>;
+  <span class="p">align-items</span>: <span class="s">start</span>;
+  <span class="p">margin-top</span>: <span class="n">-1rem</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-32" pattern="[Uu][Pp][Ss]" aria-labelledby="code-32" required />
+        <output id="correct-32" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>3 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A famous package delivery service.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-33" id="code-33" role="text">
+        <pre><span class="s">.car</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">6</span> / <span class="n">5</span>;
+  <span class="p">clip-path</span>: <span class="s">polygon</span>(<span class="n">50% 0</span>, <span class="n">100% 100%</span>, <span class="n">0 100%</span>);
+  <span class="p">background</span>: 
+    <span class="s">repeating-conic-gradient</span>(
+      <span class="s">from</span> <span class="n">-30deg</span> <span class="s">at</span> <span class="n">50% 66.66%</span>, 
+      <span class="s">#f00f</span> <span class="n">0 60deg</span>, 
+      <span class="s">#0000</span> <span class="n">0 120deg</span>
+    );
+}</pre>
+      </div>
+      <div>
+        <input id="brand-33" pattern="[Mm]itsubishi" aria-labelledby="code-33" required />
+        <output id="correct-33" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>10 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Japanase automobile brand.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+
+    <li>
+      <div class="brand brand-34" id="code-34" role="text">
+        <pre><span class="s">ol</span>::before {
+  <span class="p">content</span>: <span class="t">"r"</span>;
+}
+
+<span class="s">ol</span>::after {
+  <span class="p">content</span>: <span class="t">"ex"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-34" pattern="[Rr]olex" aria-labelledby="code-34" required />
+        <output id="correct-34" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>5 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Seriously? This watch company is the dumbest puzzle in all the game!</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-35" id="code-35" role="text">
+        <pre><span class="s">img</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">1</span>;
+  <span class="p">width</span>: <span class="n">164px</span>;
+  <span class="p">border</span>: <span class="n">18px</span> <span class="p">solid</span>;
+  <span class="p">border-radius</span>: <span class="n">56px</span>;
+  <span class="p">background</span>: 
+    <span class="s">radial-gradient</span>(
+      <span class="s">circle at</span> <span class="n">82.5% 17.5%</span>, 
+      <span class="s">#000</span> <span class="n">0 6%</span>, <span class="s">#0000</span> <span class="n">0</span>
+    ),
+    <span class="s">radial-gradient</span>(<span class="s">circle</span>, 
+      <span class="s">#0000</span> <span class="n">30%</span>, <span class="s">#000</span> <span class="n">0 45%</span>, <span class="s">#0000</span> <span class="n">0</span>
+    );
+}</pre>
+      </div>
+      <div>
+        <input id="brand-35" pattern="[Ii]nsta[Gg]ram" aria-labelledby="code-35" required />
+        <output id="correct-35" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>9 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A popular image/video sharing platform acquired by Facebook.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-36" id="code-36" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">1</span>;
+  <span class="p">width</span>: <span class="n">100px</span>;
+  <span class="p">border</span>: <span class="n">15px</span> <span class="p">solid</span>;
+  <span class="p">border-radius</span>: <span class="n">50%</span>;
+  <span class="p">filter</span>: 
+    <span class="s">drop-shadow</span>(<span class="n">80px 0</span>)
+    <span class="s">drop-shadow</span>(<span class="n">160px 0</span>);
+}</pre>
+      </div>
+      <div>
+        <input id="brand-36" pattern="[Aa][Uu][Dd][Ii]" aria-labelledby="code-36" required />
+        <output id="correct-36" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>4 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A luxury car brand from Germany.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-37" id="code-37" role="text">
+        <pre>:<span class="s">has</span>(* + *) {
+  <span class="c">/* styles */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="brand-37" pattern="[Hh]asbro" aria-labelledby="code-37" required />
+        <output id="correct-37" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A toy and game maker.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-38" id="code-38" role="text">
+        <pre><span class="s">#hamburger</span> {
+  <span class="p">width</span>: <span class="n">500Q</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-38" pattern="([Dd][Qq]|[Dd]airy [Qq]ueen)" aria-labelledby="code-38" required />
+        <output id="correct-38" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>10 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>American chain of soft serve ice cream and fast food restaurants.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-39" id="code-39" role="text">
+        <pre><span class="s">.video</span> {
+  <span class="p">height</span>: <span class="n">120px</span>;
+  <span class="p">width</span>: <span class="n">200px</span>;
+  <span class="p">border-radius</span>: <span class="n">10%</span> / <span class="n">50%</span>;
+  <span class="p">background</span>: 
+    <span class="s">conic-gradient</span>(
+      <span class="s">at</span> <span class="n">100% 50%</span>, 
+      <span class="s">#0000</span> <span class="n">0 240deg</span>, 
+      <span class="s">#ffff</span> <span class="n">0 300deg</span>, 
+      <span class="s">#0000</span> <span class="n">0 360deg</span>
+    ) <span class="n">50% 50%</span> / <span class="n">20% 50%</span> <span class="s">no-repeat</span>,
+    <span class="s">red</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-39" pattern="[Yy]ou[Tt]ube" aria-labelledby="code-39" required />
+        <output id="correct-39" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>7 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The most popular video site on the Internet (probably).</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-40" id="code-40" role="text">
+        <pre><span class="s">.brand</span>::before {
+  <span class="p">content</span>: <span class="t">"🍓"</span>;
+  <span class="p">color</span>: <span class="s">#000</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-40" pattern="[Bb]lack[Bb]erry" aria-labelledby="code-40" required />
+        <output id="correct-40" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>10 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Creators of a super-productive phone with full keyboard.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-41" id="code-41" role="text">
+        <pre><span class="s">.brand</span>::before,
+<span class="s">.brand</span>::after {
+  <span class="p">content</span>: <span class="t">""</span>;
+  <span class="p">position</span>: <span class="s">absolute</span>;
+  <span class="p">width</span>: <span class="n">100px</span>;
+  <span class="p">height</span>: <span class="n">100px</span>;
+  <span class="p">border</span>: <span class="n">25px</span> <span class="s">solid</span>;
+  <span class="p">border-left-color</span>: <span class="s">#0000</span>;
+  <span class="p">border-radius</span>: <span class="n">50%</span>;
+}
+
+<span class="s">.brand</span>::after {
+  <span class="p">transform</span>: <span class="s">scaleX</span>(<span class="n">-1</span>) <span class="s">translateX</span>(<span class="n">-50%</span>)
+}</pre>
+      </div>
+      <div>
+        <input id="brand-41" pattern="[Cc]hanel" aria-labelledby="code-41" required />
+        <output id="correct-41" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This luxury fashion house was founded by a famous Coco.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-42" id="code-42" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">aspect-ratio</span>: <span class="n">8</span> / <span class="n">5</span>;
+  <span class="p">background</span>:
+    <span class="s">linear-gradient</span>(
+      <span class="s">#015</span> <span class="n">25%</span>, 
+      <span class="s">#0000</span> <span class="n">0 75%</span>, 
+      <span class="s">#015</span> <span class="n">0</span>
+    ),
+    <span class="s">linear-gradient</span>(
+      <span class="n">90deg</span>, 
+      <span class="s">#fff</span> <span class="n">50%</span>, 
+      <span class="s">red</span> <span class="n">0</span>
+    );
+}</pre>
+      </div>
+      <div>
+        <input id="brand-42" pattern="[Tt][Oo][Mm][Mm][Yy] [Hh][Ii][Ll][Ff][Ii][Gg][Ee][Rr]" aria-labelledby="code-42" required />
+        <output id="correct-42" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>13 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This American fashion brand founded in 1985 has the name of its founder.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-43" id="code-43" role="text">
+        <pre>* + <span class="s">#brand</span> {
+  <span class="c">/* styles */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="brand-43" pattern="[Bb]rother" aria-labelledby="code-43" required />
+        <output id="correct-43" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>7 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A company famouse for their printers.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-44" id="code-44" role="text">
+        <pre><span class="s">#brand</span> {
+  <span class="p">background</span>: <span class="s">chocolate</span>;
+  <span class="p">display</span>: <span class="s">flex</span>;
+  <span class="p">justify-content</span>: <span class="s">space-between</span>;
+  <span class="p">color</span>: <span class="s">#000</span>;
+}
+
+<span class="s">#brand</span>::first-letter {
+  <span class="c">/* Won't work, but as a hint ;) */</span>
+  <span class="p">color</span>: <span class="s">red</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-44" pattern="[Nn]utella" aria-labelledby="code-44" required />
+        <output id="correct-44" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>7 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A popular brand of a hazelnut and chocolate spread.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-45" id="code-45" role="text">
+        <pre><span class="s">#brand</span>::before {
+  <span class="p">content</span>: <span class="t">"🌼🌸🌺🌹🌷🌳🌲"</span>;
+  <span class="p">color</span>: <span class="s">#808000</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-45" pattern="[Oo]live [Gg]arden" aria-labelledby="code-45" required />
+        <output id="correct-45" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>11 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A restaurant chain with Italian-American food.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-46" id="code-46" role="text">
+        <pre><span class="s">td</span>::before {
+  <span class="p">content</span>: <span class="t">"$$$"</span>;
+  <span class="p">color</span>: <span class="s">green</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-46" pattern="[Tt][Dd] [Bb]ank" aria-labelledby="code-46" required />
+        <output id="correct-46" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>An American bank, subsidiary of the Toronto Dominion group.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-47" id="code-47" role="text">
+        <pre><span class="s">li</span> > <span class="s">dl</span> {
+  <span class="c">/* styles */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="brand-47" pattern="[Ll][Ii][Dd][Ll]" aria-labelledby="code-47" required />
+        <output id="correct-47" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>4 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This is by far the easiest puzzle in the whole game... but, if you want a clue: a grocery storm from Germany.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-48" id="code-48" role="text">
+        <pre>:<span class="s">nth-child</span>(<span class="p">n</span> + <span class="n">8</span>) ~ * {
+  <span class="p">color</span>: <span class="s">chocolate</span>;
+  <span class="p">background</span>: <span class="s">mintyCream</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-48" pattern="[Aa]fter (8|[Ee]ight)" aria-labelledby="code-48" required />
+        <output id="correct-48" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>10 letters in 2 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A minty chocolate to enjoy in the evening.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-49" id="code-49" role="text">
+        <pre><span class="s">hr</span> {
+  <span class="p">display</span>: <span class="s">block</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="brand-49" pattern="([Hh][Rr]|[Hh]&[Rr]) [Bb]lock" aria-labelledby="code-49" required />
+        <output id="correct-49" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>A US tax-preparing company.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>2 words, 8 characters (including an &).</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <li>
+      <div class="brand brand-50" id="code-50" role="text">
+        <pre>:<span class="s">where</span>(<span class="s">input</span>, <span class="s">output</span>) {
+  &:<span class="s">nth-of-type</span>(<span class="p">n</span> + <span class="n">2</span>) {
+    &::before {
+      <span class="p">content</span>: <span class="t">"📣🎉🥂"</span>;
+    }
+  }
+}</pre>
+      </div>
+      <div>
+        <input id="brand-50" pattern="[Cc]heerios" aria-labelledby="code-50" required />
+        <output id="correct-50" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>8 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A brand of cereal rings made of honey and nuts.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+    <!--
+    <li>
+      <div class="brand brand-">
+        <pre>
+</pre>
+      </div>
+      <div>
+        <input id="brand-" pattern="" aria-labelledby="code- correct-" required />
+        <output id="correct-" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>8 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+-->
+  </ul>
+
+  <p class="center">Swipe or tab to go to a different level</p>
+
+  <div id="final" role="dialog" aria-live="assertive" aria-labelledby="final-title" aria-describedby="final-desc">
+    <div>
+      <h2>
+        <div id="final-title">
+          Congratulations!
+        </div>
+      </h2>
+      <div id="final-desc">
+        <p>You guessed all the brands correctly!</p>
+        <p>You used <span></span> hints to finish.</p>
+        <p>Refresh the page or click the button below to start again</p>
+      </div>
+      <input type="reset" autofocus />
+    </div>
+  </div>
+</form>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
