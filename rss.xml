@@ -766,5 +766,15 @@
       <enclosure url="https://comicss.art/comics/76/game.html" length="58000" type="text/html" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=77</guid>
+      <title>Wrap Battling</title>
+      <link>https://comicss.art/?id=77</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/77/wrap-battling.png" length="162000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

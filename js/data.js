@@ -597,5 +597,13 @@ const posts = [
     vertical: true,
     title: "CSS Game",
     ariaLabel: "Today's cartoon is a CSS game! And I'm your host, Grid Harvey! In the game, you have to guess the name of different brand  based on a code provided in CSS. Click in the link to play!"
+  },
+  {
+    id: 77,
+    uid: "wrap-battling",
+    boxes: 1,
+    vertical: true,
+    title: "Wrap Battling",
+    ariaLabel: "Cartoon titled 'Wrap Battling' showing two rappers singing/battling about flex-wrap"
   }
 ]

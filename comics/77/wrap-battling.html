@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      
+article {
+  width: 80vmin;
+  height: 70vmin;
+  border: 0.5vmin solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  background: linear-gradient(#c9c, #c9c0 90%);
+  overflow: hidden;
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  height: 6vmin;
+  border-bottom: 0.5vmin solid;
+  width: 100%;
+  font-size: 3vmin;
+  line-height: 6vmin;
+  text-align: center;
+  background: #ffc;
+  font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  --skin: #a56c5d; #963;
+  --skin-light: #b57c6d; #a74;
+  --skin-dark: #955c4d; #852;
+  --hair: #382030; #210;
+  --hair-light: #483040;
+  --hair-dark: #180010;
+  --eye: #630;
+  --shirt: #eed;
+  --pants: #369;
+  width: 44%;
+  height: 85%;
+  bottom: 0;
+  left: 5%;
+}
+
+.wrapper + .wrapper {
+  --skin: #eb9; #963;
+  --skin-light: #fff3; #a74;
+  --skin-dark: #0001; #852;
+  --hair: #ffc; #210;
+  --hair-light: #ffe;
+  --hair-dark: #ffa;
+  --eye: #78c;
+  --shirt: #ddd;
+  left: auto;
+  right: 5%;
+}
+
+.head {
+  width: 30%;
+  height: 25%;
+  top: 31%;
+  left: 30%;
+  transform: rotate(-5deg);
+}
+
+.person-2 .head {
+  transform: scaleX(-1) rotate(-10deg);
+  top: 35%;
+}
+
+.face {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--skin);
+  border-radius: 100% 100% 100% 120% / 60% 70% 100% 120%;
+  box-shadow: 
+    inset 0.6vmin -0.5vmin 0.15vmin var(--skin-dark),
+    inset -0.75vmin 0.75vmin 0.15vmin var(--skin-light);
+}
+
+.person-2 .face {
+  background: 
+    radial-gradient(40% 100% at -5% 5%, var(--hair-dark) 50%, #0000 0),
+    radial-gradient(180% 50% at 60% 5%, var(--hair-dark) 30%, #0000 0),
+    var(--skin);
+}
+
+.neck {
+  background: var(--skin);
+  width: 40%;
+  height: 50%;
+  top: 70%;
+  left: 15%;
+  transform: rotate(5deg);
+  border-radius: 100% / 30%;
+}
+
+.person-1 .neck {
+  width: 50%;
+  border-radius: 10% / 100%;
+  left: 10%;
+}
+
+.person-2 .neck {
+  top: 68%;
+  transform: rotate(12deg);
+}
+
+.eye {
+  width: 20%;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(farthest-side circle at 26% 57%, #fffc 20%, #0000 21%),
+    radial-gradient(farthest-side circle at 60% 50%, #000 30%, var(--eye) 0 70%, #0000 72%),
+    #eee;
+  border-radius: 110% 0 80% 0;
+  transform: rotate(45deg);
+  top: 42%;
+  left: 32%;
+  box-shadow: -0.1vmin -0.1vmin 0 0.1vmin var(--skin-dark);
+}
+
+.eye + .eye {
+  left: 72%;
+  top: 41%;
+  transform: rotate(42deg) scale(0.97);
+}
+
+.eye::before {
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 180%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) translate(-10%, 0%);
+  box-shadow: -1vmin 0vmin 0 -0.2vmin var(--hair-dark);
+}
+
+.person-2 .eye::before {
+  top: 40%;
+  left: 40%;
+  box-shadow: -0.9vmin 0vmin 0 -0.5vmin var(--hair-dark);
+}
+
+.mouth {
+  width: 38%;
+  height: 10%;
+  background: 
+    radial-gradient(at 0 100%, #f46 30%, #0000 0),
+    radial-gradient(100% 300% at 100% 70%, #0000 25%, #813 0);
+  top: 75%;
+  left: 42%;
+  border-radius: 50% 150% 100% 50% / 100% 50% 120% 100%;
+}
+
+.person-2 .mouth {
+  height: 6%;
+  width: 25%;
+  border-radius: 100%;
+  border-top: 0.4vmin solid #a33;
+  border-left: 0.3vmin solid #0000;
+  background: #0000;
+  top: 78%;
+  left: 48%;
+  transform: rotate(-4deg)
+}
+
+.mouth::before {
+  content: "";
+  width: 50%;
+  aspect-ratio: 1.75;
+  bottom: 0;
+  left: 50%;
+  border-radius: 50%;
+  border: 0.2vmin solid #0000;
+  border-top: 0.3vmin solid var(--skin-dark);
+  border-right: 0;
+  transform: translate(-50%, 140%) rotate(-15deg);
+}
+
+.ear {
+  width: 30%;
+  height: 35%;
+  background: var(--skin);
+  border-radius: 100% / 60% 60% 90% 120%;
+  top: 40%;
+  left: -20%;
+  transform: rotate(-20deg);
+}
+
+.person-2 .ear {
+  left: -15%;
+  top: 43%;
+}
+
+.ear::before {
+  content: "";
+  width: 70%;
+  height: 70%;
+  top: 20%;
+  left: 10%;
+  border-radius: 50%;
+  box-shadow: inset -1vmin 1vmin 0 -0.75vmin var(--skin-dark);
+  background: radial-gradient(circle at 80% 70%, var(--skin-dark) 20%, #0000 0)
+}
+
+.person-2 .ear::before {
+  background: radial-gradient(circle at 75% 65%, var(--skin-dark) 15%, #0000 0)
+}
+
+.nose {
+  width: 18%;
+  aspect-ratio: 1;
+  box-shadow: 0.35vmin -0.25vmin var(--skin-dark);
+  border-radius: 50%;
+  top: 58%;
+  left: 55%;
+}
+
+.person-2 .nose {
+  left: 58%;
+  top: 60%;
+  width: 15%;
+  transform: skew(20deg) rotate(10deg)
+}
+
+.body {
+  width: 50%;
+  height: 50%;
+  left: 41.5%;
+  top: 57%;
+  transform: translate(-50%, 0);
+}
+
+.person-2 .body {
+  left: 47%;
+  top: 62%;
+}
+
+.person-2 .body::before {
+  content: "";
+  width: 55%;
+  height: 20%;
+  background: var(--shirt);
+  border-radius: 100%;
+  left: 25%;
+  top: -3%;
+  box-shadow: 
+    inset 0 0 0 1vmin #0001,
+    1vmin 0.75vmin #0002,
+    1vmin 0.75vmin var(--shirt)
+}
+
+.chest {
+  width: 96%;
+  height: 60%;
+  background: #f003;
+  border-radius: 100% / 40% 60% 120% 80%;
+}
+
+.person-1 .chest {
+  background:
+    radial-gradient(500% 100% at 60% 105%, #0000 25%, #00000008 30%, #0000 0) 65% 100% / 40% 100% no-repeat,
+    radial-gradient(120% 250% at 0% 15%, var(--skin) 20%, #0002 20.1% 21.5%, #0000 21.6%),
+    radial-gradient(100% 250% at 100% 5%, var(--skin) 20%, #0002 20.1% 21.5%, #0000 21.6%),
+    radial-gradient(100% 120% at 53% 5%, var(--skin) 20%, #0002 20.1% 21.5%, #0000 21.6%),
+    var(--shirt)
+    ;
+  background-repeat: no-repeat;
+}
+
+.person-2 .chest {
+  left: 3%;
+  border-radius: 100% / 100% 70% 120% 120%;
+  background: 
+    radial-gradient(circle at 32.5% 12%, #0003 0.35vmin, #0000 0),
+    linear-gradient(#0003 0 0) 32% 5% / 2% 11%,
+    radial-gradient(circle at 60.5% 19%, #0003 0.35vmin, #0000 0),
+    linear-gradient(#0003 0 0) 61% 9% / 2% 15%,
+    radial-gradient(130% 55% at 52% 0%, #0001 20.1% 21.5%, #0000 21.6%),
+    var(--shirt);
+  background-repeat: no-repeat;
+  box-shadow:
+    -4vmin 0 0.5vmin -4vmin #0002,
+    0 4vmin var(--shirt),
+    -3vmin 4vmin 1vmin -3.5vmin #0004
+}
+
+.person-2 .chest::before {
+  content: "CSS \a IS \a AWESOME";
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0002;
+  white-space: pre;
+  font-size: 1.5vmin;
+  width: 5vmin;
+  aspect-ratio: 1;
+  line-height: 1.125;
+  left: 40%;
+  top: 50%;
+  border: 1px solid;
+  transform: translate(-50%, -50%) skew(-9deg) skewY(3deg) rotate(-4deg)
+}
+
+.person-2 .chest::after {
+  content: "";
+  width: 50%;
+  height: 2%;
+  border-top: 1px solid #0000000c;
+  border-bottom: 1px solid #00000017;
+  top: 85%;
+  left: 10%;
+  transform: rotate(4deg);
+  clip-path: polygon(0 0, 100% 0, 70% 100%)
+}
+
+.abs {
+  left: 0;
+  top: 20%;
+  width: 90%;
+  height: 60%;
+  border-radius: 10% 20% 90% 100% / 40% 100% 10% 10%;
+  background: var(--shirt);
+  box-shadow: inset -0.75vmin 0.5vmin 0.25vmin #0001
+}
+
+.person-2 .abs {
+  width: 95%;
+  left: 3%;
+  top: 40%;
+  border-radius: 20% / 100%;
+  box-shadow:
+    -3.5vmin -1vmin 0.5vmin -3.75vmin #0002;
+}
+
+.pants {
+  width: 91%;
+  height: 60%;
+  left: -0.5%;
+  top: 60%;
+  background: var(--pants);
+  border-radius: 100% / 80% 80% 120% 120%;
+  box-shadow: 
+    inset 0.75vmin 0.5vmin 0.25vmin #0002,
+    inset -0.75vmin 0.5vmin 0.25vmin #0002
+}
+
+.arm {
+  background: var(--skin);
+  width: 36%;
+  aspect-ratio: 1;
+  border-radius: 130% 00% 100% 100%;
+  top: 8%;
+  transform: translate(-50%, 0);
+  box-shadow: 
+    inset 0.75vmin 0.25vmin 0.25vmin -0.35vmin var(--skin-dark),
+    0vmin 1.5vmin 0 -0.75vmin var(--skin-dark);
+}
+
+.arm::before {
+  content: "";
+  left: 50%;
+  top: 70%;
+  width: 95%;
+  height: 190%;
+  border-radius: 80% 100% 100% 100% / 70% 60% 100% 100%;
+  transform-origin: 50% 0;
+  transform: translate(-50%, 0) rotate(20deg);
+  background: var(--skin);
+  box-shadow: inset 0.5vmin -0.5vmin 0.25vmin -0.25vmin var(--skin-dark),
+    inset -0.5vmin -0.5vmin 0.25vmin -0.25vmin var(--skin-dark);
+}
+
+.arm::after {
+   content: "";
+  left: 50%;
+  top: 70%;
+  width: 80%;
+  height: 190%;
+  background: var(--skin);
+  border-radius: 100% / 60% 60% 120% 120%;
+  top: 194%;
+  left: -22%;
+  transform-origin: 50% 0;
+  transform: translate(-50%, 0) rotate(-45deg);
+  box-shadow: inset 0.5vmin 0.0vmin 0.25vmin -0.25vmin var(--skin-dark),
+    inset -0.75vmin -1vmin 0.25vmin -0.25vmin var(--skin-light);
+    clip-path: polygon(0 0, 50% 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.arm-1 {
+  left: 70%;
+  transform: scaleX(-1);
+}
+
+.arm-1::before {
+  top: 65%;
+  background:
+    radial-gradient(at 90% -40%, var(--skin-dark) 50%, #0000 0),
+    vaR(--skin);
+  box-shadow: inset 0.5vmin -0.5vmin 0.25vmin -0.25vmin var(--skin-dark),
+    inset -0.5vmin -0.5vmin 0.25vmin -0.25vmin var(--skin-dark);
+}
+
+.arm-1::after {
+  top: 240%;
+  left: 5%;
+  transform: translate(-50%, 0) rotate(145deg);
+  box-shadow: inset 0.5vmin -1vmin 0.25vmin -0.25vmin var(--skin-dark),
+    inset -0.5vmin -0.5vmin 0.25vmin -0.25vmin var(--skin-dark);
+  clip-path: none;
+}
+
+
+.hand {
+  width: 30%;
+  aspect-ratio: 1;
+  background: var(--skin);
+  
+  border-radius: 100% / 20% 40% 120% 120%;
+}
+
+.hand-1 {
+  top: 70%;
+  left: 15%;
+  transform: rotate(120deg);
+}
+
+.hand-2 {
+  left: 130%;
+  top: 12%;
+  transform: rotate(15deg);
+}
+
+.microphone {
+  width: 60%;
+  height: 180%;
+  background: 
+    linear-gradient(94deg, #444 70%, #0000 0) 100% 0 / 55% 100% no-repeat,
+    linear-gradient(-94deg, #444 70%, #0000 0) 0% 0 / 55% 100% no-repeat;
+  top: 40%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotate(-70deg);
+  border-radius: 100% / 20%
+}
+
+.microphone::before {
+  content: "";
+  width: 130%;
+  aspect-ratio: 1;
+  background: 
+    repeating-linear-gradient(#0000 0 5%, #fff4 6%, #4444 0 7%),
+    repeating-linear-gradient(90deg, #0000 0 5%, #fff4 6%, #4444 0 7%),
+    black;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+.thumb {
+  width: 70%;
+  height: 30%;
+  background: var(--skin);
+  border-radius: 50% / 20% 20% 100% 100%;
+  top: 20%;
+  box-shadow: inset -0.2vmin 0.2vmin 0.1vmin -0.1vmin var(--skin-dark)
+}
+
+.thumb::before {
+  content: "";
+  width: 60%;
+  height: 160%;
+  background: var(--skin);
+  border-radius: 20% 100% 0 50%;
+  left: 0;
+  top: 30%;
+}
+
+.finger,
+.finger::before,
+.finger::after {
+  content: "";
+  width: 1.5vmin;
+  height: 3vmin;
+  border-radius: 2vmin;
+  background: var(--skin);
+  left: 1.25vmin;
+  top: -1vmin;
+  box-shadow: inset 0 -0.5vmin 0.25vmin var(--skin-dark);
+}
+
+.finger::before {
+  top: 0;
+  left: 1.5vmin;
+  transform: rotate(1deg);
+}
+
+.finger::after {
+  left: 2.75vmin;
+  top: 0.5vmin;
+  transform: rotate(10deg);
+}
+
+.hand-1 {
+  border-radius: 100% / 50% 40% 120% 80%;
+}
+
+.hand-1,
+.hand-1 *,
+.hand-1 *::before,
+.hand-1 *::after{
+  box-shadow: none;
+}
+
+.hand-1 .finger {
+  box-shadow: -0.1vmin 0.1vmin var(--skin-dark)
+}
+
+.brazo-1 {
+  width: 30%;
+  height: 66%;
+  background:
+    linear-gradient(135deg, #0000 30%, #0001),
+    var(--shirt);
+  border-radius: 200% 0 0 10vmin;
+  top: 7%;
+  left: -10%;
+  transform: rotate(5deg)
+}
+
+.brazo-2 {
+  width: 40%;
+  height: 66%;
+  background: 
+    radial-gradient(100% 300% at 0 90%, #0000 15%, #0001 20%, #0000 22%),
+    var(--shirt);
+  border-radius: 50% 100% 100% 50% / 0 100% 50% 0;
+  transform: rotate(-10deg);
+  top: 7%;
+  left: 80%;
+}
+
+.brazo-2::before {
+  z-index: -1;
+  content: "";
+  bottom: 0;
+  left: 10%;
+  width: 60%;
+  height: 30%;
+  background: var(--shirt);
+  transform: translate(-75%, 0);
+  border-radius: 20% / 100%;
+  aclip-path: polygon(-50% -100%, 94% -100%, 94% 200%, -50% 200%);
+  border-left: 0.25vmin solid #0002;
+  box-shadow: 0 -0.25vmin 0.25vmin -0.25vmin #0003;
+/*   box-shadow:
+    0 -0.3vmin 0.25vmin -0.25vmin #0003,
+    0 0.3vmin 0.25vmin -0.25vmin #0002,
+    1vmin 0 0 1vmin var(--shirt),
+    0.2vmin 0 0.25vmin 0.7vmin #0002 */
+}
+
+code {
+  background: #123;
+  padding: 3.5vmin 2.5vmin;
+  border-radius: 1vmin;
+  color: #eee;
+  font-size: 2vmin;
+}
+
+code::before {
+  content: "";
+  width: 3vmin;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  background: inherit;
+  left: 15%;
+  z-index: -1;
+}
+
+.code-1 code::before {
+  height: 200%;
+  transform: scaleX(-1) rotate(10deg);
+  left: 50%;
+  width: 2vmin;
+}
+
+.code-1 code {
+  background: #012;
+}
+
+code span {
+  position: relative;
+}
+
+code .p {
+  color: #c9c;
+}
+
+code .s {
+  color: #fe5;
+}
+
+.code-1 {
+  top: 10%;
+  left: 40%;
+}
+
+.code-2 {
+  top: 20%;
+  left: 25%;
+}
+    </style>
+  </head>
+  <body>
+
+    <article role="img" aria-label="Cartoon titled 'Wrap Battling' showing two rappers singing/battling about flex-wrap">
+      <h1>Wrap Battling</h1>
+      <div class="code code-1">
+        <pre><code><span class="p">flex-wrap</span>: <span class="s">wrap-reverse</span>;</code></pre>
+      </div>
+      <div class="code code-2">
+        <pre><code><span class="p">flex-wrap</span>: <span class="s">wrap</span>;</code></pre>
+      </div>
+      <div class="wrapper person-1">
+        
+        <div class="body">
+          <div class="arm arm-1"></div>
+          <div class="pants"></div>
+          <div class="abs"></div>
+          <div class="chest"></div>
+          <div class="arm arm-2"></div>
+          <div class="hand hand-1">
+            <div class="finger"></div>
+            <div class="thumb"></div>
+          </div>
+          <div class="hand hand-2">
+            <div class="microphone"></div>
+            <div class="finger"></div>
+            <div class="thumb"></div>
+          </div>
+        </div>
+        <div class="head">
+          <div class="neck"></div>
+          <div class="face"></div>
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+          <div class="nose"></div>
+          <div class="hair"></div>
+          <div class="ear"></div>
+        </div>
+      </div>
+      <div class="wrapper person-2">
+        <div class="body">
+          <div class="brazo brazo-1"></div>
+          <div class="abs"></div>
+          <div class="chest"></div>
+          <div class="brazo brazo-2"></div>
+        </div>
+        <div class="head">
+          <div class="neck"></div>
+          <div class="face"></div>
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+          <div class="nose"></div>
+          <div class="hair"></div>
+          <div class="ear"></div>
+        </div>
+      </div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

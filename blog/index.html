@@ -99,6 +99,113 @@
         </footer>
       </article>
       -->
+      <article id="wrap-battling">
+        <h2>Flex-Wrapping</h2>
+        <p>
+          Rap battling (or <a href="https://en.wikipedia.org/wiki/Battle_rap">battle rap</a>) is a type of rap performance in which 
+          two or more rappers sing against each other (generally including some insults/attacks). <a href="/?id=77">Today's comic</a> 
+          plays with the homophones Rap and Wrap to make a silly joke with Flexbox and the
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"><code>flex-wrap</code> property</a>.
+        </p>
+        <p>
+          A flex container will lay out the content in a single line by default. This may be Ok, but if the items' size exceeds the 
+          container, they will be squeezed or they will overflow. So instead, we may want to get the content into multiple lines. 
+          This is where <code>flex-wrap</code> comes into action.
+        </p>
+        <p>
+          This property defines if a flex container will be single-line or multi-line (depending on the amount and size of the flex items),
+          and in the case of multi-line, it defines how the items will be stacked after wrapping.
+        </p>
+        <p>
+          <code>flex-wrap</code> has three main values:
+        </p>
+        <ul>
+          <li><code>nowrap</code>: the items will not wrap, instead they will overflow the parent. (This is the default value.)</li>
+          <li><code>wrap</code>: the items will wrap instead of overflowing the flex container. They will stack from cross-start to cross-end.</li>
+          <li><code>wrap-reverse</code>: the items will wrap instead of overflowing the flex container. They will stack from cross-end to cross-start.</li>
+        </ul>
+        <p>
+          The cross-start and cross-end part may sound complicated, but it is easier than what it sounds. It depends on the direction of
+          the flex: if the direction is horizontal ("row"), then the wrapped elements will stack vertically (in rows); and if the direction is 
+          vertical ("column"), the wrapped elements will stack horizontally (in columns).
+        </p>
+        <p>
+          Let's check an example with a flex container with 5 items with a defined width. By default, the value of <code>flex-wrap</code> is "nowrap", 
+          so the flex items will overflow the container (I put it as an image to avoid the annoying horizontal overflow it would create):
+        </p>
+        <p>
+          <img src="./images/flex-wrap-demo.png" alt="a box with 5 numbered boxes inside, the last of them overflows the container" />
+        </p>
+        <p>
+          Now, if we change the code to set a value of "wrap" for <code>flex-wrap</code>, when the flex items would overflow the container, 
+          they wrap into a new row instead (live demo):
+        </p>
+        <style>
+          p.flex-demo-div {
+            background: #f002;
+            padding: 10px;
+            max-width: min(100%, 640px);
+            display: flex;
+            gap: 10px;
+            box-sizing: border-box;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+          }
+          span.flex-demo-item {
+            font-family: Helvetica, arial, sans-serif;
+            font-size: 25px;
+            max-width: 200px;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            min-width: 125px;
+            width: 40%;
+          }
+          /* Figma colors in a different order? Just a coincidence ;) ;) */
+          span.flex-demo-item:nth-child(1) { background: #eb4b1b; }
+          span.flex-demo-item:nth-child(2) { background: #9c56f6; }
+          span.flex-demo-item:nth-child(3) { background: #f86e5f; }
+          span.flex-demo-item:nth-child(4) { background: #0fc97e; }
+          span.flex-demo-item:nth-child(5) { background: #1bb5f6; }
+        </style>
+        <p class="flex-demo-div">
+          <span class="flex-demo-item">1</span>
+          <span class="flex-demo-item">2</span>
+          <span class="flex-demo-item">3</span>
+          <span class="flex-demo-item">4</span>
+          <span class="flex-demo-item">5</span>
+        </p>
+        <p>
+          But if we set <code>flex-wrap</code> to "wrap-reverse", then the direction of the wrapping is the opposite: instead of
+          getting into a new row, the wrapped elements <em>push</em> the others into a new row.
+        </p>
+        <p class="flex-demo-div" style="flex-wrap: wrap-reverse;">
+          <span class="flex-demo-item">1</span>
+          <span class="flex-demo-item">2</span>
+          <span class="flex-demo-item">3</span>
+          <span class="flex-demo-item">4</span>
+          <span class="flex-demo-item">5</span>
+        </p>
+        <p>
+          One last example with the <code>flex-direction</code> set to "column." In this case, the elements organize vertically
+          in columns, so when they wrap, they do it in columns instead of rows:
+        </p>
+        <p class="flex-demo-div" style="flex-direction: column; max-height: 230px;">
+          <span class="flex-demo-item">1</span>
+          <span class="flex-demo-item">2</span>
+          <span class="flex-demo-item">3</span>
+          <span class="flex-demo-item">4</span>
+          <span class="flex-demo-item">5</span>
+        </p>
+        <p>
+          I hope these examples were useful and that you enjoyed <a href="/?id=77">today's comic</a>.
+        </p>
+        <footer>
+          Published on <time datetime="2023-03-06">March 6, 2023</time>
+        </footer>
+      </article>
       <article id="an-apple-a-day">
         <h2>An Apple A Day Alternative</h2>
         <p>
@@ -115,7 +222,7 @@
           be confusing (as it may seem like it's a force-field and the margin is actually between the person and the border).
         </p>
         <footer>
-          Published on <time datetime="2022-02-17">February 17, 2023</time>
+          Published on <time datetime="2023-02-17">February 17, 2023</time>
         </footer>
       </article>
 
