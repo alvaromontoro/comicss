@@ -605,5 +605,13 @@ const posts = [
     vertical: true,
     title: "Wrap Battling",
     ariaLabel: "Cartoon titled 'Wrap Battling' showing two rappers singing/battling about flex-wrap"
+  },
+  {
+    id: 78,
+    uid: "the-eye-of-sauron",
+    boxes: 2,
+    vertical: true,
+    title: "The Eye of Sauron",
+    ariaLabel: "The tower of Mordor with the eye of Sauron speakign: 'I once suggested the eye tag. It would track every visible interaction within the wrapped content, but the HTML group rejected my precious idea... So I created Google instead.'"
   }
 ]

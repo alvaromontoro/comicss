@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+* {
+  /* run the animation at your own risk */
+  animation: none !important;
+}
+
+article {
+  width: 90vmin;
+  aspect-ratio: 3/2;
+  border: 0.5vmin solid;
+  position: relative;
+  background: linear-gradient(#110d0b, #908881 50% 60%, #584943);
+  overflow: hidden;
+}
+
+article *,
+article *::before, 
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.tower {
+  bottom: 0;
+  width: 60%;
+  height: 100%;
+  abackground: url(https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/08/Lord-of-the-Rings-Eye-of-Sauron-Mordor-1.jpg) center center / auto,
+    red;
+}
+
+.top {
+  width: 47%;
+  height: 60%;
+  background: #0e0601;
+  top: 50%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 15% 10% 10% 20% / 100% 90% 100% 90%;
+  -webkit-mask:
+    radial-gradient(44% 70% at 51% 0, #0000 99%, #000 0);
+}
+
+.back,
+.front {
+  width: 59%;
+  height: 44%;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border-radius: 5% 5% 0 0 / 100%;
+  background:
+/*     repeating-conic-gradient(at 50% 500%, #ccc3 0 1deg, #0000 0 2deg) 50% 80% / 50% 30% no-repeat, */
+    radial-gradient(51% 140% at 55.5% 53%, #000 20%, #0000 0),
+    radial-gradient(120% 80% at 55.5% 55%, #000 28%, #0000 0),
+    radial-gradient(100% 80% at 55.5% 53%, #333 28%, #0000 0),
+    conic-gradient(at 56% 6%, #0000 173deg, #000 174deg 187deg, #0000 188deg);
+
+}
+
+.back {
+  background:
+    radial-gradient(64% 120% at 50% 0, #0000 50%, #000 51%) 0% 0 / 14% 35%,
+    radial-gradient(64% 120% at 50% 0, #0000 50%, #000 51%) 100% 0 / 12% 35%,
+    linear-gradient(#000 0 0) 51% 21% / 86% 20%,
+    linear-gradient(#000 0 0) 50% 41% / 98% 22%,
+    conic-gradient(at 51% 4%, #0000 173deg, #000 174deg 187deg, #0000 188deg),
+    conic-gradient(at 16% 81%, #0000 173deg, #000 174deg 187deg, #0000 188deg),
+    conic-gradient(at 86% 83%, #0000 173deg, #000 174deg 187deg, #0000 188deg),
+    radial-gradient(100% 300% at 0 100%, #0000 30%, #000 0) 3% 100% / 60% 50%,
+    radial-gradient(100% 300% at 100% 100%, #0000 30%, #000 0) 97% 100% / 60% 50%;
+  background-repeat: no-repeat;
+}
+
+.top::before {
+  content: "";
+  width: 96%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -53.5%);
+  height: 186%;
+  border-radius: 100% / 200% 200% 34% 40%;
+  background: 
+    linear-gradient(#9630 85%, #963c),
+    
+    radial-gradient(150% 100% at 50% 0, #9630 94%, #6306),
+    radial-gradient(100% 20% at 50% 73%, #ffd700, #ff00 80%) no-repeat,
+    radial-gradient(90% 70% at 50% 73%, #ffd700, #ff00 40%) no-repeat,
+    repeating-conic-gradient(at 50% 70%, #ff53 0 0.5deg, #fa03 0 0.9deg),
+    repeating-conic-gradient(at 50% 50%, #00000008 0 0.5deg, #0000 0 0.9deg),
+    repeating-conic-gradient(at 50% 0, #0000 0 1deg, #9631 3deg),
+    radial-gradient(#edd0b0, #ae866199),
+    #ffa500;
+}
+
+@property --x {
+  syntax: '<percentage>';
+  initial-value: 20%;
+  inherits: false;
+}
+
+@keyframes glow {
+  0%,  100% { --x: 20%; }
+  15% { --x: 15%; }
+  35% { --x: 30%; }
+  50% { --x: 22%; }
+  60% { --x: 19%; }
+  75% { --x: 40%; }
+  90% { --x: 23%; }
+}
+
+@property --s {
+  syntax: '<number>';
+  initial-value: 1;
+  inherits: false;
+}
+
+@keyframes scaleEye {
+  0%, 100% { --s: 1; }
+  50% { --s: 1.05; }
+}
+
+.eye {
+  --s: 1;
+  animation: glow 5s infinite;
+  width: 29%;
+  aspect-ratio: 1;
+  border-radius: 80% 2%;
+  transform: rotate(45deg);
+  top: 27%;
+  left: 50.5%;
+  transform: translateX(-50%) rotate(45deg) scale(var(--s));
+  filter: blur(0.75vmin) contrast(400%); hue-rotate(50deg); 
+  mix-blend-mode: color-dodge;
+  box-shadow: 0 0 0.5vmin 0vmin #fff
+}
+
+
+.eye.red {
+  animation: scaleEye 2s infinite;
+  background: 
+    radial-gradient(at 20% 100%, #ff06 var(--x), #0000 0),
+    repeating-linear-gradient(45deg, #0000 0 calc(4% * var(--s)), #0ff9 var(--x)),
+    #fff;
+  animation-direction: reverse;
+}
+
+.eye.yellow {
+  background: 
+    radial-gradient(at 100% var(--x), #f94 15%, #0000 var(--x)),
+radial-gradient(at 60% 10%, #ff08 15%, #0000 0),
+    repeating-linear-gradient(15deg, #0000 0 10%, #f00c 0 var(--x)),
+    #fff;
+  
+}
+
+.eye.orange {
+  background:
+    radial-gradient(at 40% 90%, #00fc 10%, #0000 0),
+    repeating-linear-gradient(-15deg, blue 0 var(--x), #fa00 0 calc(var(--x) + 3%)),
+    #fff;
+  animation-direction: reverse;
+}
+
+.eye.gold {
+  background: 
+    repeating-conic-gradient(at 50% 70%, #ff5c 0 0.5deg, #fa0c 0 0.9deg),
+    radial-gradient(farthest-side, orange, gold);
+  filter: blur(0.25vmin);
+  mix-blend-mode: hue;
+  
+}
+
+.flame {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.8) sepia(212) hue-rotate(13deg);
+  opacity: 0.95
+}
+
+.pupil {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iris-back {
+  width: 35%;
+  height: 15%;
+  background: red;
+  top: 40%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: 
+   repeating-conic-gradient(#f004 0 6deg, #f000 0 9deg),
+    linear-gradient(#fff0, #c008, #fff0);
+  -webkit-mask: radial-gradient(50% 100%, #000 10%, #0000 50%)
+/*     ,
+    radial-gradient(circle, #fff 50%, #0000) */
+}
+
+.iris {
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 80% 0%;
+  transform: rotate(45deg);
+  top: 27%;
+  left: 50.5%;
+  transform: translateX(-50%) rotate(45deg) scale(0.95);
+  background: 
+    radial-gradient(closest-side circle, darkorange, #0000),
+    radial-gradient(orange, gold, #ff0c),
+  repeating-conic-gradient(#f00 0 6deg, #f000 0 9deg);
+  filter: blur(1vmin);
+  opacity: 0.8;
+}
+
+.bubble {
+  width: 46%;
+  top: 10%;
+  left: 50%;
+  background: #FFe790;
+  padding: 4vmin 4vmin;
+  border-radius:  30% 100% 40% 70% / 90% 40% 100% 40%;
+  font-size: 2.25vmin;
+  font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+.bubble::before {
+  content: "";
+  width: 20%;
+    height: 40%;
+  border-radius: 100%;
+  top: 81%;
+  left: 0;
+  box-shadow: 1.5vmin -0.25vmin #FFe790;
+  transform: rotate(24deg);
+}
+
+.bubble code {
+  font-size: inherit;
+  position: relative;
+  font-family: 'Nanum Gothic Coding', 'Courier New', 'Courier', monospace, monospace;
+}
+
+.mumble {
+  font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+  top: 60%;
+  left: 66%;
+  font-size: 1.5vmin;
+  transform: rotate(4deg);
+}
+
+@keyframes moveEye {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  30% { transform: translate(100%, -50%) scale(0.95); width: 1.75%; }
+  80% { transform: translate(-155%, -50%) scale(1.03); width: 1.25%; }
+}
+
+.black {
+  animation: moveEye 3s infinite;
+  width: 100%;
+  height: 100%;
+/* }
+
+.black::before {
+  content: "";
+  width: 9%;
+  aspect-ratio: 1;
+  background: #6007;
+  border-radius: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(2vmin);
+  box-shadow: 0 0 3vmin #fff3
+}
+
+.black::after { */
+  content: "";
+  width: 1.75%;
+  height: 12%;
+  background: #000;
+  border-radius: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    0 0 0.5vmin #000,
+    0 0 0.75vmin 0.125vmin #ff0d,
+    0 0 2vmin 0.5vmin darkorange;
+}
+
+.cloud {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(60% 200% at 0 100%, #00f 15%, #0000 0),
+    radial-gradient(#00f8 30%, #fff0 0),
+    radial-gradient(at 25% 73%, #00f8 15%, #fff0 0),
+    radial-gradient(at 20% 30%, #00f8 30%, #fff0 0),
+     radial-gradient(circle at 80% 34%, #00f8 30%, #fff0 0),
+    white;
+  filter: blur(2vmin) contrast(200) sepia(100%) brightness(300%) blur(2vmin);
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+  transform: scaleY(50%) translate(0, -80%);
+  
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="cloud"></div>
+      <section class="tower">
+        <div class="back"></div>
+        <div class="top"></div>
+        <div class="front"></div>
+        <div class="flame">
+          <div class="eye red"></div>
+          <div class="eye orange"></div>
+          <div class="eye yellow"></div>
+          <div class="eye gold"></div>
+        </div>
+        <div class="pupil">
+          <div class="iris-back"></div>
+          <div class="iris"></div>
+          <div class="black"></div>
+        </div>
+      </section>
+      <section class="bubble">
+        I once suggested the <code>&lt;👁️&gt;</code> tag.<br/>It would track every visible interaction within the wrapped content, but the HTML group rejected my precious idea.<br/><br/>...So I created Google instead.
+      </section>
+      <div class="mumble">...A ring, too.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But I'm more proud of Google...</div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
