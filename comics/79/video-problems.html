@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+      article {
+  width: 80vmin;
+  border: 0.5vmin solid;
+  background: #cda8c9;
+  border-radius: 1% / 0.5vmin 0.25vmin 0.75vmin 0.5vmin;
+  box-sizing: border-box;
+  padding: 5vmin;
+}
+
+h1, p, code {
+  font-family: 'Amatic SC', Helvetica, sans-serif;
+  font-size: 5vmin;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+[role="img"] {
+  position: relative;
+  width: 75%;
+  aspect-ratio: 1.1;
+  margin: 4vmin auto;
+}
+
+[role="img"] *,
+[role="img"] *::before,
+[role="img"] *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 92%;
+  aspect-ratio: 85 / 50;
+  border: 0.5vmin solid;
+  border-radius: 2vmin;
+  /* border-radius: 3% / 100%;
+  box-shadow: inset 0 0 0 0.25vmin; */
+  left: 50%;
+  top: 2.5%;
+  background:
+    /* close button */
+    linear-gradient(45deg, #0000 45%, #000 0 55%, #0000 0) calc(100% - 2vmin) 2vmin / 2vmin 2vmin,
+    linear-gradient(-45deg, #0000 45%, #000 0 55%, #0000 0) calc(100% - 2vmin) 2vmin / 2vmin 2vmin,
+    /* shame lines on top  */
+    radial-gradient(100% 100% at 50% 100%, #9ad0d8 30%, #9ad0d800) 0 0 / 35% 15%,
+    radial-gradient(100% 100% at 50% 100%, #9ad0d8 20%, #9ad0d800) 100% 0 / 35% 15%,
+    radial-gradient(100% 100% at 50% 100%, #9ad0d8 15%, #9ad0d800) 50% 0 / 35% 15%,
+    repeating-linear-gradient(-90deg, #0000 0 1%, #00f1 0 1.5%) 0 0 / 100% 15%,
+    /* play button */
+    conic-gradient(#0000 243deg, #000 245deg 295deg, #0000 297deg) 5% calc(90% + 1vmin) / 10% 10%, 
+    /* fullscreen button */
+    linear-gradient(90deg, #0000 1vmin, #ccc 0 calc(100% - 1vmin), #0000 0) 95% calc(90% + 1vmin) / 8% 11%,
+    linear-gradient(#0000 1vmin, #ccc 0 calc(100% - 1vmin), #0000 0) 95% calc(90% + 1vmin) / 9% 10%,
+    linear-gradient(#000 0.5vmin, #0000 0 calc(100% - 0.5vmin), #000 0) 95% calc(90% + 1vmin) / 8% 10%,
+    linear-gradient(90deg, #000 0.5vmin, #0000 0 calc(100% - 0.5vmin), #000 0) 95% calc(90% + 1vmin) / 8% 10%,
+    /* mouth (+option) */
+    /* linear-gradient(90deg, #000 40%, #f22 0 60%, #000 0) 50% calc(90% + 0.4vmin) / 75% 1vmin, */
+    linear-gradient(90deg, #f22 30%, #000 0) 43% calc(90% + 0.4vmin) / 70% 1vmin,
+    /* body (+option) */
+    /* linear-gradient(#ccf8ff, #bcd8ef 80%, #000 0 calc(80% + 0.4vmin), #ccc 0), */
+    linear-gradient(#9ad0d8 20%, #aae0e8 80%, #000 80.1% calc(80% + 0.4vmin), #ccc calc(80.1% + 0.4vmin))
+    ;
+  background-repeat: no-repeat;
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+.eye {
+  width: 10%;
+  aspect-ratio: 1;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  top: 53%;
+  left: 40%;
+  transform: translate(-50%);
+  background:
+    /* radial-gradient(at 35% 35%, #fff 40%, #0000 0), */
+    radial-gradient(circle at 85% 55%, #fff 14%, #0000 15%),
+    #000;
+    overflow: hidden;
+  box-shadow: 0 0.25vmin 0 0.125vmin #fff;
+}
+
+.eye::before {
+  content: "";
+  width: 80%;
+  height: 60%;
+  background: #fff;
+  border-radius: 50%;
+  transform: rotate(-39deg);
+}
+
+.eye + .eye {
+  left: 60%;
+}
+
+.cheek {
+  width: 20%;
+  height: 15%;
+  background: #f008;
+  border-radius: 50%;
+  filter: blur(0.5vmin);
+  opacity: 0.2;
+  transform: translate(-50%);
+  top: 62%;
+  left: 30%;
+  
+}
+
+.cheek + .cheek {
+  left: 70%;
+}
+
+.mouth {
+  width: 8%;
+  height: 18%;
+  border: 0.25vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-left: 0.5vmin solid #0000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  left: 50.5%;
+  top: 76%;
+}
+
+.eyebrow {
+  width: 10%;
+  height: 15%;
+  border: 0.25vmin solid #0000;
+  border-bottom: 1vmin solid;
+  border-right: 0.5vmin solid #0000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  left: 38%;
+  top: 45%;
+}
+
+.eyebrow + .eyebrow {
+  left: 62%;
+  transform: scaleX(-1) translate(50%, -50%) rotate(-30deg);
+}
+
+.shadow,
+.shadow::before,
+.shadow::after {
+  content: "";
+  width: 80%;
+  height: 2vmin;
+  border-radius: 10vmin;
+  background: #0002;
+  bottom: 2vmin;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.shadow::before {
+  width: 85%;
+  height: 1.5vmin;
+  border-radius: 3vmin 3vmin 1vmin 1vmin;
+}
+
+.shadow::after {
+  height: 1.5vmin;
+  bottom: -1.5vmin;
+  border-radius: 1vmin 1vmin 3vmin 3vmin;
+}
+
+.legs {
+  width: 25%;
+  height: 45%;
+  border-radius: 100% / 100% 90% 110% 100%;
+  left: 50.5%;
+  bottom: 1.5%;
+  transform: translateX(-50%);
+  border: 0.75vmin solid;
+  border-top: 1.5vmin solid;
+  clip-path: polygon(-100% 0, 200% 0, 200% 90%, -100% 90%);
+}
+
+.legs::after,
+.legs::before {
+  content: "";
+  width: 50%;
+  height: 15%;
+  border-radius: 50%;
+  background: #000;
+  top: 85%;
+  left: 0;
+  transform: translateX(-60%);
+}
+
+.legs::after {
+  right: 0;
+  left: auto;
+  transform: translateX(60%);
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <h1>the &lt;video&gt; element had many problems...</h1>
+      <div role="img" aria-label="Cartoon of a video player with kawaii face">
+        <div class="shadow"></div>
+        <div class="legs"></div>
+        <div class="leg"></div>
+        <div class="body">
+          <div class="cheek"></div>
+          <div class="cheek"></div>
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="eyebrow"></div>
+          <div class="eyebrow"></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+      <p>...and it didn't have a <code>::cue</code> how to fix them</p>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

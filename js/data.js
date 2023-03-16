@@ -609,9 +609,17 @@ const posts = [
   {
     id: 78,
     uid: "the-eye-of-sauron",
-    boxes: 2,
+    boxes: 1,
     vertical: true,
     title: "The Eye of Sauron",
     ariaLabel: "The tower of Mordor with the eye of Sauron speakign: 'I once suggested the eye tag. It would track every visible interaction within the wrapped content, but the HTML group rejected my precious idea... So I created Google instead.'"
+  },
+  {
+    id: 79,
+    uid: "video-problems",
+    boxes: 1,
+    vertical: true,
+    title: "Video Problems",
+    ariaLabel: "Cartoon of a sad looking video player with the text: the video element had many problems... and it didn't have a ::cue how to fix them"
   }
 ]

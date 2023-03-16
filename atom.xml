@@ -1488,4 +1488,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Video Problems</title>
+    <link href="https://comicss.art/?id=79" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/79/video-problems.html"/>
+    <id>https://comicss.art/?id=79</id>
+    <updated>2023-03-16T00:00:00Z</updated>
+    <summary>New Cartoon: Video Problems</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/79/video-problems.png" alt="Cartoon of a sad looking video player with the text: the video element had many problems... and it didn't have a ::cue how to fix them" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
