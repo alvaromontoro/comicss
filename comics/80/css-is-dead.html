@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/*
+Design inspired by:
+
+- La Santa Muerte by Christian Korn - https://dribbble.com/shots/2261887-La-Santa-Muerte
+- Death & Coffee by David Espinosa - https://dribbble.com/shots/2960917-Death-Coffee
+*/
+
+article {
+  --cape: #000;
+  --bone: #ffc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75vmin;
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+}
+
+section {
+  position: relative;
+  width: 60vmin;
+  height: 36vmin;
+  border: 0.5vmin solid;
+  border-radius: 4vmin;
+  background: linear-gradient(#c9c9, #c9c0);
+  overflow: hidden;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.death {
+  width: 45%;
+  height: 75%;
+  bottom: 0;
+  left: 15%;
+  background:
+    linear-gradient(var(--bone) 0 0) 54% 31% / 5% 15% no-repeat,
+    linear-gradient(var(--bone) 0 0) 61% 31% / 5% 15% no-repeat,
+    linear-gradient(var(--bone) 0 0) 68% 31% / 5% 15% no-repeat,
+    conic-gradient(at 50% -30%, #0000 160deg, var(--cape) 0 200deg, #0000 0),
+    linear-gradient(to bottom left, var(--cape) 50%, #0000 0) 10% 0 / 40% 20% no-repeat,
+    #f000;
+}
+
+.death::before {
+  --extra: linear-gradient(#0000 0 0);
+  content: "";
+  width: 40%;
+  height: 25%;
+  border-radius: 2vmin;
+  top: 10%;
+  left: 40%;
+  background: 
+    var(--extra),
+    radial-gradient(circle at 35% 65%, #000 1vmin, #0000 1.05vmin),
+    radial-gradient(circle at 70% 65%, #000 1vmin, #0000 1.05vmin),
+    var(--bone);
+}
+
+.death::after {
+  content: "";
+  width: 60%;
+  height: 100%;
+  border-radius: 100% 0 0 0 / 20%;
+  background: 
+    linear-gradient(var(--bone) 0 0) 100% 67% / 1.75vmin 0.5vmin no-repeat,
+    linear-gradient(var(--bone) 0 0) 100% 70% / 1.75vmin 0.5vmin no-repeat,
+    linear-gradient(var(--bone) 0 0) 100% 73% / 1.75vmin 0.5vmin no-repeat,
+    linear-gradient(90deg, #0000 96%, indianred 0),
+    linear-gradient(-185deg, gray 10%, darkgray 0 12%, #0000 0);
+  transform-origin: 100% 100%;
+  transform: rotate(-10deg);
+  bottom: -5%;
+  left: -15%;
+  aclip-path: polygon(0 0, 100% 0, 100% 100%, 40% 8.25%, 0 100%);
+}
+
+.ring {
+  width: 30%;
+  height: 40%;
+  bottom: 8%;
+  left: 55%;
+}
+
+.ring::before {
+  content: "";
+  top: 30%;
+  left: 10%;
+  width: 15%;
+  height: 30%;
+  border-left: 0.5vmin solid;
+  border-right: 0.5vmin solid;
+  background: linear-gradient(to bottom left, #0000 48%, #000 0 52%, #0000 0);
+  transform:  rotate(-20deg) skew(-50deg) rotate(-20deg);
+}
+
+.ring::after {
+  content: "DING";
+  font-size: 1.75vmin;
+  background: #00f3;
+  padding-left: 2.25vmin;
+  background:
+    linear-gradient(#0000 45%, #000 0 55%, #0000 0) 0 0 / 1.75vmin 1.75vmin no-repeat,
+    linear-gradient(90deg, #0000 45%, #000 0 55%, #0000 0) 0 0 / 1.75vmin 1.75vmin no-repeat,
+    linear-gradient(45deg, #0000 48%, #000 0 52%, #0000 0) 0 0 / 1.75vmin 1.75vmin no-repeat,
+    linear-gradient(-45deg, #0000 48%, #000 0 52%, #0000 0) 0 0 / 1.75vmin 1.75vmin no-repeat;
+  top: 7%;
+  left: 28%;
+}
+
+.phone {
+  width: 7%;
+  height: 19%;
+  background: #000;
+  border-radius: 1vmin;
+  top: 60%;
+  left: 55%;
+  transform: rotate(15deg);
+}
+
+.phone::after {
+  content: "";
+  width: 1.75vmin;
+  height: 2.3vmin;
+  background: repeating-linear-gradient(var(--bone) 0 0.5vmin, #0000 0 0.8vmin);
+  transform: rotate(5deg);
+  top: 50%;
+  right: -0.5vmin;
+}
+
+.bubble {
+  --b: #25b749;
+  padding: 2.25vmin 2.5vmin 2.25vmin 4vmin;
+  font-size: 2.25vmin;
+  background: var(--b);
+  color: #fff;
+  border-radius: 2vmin;
+  top: 30%;
+  left: 60%;
+}
+
+.bubble::before {
+  content: "";
+  width: 8%;
+  height: 40%;
+  background: linear-gradient(to bottom right, var(--b) 50%, #0000 0);
+  top: 95%;
+  left: 15%;
+  transform: skew(-20deg)
+}
+
+.bubble span {
+  position: relative;
+}
+
+.js {
+  aspect-ratio: 1;
+  width: 35%;
+  background: yellow;
+  color: #000;
+  border-radius: 50%;
+  font-size: 3vmin;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+}
+
+.sigh {
+  font-size: 2vmin;
+  width: 40%;
+  left: 57%;
+  top: 40%;
+  text-align: center;
+}
+
+.sigh::before {
+  content: "...sigh...";
+  top: 0;
+  left: 0;
+  transform: translate(-30%, -130%) rotate(-10deg);
+  font-size: 0.8em;
+  color: #0008;
+}
+
+section:nth-child(2) .death::before {
+  --extra: linear-gradient(195deg, var(--bone) 51%, #0000 0) 0 0 / 50% 100% no-repeat;
+}
+
+section:nth-child(2) .death::after {
+  transform: rotate(-4deg);
+  left: -25%;
+}
+
+section:nth-child(3) .death::before {
+  --extra: linear-gradient(var(--bone) 55%, #0000 0);
+}
+
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon in three panels: Death (a skeleton wearing a dark cloak with a smythe) receives a text message from JavaScript saying 'CSS is dead!' Disappointed, Death sighs: That guy is so annoying... Maybe it's time I take anohter of its frameworks away...">
+      <section>
+        <div class="death"></div>
+        <div class="ring"></div>
+      </section>
+      <section>
+        <div class="death"></div>
+        <div class="phone"></div>
+        <div class="bubble" role="group" aria-label="Text message from JavaScript: CSS is dead">
+          <div class="js">JS</div>
+          <span>CSS is dead!</span>
+        </div>
+      </section>
+      <section>
+        <div class="death"></div>
+        <div class="sigh">
+          That guy is so annoying... Maybe it's time I take another of its frameworks away...
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

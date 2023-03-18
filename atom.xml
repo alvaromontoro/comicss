@@ -1507,4 +1507,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>CSS Is Dead!</title>
+    <link href="https://comicss.art/?id=80" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/80/css-is-dead.html"/>
+    <id>https://comicss.art/?id=80</id>
+    <updated>2023-03-20T00:00:00Z</updated>
+    <summary>New Cartoon: CSS Is Dead!</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/80/css-is-dead.png" alt="Cartoon in three panels: Death (a skeleton wearing a dark cloak with a smythe) receives a text message from JavaScript saying 'CSS is dead!' Disappointed, Death sighs: That guy is so annoying... Maybe it's time I take anohter of its frameworks away..." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

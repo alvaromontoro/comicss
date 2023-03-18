@@ -621,5 +621,13 @@ const posts = [
     vertical: true,
     title: "Video Problems",
     ariaLabel: "Cartoon of a sad looking video player with the text: the video element had many problems... and it didn't have a ::cue how to fix them"
+  },
+  {
+    id: 80,
+    uid: "css-is-dead",
+    boxes: 3,
+    vertical: true,
+    title: "CSS Is Dead",
+    ariaLabel: "Cartoon in three panels: Death (a skeleton wearing a dark cloak with a smythe) receives a text message from JavaScript saying 'CSS is dead!' Disappointed, Death sighs: That guy is so annoying... Maybe it's time I take anohter of its frameworks away..."
   }
 ]
