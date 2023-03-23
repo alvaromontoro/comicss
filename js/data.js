@@ -629,5 +629,13 @@ const posts = [
     vertical: true,
     title: "CSS Is Dead",
     ariaLabel: "Cartoon in three panels: Death (a skeleton wearing a dark cloak with a smythe) receives a text message from JavaScript saying 'CSS is dead!' Disappointed, Death sighs: That guy is so annoying... Maybe it's time I take anohter of its frameworks away..."
+  },
+  {
+    id: 81,
+    uid: "selectors-fight",
+    boxes: 1,
+    vertical: true,
+    title: "Selectors' Fight",
+    ariaLabel: "Cartoon showing a CSS class selector telling an id selector: 'you have no class'. The id selector replies: 'You need to be more specific!'"
   }
 ]

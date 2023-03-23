@@ -1516,7 +1516,26 @@
     <summary>New Cartoon: CSS Is Dead!</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="https://comicss.art/comics/80/css-is-dead.png" alt="Cartoon in three panels: Death (a skeleton wearing a dark cloak with a smythe) receives a text message from JavaScript saying 'CSS is dead!' Disappointed, Death sighs: That guy is so annoying... Maybe it's time I take anohter of its frameworks away..." /></p>
+        <p><img src="https://comicss.art/comics/80/css-is-dead.png" alt="Cartoon in three panels: Death (a skeleton wearing a dark cloak with a smythe) receives a text message from JavaScript saying 'CSS is dead!' Disappointed, Death sighs: That guy is so annoying... Maybe it's time I take another of its frameworks away..." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Selectors' Fight</title>
+    <link href="https://comicss.art/?id=81" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/81/selectors-fight.html"/>
+    <id>https://comicss.art/?id=81</id>
+    <updated>2023-03-27T00:00:00Z</updated>
+    <summary>New Cartoon: Selectors' Fight</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/81/selectors-fight.png" alt="Cartoon showing a CSS class selector telling an id selector: 'you have no class'. The id selector replies: 'You need to be more specific!'" /></p>
       </div>
     </content>
     <rights>Copyright 2023 Alvaro Montoro</rights>

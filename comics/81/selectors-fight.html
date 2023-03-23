@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Raleway:wght@900&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #369;
+  background: linear-gradient(#147, #369);
+}
+
+article {
+  width: 70vmin;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.selector {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 25vmin;
+  color: #abd;
+  line-height: 0;
+  width: 35%;
+  height: 39%;
+  position: relative;
+}
+
+.selector::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 10%;
+  top: 100%;
+  left: 60%;
+  transform: translateX(-50%);
+  background: radial-gradient(farthest-side at 50% 0, #0002, #0000);
+}
+
+.id::before {
+  left: 45%;
+}
+
+.selector * {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.class {
+  left: 0;
+  font-size: 30vmin;
+}
+
+.id {
+  align-text: right;
+}
+
+.body {
+  letter-spacing: -1.5vmin;
+}
+
+.id .body {
+  right: 0;
+}
+
+.eye {
+  width: 10%;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(circle at 30% 45%, #fff 15%, #fff0 16%),
+    radial-gradient(circle at 40% 25%, #fff 5%, #fff0 6%),
+    #000;
+  border-radius: 100%;
+  top: 15%;
+  left: 55%;
+}
+
+.eye + .eye {
+  left: 75%;
+}
+
+.selector .eye {
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+}
+
+.selector .eye + .eye{
+  clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.id .eye {
+  left: 25%;
+}
+
+.id .eye + .eye {
+  left: 45%;
+}
+
+
+.mouth {
+  width: 10%;
+  height: 5%;
+  background: black;
+  background:
+    radial-gradient(at 90% 100%, #c00 30%, #300 0)
+}
+
+.class .mouth {
+  top: 24%;
+  left: 64%;
+  border-radius: 50% / 100% 100% 0 0;
+  transform: scaleX(-1) rotate(10deg);
+}
+
+.id .mouth {
+  top: 20%;
+  left: 40%;
+  border-radius: 50% / 100% 100% 0 0;
+  transform:  rotate(-20deg);
+}
+
+
+.id .eye {
+  top: 7%;
+}
+
+
+.bubble {
+  --color: #9cd;
+  position: absolute;
+  border-radius: 49%;
+  background: var(--color);
+  font-family: 'Comic Neue', Raleway, Arial, sans-serif;
+  padding: 3vmin 3vmin;
+  font-size: 2.75vmin;
+}
+
+.bubble-1 {
+  left: 30%;
+  top: 3%;
+  transform: translateX(-50%);
+}
+
+.bubble-1::before {
+  content: "";
+  position: absolute;
+  width: 5.5%;
+  height: 260%;
+  top: 90%;
+  background: red;
+  left: 40%;
+  background:
+    linear-gradient(to top left, #0000 50%, var(--color) 0);
+ transform: rotate(10deg);
+    ;
+}
+
+.bubble-2 {
+  top: 25%;
+  left: 40%;
+  afont-size: 2.5vmin;
+}
+
+.bubble-2::after {
+  content: "";
+  position: absolute;
+  width: 4%;
+  height: 100%;
+  top: 90%;
+  background: red;
+  left: 50%;
+  background:
+    linear-gradient(to top right, #0000 50%, var(--color) 0);
+    ;
+  transform: rotate(-15deg)
+}
+
+.legs {
+  position: absolute;
+  width: 25%;
+  height: 75%;
+  border: 0.75vmin solid black;
+  border-radius: 50% / 100%;
+  clip-path: polygon(-200% 0, 200% 0, 200% 93%, -200% 93%);
+  top: 30%;
+  left: 50%;
+}
+
+.legs::before,
+.legs::after {
+  position: absolute;
+  content: "";
+  width: 110%;
+  height: 10%;
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  top: 90%;
+  transform: translate(-90%,0)
+}
+
+.legs::after {
+  left: 90%;
+  transform: none;
+}
+
+.id .legs {
+  top: 25%;
+  left: 36%;
+  height: 81%;
+  width: 20%;
+}
+
+.id .legs::before,
+.id .legs::after {
+  width: 170%;
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="a class selector tells an id selector: 'you have no class'. The id selector replies: 'You need to be more specific!'">
+      <div class="bubble bubble-1">You have no class!</div>
+      <div class="bubble bubble-2">You need to be more specific</div>
+      <div class="selector class">
+        <div class="legs"></div>
+        <div class="body">.c</div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="selector id">
+        <div class="legs"></div>
+        <div class="body">#i</div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem; color: #fff" rel="up">See more comics</a>
+  </body>
+  </html>
