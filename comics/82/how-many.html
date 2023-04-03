@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+article {
+  display: grid;
+  gap: 1vmin;
+  font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
+}
+
+section {
+  position: relative;
+  border: 0.5vmin solid;
+  width: 80vmin;
+  height: 50vmin;
+  background: linear-gradient(#c9c9, #c9c0);
+  overflow: hidden;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+h2, p {
+  font-size: 4vmin;
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+h2 {
+  top: 0;
+  left: 0;
+  background: #ffc;
+  width: 100%;
+  height: 8vmin;
+  line-height: 8vmin;
+  border-bottom: 0.5vmin solid;
+  font-weight: bold;
+}
+
+p {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 2vmin;
+}
+
+:is(.css, .backend) p {
+  text-align: right;
+}
+
+.light-bulb {
+  --color: #ccc8;
+  width: 0.5vmin;
+  height: 35%;
+  left: 7%;
+  background: 
+    repeating-linear-gradient(45deg, #0000 0 3%, #0002 0 4%),
+    #888;
+}
+
+.light-bulb::after {
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 2vmin;
+  height: 2vmin;
+  border-radius: 3vmin 3vmin 0 0;
+  background: #fff;
+}
+
+.light-bulb::before {
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  width: 4vmin;
+  height: 5vmin;
+  background: 
+    radial-gradient(50% 110% at 0 0, #0000 99%, var(--color)) 0 0 / 60% 40%,
+    radial-gradient(50% 110% at 100% 0, #0000 99%, var(--color)) 100% 0 / 60% 40%,
+    radial-gradient(closest-side circle at 50% 62%, var(--color) 99%, #0000),
+    #f000;
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+}
+
+/* css */
+.person {
+  width: 32%;
+  height: 75%;
+  bottom: 0;
+}
+
+.person-2 {
+  --skin: #eb9;
+  --hair: #751;
+  --shirt: #797;
+  left: 40%;
+  transform: translate(-50%, 0);
+}
+
+.person-2 .head {
+  width: 60%;
+  height: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(closest-side circle at 10% 50%, var(--skin) 99%, #0000 0),
+    radial-gradient(closest-side circle at 90% 50%, var(--skin) 99%, #0000 0);
+}
+
+.person-2 .face {
+  top: 0;
+  left: 50%;
+  width: 80%;
+  height: 100%;
+  background: var(--hair);
+  transform: translate(-50%, 0);
+  border-radius: 100% / 9vmin 9vmin 15vmin 15vmin;
+  clip-path: polygon(0 -100%, 100% -100%, 100% 100%, 65% 100%, 60% 97%, 55% 100%, 50% 95%, 45% 100%, 38% 96.5%, 32% 100%, 0 100%);
+}
+
+.person-2 .face::before {
+  content: "";
+  width: 80%;
+  height: 60%;
+   border-radius: 9vmin 9vmin 15vmin 15vmin;
+  background: 
+    radial-gradient(150% 50% at 50% 100%, var(--hair) 25%, #0000 26%),
+    var(--skin);
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.person-2 .face::after {
+  content: "";
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 50%;
+  top: 0;
+  transform: translate(-90%, -95%) rotate(-15deg);
+  box-shadow: 1vmin 1vmin var(--hair);
+  filter: drop-shadow(1.25vmin 0.5vmin var(--hair))
+}
+
+.person-2 .mouth {
+  width: 30%;
+  height: 12%;
+  border: 0.15vmin solid #0000;
+  border-top: 0.3vmin solid;
+  border-radius: 50%;
+  left: 50%;
+  top: 77%;
+  transform: translate(-50%, -50%) rotate(5deg);
+}
+
+.person-2 .nose {
+  width: 20%;
+  height: 30%;
+  border: 0.15vmin solid #0000;
+  border-left: 0.3vmin solid;
+  border-bottom: 0.3vmin solid;
+  border-radius: 0 0 5vmin 5vmin;
+  left: 52%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--skin)
+}
+
+.person-2 .eye {
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 30% 50%, #000 20%, #0000 22%),
+    #fff;
+  left: 27%;
+  top: 35%;
+  transform: translate(-50%, 0);
+}
+
+.person-2 .eye + .eye {
+  left: 70%;
+  transform: scaleX(-1) translate(40%, 0);
+  background: 
+    radial-gradient(circle at 70% 50%, #000 20%, #0000 22%),
+    #fff;
+}
+
+.person-2 .eye::before {
+  content: "";
+  width: 120%;
+  height: 30%;
+  background: var(--hair);
+  border-radius: 100% 50% 0 0;
+  left: 50%;
+  transform: translate(-50%, -150%) rotate(-3deg)
+}
+
+.person-2 .neck {
+  width: 30%;
+  height: 50%;
+  top: 64%;
+  background: var(--skin);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100% / 20%;
+}
+
+.person-2 .body {
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+}
+
+.person-2 .chest {
+  width: 75%;
+  left: 50%;
+  height: 200%;
+  background: var(--shirt);
+  transform: translate(-50%);
+  clip-path: polygon(50% 0, 100% 10%, 95% 30%, 100% 100%, 0 100%, 5% 30%, 0 10%)
+}
+
+.person-2 .chest::before {
+  content: "CSS \a IS \a AWESOME";
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  white-space: pre-wrap;
+  font-size: 1.5vmin;
+  font-family: arial, sans-serif;
+  line-height: 1.25;
+  border: 0.25vmin solid;
+  width: 6vmin;
+  aspect-ratio: 1;
+  color: #fff8;
+}
+.person-2 .chest::after {
+  content: "";
+  width: 35%;
+  height: 10%;
+  border-radius: 50%;
+  border: 0.3vmin solid;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0);
+}
+
+.person-2 .sleeve {
+  width: 100%;
+  height: 60%;
+  top: 20%;
+  background: 
+    radial-gradient(farthest-side at 50% 100%, #0006, #0000),
+    var(--shirt);
+  clip-path: polygon(0 100%, 12% 0, 88% 0, 100% 100%);
+  border-radius: 100% / 0 0 20% 30%;
+}
+
+.person-2 .arm {
+  width: 13%;
+  height: 100%;
+  background: var(--skin);
+  transform-origin: 50% 0;
+  top: 30%;
+  left: 10%;
+  transform: rotate(10deg)
+}
+
+.person-2 .arm + .arm {
+  transform: rotate(-3deg);
+  left: 80%;
+  top: 45%;
+}
+
+/* css 2 */
+.css2 .dark-mode {
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(farthest-side circle at 40% 40%, #0005, #000d),
+    radial-gradient(farthest-side circle at 40% 40%, #0000, #000a 50%);
+}
+
+.css2 h1, .css2 p {
+  color: #fff;
+}
+
+.css2 .eye,
+.css2 .eye + .eye {
+  background: 
+    radial-gradient(circle at 50% 50%, #000 20%, #0000 22%),
+    #fff;
+}
+
+.css2 .eye::before {
+  transform: translate(-50%, -150%) rotate(4deg)
+}
+
+.css2 .mouth {
+  transform: translate(-45%, -120%) rotate(175deg);
+  width: 25%;
+  height: 7%;
+}
+
+/* js */
+.js p {
+  width: 55%;
+  left: 40%;
+  transform: translateX(-50%);
+  font-size: 3.25vmin;
+  color: #fff;
+  line-height: 1.4
+}
+
+.trash-bag {
+  bottom: 0;
+  left: 40%;
+  transform: translate(-50%, 0);
+  width: 63%;
+  height: 80%;
+  border-radius: 90% 100% 40% 50% / 110% 120% 30% 70%;
+  background: 
+    #222;
+  box-shadow:
+    inset 0 0 0 1.5vmin #222,
+    inset 7vmin 5vmin 0 -5vmin #fff1,
+    inset -7vmin -5vmin 0 -5.5vmin #111;
+}
+
+.trash-bag::before {
+  content: "";
+  width: 30%;
+  height: 30%;
+  left: 94%;
+  bottom: 4.75%;
+  background:
+    radial-gradient(73% 100% at 100% 0, #0000 99%, #222 0) 0 0 / 70% 51% no-repeat,
+    linear-gradient(to right bottom, #222 50%, #0000 0) 0 100% / 70% 51% no-repeat,
+    radial-gradient(circle at 65% 50%, #222 8%, #0000 0),
+    linear-gradient(to bottom right, #0000 50%, #222 0) 75% 42% / 20% 20% no-repeat;
+}
+.trash-bag::after {
+  content: "";
+  width: 5%;
+  height: 20%;
+  border: 0.15vmin solid #0000;
+  border-left: 0.4vmin solid;
+  border-radius: 70% 100% 100% 65% / 100%;
+  top:50%;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(8deg);
+  filter: drop-shadow(-1vmin 0);
+  clip-path: polygon(-60% 50%, 0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.js .light-bulb {
+  transform-origin: 50% 0;
+  transform: scale(0.7);
+  height: 50%;
+}
+
+.js .light-bulb::before {
+  --color: #ff0;
+  filter: drop-shadow(0 0 3vmin #ff0)
+}
+
+.mini-person {
+  --skin: #fca;
+  --pants: #369;
+  --shirt: #a00;
+  --hair: #963;
+  width: 20%;
+  height: 50%;
+  bottom: 0;
+  right: 3%;
+}
+
+.leg {
+  width: 13%;
+  background: #369;
+  height: 30%;
+}
+
+.leg-1 {
+  width: 15%;
+  height: 35%;
+  transform: skew(-40deg);
+  bottom: 5%;
+  left: 0%;
+  transform-origin: 50% 100%;
+}
+
+.leg-1::before {
+  content: "";
+  width: 150%;
+  height: 25%;
+  background: #963;
+  transform: skew(40deg) translateX(-50%);
+  top: 96%;
+  left: 55%;
+  border-radius: 50% / 100% 50% 0 0;
+}
+
+.leg-1::after {
+  content: "";
+  width: 180%;
+  height: 20%;
+  background: inherit;
+  border-radius: 50% / 0 0 100% 100%;
+}
+
+.leg-2 {
+  height: 23%;
+  width: 14%;
+  top: 60%;
+  left: 55%;
+  transform-origin: 50% 0;
+  transform: skew(30deg);
+  border-radius: 0 0 30% 0;
+}
+
+.leg-2::before {
+  content: "";
+  width: 100%;
+  height: 60%;
+  top: 97%;
+  left: 50%;
+  transform-origin: 50% 0;
+  transform: translate(-50%, 0) skew(-60deg);
+  background: inherit;
+  border-radius: 0 30% 0 0; 
+}
+
+.leg-2::after {
+  content: "";
+  width: 200%;
+  height: 40%;
+  background: #963;
+  transform: skew(-30deg) translate(-150%, 0);
+  top: 150%;
+  border-radius: 50% 140% 0 20% / 100%;
+}
+
+.mini-person .body {
+  width: 30%;
+  height: 30%;
+  background: var(--shirt);
+  border-radius: 0 20% / 100%;
+  top: 30%;
+  left: 58%;
+  transform: translate(-50%, 0);
+}
+
+.mini-person .body::before {
+  content:"";
+  width: 50%;
+  height: 50%;
+  background: inherit;
+  bottom: 0;
+  left: 60%;
+  border-radius: 50% / 100%;
+}
+
+.mini-person .body::after {
+  content:"";
+  width: 100%;
+  height: 50%;
+  background: inherit;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50% / 100%;
+}
+
+.mini-person .head {
+  width: 28%;
+  height: 22%;
+  background: var(--skin);
+  border-radius: 50%;
+  left: 64%;
+  top: -2%;
+  transform: translate(-50%, 0) rotate(10deg);
+  box-shadow: -1vmin -0.5vmin var(--hair);
+}
+
+.arm-1 {
+  width: 12%;
+  height: 21%;
+  background: var(--skin);
+  border-radius: 20% / 100%;
+  top: 30%;
+  left: 65%;
+  transform-origin: 50% 0;
+  transform: rotate(35deg);
+}
+
+.arm-1::before {
+  content: "";
+  width: 95%;
+  height: 100%;
+  background: inherit;
+  top: 90%;
+  transform-origin: 50% 0;
+  border-radius: 100% / 80% 20% 140% 150%;
+  transform: rotate(10deg);
+}
+
+.arm-1::after {
+  content: "";
+  width: 110%;
+  aspect-ratio: 0.9;
+  border-radius: 50%;
+  background: inherit;
+  top: 185%;
+  left: -60%;
+}
+.arm-2 {
+  width: 11%;
+  height: 21%;
+  background: #eb9;
+  border-radius: 20% / 100%;
+  top: 30%;
+  left: 41%;
+  transform-origin: 50% 0;
+  transform: rotate(25deg);
+}
+
+.mini-person .sleeve {
+  width: 19%;
+  height: 20%;
+  background: var(--shirt);
+  box-shadow: inset 0 0 0 1in #0002;
+  border-radius: 0 80% 0 0;
+  left: 57%;
+  top: 24.5%;
+  transform: rotate(35deg);
+}
+
+.mini-person .sleeve-2 {
+  left: 33%;
+  top: 21%;
+  border-radius: 100% 0 0;
+  transform: rotate(15deg);
+}
+
+.mini-person .eye {
+  width: 10%;
+  background: #000;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  clip-path: polygon(0 20%, 100% 20%, 100% 140%, 0 140%);
+}
+
+.mini-person .eye + .eye {
+  left: 80%;
+}
+
+.mini-person .mouth {
+  width: 30%;
+  height: 12%;
+  background: #000;
+  border-radius: 100%;
+  top: 80%;
+  left: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+}
+
+.mini-person .ear {
+  width: 30%;
+  height: 35%;
+  background: inherit;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  top: 40%;
+  left: -15%;
+}
+
+.mini-person .hair-back {
+  width: 30%;
+  height: 50%;
+  border-radius: 50%;
+  background: var(--hair);
+  left: -5%;
+}
+
+.mini-person .hair-top {
+  width: 100%;
+  height: 35%;
+  border-radius: 50%;
+  background: var(--hair);
+  top: -15%;
+}
+
+.mini-person .neck {
+  width: 10%;
+  height: 10%;
+  border-radius: 100% / 20%;
+  background: var(--skin);
+  box-shadow: inset 0 0 0 3vmin #0001;
+  left: 53%;
+  top: 14.5%;
+  transform: skewX(-10deg);
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <section class="css">
+      <div class="person person-2">
+        <div class="body">
+          <div class="arm arm-1"></div>
+          <div class="arm arm-2"></div>
+          <div class="sleeve"></div>
+          <div class="chest"></div>
+        </div>
+        <div class="head">
+          <div class="neck"></div>
+          <div class="face">
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+          </div>
+        </div>
+      </div>
+      <div class="light-bulb"></div>
+      <h2>How many CSS developers does it take to change a lightbulb?</h2>
+      <p>None.<br/>It is a JavaScript issue.</p>
+    </section>
+  
+    <section class="css css2">
+      <div class="person person-2">
+        <div class="body">
+          <div class="arm arm-1"></div>
+          <div class="arm arm-2"></div>
+          <div class="sleeve"></div>
+          <div class="chest"></div>
+        </div>
+        <div class="head">
+          <div class="neck"></div>
+          <div class="face">
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+          </div>
+        </div>
+      </div>
+      <div class="light-bulb"></div>
+      <div class="dark-mode"></div>
+      <h2>How many CSS developers does it take to change a lightbulb?</h2>
+      <p>None.<br/>They are OK working in dark mode.</p>
+    </section>
+  
+    <section class="js">
+  
+      <div class="light-bulb"></div>
+      <div class="mini-person">
+        <div class="arm arm-1 arm-2"></div>
+        <div class="sleeve sleeve-2"></div>
+      </div>
+      <div class="trash-bag"></div>
+      <div class="mini-person">
+        <div class="body"></div>
+        <div class="neck"></div>
+        <div class="head">
+          <div class="hair-back"></div>
+          <div class="ear"></div>
+          <div class="hair-top"></div>
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="leg leg-1"></div>
+        <div class="leg leg-2"></div>
+        <div class="arm arm-1"></div>
+        <div class="sleeve sleeve-1"></div>
+      </div>
+      <h2>How many JS developers does it take to change a lightbulb?</h2>
+      <p>One. But they'll need 5GB in node_modules, TailwindCSS, their own implementation of the lefty-loosey.js library (dependent on righty-tighty.js), and the latest MacBook Pro to handle everything. The resulting JS file will be 8MB and only change the light bulb if the room has Chrome in it.</p>
+    </section>
+  
+    <!-- <section class="backend">
+  
+      <div class="light-bulb"></div>
+      <div class="darkness"></div>
+      <h2>How many back-end developers does it take to change a lightbulb?</h2>
+      <p>None. That is a front-end issue and below them.</p>
+    </section> -->
+  </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

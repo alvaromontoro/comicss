@@ -1545,4 +1545,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>How many...?</title>
+    <link href="https://comicss.art/?id=82" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/82/how-many.html"/>
+    <id>https://comicss.art/?id=82</id>
+    <updated>2023-04-03T00:00:00Z</updated>
+    <summary>New Cartoon: How many...?</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/82/how-many.png" alt="How many CSS developers does it take to change a lightbulb? None. It is a JavaScript issue. - How many CSS developers does it take to change a lightbulb? None. They are OK working in dark mode. - How many JS developers does it take to change a lightbulb? One. But they'll need 5GB in node_modules, TailwindCSS, their own implementation of the lefty-loosey.js library (dependent on righty-tighty.js), and the latest MacBook Pro to handle everything. The resulting JS file will be 8MB and only change the light bulb if the room has Chrome in it." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
