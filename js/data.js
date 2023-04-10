@@ -645,5 +645,13 @@ const posts = [
     vertical: true,
     title: "How many...?",
     ariaLabel: "How many CSS developers does it take to change a lightbulb? None. It is a JavaScript issue. - How many CSS developers does it take to change a lightbulb? None. They are OK working in dark mode. - How many JS developers does it take to change a lightbulb? One. But they'll need 5GB in node_modules, TailwindCSS, their own implementation of the lefty-loosey.js library (dependent on righty-tighty.js), and the latest MacBook Pro to handle everything. The resulting JS file will be 8MB and only change the light bulb if the room has Chrome in it."
+  },
+  {
+    id: 83,
+    uid: "off-the-grid",
+    boxes: 1,
+    vertical: true,
+    title: "Off-the-grid",
+    ariaLabel: "How many CSS developers does it take to change a lightbulb? None. It is a JavaScript issue. - How many CSS developers does it take to change a lightbulb? None. They are OK working in dark mode. - How many JS developers does it take to change a lightbulb? One. But they'll need 5GB in node_modules, TailwindCSS, their own implementation of the lefty-loosey.js library (dependent on righty-tighty.js), and the latest MacBook Pro to handle everything. The resulting JS file will be 8MB and only change the light bulb if the room has Chrome in it."
   }
 ]

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      body {
+  background: #030;
+  overflow: clip;
+}
+
+article {
+  width: 55vmin;
+  aspect-ratio: 1;
+  border: 0.3vmin solid #0c0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-sizing: border-box;
+  font-family: monospace, monospace;
+  font-size: 2vmin;
+  background:
+    linear-gradient(#0c0 0 0) 50% 50% / 100% 0.25vmin,
+    linear-gradient(#0c0 0 0) 50% 50% / 0.25vmin 100%,
+    radial-gradient(farthest-side, #0c0 2%, #030 0 20%, #0000 0),
+    repeating-radial-gradient(farthest-side, #0000 0 20%, #0c08 0 calc(20% + 0.1vmin)),
+    linear-gradient(15deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(30deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(45deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(60deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(75deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(-15deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(-30deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(-45deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(-60deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0),
+    linear-gradient(-75deg, #0000 calc(50% - 0.05vmin), #0c08 0 calc(50% + 0.05vmin), #0000 0);
+  background-repeat: no-repeat;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+article::after {
+  animation: rotate 10s linear infinite;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background:
+    conic-gradient(#0c00 12.5%, #0c08 25%, #0c00 0) no-repeat,
+    linear-gradient(#0f0 0 0) 100% 50% / 50% 0.5vmin no-repeat;
+  abackdrop-filter: blur(0.07vmin);
+  clip-path: polygon(50% 50%, 100% 0, 100% 51%);
+  -webkit-mask: conic-gradient(#0c0 25%, #0c00 0)
+}
+
+article *,
+article *::before {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2.75vmin;
+  font-weight: 600;
+  color: #4c4;
+  left: 50%;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 140%;
+}
+
+h1 {
+  top: 0;
+  transform: translate(-50%, -250%);
+}
+
+p {
+  bottom: 0;
+  transform: translate(-50%, 250%);
+}
+
+div {
+  color: #0c05;
+  bottom: 2%;
+  right: 2%;
+}
+
+@keyframes changeColor {
+  0 { color: var(--c1); }
+  5% { color: var(--c2); }
+  20%, 100% { color: var(--c1); }
+}
+
+@keyframes blink {
+  0, 50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+span {
+  --c1: #0c00;
+  --c2: #0c0;
+  text-shadow: 0 0 0.5vmin, 0 0 0.5vmin;
+  color: #0c00;
+  animation: changeColor 10s infinite;
+}
+
+.span {
+  top: 70%;
+  left: 70%;
+  animation-delay: -8.9s;
+}
+
+.dl {
+  top: 25%;
+  left: 25%;
+  animation-delay: -3.7s;
+}
+
+.dd {
+  top: 30%;
+  left: 17%;
+  animation-delay: -4.2s;
+}
+
+
+
+article > :not(.text)::before {
+  --c1: #0c0;
+  --c2: #0c00;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1vmin;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c1);
+  box-shadow: 0 0 1vmin;
+  animation: blink 2s linear infinite;
+}
+
+/* .span::before {
+  animation-delay: -9.1s, 0s !important;
+}
+
+.dl::before {
+  animation-delay: -3.4s, 0s !important;
+}
+
+.dd::before {
+  animation-delay: -4.1s, 0s !important;
+} */
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1 class="text">Why couldn't the developer align the &lt;div&gt;?</h1>
+      <p class="text">Because it was positioned off-the-grid.</p>
+      <span class="span" aria-hidden="true">&lt;span&gt;</span>
+      <span class="dl" aria-hidden="true">&lt;dl&gt;</span>
+      <span class="dd" aria-hidden="true">&lt;dd&gt;</span>
+      <div class="text" aria-hidden="true">&lt;div&gt;</div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem; color: #fff" rel="up">See more comics</a>
+  </body>
+  </html>
