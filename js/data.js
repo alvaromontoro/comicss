@@ -653,5 +653,13 @@ const posts = [
     vertical: true,
     title: "Off-the-grid",
     ariaLabel: "How many CSS developers does it take to change a lightbulb? None. It is a JavaScript issue. - How many CSS developers does it take to change a lightbulb? None. They are OK working in dark mode. - How many JS developers does it take to change a lightbulb? One. But they'll need 5GB in node_modules, TailwindCSS, their own implementation of the lefty-loosey.js library (dependent on righty-tighty.js), and the latest MacBook Pro to handle everything. The resulting JS file will be 8MB and only change the light bulb if the room has Chrome in it."
+  },
+  {
+    id: 84,
+    uid: "css-doom",
+    boxes: 4,
+    vertical: true,
+    title: "CSS Doom",
+    ariaLabel: "Cartoon with 4 panels showing two people walking. One says 'you look down, did the layoffs impact you?' Then they start a conversation about how everything seems to be going poorly and it has been that way for a long time (2016 to be precise). One says that has been doing research and thinks that has found the root cause, shows the CSS wikipedia article: CSS latest version was published in April 12, 2016."
   }
 ]
