@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+  display: grid;
+  gap: 1vmin;
+  font-family: 'Comic Neue', Helvetica, Arial, sans-serif;
+}
+
+section {
+  position: relative;
+  border: 0.5vmin solid;
+  width: 80vmin;
+  height: 50vmin;
+  background: linear-gradient(#c9c9, #c9c0);
+  overflow: hidden;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.person-2 {
+  --skin: #f8d8cc;
+  --hair: #ccc;
+  --shirt: #99999f;
+    width: 32%;
+  height: 75%;
+  bottom: -3%;
+  left: 35%;
+  transform: translate(-50%, 0);
+}
+
+.person-2 .head {
+  width: 60%;
+  height: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(closest-side circle at 10% 50%, var(--skin) 99%, #0000 0),
+    radial-gradient(closest-side circle at 90% 50%, var(--skin) 99%, #0000 0);
+  clip-path:ellipse(130% 84% at 50% 100%)
+}
+
+.person-2 .face {
+  top: 0;
+  left: 50%;
+  width: 80%;
+  height: 150%;
+  background: var(--hair);
+  transform: translate(-50%, 0);
+  border-radius: 100% /15vmin 15vmin 100% 100%; 15vmin;
+  clip-path: polygon(0 -100%, 100% -100%, 100% 100%, 65% 100%, 60% 97%, 55% 100%, 50% 95%, 45% 100%, 38% 96.5%, 32% 100%, 0 100%);
+}
+
+.person-2 .face::before {
+  content: "";
+  width: 80%;
+  height: 42%;
+   border-radius: 9vmin 9vmin 15vmin 15vmin;
+  background: 
+    radial-gradient(150% 50% at 50% 100%, var(--hair) 25%, #0000 26%),
+    var(--skin);
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.person-2 .face::after {
+  content: "";
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 50%;
+  top: 10%;
+  transform: translate(-90%, -95%) rotate(-15deg);
+  box-shadow: 1vmin 1vmin var(--hair);
+  filter: drop-shadow(1.25vmin 0.5vmin var(--hair))
+}
+
+.person-2 .mouth {
+  width: 30%;
+  height: 8%;
+  border-radius: 50%;
+  left: 50%;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  background: #db9caa;
+}
+
+.person-2 .mouth::before,
+.person-2 .mouth::after {
+  content: "";
+  width: 140%;
+  height: 150%;
+  background: #bbb;
+  border-radius: 100% 0 80% 0;
+  left: 55%;
+  transform: translate(-100%, -5%)
+}
+
+.person-2 .mouth::after {
+  left: 45%;
+   transform: translate(0%, -5%);
+  border-radius: 0 100% 0 80%;
+}
+
+.person-2 .nose {
+  width: 20%;
+  height: 22.5%;
+  border-radius: 100% / 150% 150% 50% 50%;
+  left: 52%;
+  top: 39%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#f000, #f003), var(--skin)
+}
+
+.person-2 .eye {
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 55% 50%, #000 20%, #0000 22%),
+    #fff;
+  left: 27%;
+  top: 27%;
+  transform: translate(-50%, 0);
+}
+
+.person-2 .eye + .eye {
+  left: 70%;
+  transform: scaleX(-1) translate(40%, 0);
+  background: 
+    radial-gradient(circle at 45% 50%, #000 20%, #0000 22%),
+    #fff;
+}
+
+.person-2 .eye::before {
+  content: "";
+  width: 150%;
+  height:60%;
+  background: var(--hair);
+  border-radius: 100% 50% 0 0;
+  left: 50%;
+  transform: translate(-50%, -150%) rotate(-3deg)
+}
+
+.person-2 .neck {
+  width: 30%;
+  height: 50%;
+  top: 64%;
+  background: var(--skin);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100% / 20%;
+}
+
+.person-2 .body {
+  width: 100%;
+  height: 60%;
+  bottom: 0;
+}
+
+.person-2 .chest {
+  width: 75%;
+  left: 50%;
+  height: 200%;
+  background: var(--shirt);
+  transform: translate(-50%);
+  clip-path: polygon(50% 0, 100% 10%, 95% 30%, 100% 100%, 0 100%, 5% 30%, 0 10%)
+}
+
+.person-2 .chest::after {
+  content: "";
+  width: 150%;
+  height:150%;
+  border-radius: 50%;
+  border: 2vmin solid #753;
+  left: 10%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+}
+
+.person-2 .sleeve {
+  width: 100%;
+  height: 100%;
+  top: 20%;
+  background: 
+    radial-gradient(farthest-side at 50% 100%, #0006, #0000),
+    var(--shirt);
+  clip-path: polygon(0 70%, 12% 0, 88% 0, 100% 100%);
+  border-radius: 100% / 0 0 20% 30%;
+}
+
+.person-2 .arm {
+  width: 40%;
+  height: 20%;
+  background:
+    linear-gradient(90deg, #0000 66%, #0003),
+    var(--shirt);
+  transform-origin: 50% 0;
+  top: 90%;
+  left: -20%;
+  transform: rotate(10deg)
+}
+
+.person-2 .arm::before {
+  content: "";
+  width: 50%;
+  aspect-ratio: 1;
+  background: var(--skin);
+  border-radius: 50%;
+  transform: translate(-60%, -50%);
+  left: 0;
+  top: 50%;
+  box-shadow: inset 1vmin -1vmin #c001
+}
+
+.hat {
+  width: 130%;
+  height:50%;
+  left: 50%;
+  top: -72%;
+    transform: translate(-50%, 0); rotate(20deg);
+}
+
+.hat::after {
+  content: "";
+  top: 4%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(66% 80% at 50% 100%, #0000 80%, var(--shirt) 0),
+    linear-gradient(#0005 0 0) var(--shirt);
+  border-radius: 100% 3% 100% 1%;
+  border-radius: 50%;
+
+  clip-path: ellipse(50% 80% at 50% 100%)
+}
+
+.hat::before {
+  content: "";
+  width: 60%;
+  height: 130%;
+  left: 50%;
+  top: -30%;
+  transform: translate(-50%, -50%);
+  background: 
+    linear-gradient(175deg, #0000 74%, #0004 0)
+    var(--shirt);
+  clip-path: polygon(10% 0, 50% 30%, 80% 100%, 25% 100%, 30% 50%)
+}
+
+.club {
+  --b: #753;
+  width: 8%;
+  height: 100%;
+  top: 0;
+  left: -30%;
+  background: 
+    linear-gradient(to top right, var(--b) 60%, #0000 61%),
+    linear-gradient(91deg,  var(--b) 80%, #0000 81%);
+  transform: rotate(-3deg)
+}
+
+.club::after {
+  content: "";
+  width: 330%;
+  height: 40%;
+  top: 0;
+  left: 50%;
+  background: red;
+  transform: translate(-50%, -90%);
+  border-radius: 100% / 130% 130% 70% 80%;
+  background:
+     conic-gradient(at 70% 50%, #0000 46%,  var(--b) 0 51%, #0000 0),
+    conic-gradient(at 50% 20%, #0000 46%,  var(--b) 0 51%, #0000 0),
+    radial-gradient(farthest-side, #4cf 80%, #0000 0);
+  box-shadow:
+    inset 1.5vmin -1.4vmin  var(--b),
+    inset -1vmin -0.5vmin  var(--b);
+  background-repeat: no-repeat;
+}
+
+.bubble * {
+  position: relative;
+}
+
+.bubble {
+  font-size: 2.5vmin;
+  background: #ffc;
+  border-radius: 50%;
+  padding: 3vmin;
+  width: 42%;
+  text-align: center;
+  top: 10%;
+  left: 55%;
+}
+
+.bubble::before {
+  content: "";
+  width: 40%;
+  height: 50%;
+  border-radius: 50% 30% 50% 50%;
+  top: 75%;
+  left:-10%;
+    box-shadow: inset -1vmin -1vmin #ffc;
+  transform: rotate(-20deg)
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <section>
+        <div class="bubble">
+          A wizard is never <br/>late, nor is he early. <br/>He arrives precisely when the <code>animation-delay</code> means to.</div>
+        <div class="person person-2">
+          <div class="body">
+            <div class="club"></div>
+            <div class="hat"></div>
+            <div class="arm arm-1"></div>
+            <div class="sleeve"></div>
+            <div class="chest"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

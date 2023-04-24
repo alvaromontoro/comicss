@@ -1602,4 +1602,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Never Late</title>
+    <link href="https://comicss.art/?id=85" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/85/never-late.html"/>
+    <id>https://comicss.art/?id=85</id>
+    <updated>2023-04-24T00:00:00Z</updated>
+    <summary>New Cartoon: Never Late</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/85/never-late.png" alt="Cartoon showing a bearded wizard wearing a gray cloak and hat (Gandalf from the Lord of the Rings) saying: 'A wizard is never late, nor is he early. He arrives precisely when the animation-delay means to.'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
