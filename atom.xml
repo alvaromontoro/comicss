@@ -1621,4 +1621,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>CSS Grid or not CSS Grid</title>
+    <link href="https://comicss.art/?id=86" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/86/css-grid-or-not-css-grid.html"/>
+    <id>https://comicss.art/?id=86</id>
+    <updated>2023-05-01T00:00:00Z</updated>
+    <summary>New Cartoon: CSS Grid or not CSS Grid</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/86/css-grid-or-not-css-grid.png" alt="Cartoon with a man wearing shakesperean clothing while holding a skull and saying 'CSS Grid or not CSS Grid, that is the question'. Off panel someone sighs 'Web developers really like drama...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

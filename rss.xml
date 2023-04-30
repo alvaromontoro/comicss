@@ -856,5 +856,15 @@
       <enclosure url="https://comicss.art/comics/85/never-late.png" length="120000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=86</guid>
+      <title>To Grid or Not To Grid</title>
+      <link>https://comicss.art/?id=86</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/86/css-grid-or-not-css-grid.png" length="93000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

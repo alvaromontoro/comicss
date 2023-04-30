@@ -669,5 +669,14 @@ const posts = [
     vertical: true,
     title: "Never Late",
     ariaLabel: "Cartoon showing a bearded wizard wearing a gray clock and pointy hat (Gandalf from the Lord of the Rings) saying: 'A wizard is never late, nor is he early. He arrives precisely when the animation-delay means to.'"
+  },
+  {
+    id: 86,
+    uid: "css-grid-or-not-css-grid",
+    boxes: 1,
+    vertical: true,
+    title: "To Grid or Not To Grid",
+    video: "7_3EEHjf3Z0",
+    ariaLabel: "Cartoon with a man wearing shakesperean clothing while holding a skull and saying 'CSS Grid or not CSS Grid, that is the question'. Off panel someone sighs 'Web developers really like drama...'"
   }
 ]
