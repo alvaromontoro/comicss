@@ -678,5 +678,13 @@ const posts = [
     title: "To Grid or Not To Grid",
     video: "7_3EEHjf3Z0",
     ariaLabel: "Cartoon with a man wearing shakesperean clothing while holding a skull and saying 'CSS Grid or not CSS Grid, that is the question'. Off panel someone sighs 'Web developers really like drama...'"
+  },
+  {
+    id: 87,
+    uid: "coffee-as-a-css-color",
+    boxes: 1,
+    vertical: true,
+    title: "Coffee as a CSS color",
+    ariaLabel: "Cartoon titled 'Coffee Style Sheet' with different types of coffee described as CSS colors. Black coffee is hwb(0 0 100%), Americano is hwb(50% 0 50%), Lungo is hwb(50% 0 50%), cafe au lait is hwb(0 50% 50%), latte is hwb(0 66% 33%), macchiato is hwb(0 33% 66%), cappuccino is hwb(0 66% 33%), espresso is hwb(0 0 33%), and 'Need more coffee!' is hwb(0 0 0)."
   }
 ]

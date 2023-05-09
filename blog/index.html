@@ -99,6 +99,99 @@
         </footer>
       </article>
       -->
+      <article id="coffee-as-a-css-color">
+        <h2>Coffee Styling Sheet: Coffee as a CSS Color</h2>
+        <p>
+          They say developers could work only for coffee. I don't think that's true (but maybe 
+          not too far either). So this week's cartoon will mix two of my favorite things: coffee 
+          and CSS. And in particular, I will focus on CSS colors and how different types of 
+          coffees can be represented similarly to CSS colors.
+        </p>
+        <p>
+          We all know about RGB, Hex (also RGB), and HSL (which, funny thing, is also RGB). And 
+          new color formats have popped up in the CSS standard: L*a*b*, LCH, CMYK, HWB, OKLCH... 
+          So many people have asked me, "<em>Why do we need so many color formats in CSS?</em>" And 
+          that is a fair question that I will try to answer with today's cartoon.
+        </p>
+        <p>
+          And I will do it with the help of an existing CSS color function: HWB. Although HWB 
+          stands for Hue-Whiteness-Blackness, I modified the letter meanings (just) a little to 
+          fit my purpose:
+        </p>
+        <ul>
+          <li>H = Hot water = water (duh)</li>
+          <li>W = Whiteness = milk (foamed, frothed, steamed, etc.)</li>
+          <li>B = Blackness = coffee (the cause of, and solution to, all of life's problems.)</li>
+        </ul>
+        <p>
+          After this long introduction, finally, here's today's cartoon:
+        </p>
+        <figure style="max-width: 75ch">
+          <img src="/comics/87/87-coffee-as-a-css-color-0.webp" alt="Cartoon titled 'Coffee Style Sheet' with different types of coffee described as CSS colors. Black coffee is hwb(0 0 100%), Americano is hwb(50% 0 50%), Lungo is hwb(50% 0 50%), cafe au lait is hwb(0 50% 50%), latte is hwb(0 66% 33%), macchiato is hwb(0 33% 66%), cappuccino is hwb(0 66% 33%), espresso is hwb(0 0 33%), and 'Need more coffee!' is hwb(0 0 0)." />
+          <figcaption>I probably should add a description at the top explaining what HWB stands for...</figcaption>
+        </figure>
+        <p>
+          Note: I did a <a href="/comics/87/coffee-as-a-css-color.png">secondary 
+          version of this cartoon without the description</a> (I find it cleaner).
+        </p>
+        <p>
+          While I like the idea, it is limited: how about if we want a mocha? Mochas have chocolate 
+          and hwb() does not have a way to represent chocolate. It's only water, milk, and coffee. 
+          With those three basic ingredients, we only get to create the coffees on the infographic 
+          and some more (cortado, café bombón, or galão, to name a few). Still, we are missing a ton 
+          more: Irish coffee, espresso romano, marochino, etc., and we cannot create them with just 
+          water, milk, and coffee.
+        </p>
+        <p>
+          Even for the ones in the cartoon, my newly created hwb() function is not enough. For example, 
+          check the cappuccino: it is 66% milk and 33% coffee. It seems misleading that it has the same 
+          composition as a latte, but they are not the same: in a cappuccino, the milk is half steamed 
+          and half foamed.
+        </p>
+        <figure style="max-width: 75ch">
+          <img src="/blog/images/coffee-as-a-css-color.png" alt="detail of the previous cartoon showing latte and cappuccino along with mocha" />
+        </figure>
+        <p>
+          It would be nicer if we had a different way to express those details. And that's what happens 
+          with CSS colors too! We have been using RGB for a long time, but RGB is limited. The 
+          <a href="https://www.w3.org/TR/css-color-4/">CSS Color Module Level 4</a> introduced new ways 
+          of writing colors that modernize the web and bring a world of possibilities: Lab, LCH, OKLCH, 
+          CMYK, the color() function... and those color spaces offer more options than the standard RGB.
+        </p>
+        <p>
+          In the case of a mocha, we are missing the chocolate (which is not an option in HWB)... so why 
+          not use LCH instead?
+        </p>
+        <ul>
+          <li>L = Lightness/Leche/Lait/Latte = Milk</li>
+          <li>C = Chocolate</li>
+          <li>H = Hot coffee</li>
+        </ul>
+        <p>
+          Now we could use that function to do lch(20% 40% 40%) and get a nice Mocha. And notice how 
+          some of the coffees in the chart can be defined with LCH (basically all except the Americano 
+          and Lungo.)
+        </p>
+        <p>
+          And same thing happens to the CSS colors: some color functions will allow you to create more 
+          vibrant colors than others, and some will be easier for the computer or more straightforward 
+          for humans. Some overlap is expected, and that's completely normal. Pick the best color format 
+          for your project needs, and enjoy. It is an exciting time to play with CSS colors.
+        </p>
+        <hr/>
+        <p>
+          If you want to read more about color functions, check directly the 
+          <a href="https://www.w3.org/TR/css-color-4/">CSS Color Module 4</a> 
+          (<a href="https://www.w3.org/TR/css-color-5/">and level 5</a> for some great new color functions!). 
+          They are surprisingly straightforward. You can also check 
+          <a href="https://alvaromontoro.com/blog/67865/the-ultimate-guide-to-css-colors-2020-edition">an article 
+          I published a couple of years ago</a>... but be warned that it is a bit outdated as the standard has 
+          changed continuously since I wrote it.
+        </p>
+        <footer>
+          Published on <time datetime="2023-05-09">May 9, 2023</time>
+        </footer>
+      </article>
       <article id="how-to-draw-comicss">
         <h2>How is comiCSS drawn?</h2>
         <p>
@@ -296,7 +389,7 @@
 
       <article id="css-christmas-carol">
         <h2>CSS Christmas Carol</h2>
-        <p>On the twelfth day of Christmas, my CSS sent to me…</p>
+        <p>On the twelfth day of Christmas, my CSS sent to me...</p>
         <p>
           Twelve <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering" rel="nofollow noopener" target="_blank">image-renderings</a>,<br/>
           Eleven <a href="https://developer.mozilla.org/en-US/docs/Glossary/Pixel" rel="nofollow noopener" target="_blank">pixels</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" rel="nofollow noopener" target="_blank">padding</a>,<br/>

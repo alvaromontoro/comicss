@@ -1640,4 +1640,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Coffee as a CSS Color</title>
+    <link href="https://comicss.art/?id=87" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/87/coffee-as-a-css-color.html"/>
+    <id>https://comicss.art/?id=87</id>
+    <updated>2023-05-09T00:00:00Z</updated>
+    <summary>New Cartoon: Coffee as a CSS Color</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/87/coffee-as-a-css-color.png" alt="Cartoon titled 'Coffee Style Sheet' with different types of coffee described as CSS colors. Black coffee is hwb(0 0 100%), Americano is hwb(50% 0 50%), Lungo is hwb(50% 0 50%), cafe au lait is hwb(0 50% 50%), latte is hwb(0 66% 33%), macchiato is hwb(0 33% 66%), cappuccino is hwb(0 66% 33%), espresso is hwb(0 0 33%), and 'Need more coffee!' is hwb(0 0 0)." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
