@@ -686,5 +686,13 @@ const posts = [
     vertical: true,
     title: "Coffee as a CSS color",
     ariaLabel: "Cartoon titled 'Coffee Style Sheet' with different types of coffee described as CSS colors. Black coffee is hwb(0 0 100%), Americano is hwb(50% 0 50%), Lungo is hwb(50% 0 50%), cafe au lait is hwb(0 50% 50%), latte is hwb(0 66% 33%), macchiato is hwb(0 33% 66%), cappuccino is hwb(0 66% 33%), espresso is hwb(0 0 33%), and 'Need more coffee!' is hwb(0 0 0)."
-  }
+  },
+  {
+    id: 88,
+    uid: "styling-as-human-languages",
+    boxes: 9,
+    avertical: true,
+    title: "If web styling technologies were human languages...",
+    ariaLabel: "Comic titled 'If web styling technologies were human languages...' with 9 panels. CSS would be Spanish, Bootstrap would be Latin, BEM would be French, CSS-in-JS would be Esperanto, CSS Modules would be Japanese, Bulma would be Sanskrit, Tailwind would be German, Less would be American English, and Sass would be British English. For a more detailed description check the source code (linked below)."
+  },
 ]

@@ -1659,4 +1659,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>If styling technologies were human languages...</title>
+    <link href="https://comicss.art/?id=88" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/88/styling-as-human-languages.html"/>
+    <id>https://comicss.art/?id=88</id>
+    <updated>2023-05-15T00:00:00Z</updated>
+    <summary>New Cartoon: If styling technologies were human languages...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/88/styling-as-human-languages.png" alt="Comic titled 'If web styling technologies were human languages...' with 9 panels. CSS would be Spanish, Bootstrap would be Latin, BEM would be French, CSS-in-JS would be Esperanto, CSS Modules would be Japanese, Bulma would be Sanskrit, Tailwind would be German, Less would be American English, and Sass would be British English. For a more detailed description check the linked source code." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
