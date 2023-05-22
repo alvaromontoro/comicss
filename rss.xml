@@ -886,5 +886,15 @@
       <enclosure url="https://comicss.art/comics/88/styling-as-human-languages.png" length="810000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=89</guid>
+      <title>Ouija</title>
+      <link>https://comicss.art/?id=89</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/89/ouija.png" length="111000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

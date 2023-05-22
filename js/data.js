@@ -695,4 +695,13 @@ const posts = [
     title: "If web styling technologies were human languages...",
     ariaLabel: "Comic titled 'If web styling technologies were human languages...' with 9 panels. CSS would be Spanish, Bootstrap would be Latin, BEM would be French, CSS-in-JS would be Esperanto, CSS Modules would be Japanese, Bulma would be Sanskrit, Tailwind would be German, Less would be American English, and Sass would be British English. For a more detailed description check the source code (linked below)."
   },
+  {
+    id: 89,
+    uid: "ouija",
+    boxes: 1,
+    vertical: true,
+    video: "uXYAJLeSzKM",
+    title: "Ouija",
+    ariaLabel: "Cartoon with two people around an ouija board, they are reading C - E - N - T - E - R"
+  },
 ]
