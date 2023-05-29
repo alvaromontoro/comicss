@@ -704,4 +704,12 @@ const posts = [
     title: "Ouija",
     ariaLabel: "Cartoon with two people around an ouija board, they are reading C - E - N - T - E - R"
   },
+  {
+    id: 90,
+    uid: "the-css-of-man",
+    boxes: 1,
+    vertical: true,
+    title: "The CSS of Man",
+    ariaLabel: "Magritte's The Son of Man painting (a man with an apple in front of his face). There are many CSS properties and selectors overlapping the painting and pointing to different parts: the apple has a z-index:3, and the man a z-index:2 (and both are pointed by a position:absolute), the hat has a top:0, the background a linear-gradient(#ddd 50%,#78b 0), the tie is a conic-gradient, and the two jacket buttons are pointed by button:first-child and button:last-child"
+  },
 ]
