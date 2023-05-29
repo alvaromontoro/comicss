@@ -712,4 +712,12 @@ const posts = [
     title: "The CSS of Man",
     ariaLabel: "Magritte's The Son of Man painting (a man with an apple in front of his face). There are many CSS properties and selectors overlapping the painting and pointing to different parts: the apple has a z-index:3, and the man a z-index:2 (and both are pointed by a position:absolute), the hat has a top:0, the background a linear-gradient(#ddd 50%,#78b 0), the tie is a conic-gradient, and the two jacket buttons are pointed by button:first-child and button:last-child"
   },
+  {
+    id: 91,
+    uid: "you-shall-not-pass",
+    boxes: 1,
+    vertical: true,
+    title: "You Shall Not Pass",
+    ariaLabel: "Cartoon parody of The Lord of the Rings, showing a bridge with a horned monster on one side carrying a box with the HTML element center inside. On the other side of the bridge, there's a gray-cloaked wizard holding a sword and a stick saying 'You shall not pass!!', protecting the HTML5 logo."
+  },
 ]

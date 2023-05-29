@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+.cartoon {
+  font-size: 1vw;
+  width: 80em;
+  aspect-ratio: 1.4;
+  border: 0.5em solid #000;
+  border-radius: 0.5em 0.3em 0.4em 0.25em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: clip;
+  box-sizing: border-box;
+  background:
+    linear-gradient(#c9c9, #c9c0)
+    /*     , linear-gradient(#000, #0000 50%),
+    linear-gradient(#0009, #630) */
+} 
+
+.cartoon *,
+.cartoon *::before,
+.cartoon *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.alt-text {
+  width: 1px;
+  height: 1px;
+  overflow: clip;
+  left: -1in;
+  top: 0;
+  left: 0;
+}
+
+.bridge {
+  width: 100%;
+  height: 60%;
+  top: 75%;
+  filter: drop-shadow(2em 0.7em #b72)
+}
+
+.bridge::before {
+  content: "";
+  top: 0;
+  left: 50%;
+  width: 240%;
+  height: 100%;
+  border-radius: 60% / 100% 110% 0 0;
+  background: blue;
+  transform: translate(-50%, 0);
+  -webkit-mask: radial-gradient(50% 225% at 50% 100%, #0000 40%, #000 40.2%);
+  background:
+    linear-gradient(#0000 20%, #0008),
+    #d94;
+}
+
+.frame {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#0000 80%, #3214);
+  display: none;
+}
+
+.bubble {
+  --string: radial-gradient(100% 200% at 100% 0, #0000 50%, #00f 0 53.5%, #0000 0);
+  width: 30%;
+  height: 33%;
+  top: 16%;
+  left: 42%;
+}
+
+.bubble::after {
+  content: "You shall \a not pass!!";
+  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', 'Amatic SC', Helvetica, Arial, sans-serif;
+  white-space: pre;
+  text-align: center;
+  padding: 0 0.5em 2.75em 0;
+  font-size: 3.5em;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  line-height: 0.8;
+  atext-transform: uppercase;
+}
+
+.bubble::before {
+  content: "";
+  width: 100%;
+  height: 80%;
+  background: 
+    radial-gradient(45% 32% at 45% 32%, #00f 99%, #ffc0),
+    radial-gradient(25% 15% at 65% 22%, #00f 99%, #ffc0),
+    var(--string),
+    #fff;
+  box-shadow: 0 0 0 1vw #fff;
+  filter: blur(0.5vw) contrast(100) sepia(100%)  brightness(5) hue-rotate(200deg);
+  mix-blend-mode: multiply;
+}
+
+.wizard {
+  --tunic: #aaaab4;
+  --skin: #eb9;
+  width: 17%;
+  aspect-ratio: 20 / 33;
+  left: 65%;
+  bottom: 23%;
+
+  .light {
+    width: 140%;
+    left: -5%;
+    top: 15%;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(farthest-side, #fff, #fff0);
+  }
+
+  .body {
+    width: 60%;
+    height: 70%;
+    bottom: 0;
+    border-radius: 100% / 200% 200% 0 0;
+    -webkit-mask: radial-gradient(40% 105% at 100% 0, #0000 99%, #000);
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: -1em -4em 1em -3em;
+    background: 
+      linear-gradient(#0000 20%, #0002),
+      radial-gradient(130% 85% at 40% 0, #0000 55%, #0003 0 58%, #0000 0),
+      radial-gradient(circle at 40% 48.5%, #0003 0.3em, #0000 0),
+      var(--tunic);
+  }
+
+  .arm-right {
+    width: 45%;
+    height: 35%;
+    border-radius: 0 100% 0 0;
+    box-shadow: 2.25em -0.1em var(--tunic);
+    top: 32%;
+    left: 28%;
+    transform: rotate(8deg);
+
+    &::after {
+      content: "";
+      width: 30%;
+      aspect-ratio: 1;
+      background: var(--skin);
+      border-radius: 50%;
+      top: 100%;
+      left: 100%;
+      transform: translate(0, -30%);
+    }
+
+    &::before {
+      content: "";
+      width: 200%;
+      height: 40%;
+      top: 100%;
+      right: -50%;
+      transform: translate(0, -40%);
+      background: 
+
+        radial-gradient(circle at 98% 50%, #333 4%, #0000 0),
+        linear-gradient(brown 0 0) 98% 50% / 20% 20%,
+        linear-gradient(#333 0 0) 75% 50% / 5% 100%,
+        linear-gradient(#0002 0 0) 30% 50% / 75% 1px,
+        conic-gradient(at 0 50%, #0000 55deg, #ccc 0 125deg, #0000 0) 0 50% / 80% 30%
+        #f000;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  .arm-left {
+    width: 45%;
+    height: 30%;
+    background: #0000;
+    border-radius: 0 0 100% 0;
+    box-shadow: 0.1em 2.5em var(--tunic);
+    top: 15%;
+    left: -5%;
+    transform: rotate(20deg);
+
+    &::after {
+      content: "";
+      width: 30%;
+      aspect-ratio: 1;
+      background: var(--skin);
+      border-radius: 50%;
+      top: 100%;
+      transform: translate(-50%, 0)
+    }
+
+    &::before {
+      content: "";
+      width: 30%;
+      height: 230%;
+      left: 5%;
+      top: 15%;
+      transform: translateX(-50%) rotate(-10deg);
+      background:
+        radial-gradient(100% 20% at 100% 0, #0000 80%, #742 0 99%, #0000) 0 0 / 80% 80% no-repeat,
+        radial-gradient(100% 20% at 100% 0, #0000 70%, #742 0 99%, #0000) 40% 5% / 30% 80% no-repeat,
+        radial-gradient(100% 20% at 0 0, #0000 80%, #742 0 99%, #0000) 100% 0 / 60% 80% no-repeat,
+        conic-gradient(from 358.75deg at 50% 140%, #0000 0, #742 0.1deg  2.5deg, #0000 2.6deg) 50% 102% / 100% 90% ,
+        radial-gradient(50% 7% at 50% 5%, #aff 80%, #0ff0 0)
+        #f000;
+    }
+  }
+
+  .head {
+    width: 60%;
+    height: 40%;
+    background: #0000;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .beard {
+      width: 40%;
+      height: 60%;
+      background: #eee;
+      left: 40%;
+      transform: translate(-50%, 0) rotate(3deg);
+      top: 55%;
+      border-radius: 100% / 80% 80% 120% 140%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%, 60% 89%, 50% 100%, 40% 90%, 20% 100%, 0 100%)
+    }
+
+    .face {
+      width: 40%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      top: 40%;
+      left: 40%;
+      transform: translate(-50%, 0) rotate(3deg);
+      clip-path: polygon(-100% -5%, 200% 24%, 200% 200%, -100% 200%);
+      box-shadow: 
+        0 -0.2em 0 0.1em #eee,
+        0.1em 0.75em 0 0.2em #eee,
+        1.75em 0.5em 0 -1.2em var(--skin),
+        -1.5em 0.5em 0 -1.2em var(--skin);
+      background: 
+        radial-gradient(farthest-side at 50% 100%, #eee 88%, #0000 0) 15% 38% / 38% 10% no-repeat,
+        radial-gradient(farthest-side at 50% 100%, #eee 88%, #0000 0) 85% 39% / 38% 10% no-repeat,
+        conic-gradient(#0000 10deg, #eee 0 30deg, #0000 0) 0 0 / 25% 45% repeat-x,
+        conic-gradient(#eee 0 24deg, #0000 0 350deg, #eee 0) -10% 0 / 25% 55% repeat-x,
+        conic-gradient(at 50% 55%, var(--skin) 80deg, #0000 0 280deg, var(--skin) 0),
+        radial-gradient(circle at 26% 60%, #fff 0.1em, #0000 0),
+        radial-gradient(circle at 66% 60%, #fff 0.1em, #0000 0),
+        radial-gradient(circle at 30% 60%, #000 0.3em, #0000 0),
+        radial-gradient(circle at 70% 60%, #000 0.3em, #0000 0),
+        radial-gradient(100% 50% at 50% 100%, #a44 15%, #eee 0 40%, #0000 0)
+        var(--skin);
+    }
+
+    .hat {
+      top: 33%;
+      left: 45%;
+      width: 120%;
+      height: 27%;
+      transform: translateX(-50%) rotate(20deg);
+
+      &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #568;
+        border-radius: 100% 0;
+      }
+
+      &::before {
+        content: "";
+        width: 50%;
+        height: 400%;
+        background: 
+          linear-gradient(175deg, #0000 75%, #0003 0)
+          #568;
+        top: 80%;
+        left: 51%;
+        transform: translate(-50%, -100%) rotate(-4deg);
+        clip-path: polygon(0 100%, 10% 50%, 28% 0, 32% 0, 50% 50%, 85% 100%)
+      }
+    }
+  }
+}
+
+.monster {
+  --skin: #310;
+  width: 35%;
+  aspect-ratio: 4/5;
+  left: 5%;
+  bottom: 28%;
+  filter: drop-shadow(0 0 3em #ffca) drop-shadow(0 -1.5em 1em #f003) drop-shadow(0 -0.4em 12em #ffca0044);
+
+  .head {
+    width: 55%;
+    height: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .text {
+      width: 170%;
+      height: 130%;
+      left: 49%;
+      top: -1%;
+      transform: translateX(-50%);
+      font-size: 4.75em;
+      font-family: Courier, monospace, monospace;
+      display: flex;
+      display: none;
+      justify-content: space-around;
+      text-shadow:
+        2px  0px #000, 
+        2px  2px #000,
+        0px  2px #000,
+        -2px  2px #000,
+        -2px  0px #000,
+        -2px -2px #000,
+        0px -2px #000,
+        2px -2px #000
+        ;
+
+      & center {
+        position: relative;
+        margin-top: 0.6em;
+        color: #fff;
+      }
+    }
+
+    .horn {
+      width: 170%;
+      height: 130%;
+      left: 49%;
+      top: -1%;
+      background: #00f4;
+      transform: translateX(-50%);
+      border-radius: 100%;
+      background: 
+        repeating-conic-gradient(at 50% 45%, #f800 0 1.8%, #f806 2.3%) 0 0 / 50% 100%,
+        var(--skin)
+        ;
+      -webkit-mask: radial-gradient(40% 42% at 50% 61%, #0000 99%, #000);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%)
+    }
+
+    .face {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 100% / 40% 40% 150% 120%;
+      background: 
+        linear-gradient(#0003, #0000 80%),
+        var(--skin);
+
+      .eye {
+        --pos: 50%;
+        top: 50%;
+        left: 30%;
+        width: 20%;
+        height: 15%;
+        background: 
+          radial-gradient(15% 60% at var(--pos) 50%, #000c 50%, #0000 60%),
+          yellow;
+        border-radius: 50% / 10% 20% 100% 100%;
+        transform: rotate(5deg);
+        box-shadow: 0 0 3em #ffcc, 0 0 3em -0.5em #f00c;
+
+        & + & {
+          transform: scaleX(-1) rotate(5deg);
+          left: 60%;
+        }
+      }
+
+      .mouth {
+        width: 30%;
+        height: 40%;
+        border: 1em solid var(--skin);
+        border-radius: 100% / 20% 20% 130% 130%;
+        left: 55%;
+        transform: translate(-50%, 0);
+        background: 
+          conic-gradient(at 50% 70%, #f80 8%, #0000 0 92%, #f80 0) 0 0 / 20% 50% repeat-x,
+          yellow;
+        top: 75%;
+        box-shadow:
+          0 1em 1em -0.5em
+      }
+    }
+  }
+
+  .body {
+    width: 64%;
+    aspect-ratio: 1.1;
+    background: #0043;
+    left: 45%;
+    top: 31.5%;
+    transform: translate(-50%, 0);
+    border-radius: 100% / 40% 50% 140% 150%;
+    background: linear-gradient(#0006, #0000 80%), var(--skin);
+    box-shadow: 
+      -0em -7.75em 0 -6em #0006,
+      -0em -7.75em 0 -6em var(--skin),
+      -0.2em 5em 0 -2em var(--skin)
+      /*       ,
+      0 0 3em #ffcc, 
+      0 0 3em -0.5em #f002; */
+      ;
+    aclip-path: polygon(-100% -100%, 200% -100%, 200% 95%, -100% 95%);
+    
+    &::before,
+    &::after {
+      content: "";
+      top: 20%;
+      left: 45%;
+      width: 50%;
+      height: 55%;
+      border-radius: 30% / 100%;
+      box-shadow: 
+        inset -0.5em -0.5em 1em #0008, 
+        inset -0.5em -0.5em 0.5em #fa02;
+    }
+    
+    &::after {
+      left: 15%;
+    }
+  }
+
+  .leg {
+    width: 40%;
+    height: 18%;
+    background: var(--skin);
+    border-radius: 100% / 30% 100% 100% 100%;
+    transform-origin: 0 50%;
+  }
+
+  .leg::before {
+    content: "";
+    width: 90%;
+    height: 90%;
+    border-radius: 120% / 0% 30% 200% 80%;
+    background: var(--skin);
+    transform-origin: 0% 20%;
+    left: 90%;
+    top: 35%;
+    transform: rotate(90deg);
+  }
+
+  .leg-right {
+    left: 45%;
+    top: 70%;
+    transform: rotate(20deg);
+  }
+
+  .leg-left {
+    left: 35%;
+    top: 64%;
+    transform: rotate(110deg);
+  }
+
+  .leg-left::before {
+    transform: rotate(40deg);
+    top: 25%;
+    left: 89%;
+  }
+
+  .panel {
+    width: 70%;
+    height: 30%;
+    background: 
+      radial-gradient(circle at 0.35em 0.35em, #d23 0.15em, #0000 0),
+      radial-gradient(circle at 0.8em 0.35em, #2a3 0.15em, #0000 0),
+      radial-gradient(circle at 1.25em 0.35em, #da0 0.15em, #0000 0),
+      #123;
+    border-radius: 0.2em;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, 0) rotate(-5deg);
+    font-size: 3em;
+    box-shadow: 0 0 1em #ffc4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace, monospace;
+    color: #ddd;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 25%;
+      aspect-ratio: 1;
+      background: var(--skin);
+      left: 0;
+      top: 70%;
+      transform: translate(-60%, -50%);
+      border-radius: 50%;
+    }
+
+    &::before {
+      left: 105%;
+      top: 35%;
+    }
+
+    & center {
+      position: relative;
+    }
+  }
+
+  .arm-right {
+    width: 20%;
+    height: 40%;
+    border-radius: 50%;
+    background: var(--skin);
+    transform: rotate(-20deg);
+    top: 40%;
+    left: 70%;
+
+    &::before {
+      content: "";
+      width: 110%;
+      aspect-ratio: 1;
+      background: 
+        linear-gradient(#0004, #0000),
+        var(--skin);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      top: 5%;
+      left: 40%;
+    }
+  }
+  .arm-left {
+    width: 30%;
+    height: 70%;
+    border-radius: 50%;
+    background: var(--skin);
+    transform: rotate(30deg);
+    top: 15%;
+    left: -25%;
+
+    &::before {
+      content: "";
+      width: 110%;
+      aspect-ratio: 1;
+      background: 
+        linear-gradient(#0004, #0000),
+        var(--skin);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      top: 15%;
+      left: 50%;
+    }
+
+    &::after {
+      content: "";
+      width: 120%;
+      height: 37%;
+      background: 
+        var(--skin);
+      border-radius: 50%;
+      transform: translate(-20%, -60%);
+      top: 95%;
+      left: 50%;
+      box-shadow: -1em -2em 1em -2em 
+    }
+  }
+
+  .wing {
+    width: 80%;
+    height: 60%;
+    border-radius: 100% 0 0 0;
+    -webkit-mask: 
+      radial-gradient(30% 90% at 100% 10%, #0000 99%, #000 0) 100% 0 / 100% 90.1% no-repeat,
+      radial-gradient(farthest-side at 50% 100%, #0000 99%, #000 0) 0 100% / 50% 10.1% repeat-x;
+    border: 0.5em solid var(--skin);
+    background: 
+      radial-gradient(31% 91% at 100% 10%, var(--skin) 99%, #0000 0) 100% 0 / 100% 93.1% no-repeat,
+      radial-gradient(farthest-side at 50% 100%, var(--skin) 99%, #0000 0) 0 100% / 50% 10.1% repeat-x,
+      radial-gradient(100% 240% at 100% 100%, #ffa50077, #0000 50%, #ffa50088 0, #ffa50000),
+      #631c;
+    top: 5%;
+    transform-origin: 100% 100%;
+    display: none;
+
+    &.wing-left {
+      left: 1%;
+      transform: translate(-50%, 0) rotate(9deg) 
+    }
+    &.wing-right {
+      left: -10%;
+      transform: scaleX(-1) translate(50%, 0) rotate(14deg) 
+    }
+  }
+}
+
+
+/* center specific */
+.logo.html {
+  width: 14%;
+  aspect-ratio: 22 / 25;
+  background: 
+    conic-gradient(at 50% 100%, #f73d01 75deg, silver 0 285deg, #f73d01 0);
+  clip-path: polygon(0 0, 100% 0, 90% 90%, 55% 99%, 55% 300%, 45% 300%, 45% 99%,10% 90%);
+  top: 63%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3em silver
+}
+
+.logo.html::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff1;
+  clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+  mix-blend-mode: plus-lighter;
+}
+
+.logo.html::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #eee;
+  clip-path: polygon(18.50% 18.45%, 81.06% 18.45%, 79.96% 29.51%, 32.38% 29.51%, 33.48% 40.78%, 78.85% 40.78%, 75.55% 74.56%, 50.00% 80.97%, 24.23% 74.56%, 22.47% 57.28%, 35.02% 57.28%, 35.90% 66.02%, 49.78% 69.51%, 63.66% 66.02%, 65.20% 51.84%, 21.81% 51.84%);
+}
+
+.wing {
+  display: block !important;
+}
+
+
+
+/* 
+
+
+.monster {
+  .panel {
+    display:none;
+  }
+  .wing {
+    display: block;
+  }
+  
+  .arm-left::after {
+    transform: translate(-30%, -40%) rotate(40deg);
+  }
+  .arm-right {
+    height: 30%;
+    top: 43%;
+    
+    &::after {
+      content: "";
+      width: 130%;
+      height: 39%;
+      background: 
+        var(--skin);
+      border-radius: 50%;
+      transform: translate(-21%, -68%);
+      top: 95%;
+      left: 50%;
+      box-shadow: -1em -2em 1em -2em 
+    }
+  }
+  .hand {
+    width: 15%;
+    aspect-ratio: 1;
+    background: var(--skin);
+    border-radius: 50%;
+    
+    &.hand-right {
+      top: 55%;
+      left: 99%;
+    }
+    
+    &.hand-left {
+      top: 75%;
+      left: 0%;
+      
+      &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        background: var(--skin);
+      }
+      &::before {
+        content: "";
+        width: 800%;
+        height: 800%;
+        background: #f004;
+        transform: translate(-5%, -70%) rotate(10deg);
+        background:
+          radial-gradient(80% 100% at 0 0, #0000 70%, orange 0 80%, #0000 0) 0 110% / 50% 60%,
+           radial-gradient(farthest-side at 100% 100%, #0000 60%, darkorange 0 70%, #0000 0) 27% 20% / 40% 30%,
+          radial-gradient(farthest-side at 0% 60%, #0000 60%, orange 0 70%, #0000 0) 87% 28% / 40% 50%
+          ;
+        background-repeat: no-repeat;
+        filter: blur(0.2em) contrast(50) hue-rotate(-20deg) drop-shadow(-0.1em -0.1em 1em orange) drop-shadow(-0.1em -0.1em 0.5em #f004);
+      }
+    }
+  }
+  .head {
+    .text {
+      display: flex;
+    }
+    .face {
+      .eye {
+        left: 10%;
+        border-radius: 50%;
+        height: auto;
+        aspect-ratio: 1;
+        width: 16%;
+        top: 45%;
+        background: #ff0;
+
+        & + & {
+          left: 73%;
+        }
+      }
+    }
+  }
+}
+ */
+    </style>
+  </head>
+  <body>
+
+    <div role="img" aria-labelledby="alt-text" class="cartoon">
+      <div class="alt-text">Cartoon parody of The Lord of the Rings, showing a bridge with a horned monster on one side carrying a box with the HTML element &lt;center&gt; inside. On the other side of the bridge, there's a gray-cloaked wizard holding a sword and a stick saying "You shall not pass!!", protecting the HTML5 logo.</div>
+      <center class="monster">
+        <center class="wing wing-left"></center>
+        <center class="wing wing-right"></center>
+        <center class="leg leg-right"></center>
+        <center class="leg leg-left"></center>
+        <center class="arm-right"></center>
+        <center class="body">
+          <center class="arm-left"></center>
+        </center>
+        <center class="head">
+          <center class="horn"></center>
+          <center class="face">
+            <center class="mouth"></center>
+            <center class="eye"></center>
+            <center class="eye"></center>
+          </center>
+          <center class="text"><center>&lt;</center><center>c</center><center>e</center><center>n</center><center>t</center><center>e</center><center>r</center><center>&gt;</center></center>
+        </center>
+        <center class="panel">
+          <center>&lt;</center><center>c</center><center>e</center><center>n</center><center>t</center><center>e</center><center>r</center><center>&gt;</center>
+        </center>
+        <center class="hand hand-right"></center>
+        <center class="hand hand-left"></center>
+      </center>
+      <div class="wizard">
+        <div class="light"></div>
+        <div class="arm-left"></div>
+        <div class="body"></div>
+        <div class="arm-right"></div>
+        <div class="head">
+          <div class="beard"></div>
+          <div class="hat"></div>
+          <div class="face"></div>
+        </div>
+      </div>
+      <div class="logo html"></div>
+      <div class="bridge"></div>
+      <div class="frame"></div>
+      <div class="bubble"></div>
+    </div>
+    
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

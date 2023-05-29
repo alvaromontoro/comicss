@@ -1716,4 +1716,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>You Shall Not Pass!</title>
+    <link href="https://comicss.art/?id=91" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/91/you-shall-not-pass.html"/>
+    <id>https://comicss.art/?id=91</id>
+    <updated>2023-05-29T00:00:00Z</updated>
+    <summary>New Cartoon: You Shall Not Pass!</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/91/you-shall-not-pass.png" alt="Cartoon parody of The Lord of the Rings, showing a bridge with a horned monster on one side carrying a box with the HTML element center inside. On the other side of the bridge, there's a gray-cloaked wizard holding a sword and a stick saying 'You shall not pass!!', protecting the HTML5 logo." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
