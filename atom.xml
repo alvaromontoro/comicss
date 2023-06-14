@@ -1735,4 +1735,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>One Ring to Rule Them All...</title>
+    <link href="https://comicss.art/?id=92" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/92/one-ring.html"/>
+    <id>https://comicss.art/?id=92</id>
+    <updated>2023-06-14T00:00:00Z</updated>
+    <summary>New Cartoon: You Shall Not Pass!</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/92/one-ring.png" alt="Cartoon parody of The Lord of the Rings, showing a ring with elvish-looking letters that say TailwindCSS to rule them all and in the darkness bind them." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
