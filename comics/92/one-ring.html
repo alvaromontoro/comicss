@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+/* font from dafont: https://www.dafont.com/elvish-ring-nfi.font*/
+@font-face {
+  font-family: "Elvish Ring";
+  src: url("https://assets.codepen.io/1506195/elvish+ring+nfi.ttf");
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: 
+    linear-gradient(135deg, #fff5, #fff0),
+    #8eaeaf;
+cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='75px' height='75px' viewBox='0 0 100 100'><text x='50' y='50' font-size='50'>🔥</text></svg>") 31 31, pointer;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.5vmin;
+  width: 80em;
+  aspect-ratio: 15 / 7;
+  border-radius: 100% / 70%;
+  box-shadow: 
+    /* outer */
+    inset 1.5em 0 0.75em gold,
+    inset -1.5em 0 0.75em gold,
+    inset 0 -11em 2em gold,
+    inset 0 -12em 1em #ff08,
+    inset 0 -13em gold,
+    /* inner */
+    inset 0 1.5em 2em 0.5em #fc0c,
+    inset 0 11.5em 2em orange,
+    inset 0 12em 1em darkorange,
+    inset 0 13em orange,
+    /* shadow */
+    inset 0 14em 2em -2em #0002,
+    inset 1vmin 14em 2em -2em #0005,
+    inset -1vmin 14em 2em -2em #0003,
+    -2em 4em 2em -4em #0001,
+    2em 4em 2em -4em #0003,
+    0 4em 2em -4em #0002
+    ;
+}
+
+.ring::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2.1%;
+  height: 36%;
+  background: gold;
+  border-radius: 50%;
+  transform: translate(-40%, -50%);
+  box-shadow: 79.5em 0 gold
+}
+
+.text {
+  font-size: 5.25em;
+  font-family: "Elvish Ring";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  overflow: clip;
+  color: #f83b;
+  text-shadow: 
+    0 0 0.05em #fc03,
+    0.05em 0.05em 0.1em #fff4,
+    -0.05em -0.05em 0.1em #f003;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.text:last-child {
+  color: #d509;
+  -webkit-mask:
+    radial-gradient(50% 33.3% at 50% 33.3%, #f00 95%, #0000 0);
+}
+
+.text span {
+  position: relative;
+  bottom: calc(var(--b) * 0.5em);
+  afloat: left;
+  display: inline-block;
+}
+
+.ring:hover .text {
+  opacity: 1;
+  transition: opacity 1.3s;
+}
+
+
+    </style>
+  </head>
+  <body>
+<div class="ring">
+  <div class="text outer" role="text">
+    <span style="--b:4.9;">t</span>
+    <span style="--b:3.9;">a</span>
+    <span style="--b:3.4;">i</span>
+    <span style="--b:3.1;">l</span>
+    <span style="--b:2.8;">w</span>
+    <span style="--b:2.5;">i</span>
+    <span style="--b:2.6;">n</span>
+    <span style="--b:2.3;">d</span>
+    <span style="--b:2.2;">c</span>
+    <span style="--b:2.1;">s</span>
+    <span style="--b:1.9;">s</span>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <span style="--b:1.2;">t</span>
+    <span style="--b:1.2;">o</span>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <span style="--b:1.5;">r</span>
+    <span style="--b:1.6;">u</span>
+    <span style="--b:1.7;">l</span>
+    <span style="--b:1.8;">e</span>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <span style="--b:2.2;">t</span>
+    <span style="--b:2.3;">h</span>
+    <span style="--b:2.5;">e</span>
+    <span style="--b:2.8;">m</span>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <span style="--b:3.6;">a</span>
+    <span style="--b:4.3;">l</span>
+    <span style="--b:4.7;">l</span>
+  </div>
+  <div class="text" role="text">
+    <span style="--b:7">A</span>
+    <span style="--b:8">n</span>
+    <span style="--b:8.5">d</span>
+    <span>&nbsp;&nbsp;&nbsp;</span> 
+    <span style="--b:9.3">i</span>
+    <span style="--b:9.5">n</span>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <span style="--b:10.2">t</span>
+    <span style="--b:10.3">h</span>
+    <span style="--b:10.4">e</span>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <span style="--b:10.6">d</span>
+    <span style="--b:10.7">a</span>
+    <span style="--b:10.8">r</span>
+    <span style="--b:10.7">k</span>
+    <span style="--b:10.7">n</span>
+    <span style="--b:10.6">e</span>
+    <span style="--b:10.6">s</span>
+    <span style="--b:10.4">s</span>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <span style="--b:9.9">b</span>
+    <span style="--b:9.9">i</span>
+    <span style="--b:9.8">n</span>
+    <span style="--b:9.6">d</span>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <span style="--b:8.4">t</span>
+    <span style="--b:7.4">h</span>
+    <span style="--b:7">e</span>
+    <span style="--b:6.5">m</span>
+    <span style="--b:6">!</span>
+  </div>
+</div>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
