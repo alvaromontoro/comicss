@@ -720,4 +720,12 @@ const posts = [
     title: "You Shall Not Pass",
     ariaLabel: "Cartoon parody of The Lord of the Rings, showing a bridge with a horned monster on one side carrying a box with the HTML element center inside. On the other side of the bridge, there's a gray-cloaked wizard holding a sword and a stick saying 'You shall not pass!!', protecting the HTML5 logo."
   },
+  {
+    id: 92,
+    uid: "one-ring",
+    boxes: 1,
+    vertical: true,
+    title: "One Ring To Rule Them All...",
+    ariaLabel: "Cartoon parody of The Lord of the Rings, showing a ring with elvish-looking letters that read 'Tailwind to rule them all and in the darkness bind them'"
+  },
 ]
