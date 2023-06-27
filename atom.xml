@@ -1741,10 +1741,29 @@
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/92/one-ring.html"/>
     <id>https://comicss.art/?id=92</id>
     <updated>2023-06-14T00:00:00Z</updated>
-    <summary>New Cartoon: You Shall Not Pass!</summary>
+    <summary>New Cartoon: One ring to rule them all</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/92/one-ring.png" alt="Cartoon parody of The Lord of the Rings, showing a ring with elvish-looking letters that say TailwindCSS to rule them all and in the darkness bind them." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Whales' Gradients</title>
+    <link href="https://comicss.art/?id=93" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/93/whales.html"/>
+    <id>https://comicss.art/?id=93</id>
+    <updated>2023-06-27T00:00:00Z</updated>
+    <summary>New Cartoon: Whales</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/93/whales.png" alt="Cartoon with 6 panels: three whales showing off how they spray water by using different CSS gradients. The last one makes a really complex one and the other whales call him out on it." /></p>
       </div>
     </content>
     <rights>Copyright 2023 Alvaro Montoro</rights>

@@ -728,4 +728,12 @@ const posts = [
     title: "One Ring To Rule Them All...",
     ariaLabel: "Cartoon parody of The Lord of the Rings, showing a ring with elvish-looking letters that read 'Tailwind to rule them all and in the darkness bind them'"
   },
+  {
+    id: 93,
+    uid: "whales",
+    boxes: 6,
+    vertical: true,
+    title: "Whales' Gradients",
+    ariaLabel: "Cartoon with 6 panels: three whales showing off how they spray water by using different CSS gradients. The last one makes a really complex one and the other whales call him out on it."
+  },
 ]

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+article {
+  font-size: 1vmin;
+  display: grid;
+  gap: 1em;
+}
+
+section {
+  --whale-color-light: #ccc;
+  border: 0.5em solid;
+  width: 80vmin;
+  aspect-ratio: 3/2;
+  background: 
+    linear-gradient(#fff4 0 0),
+    linear-gradient(skyblue 50%, lightseagreen 0);
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+code {
+  font-size: 1.25em;
+  top: 9%;
+  left: 58%;
+  white-space: pre;
+  transform: translate(-50%, -100%);
+  z-index: 1;
+}
+
+.bubble {
+  font-family: "Patrick Hand SC", "Comic Sans", "Comic Sans MS", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  line-height: 0.95;
+
+  &::before {
+    content: "";
+  }
+
+  & * {
+    position: relative;
+  }
+}
+
+.water {
+  width: 40%;
+  height: 40%;
+  background: #0043;
+  top: 11%;
+  left: 40%;
+  background: var(--water-background);
+  border-radius: 50% / 100% 100% 0 0;
+  box-shadow: 0 -10vmin 0 -9.5vmin #fff;
+}
+
+.whale {
+  width: 55%;
+  height: 30%;
+  top: var(--whale-top);
+  box-shadow: -14em -6em 0 -6.5em var(--whale-color);
+  left: var(--whale-left);
+  background-repeat: no-repeat;
+  border-radius: 50% / 0 10% 90% 100%;
+  background:
+    radial-gradient(farthest-side at 0 50%, var(--whale-color-dark) 99%, #0000) 65% 97% / 7% 60%,
+    #f000;
+  background-repeat: no-repeat;
+  transform: var(--whale-transform);
+
+  &::before {
+    border-radius: 100% 50% 100% 100% / 10% 40% 10% 10%;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58%;
+    background: #00f4;
+    -webkit-mask:
+      radial-gradient(farthest-side at 0 0, #000 99%, #0000) 100% 0 / 36% 100% no-repeat,
+      radial-gradient(105% 115% at 100% -15%, #000 99%, #0000) 0 0 / 66% 100% no-repeat
+      ;
+    background:
+      radial-gradient(circle at 70% 40%, #000 1.5%, #0000 0),
+      radial-gradient(farthest-side at 100% 100%, #0000 74%, #0004 75%, #0000 76%) 100% 100% / 25% 50% no-repeat,
+      radial-gradient(farthest-side at 100% 100%, #0000 74%, #0004 75%, #0000 76%) 100% 100% / 33.3% 66.6% no-repeat,
+      radial-gradient(farthest-side at 100% 100%, #0000 74%, #0004 75%, #0000 76%) 100% 100% / 42.66% 83.33% no-repeat,
+      radial-gradient(farthest-side at 100% 100%, #ccc 75%, #0000 76%) 100% 100% / 50% 100% no-repeat,
+      /*       radial-gradient(200% 70% at 50% 100%, #ccc 25%, #0000 26%) 50% 100% / 50% 100% no-repeat, */
+      radial-gradient(100% 100% at 50% 0%, #0000 85%, var(--whale-color-light) 86%) 30% 105% / 60% 90% no-repeat,
+      var(--whale-color);
+  }
+
+  &::after {
+    --fin: radial-gradient(farthest-side at 0 50%, var(--whale-color) 99%, #0000) 70% 50% / 7% 50%;
+    content: "";
+    width: 120%;
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -45%) rotate(15deg);
+    background: 
+      radial-gradient(farthest-side at 50% 0, var(--whale-color) 99%, #0000) 2% 36% / 22% 15%,
+      var(--fin),
+      #00f0;
+    background-repeat: no-repeat;
+  }
+}
+
+section:nth-child(even) {
+  --whale-left: 20%;
+  --whale-top: 52%;
+  --whale-transform: rotate(-5deg);
+}
+
+.panel-1 {
+  --whale-color: #1a82c2;
+  --whale-color-dark: #0062a2;
+  --whale-left: 4%;
+  --whale-top: 65%;
+  --whale-transform: rotate(-10deg);
+
+  .bubble {
+    left: 50%;
+    top: 40%;
+
+    &::before {
+      width: 100%;
+      height: 400%;
+      background: radial-gradient(70% 120% at 0% 0%, #0000 97%, #000 0 99%, #0000 );
+      transform: translateY(30%);
+    }
+  }
+}
+
+.panel-2 {
+  --whale-color: #1a82c2;
+  --whale-color-dark: #0062a2;
+  --water-background: linear-gradient(90deg, #0000 49%, lightseagreen 0 52%, #0000 0);
+
+  .whale-2 {
+    --whale-color: #0062a2;
+    --whale-color-dark: #004282;
+    --whale-left: -34%;
+    --whale-top: 85%;
+    --whale-transform: rotate(-5deg);
+  }
+}
+
+.panel-3 {
+  --whale-color: #1a82c2;
+  --whale-color-dark: #0062a2;
+  --whale-left: 90%;
+  --whale-top: 70%;
+  --whale-transform: rotate(2deg);
+
+  .whale-2 {
+    --whale-color: #0062a2;
+    --whale-color-dark: #004282;
+    --whale-left: 0%;
+    --whale-top: 70%;
+    --whale-transform: rotate(-10deg);
+  }
+
+  .bubble {
+    left: 50%;
+    top: 40%;
+
+    &::before {
+      width: 100%;
+      height: 200%;
+      background: radial-gradient(70% 120% at 0% 0%, #0000 97%, #000 0 99%, #0000 );
+      transform: translate(-50%, 55%);
+    }
+  }
+}
+
+.panel-4 {
+  --whale-color: #0062a2;
+  --whale-color-dark: #004282;
+  --water-background: 
+    /*     linear-gradient(90deg, #0000 49.5%, lightseagreen 0 51.5%, #0000 0), */
+    radial-gradient(farthest-side at 50% 100%, #0000 98%, lightseagreen 0) 0% 100% / 50% 100%;
+
+  .whale-2 {
+    --whale-color: #206282;
+    --whale-color-dark: #004262;
+    --whale-left: -53%;
+    --whale-top: 90%;
+    --whale-transform: rotate(-2deg);
+  }
+
+  .water {
+    clip-path: polygon(10% -10%, 90% -10%, 90% 99%, 10% 99%);
+  }
+}
+
+.panel-5 {
+  --whale-color: #206282;
+  --whale-color-dark: #004262;
+  --whale-left: -14%;
+  --whale-top: 75%;
+  --whale-transform: rotate(-10deg);
+
+  .whale-2 {
+    --whale-color: #0062a2;
+    --whale-color-dark: #004282;
+    --whale-left: 93%;
+    --whale-top: 67%;
+    --whale-transform: rotate(-2deg);
+  }
+
+  .bubble-1 {
+    left: 75%;
+    top: 20%;
+
+    &::before {
+      width: 250%;
+      height: 500%;
+      background: radial-gradient(70% 120% at 0% 100%, #0000 98%, #000 0 99%, #0000 );
+      transform: translateY(25%);
+    }
+  }
+
+
+  .bubble-2 {
+    left: 70%;
+    top: 40%;
+
+    &::before {
+      width: 600%;
+      height: 500%;
+      background: radial-gradient(100% 110% at 0% 100%, #0000 98%, #000 0 99%, #0000 );
+      transform: translate(-18%, 15%);
+    }
+  }
+}
+
+.panel-6 {
+  --whale-color: #206282;
+  --whale-color-dark: #004262;
+  --water-background: 
+    radial-gradient(60% 100% at 50% 110%, #0000 90%, lightseagreen 0 99%, #0000) 0% 100% / 50% 50%,
+    radial-gradient(70% 100% at 50% 110%, #0000 93%, lightseagreen 0 99%, #0000) 0% 100% / 50% 80%,
+    linear-gradient(90deg, #0000 48.5%, lightseagreen 0 51.5%, #0000 0);
+
+  .water {
+    box-shadow: none;
+    filter: drop-shadow(0 -0.4em #fff);
+
+    &::before {
+      content: "";
+      width: 15%;
+      height: 10%;
+      border-radius: 50% / 100% 100% 0 0;
+      background: #fff;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%);
+      -webkit-mask: radial-gradient(50% 50% at 50% 100%, #0000 99%, #000);
+    }
+  }
+
+  .bubble {
+    top: 80%;
+    right: 10%;
+
+    &::before {
+      content: "";
+      width: 200%;
+      height: 180%;
+      background: radial-gradient(110% 120% at 100% 100%, #0000 98%, #000 0 99%, #0000 );
+      transform: translate(50%, -50%)
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article role="img" aria-label="Cartoon with 6 panels: three whales showing off how they spray water by using different CSS gradients. The last one makes a really complex one and the other whales call him out on it.">
+      <section class="panel-1">
+        <div class="bubble">Check this out, Bob!</div>
+        <div class="whale whale-1"></div>
+      </section>
+      <section class="panel-2">
+        <code>linear-gradient(90deg, #0000 49%, #20B2AA 0 52%, #0000 0)</code>
+        <div class="water"></div>
+        <div class="whale whale-1"></div>
+        <div class="whale whale-2"></div>
+      </section>
+      
+      <section class="panel-3">
+        <div class="bubble">Neat trick, Kelly!<br/>Now check <strong>this</strong> out!</div>
+        <div class="whale whale-1"></div>
+        <div class="whale whale-2"></div>
+      </section>
+      <section class="panel-4">
+        <code>radial-gradient(farthest-side at 50% 100%, #0000 98%, #20B2AA 0) 0 100% / 50% 100%</code>
+        <div class="water"></div>
+        <div class="whale whale-1"></div>
+        <div class="whale whale-2"></div>
+      </section>
+      
+       <section class="panel-5">
+        <div class="bubble bubble-1">That was amazing!</div>
+         <div class="bubble bubble-2">Thanks!</div>
+        <div class="whale whale-1"></div>
+         <div class="whale whale-2"></div>
+      </section>
+      <section class="panel-6">
+        <code>radial-gradient(60% 100% at 50% 110%, #0000 90%, #20B2AA 0 99%, #0000) 0 100% / 50% 50%,
+    radial-gradient(70% 100% at 50% 110%, #0000 93%, #20B2AA 0 99%, #0000) 0 100% / 50% 80%,
+    linear-gradient(90deg, #0000 48.5%, #20B2AA 0 51.5%, #0000 0)</code>
+        <div class="water"></div>
+        <div class="whale whale-1"></div>
+        <div class="bubble">...Nobody likes a<br/>show-off, Kyle!</div>
+      </section>
+    </article>
+    
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
