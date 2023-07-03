@@ -736,4 +736,12 @@ const posts = [
     title: "Whales' Gradients",
     ariaLabel: "Cartoon with 6 panels: three whales showing off how they spray water by using different CSS gradients. The last one makes a really complex one and the other whales call him out on it."
   },
+  {
+    id: 94,
+    uid: "r2d2",
+    boxes: 1,
+    vertical: true,
+    title: "Style Wars",
+    ariaLabel: "Cartoon showing R2D2, a roboto from the movie Star Wars, projecting a hologram that reads: 'Help me, CSS. You are my only hope!'"
+  },
 ]
