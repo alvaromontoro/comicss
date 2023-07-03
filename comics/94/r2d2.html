@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.66vmin solid;
+  border-radius: 0.5vmin 0.25vmin 0.3vmin 0.4vmin;
+  width: 80vmin;
+  aspect-ratio: 1.33;
+  background: linear-gradient(#c9c9, #c9c0);
+  overflow: clip;
+  box-sizing: border-box;
+}
+
+.cartoon *,
+.cartoon *::before,
+.cartoon *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.r2d2 {
+  width: 30%;
+  height: 60%;
+  background: #00f2;
+  border-radius: 20vmin 20vmin 0 0;
+  border: 0.4vmin solid;
+  border-top-width: 0.5vmin;
+  background:
+/*     radial-gradient(200% 100% at 45% 0, #ccc 45%, #369 0 47%, #ccc 0 50%, #ccc0 0) */
+    radial-gradient(circle at 66% 16%, #0ffc 3%, #f000 0),
+    radial-gradient(circle at 86% 31.5%, #f00, #f66 3%, #f000 0),
+    linear-gradient(#369 0 0) 67% 12% / 20% 10% no-repeat,
+    conic-gradient(at 40% 0, #369 50%, #0000 0) 50% 4% / 32% 3.5% repeat-x,
+    conic-gradient(at 50% 0, #369 50%, #0000 0) 50% 30% / 30% 8% repeat-x,
+    conic-gradient(at 50% 0, #369 50%, #0000 0) 50% 30% / 40% 8% repeat-x,
+    linear-gradient(#369 3%, #ccc 0 40%, #369 0 42%, #ccc 0 45%, #ccc0 0),
+    repeating-linear-gradient(#369 0 20%, #3690 0 40%) 82% 52% / 30% 15% no-repeat,
+    radial-gradient(circle at 73% 70%, #ccc 5%, #ccc0 0),
+    radial-gradient(circle at 73% 87%, #ccc 4.5%, #ccc0 0),
+    linear-gradient(#369 0 0) 79% 73% / 20% 13% no-repeat,
+    linear-gradient(#369 0 0) 79% 93% / 20% 13% no-repeat,
+    #fff;
+  bottom: -7vmin;
+  left: 10%;
+  transform: rotate(-3deg) skewY(2deg);
+  box-shadow:
+    inset -1vmin 0 1vmin #fff3,
+    inset -2vmin 0 1vmin#fff2,
+    inset 2vmin 0 1vmin #0001
+}
+
+.r2d2::before {
+  content: "";
+  width: 40%;
+  height: 40%;
+  background: red;
+  border-radius: 10vmin 10vmin 0 0;
+  border: 0.4vmin solid;
+  border-top-width: 0.5vmin;
+  background: linear-gradient(#369 0 0) 50% 100% / 60% 50% no-repeat,
+    #ccc;
+  box-shadow: inset 0vmin 2vmin 0 2vmin #fff, 0.5vmin 0 1vmin#0002;
+  left: 16%;
+  top: 40%;
+  transform: translate(-50%, 0);
+  
+}
+
+.r2d2::after {
+  content: "";
+  width: 30%;
+  height: 60%;
+  top: 80%;
+  top: calc(80% - 0.41vmin);
+  left: 16%;
+  background: linear-gradient(90deg, #fff 30%, #369 0 70%, #fff 0);
+  border: 0.4vmin solid;
+  border-top: 0;
+  transform: translateX(-50%);
+  box-shadow: 0.5vmin 0.5vmin 1vmin #0002;
+}
+
+.hologram {
+  width: 45%;
+  height: 40%;
+  background: 
+    linear-gradient(to top right, #fff7, #ff00)
+    #6ef2;
+  top: 28.5%;
+  left: 48%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 4vmin;
+  font-size: 3vmin;
+  font-family: Courier, monospace, monospace;
+  text-transform: uppercase;
+  color: #0009;
+  color: #36cb;
+  text-shadow: 0.05vmin 0.05vmin 0.5vmin #fff;
+  text-wrap: balance;
+  
+}
+
+.hologram::before {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 130%;
+  height: 120%;
+  background: #0cf2;
+  clip-path: polygon(0 87%, 23% 0, 100% 0, 100% 100%, 100% 84%, 0 91%);
+  border-radius: 0 0 0 4vmin;
+  background: 
+    linear-gradient(151deg, #0000 47%, #0cf1 0 47.5%, #0000 0),
+    linear-gradient(171deg, #0000 46%, #0cf2 48%, #0000 0) 0 100% / 25% 25% no-repeat,
+    linear-gradient(to top right, #0cf5, #fff3)
+}
+    </style>
+  </head>
+  <body>
+    <article class="cartoon">
+      <div class="r2d2"></div>
+      <div class="hologram">Help me, CSS. You are my <br/>only hope!</div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
