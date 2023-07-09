@@ -744,4 +744,11 @@ const posts = [
     title: "Style Wars",
     ariaLabel: "Cartoon showing R2D2, a roboto from the movie Star Wars, projecting a hologram that reads: 'Help me, CSS. You are my only hope!'"
   },
+  {
+    id: 95,
+    uid: "abc-css",
+    boxes: 27,
+    title: "ABCs of CSS",
+    ariaLabel: "Cartoon showing the letters in the alphabet associated to different CSS properties/values. To get a more detailed description, visit the demo where each letter is individually labelled"
+  },
 ]
