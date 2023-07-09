@@ -1792,4 +1792,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>ABCs of CSS</title>
+    <link href="https://comicss.art/?id=95" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/95/abc-css.html"/>
+    <id>https://comicss.art/?id=95</id>
+    <updated>2023-07-10T00:00:00Z</updated>
+    <summary>New Cartoon: ABCs of CSS</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/95/abc-css.png" alt="Cartoon showing the letters in the alphabet associated to different CSS properties/values. To get a more detailed description, visit the demo where each letter is individually labelled" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
