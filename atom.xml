@@ -1811,4 +1811,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>CSS MD</title>
+    <link href="https://comicss.art/?id=96" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/96/css-md.html"/>
+    <id>https://comicss.art/?id=96</id>
+    <updated>2023-07-17T00:00:00Z</updated>
+    <summary>New Cartoon: CSS MD</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/96/css-md.png" alt="Cartoon showing a patient with red boxes surrounding eyes, ears, face, and other body parts; and a concerned doctor that says 'I am really sorry, Mr Smith. I have done everything I know, but I cannot see what is wrong.'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
