@@ -751,4 +751,12 @@ const posts = [
     title: "ABCs of CSS",
     ariaLabel: "Cartoon showing the letters in the alphabet associated to different CSS properties/values. To get a more detailed description, visit the demo where each letter is individually labelled"
   },
+  {
+    id: 96,
+    uid: "css-md",
+    boxes: 1,
+    vertical: true,
+    title: "CSS MD",
+    ariaLabel: "Cartoon showing a patient with red boxes surrounding eyes, ears, face, and other body parts; and a concerned doctor that says 'I am really sorry, Mr Smith. I have done everything I know, but I cannot see what is wrong.'"
+  },
 ]
