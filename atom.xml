@@ -1830,4 +1830,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Duck Test</title>
+    <link href="https://comicss.art/?id=97" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/97/duck-test.html"/>
+    <id>https://comicss.art/?id=97</id>
+    <updated>2023-07-24T00:00:00Z</updated>
+    <summary>New Cartoon: Duck Test</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/97/duck-test.png" alt="If it looks like a duck, swims like a duck, and quacks like a duck, it probably is a duck. If it has filters like a drawing language, gradients like a drawing language, and blend modes like a drawing language... It is clearly a styling language! Nothing to do with drawings and graphics. Absolutely nothing! OK?" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
