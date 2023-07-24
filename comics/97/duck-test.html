@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+article {
+  font-size: 1vw;
+  display: flex;
+  gap: 6em;
+  width: 93em;
+  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+  abackground: linear-gradient(#000 0 0) 50% 50% / 1px 70% no-repeat;
+}
+
+section {
+  aspect-ratio: 0.9;
+  flex: 1;
+  position: relative;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
+
+.title, .conclusion {
+  font-size: 4em;
+  left: 50%;
+  top: 2.5%;
+  line-height: 1;
+}
+
+.conclusion {
+  top: auto;
+  bottom: 2.5%;
+  font-size: 3.5em;
+}
+
+.desc {
+  font-size: 2em;
+  line-height: 0.9;
+}
+
+/*Duck*/
+.desc-1.duck {
+/*   top: 62%;
+  left: 80%;
+  transform: translate(-50%, -50%) rotate(4deg); */
+  top: 20%;
+  left: 85%;
+}
+
+.desc-2.duck {
+/*   top: 39%;
+  left: 16%;
+  transform: translate(-50%, -50%) rotate(-3deg); */
+  top: 39%;
+  left: 12%;
+}
+
+.desc-3.duck {
+/*   top: 62%;
+  left: 80%;
+  transform: translate(-50%, -50%) rotate(4deg); */
+  top: 57%;
+  left: 85%;
+}
+
+.logo.duck {
+  width: 60%;
+  height: 50%;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo.duck::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -5%;
+  left: 0;
+  background:
+    radial-gradient(50% 14% at 50% 75%, #00f 99%, #0ff0),
+    radial-gradient(25% 14% at 40% 80%, #00f 99%, #0ff0),
+    radial-gradient(20% 14% at 63% 72%, #00f 99%, #0ff0)
+    #fff;
+  box-shadow: 0 0 0 1em #fff;
+  filter: blur(0.75em) contrast(30) hue-rotate(-60deg) brightness(200%) opacity(0.25);
+  mix-blend-mode: multiply;
+}
+
+.logo.duck::after {
+  content: "";
+  width: 80%;
+  height: 75%;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100% / 0 0 25% 25%;
+  background: 
+    /* eye */
+    radial-gradient(circle at 82% 38%, #fff 1%, #0000 0),
+    radial-gradient(circle at 83% 36%, #fff 0.5%, #0000 0),
+    radial-gradient(circle at 83% 38%, #000 3%, #0000 0),
+    /* head */
+    radial-gradient(18% 18% at 75% 36%, #080 99%, #0800) no-repeat,
+    /* beak */
+    radial-gradient(113% 90% at 100% 10%, #0000 90%, orange 0) 100% 29% / 15% 25%,
+    conic-gradient(from 280deg at 110% 110%, orange 20deg, #0000 0) 95% 38% / 20% 20%,
+    /* wing */
+    radial-gradient(110% 120% at 0 0, #0000 85%, #ffc3 0 90%, #0000 0) 40% 100% / 50% 25%,
+    /* body */
+    radial-gradient(42% 39% at 55% 100%, brown 99%, #0000),
+    /* tail */
+    conic-gradient(at 0 80%, #0000 120deg, brown 0 145deg, #0000 0),
+    conic-gradient(at 2% 70%, #0000 120deg, brown 0 155deg, #0000 0),
+    /* neck */
+/*     radial-gradient(50% 110% at 100% 0, #0000 99%, brown) 90% 65% / 25% 30%, */
+    #f000;
+  background-repeat: no-repeat;
+}
+
+.neck {
+  top: 0;
+  left: 0;
+  width: 27.75%;
+  height: 42.5%;
+  border-radius: 0 100% 0 100% ;
+  background: red;
+  left: 59%;
+  top: 26%;
+  transform-origin: 100% 100%;
+  transform: rotate(-4.5deg);
+  background: linear-gradient(183deg, #080 30%, #ddd 31% 40%, brown 41%);
+}
+
+/*CSS*/
+.logo.css {
+  width: 36%;
+  aspect-ratio: 22 / 25;
+  background: #24d;
+  clip-path: polygon(0 0, 100% 0, 90% 90%, 50% 100%, 10% 90%);
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo.css::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff18;
+  clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+  mix-blend-mode: plus-lighter;
+}
+
+.logo.css::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #eee;
+  clip-path: polygon(18.5% 18.5%, 81.5% 18.5%, 76% 74%, 50% 80.5%, 24% 74%, 22.25% 57%, 34.25% 57%, 35% 65.5%, 50% 69%, 65% 65.5%, 66% 51.5%, 22% 51.5%, 20.75% 40.5%, 66.5% 40.5%, 67.5% 29.5%, 19.5% 29.5%);
+}
+
+.desc-1.css {
+/*   top: 62%;
+  left: 80%;
+  transform: translate(-50%, -50%) rotate(4deg); */
+  top: 20%;
+  left: 85%;
+}
+
+.desc-2.css {
+/*   top: 39%;
+  left: 16%;
+  transform: translate(-50%, -50%) rotate(-3deg); */
+  top: 39%;
+  left: 16%;
+}
+
+.desc-3.css {
+/*   top: 62%;
+  left: 80%;
+  transform: translate(-50%, -50%) rotate(4deg); */
+  top: 57%;
+  left: 81%;
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <p class="title">If it...</p>
+        <div class="logo duck"><div class="neck"></div></div>
+        <p class="desc desc-1 duck">...looks <br/>like a duck...</p>
+        <p class="desc desc-2 duck">...swims <br/>like a duck...</p>
+        <p class="desc desc-3 duck">...quacks <br/>like a duck...</p>
+        <p class="conclusion">...it probably is a duck.<br/>&nbsp;<br/>&nbsp;</p>
+      </section>
+      <section>
+        <p class="title">If it has...</p>
+        <div class="css logo"></div>
+        <p class="desc desc-1 css">...Filters like a<br/>drawing language...</p>
+        <p class="desc desc-2 css">...gradients like a<br/>drawing language...</p>
+        <p class="desc desc-3 css">...blend modes like<br/>a drawing language...</p>
+        <p class="conclusion">
+    <!--       ...It is clearly a styling language. Nothing to do with drawing. Nothing. ABSOLUTELY NOTHING! -->
+          ...It is clearly a styling language. Nothing to do with drawings and graphics. Absolutely nothing! OK?
+        </p>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
