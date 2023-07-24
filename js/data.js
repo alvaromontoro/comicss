@@ -759,4 +759,12 @@ const posts = [
     title: "CSS MD",
     ariaLabel: "Cartoon showing a patient with red boxes surrounding eyes, ears, face, and other body parts; and a concerned doctor that says 'I am really sorry, Mr Smith. I have done everything I know, but I cannot see what is wrong.'"
   },
+  {
+    id: 97,
+    uid: "duck-test",
+    boxes: 2,
+    vertical: true,
+    title: "Duck Test",
+    ariaLabel: "If it looks like a duck, swims like a duck, and quacks like a duck, it probably is a duck. If it has filters like a drawing language, gradients like a drawing language, and blend modes like a drawing language... It is clearly a styling language! Nothing to do with drawings and graphics. Absolutely nothing! OK?"
+  },
 ]
