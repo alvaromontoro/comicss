@@ -966,5 +966,15 @@
       <enclosure url="https://comicss.art/comics/96/css-md.png" length="182000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=97</guid>
+      <title>Duck Test</title>
+      <link>https://comicss.art/?id=97</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/97/duck-test.png" length="176000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
