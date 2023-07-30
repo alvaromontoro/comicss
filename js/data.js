@@ -767,4 +767,11 @@ const posts = [
     title: "Duck Test",
     ariaLabel: "If it looks like a duck, swims like a duck, and quacks like a duck, it probably is a duck. If it has filters like a drawing language, gradients like a drawing language, and blend modes like a drawing language... It is clearly a styling language! Nothing to do with drawings and graphics. Absolutely nothing! OK?"
   },
+  {
+    id: 98,
+    uid: "magic-cards",
+    boxes: 5,
+    title: "Magic Cards",
+    ariaLabel: "Set of five web development/CSS-themed cards in the style of Magic the Gathering"
+  },
 ]
