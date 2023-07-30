@@ -1849,4 +1849,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Magic Cards</title>
+    <link href="https://comicss.art/?id=98" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/98/magic-cards.html"/>
+    <id>https://comicss.art/?id=98</id>
+    <updated>2023-07-31T00:00:00Z</updated>
+    <summary>New Cartoon: Magic Cards</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/98/magic-cards.png" alt="Set of 5 Magic The Gathering cards with web development and CSS theme" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

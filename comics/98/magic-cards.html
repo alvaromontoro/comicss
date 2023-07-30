@@ -1,0 +1,2062 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&display=swap');
+
+.cards {
+  display: flex;
+  gap: 1vmin;
+  flex-wrap: wrap;
+}
+
+article {
+  font-size: 2vmin;  
+}
+
+.mtg-card {
+
+  --bg2:
+    radial-gradient(120% 100% at 50% 100%, #0000 90%, #fff4) 30% 50% / 30% 50%,
+      radial-gradient(120% 100% at 50% -10%, #0000 95%, #fff3 99%, #0000) 20% 80% / 30% 40%,
+      radial-gradient(120% 100% at 50% 100%, #0000 98%, #0002 99.5%, #0000) 30% 50% / 30% 45%,
+      radial-gradient(100% 70% at 10% 50%, #0000 95%, #0002 99%, #0000) 20% 80% / 40% 30%,;
+  position: relative;
+  aspect-ratio: 5 / 7;
+  border-radius: 1.25em;
+  width: 30em;
+  box-sizing: border-box;
+  background: #000;
+  display: grid;
+  grid-template-rows: 7.25% 42% 7.25% 1fr 7.5%;
+  padding-top: 1.5em;
+  font-family: Eczar, 'Times New Roman', Times, serif;
+
+  & * {
+    box-sizing: border-box;
+  }
+  
+  &.white {
+    --bg: #ddc;
+    --title: #f0f1f3;
+    --border: #f0f1f3;
+    --description: #f0f1f3;
+      --bg: #ddc;
+  --title: #f0f1f3;
+  --border: #f0f1f3;
+  --description: #f0f1f3;
+  }
+
+  &.red {
+    --border: #e02a31;
+    --bg: #df2d1a;
+    --description: #f4dbda;
+    --title: #f3c6b8;
+
+    & svg {
+      opacity: 0.5;
+    }
+
+    .power {
+      --light: #fff2;
+    }
+  }
+
+  &.blue {
+    --border: #007293;
+    --bg: #3995d3;
+    --description: #d0d4dc;
+    --title: #a0bfd4;
+
+    & svg {
+      transform: scaleX(-1) translateX(50%);;
+    }
+
+    .power {
+      --light: #fff2;
+    }
+  }
+  
+  &.green {
+    --border: #266943;
+    --bg: #315a3c;
+    --description: #b9c8c6;
+    --title: #a4b8b0;
+
+    & svg {
+      opacity: 0.5;
+    }
+
+    .power {
+      --light: #fff2;
+    }
+  }
+  
+  &.black {
+    --border: #333;
+    --bg: #666;
+    --description: #d0d0d0;
+    --title: #888;
+    --bg2:
+      radial-gradient(closest-side circle, #0000 20%, #0006 40%, #0000 0) 20% 30% / 21% 33%,
+      radial-gradient(closest-side circle, #0000 20%, #0006 40%, #0000) 19% 24% / 23% 21%,
+      radial-gradient(120% 100% at 50% 100%, #0000 90%, #fff4) 30% 50% / 30% 50%,
+      radial-gradient(120% 100% at 50% -10%, #0000 95%, #fff3 99%, #0000) 20% 80% / 30% 40%,
+      radial-gradient(120% 100% at 50% 100%, #0000 98%, #0002 99.5%, #0000) 30% 50% / 30% 45%,
+      radial-gradient(100% 70% at 10% 50%, #0000 95%, #0002 99%, #0000) 20% 80% / 40% 30%,;
+
+    & svg {
+      opacity: 0.5;
+    }
+
+    .power {
+      --light: #fff2;
+    }
+  }
+
+  .number {
+    position: relative;
+    display: inline-grid;
+    font-size: 0.85em;
+    place-items: center;
+    width: 2em;
+    min-width: 2em;
+    aspect-ratio: 1;
+    background: #ccc;
+    border-radius: 50%;
+
+    &.drop {
+      background: 
+        radial-gradient(farthest-side circle at 62% 62%, #97c7db 10%, #0000 11%),
+        conic-gradient(at 50% 10%, #0000 145deg, #000 0 215deg, #0000 0) 50% 20% / 100% 40% no-repeat,
+        radial-gradient(farthest-side circle at 50% 60%, #000 40%, #0000 41%)
+        #97c7db;
+    }
+
+    &.rotate {
+      background:
+        linear-gradient(-45deg, #000 50%, #0000 0) 70% 40% / 20% 20% no-repeat,
+        linear-gradient(-45deg, #ccc 40%, #ccc0 0),
+        radial-gradient(farthest-side circle, #0000 30%, #000 31% 44%, #0000 45%),
+        #ccc;
+    }
+  }
+
+  & svg,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 92%;
+    aspect-ratio: 23 / 31;
+    top: 0;
+    margin-top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.33em 0.33em 4em 4em;
+    background: 
+      var(--bg2)
+      var(--bg)
+      ;
+    /*     filter: url("data:image/svg+xml,\
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'></svg>>#marble"); */
+  }
+
+  & header,
+  & h3 {
+    position: relative;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    justify-self: center;
+    border-radius: 5% / 100%;
+    box-sizing: border-box;
+    border: 0.3em solid var(--border);
+    box-shadow: 
+      0 -0.15em 0 -0.05em var(--border),
+      -0.2em 0 0.1em #0008,
+      0.1em 0 0.05em #0006,
+      inset 0 0 0 0.1em #0008,
+      inset 0.3em -0.3em 0.1em #0003;
+    background: var(--title);
+  }
+
+  & h3 {
+    font-weight: 400;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & span {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      font-size: 1.25em;
+    }
+  }
+
+  & header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.35em;
+      margin-left: 0.5em;
+      font-weight: 600;
+    }
+
+    .mana {
+      display: flex;
+      gap: 0.2em;
+      margin-right: 0.5em;
+      margin-bottom: 0.2em;
+
+      .number {
+        box-shadow: 0 0.15em 0 -0.05em;
+      }
+    }
+  }
+
+  & figure,
+  & main {
+    --shadow:;
+    --brder: 0.3em solid var(--border);
+    margin: 0;
+    padding: 0;
+    background: var(--description);
+    position: relative;
+    width: 86.5%;
+    justify-self: center;
+    border: var(--brder);
+    border-top: 0;
+    box-shadow: 
+      var(--shadow)
+      0 -0.1em var(--border),
+      0.1em 0 0.05em #0006,
+      -0.2em 0 0.1em #0008;
+  }
+
+  & figure {
+    --shadow: inset 0 0 3em 2em #fff3,;
+    background: #889eff;
+    border-bottom: 0;
+    background: #70a2d3;
+    background: var(--bg);
+    overflow: hidden;
+  }
+
+  & main {
+    --brder: 0.2em solid var(--border);
+    --shadow: inset -0.15em 0.15em 0.1em #0004, inset 0.2em -0.2em 0.1em #fff4,;
+    padding: 1em 1em 0 1em;
+    line-height: 1.5;
+    font-size: 1.2em;
+    box-sizing: border-box;
+
+    & hr {
+      width: 50%;
+      margin: 0.6em auto;
+      border: 1px solid #0002
+    }
+
+    & blockquote {
+      margin: 0;
+    }
+
+    .skill {
+      adisplay: flex;
+      align-items: flex-start;
+      gap: 0.25em;
+    }
+
+    .number {
+      font-size: 0.7em;
+      vertical-align: middle;
+    }
+
+    .power {
+      --light: #fff9;
+      position: absolute;
+      font-size: 1em;
+      margin: 0;
+      padding: 0;
+      padding-top: 0.1em;
+      width: 18%;
+      display: grid;
+      place-items: center;
+      border-radius: 20% / 100%;
+      box-sizing: border-box;
+      border: 0.25em solid var(--border);
+      box-shadow: 
+        -0.2em 0 0.1em #0006,
+        0.1em 0 0.05em #0004,
+        inset -0.1em 0.1em 0.1em #0005,
+        inset -0.2em 0.2em 0.1em #0003,
+        inset 0.2em -0.2em 0.1em var(--light);
+      background: var(--title);
+      bottom: 0;
+      right: 0;
+      transform: translate(15%, 50%);
+      font-weight: 500;
+    }
+  }
+
+  & footer {
+    color: #fff;
+    font-size: 1.33em;
+    width: 87%;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.css-is-awesome {
+  width: 4em;
+  line-height: 1.2em;
+  aspect-ratio: 1;
+  white-space: pre-wrap;
+  border: 0.1em solid;
+  font-family: arial;
+  text-transform: uppercase;
+  padding: 0.2em;
+  box-sizing: border-box;
+  letter-spacing: 0.06em;
+}
+
+
+
+
+
+/* CSS Woman */
+figure:has(> .cartoon) {
+  background: 
+    repeating-conic-gradient(at 150% -20%, #0000 0 20deg, #fff1 0 33deg),
+    repeating-linear-gradient(-30deg, #fff0 0 20%, #fff1 0 33%),
+    var(--bg);
+}
+#desc {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  left: -1000in;
+}
+
+.cartoon {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 65%;
+  aspect-ratio: 1;
+}
+
+.cartoon div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.face-1 {
+  background: #dc9178;
+  clip-path: polygon(46.80% 76.10%,39.20% 27.00%,44.50% 14.30%,61.00% 10.90%,72.60% 19.00%,74.50% 27.10%,74.00% 38.30%,73.80% 42.30%,73.40% 46.30%,71.60% 52.90%,69.80% 56.40%,66.90% 61.10%,64.50% 63.50%,64.00% 68.70%,65.80% 70.20%,70.30% 80.40%);
+}
+
+.shirt-clear {
+  background: #00237a;
+  clip-path: polygon(-0.40% 103.60%,1.00% 93.00%,2.80% 91.40%,5.80% 87.20%,9.40% 84.80%,8.20% 89.20%,8.60% 92.60%,10.20% 89.2%,12.40% 96.8%,12.4% 108.8%,24.8% 102.8%,22.2% 96.20%,29.8% 100.6%,29.4% 113.6%,4.00% 112.8%);
+}
+
+.shirt-dark {
+  background: #2e2334;
+  clip-path: polygon(103.60% 98.00%,98.80% 92.00%,97.20% 87.00%,95.40% 83.20%,93.00% 81.80%,94.40% 85.00%,94.40% 90.20%,94.20% 97.00%,94.00% 101.0%,90.60% 101.8%,90.60% 97.20%,89.40% 90.80%,87.20% 85.60%,87.00% 92.40%,87.00% 114.0%);
+}
+
+.shirt-dark-2 {
+  background: #2e2334;
+  clip-path: polygon(65.10% 69.55%,64.55% 70.95%,63.95% 72.45%,64.90% 73.95%,61.50% 76.30%,62.30% 77.90%,65.40% 77.40%,67.85% 75.80%,69.90% 76.55%,70.55% 73.15%,69.55% 72.55%,67.50% 71.75%,67.05% 71.30%,66.00% 69.45%);
+}
+
+.lip-bottom-light {
+  background: rgba(255,255,255,0.33);
+  clip-path: polygon(61.60% 56.05%,63.55% 56.20%,62.40% 57.45%,61.30% 57.25%,61.25% 56.80%);
+}
+
+.shadow-ear {
+  background: rgba(0,0,0,0.2);
+  clip-path: polygon(34.00% 35.00%,32.20% 35.20%,32.20% 29.80%,32.60% 21.80%,39.00% 11.40%,44.00% 9.80%,38.00% 16.60%,42.60% 16.20%,38.80% 22.80%,43.20% 19.00%,44.60% 14.80%,49.80% 14.80%,43.60% 20.80%,38.60% 26.20%,36.80% 28.60%,39.40% 28.60%,38.40% 35.00%,38.80% 47.80%,37.00% 44.60%,37.00% 40.60%,34.20% 43.80%,33.00% 42.60%,34.60% 40.60%,35.20% 37.60%);
+}
+
+.shadow-nose {
+  background: rgba(0,0,0,0.1);
+  clip-path: polygon(54.10% 47.20%,56.10% 45.40%,59.40% 45.10%,61.60% 45.90%,59.00% 44.70%,54.70% 45.00%,48.40% 47.60%,48.70% 50.10%,53.20% 48.20%);
+}
+
+.hair-line {
+  background: #945164;
+  opacity: 0.5;
+  clip-path: polygon(50.60% 14.40%,46.80% 23.20%,44.60% 32.70%,44.00% 44.20%,45.40% 49.60%,48.20% 56.80%,50.00% 59.40%,46.30% 54.20%,43.80% 47.10%,43.20% 38.40%,44.00% 29.60%,45.70% 20.40%,48.90% 15.90%);
+}
+
+.cheek-light {
+  background: rgba(255,255,255,0.2);
+  clip-path: polygon(66.10% 43.30%,68.35% 46.05%,67.90% 48.45%,63.30% 50.40%,64.55% 51.60%,67.25% 52.55%,69.65% 46.90%,71.90% 42.65%,70.65% 42.05%,67.80% 43.25%);
+}
+
+.cheek-dark {
+  background: rgba(0,0,0,0.1);
+  clip-path: polygon(60.20% 64.20%,64.25% 60.15%,67.50% 53.85%,69.90% 49.40%,65.10% 46.05%,64.70% 47.55%,65.80% 50.40%,67.10% 51.90%,64.00% 55.20%,61.45% 58.40%,55.85% 59.65%,58.85% 60.55%,62.70% 60.35%);
+}
+
+.lip-bottom-dark {
+  background: #2856e3;
+  clip-path: polygon(52.90% 55.10%,57.70% 54.70%,56.00% 56.30%,56.80% 57.90%,54.50% 57.30%);
+}
+
+.lip-bottom {
+  background: #b557b0;
+  clip-path: polygon(52.80% 55.90%,57.70% 54.60%,63.50% 55.80%,62.80% 57.30%,61.10% 58.00%,58.50% 58.40%,55.20% 57.60%);
+}
+
+.chin-line {
+  background: rgba(0,0,0,0.75);
+  clip-path: polygon(45.10% 60.50%,54.20% 65.40%,58.80% 65.80%,64.20% 64.20%,58.50% 66.30%,56.20% 66.50%,53.60% 66.40%,47.30% 62.90%);
+}
+
+.eye-1-back {
+  background: #ad8495;
+  clip-path: polygon(64.20% 37.48%,67.53% 37.52%,70.60% 36.95%,68.98% 36.10%,64.95% 36.70%);
+}
+
+.eye-1-top {
+  background: #945164;
+  clip-path: polygon(64.00% 37.50%,65.58% 38.50%,68.23% 38.58%,70.73% 37.33%,71.95% 36.98%,72.15% 35.75%,70.98% 34.20%,70.20% 35.00%,65.10% 36.38%);
+}
+
+.eye-1-eyelid {
+  background: #2d2136;
+  clip-path: polygon(63.30% 37.00%,65.10% 35.70%,68.50% 35.00%,70.20% 35.20%,71.20% 36.50%,71.00% 37.40%,69.40% 36.70%,68.40% 36.70%,68.20% 37.50%,67.30% 37.60%,66.60% 37.60%,65.20% 37.00%,64.10% 37.80%);
+}
+
+.lip-top-light {
+  background: #b0533f;
+  clip-path: polygon(61.90% 55.30%,63.80% 54.60%,64.30% 56.00%,63.10% 56.00%);
+}
+
+.lip-top-dark {
+  background: #ba6174;
+  clip-path: polygon(58.90% 53.20%,59.20% 55.60%,61.70% 55.80%,64.30% 55.30%,62.80% 53.30%,60.70% 53.10%);
+}
+
+.lip-top {
+  background: #8258a8;
+  clip-path: polygon(52.70% 55.20%,55.60% 53.10%,57.70% 52.90%,59.10% 53.30%,61.70% 53.20%,63.10% 53.70%,64.50% 55.90%,63.20% 56.20%,59.80% 55.60%,58.60% 55.90%,55.70% 55.20%);
+}
+
+.eye-2-top {
+  background: #ae8597;
+  clip-path: polygon(45.90% 36.70%,49.90% 37.20%,53.20% 36.10%,50.10% 35.10%,47.40% 35.80%);
+}
+
+.cheek-2 {
+  background: #97678d;
+  clip-path: polygon(49.40% 50.40%,50.40% 50.80%,52.80% 48.10%,50.90% 46.90%);
+}
+
+.eye-cheek {
+  background: #97678d;
+  clip-path: polygon(56.00% 32.20%,49.40% 31.80%,49.40% 35.60%,50.20% 37.90%,46.30% 41.20%,50.10% 45.90%,54.30% 37.70%,51.90% 37.30%,53.70% 35.30%,55.40% 35.20%);
+}
+
+.eye-1-eyebrow {
+  background: #6a3d4a;
+  clip-path: polygon(62.70% 33.10%,66.40% 32.40%,70.20% 32.20%,72.30% 32.80%,70.90% 30.40%,65.50% 30.70%,63.30% 31.30%);
+}
+
+.eye-2-lid {
+  background: #0b3584;
+  clip-path: polygon(44.10% 36.10%,48.60% 34.40%,51.10% 34.60%,53.70% 35.90%,52.70% 36.50%,51.50% 36.10%,51.40% 36.90%,50.50% 37.40%,49.50% 37.40%,48.60% 37.30%,47.80% 36.30%,45.50% 36.80%);
+}
+
+.eye-2-eyebrow {
+  background: #0b3584;
+  clip-path: polygon(43.30% 33.00%,47.90% 32.00%,55.10% 33.00%,56.10% 31.90%,52.30% 30.90%,47.50% 30.50%,44.20% 31.70%);
+}
+
+.hair-2 {
+  background: #16173c;
+  clip-path: polygon(31.60% 35.30%,33.60% 35.30%,34.60% 37.90%,35.70% 38.20%,38.30% 37.50%,38.30% 33.90%,40.80% 29.70%,39.60% 25.50%,44.50% 20.00%,51.30% 15.80%,52.70% 13.90%,51.40% 10.60%,53.60% 10.90%,53.20% 12.90%,55.10% 14.30%,62.60% 14.30%,57.10% 9.80%,54.80% 6.90%,52.40% 5.90%,47.90% 6.00%,42.80% 7.50%,39.70% 10.20%,35.90% 15.30%,32.60% 21.00%,32.40% 25.50%,32.00% 29.40%,31.30% 32.20%);
+}
+
+.hair-1 {
+  background: #352225;
+  clip-path: polygon(31.60% 35.30%,34.00% 35.30%,34.00% 37.50%,35.70% 37.80%,38.60% 40.40%,38.20% 33.80%,41.00% 29.20%,40.30% 25.40%,44.80% 19.30%,53.40% 14.90%,53.40% 13.90%,59.10% 14.10%,62.60% 13.70%,67.80% 17.60%,72.00% 23.20%,73.50% 29.40%,73.50% 32.70%,72.70% 33.00%,73.70% 34.00%,73.30% 36.70%,74.00% 38.70%,76.30% 29.20%,75.20% 20.10%,73.40% 14.10%,70.40% 10.00%,64.50% 7.50%,59.40% 7.00%,56.20% 5.70%,53.00% 6.00%,49.10% 6.10%,40.50% 8.90%,35.80% 15.00%,33.20% 19.30%,31.50% 28.40%,32.00% 29.60%,31.10% 31.90%);
+}
+
+.nose-1 {
+  background: #2e171a;
+  clip-path: polygon(61.05% 48.00%,61.35% 48.60%,62.05% 48.65%,62.35% 47.85%,61.80% 47.55%);
+}
+
+.nose-2 {
+  background: #121a36;
+  clip-path: polygon(56.00% 48.10%,56.85% 47.25%,57.65% 47.65%,57.15% 48.25%,56.45% 48.10%);
+}
+
+.hair-back {
+  background: #131a36;
+  clip-path: polygon(39.05% 52.05%,38.50% 53.50%,39.20% 56.55%,40.20% 57.50%,40.85% 56.45%,40.55% 54.05%);
+}
+
+.shirt {
+  background: #001d5b;
+  clip-path: polygon(-0.50% 103.80%,1.50% 91.90%,2.60% 91.30%,6.40% 85.90%,11.10% 82.90%,23.70% 77.50%,30.10% 74.80%,31.80% 72.90%,33.70% 72.90%,35.70% 71.40%,36.90% 70.10%,38.60% 69.60%,40.80% 72.40%,45.70% 74.10%,55.40% 74.90%,61.00% 74.00%,63.70% 72.90%,64.70% 70.40%,65.20% 69.30%,67.00% 71.30%,69.30% 72.30%,71.50% 74.00%,76.10% 76.00%,89.30% 80.00%,94.70% 82.60%,96.90% 85.60%,98.90% 91.00%,100.9% 106.6%);
+}
+
+.face-2 {
+  background: #b2799f;
+  clip-path: polygon(46.20% 14.20%,35.30% 42.50%,36.90% 51.10%,40.60% 53.50%,46.00% 72.70%,49.20% 86.90%,56.60% 78.60%,55.60% 66.30%,59.70% 65.50%,61.70% 60.10%,58.90% 60.30%,59.80% 58.40%,59.60% 55.50%,59.40% 53.00%,61.00% 53.00%,59.50% 49.00%,61.90% 43.60%,60.20% 37.90%,60.60% 33.00%,64.20% 33.00%,62.40% 37.50%,64.80% 42.00%,68.80% 46.20%,69.90% 39.50%,69.00% 34.90%,68.40% 31.20%,64.50% 31.30%,64.90% 17.60%,57.30% 17.80%,61.90% 11.40%
+  );
+}
+
+.face-3 {
+  background: #0073ff;
+  clip-path: polygon(37.90% 71.00%,40.80% 66.40%,41.30% 59.80%,40.30% 57.10%,38.70% 52.10%,38.70% 49.10%,37.10% 49.70%,35.10% 48.60%,32.70% 44.30%,31.80% 39.80%,32.10% 35.20%,38.90% 16.00%,48.90% 15.10%,54.00% 23.60%,52.00% 27.40%,54.00% 31.40%,58.60% 33.80%,59.70% 40.60%,58.30% 45.10%,59.90% 46.70%,57.10% 52.80%,56.20% 56.40%,57.60% 58.60%,54.40% 60.40%,56.40% 62.40%,56.50% 66.30%,53.20% 66.20%,52.90% 70.70%,50.60% 78.20%);
+}
+
+
+
+
+
+
+
+
+
+.manga {
+  --skin: #fdb;
+  --skin-dark: #eb9;
+  --hair: #a86;
+  --hair-dark: #975;
+  font-size: 0.4vmin;
+  width: 80em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 10em #ffd;
+  background: 
+
+    #ffd;
+}
+
+.manga *,
+.manga *::before,
+.manga *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+.manga {
+  .face {
+    width: 70%;
+    height: 50%;
+    background: #00f4;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius:  10% 10% 20% 20% / 100% ;
+    background:
+      radial-gradient(450% 80% at 50% -3%, var(--hair) 10.12%, #000 10.25% 11%, var(--skin-dark) 11.125%, #0000 30%),
+      var(--skin);
+    box-shadow: 
+      inset -0.75em 0,
+      inset 0.75em 0,
+      inset 3em -1em 1em #0002,
+      inset 6em -2em 2em #c002,
+      inset -3em -1em 1em #fcc3,
+      inset -6em -2em 2em #c662
+  }
+
+  .face::before {
+    content: "";
+    width: 50%;
+    width: calc(50% + 0.5px);
+    height: 90%;
+    top: 60%;
+    left: 0.1%;
+    background: #0f04;
+    border-radius: 0 0 0% 100%;
+    transform: skewY(10deg);
+    background: 
+      radial-gradient(farthest-side at 0 100%, #c002 40%, #0000 80%),
+      var(--skin);
+    /*   border-left: 1em solid;
+    border-bottom: 0.5em solid; */
+    clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0 100%);
+    box-shadow: 
+      inset 0 -0.5em,
+      inset 0.75em 0,
+      inset 3em 0 1em #0002,
+      inset 6em 0 2em #c002,
+      inset 0 -3em 1em -1em #c002
+  }
+
+  .face::after {
+    content: "";
+    width: 50%;
+    width: calc(50% + 0.5px);
+    height: 90%;
+    top: 60%;
+    right: 0.1%;
+    background: #0f04;
+    border-radius: 0 0% 100% 0%;
+    transform: skewY(-10deg);
+    background: 
+      radial-gradient(farthest-side at 100% 100%, #c001 40%, #0000 80%),
+      var(--skin);
+    /*   border-right: 0.75em solid;
+    border-bottom: 0.5em solid; */
+    clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0 100%);
+    box-shadow: 
+      inset 0 -0.5em,
+      inset -0.75em 0,
+      inset -3em 0 1em #fcc3,
+      inset -6em 0 2em #c662,
+      inset 0 -3em 1em -1em #c002
+  }
+
+  .face * {
+    z-index: 1;
+  }
+
+  .mouth {
+    width: 14%;
+    height: 3%;
+    border-radius: 50%;
+    border-left: 0.5em solid #0000;
+    border-top: 0.5em solid;
+    top: 117%;
+    left: 50%;
+    transform: rotate(1deg);
+    box-shadow: 
+      -0.25em -0.45em 0.2em 0.25em var(--skin-dark),
+      -5.25em -0.45em 0.2em 0.125em var(--skin-dark);
+  }
+
+  .mouth::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 0 50% 0 0;
+    border-left: 1em solid #0000;
+    border-top: 0.5em solid;
+    top: -0.4em;
+    transform: translate(-90%, 0);
+  }
+  .mouth::after {
+    content: "";
+    width: 50%;
+    height: 40%;
+    background: #000;
+    border-radius: 50% / 0 0 100% 100%;
+    top: -0.125em;
+    transform: translateX(-50%);
+  }
+
+  .nose {
+    width: 12%;
+    height: 30%;
+    top: 70%;
+    left: 48%;
+  }
+
+  .nose::after {
+    content: "";
+    width:100%;
+    height: 100%;
+    border-radius: 100% / 0 0 45% 20%;
+    background: var(--skin);
+    box-shadow: 
+      inset 0.75em -0.5em 1.5em -0.75em #c002,
+      inset 1em -0.75em 2em -0.75em #fff3;
+  }
+
+  .nose::before {
+    content: "";
+    width:130%;
+    height: 100%;
+    border-radius: 100% / 0 0 50% 30%;
+    transform-origin: 0 30%;
+    transform: rotate(30deg);
+    background: linear-gradient(to bottom left, #0000 30%, #c443 0 0);
+    filter: blur(0.2em);
+    box-shadow: 
+      -2.5em 1.5em 1.5em -0.75em var(--skin-dark),
+      -3.5em 1.5em 2.5em -0.5em #fff3
+  }
+
+  .lines {
+    width: 100%;
+    height: 150%;
+    background: 
+      /*hair*/
+      linear-gradient(#000 0 0) 52% 0% / 0.35% 3%,
+      linear-gradient(70deg, #0000 45%, #000 0 50%, #0000 0) 51% 1% / 4% 2%,
+      linear-gradient(96deg, #0000 45%, #000 0 50%, #0000 0) 53% 1% / 4% 2%,
+      /* eyelines */
+      radial-gradient(220% 180% at 30% 120%, #0000 50%, #000 51% 52.5%, #0000 53%) 25% 29% / 17% 10%,
+      radial-gradient(220% 225% at 60% 120%, #0000 50%, #000 51% 52.25%, #0000 52.5%) 79% 31.25% / 20% 10%,
+      linear-gradient(#000 0 0) 30% 46.5% / 1% 0.25%,
+      linear-gradient(#000 0 0) 28% 46.65% / 1.5% 0.33%,
+      linear-gradient(#000 0 0) 25% 46.65% / 3% 0.33%,
+      linear-gradient(#000 0 0) 23% 46.65% / 1% 0.25%,
+
+      linear-gradient(#000 0 0) 70% 46.5% / 1% 0.25%,
+      linear-gradient(#000 0 0) 72% 46.65% / 1.5% 0.33%,
+      linear-gradient(#000 0 0) 75.5% 46.65% / 3% 0.33%,
+      linear-gradient(#000 0 0) 77% 46.65% / 1% 0.25%,
+
+      /* eyebrow */
+      radial-gradient(220% 180% at -40% 120%, #0000 50%, #000 51% 52.5%, #0000 53%) 42% 26.5% / 7% 5%,
+      radial-gradient(220% 200% at 140% 120%, #0000 50%, #000 51% 52.5%, #0000 53%) 60% 26.5% / 7% 5%,
+      linear-gradient(65deg, #0000 37%, #000 0 45%, #0000 0) 45% 31% / 1% 3%,
+      linear-gradient(67deg, #0000 47%, #000 0 50%, #0000 0) 45% 32.5% / 2% 3%,
+
+      /* nose */
+      linear-gradient(#000 0 0) 47.5% 56.5% / 0.25% 5%,
+      linear-gradient(#000 0 0) 47.5% 60% / 0.25% 1%,
+      linear-gradient(-45deg, #0000 37%, #000 0 40%, #0000 0) 45.5% 57% / 4% 10%,
+      linear-gradient(-45deg, #0000 47%, #000 0 50%, #0000 0) 45% 57.5% / 6% 10%,
+      linear-gradient(-47deg, #0000 47%, #000 0 50%, #0000 0) 45% 56.25% / 5% 10%,
+      linear-gradient(-47deg, #0000 47%, #000 0 50%, #0000 0) 45.5% 54.5% / 3.5% 10%,
+      radial-gradient(150% 120% at 130% -20%, #0000 50%, #000 0 53%, #0000 0) 39% 74% / 12% 13%,
+      radial-gradient(150% 120% at -20% 140%, #0000 55%, #000 0 59%, #0000 0) 49% 66% / 7% 7%,
+      radial-gradient(150% 100% at 50% 100%, #0000 55%, #000 57% 62.5%, #0000 63%) 55% 69% / 5% 6%,
+      /* chin */
+      radial-gradient(240% 70% at 70% -5%, #0000 10%, #000 11% 13%, #0000 14%) 44% 100% / 20% 14%,
+      radial-gradient(240% 70% at 40% -5%, #0000 20%, #000 21% 33%, #0000 34%) 51% 90% / 12% 4%
+      /*     ,#f003 */
+      ;
+    background-repeat: no-repeat;
+  }
+
+  .chin {
+    width: 20%;
+    height: 6%;
+    background: var(--skin-dark);
+    border-radius: 50% / 20% 40% 100% 80%;
+    top: 127%;
+    left: 51%;
+    transform: translate(-50%, 0%);
+    filter: blur(0.5em)
+  }
+
+  .eye {
+    background: #fffa;
+    width: 25%;
+    height: 25%;
+    border-radius: 100% / 100% 120% 70% 100%;
+    top: 45%;
+    left: 13%;
+    box-shadow: 
+      0.5em -1.5em 0 -1em,
+      0 -1em 0 -0.5em,
+      1em -2em 1em -0.5em var(--skin-dark),
+      -0.5em -1em 1em -0.5em #c003,
+      -1em 1em 1em -0.5em #fff3,
+      -0.5em 2em 1em -1.12em #c002,
+      0 0 0.75em #fff
+      ;
+
+    overflow: hidden;
+  }
+
+  .eye::before {
+    content: "";
+    width: 55%;
+    height: 110%;
+    background:
+      radial-gradient(circle at 60% 18%, #fffd 5%, #0000 0),
+      radial-gradient(circle at 80% 98%, #fff7 10%, #fff0 35%),
+      radial-gradient(at 30% 53%, #fffa 10%, #0000 0),
+      radial-gradient(250% 120% at 0 20%, #fffc 20%, #0000 0),
+      radial-gradient(#0003 30%, #0000 0),
+      linear-gradient(#36aa, #36a8);
+    border-radius: 80%;
+    top: -10%;
+    left: 27%;
+    box-shadow: 
+      -1em 0 0 -0.75em,
+      1.1em 0 0 -0.8em;
+  }
+
+  .eye + .eye {
+    transform: scaleX(-1);
+    left: auto;
+    right: 12.5%;
+  }
+
+  .eye + .eye::before {
+    transform: scaleX(-1);
+  }
+
+  .eyebrow {
+    width: 41%;
+    height: 30%;
+    border-radius: 100% 200% 50% 0;
+    transform: rotate(-7deg);
+    top: 36%;
+    left: 4%;
+    background: linear-gradient(200deg, #c002, #0000 50%);
+    box-shadow: 
+      1em -2.5em 0 -1.75em,
+      inset -1.5em 6em 1em -6em var(--skin-dark);
+  }
+
+  .eyebrow + .eyebrow {
+    left: auto;
+    right: 3.5%;
+    width: 40%;
+    transform: scaleX(-1) rotate(-8deg);
+  }
+
+
+  .neck {
+    width: 80%;
+    height: 30%;
+    bottom: 0;
+    left: 10%;
+  }
+
+  .neck::before,
+  .neck::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-right: 0.75em solid;
+    border-bottom: 0.6em solid;
+    border-radius: 0 0 60% 0;
+    transform: scaleX(-1) rotate(-18deg) skew(-3deg);
+
+    right: -18%;
+    box-shadow:
+      3em 1em 1em #fcc3,
+      6em 2em 2em #c662,
+      0 3em 1em -1em #c002,
+      10em 10em 0 4em var(--skin)
+  }
+
+  .neck::after {
+    transform: rotate(-20deg) skew(5deg);
+    left:-20%;
+    box-shadow:
+
+      3em 1em 1em #fcc3,
+      6em 2em 2em #c662,
+      0 3em 1em -1em #c002,
+      20em 5em 2em 3em var(--skin-dark),
+      10em 10em 0 4em var(--skin)
+      ;
+  }
+
+  .ear {
+    width: 20%;
+    height:43%;
+    border: 0.75em solid;
+    border-radius: 60% 120% 70% 120%;
+    transform: skewY(-20deg) rotate(-20deg);
+    top: 25%;
+    left: 10%;
+    background: 
+      /* lines */
+      radial-gradient(130% 150% at 50% 100%, #0000 40%, #000 40.5% 45%, #0000 45.5%) 20% 30% / 30% 30%,
+      radial-gradient(130% 250% at 50% 0%, #0000 40%, #000 40.5% 48%, #0000 49%) 37% 49% / 35% 40%,
+      linear-gradient(75deg, #0000 45%, #000 0 50%, #0000 0) 20% 85% / 20% 30%,
+      /* bg */
+      linear-gradient(to right, #0000, var(--skin-dark)),
+      linear-gradient(to right, #c002, #0005 ),
+      var(--skin);
+    background-repeat: no-repeat;
+  }
+
+  .ear::before {
+    content: "";
+    width: 55%;
+    height: 20%;
+    border-radius:  50% / 100% 80% 0% 10%;
+    border: 0.5em solid;
+    border-top: 0.75em solid;
+    left: 12%;
+    top: 6%;
+    border-bottom: 0;
+    background: linear-gradient(#a002, transparent);
+  }
+
+  .ear + .ear {
+    background:
+      /* lines */
+      radial-gradient(130% 150% at 50% 100%, #0000 40%, #000 40.5% 45%, #0000 45.5%) 20% 30% / 30% 30%,
+      radial-gradient(130% 250% at 50% 0%, #0000 40%, #000 40.5% 48%, #0000 49%) 37% 49% / 35% 40%,
+      linear-gradient(75deg, #0000 45%, #000 0 50%, #0000 0) 20% 85% / 20% 30%,
+      /* bg */
+      linear-gradient(to right, #0000, var(--skin-dark)),
+      linear-gradient(to right, var(--skin), #c005 ),
+      var(--skin);
+    background-repeat: no-repeat;
+    transform: scaleX(-1) skewY(-20deg) rotate(-18deg);
+    left: auto;
+    right: 9.75%;
+  }
+
+  .hair-side {
+    width: 85%;
+    height: 85%;
+    border: 0.5em solid;
+    border-radius: 100% / 80% 90% 120% 120%;
+    border-left: 0.75em solid;
+    top: -25%;
+    transform: translateX(-50%);
+    left: 50%;
+    background: 
+      var(--hair);
+    box-shadow: 
+      inset 2em 0 1.5em #0002,
+      inset -3em 0 1em #fff1
+  }
+
+  .bangs {
+    width: 30%;
+    height: 30%;
+    border-radius: 0 0 100% 0;
+    box-shadow: inset -0.5em -0.25em;
+    background: 
+      radial-gradient(100% 170% at -10% 0, #0000 58.75%, #000 59% 60.25%, var(--hair-dark) 60.5%, var(--hair) 78%);
+
+  }
+
+  .bangs-1 {
+    top: 4%;
+    transform: scaleX(-1) translateX(-90%) rotate(-56deg) scale(0.75);
+    left: -8%;
+    background: 
+      radial-gradient(100% 170% at -10% 0, #0000 58.75%, #000 59% 61.25%, var(--hair-dark) 61.5% 70%, var(--hair) 90%);
+    box-shadow: inset -0.6em -0.4em;
+  }
+
+  .bangs-2 {
+    left: -22%;
+    top: 5%;
+    transform: scaleX(-1) translateX(-90%) rotate(-60deg) scale(1.1);
+  }
+
+  .bangs-3 {
+    transform: rotate(-60deg) scale(0.7);
+    background: 
+      radial-gradient(100% 170% at -10% -10%, #0000 63%, #000 63.5% 64.25%, var(--hair-dark) 65% 75%, var(--hair) 90%);
+    left: 60%;
+    top: 3%;
+  }
+  .bangs-4 {
+    transform: rotate(-55deg) scale(0.5);
+    background: 
+      radial-gradient(100% 140% at -10% -5%, #0000 74%, #000 74% 76%, var(--hair-dark) 76.4%, var(--hair) 95%);
+    left: 66%;
+    top: 3%;
+  }
+
+  .bangs-5 {
+    transform: rotate(-50deg) scale(0.6);
+    background: 
+      radial-gradient(100% 170% at -10% -10%, #0000 64%, #000 64% 66%, #fff1 66.4%),
+      radial-gradient(100% 170% at -10% -10%, #0000 64%, #000 64% 66%, var(--hair) 66.4%);
+    left: 77.5%;
+    top: -7%;
+    clip-path: polygon(0 85%, 100% -20%, 100% 100%, 0 100%);
+  }
+
+  .bangs-6 {
+    transform: rotate(-40deg) scale(0.9);
+    background: 
+      radial-gradient(100% 100% at -10% 40%, #0000 63%, #000 63.5% 64.25%, var(--hair-dark) 65%, var(--hair) 75%);
+    left: 47%;
+    top: 6.25%;
+  }
+
+  .bangs-7 {
+    transform: scaleX(-1) rotate(-40deg) scale(0.7);
+    background: 
+      radial-gradient(100% 100% at -10% 40%, #0000 63%, #000 63.5% 64.25%, var(--hair-dark) 65%, var(--hair) 75%);
+    left: 28%;
+    top: 4.5%;
+    clip-path: polygon(0 -25%, 100% 20%, 100% 100%, 0 100%);
+  }
+
+  .bangs-8 {
+    top: -21%;
+    transform: scaleX(-1) translateX(-90%) rotate(-86deg) scale(0.75);
+    left: -26%;
+    background: 
+      radial-gradient(100% 170% at -10% 0, #0000 58.75%, #000 59% 61.25%, var(--hair-dark) 61.5% 70%, var(--hair) 90%);
+    box-shadow: inset -0.6em -0.4em;
+  }
+
+}
+
+
+
+
+
+
+figure:has(> .narwhal) {
+  background: #59a;
+  background:
+    linear-gradient(#fff7, #fff0),
+    radial-gradient(at 80% -20%, #59a0, #59a),
+    conic-gradient(at 80% -20%, #0000 60%, #fff1 0 63%, #0000 0 66%, #fff1 0 68%, #0000 0),
+    #59a;
+}
+
+
+
+.narwhal {
+  --skin: #89b; #369;
+  --skin-light: #9ac; #47a;
+  --skin-dark: #258;
+  font-size: 0.3vmin;
+  width: 60em;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle at 10% 20%, #fff3 4%, #fff0 0),
+    radial-gradient(circle at 11% 7%, #fff3 3.25%, #fff0 0),
+    radial-gradient(circle at 5% 12.5%, #fff3 2%, #fff0 0)
+    ;
+
+  & * {
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  .body {
+    width: 85%;
+    height: 60%;
+    background: 
+      radial-gradient(170% 70% at 30% 99%, #fff4 20%, #0000 20.1%),
+      radial-gradient(100% 100% at 60% 0, var(--skin-light) 15%, var(--skin) 50%);
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    filter: drop-shadow(-1em 0em) drop-shadow(0.7em 0em) drop-shadow(0 0.75em) drop-shadow(0 -0.5em);
+    box-shadow: 
+      inset 0 1em 0 -0.25em #fff3,
+      inset -0.25em -1em 0 -0.25em #0001
+  }
+
+  .tail {
+    border-radius: 100% 0 0 0;
+    background: var(--skin);
+    width: 14%;
+    height: 40%;
+    transform: translate(0, -90%) skew(-10deg) rotate(10deg);
+    top: 50%;
+    left: 99%;
+    box-shadow: inset 0.5em 1.25em 0 -0.75em #fff3;
+  }
+
+  .tail-bottom {
+    width: 12%;
+    height: 30%;
+    transform: scaleY(-1) skew(-10deg) rotate(10deg);
+    box-shadow: inset 0 1em 0 -0.25em #0002;
+  }
+
+  .flipper {
+    border-radius: 0 0 0 100%;
+    background: var(--skin);
+    width: 18%;
+    height: 22%;
+    transform: skew(10deg) rotate(-16deg);
+    top: 70%;
+    left: 50%;
+    filter: drop-shadow(-1em 0em) drop-shadow(0.7em 0em) drop-shadow(0 0.75em);
+    box-shadow: inset 1em -1em 0 -0.5em #00000018;
+  }
+
+  .flipper-bottom {
+    background: var(--skin-dark);
+    background: var(--skin);
+    box-shadow: inset 0 0 0 10in #0003;
+    left: 15%;
+    top: 65%;
+    transform: skew(10deg) rotate(30deg);
+  }
+
+  .eye {
+    width: 8%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 45%;
+    left: 4%;
+    background: radial-gradient(circle at 32% 32%, white 14%, black 0);
+  }
+
+  .eye + .eye {
+    left: 35%;
+  }
+
+  .mouth {
+    border-radius: 50%;
+    border: 0.5em solid #0000;
+    border-bottom: 0.75em solid #000;
+    border-left: 0.75em solid #000;
+    width: 10%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 18%;
+    transform: rotate(-45deg);
+  }
+
+  .cheek {
+    width: 10%;
+    height: 7%;
+    background: 
+      repeating-linear-gradient(-55deg, #0000 0 19%, #6006 0 28%),
+      #fcc6;
+    background-clip: content-box;
+    border-radius: 50%;
+    left: 3%;
+    top: 57%;
+    border: 0.75em solid #fcc6;
+    border-right-width: 1em;
+    border-left-width: 1em;
+  }
+
+  .cheek + .cheek {
+    left: 34.5%;
+  }
+
+  .horn {
+    width: 5%;
+    height: 50%;
+    background: 
+      repeating-linear-gradient(55deg, #0000 0 14%, #0003 0 16%)
+      #cde;
+    border-radius: 100% / 130% 150% 10% 15%;
+    border: 0.75em solid;
+    border-top: 1.5em solid;
+    transform: rotate(-40deg);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+figure:has(> .peasant) {
+  background: #e8eeff;
+}
+
+.peasant {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80em;
+  height: 80em;
+  font-size: 0.3vmin;
+
+
+  & div {
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  .b {
+    border: 0.5em solid;
+  }
+
+  .r {
+    border-radius: 100%;
+  }
+
+  .hb::before,
+  .ha::after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+}
+
+/****/
+.peasant {
+  --belt: #963;
+  --hair: #531;
+  --skin: #fca;
+  --skin-dark: #eb9;
+  --shirt: #ddc;
+  --shirt-dark: #ccb2;
+  --shirt-darker: #bba2;
+
+  .head, .beard {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 55%;
+    height: 35%;
+    background-color: var(--skin);
+    border-radius: 5% / 100% 100% 10% 10%;
+    background-image:
+      linear-gradient(transparent 80%, var(--skin-dark) 0),
+      linear-gradient(80deg, var(--skin-dark) 4%, transparent 0),
+      linear-gradient(-80deg, var(--skin-dark) 4%, transparent 0)
+  }
+
+  .beard {
+    background: transparent;
+    top: 75%;
+    border-radius: 100% /  120% 120% 75% 75% ;
+    box-shadow: inset 0 -1em 0 4em var(--hair);
+  }
+
+  .eye {
+    width: 2em;
+    height: 2em;
+    background: white;
+    border-radius: 50%;
+    top: 42%;
+    left: 27.25%;
+    box-shadow: 
+      0.5em -1.4em 0 -0.6em white,
+      14.5em -1.25em 0 -0.7em white,
+      2em 1em 0 2em black, 
+      2em 1em 0 2.75em #369, 2em 1em 0 4em white,
+      14em 0 white,
+      16em 1em 0 2em black, 16em 1em 0 2.75em #369, 16em 1em 0 4em white,
+
+      2.5em 1em 0 6em var(--skin), 2em -3em 0 4em rgba(0,0,0,0.35), 2em -3em 0 4em var(--hair),
+      16.5em 1em 0 6em var(--skin), 17em -3em 0 4em rgba(0,0,0,0.35), 17em -3em 0 4em var(--hair);
+  }
+
+  .eyelid {
+    width: 11em;
+    height: 11em;
+    top: 30%;
+    left: 22%;
+    overflow: hidden;
+    background-image:
+      linear-gradient(var(--skin-dark), var(--skin)),
+      linear-gradient(var(--skin-dark), var(--skin));
+    background-size: 11em 11em;
+    background-repeat: no-repeat;
+    background-position: 0% -11em, 0% 11em;
+    animation: blink 12s linear infinite;
+  }
+
+  .eyelid + .eyelid {
+    left: 54%;
+  }
+
+  .nose {
+    width: 5em;
+    height: 10em;
+    background: var(--skin);
+    border-radius: 100% / 120% 120% 80% 80%;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, 0);
+    background-image: linear-gradient(transparent 60%, rgba(255,0,0,0.2));
+  }
+
+  .nose::before,
+  .nose::after {
+    width: 2em;
+    height: 2em;
+    background: var(--skin);
+    border-radius: 50%;
+    top: 75%;
+    left: -15%;
+    background-image: linear-gradient(transparent -15%, rgba(255,0,0,0.2) 120%);
+  }
+
+  .nose::after {
+    right: -15%;
+    left: auto;
+  }
+
+  .hair-top {
+    width: 70%;
+    height: 40%;
+    background: var(--hair);
+    border-radius: 20% / 70% 0 50% 0;
+    transform: skew(-10deg);
+    top: -15%;
+    left: -5%;
+    clip-path: polygon(0% 0%, 400% 0%, 400% 100%, 0% 100%)
+  }
+
+  .lip {
+    width: 8em;
+    height: 1.5em;
+    background: #fa8;
+    border-radius: 70% 70% 2em 2em;
+    top: 85.5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .hair-2 {
+    width: 5em;
+    height: 5em;
+    top: -20%;
+    left: 49%;
+    box-shadow: 1.25em -1em var(--hair)
+  }
+
+  .hair-2::after {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    top: 10%;
+    left: 6em;
+    box-shadow: -1em -1em var(--hair)
+  }
+
+  .hair-top::after {
+    width: 70%;
+    height: 90%;
+    background: var(--hair);
+    left: 90%;
+    transform: skew(20deg);
+    border-radius: 20% / 0 70% 0 50%;
+  }
+
+  .ear {
+    width: 7em;
+    height: 10em;
+    background: var(--skin);
+    left: -4em;
+    top: 40%;
+    border-radius: 100% / 70% 80% 0 100%;
+    background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.05));
+    transform: rotate(-5deg);
+  }
+
+  .ear + .ear {
+    transform: scaleX(-1) rotate(-10deg);
+    left: auto;
+    right: -3.7em;
+  }
+
+  .hair-back {
+    width: 106%;
+    height: 70%;
+    border-radius: 120% 120% 50% 50% / 100%;
+    left: -3%;
+    top: -10%;
+    background: var(--hair);
+    box-shadow: inset 0 0 0 5em rgba(0,0,0,0.3);
+  }
+
+  .body {
+    width: 25%;
+    height: 38%;
+    background: var(--shirt);
+    border-radius: 100% / 150% 150% 10% 10%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    abox-shadow: 
+      inset 0 -5.5em var(--shirt),
+      inset 0 -9.5em var(--belt);
+    animation: breathe 4s infinite;
+
+    /* This pattern is by Temani Afif: https://dev.to/afif/background-pattern-braided-lines-5h2d */
+    --s:2px; /* size of lines */
+    --m:1.5px; /* space */
+
+    background-image:
+      radial-gradient(circle at 50% -30%, transparent 74%, var(--belt) 74.25% 83%, transparent 83.25%),
+      /* 4 */
+      conic-gradient(from 90deg at var(--s) calc(100% - var(--s)), var(--shirt-dark) 90deg,transparent 0),
+      /* 3 */
+      linear-gradient(-90deg,transparent var(--m), var(--shirt-darker)   0 calc(var(--s) + var(--m)),transparent 0),
+      /* 2 */
+      linear-gradient(180deg,transparent var(--m), var(--shirt-dark) 0 calc(var(--s) + var(--m)),transparent 0),
+      /* 1 */
+      linear-gradient( 90deg, var(--shirt-darker) var(--s),transparent 0);
+
+    background-size:
+      100% 100%,
+      calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+      calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+      calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+      calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m)));
+  }
+
+  .body::before {
+    width: 6em;
+    height: 5em;
+    border: 0.8em solid silver;
+    border-radius: 1em;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -10em);
+    background-image: radial-gradient(circle at 50% 50%, silver 15%, transparent 0),
+      radial-gradient(circle at 75% 50%, silver 10%, transparent 0);
+  }
+
+  .jacket {
+    width: 37%;
+    height: 65%;
+    background: #222;
+    border-radius: 100% 0 20% 55% / 100% 20% 3% 10%;
+    left: -0%;
+    transform: rotate(5deg)
+  }
+
+  .jacket + .jacket {
+    transform: scaleX(-1) rotate(5deg);
+    left: auto;
+    right: -1%;
+  }
+
+  .leg {
+    width: 9%;
+    height: 30%;
+    background: #222;
+    transform: rotateX(-2deg) skew(2deg);
+    top: 62%;
+    left: 39%;
+  }
+
+  .leg + .leg {
+    left: 52%;
+    transform: none;
+  }
+
+  .leg::before {
+    height: 22%;
+    width: 108%;
+    bottom: 0;
+    left: -4%;
+    background: var(--belt);
+  }
+
+  .leg::after {
+    width: 115%;
+    height: 12%;
+    background: var(--belt);
+    background-image: linear-gradient(rgba(0,0,0,0.1), transparent);
+    bottom: 0;
+    left: -9%;
+    border-radius: 100em 100em 0 0;
+  }
+
+  .leg + .leg::after {
+    left: -2%;
+  }
+
+  .arm {
+    width: 25%;
+    height: 64%;
+    background: var(--shirt);
+    border-radius: 100% 0 0 0;
+    top: 17%;
+    transform: rotate(8deg);
+    left: -20%;
+    background-image: linear-gradient(-45deg, rgba(0,0,0,0.1), transparent);
+
+    /* As above-This pattern is by Temani Afif: https://dev.to/afif/background-pattern-braided-lines-5h2d */
+    background-image:
+      linear-gradient(-45deg, rgba(0,0,0,0.1), transparent),
+      /* 4 */
+      conic-gradient(from 90deg at var(--s) calc(100% - var(--s)), var(--shirt-dark) 90deg,transparent 0),
+      /* 3 */
+      linear-gradient(-90deg,transparent var(--m), var(--shirt-darker)   0 calc(var(--s) + var(--m)),transparent 0),
+      /* 2 */
+      linear-gradient(180deg,transparent var(--m), var(--shirt-dark) 0 calc(var(--s) + var(--m)),transparent 0),
+      /* 1 */
+      linear-gradient( 90deg, var(--shirt-darker) var(--s),transparent 0);
+
+    background-size:
+      100% 100%,
+      calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+      calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+      calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+      calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m)));
+  }
+
+  @keyframes swingArm {
+    0%, 100% {
+      transform: scaleX(-1) rotate(13deg);
+    }
+    50% {
+      transform: scaleX(-1) rotate(14deg);
+    }
+  }
+
+  .arm + .arm {
+    transform-origin: top center;
+    transform: scaleX(-1) rotate(13deg);
+    left: auto;
+    right: -13%;
+    top: 16%;
+    aanimation: swingArm 3s infinite;
+  }
+
+  .hand {
+    width: 5em;
+    height: 7em;
+    border-radius: 50%;
+    background: var(--skin);
+    left: -28%;
+    top: 75%;
+  }
+
+  @keyframes swingHand {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0.5vw, -0.25vw)
+    }
+  }
+
+  .hand + .hand {
+    left: 111%;
+    top: 73.5%;
+    transform: rotate(-10deg);
+    aanimation: swingHand 3s infinite;
+  }
+
+  .shadow {
+    width: 56%;
+    height: 7%;
+    border-radius: 100% / 80% 80% 120% 120%;
+    background: rgba(0,0,0,0.1);
+    left: 50%;
+    top: 89%;
+    transform: translate(-50%, 0);
+    filter: blur(0.5em);
+  }
+
+  .grass {
+    --grass: #7c8;
+    width: 300vmax;
+    height: 100vh;
+    top: 83%;
+    left: 50%;
+    background: var(--grass);
+    transform: translate(-50%, 0);
+    border-radius: 100% / 100%;
+    background-image: linear-gradient(var(--grass) 5%, black);
+  }
+
+  .grass-leave {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    top: -0.25em;
+    left: 44%;
+    box-shadow: 1.25em -1em var(--grass);
+    transform: rotate(-10deg)
+  }
+
+  .grass-leave::after {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    top: 10%;
+    left: 6em;
+    box-shadow: -1em -1em var(--grass)
+  }
+
+  .grass-leave + .grass-leave {
+    transform: scaleX(-1);
+    left: 55%;
+    top: -0.25em;
+  }
+}
+
+
+
+.red-border {
+  width: 100%;
+  height: 100%;
+  background: black;
+  
+  &::before {
+    content: "";
+    width: 35%;
+    aspect-ratio: 1;
+    border: 0.33em solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="cards">  
+  <article class="mtg-card red">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/>
+    </svg>
+    <header>
+      <h2>Red Border</h2>
+      <div class="mana">
+        <div class="number">1</div>
+      </div>
+    </header>
+    <figure>
+      <div class="red-border"></div>
+    </figure>
+    <h3>
+      <span>
+        Instant Sorcery
+      </span>
+      <span>
+        CSS
+      </span>
+    </h3>
+    <main>
+      <div class="skill">
+        Destroy a CSS card that caused damage in the previous round.
+      </div>
+      <hr/>
+      <blockquote>
+        <em>"Peasant!"</em>
+        <cite>&mdash;Dev Tools</cite>
+      </blockquote>
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+
+  <article class="mtg-card white">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/>
+    </svg>
+    <header>
+      <h2>CSS Developer</h2>
+      <div class="mana">
+        <div class="number">3</div>
+      </div>
+    </header>
+    <figure>
+      <div class="manga" role="img" aria-label="cartoon of a person with blue eyes (manga-style)">
+        <div class="neck"></div>
+        <div class="ear"></div>
+        <div class="ear"></div>
+        <div class="hair-side"></div>
+        <div class="face">
+          <div class="mouth"></div>
+          <div class="nose"></div>
+          <div class="chin"></div>
+          <div class="eyebrow"></div>
+          <div class="eyebrow"></div>
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="lines"></div>
+        </div>
+        <div class="bangs bangs-2"></div>
+        <div class="bangs bangs-1"></div>
+        <div class="bangs bangs-4"></div>
+        <div class="bangs bangs-3"></div>
+        <div class="bangs bangs-5"></div>
+        <div class="bangs bangs-6"></div>
+        <div class="bangs bangs-7"></div>
+        <div class="bangs bangs-8"></div>
+      </div>
+    </figure>
+    <h3>
+      <span>
+        Legendary Creature &mdash; Human Wizard
+      </span>
+    </h3>
+    <main>
+      <div class="css-is-awesome">CSS<br/>is<br/>awesome</div>
+      <div class="power">2/3</div>
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+
+  <article class="mtg-card red">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/></svg>
+    <header>
+      <h2>JS Developer</h2>
+      <div class="mana">
+        <div class="number">1</div>
+      </div>
+    </header>
+    <figure>
+      <div class="peasant">
+        <div class="grass">
+          <div class="grass-leave ha"></div>
+          <div class="grass-leave ha"></div>
+        </div>
+        <div class="shadow"></div>
+        <div class="leg hb ha"></div>
+        <div class="leg hb ha"></div>
+        <div class="body hb">
+          <div class="jacket"></div>
+          <div class="jacket"></div>
+          <div class="hand"></div>
+          <div class="hand"></div>
+          <div class="arm"></div>
+          <div class="arm"></div>
+        </div>
+        <div class="head back">
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="hair-back"></div>
+        </div>
+        <div class="head">
+          <div class="eye"></div>
+          <div class="eyelid r ha hb"></div>
+          <div class="eyelid r ha hb"></div>
+          <div class="beard"></div>
+          <div class="nose ha hb"></div>
+          <div class="hair-top ha"></div>
+          <div class="hair-2 ha r"></div>
+          <div class="lip"></div>
+        </div>
+      </div>
+    </figure>
+    <h3>
+      <span>
+        Creature &mdash; Human
+      </span>
+      <span>JS</span>
+    </h3>
+    <main>
+      <div class="skill">
+        <span class="number rotate"></span> Whine about how React/Vue is superior to everything else. Does not cause any harm, but all other players will lose their turn. Discard at the end of the turn.
+      </div>
+      <hr />
+      <blockquote>
+        <em>"[Non-Imperative Language] iS nOt A pRoGrAmMiNg LaNgUaGe"</em>
+        <cite>&mdash;React Dev</cite>
+      </blockquote>
+      <div class="power">1/4</div>
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+
+  <article class="mtg-card blue">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/></svg>
+    <header>
+      <h2>HTML Trick</h2>
+      <div class="mana">
+        <div class="number">5</div>
+        <div class="number drop"></div>
+      </div>
+    </header>
+    <figure>
+      <div class="cartoon" role="img" aria-labelledby="desc">
+        <div id="desc">Polygonal drawing of a woman</div>
+        <div class="face-1"></div>
+        <div class="face-2"></div>
+        <div class="face-3"></div>
+        <div class="shirt"></div>
+        <div class="shirt-clear"></div>
+        <div class="shirt-dark"></div>
+        <div class="shirt-dark-2"></div>
+        <div class="lip-bottom"></div>
+        <div class="lip-bottom-dark"></div>
+        <div class="lip-bottom-light"></div>
+        <div class="lip-top"></div>
+        <div class="lip-top-dark"></div>
+        <div class="lip-top-light"></div>
+        <div class="chin-line"></div>
+        <div class="cheek-2"></div>
+        <div class="cheek-dark"></div>
+        <div class="cheek-light"></div>
+        <div class="eye-1-top"></div>
+        <div class="eye-1-back"></div>
+        <div class="eye-1-eyelid"></div>
+        <div class="eye-1-eyebrow"></div>
+        <div class="eye-cheek"></div>
+        <div class="eye-2-top"></div>
+        <div class="eye-2-lid"></div>
+        <div class="eye-2-eyebrow"></div>
+        <div class="hair-1"></div>
+        <div class="hair-2"></div>
+        <div class="hair-line"></div>
+        <div class="shadow-nose"></div>
+        <div class="shadow-ear"></div>
+        <div class="nose-1"></div>
+        <div class="nose-2"></div>
+        <div class="hair-back"></div>
+      </div>
+    </figure>
+    <h3>
+      <span>
+        Enchantment
+      </span>
+    </h3>
+    <main>
+      <div>Use native HTML tags and standard browser behavior to remove a JS related card from the table.</div>
+      <hr/>
+      <div class="skill">
+        <span class="number">5</span> Repeat.
+      </div>
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+
+  <article class="mtg-card blue">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/></svg>
+    <header>
+      <h2>CSS Artist</h2>
+      <div class="mana">
+        <div class="number">2</div>
+        <div class="number drop"></div>
+        <div class="number drop"></div>
+      </div>
+    </header>
+    <figure>
+      <div class="canvas narwhal">
+        <div class="flipper flipper-bottom"></div>
+        <div class="body">
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="cheek"></div>
+          <div class="cheek"></div>
+          <div class="mouth"></div>
+          <div class="tail tail-top"></div>
+          <div class="tail tail-bottom"></div>
+        </div>
+        <div class="horn"></div>
+        <div class="flipper flipper-top"></div>
+      </div>
+    </figure>
+    <h3>
+      <span>
+        Creature
+      </span>
+      <span>CSS</span>
+    </h3>
+    <main>
+      <div>&ndash; Random Dev: "<em>I can do that with SVG</em>"</div>
+      <div>&ndash; CSS Artist: "<em>Great! Do it!</em>"</div>
+      <div>[Crickets sounds]</div>
+      <div class="power">4/2</div>
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+  
+  <article class="mtg-card black">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/>
+    </svg>
+    <header>
+      <h2>Name</h2>
+      <div class="mana">
+        <div class="number">1</div>
+      </div>
+    </header>
+    <figure>
+      
+    </figure>
+    <h3>
+      <span class="type">
+        
+      </span>
+      <span class="group">
+        
+      </span>
+    </h3>
+    <main>
+      
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+  
+  <article class="mtg-card white">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/>
+    </svg>
+    <header>
+      <h2>Name</h2>
+      <div class="mana">
+        <div class="number">1</div>
+      </div>
+    </header>
+    <figure>
+      
+    </figure>
+    <h3>
+      <span class="type">
+        
+      </span>
+      <span class="group">
+        
+      </span>
+    </h3>
+    <main>
+      
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+  
+  <article class="mtg-card green">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/>
+    </svg>
+    <header>
+      <h2>Name</h2>
+      <div class="mana">
+        <div class="number">1</div>
+      </div>
+    </header>
+    <figure>
+      
+    </figure>
+    <h3>
+      <span class="type">
+        
+      </span>
+      <span class="group">
+        
+      </span>
+    </h3>
+    <main>
+      
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+  
+  <article class="mtg-card blue">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/>
+    </svg>
+    <header>
+      <h2>Name</h2>
+      <div class="mana">
+        <div class="number">1</div>
+      </div>
+    </header>
+    <figure>
+      
+    </figure>
+    <h3>
+      <span class="type">
+        
+      </span>
+      <span class="group">
+        
+      </span>
+    </h3>
+    <main>
+      
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+  
+  <article class="mtg-card red">
+    <!-- SVG by Una Kravets. Adapted from https://codepen.io/una/pen/JjYbMxz -->
+    <svg xmlns='http://www.w3.org/2000/svg'><filter id='marble' x='0' y='0' width='100%' height='100%'><feTurbulence baseFrequency='0.009' /><feColorMatrix type='matrix' values='1 1 1 0 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 0 '/></filter><rect x='0' y='0' width='100%' height='100%' filter='url(#marble)'/>
+    </svg>
+    <header>
+      <h2>Name</h2>
+      <div class="mana">
+        <div class="number">1</div>
+      </div>
+    </header>
+    <figure>
+      
+    </figure>
+    <h3>
+      <span class="type">
+        
+      </span>
+      <span class="group">
+        
+      </span>
+    </h3>
+    <main>
+      
+    </main>
+    <footer>
+      Illus.&nbsp;&copy;&nbsp;<a href="https://comicss.art">comiCSS.art</a>
+    </footer>
+  </article>
+</div>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
