@@ -774,4 +774,11 @@ const posts = [
     title: "Magic Cards",
     ariaLabel: "Set of five web development/CSS-themed cards in the style of Magic the Gathering"
   },
+  {
+    id: 99,
+    uid: "lost-in-translation",
+    boxes: 6,
+    title: "Lost in Translation",
+    ariaLabel: "Comic with 6 panels showing a man sitting in front of a computer. The screen goes off and the person asks for help. Another person off-panel says the problem is a translateY and to wait one more panel. In the next panel (below to the one where the screen disappeared), the code appears to the confusion of the person."
+  },
 ]

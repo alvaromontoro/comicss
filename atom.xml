@@ -1868,4 +1868,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Lost in translation</title>
+    <link href="https://comicss.art/?id=99" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/99/lost-in-translation.html"/>
+    <id>https://comicss.art/?id=99</id>
+    <updated>2023-08-21T00:00:00Z</updated>
+    <summary>New Cartoon: Lost in Translation</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/99/lost-in-translation.png" alt="Comic with 6 panels showing a man sitting in front of a computer. The screen goes off and the person asks for help. Another person off-panel says the problem is a translateY and to wait one more panel. In the next panel (below to the one where the screen disappeared), the code appears to the confusion of the person." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
