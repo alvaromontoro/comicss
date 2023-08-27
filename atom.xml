@@ -1887,4 +1887,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Jack and Rose</title>
+    <link href="https://comicss.art/?id=100" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/100/jack-and-rose.html"/>
+    <id>https://comicss.art/?id=100</id>
+    <updated>2023-08-28T00:00:00Z</updated>
+    <summary>New Cartoon: Jack and Rose</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/100/jack-and-rose.png" alt="Comic with 2 panels parody of a scene of the movie Titanic. In the first panel, a man (Jack) and a woman (Rose) are at the front of a ship named Titanic, with their arms extended and smiling. Rose says: 'I have a secret Jack: I use divs as buttons'. In the second panel, Jack has pushed Rose over the rails and she falls into the ocean." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

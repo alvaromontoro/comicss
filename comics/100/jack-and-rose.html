@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Londrina+Solid:wght@400;900&display=swap');
+
+article {
+  --sea: lightseagreen;
+  font-size: 1vmin;
+  display: grid;
+  gap: 1em;
+  width: 90em;
+  transform: scale(1);
+  transform-origin: 0% 0;50% 0%;
+}
+
+section {
+  position: relative;
+  border: 0.5em solid;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  background:
+    linear-gradient(skyblue 60%, #000 0 calc(60% + 0.25em), var(--sea) 0)
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.ship {
+  width: 100%;
+  height: 50%;
+  border: 0.3em solid;
+  background: 
+    radial-gradient(circle at 7.5% 7.5%, #000 2%, #0000 0),
+    linear-gradient(#fff 15%, #000 0);
+  transform: skew(-15deg) translate(-50%, 0);
+  top: 40%;
+
+  &::after {
+    content: "TITANIC";
+    font-family: 'Palatino Linotype', Palatino, Times, sans-serif;
+    transform: skew(15deg);
+    width: 50%;
+    height: 50%;
+    left: 46%;
+    top: 0;
+    font-size: 3em;
+    padding-top: 1.75em;
+    letter-spacing: 0.1em;
+    color: gold;
+    background: 
+      radial-gradient(circle at  6% 15%, #000 0.3em, #0000 0),
+      radial-gradient(circle at 16% 15%, #000 0.3em, #0000 0),
+      radial-gradient(circle at 26% 15%, #000 0.3em, #0000 0),
+      radial-gradient(circle at 36% 15%, #000 0.3em, #0000 0),
+      radial-gradient(circle at 46% 15%, #000 0.3em, #0000 0);
+  }
+
+  &::before {
+    content: "";
+    width: 25%;
+    height: 18%;
+    background: 
+      repeating-linear-gradient(#0000 0 23%, #000 0 26%),
+      repeating-linear-gradient(90deg, #0000 0 16%, #000 0 17.5%)
+      ;
+    top: -0.25em;
+    right: -0.25em;
+    border: 0.3em solid;
+    border-bottom: 0;
+    transform: translate(0, -100%);
+  }
+}
+
+.iceberg {
+  width: 25%;
+  height: 20%;
+  top: 45%;
+  right: 5%;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: 
+      conic-gradient(#0000 190deg, #eef 0 210deg, #0000 0),
+      conic-gradient(at 80% 40%, #eef 0 160deg, #0000 0),
+      conic-gradient(at 30% 60%, #0000 200deg, #eef 0 220deg, #0000 0),
+      #fff;
+    clip-path: polygon(0 100%, 20% 30%, 30% 30%, 55% 0, 70% 2%, 80% 40%, 100% 100%);
+  }
+
+  &::before {
+    top: -0.04em;
+    transform: scale(1.05);
+    background: #000;
+  }
+}
+
+.bubble {
+  width: 29%;
+  height: 27%;
+  top: 2%;
+  left: 53%;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+  line-height: 1;
+  padding-top: 0.75em;
+
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(50% 30% at 50% 30%, #00f 99%, #00f0 0),
+      radial-gradient(120% 200% at 0 0, #0000 40%, #00f 0 45.75%, #0000 0) 0 20% / 100% 70% no-repeat,
+      #fff;
+    box-shadow: 0 0 0 2em #fff;
+    filter: blur(0.35em) contrast(60) sepia(1) hue-rotate(150deg) brightness(5) ;
+    mix-blend-mode: multiply;
+  }
+}
+
+.pole {
+  width: 40%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background:
+    conic-gradient(at 15% -100%, #0000 178deg, #000 178.1deg 181.9deg, #0000 182deg),
+    linear-gradient(45deg, #0000 49.5%, #000 0 50%, #0000 0) 80% 0 / 80% 100% no-repeat,
+    #f000;
+}
+
+.speech {
+  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+  font-size: 5em;
+  transform: rotate(-20deg) skew(-30deg);
+  top: 53%;
+  left: 68%;
+  letter-spacing: 0.135em;
+  font-weight: bold;
+}
+
+.wave {
+  width: 25%;
+  height: 15%;
+  box-shadow: inset 1em 0.75em #fff8;
+  background: var(--sea);
+  border-radius: 10in;
+  -webkit-mask: radial-gradient(100% 33.3% at 112% -15%, #0000 99%, #000);
+
+  &.wave-1 {
+    left: 12%;
+    top: 86%;
+    transform: scale(0.8) rotate(12deg);
+  }
+
+  &.wave-2 {
+    left: 18%;
+    top: 81%;
+    transform: scale(0.6) rotate(15deg);
+  }
+
+  &.wave-3 {
+    left: 30%;
+    top: 83%;
+    transform: rotate(5deg);
+  }
+}
+
+
+.nose {
+    width: 20%;
+    aspect-ratio: 1;
+    border-top: 0.25em solid;
+    border-right: 0.25em solid;
+    left: 58%;
+    top: 57%;
+    border-radius: 50%;
+}
+
+.shadow {
+  width: 17%;
+  height: 3%;
+  border-radius: 50%;
+  background: #0001;
+  top: 87%;
+  left: 59%;
+  filter: blur(0.5em)
+}
+
+.jack {
+  --skin: #fca;
+  width: 10%;
+  height: 25%;
+  left: 40%;
+  top: 15%;
+
+  .head {
+    width: 38%;
+    height: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1%;
+    
+    .hat {
+      width: 135%;
+      height: 40%;
+      border: 0.25em solid;
+      background: 
+        repeating-linear-gradient(45deg, #0000 0 9%, #0004 0 12%),
+        repeating-linear-gradient(-45deg, #0000 0 9%, #0004 0 12%),
+        #ca6;
+      border-radius: 100% / 100% 130% 50% 20%;
+      transform: rotate(-6deg);
+      left: -15%;
+      top: -18%;
+      
+      &::before {
+        content:"";
+        width: 20%;
+        aspect-ratio: 1.4;
+        border: inherit;
+        background: inherit;
+        border-radius: 50% / 100% 100% 0 0;
+        left: 15%;
+        top: -20%;
+        transform: rotate(-5deg);
+      }
+    }
+
+    .face {
+      width: 100%;
+      height: 88%;
+      border: 0.25em solid;
+      border-right: 0.3em solid;
+      border-radius: 100% / 70% 80% 100% 120%;
+      background:
+        var(--skin);
+      
+      .hair-back {
+        width: 40%;
+        height: 50%;
+        border: 0.25em solid;
+        background: #963;
+        border-radius: 50%;
+        top: 10%;
+        left: -20%;
+        transform: rotate(10deg);
+      }
+      
+      .hair-front {
+        width: 110%;
+        height: 45%;
+        border: 0.25em solid;
+        background: #963;
+        border-radius: 80% 120% 120% 80% / 100%;
+        left: 15%;
+        top: -10%;
+        transform: rotate(5deg);
+      }
+      
+      .eye {
+        width: 15%;
+        height: 20%;
+        background: #000;
+        border-radius: 50%;
+        top: 40%;
+        left: 40%;
+        border: 0;
+        
+        & + .eye {
+          left: 75%;
+        }
+      }
+      
+      .mouth {
+        width: 25%;
+        height: 12%;
+        border-radius: 50% / 0 0 100% 100%;
+        background: #000;
+        top: 75%;
+        left: 50%;
+      }
+      
+      .ear {
+        width: 40%;
+        height: 40%;
+        background: var(--skin);
+        border: 0.25em solid;
+        border-right: 0.125em solid #0000;
+        border-radius: 50%;
+        top: 45%;
+        left: -23%;
+        transform: rotate(-15deg);
+        
+        &::before {
+          content: "";
+          width: 50%;
+          height: 50%;
+          background: var(--skin);
+          border: 0.25em solid;
+          border-right: 0.125em solid #0000;
+          border-radius: 50%;
+          right: 5%;
+          top: 35%;
+        }
+      }
+    }
+
+    .neck {
+      width: 35%;
+      height: 50%;
+      top: 60%;
+      left: 45%;
+      border: 0.25em solid;
+      background: var(--skin);
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .body {
+    width: 50%;
+    height: 50%;
+    left: 48%;
+    top: 30%;
+    transform: translate(-50%, 0);
+
+    .chest {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 100% / 60% 50% 10% 10%;
+      background:
+        radial-gradient(circle at 58% 10%, #0004 0.2em, #0000 0),
+        radial-gradient(circle at 59% 25%, #0004 0.2em, #0000 0),
+        radial-gradient(circle at 58% 40%, #0004 0.2em, #0000 0),
+        radial-gradient(circle at 62% 66%, #fc0c 0.2em, #0000 0),
+        radial-gradient(circle at 62% 86%, #fc0c 0.2em, #0000 0),
+        conic-gradient(at 60% 50%, #fff 6deg, #0000 0 345deg, #fff 0),
+        conic-gradient(at 60% 60%, #000 7deg, #0000 0 345deg, #000 0),
+        #000;
+      border: 0.25em solid;
+      
+      &::before {
+        content: "";
+        width: 35%;
+        height: 15%;
+        background: #fff;
+        z-index: 1;
+        border: 0.25em solid;
+        transform: skew(-15deg) rotate(15deg);
+        top: -5%;
+        left: 20%;
+      }
+      
+      &::after {
+        content: "";
+        width: 20%;
+        height: 15%;
+        background: #fff;
+        z-index: 1;
+        border: 0.25em solid;
+        transform: skew(15deg) rotate(-15deg);
+        top: -5%;
+        left: 60%;
+      }
+    }
+
+    .arm {
+      width: 130%;
+      height: 20%;
+      border: 0.25em solid;
+      background: #000;
+
+      .hand {
+        width: 40%;
+        height: 190%;
+        border: 0.25em solid;
+        border-radius: 0 50% 50% 0;
+        right: 90%;
+        top: 50%;
+        transform: translate(0, -50%) scale(0.75);
+        background: 
+          radial-gradient(farthest-side circle at 100% 80%, #0000 80%, #000 0 99%, #0000) 50% 10% / 50% 50% no-repeat,
+          var(--skin);
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 50%;
+          background: var(--skin);
+          border: 0.25em solid;
+          border-radius: 1em 0 0 1em;
+          border-right: 0;
+          transform: translate(-10%, -70%) rotate(40deg);
+          clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+        }
+
+        .finger {
+          width: 100%;
+          height: 40%;
+          background: var(--skin);
+          border: 0.25em solid;
+          border-radius: 1em 0 0 1em;
+          border-right: 0;
+          right: 90%;
+          transform-origin: 100% 50%;
+
+          &:nth-child(1) { 
+            top: -0.25em;
+            transform: rotate(9deg);
+          }
+
+          &:nth-child(2) { 
+            top: 18%;
+            width: 120%;
+transform: rotate(3deg);
+          }
+
+          &:nth-child(3) { 
+            top: 42%; 
+            width: 110%;
+            transform: rotate(-5deg);
+          }
+          
+          &:nth-child(4) { 
+            top: 69%; 
+            width: 80%;
+            transform: rotate(-14deg);
+          }
+        }
+      }
+
+
+      &.arm-1 {
+        left: 75%;
+        top: 3%;
+        transform-origin: 0 0;
+        transform: rotate(4deg);
+
+        .hand {
+          right: auto;
+          left: 90%;
+          transform: scaleX(-1) translate(0, -50%) scale(0.75);
+        }
+      }
+
+      &.arm-2 {
+        right: 73%;
+        width: 135%;
+        top: 3%;
+        transform-origin: 100% 0;
+        transform: rotate(-6deg);
+
+        &::before {
+          transform: translate(-90%, -30%) rotate(2deg)
+        }
+      }
+    }
+  }
+
+  .pants {
+    width:45%;
+    height: 70%;
+    background: 
+      linear-gradient(indianred 0 0) 50% 0 / 50% 35% no-repeat,
+      linear-gradient(90deg, #000 0.25em, indianred 0 53%, #000 0 calc(53% + 0.25em), indianred 0 calc(99.99% - 0.25em), #000 0);
+    left: 48%;
+    top: 60%;
+    transform: translate(-50%, 0);
+  }
+}
+
+
+
+
+.rose {
+  --skin: #fca;
+  --dress: #fec;
+  --dress2: #63f1;
+  --hair: #f84;
+  width: 10%;
+  height: 25%;
+  left: 44.66%;
+  top: 16%;
+
+  .head {
+    width: 38%;
+    height: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1%;
+    
+    .hair-back2 {
+      border-radius: 100% / 20%;
+      left: -20%;
+      top: 6%;
+      width: 115%;
+      height: 100%;
+      background: 
+        radial-gradient(20% 90% at 0 10%, #0000 85%, #000 0 99%, var(--hair) 0) 0 0 / 100% 100% no-repeat;
+      border-right: 0.20em solid;
+      box-shadow: inset 0 -0.25em 0 -0.05em;
+    }
+
+    .face {
+      width: 100%;
+      height: 88%;
+      border: 0.25em solid;
+      border-right: 0.3em solid;
+      border-radius: 100% / 70% 80% 120% 110%;
+      background:
+        var(--skin);
+      
+      .hair-back {
+        width: 45%;
+        height: 60%;
+        border: 0.25em solid;
+        background: var(--hair);
+        border-radius: 50%;
+        top: -5%;
+        left: -20%;
+        transform: rotate(15deg);
+
+      }
+      
+      .hair-front {
+        width: 115%;
+        height: 55%;
+        border: 0.25em solid;
+        background: var(--hair);
+        border-radius: 80% 130% 130% 80% / 100%;
+        left: 10%;
+        top: -22%;
+        transform: rotate(10deg);
+        
+        &::before {
+          content: "";
+          width: 30%;
+          aspect-ratio: 1.2;
+          border-radius: 100% / 50%;
+          background: var(--hair);
+          top: 46%;
+          left: -10%;
+          transform: rotate(-35deg);
+        }
+      }
+      
+      .eye {
+        width: 15%;
+        height: 20%;
+        background: #000;
+        border-radius: 50%;
+        top: 40%;
+        left: 40%;
+        border: 0;
+        transform: scale(0.8);
+        
+        & + .eye {
+          left: 75%;
+        }
+      }
+      
+      .mouth {
+        width: 25%;
+        height: 12%;
+        border-radius: 50% / 0 0 100% 100%;
+        background: #000;
+        top: 77%;
+        left: 50%;
+      }
+      
+      .ear {
+        width: 40%;
+        height: 40%;
+        background: var(--skin);
+        border: 0.25em solid;
+        border-right: 0.125em solid #0000;
+        border-radius: 50%;
+        top: 45%;
+        left: -23%;
+        transform: rotate(-15deg);
+        
+        &::before {
+          content: "";
+          width: 50%;
+          height: 50%;
+          background: var(--skin);
+          border: 0.25em solid;
+          border-right: 0.125em solid #0000;
+          border-radius: 50%;
+          right: 5%;
+          top: 35%;
+        }
+      }
+    }
+
+    .neck {
+      width: 35%;
+      height: 50%;
+      top: 60%;
+      left: 45%;
+      border: 0.25em solid;
+      border-radius: 100% / 30%;
+      background: var(--skin);
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .body {
+    width: 50%;
+    height: 50%;
+    left: 48%;
+    top: 30%;
+    transform: translate(-50%, 0);
+
+    .chest {
+      top: 0;
+      left: 5%;
+      width: 85%;
+      height: 100%;
+      border-radius: 100% 100% 100% 0 / 32% 50% 160% 160%;
+      background:
+        radial-gradient(circle, var(--dress2) 20%, #0000 0) 50% 50% / 10% 10%,
+        radial-gradient(circle, var(--dress2) 20%, #0000 0) 0% 0% / 10% 10%,
+        /* lines */
+        radial-gradient(100% 30% at 50% 100%, #0000 90%, #000 0 99%, #0000) 80% 30% / 30% 20% no-repeat,
+        radial-gradient(100% 30% at 50% 100%, #0000 90%, #000 0 99%, #0000) 76% 34% / 20% 15% no-repeat,
+        /* belt*/
+        radial-gradient(100% 50% at 54% 0, #0000 90%, #000 0) 50% 105% / 100% 50% no-repeat,
+        /* base color */
+        var(--dress);
+      border: 0.25em solid;
+      border-bottom: 0.25em solid #0000;
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
+    }
+    
+    .chest-2 {
+      width: 60%;
+      height: 25%;
+      background: 
+        radial-gradient(circle, var(--dress2) 25%, #0000 0) 50% 50% / 15% 20%,
+        radial-gradient(circle, var(--dress2) 25%, #0000 0) 0% 0% / 15% 20%,
+        var(--dress);
+      border-radius:  0 0 40% 20%;
+      border-right: 0.25em solid;
+      border-bottom: 0.2em solid;
+      transform: skewX(15deg) rotate(-4deg);
+      right: 4%;;
+      top: 18%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 76% 100%);
+    }
+
+    .arm {
+      width: 130%;
+      height: 20%;
+      border: 0.25em solid;
+      background: 
+        radial-gradient(circle, var(--dress2) 20%, #0000 0) 50% 50% / 12.5% 25%,
+        radial-gradient(circle, var(--dress2) 20%, #0000 0) 0% 0% / 12.5% 25%,
+        var(--dress);
+      border-radius: 120% 0% 120% 60% / 100%;
+      clip-path: polygon(-100% -100%, 100% 0, 100% 15%, 95.5% 15%, 95.5% 30%, 85% 100%, -100% 200%);
+      aborder-right: 0.25em solid #0000;
+
+      .hand {
+        width: 40%;
+        height: 190%;
+        border: 0.25em solid;
+        border-radius: 0 50% 50% 0;
+        right: 90%;
+        top: 50%;
+        transform: translate(0, -50%) scale(0.75);
+        background: 
+          radial-gradient(farthest-side circle at 100% 80%, #0000 80%, #000 0 99%, #0000) 50% 10% / 50% 50% no-repeat,
+          var(--skin);
+
+        &::after {
+          content: "";
+          width: 100%;
+          top: -9%;
+          height: 50%;
+          background: var(--skin);
+          border: 0.25em solid;
+          border-radius: 1em 0 0 1em;
+          border-right: 0;
+          transform: translate(-10%, -70%) rotate(40deg);
+          clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+        }
+
+        .finger {
+          width: 100%;
+          height: 40%;
+          background: var(--skin);
+          border: 0.25em solid;
+          border-radius: 1em 0 0 1em;
+          border-right: 0;
+          right: 90%;
+          transform-origin: 100% 50%;
+
+          &:nth-child(1) { 
+            top: -0.25em;
+            transform: rotate(9deg);
+          }
+
+          &:nth-child(2) { 
+            top: 13%;
+            width: 120%;
+transform: rotate(3deg);
+          }
+
+          &:nth-child(3) { 
+            top: 44%; 
+            width: 110%;
+            transform: rotate(-5deg);
+          }
+          
+          &:nth-child(4) { 
+            top: 71%; 
+            width: 80%;
+            transform: rotate(-14deg);
+          }
+        }
+      }
+
+
+      &.arm-1 {
+        left: 72%;
+        top: 3%;
+        width: 130%;
+        transform-origin: 0 0;
+        transform: rotate(4deg);
+        border-radius: 0 120% 60% 120% / 100%;
+        clip-path: none;
+        z-index: -1;
+
+        .hand {
+          right: auto;
+          left: 90%;
+          transform: scaleX(-1) translate(0, -50%) scale(0.75);
+        }
+      }
+
+      &.arm-2 {
+        right: 73%;
+        width: 135%;
+        top: 3%;
+        transform-origin: 100% 0;
+        transform: rotate(-6deg);
+
+        &::before {
+          transform: translate(-90%, -30%) rotate(2deg)
+        }
+      }
+    }
+  }
+
+  .pants {
+    width: 85%;
+    height: 70%;
+    left: 43%;
+    top: 60%;
+    transform: translate(-50%, 0);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
+    
+    .foot {
+      width: 40%;
+      height: 80%;
+      bottom: -20%;
+      background: 
+        linear-gradient(90deg, #000 40%, #0000 0),
+        linear-gradient(25deg, #000 15%, #0000 0),
+        #0000;
+      background-repeat: no-repeat;
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 95% 100%, 25% 100%, 15% 95%, 12% 100%, 0 100%);
+      transform: skewY(20deg);
+      left: 25%;
+      
+      & + & {
+        left: 55%;
+        bottom: -15%;
+        transform: skewY(20deg) rotate(10deg);
+      }
+    }
+    
+    .skirt {
+      top: -7%;
+      left: 2%;
+      width: 98%;
+      height: 100%;
+      border-radius: 100% / 20%;
+      box-shadow: inset 0 -0.3em 0 -0.05em;
+      background:
+        /* belt*/
+        radial-gradient(170% 50% at 54% 0, #000 0 25%, #0000 0) 50% 35% / 50% 50% no-repeat,
+        /* lines */
+        linear-gradient(75deg, var(--dress) 62%, #000 0 calc(62% + 0.25em), #f000 0) 100% 0 / 60% 100% no-repeat,
+        linear-gradient(-74deg, var(--dress) 64.25%, #000 0 calc(64.25% + 0.25em), #0000 0) 0% 0 / 70% 100% no-repeat,
+        #0000;
+      ;
+    }
+  }
+}
+
+
+
+section:nth-child(2) {
+  .ship, .pole {
+    left: 1.5%;
+  }
+
+  .wave-1 {
+    top: 85%;
+    left: 11%;
+  }
+
+  .wave-2 {
+    top: 82%;
+    left: 16%;
+
+  }
+
+  .wave-3 {
+    top: 85%;
+    left: 25%;
+
+  }
+  
+  .iceberg {
+    right: 8%;
+  }
+  
+  .rose {
+    transform: rotate(170deg);
+    top: 50%;
+    left: 60%;
+    
+    .face {
+      background:
+        linear-gradient(#00f8, #00f0 50%),
+        var(--skin);
+      
+      .mouth {
+        transform: scaleY(-1);
+      }
+    }
+    
+    .body {
+      .arm {
+        transform-origin: 95% 50%;
+        transform: rotate(40deg);
+        
+        &.arm-1 {
+          transform-origin: 5% 50%;
+          transform: rotate(-50deg);
+        }
+      }
+      
+      .chest-2 {
+        right: 4%;
+      }
+    }
+    
+    .pants {
+      clip-path: none;
+    }
+    
+    .fall {
+      width: 50%;
+      height: 25%;
+      border-radius: 50%;
+      left: 40%;
+      top: 125%;
+      transform: translate(-50%, 0) rotate(20deg);
+      box-shadow: 0 1em 0 -0.8em;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 20%;
+        border-radius: 50%;
+        transform: translate(-50%, 0) scale(0.8);
+        box-shadow: 0 1em 0 -0.8em;
+      }
+      
+      & + & {
+        left: 75%;
+        top: 10%;
+        transform: translate(-50%, 0) rotate(-45deg);
+      }
+    }
+  }
+  
+  .jack {
+    left: 45%;
+    
+    .face {
+      background:
+        linear-gradient(#f00, #f000 50%),
+        var(--skin);
+      
+      .eye {
+        clip-path: polygon(0 10%, 100% 30%, 100% 100%, 0 100%);
+        
+        & + .eye {
+          transform: scaleX(-1);
+        }
+      }
+      
+      .mouth {
+        transform: scaleY(-1) rotate(10deg);
+      }
+    }
+    
+    .body {
+      .arm {
+        &.arm-2 {
+          transform: scaleX(-1) rotate(-20deg);
+
+          .hand {
+            background: var(--skin);
+
+            &::after {
+              clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Comic with 2 panels parody of a scene of the movie Titanic. In the first panel, a man (Jack) and a woman (Rose) are at the front of a ship named Titanic, with their arms extended and smiling. Rose says: 'I have a secret Jack: I use divs as buttons'. In the second panel, Jack has pushed Rose over the rails and she falls into the ocean.">
+      <section>
+        <div class="bubble">I have a secret, Jack:<br/> I use divs as buttons!</div>
+        <div class="iceberg"></div>
+        <div class="pole"></div>
+        <div class="jack">
+          <div class="pants"></div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair-back"></div>
+              <div class="ear"></div>
+              <div class="hair-front"></div>
+            </div>
+            <div class="hat"></div>
+          </div>
+          <div class="body">
+            <div class="arm arm-1">
+              <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+            </div>
+            <div class="chest"></div>
+            <div class="arm arm-2">
+              <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rose">
+          <div class="head">
+            <div class="hair-back2"></div>
+          </div>
+          <div class="pants">
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="skirt"></div>
+          </div>
+          <div class="body">
+            <div class="arm arm-1">
+              <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+            </div>
+            <div class="chest"></div>
+            <div class="arm arm-2">
+              <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+            </div>
+            <div class="chest-2"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair-back"></div>
+              <div class="ear"></div>
+              <div class="hair-front"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ship"></div>
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+      </section>
+      
+      
+      <section>
+        <div class="shadow"></div>
+        <div class="iceberg"></div>
+        <div class="pole"></div>
+        <div class="jack">
+          <div class="pants"></div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair-back"></div>
+              <div class="ear"></div>
+              <div class="hair-front"></div>
+            </div>
+            <div class="hat"></div>
+          </div>
+          <div class="body">
+            <div class="arm arm-1">
+              <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+            </div>
+            <div class="chest"></div>
+            <div class="arm arm-2">
+              <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rose">
+          <div class="fall"></div>
+          <div class="fall"></div>
+          <div class="pants">
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="skirt"></div>
+          </div>
+          
+          <div class="body">
+            <div class="arm arm-1">
+              <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+            </div>
+            <div class="chest"></div>
+            
+            <div class="chest-2"></div>
+          </div>
+          <div class="head">
+            <div class="hair-back2"></div>
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair-back"></div>
+              <div class="ear"></div>
+              <div class="hair-front"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="arm arm-2">
+              <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ship"></div>
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+        <div class="speech">AAAAAAAAH!</div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

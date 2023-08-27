@@ -781,4 +781,12 @@ const posts = [
     title: "Lost in Translation",
     ariaLabel: "Comic with 6 panels showing a man sitting in front of a computer. The screen goes off and the person asks for help. Another person off-panel says the problem is a translateY and to wait one more panel. In the next panel (below to the one where the screen disappeared), the code appears to the confusion of the person."
   },
+  {
+    id: 100,
+    uid: "jack-and-rose",
+    boxes: 2,
+    vertical: true,
+    title: "Jack and Rose",
+    ariaLabel: "Comic with 2 panels parody of a scene of the movie Titanic. In the first panel, a man (Jack) and a woman (Rose) are at the front of a ship named Titanic, with their arms extended and smiling. Rose says: 'I have a secret Jack: I use divs as buttons'. In the second panel, Jack has pushed Rose over the rails and she falls into the ocean."
+  },
 ]
