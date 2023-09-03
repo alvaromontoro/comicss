@@ -1006,5 +1006,15 @@
       <enclosure url="https://comicss.art/comics/100/jack-and-rose.png" length="238000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=101</guid>
+      <title>Brains</title>
+      <link>https://comicss.art/?id=101</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/101/brains.png" length="130000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

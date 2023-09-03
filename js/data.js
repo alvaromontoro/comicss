@@ -789,4 +789,12 @@ const posts = [
     title: "Jack and Rose",
     ariaLabel: "Comic with 2 panels parody of a scene of the movie Titanic. In the first panel, a man (Jack) and a woman (Rose) are at the front of a ship named Titanic, with their arms extended and smiling. Rose says: 'I have a secret Jack: I use divs as buttons'. In the second panel, Jack has pushed Rose over the rails and she falls into the ocean."
   },
+  {
+    id: 101,
+    uid: "brains",
+    boxes: 1,
+    vertical: true,
+    title: "Brains",
+    ariaLabel: "Cartoon with an ashamed-looking brain (drawn in kawaii style) next to the text: Brains are amazing. they work nonstop 24/7 from the moment you are born until the moment you need to remember if it's align-text or text-align."
+  },
 ]

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@800;900&family=Josefin+Sans:wght@700&display=swap');
+
+body {
+  background: #fc01;
+}
+
+.brain-cartoon {
+  font-size: 1vmin;
+  width: 44em;
+  height: 95em;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  
+  .text {
+    text-align: justify;
+    font-family: 'Fira Sans','Josefin Sans', Impact;
+    font-weight: 900;
+    text-transform: uppercase;
+    
+    & span {
+      display: inline-block;
+      line-height: 0.9;
+      white-space: pre;
+      
+      &:nth-child(1) { font-size: 13.25em; text-indent: -0.05em; line-height: 0.775; }
+      &:nth-child(2) { font-size: 6.925em; line-height: 0.85; }
+      &:nth-child(3) { font-size: 8.1em; }
+      &:nth-child(4) { font-size: 6.55em; }
+      &:nth-child(5) { font-size: 5.045em; line-height: 0.95; }
+      &:nth-child(6) { font-size: 6.581em; line-height: 0.85; }
+      &:nth-child(7) { font-size: 4.990em; }
+      &:nth-child(8) { font-size: 3.945em; line-height: 1; }
+      &:nth-child(9) { font-size: 5.350em; }
+      &:nth-child(10) { font-size: 6.436em; }
+    }
+  }
+  
+  .brain-container {
+    width: 100%;
+    height: 34em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    & *,
+    & *::before,
+    & *::after {
+      position: absolute;
+      box-sizing: border-box;
+    }
+    
+    .legs {
+      width: 50%;
+      height: 50%;
+      background: 
+        radial-gradient(farthest-side at 10% 55%, #0000 70%, #000 71% 99%, #0000) 30% 200% / 15% 90%,
+        radial-gradient(farthest-side at 5% 48%, #0000 70%, #000 71% 99%, #0000) 75% 200% / 15% 85%,
+        radial-gradient(farthest-side at 50% 100%, #000 99%, #0000) 95% 100% / 25% 10%,
+        radial-gradient(farthest-side at 50% 100%, #000 99%, #0000) 45% 100% / 25% 10%,
+        #0000;
+      background-repeat: no-repeat;
+      bottom: 0;
+      left: 52%;
+      transform: translate(-50%, 0);
+      overflow: hidden;
+    }
+    
+    .drop {
+      --color: #0cd;
+      width: 15%;
+      height: 15%;
+      background: 
+        radial-gradient(20% 15% at 30% 75%, #fffc 80%, #0000 11%), 
+        conic-gradient(at 50% 0, #0000 132deg, var(--color) 0 228deg, #0000 0) 0 0 / 100% 50% no-repeat,
+        radial-gradient(50% 33.33% at 50% 66.66%, var(--color) 99%, #0000), 
+        #0000;
+      transform: scaleY(1.75);
+      top: 23%;
+      left: 21%;
+    }
+    
+    /* based on https://www.vecteezy.com/vector-art/10565520-happy-brain-cartoon-character-vector */
+    .brain {
+      --color: pink;
+      --line: #faa;
+      --ellipse: radial-gradient(farthest-side, #000 99%, #0000);
+      --lines1: , #0000 90%, var(--line) 0 99%, #0000;
+      --lines2: , #0000 85%, var(--line) 0 99%, #0000;
+      --lines3: , #0000 80%, var(--line) 0 99%, #0000;
+      --lines4: , #0000 80%, #eee 0 99%, #0000;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background:
+        /* lines */
+        /* center top */
+        radial-gradient(farthest-side at -30% 60% var(--lines4)) 58.5% 12% / 1.5% 8%,
+        radial-gradient(farthest-side at 0% 90% var(--lines4)) 60% 19% / 3.5% 3%,
+        radial-gradient(farthest-side at 10% 80% var(--lines1)) 51% 2.5% / 13% 19%,
+        radial-gradient(farthest-side at 10% 70% var(--lines2)) 60% 23% / 7% 14%,
+        /* right top */
+        radial-gradient(farthest-side at 10% 80% var(--lines3)) 72% 14% / 7% 7%,
+        radial-gradient(farthest-side at 20% 80% var(--lines2)) 77.5% 20% / 6.5% 8.5%,
+        radial-gradient(farthest-side at 0% 77% var(--lines3)) 80% 27% / 3% 5%,
+        /* right center */
+        radial-gradient(farthest-side at -30% 100% var(--lines3)) 82% 36% / 3.5% 7%,
+        radial-gradient(farthest-side at -30% 60% var(--lines3)) 84.5% 44% / 3% 10%,
+        radial-gradient(farthest-side at -20% 30% var(--lines3)) 84% 52.5% / 4% 6%,
+        radial-gradient(farthest-side at -30% 70% var(--lines4)) 86% 42.5% / 2% 6.6%,
+        /* center bottom */
+        radial-gradient(farthest-side at 30% 0% var(--lines3)) 60.5% 71% / 9% 4%,
+        radial-gradient(65% 90% at 50% 0% var(--lines3)) 65% 71.5% / 5% 3%,
+        /* right bottom */
+        radial-gradient(farthest-side at 70% 0% var(--lines2)) 25% 63% / 9% 7%,
+        radial-gradient(farthest-side at 90% 40% var(--lines3)) 21% 56% / 3.5% 8%,
+        /* right center */
+        radial-gradient(farthest-side at 100% 30% var(--lines2)) 32.5% 54% / 5% 14%,
+        radial-gradient(farthest-side at 90% 40% var(--lines3)) 30% 43% / 3.5% 8%,
+        radial-gradient(100% 80% at 110% 40% var(--lines4)) 30% 52% / 1.75% 6%,
+        /* right top */
+        radial-gradient(farthest-side at 100% 80% var(--lines2)) 33% 16% / 7% 12%,
+        radial-gradient(farthest-side at 70% 70% var(--lines3)) 26% 27.5% / 8% 10%,
+        radial-gradient(farthest-side at 90% 70% var(--lines3)) 21.5% 37% / 5% 8%,
+        radial-gradient(80% 70% at 80% 80% var(--lines4)) 20% 35.5% / 2.5% 6%,
+        radial-gradient(farthest-side at 90% 90% var(--lines4)) 34% 18.5% / 3% 5.5%,
+        /* base color */
+        var(--color)
+        ;
+      background-repeat: no-repeat;
+      -webkit-mask:
+        var(--ellipse) 55% 45% / 42% 45% no-repeat,
+        var(--ellipse) 66% 5% / 30% 30% no-repeat,
+        var(--ellipse) 43% 5% / 25% 30% no-repeat,
+        var(--ellipse) 32% 12% / 27% 40% no-repeat,
+        var(--ellipse) 25% 16% / 27% 25% no-repeat,
+        var(--ellipse) 16% 33% / 27% 25% no-repeat,
+        var(--ellipse) 14% 48% / 25% 25% no-repeat,
+        var(--ellipse) 23% 61% / 25% 25% no-repeat,
+        var(--ellipse) 33% 66% / 25% 25% no-repeat,
+        var(--ellipse) 46% 68% / 22% 25% no-repeat,
+        var(--ellipse) 66% 67% / 22% 25% no-repeat,
+        var(--ellipse) 75% 64% / 18% 20% no-repeat,
+        var(--ellipse) 84% 33% / 26% 26% no-repeat,
+        var(--ellipse) 85% 47% / 25% 37% no-repeat,
+        var(--ellipse) 83% 23% / 23% 40% no-repeat;
+      
+      .cheek {
+        width: 12%;
+        height: 8%;
+        background:
+          repeating-linear-gradient(-45deg, #0000 0 15%, #f002 0 21%)
+          #fa98;
+        background-clip: content-box;
+        border-radius: 50%;
+        top: 54%;
+        left: 37%;
+        border: 0.75em solid #fa98;
+        
+        & + & {
+          left: 69%;
+          width: 10%;
+        }
+      }
+      
+      .eye {
+        width: 12%;
+        aspect-ratio: 1;
+        background: 
+          radial-gradient(circle at 35% 47%, #fff 25%, #0000 26%), 
+          radial-gradient(circle at 55% 19%, #fff 9%, #0000 10%), 
+          #000;
+        border-radius: 50%;
+        top: 50%;
+        left: 49%;
+        transform: translate(-50%,-50%);
+        
+        & + & {
+          left: 69%;
+        }
+      }
+      
+      .eyebrow {
+        width: 18%;
+        aspect-ratio: 1.2;
+        border: 1em solid #0000;
+        border-bottom: 1.25em solid #000;
+        border-radius: 50%;
+        top: 22%;
+        left: 37%;
+        transform: rotate(-20deg);
+        
+        & + & {
+          left: 64%;
+          top: 22.5%;
+          transform: rotate(30deg);
+        }
+      }
+      
+      .mouth {
+        width: 6.5%;
+        aspect-ratio: 2;
+        top: 56.5%;
+        left: 56%;
+        background: #000;
+        border-radius: 50% / 100% 100% 0 0;
+        transform: rotate(-5deg);
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <div class="brain-cartoon">
+      <div class="text" role="text">
+        <span>Brains</span>
+        <span>are amazing.</span>
+        <span>they work</span>
+        <span>nonstop 24/7</span>
+        <span>from the moment</span>
+        <span>you are born</span>
+        <span>until the moment</span>
+        <span>you need to remember</span>
+        <span>if it's align-text</span>
+        <span>or text-align</span>
+      </div>
+      <div class="brain-container" role="img" aria-label="cartoon of an ashamed brain (kawaii style)">
+        <div class="legs"></div>
+        <div class="brain">
+          <div class="lines"></div>
+          <div class="cheek"></div>
+          <div class="cheek"></div>
+          <div class="eyebrow"></div>
+          <div class="eyebrow"></div>
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="drop"></div>
+      </div>
+    </div>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

@@ -1906,4 +1906,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Jack and Rose</title>
+    <link href="https://comicss.art/?id=101" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/101/brains.html"/>
+    <id>https://comicss.art/?id=101</id>
+    <updated>2023-09-04T00:00:00Z</updated>
+    <summary>New Cartoon: Brains</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/101/brains.png" alt="Cartoon with an ashamed-looking brain (drawn in kawaii style) next to the text: Brains are amazing. they work nonstop 24/7 from the moment you are born until the moment you need to remember if it's align-text or text-align." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
