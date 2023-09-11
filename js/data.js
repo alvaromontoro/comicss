@@ -797,4 +797,11 @@ const posts = [
     title: "Brains",
     ariaLabel: "Cartoon with an ashamed-looking brain (drawn in kawaii style) next to the text: Brains are amazing. they work nonstop 24/7 from the moment you are born until the moment you need to remember if it's align-text or text-align."
   },
+  {
+    id: 102,
+    uid: "red-border",
+    boxes: 4,
+    title: "Red Border",
+    ariaLabel: "Comic strip with 4 panels. A figure walks into a CSS code that generates a red border and exclaims 'oh, wow! a CSS debugging red border!' Then adds 'This could be the same red border that helped debugging and learning to people like Rachel Andrew, or Eric Meyer, or Jen Simmons, or Harry Roberts, or Sara Soueidan, or...'. In the third panel, the character remains silent thinking. And finally pleads 'Please, red border, inspire me, and let me learn as much as them!'"
+  },
 ]

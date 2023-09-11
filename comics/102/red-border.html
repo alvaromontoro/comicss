@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+article {
+  display: flex;
+  font-size: 1vmin;
+  gap: 1em;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+section {
+  width: 40em;
+  height: 40em;
+  border: 0.5em solid;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: 
+    linear-gradient(#c9c9, #c9c0);
+  linear-gradient(#6df, #6df0 90%, #fa86 0, #fa8);
+
+  & *,
+  & *::before,
+  & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+}
+
+.code {
+  background: #123;
+  color: #eee;
+  font-family: monospace, monospace;
+  font-size: 1.5em;
+  padding: 1em;
+  border: 0.125em solid red;
+  box-shadow: 0 0 0 1em #123;
+  top: 2em;
+  right: 2em;
+
+  & * {
+    position: relative;
+  }
+
+  .p {
+    color: #cac;
+  }
+
+  .v {
+    color: #ec8;
+  }
+}
+
+.person {
+  bottom: 0;
+  left: 7%;
+  width: 12.5em;
+  height: 25em;
+  overflow: hidden;
+
+  .head {
+    left: 50%;
+    top: 12%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 29%;
+    background: white;
+    border: 0.4em solid;
+    border-radius: 95% 90% 110% 95%/90% 110% 90% 100%;
+
+    .eye {
+      width: 10%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #000;
+      top: 40%;
+      left: 45%;
+      transform: translate(-50%, 0);
+
+      & + & {
+        left: 75%;
+      }
+    }
+
+    .mouth {
+      width: 30%;
+      aspect-ratio: 0.75;
+      border: 0.4em solid #0000;
+      border-bottom: 0.4em solid;
+      border-radius: 50%;
+      top: 20%;
+      left: 60%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .neck {
+    width: 12%;
+    height: 25%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #fff;
+    border: 0.4em solid;
+  }
+
+  .body {
+    width: 12%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    background: black;
+    border: 0.5em solid;
+    transform-origin: 50% 0;
+    transform: translateX(-50%) perspective(4.5em) rotateX(50deg);
+  }
+}
+
+.speech {
+  font-size: 2.5em;
+  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, sans-serif;
+  line-height: 1;
+  text-align: center;
+  text-wrap: balance;
+  
+  &::before {
+    content: "";
+    width: 2em;
+    height: 1em;
+    border-radius: 0 0 100% 0;
+    box-shadow: 0.1em 0.1em 0;
+    top: 100%;
+    left: 0;
+  }
+}
+
+section:nth-child(1) {
+  .person {
+    .head {
+      transform: 
+        translate(-50%,0) rotate(-5deg);
+      
+      .eye {
+        top: 35%;
+        
+        & + & {
+          top: 34%;
+        }
+      }
+      
+      .mouth {
+        background: #000;
+        border: 0;
+        width: 8%;
+        top: 66%;
+      }
+    }
+  }
+  
+  .speech {
+    width: 55%;
+    top: 35%;
+    right: 5%;
+  }
+}
+
+section:nth-child(2) {
+  .person {
+    left: 5%;
+    .head {
+      transform: 
+        translate(-50%,0) rotate(-2deg);
+      
+      .eye {
+        top: 35%;
+        
+        & + & {
+          top: 34%;
+        }
+      }
+      
+      .mouth {
+        background: #000;
+        border: 0;
+        width: 12%;
+        aspect-ratio: 1.5;
+        top: 67%;
+        -webkit-mask: radial-gradient(90% 60% at 95% 85%, #0000 60%, #000 0)
+      }
+    }
+  }
+  
+  .speech {
+    width: 60%;
+    top: 30%;
+    right: 3%;
+    
+    &::before {
+      transform: rotate(65deg);
+      width: 1.1em;
+      height: 1.1em;
+      right:98%;
+      left: auto;
+      top: 58%;
+    }
+  }
+}
+
+section:nth-child(3) {
+  .person {
+    .head {
+      transform: translate(-50%, 0) rotate(3deg);
+      
+      .mouth {
+        display: none;
+      }
+    }
+  }
+  
+  .speech {
+    top: 50%;
+    left: 43%;
+    
+    &::before {
+      content: none;
+    }
+  }
+}
+
+
+section:nth-child(4) {
+  .person {
+    .head {
+      transform: 
+        translate(-50%,0) rotate(-5deg);
+      
+      .eye {
+        top: 35%;
+        
+        & + & {
+          top: 34%;
+        }
+      }
+      
+      .mouth {
+        background: #000;
+        border: 0;
+        width: 12%;
+        aspect-ratio: 2;
+        top: 66%;
+      }
+    }
+  }
+  
+  .speech {
+    width: 61%;
+    top: 33%;
+    right: 3%;
+    
+    &::before {
+      left: 5%;
+      height: 1.5em;
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<!-- Inspired by a Mafalda comic strip from the 1960s/70s -->
+<article role="img" aria-label="Comic strip with 4 panels. A figure walks into a CSS code that generates a red border and exclaims 'oh, wow! a CSS debugging red border!' Then adds 'This could be the same red border that helped debugging and learning to people like Rachel Andrew, or Eric Meyer, or Jen Simmons, or Harry Roberts, or Sara Soueidan, or...'. In the third panel, the character remains silent thinking. And finally pleads 'Please, red border, inspire me, and let me learn as much as them!'">
+  <section>
+    <div class="code"><span class="p">outline</span>: <span class="v">1px solid red</span>;</div>
+    <div class="person">
+      <div class="neck"></div>
+      <div class="head">
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="body"></div>
+    </div>
+    <div class="speech">Oh, wow! A CSS debugging red border!</div>
+  </section>
+  <section>
+    <div class="code"><span class="p">outline</span>: <span class="v">1px solid red</span>;</div>
+    <div class="person">
+      <div class="neck"></div>
+      <div class="head">
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="body"></div>
+    </div>
+    <div class="speech">This could be the same red border that helped debugging and learning to people like Rachel Andrew, or Eric Meyer, or Jen Simmons, or Harry Roberts, or Sara Soueidan, or...</div>
+  </section>
+  <section>
+    <div class="code"><span class="p">outline</span>: <span class="v">1px solid red</span>;</div>
+    <div class="person">
+      <div class="neck"></div>
+      <div class="head">
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="body"></div>
+    </div>
+    <div class="speech">.....</div>
+  </section>
+  <section>
+    <div class="code"><span class="p">outline</span>: <span class="v">1px solid red</span>;</div>
+    <div class="person">
+      <div class="neck"></div>
+      <div class="head">
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="body"></div>
+    </div>
+    <div class="speech">Please, inspire me, and let me learn as much as them!</div>
+  </section>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
