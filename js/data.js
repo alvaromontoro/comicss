@@ -804,4 +804,12 @@ const posts = [
     title: "Red Border",
     ariaLabel: "Comic strip with 4 panels. A figure walks into a CSS code that generates a red border and exclaims 'oh, wow! a CSS debugging red border!' Then adds 'This could be the same red border that helped debugging and learning to people like Rachel Andrew, or Eric Meyer, or Jen Simmons, or Harry Roberts, or Sara Soueidan, or...'. In the third panel, the character remains silent thinking. And finally pleads 'Please, red border, inspire me, and let me learn as much as them!'"
   },
+  {
+    id: 103,
+    uid: "news",
+    boxes: 1,
+    vertical: true,
+    title: "News",
+    ariaLabel: "Cartoon with two newscasters (a white man and a Black woman) reading the news from a paper. The mustached man says 'After a very long time, this week did not get a new CSS feature released by the CSS working group, or supported by any of the major browsers.' The woman adds, 'Police have already arrested the culprit, who, we hope, will spend a long time behind bars.'"
+  },
 ]

@@ -1944,4 +1944,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>News</title>
+    <link href="https://comicss.art/?id=103" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/103/news.html"/>
+    <id>https://comicss.art/?id=103</id>
+    <updated>2023-09-18T00:00:00Z</updated>
+    <summary>New Cartoon: News</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/103/news.png" alt="Cartoon with two newscasters (a white man and a Black woman) reading the news from a paper. The mustached man says 'After a very long time, this week did not get a new CSS feature released by the CSS working group, or supported by any of the major browsers.' The woman adds, 'Police have already arrested the culprit, who, we hope, will spend a long time behind bars.'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

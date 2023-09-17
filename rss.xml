@@ -1026,5 +1026,15 @@
       <enclosure url="https://comicss.art/comics/102/red-border.png" length="177000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=103</guid>
+      <title>News</title>
+      <link>https://comicss.art/?id=103</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/103/news.png" length="276000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
