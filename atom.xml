@@ -1963,4 +1963,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Then and Now</title>
+    <link href="https://comicss.art/?id=104" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/104/evolution.html"/>
+    <id>https://comicss.art/?id=104</id>
+    <updated>2023-09-25T00:00:00Z</updated>
+    <summary>New Cartoon: Then and Now</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/104/evolution.png" alt="Comic with 2 rows. The first one is titled 'Web programming in 2003'. A person says 'I am off to develop a website', and comes back 5 hours later saying it completed the landing page, and found some cool effects. The row below is titled 'Web development in 2023'. The same person says 'I am off to develop a website', and comes back angry after 5 hours, no web development done, it has all been setting up the dev environment (and it's not done yet)" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

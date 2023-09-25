@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+article {
+  & section {
+    display: flex;
+    gap: 1vmin;
+    margin-bottom: 1vmin;
+    font-family: 'Patrick Hand', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+
+    & > div {
+      width: 55vmin;
+      min-width: 55vmin;
+      height: 40vmin;
+      border: 0.66vmin solid;
+      position: relative;
+      background: linear-gradient(#c9c9, #c9c0);
+
+      &:first-child::before {
+        content: "5 hours later";
+        text-transform: uppercase;
+        font-size: 1.4vmin;
+        display: grid;
+        place-items: center;
+        padding: 0 2vmin 0 0.5vmin;
+        color: white;
+        position: absolute;
+        background: black;
+        width: 13vmin;
+        height: 10vmin;
+        clip-path: polygon(0 20%, 60% 20%, 60% 0, 100% 50%, 60% 100%, 60% 80%, 0 80%);
+        left: 100%;
+        top: 50%;
+        transform: translate(-35%, -50%);
+        z-index: 1;
+      }
+
+      & *,
+      & *::before,
+      & *::after {
+        position: absolute;
+        box-sizing: border-box;
+      }
+
+      & h2 {
+        background: #ffa;
+        padding: 0.5vmin 1vmin;
+        font-size: 2vmin;
+        color: #000;
+        faont-family: Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        top: 0;
+        left: 0;
+        margin: 0;
+        border-right: 0.5vmin solid; 
+        border-bottom: 0.5vmin solid;
+        text-transform: uppercase;
+        z-index: 1;
+        
+      }
+    }
+  }
+}
+
+.person {
+  --skin: #fb9;
+  --skin-dark: #ea8;
+  --skin-light: #fca;
+  --shirt: #eee;
+  --shirt-dark: #ddd;
+  --shirt-light: #fff;
+  --eye: #369;
+  --hair: #963;
+  --hair-dark: #852;
+  --hair-light: #a74;
+  width: 50%;
+  height: 80%;
+  bottom: 0;
+  left: 7%;
+  aoverflow: hidden;
+
+  .body {
+    width: 120%;
+    height: 41%;
+    left: -15%;
+    bottom: 0;
+    overflow: hidden;
+    
+    .arm {
+      width: 6vmin;
+      height: 20vmin;
+      background: var(--skin);
+      border: 0.5vmin solid;
+      border-radius: 100% / 80% 80% 120% 120%;
+      top: 8%;
+      left: -10%;
+      rotate: 15deg;
+      box-shadow: inset 1vmin 0 var(--skin-dark),
+        inset -0.5vmin 0 var(--skin-light),
+        0.5vmin 0 var(--shirt-dark);
+      
+      &::before {
+        content: "";
+        width: 150%;
+        height: 55%;
+        background: var(--shirt);
+        border: 0.5vmin solid;
+        border-radius: 120% 50% 50% 50%/ 150% 0 10% 7%;
+        top: -15%;
+        left: -20%;
+        rotate: 4deg;
+        clip-path: polygon(0 0, 40% 0, 110% 70%, 110% 100%, 0 100%);
+        box-shadow: inset 1.5vmin 0 var(--shirt-dark),
+          inset -0.5vmin 0 var(--shirt-light),
+          0.5vmin 0 0 -0.1vmin var(--shirt-dark)
+      }
+    }
+    
+    & > .arm {
+      left: 66%;
+      top: 28%;
+      scale:-1 1;
+      rotate: -12deg;
+      &::before {
+        clip-path: none;
+        rotate: 6deg;
+      }
+    }
+    
+    .chest {
+      left: 17.5%;
+      width: 64%;
+      height: 300%;
+      border-radius: 100% / 80% 80% 130% 0;
+      border: 0.5vmin solid;
+      border-top: 0.6vmin solid;
+      border-right: 0.45vmin solid;
+      background: 
+        radial-gradient(150% 50% at 50% 0.5%, var(--skin) 8.5%, #000 9% 10%, #0000 10.5% 12%, #000 12.5% 13.5%, var(--shirt) 14%),
+        repeating-conic-gradient(at 50% -0.5%, #0000 0 8deg, #000 0 10deg)
+        var(--shirt-dark);
+      box-shadow: 
+        inset 2.4vmin -2vmin var(--shirt-dark),
+        inset -0.75vmin -0.5vmin var(--shirt-light);
+      
+      &::before {
+        content: "CSS \a IS \a AWESOME";
+        white-space: pre;
+        font-family: arial;
+        font-size: 1.65vmin;
+        line-height: 1.75vmin;
+        border: 0.2vmin solid;
+        width: 5.45vmin;
+        height: 5.45vmin;
+        box-sizing: content-box;
+        padding: 0.1vmin;
+        left: 45%;
+        top: 14%;
+        transform: rotate(2deg) skew(2deg) skewy(-4deg) scale(0.8);
+        opacity: 0.5;
+       }
+    }
+  }
+  
+  .head {
+    width: 40%;
+    height: 44%;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    sacale: 0.9;
+
+    .neck {
+      width: 35%;
+      height: 50%;
+      border-left: 0.45vmin solid;
+      border-right: 0.4vmin solid;
+      background: 
+        radial-gradient(140% 55% at 70% 63%, var(--skin-dark) 40%, #0000 0),
+        var(--skin);
+      box-shadow: inset 0.5vmin 0 var(--skin-dark);
+      top: 63%;
+      left: 19%;
+    }
+    
+    .hair-back {
+      left: 68%;
+      top: 10%;
+      width: 30%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--hair-dark);
+      box-shadow:
+        -0.75vmin -2vmin 0 -0.5vmin var(--hair-dark),
+        0.75vmin 2.2vmin 0 -0.6vmin var(--hair-dark),
+        0 0 0 0.3vmin,
+        -0.75vmin -2vmin 0 -0.15vmin,
+        0.75vmin 2.2vmin 0 -0.25vmin
+      
+    }
+
+    .ear {
+      width: 40%;
+      height: 40%;
+      border-radius: 50%;
+      border: 0.4vmin solid;
+      border-right: 0.2vmin solid #0000;
+      background: var(--extra) var(--skin);
+      top: 45%;
+      left: -25%;
+      rotate: -10deg;
+      box-shadow: inset 0.5vmin -0.2vmin var(--skin-dark);
+
+      &::before {
+        content: "";
+        width: 66%;
+        height: 60%;
+        border-radius: 50%;
+        border: 0.3vmin solid #0000;
+        border-top: 0.4vmin solid;
+        border-right: 0.4vmin solid;
+        left: 20%;
+        top: 20%;
+        box-shadow: inset -0.5vmin 0 var(--skin-dark);
+      }
+
+      &::after {
+        content: "";
+        width: 45%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 0.35vmin solid;
+        border-right: 0.25vmin solid var(--skin);
+        rotate: 10deg;
+        background: var(--skin);
+        left: 45%;
+        top: 45%;
+        box-shadow: -0.5vmin 0 0 0.1vmin var(--skin-dark);
+      }
+    }
+    
+    & > .ear {
+      scale: -1;
+      left: auto;
+      right: -7%;
+      top: 35%;
+    }
+
+    .face {
+      --extra: ;
+      --flush: #f002;
+      width: 100%;
+      height: 100%;
+      border: 0.4vmin solid;
+      border-bottom: 0.6vmin solid;
+      border-right: 0.5vmin solid;
+      border-radius: 100% / 70% 130% 60% 90%;
+      rotate: -5deg;
+      background: 
+        /* details */
+        var(--extra)
+        radial-gradient(50% 10% at 60% 60%, var(--flush), #f000),
+        /* base */
+        var(--skin);
+      box-shadow:
+        inset -0.5vmin 0.2vmin var(--skin-light),
+        inset 0.5vmin -0.5vmin var(--skin-dark);
+
+      .eyebrow {
+        width: 40%;
+        height: 30%;
+        border-radius: 100% / 60% 90% 60% 60%;
+        box-shadow: 0 -1vmin 0 -0.25vmin;
+        top: 22%;
+        left: 21%;
+        rotate: -13deg;
+        
+        & + & {
+          scale:-1 1;
+          rotate:5deg;
+          left: 61%;
+          top: 21%;
+        }
+      }
+      
+      .hair {
+        width: 25%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--hair);
+        top: 30%;
+        left: -14%;
+        box-shadow:
+          inset -0.5vmin -0.25vmin var(--hair-light),
+          -1.25vmin 0.5vmin var(--hair),
+          -1.25vmin -1.5vmin 0 0.5vmin var(--hair),
+          0.5vmin -4.5vmin 0 0.75vmin var(--hair),
+          3.5vmin -5.25vmin var(--hair),
+          -2vmin -4vmin  var(--hair),
+          -1.75vmin 0.5vmin var(--hair-dark),
+          -1.75vmin -1.5vmin 0 0.5vmin var(--hair-dark),
+          6.75vmin -5.75vmin 0 0.65vmin var(--hair),
+          7.25vmin -5.75vmin 0 0.65vmin var(--hair-light),
+          5.25vmin -6.2vmin var(--hair),
+          -0.75vmin -6vmin 0 0.15vmin var(--hair),
+          1.75vmin -7vmin 0 0.65vmin var(--hair),
+          4.25vmin -7.5vmin 0 0.15vmin var(--hair),
+          6vmin -7.5vmin 0 -0.25vmin var(--hair),
+          /* lines */
+          0 0 0 0.35vmin,
+          -1.75vmin 0.5vmin 0 0.35vmin,
+          -1.25vmin -1.5vmin 0 0.85vmin,
+          -1.75vmin -1.5vmin 0 0.85vmin,
+          -2vmin -4vmin 0 0.35vmin,
+          0.5vmin -4.5vmin 0 1.1vmin,
+          3.5vmin -5.25vmin 0 0.35vmin,
+          6.75vmin -5.75vmin 0 1vmin,
+          7.25vmin -5.75vmin 0 1vmin,
+           -0.75vmin -6vmin 0 0.5vmin,
+          1.75vmin -7vmin 0 1vmin,
+          4.25vmin -7.5vmin 0 0.5vmin,
+          6vmin -7.5vmin 0 0.1vmin,
+          /* top shadows */
+          0.5vmin -1vmin var(--skin-dark),
+          0.5vmin -4vmin 0 1.1vmin var(--skin-dark),
+          3.5vmin -4.75vmin 0 0.35vmin  var(--skin-dark),
+          6.25vmin -5.25vmin 0 1vmin var(--skin-dark)
+          ;
+      }
+      
+      .eye {
+        --extra:;
+        width: 35%;
+        height: 30%;
+        background: 
+          var(--extra)
+          radial-gradient(circle at 50% 55%, #fff 12%, #0000 13%),
+          radial-gradient(60% 66% at 60% 65%, #000 30%, var(--eye) 31% 40%, #0000 41%),
+          #fff;
+        border: 0.35vmin solid;
+        border-radius: 50%;
+        top: 44%;
+        left: 76%;
+        transform: translate(-50%, -50%);
+        box-shadow: inset 0.5vmin -0.1vmin #0001;
+
+        & ~ & {
+          left: 47%;
+          top: 45%;
+          scale: 1.05;
+          rotate: -3deg;
+        }
+      }
+
+      .nose {
+        width: 27%;
+        aspect-ratio: 1.2;
+        border-radius: 50%;
+        border: 0.3vmin solid #0000;
+        border-top: 0.35vmin solid;
+        border-right: 0.4vmin solid;
+        top: 52%;
+        left: 55%;
+        background: 
+          linear-gradient(45deg, #f000, var(--flush)),
+          linear-gradient(45deg, #0000, var(--skin) 50%);
+        background-clip: content-box;
+        rotate: 25deg;
+      }
+
+      .mouth {
+        width: 45%;
+        height: 20%;
+        border: 0.2vmin solid #0000;
+        border-bottom: 0.4vmin solid;
+        border-radius: 50%;
+        rotate: 5deg;
+        top: 64%;
+        left: 40%;
+        background:
+          linear-gradient(90deg, #0000 88%, #000 0 95%, #0000 0) 0 100% / 100% 50% no-repeat;
+        box-shadow: -0.05vmin 0.45vmin 0 -0.2vmin var(--skin-dark);
+
+        &::before {
+          content: "";
+          width: 75%;
+          height: 100%;
+          border: 0.2vmin solid #0000;
+          border-bottom: 0.35vmin solid;
+          border-radius: 50%;
+          top: 40%;
+          left: 0%;
+          rotate: 25deg;
+        }
+
+        &::after {
+          content: "";
+          width: 23%;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          border: 0.3vmin solid;
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+          top: 70%;
+          left: 0%;
+        }
+      }
+
+
+    }
+  }
+}
+
+section > div:nth-child(1) {
+  .bubble {
+    top: 20%;
+    left: 45%;
+    width: 30%;
+    font-size: 2.25vmin;
+    text-align: center;
+    line-height: 1.2;
+    
+    &::before {
+      content: "";
+      height: 80%;
+      width: 30%;
+      border-radius: 0 0 100% 0;
+      border-right: 0.35vmin solid;
+      border-bottom: 0.3vmin solid;
+      top: 105%;
+    }
+  }
+}
+
+section > div:nth-child(2) {
+  .bubble-1 {
+    top: 8%;
+    left: 8%;
+    width: 30%;
+    font-size: 1.75vmin;
+    text-align: center;
+    line-height: 1.2;
+    
+    &::before {
+      content: "";
+      height: 80%;
+      width: 60%;
+      border-radius: 0 0 100% 0;
+      border-right: 0.35vmin solid;
+      border-bottom: 0.3vmin solid;
+      top: 105%;
+      transform: translate(-50%);
+    }
+  }
+  
+  .bubble-2 {
+    top: 55%;
+    left: 10%;
+    width: 41%;
+    font-size: 2.25vmin;
+    text-align: center;
+    line-height: 1.2;
+    
+    &::before {
+      content: "";
+      height: 4vmin;
+      width: 40%;
+      border-radius: 100% 0 0 0;
+      border-left: 0.35vmin solid;
+      border-top: 0.3vmin solid;
+      bottom: 95%;
+      left: 90%;
+      transform: translate(-50%);
+      rotate: 8deg;
+    }
+    
+    & * {
+      position: relative;
+    }
+  }
+}
+
+section:nth-child(1) {
+  .chest::before {
+    content: none !important;
+  }
+  
+  & > div:nth-child(1) {
+    
+  }
+  
+  & > div:nth-child(2) {
+    .person {
+      scale: -1 1;
+      left: 45%;
+    }
+  }
+}
+
+section:nth-child(2) {
+  & > div:nth-child(2) {
+    .bubble-2 {
+      top: 64%;
+      width: 45%;
+      left: 5%;
+    }
+    .person {
+      scale: -1 1;
+      left: 45%;
+      
+      .face {
+        --extra: repeating-linear-gradient(90deg, #0000 0 4%, #f002 0 5%) 0 0 / 100% 20% no-repeat, linear-gradient(#c002, #f000 50%), linear-gradient(#f001 0 0),;
+        --flush: #f003;
+      }
+      
+      .eye {
+        --extra: linear-gradient(-20deg, #0000 73%, #000 0),;
+        clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+        
+        & ~ & {
+          --extra: linear-gradient(20deg, #0000 74%, #000 0),;
+          clip-path: polygon(0 0%, 100% 30%, 100% 100%, 0 100%);
+        }
+      }
+      
+      .mouth {
+        top: 74%;
+        width: 40%;
+        background: linear-gradient(#c002 0 0), var(--skin-dark);
+        height: 10%;
+        border: 0.4vmin solid;
+        clip-path: polygon(0 0, 105% 0, 60% 100%, 0 100%);
+        
+        &::before, &::after {
+          content: none;
+        }
+      }
+      
+      .eyebrow {
+        rotate: 15deg;
+        height: 11%;
+        top: 31%;
+        left: 20%;
+        
+        & ~ & {
+          height: 10%;
+          rotate: -20deg;
+          top: 30%;
+          left: 63%;
+        }
+      }
+      
+      .chest::before {
+        transform: scale(-1,1) rotate(2deg) skew(-2deg) skewy(4deg) scale(0.8);
+        left: 49%;
+      }
+    }
+  }
+}
+
+.no-overflow {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.crt {
+  border: 0.5vmin solid;
+  border-bottom: 0.75vmin solid;
+  border-radius: 10% / 70% 10% 10% 70%;
+  box-shadow: inset 1vmin -0.5vmin #2102;
+  height: 45%;
+  width: 40%;
+  transform: rotate(3deg);
+  left: 60%;
+  top: 50%;
+  background: #edc;
+  
+  &::before {
+    content: "";
+    width: 100%;
+    height: 85%;
+    border: 0.5vmin solid;
+    border-bottom: 0.75vmin solid;
+    border-radius: 10% / 70% 10% 10% 70%;
+    box-shadow: inset 6vmin -0.125vmin 0 0.5vmin #2102;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+    background: 
+      repeating-linear-gradient(90deg, #0000 0 5%, #0003 0 10%) 50% 20% / 20% 30% no-repeat,
+      linear-gradient(#333 0 0) 99% 90% / 10% 10% no-repeat,
+      #edc;
+  }
+  
+  &::after {
+    
+    content: "";
+    width: 60%;
+    height: 90%;
+    background: #edc;
+    border: 0.5vmin solid;
+    border-left: 0.6vmin solid;
+    border-radius: 100% / 250% 250% 30% 40%;
+    top: 89%;
+    left: 50%;
+    translate:-30%;
+     box-shadow: inset 1vmin 1vmin #2102;
+  }
+}
+
+.mac {
+  width: 40%;
+  height: 35%;
+  border: 0.5vmin solid;
+  background: 
+    linear-gradient(#eee 0 0) 55% 42% / 1.25% 10% no-repeat,
+    radial-gradient(circle at 58.5% 43%, #ccc 2%, #0000 0),
+    radial-gradient(circle at 60.5% 45.5%, #ccc 2%, #0000 0),
+    radial-gradient(40% 85% at 52.5% 50%, #eee 10%, #0000 0),
+    radial-gradient(40% 85% at 57.5% 50%, #eee 10%, #0000 0),
+    #ccc;
+  top: 68%;
+  transform: skew(-10deg);
+  border-radius: 1vmin;
+  left: 60%;
+  box-shadow: inset 0.5vmin 0 #0001;
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <div>
+          <h2>Building a website in 2003</h2>
+          <div class="no-overflow">
+            <div class="crt"></div>
+          </div>
+          <div class="bubble">Off to build a new website!</div>
+          <div class="person">
+            <div class="body">
+              <div class="arm"></div>
+              <div class="chest">
+                <div class="arm"></div>
+              </div>
+            </div>
+            <div class="head">
+              <div class="neck"></div>
+              <div class="ear"></div>
+              <div class="hair-back"></div>
+              <div class="face">
+                <div class="eye"></div>
+                <div class="nose"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+                <div class="hair"></div>
+                <div class="ear"></div>
+                <div class="eyebrow"></div>
+                <div class="eyebrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="bubble bubble-1">How's your website coming along?</div>
+          <div class="bubble bubble-2"><b>Fantastic!</b> I just finished the landing page! Working on the About, and found a super cool JS script online that...</div>
+          <div class="person">
+            <div class="body">
+              <div class="arm"></div>
+              <div class="chest">
+                <div class="arm"></div>
+              </div>
+            </div>
+            <div class="head">
+              <div class="neck"></div>
+              <div class="ear"></div>
+              <div class="hair-back"></div>
+              <div class="face">
+                <div class="eye"></div>
+                <div class="nose"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+                <div class="hair"></div>
+                <div class="ear"></div>
+                <div class="eyebrow"></div>
+                <div class="eyebrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Building a website in 2023</h2>
+          <div class="no-overflow">
+            <div class="mac"></div>
+          </div>
+          <div class="bubble">Off to build a new website!</div>
+          <div class="person">
+            <div class="body">
+              <div class="arm"></div>
+              <div class="chest">
+                <div class="arm"></div>
+              </div>
+            </div>
+            <div class="head">
+              <div class="neck"></div>
+              <div class="ear"></div>
+              <div class="hair-back"></div>
+              <div class="face">
+                <div class="eye"></div>
+                <div class="nose"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+                <div class="hair"></div>
+                <div class="ear"></div>
+                <div class="eyebrow"></div>
+                <div class="eyebrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="bubble bubble-1">How's your website coming along?</div>
+          <div class="bubble bubble-2"><b>What &*@$%ing website?!</b> I haven't finished setting up the dev environment yet!!</div>
+          <div class="person">
+            <div class="body">
+              <div class="arm"></div>
+              <div class="chest">
+                <div class="arm"></div>
+              </div>
+            </div>
+            <div class="head">
+              <div class="neck"></div>
+              <div class="ear"></div>
+              <div class="hair-back"></div>
+              <div class="face">
+                <div class="eye"></div>
+                <div class="nose"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+                <div class="hair"></div>
+                <div class="ear"></div>
+                <div class="eyebrow"></div>
+                <div class="eyebrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

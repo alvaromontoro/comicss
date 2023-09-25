@@ -812,4 +812,12 @@ const posts = [
     title: "News",
     ariaLabel: "Cartoon with two newscasters (a white man and a Black woman) reading the news from a paper. The mustached man says 'After a very long time, this week did not get a new CSS feature released by the CSS working group, or supported by any of the major browsers.' The woman adds, 'Police have already arrested the culprit, who, we hope, will spend a long time behind bars.'"
   },
+  {
+    id: 104,
+    uid: "evolution",
+    boxes: 2,
+    vertical: true,
+    title: "Then and Now",
+    ariaLabel: "Comic with 2 rows. The first one is titled 'Web programming in 2003'. A person says 'I am off to develop a website', and comes back 5 hours later saying it completed the landing page, and found some cool effects. The row below is titled 'Web development in 2023'. The same person says 'I am off to develop a website', and comes back angry after 5 hours, no web development done, it has all been setting up the dev environment (and it's not done yet)"
+  },
 ]
