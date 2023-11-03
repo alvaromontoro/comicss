@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+.divtober {
+  --c1: 7em;
+  --c2: 52em;
+  font-size: 1vmin;
+  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+  width: 80vmin;
+  height: 60vmin;
+  box-sizing: border-box;
+  border: 0.75vmin solid;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    /* character 1 */
+    /* eyes */
+    radial-gradient(circle at calc(var(--c1) + 9em) 47.5%, #000 1em, #0000 0),
+    radial-gradient(circle at calc(var(--c1) + 15em) 47.5%, #000 1em, #0000 0),
+    /* mouth */
+    radial-gradient(farthest-side at 50% 0, #000 99%, #0000) calc(var(--c1) + 11.25em) 52% / 2em 1em,
+    /* head */
+    radial-gradient(farthest-side, #fff calc(99% - 0.5em), #000 0 99%, #0000) var(--c1) 45% / 20em 13.5em,
+    /* neck */
+    linear-gradient(90deg, #000 0.5em, #fff 0 2em, #000 0 2.5em) calc(var(--c1) + 8.5em) 50% / 2.5em 15em,
+    /* body */
+    conic-gradient(from 169deg at 50% -30%, #000 20deg, #0000 0) calc(var(--c1) - 0.333em) 100% / 20em 22.5em,
+    
+    /* person 2 */
+    /* eyes */
+    linear-gradient(182deg, #fff 50%, #0000 0) calc(var(--c2) + 3em) 46.6% / 10em 3em,
+    radial-gradient(circle at calc(var(--c2) + 5em) 47.5%, #000 1em, #0000 0),
+    radial-gradient(circle at calc(var(--c2) + 11em) 47.75%, #000 1em, #0000 0),
+    
+    /* mouth */
+    radial-gradient(farthest-side at 50% 100%, #000 99%, #0000) calc(var(--c2) + 7.25em) 52% / 2em 1em,
+    /* head */
+    radial-gradient(farthest-side, #fff calc(99% - 0.5em), #000 0 99%, #0000) var(--c2) 45% / 20em 13.5em,
+    /* neck */
+    linear-gradient(90deg, #000 0.5em, #fff 0 2em, #000 0 2.5em) calc(var(--c2) + 8.5em) 50% / 2.5em 15em,
+    /* body */
+    conic-gradient(from 168deg at 50% -25%, #000 21.5deg, #0000 0) calc(var(--c2) - 0.9em) 100% / 21em 22.5em,
+    
+    /* speech lines */
+    radial-gradient(farthest-side at 0 0, #0000 95%, #000 0 99%, #0000) 40% 30% / 9em 9em,
+    radial-gradient(farthest-side at 100% 100%, #0000 92%, #000 0 99%, #0000) 63% 58% / 5em 4em,
+    
+    /* base */
+    linear-gradient(#c9c9, #c9c0);
+  background-repeat: no-repeat;
+}
+
+.divtober::before {
+  content: "Now that divtober is over, our author can finally focus on comiCSS and forget about single-div drawings";
+  position: absolute;
+  font-size: 3em;
+  line-height: 1.25;
+  width: 52%;
+  text-wrap: balance;
+  text-align: center;
+  top: 5%;
+  left: 15%;
+}
+
+.divtober::after {
+  content: "Yeah... About that...";
+  position: absolute;
+  font-size: 2.5em;
+  line-height: 1.25;
+  width: 25%;
+  text-wrap: balance;
+  text-align: center;
+  top: 61%;
+  left: 45%;
+}
+    </style>
+  </head>
+  <body>
+    <div class="divtober" role="img" aria-label="Cartoon with two characters talking. One happily says 'Now that divtober is over, our author can finally focus on comiCSS and forget about single-div drawings'. A loomy-looking character replies 'Yeah... about that...' -Author's note: the cartoon is a single-div drawing"></div>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

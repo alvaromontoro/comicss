@@ -1982,4 +1982,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Divtober</title>
+    <link href="https://comicss.art/?id=105" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/105/divtober.html"/>
+    <id>https://comicss.art/?id=105</id>
+    <updated>2023-11-03T00:00:00Z</updated>
+    <summary>New Cartoon: Divtober</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/105/divtober.png" alt="Cartoon with two characters talking. One happily says 'Now that divtober is over, our author can finally focus on comiCSS and forget about single-div drawings'. A loomy-looking character replies 'Yeah... about that...' -Author's note: the cartoon is a single-div drawing" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

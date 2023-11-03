@@ -820,4 +820,12 @@ const posts = [
     title: "Then and Now",
     ariaLabel: "Comic with 2 rows. The first one is titled 'Web programming in 2003'. A person says 'I am off to develop a website', and comes back 5 hours later saying it completed the landing page, and found some cool effects. The row below is titled 'Web development in 2023'. The same person says 'I am off to develop a website', and comes back angry after 5 hours, no web development done, it has all been setting up the dev environment (and it's not done yet)"
   },
+  {
+    id: 105,
+    uid: "divtober",
+    boxes: 1,
+    vertical: true,
+    title: "Divtober",
+    ariaLabel: "Cartoon with two characters talking. One happily says 'Now that divtober is over, our author can finally focus on comiCSS and forget about single-div drawings'. A loomy-looking character replies 'Yeah... about that...' -Author's note: the cartoon is a single-div drawing"
+  },
 ]
