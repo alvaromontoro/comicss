@@ -2001,4 +2001,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>text-wrap</title>
+    <link href="https://comicss.art/?id=106" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/106/text-wrap.html"/>
+    <id>https://comicss.art/?id=106</id>
+    <updated>2023-11-06T00:00:00Z</updated>
+    <summary>New Cartoon: text-wrap</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/106/text-wrap.png" alt="cartoon with three characters whose body is the text 'my body is a very long text that wraps along four or maybe five lines' squeezed together and have stick legs. The first character is on a skateboard, it has the body text well balanced, and is saying 'looking prety...' to the second character. The second character is wearing boots, its body text has two words in the last line, and replies 'looking balanced' to the first character. The last character looks sad/tired, its body text is grayer and the last line only contains an unbalanced one word. It says looking at the other characters 'I hate you two...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -828,4 +828,12 @@ const posts = [
     title: "Divtober",
     ariaLabel: "Cartoon with two characters talking. One happily says 'Now that divtober is over, our author can finally focus on comiCSS and forget about single-div drawings'. A loomy-looking character replies 'Yeah... about that...' -Author's note: the cartoon is a single-div drawing"
   },
+  {
+    id: 106,
+    uid: "text-wrap",
+    boxes: 1,
+    vertical: true,
+    title: "test-wrap",
+    ariaLabel: "cartoon with three characters whose body is the text 'my body is a very long text that wraps along four or maybe five lines' squeezed together and have stick legs. The first character is on a skateboard, it has the body text well balanced, and is saying 'looking prety...' to the second character. The second character is wearing boots, its body text has two words in the last line, and replies 'looking balanced' to the first character. The last character looks sad/tired, its body text is grayer and the last line only contains an unbalanced one word. It says looking at the other characters 'I hate you two...'"
+  },
 ]
