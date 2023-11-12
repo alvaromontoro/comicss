@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1vmin;
+  width: 80em;
+  height: 60em;
+  font-family: Helvetica, Arial, sans-serif;
+  
+  & *,
+  & *::before,
+  & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  & h1 {
+    margin: 0;
+    font-size: 4.5em;
+    
+    text-align: center;
+    width: 100%;
+    top: 0;
+  }
+  
+  .chart-lines {
+    width: 77%;
+    height: 51%;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: 
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 10% 100% / 1px 5%,
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 20% 100% / 1px 14%,
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 30% 100% / 1px 60%,
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 40% 100% / 1px 89%,
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 50% 100% / 1px 100%,
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 60% 100% / 1px 89%,
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 70% 100% / 1px 60%,
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 80% 100% / 1px 14%,
+      repeating-linear-gradient(#000 0 1em, #0000 0 2em) 90% 100% / 1px 5%,
+      #0000;
+    background-repeat: no-repeat;
+  }
+  
+  .legend {
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 3em;
+    
+    &::before,
+     &::after{
+      content: "";
+      width: 5em;
+      height: 1em;
+      background: #000;
+      top: 50%;
+      left: 100%;
+      transform: translate(0.25em, -50%);
+      clip-path: polygon(0 40%, 88% 40%, 85% 0, 100% 50%, 85% 100%, 88% 60%, 0 60%);
+    }
+    
+    &::after {
+      left: 0;
+      transform: translate(calc(-100% - 0.25em), -50%);
+      clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+    }
+  }
+  
+  .chart {
+    width: 35%;
+    height: 40%;
+    background: #00f2;
+    top: 50%;
+    left: 50%;
+    transform: translatE(-50%, -50%);
+    background: radial-gradient(51% 100% at 50% 120%, #8df 97%, #000 97.5% 99.5%, #0000);
+    box-shadow: 0 11.87em 0 -0.1em #8df;
+    
+    
+    &::before {
+      content: "";
+      width: calc(60% + 0.5em);
+      height: 50%;
+      background: #f003;
+      transform: translate(calc(-100% + 0.425em), 198%);
+      background: radial-gradient(100.25% 100% at 0 -5%, #0000 97.5%, #000 98% 99.5%, #8df);
+    }
+    
+    &::after {
+      content: "";
+      width: calc(60% + 0.5em);
+      height: 50%;
+      background: #f003;
+      left: 100%;
+      transform: translate(-0.425em, 198%);
+      background: radial-gradient(100.25% 100% at 100% -5%, #0000 97.5%, #000 98% 99.5%, #8df);
+    }
+  }
+  
+  .developer {
+    width: 36em;
+    height: 18em;
+    background: 
+      radial-gradient(25% 120% at 30% 120%, #ccc 95%, #000 0 99%, #0000) 00% 100% / 80% 30%,
+      #00f0;
+    background-repeat: no-repeat;
+    -webkit-mask: linear-gradient(#000 80%, #0000 95%);
+    
+    &::before {
+      --eye:;
+      --mouth:;
+      --base:;
+      content: "";
+      width: 30%;
+      height: 65%;
+      top: 5%;
+      left: 10%;
+      border: 0.35em solid;
+      border-radius: 100% / 90% 90% 120% 110%;
+      background: 
+        /* mouth */
+        var(--mouth)
+        /* eyes */
+        var(--eye)
+        radial-gradient(55% 60% at 48% 50%, #000 0.65em, #0000 0),
+        radial-gradient(55% 60% at 78% 50%, #000 0.65em, #0000 0),
+        /* base color */
+        var(--base)
+        #fff;
+      background-repeat: no-repeat;
+    }
+    
+    &::after {
+      --pos: 1em;
+      --ini: 0;
+      content: "That is cool";
+      font-size: 2.25em;
+      text-align: center;
+      left: 39%;
+      top: 10%;
+      width: 30%;
+      padding-bottom: 2em;
+      background: 
+        radial-gradient(farthest-side at var(--ini) 0, #0000 93%, #000 0 99%, #0000) var(--pos) 100% / 2em 1.8em no-repeat;
+      font-family: 'Patrick Hand SC', Helvetica, Arial, sans-serif;
+      line-height: 1;
+    }
+    
+    &.junior {
+      top: 52%;
+      left: 1%;
+      
+      &::before {
+        --mouth:radial-gradient(at 62% 82%, #000 0.65em, #0000 0),;
+      }
+    }
+    
+    &.middle {
+      top: 10.5%;
+      left: 25%;
+      
+      &::after {
+        --pos: 0;
+        content: "No! That is wrong! You should be using SVG instead!";
+        left: 42%;
+        top: -2%;
+        width: 50%;
+      }
+      
+      &::before {
+        --eye: conic-gradient(from 290deg at 50% 100%, #fff 140deg, #0000 0) 93% 42% / 70% 15%,;
+        --base: 
+          linear-gradient(#f003, #f000 35%),
+          linear-gradient(#9ef 0 0) 47% 100% / 10% 50%,
+          linear-gradient(#9ef 0 0) 81% 100% / 10% 50%,
+          ;
+        --mouth:
+          linear-gradient(#000 15%, #0000 0 42.5%, #000 0 57.5%, #0000 0 85%, #000 0) 4.75em 8.25em / 3em 1.35em,
+          repeating-linear-gradient(90deg, #fff 0 20%, #000 0 25%) 4.75em 8.25em / 3em 1.35em,
+          radial-gradient(farthest-side at 100% 50%, #fff 70%, #000 0 99%, #0000) 4.1em 8.25em / 0.675em 1.35em,
+          ;
+      }
+    }
+    
+    &.senior {
+      top: 53%;
+      right: 1%;
+      transform: scaleX(-1);
+      
+      &::before {
+        --eye: linear-gradient(#fff 0 0) 93% 42% / 70% 6%,;
+        --mouth: radial-gradient(farthest-side at 90% 5%, #0000 80%, #000 0 99%, #0000) 50% 83% / 25% 8%,;
+      }
+      
+      &::after {
+        --ini: 100%;
+        --pos: 2.5em;
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>Reactions to CSS Art</h1>
+      <div class="legend" aria-hidden="true">Web Dev Experience</div>
+      <div class="chart"></div>
+      <div class="chart-lines"></div>
+      <div class="developer junior" role="img" aria-label="cartoon of an amazed junior developer saying 'that is cool'"></div>
+      <div class="developer middle" role="img" aria-label="cartoon of an angry and crying mid-level developer saying 'no! that is wrong! you should be using SVG instead!'"></div>
+      <div class="developer senior" role="img" aria-label="cartoon of a smiling senior developer saying 'that is cool'"></div>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

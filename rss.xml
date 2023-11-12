@@ -1066,5 +1066,15 @@
       <enclosure url="https://comicss.art/comics/106/text-wrap.png" length="202000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=107</guid>
+      <title>Reactions (meme)</title>
+      <link>https://comicss.art/?id=107</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/107/reactions-meme.png" length="120000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

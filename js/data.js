@@ -836,4 +836,12 @@ const posts = [
     title: "test-wrap",
     ariaLabel: "cartoon with three characters whose body is the text 'my body is a very long text that wraps along four or maybe five lines' squeezed together and have stick legs. The first character is on a skateboard, it has the body text well balanced, and is saying 'looking prety...' to the second character. The second character is wearing boots, its body text has two words in the last line, and replies 'looking balanced' to the first character. The last character looks sad/tired, its body text is grayer and the last line only contains an unbalanced one word. It says looking at the other characters 'I hate you two...'"
   },
+  {
+    id: 107,
+    uid: "reactions-meme",
+    boxes: 1,
+    vertical: true,
+    title: "Reactions (Meme)",
+    ariaLabel: "Cartoon with a bell chart titled 'Reactions to CSS Art'. At the bottom left, a figure of a surprised junior developer says 'That is cool'. At the top center, a mid-level developer cries 'No! That is wrong! You should be using SVG instead!'. At the bottom right, a senior developer grins and says 'That is cool'"
+  },
 ]
