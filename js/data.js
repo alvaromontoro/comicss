@@ -852,4 +852,12 @@ const posts = [
     title: "Sharing Demos Online: Social Media Reaction",
     ariaLabel: "Cartoon with a 3x3 grid titled 'sharing a demo online: social media reactions'. From Left to Right, Top to Bottom. Beginner Devs: a woman wearing a Mexico jerseys says 'Wow! This is so cool! Let me save it in a bookmark that I will never check again.' Snob Devs: a man wearing a turtle neck and glasses say 'That is great, but why not using something like [name of property supported by only 1 percent of the browsers]'. Designers: a person with yellow and pink hair says 'Wow! and THAT is why developers should NEVER design!' Recruiters: a robot says 'Hey! I saw your cool JavaScript demo. I have a Java opening that would be perfect for you! Javascript and Java are the same, right?' Your professors: a Black man with gray hair says 'Four years teaching them... for this? sigh... Retirement cannot arrive soon enough.' Grifters: a guy saying 'check this demo *I* totally coded myself.' Your partner: a Woman wearing a dress and pearls sobs: 'They say that sh*t took them 6 hours to code... I bet they are cheating!' Your manager: a big man wearing a suit and smoking a cigar complains: 'If they have time to build this sh*t off work, they have time to work... double their tasks!' Friends and family: a angry-looking person complains 'again with this sh*t? can they not post normal stuff like everyone else? Unfollow!'"
   },
+  {
+    id: 109,
+    uid: "coincidence",
+    boxes: 1,
+    vertical: true,
+    title: "Coincidence?",
+    ariaLabel: "Cartoon with a table showing the different planets of the solar system in order closer to farther from the Sun. All of them show 0 deaths and no CSS, except for Earth that has CSS and 117,020,448,575 deaths. Below the table there's a question: coincidence?"
+  },
 ]

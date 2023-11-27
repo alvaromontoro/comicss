@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+html {
+  font-size: 0.5vmin;
+}
+
+body {
+  font-size: 0.5vmin;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background: 
+    radial-gradient(circle at 17% 23%, #fff9 0.5em, #fff0 0) 35% 35% / 85% 65%,
+    radial-gradient(circle at 17% 23%, #fffa 0.35em, #fff0 0) 35% 35% / 65% 85%,
+    radial-gradient(circle at 37% 17%, #fff8 0.25em, #fff0 0) 15% 71% / 75% 75%,
+    radial-gradient(circle at 50% 50%, #fff9 0.35em, #fff0 0) 11% 40% / 45% 51%,
+    radial-gradient(circle at 7% 43%, #fff 0.35em, #fff0 0) 25% 65% / 55% 55%,
+    radial-gradient(circle at 50% 50%, #fff 0.35em, #fff0 0) 35% 35% / 65% 35%,
+    radial-gradient(circle at 17% 23%, #fff 0.35em, #fff0 0) 35% -15% / 55% 75%,
+    radial-gradient(circle, #fffe 0.3em, #fff0 0),
+    #123;
+}
+
+article {
+  font-family: Roboto, Arial, Verdana, sans-serif;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #def;
+  font-size: 8em;
+  text-align: center;
+  
+  & table {
+    font-size: 1em;
+    position: relative;
+    overflow: clip;
+    width: 70vmin;
+    
+    & caption {
+      position: absolute;
+      left: -1000in;
+    }
+    
+    & tr {
+      height: 1.95em;
+      padding: 0;
+      
+      & td, & th {
+        padding: 0;
+      }
+    }
+    
+    & thead th {
+      padding-top: 1em;
+      width: 25%;
+      
+      &:first-child {
+        width: 40%;
+      }
+      
+      & span {
+        position: absolute;
+        left: -1000in;
+      }
+    }
+    
+    & th:nth-child(1) {
+      font-size: 1.75em;
+      padding: 0;
+      position: relative;
+      
+      & div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: inline-block;
+        width: 1em;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        box-shadow: inset 0 -0.075em #0002;
+      }
+        
+      &#th-mercury div {
+        width: 0.35em;
+        background: 
+          radial-gradient(circle at 30% 30%, #fff2 10%, #0000 0),
+          radial-gradient(circle at 80% 60%, #0032 16%, #0000 0),
+          radial-gradient(circle at 30% 30%, #3002 10%, #0000 0) 50% 50% / 50% 50%,
+          radial-gradient(circle at 30% 30%, #3001 15%, #0000 0) 30% 40% / 30% 30%,
+          radial-gradient(circle at 50% 30%, #3002 13%, #0000 0) 18% 21% / 60% 50%,
+          radial-gradient(circle at 40% 80%, #3002 11%, #0000 0),
+          radial-gradient(circle at 70% 10%, #3002 11%, #0000 0),
+          #c8c7c1
+          ;
+      }
+
+      &#th-venus div {
+        width: 0.45em;
+        background:
+          repeating-radial-gradient(110% 100% at 50% -50%, #0000 0 20%, #f002 0 40%),
+          repeating-radial-gradient(110% 100% at 50% -50%, #0000 0 8%, #ff957088 0 25%),
+          #facebf
+          ;
+      }
+
+      &#th-earth div {
+        width: 0.6em;
+        background:
+          #508fef;
+        overflow: clip;
+        
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #35cdb5;
+          border-radius: 50%;
+          clip-path: polygon(102% -1%, 43% -1%,43% 19%,41% 18%,39% 13%,39% 6%,35% 4%,35% 14%,30% 20%,43% 20%,43% -1%,49% -1%, 100% -1%,50% 6%,61% 5%,63% -3%,65% 13%,60% 13%,60% 9%,58% 9%,58% 14%,53% 14%,51% 21%,45% 22%,41% 27%,43% 35%,36% 35%,35% 41%,38% 44%,44% 43%,47% 37%,51% 34%,55% 36%,57% 41%,55% 44%,60% 42%,63% 42%,59% 35%,60% 32%,62% 32%,63% 35%,67% 38%,70% 42%,73% 39%,75% 35%,78% 32%,85% 32%,90% 36%,91% 42%,86% 44%,78% 45%,72% 47%,71% 52%,78% 56%,85% 56%,91% 53%,96% 56%,91% 61%,89% 67%,76% 67%,67% 64%,57% 60%,53% 54%,46% 51%,41% 50%,38% 47%,28% 54%,21% 65%,20% 76%,26% 84%,39% 88%,43% 95%,43% 101%,89% 100%,93% 87%,102% 78%);
+          box-shadow: inset 0 -0.075em #0002;
+        }
+      }
+
+      &#th-mars div {
+        width: 0.45em;
+        background: 
+          radial-gradient(circle at 80% 30%, #fff2 10%, #0000 0),
+          radial-gradient(circle at 50% 60%, #0032 16%, #0000 0),
+          radial-gradient(circle at 30% 30%, #3002 10%, #0000 0) 50% 50% / 50% 50%,
+          radial-gradient(30% 30%, #3001 15%, #0000 0) 30% 40% / 30% 30%,
+          radial-gradient(circle at 40% 30%, #3002 13%, #0000 0) 18% 21% / 60% 50%,
+          radial-gradient(circle at 70% 80%, #3002 11%, #0000 0),
+          radial-gradient(circle at 30% 10%, #3002 11%, #0000 0),
+          #f5885f;
+      }
+
+      &#th-jupiter div {
+        width: 1em;
+        background:
+/*           radial-gradient(30% 20% at 30% 68%, #c36a47 45%, #d69059 0 70%, #0000 0), */
+          radial-gradient(100% 100% at 50% -50%, #0000 0 60%, #d69059 0 65%, #0000 0 80%, #d69059 0 90%, #0000 0 110%, #d69059 0 130%, #0000 0),
+          radial-gradient(100% 100% at 50% -50%, #d6bc90 0 72%, #0000 0 75%, #d6bc90 0 96%, #0000 0 105%, #d6bc90 0 135%, #0000 0 140%, #d6bc90),
+          #ded3a7;
+        
+        &::before {
+          content: "";
+          position: absolute;
+          top: 53%;
+          left: 55%;
+          transform: translate(-50%, -50%) rotate(10deg);
+          border-radius: 50%;
+          width: 95%;
+          height: 95%;
+          background:radial-gradient(30% 20% at 30% 68%, #c36a47 45%, #d69059 0 70%, #0000 0);
+        }
+      }
+
+      &#th-saturn div {
+        width: 0.8em;
+        background:
+          repeating-radial-gradient(110% 100% at 50% -50%, #0000 0 20%, #be876577 0 40%),
+          repeating-radial-gradient(110% 100% at 50% -50%, #0000 0 8%, #d9c08a88 0 25%),
+          #d9cea9;
+        
+        &::before, &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-10deg);
+          border-radius: 50%;
+          width: 230%;
+          height: 80%;
+          background: radial-gradient(55% 50% at 50% 45%, #0000 59%, #d3d0bd 0 75%, #a59d8b 0 80%, #d3d0bd 0);
+          clip-path: polygon(0 49%, 100% 49%, 100% 100%, 0 100%);
+        }
+        
+        &::after {
+          -webkit-mask: radial-gradient(circle at 50% 50%, #0000 40%, #000 0);
+          clip-path: polygon(0 0, 100% 0, 100% 51%, 0 51%);
+        }
+      }
+
+      &#th-uranus div {
+        width: 0.71em;
+        background:
+          repeating-radial-gradient(100% 100% at 50% -50%,#4eade2 0 16%, #0000 0 27%),
+          repeating-radial-gradient(100% 100% at 50% -50%,#4997c8 0 19%, #0000 0 29%),
+          
+          #6acef5;
+        
+        &::before, &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-10deg);
+          border-radius: 50%;
+          width: 150%;
+          height: 40%;
+          border: 0.01em solid #fff;
+          clip-path: polygon(0 49%, 100% 49%, 100% 100%, 0 100%);
+        }
+        
+        &::after {
+          -webkit-mask: radial-gradient(circle at 50% 50%, #0000 55%, #000 0);
+          clip-path: polygon(0 0, 100% 0, 100% 51%, 0 51%);
+        }
+      }
+
+      &#th-neptune div {
+        width: 0.7em;
+        
+        background:
+          radial-gradient(30% 20% at 30% 54%, #0d60a6 45%, #0000 0),
+          radial-gradient(100% 100% at 50% -50%, #0000 0 60%, #3d6cbc 0 65%, #0000 0 90%, #3d6cbc 0 115%, #0000 0 130%, #3d6cbc 0 150%, #0000 0),
+          radial-gradient(100% 100% at 50% -50%, #477fc1 0 72%, #0000 0 75%, #578fd1 0 96%, #0000 0 105%, #477fc1 0 135%, #0000 0 140%, #677fe1),
+          #3d80c6;
+      }
+    }
+
+    & td:nth-child(2) {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 0.8em;
+    }
+    
+    & td:nth-child(3) {
+      text-align: center;
+      vertical-align: middle;
+      
+      & div {
+        display: inline-block;
+        width: 1em;
+        aspect-ratio: 1;
+        background: red;
+        border-radius: 0.2em;
+        
+        &[aria-label="No"] {
+          width: 0.8em;
+          background: 
+            linear-gradient( 45deg, #f000 42%, #f00 0 58%, #f000 0),
+            linear-gradient(-45deg, #f000 42%, #f00 0 58%, #f000 0);
+        }
+        
+        &[aria-label="Yes"] {
+          background: 
+            linear-gradient( 55deg, #f000 10%, #0a0 0 23%, #f000 0),
+            linear-gradient(-45deg, #f000 30%, #0a0 0 43%, #f000 0);
+          border-radius: 50% / 100% 50% 100% 100%;
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <table>
+        <caption>Human deaths by planet and CSS existence</caption>
+        <thead>
+          <tr>
+            <th scope="col" id="th-planet"><span>Planet</span></th>
+            <th scope="col" id="th-deaths">Deaths</th>
+            <th scope="col" id="th-css">CSS?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" id="th-mercury" aria-describedby="th-planet">
+              <div role="img" aria-label="Mercury" title="Mercury"></div>
+            </th>
+            <td aria-describedby="th-mercury th-deaths">
+              0
+            </td>
+            <td aria-describedby="th-mercury th-css">
+              <div role="img" aria-label="No" title="No"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" id="th-venus" aria-describedby="th-planet">
+              <div role="img" aria-label="Venus" title="Venus"></div>
+            </th>
+            <td aria-describedby="th-venus th-deaths">
+              0
+            </td>
+            <td aria-describedby="th-venus th-css">
+              <div role="img" aria-label="No" title="No"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" id="th-earth" aria-describedby="th-planet">
+              <div role="img" aria-label="Earth" title="Earth"></div>
+            </th>
+            <td aria-describedby="th-earth th-deaths">
+              <!-- source https://www.prb.org/articles/how-many-people-have-ever-lived-on-earth/ -->
+              117,020,448,575
+            </td>
+            <td aria-describedby="th-earth th-css">
+              <div role="img" aria-label="Yes" title="Yes"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" id="th-mars" aria-describedby="th-planet">
+              <div role="img" aria-label="Mars" title="Mars"></div>
+            </th>
+            <td aria-describedby="th-mars th-deaths">
+              0
+            </td>
+            <td aria-describedby="th-mars th-css">
+              <div role="img" aria-label="No" title="No"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" id="th-jupiter" aria-describedby="th-planet">
+              <div role="img" aria-label="Jupiter" title="Jupiter"></div>
+            </th>
+            <td aria-describedby="th-jupiter th-deaths">
+              0
+            </td>
+            <td aria-describedby="th-jupiter th-css">
+              <div role="img" aria-label="No" title="No"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" id="th-saturn" aria-describedby="th-planet">
+              <div role="img" aria-label="Saturn" title="Saturn"></div>
+            </th>
+            <td aria-describedby="th-saturn th-deaths">
+              0
+            </td>
+            <td aria-describedby="th-saturn th-css">
+              <div role="img" aria-label="No" title="No"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" id="th-uranus" aria-describedby="th-planet">
+              <div role="img" aria-label="Uranus" title="Uranus"></div>
+            </th>
+            <td aria-describedby="th-uranus th-deaths">
+              0
+            </td>
+            <td aria-describedby="th-uranus th-css">
+              <div role="img" aria-label="No" title="No"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" id="th-neptune" aria-describedby="th-planet">
+              <div role="img" aria-label="Neptune" title="Neptune"></div>
+            </th>
+            <td aria-describedby="th-neptune th-deaths">
+              0
+            </td>
+            <td aria-describedby="th-neptune th-css">
+              <div role="img" aria-label="No" title="No"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h1>Coincidence?</h1>
+    </article>
+    
+    
+    <a href="/" style="color: white; font-size: 16px; position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
