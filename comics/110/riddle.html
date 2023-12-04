@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  position: relative;
+  perspective: 1000px;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.santa-joke:focus {
+  transform: translate(-50%, -50%) rotateY(180deg);
+  transition-delay: 0s;
+}
+
+.santa-joke {
+  font-size: 2.3vmin;
+  width: 40em;
+  height: 30em;
+  box-sizing: border-box;
+  border: 0.1em solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  transform-style: preserve-3d;
+  display: grid;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-family: Arial, sans-serif;
+  padding: 17.4em 0.5em 0.5em 0.5em;
+  background-repeat: no-repeat;
+  font-weight: 300;
+  transition: transform 0.5s;
+  transition-delay: 0.2s;
+  background: 
+    /* ho ho ho */
+    linear-gradient(90deg, #000 20%, #0000 0 80%, #000 0) 60% 46% / 1.5em 2.5em,
+    linear-gradient(#0000 44%, #000 0 56%, #0000 0) 60% 46% / 1.5em 2.5em,
+    radial-gradient(farthest-side, #0000 70%, #000 0 99%, #0000 0) calc(60% + 1.75em) 46% / 1.75em 2.5em,
+    linear-gradient(90deg, #000 20%, #0000 0 80%, #000 0) 72% 41% / 1.5em 2.5em,
+    linear-gradient(#0000 44%, #000 0 56%, #0000 0) 72% 41% / 1.5em 2.5em,
+    radial-gradient(farthest-side, #0000 70%, #000 0 99%, #0000 0) calc(72% + 1.75em) 41% / 1.75em 2.5em,
+    linear-gradient(90deg, #000 20%, #0000 0 80%, #000 0) 84% 36% / 1.5em 2.5em,
+    linear-gradient(#0000 44%, #000 0 56%, #0000 0) 84% 36% / 1.5em 2.5em,
+    radial-gradient(farthest-side, #0000 70%, #000 0 99%, #0000 0) calc(84% + 1.75em) 36% / 1.75em 2.5em,
+    /* santa */
+    /* hat */
+    radial-gradient(53% 100%, #eee 99%, #0000) 27.75% 53% / 23.5% 6%,
+    radial-gradient(circle at 45% 35%, #fff 5%, #0000 0),
+    radial-gradient(100% 50% at 100% 100%, #d00 99.5%, #0000) 28.25% 23% / 21% 36%,
+    /* hair top */
+    conic-gradient(at 50% 100%, #fff 35deg, #0000 0 350deg, #fff 0) 30.25% 52.75% / 12% 10%,
+     conic-gradient(at 50% 100%, #fff 35deg, #0000 0 350deg, #fff 0) 31% 53.25% / 12% 10%,
+    /* nose */
+    radial-gradient(farthest-side at 50% 0, #fca, #fb9 99%, #0000) 32.5% 69% / 4% 2%,
+    radial-gradient(farthest-side at 50% 100%, #fca, #fb9 99%, #0000) 32.5% 66% / 4% 5%,
+    /* mustache */
+    radial-gradient(farthest-side at 50% 100%, #f4f4f4 99%, #0000) 27% 70% / 10% 3%,
+    radial-gradient(farthest-side at 50% 100%, #f4f4f4 99%, #0000) 35% 70% / 10% 3%,
+    radial-gradient(farthest-side at 50% -20%, #f4f4f4 99%, #0000) 26.75% 73% / 11.5% 4%,
+    radial-gradient(farthest-side at 50% -20%, #f4f4f4 99%, #0000) 35.25% 73% / 11.5% 4%,
+    /* lip */
+    radial-gradient(farthest-side at 50% 0, #fb9 98%, #0000) 32.5% 74% / 4% 2%,
+    /* eyebrows */
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 27% 58.5% / 6% 3%,
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 37% 58.5% / 6% 3%,
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 26.5% 58% / 6.5% 2.5%,
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 37.5% 58% / 6.5% 2.5%,
+    /* eyes */
+    radial-gradient(circle at 28.25% 62.5%, #fff 0.25em, #0000 0.3em),
+    radial-gradient(circle at 36.25% 62.5%, #fff 0.25em, #0000 0.3em),
+    radial-gradient(circle at 29% 61.5%, #fff 0.1em, #0000 0.15em),
+    radial-gradient(circle at 37% 61.5%, #fff 0.1em, #0000 0.15em),
+    radial-gradient(circle at 29% 63%, #000 0.65em, #0000 0.7em),
+    radial-gradient(circle at 37% 63%, #000 0.65em, #0000 0.7em),
+    /* cheeks */
+    radial-gradient(40% 30% at 27.25% 65.75%, #f001 6%, #0000 0),
+    radial-gradient(40% 30% at 38.75% 65.75%, #f001 6%, #0000 0),
+    /* face */
+    radial-gradient(circle at 33% 60%, #fca 13%, #0000 13.1%),
+    /* ears */
+    radial-gradient(farthest-side at 100% 50%, #fb9 30%, #fca 70% 99%, #0000) 20.25% 65% / 1em 2em,
+    radial-gradient(farthest-side at 0% 50%, #fb9 30%, #fca 70% 99%, #0000) 45% 65% / 1em 2em,
+    /* beard */
+    conic-gradient(at 50% 100%, #fff 45deg, #0000 0 320deg, #fff 0) 30.5% 88.5% / 12% 10%,
+    conic-gradient(at 50% 100%, #fff 48deg, #0000 0 300deg, #fff 0) 33% 87.75% / 12% 10%,
+    conic-gradient(at 50% 100%, #fff 55deg, #0000 0 314deg, #fff 0) 28% 88% / 12% 10%,
+    radial-gradient(farthest-side at 50% 50%, #fff 99%, #0000) 27.5% 78% / 24% 43%,
+    conic-gradient(#0000 15deg, #fff 0 38deg, #0000 0) 37.25% 90% / 10% 10%,
+    conic-gradient(at 30% 50%, #0000 332deg, #fff 0 355deg, #0000 0) 25.5% 89% / 10% 10%,
+    /* hair back */
+    conic-gradient(#0000 30deg, #fff 0 50deg, #0000 0) 17.5% 60% / 10% 10%,
+    conic-gradient(#0000 300deg, #fff 0 330deg, #0000 0) 45% 61% / 10% 10%,
+    /* buttons */
+    radial-gradient(circle at 33.5% 92%, #222 0.5em, #0000 0),
+    radial-gradient(circle at 33.5% 100%, #222 0.5em, #0000 0),
+    /* flap */
+    linear-gradient(#eee 0 0) 32.5% 100% / 5% 20%,
+    /* body */
+    radial-gradient(farthest-side at 50% 100%, #d00 99.5%, #0000) 19.5% 110% / 45% 30%,
+    /* background */
+    linear-gradient(#fff 25%, #c9c7 50%, #c9cc);
+  background-repeaT: no-repeat;
+}
+
+.santa-joke::before,
+.santa-joke::after {
+  content: "Who comes in Christmas and says 'Oh Oh Oh'?";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50%;
+  height: 25%;
+  display: flex;
+  place-items: center;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 800;
+  background: #fff;
+}
+
+.santa-joke::after {
+  content: "Santa Claus with a rotateY(180deg)";
+  transform: rotateY(180deg) translate(50%, 0);
+  backface-visibility: hidden;
+}
+    </style>
+  </head>
+  <body>
+    <article class="santa-joke" tabindex="0" role="img" aria-label="Card with a cartoon of Santa Claus and the question 'Who comes in Christmas and says Oh Oh Oh?' Clicking/tapping on the card will flip it 180 degrees revealing the answer: Santa Claus with a rotateY(180deg).">(click for answer)</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

@@ -2077,4 +2077,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Riddle</title>
+    <link href="https://comicss.art/?id=110" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/110/riddle.html"/>
+    <id>https://comicss.art/?id=110</id>
+    <updated>2023-12-04T00:00:00Z</updated>
+    <summary>New Cartoon: Riddle</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/110/riddle.png" alt="Card with a cartoon of Santa Claus and the question 'Who comes in Christmas and says Oh Oh Oh?' Clicking/tapping on the card will flip it 180 degrees revealing the answer: Santa Claus with a rotateY(180deg)" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

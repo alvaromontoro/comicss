@@ -860,4 +860,12 @@ const posts = [
     title: "Coincidence?",
     ariaLabel: "Cartoon with a table showing the different planets of the solar system in order closer to farther from the Sun. All of them show 0 deaths and no CSS, except for Earth that has CSS and 117,020,448,575 deaths. Below the table there's a question: coincidence?"
   },
+  {
+    id: 110,
+    uid: "riddle",
+    boxes: 2,
+    vertical: true,
+    title: "Riddle",
+    ariaLabel: "Card with a cartoon of Santa Claus and the question 'Who comes in Christmas and says Oh Oh Oh?' Clicking/tapping on the card will flip it 180 degrees revealing the answer: Santa Claus with a rotateY(180deg)."
+  },
 ]

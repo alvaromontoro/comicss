@@ -108,6 +108,32 @@
         </footer>
       </article>
       -->
+      <article id="riddle">
+        <h2>Riddle: Divtober is over... or is it?</h2>
+        <p>This week's cartoon is an interactive joke! My children told me a (terrible) joke the other day:</p>
+        <ul>
+          <li>Who comes in Christmas saying "Oh Oh Oh"?</li>
+          <li>Santa Claus walking backwards!</li>
+        </ul>
+        <p>
+          And as terrible as I am, I decided to create a CSS version of it. As a fun fact: the whole cartoon 
+          (interactivity and all) is a single HTML element:
+        </p>
+        <ul>
+          <li>The "<em>Ho Ho Ho!</em>" is linear and radial gradients</li>
+          <li>Santa is in the background of the element</li>
+          <li>The question is in the <code>::before</code> pseudo-element</li>
+          <li>The answer is in the <code>::after</code> pseudo-element</li>
+          <li>It uses 3D CSS to make the card flip</li>
+          <li>It uses the <code>backface-visibility</code> property to avoid leaking the content we don't want from one side to the other.</li>
+        </ul>
+        <p>
+          Who said Divtober was over?
+        </p>
+        <footer>
+          Published on <time datetime="2023-12-04">December 4, 2023</time>
+        </footer>
+      </article>
       <article id="coincidence">
         <h2>Coincidences?</h2>
         <p>
