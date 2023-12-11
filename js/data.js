@@ -868,4 +868,12 @@ const posts = [
     title: "Riddle",
     ariaLabel: "Card with a cartoon of Santa Claus and the question 'Who comes in Christmas and says Oh Oh Oh?' Clicking/tapping on the card will flip it 180 degrees revealing the answer: Santa Claus with a rotateY(180deg)."
   },
+  {
+    id: 111,
+    uid: "nightmare",
+    boxes: 2,
+    vertical: true,
+    title: "Nightmare",
+    ariaLabel: "Cartoon with two panels. In the first panel, a white man wakes up yelling from a dream with The New York Thymes newspaper announcing 'W3C Shocks Internet: Tailwind Replaces CSS' in big letters. In the second panel, an off-screen person says 'Wow! That must have been a heck of a nightmare', to which the previous character replies 'How am I supposed to know? I am just a React Developer!'"
+  },
 ]

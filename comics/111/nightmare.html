@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Comic+Neue&family=Patrick+Hand+SC&display=swap');
+
+
+article {
+  position: relative;
+  display: grid;
+  font-size: 1vmin;
+  width: 90em;
+  gap: 1em;
+}
+
+section {
+  position: relative;
+  box-sizing: border-box;
+  border: 0.5em solid;
+  height: 45em;
+  overflow: hidden;
+  background: linear-gradient(#c9c9, #c9c0 80%);
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.bubble {
+  font-family: 'Comic Neues','Patrick Hand SC', Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  text-align: center;
+  line-height: 1;
+}
+
+.movement-lines {
+  width: 3%;
+  height: 5%;
+  border: 0.45em solid;
+  top: 77%;
+  left: 18%;
+  border-radius: 50%;
+  border: 0.2em solid #0000;
+  border-left: 0.45em solid;
+  transform: rotate(-29deg);
+  filter: drop-shadow(-0.85em 0);
+  
+  &::before {
+    content: "";
+    width: 100%;
+    height: 140%;
+    border-radius: 50%;
+    border: 0.2em solid #0000;
+    border-left: 0.45em solid;
+    transform: rotate(29deg);
+    left: -660%;
+    top: 170%;
+  }
+}
+.character {
+  --skin: #fb9;
+  --hair: #963;
+  --hair-dark: #741;
+  bottom: -5%;
+  left: 10%;
+  width: 25em;
+  height: 32em;
+  
+  .body {
+    width: 100%;
+    height: 42.5%;
+    bottom: 0;
+
+    .arm {
+      width: 30%;
+      height: 100%;
+      background: #f004;
+      border-radius:100% 0 0 0;
+      border: 0.5em solid;
+      background: #fff;
+      transform: scaleX(-1) rotate(-5deg);
+      left: 73%;
+      top: 13%;
+      
+      & ~ & {
+        top: 0;
+        left: 0;
+        transform: translate(-5%, 21%) rotate(-40deg);
+        border-right: 0;
+        box-shadow: 0.4em 8em,inset 1em 1em 0.25em -0.5em #c002;
+      }
+    }
+    
+    
+    .chest {
+      width: 80%;
+      height: 150%;
+      border: 0.5em solid;
+      background: #fff;
+      border-radius: 100% / 30%;
+      border-radius: 90% / 30%;
+      left: 45%;
+      top: -1%;
+      transform: translateX(-50%);
+      background: 
+        radial-gradient(80% 55% at 53% 1%, var(--skin) 20%, #000 20.5% 22%, #0000 22.5% 26%, #000 26.5% 28%, #fff 28.5%),
+        repeating-conic-gradient(at 53% -1%, #0000 0 3%, #000 0 4%)
+        #fff;
+      box-shadow:
+        inset 1em 0.6em 0.25em -0.5em #c002,
+        0.5em 1em 0.5em #c002;
+      clip-path: polygon(0 0, 95% 0, 95% 40%, 110% 40%, 110% 100%, 0 100%);
+      
+      &::before {
+        content: "";
+        width: 10%;
+        height: 25%;
+        background: #fff;
+        left: 93%;
+        top: 15%;
+      }
+    }
+  }
+  
+  .head {
+    width: 50%;
+    height: 50%;
+    left: 40%;
+    top: 6%;
+    
+    .neck {
+      width: 40%;
+      height: 40%;
+      border: 0.5em solid;
+      background: 
+        radial-gradient(80% 90% at 70% 0, #8002 80%, #0000)
+        var(--skin);
+      border-bottom: 0;
+      top: 66.5%;
+      left: 10%;
+      transform: skew(-15deg);
+      transform-origin: 0 0;
+      box-shadow: inset 1em 0 0.75em -0.5em #8002;
+    }
+    
+    .hair-back {
+      aspect-ratio: 1;
+      width: 30%;
+      background: var(--hair);
+      border-radius: 50%;
+      top: 5%;
+      left: 70%;
+      color: var(--hair);
+      box-shadow:
+        -0.25em 1.75em,
+        0 0 0 0.3em #000,
+        -0.25em 1.75em 0 0.3em #000;
+    }
+    
+    .face {
+      border: 0.4em solid;
+      width: 100%;
+      height: 100%;
+      border-radius: 100% / 20% 90% 110% 120%;
+      border-bottom: 0.5em solid;
+      background: var(--skin);
+      box-shadow: inset -0.25em -0.2em 0.25em #fff3, inset 0.35em -0.25em 0.25em #8002;
+      
+      .eyebrow {
+        width: 44%;
+        aspect-ratio: 1.5;
+        border-radius:  100% 50% 50% 50%;
+        top: 18%;
+        left: 24%;
+        box-shadow: 0 -1.5em 0 -0.5em #000;
+        
+        & ~ & {
+          transform: scaleX(-1) rotate(10deg);
+          left: 70%;
+          width: 40%;
+          top: 17%;
+        }
+      }
+      
+      .hair-top {
+        aspect-ratio: 1;
+        width: 30%;
+        background: var(--hair);
+        border-radius: 50%;
+        top: 24%;
+        left: -10%;
+        color: var(--hair);
+        box-shadow:
+          -1em 0.5em 0.5em,
+          0 -1.75em 0 -0.25em,
+          -2em -1.75em 0.5em -0.25em,
+          1em -4em 0 -0.5em,
+          -1.25em -4.25em 0.5em 0.35em,
+          3.5em -5.5em,
+          -1em -7.25em 0.5em -0.6em,
+          2em -7.25em 0 1em,
+          6.5em -6em,
+          5.5em -8em 0 0.25em,
+          8.5em -8em 0 -0.25em,
+          9em -6.25em 0.5em 0.25em,
+          
+          9.5em -6em 0 0.25em #b85,
+          -1.5em 0.5em var(--hair-dark),
+          -2.25em -1.75em var(--hair-dark),
+          -1.65em -4.25em 0 0.6em var(--hair-dark),
+          -1.25em -7.25em 0 -0.5em var(--hair-dark),
+          0 0 0 0.35em #000,
+          0 -1.75em 0 0.1em #000,
+          -1.5em 0.5em 0 0.3em #000,
+          -2.25em -1.75em 0 0.35em #000,
+          1em -4em 0 -0.15em #000,
+          -1.65em -4.25em 0 0.95em #000,
+          3.5em -5.5em 0 0.3em #000,
+           -1.25em -7.25em 0 -0.15em #000,
+          2em -7.25em 0 1.35em #000,
+          6.5em -6em 0 0.3em #000,
+          5.5em -8em 0 0.6em #000,
+          9.5em -6em 0 0.6em #000,
+          8.5em -8em 0 0.15em #000
+          ;
+      }
+      
+      .ear {
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        border: 0.5em solid;
+        border-left:0.4em solid;
+        border-right: 0.2em solid #0000;
+        top: 41%;
+        left: -23%;
+        transform: rotate(-4deg);
+        background: var(--skin);
+        box-shadow: inset 0.2em 0.2em 0.25em #fff3;
+        
+        &::before {
+          content: "";
+          width: 66%;
+          height: 70%;
+          border: 0.35em solid;
+          border-left: 0.2em solid #0000;
+          border-radius: 50%;
+          top: 17%;
+          left: 17%;
+          transform: rotate(-5deg);
+          box-shadow: inset -0.5em 0 0.5em #8004
+        }
+        
+        &::after {
+          content: "";
+          width: 40%;
+          aspect-ratio: 1;
+          border: 0.35em solid;
+          border-right: 0.2em solid #0000;
+          border-radius: 50%;
+          background: var(--skin);
+          top: 45%;
+          left: 45%;
+          transform: rotate(5deg);
+
+        }
+      }
+      
+      .nose {
+        width: 30%;
+        aspect-ratio: 1.4;
+        border: 0.2em solid #0000;
+        border-top: 0.4em solid;
+        border-right: 0.5em solid;
+        border-bottom: 0.075em solid #0000;
+        border-radius: 50%;
+        top: 50%;
+        left: 59%;
+        background: 
+          radial-gradient(at 100% 20%, #f002, #f000 50%),
+          var(--skin);
+        background-repeat: no-repeat;
+      }
+      .eye {
+        width: 36%;
+        height: 33%;
+        border: 0.4em solid;
+        background: #fff;
+        border-radius: 50%;
+        top: 25%;
+        left: 62%;
+        box-shadow: inset 0.25em 0 0.5em #0002;
+        
+        &::before {
+          content: "";
+          width: 40%;
+          height: 40%;
+          background: 
+            radial-gradient(circle at 24% 30%, #fff 20%, #0000 0),
+            #000;
+          border-radius: 50%;
+          top: 37%;
+          left: 50%;
+        }
+        
+        & ~ & {
+          left: 29%;
+          width: 42%;
+          height: 35%;
+        }
+      }
+      
+      .mouth {
+        width: 42%;
+        height: 18%;
+        border: 0.4em solid;
+        border-right-color: #0000;
+        border-radius: 100%/80% 30% 100% 100%;
+        top: 72%;
+        left: 40%;
+        transform: rotate(0deg);
+        background: 
+          linear-gradient(#fff 0 0) 0 0 / 90% 25%,
+          linear-gradient(#000 0 0) 0 0 / 100% 38%,
+          radial-gradient(100% 100% at 10% 100%, #d00 45%, #000 0 55%, #0000 0),
+          radial-gradient(70% 140% at 100% 60%, #0000 30%, #a005 0),
+          #0000
+        ;
+        background-repeat: no-repeat;
+        
+        &::before {
+          content: "";
+          width: 0.4em;
+          height: 1.5em;
+          background: #000;
+          left: 100%;
+          top: 0;
+          transform: translateY(-90%);
+        }
+        
+        &::after {
+            content:"";
+            width: 26%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: 0.1em solid #0000;
+            border-left: 0.3em solid #000;
+            top: 92%;
+            left: 70%;
+            transform: rotate(50deg);
+          }
+      }
+    }
+  }
+}
+
+section:nth-child(1) {
+  --cloud-mask:
+    radial-gradient(closest-side circle at 10% 88%, #000 50%, #0000 51%),
+    radial-gradient(closest-side circle at 6% 82%, #000 60%, #0000 61%),
+    radial-gradient(farthest-side circle at 3% 70%, #000 5%, #0000 5.1%),
+    radial-gradient(closest-side circle at 14% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 17% 96%, #000 80%, #0000 81%),
+    radial-gradient(closest-side circle at 20% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 24% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 29% 90%, #000 90%, #0000 91%),
+    radial-gradient(closest-side circle at 34% 92%, #000 80%, #0000 81%),
+    radial-gradient(closest-side circle at 39% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 47% 90%, #000 75%, #0000 76%),
+    radial-gradient(closest-side circle at 44% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 57% 96%, #000 80%, #0000 81%),
+    radial-gradient(closest-side circle at 50% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 54% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 59% 90%, #000 90%, #0000 91%),
+    radial-gradient(closest-side circle at 64% 92%, #000 80%, #0000 81%),
+    radial-gradient(closest-side circle at 69% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 77% 90%, #000 75%, #0000 76%),
+    radial-gradient(closest-side circle at 74% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 87% 96%, #000 80%, #0000 81%),
+    radial-gradient(closest-side circle at 80% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 84% 94%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 89% 90%, #000 90%, #0000 91%),
+    radial-gradient(closest-side circle at 94% 82%, #000 80%, #0000 81%),
+    radial-gradient(closest-side circle at 98% 74%, #000 99%, #0000),
+    linear-gradient(#000 75%, #0000 0),
+    radial-gradient(50% 60% at 20% 70%, #000 40%, #0000 0),
+    radial-gradient(60% 60% at 70% 70%, #000 40%, #0000 0),
+    radial-gradient(60% 60% at 40% 70%, #000 40%, #0000 0);
+  height: 75em;
+
+  .dream-border {
+    width: 100%;
+    height: 40em;
+    filter: drop-shadow(0.4em 0.4em) drop-shadow(-0.4em 0);
+    
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      -webkit-mask: var(--cloud-mask);
+      background: #fff;
+    }  
+  }
+  
+  .dream-bubbles {
+    width: 4em;
+    aspect-ratio: 1;
+    border: 0.4em solid;
+    top: 53%;
+    left: 7%;
+    border-radius: 50%;
+    background: #f8f8f0;
+    
+    &::before {
+      content: "";
+      width: 3.3em;
+      aspect-ratio: 1;
+      border: 0.4em solid;
+      top: 124%;
+      left: 55%;
+      border-radius: 50%;
+      background: #f8f8f0;
+    }
+    &::after {
+      content: "";
+      width: 2.5em;
+      aspect-ratio: 1;
+      top: 220%;
+      left: 150%;
+      border-radius: 50%;
+      background: repeating-conic-gradient(#0000 0 15%, #000 0 20%);
+      -webkit-mask: radial-gradient(farthest-side, #0000 40%, #000 0);
+    }
+  }
+  
+  .dream {
+    width: 100%;
+    height: 40em;
+    background:
+      #f8f8f0;
+    -webkit-mask: var(--cloud-mask);
+    padding: 0.5em 2em 2em 2em;
+    
+    & * { position: relative; }
+    
+    
+    
+    & h1 {
+      font-size: 5em;
+      text-align: center;
+      margin: 0.1em;
+      margin-top: 0.1em;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justidy-content: center;
+      gap: 0.2em;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      
+      &::before, &::after {
+        content: "";
+        position: relative;
+        awidth: 20%;
+        flex: 1;
+        height: 1.25em;
+        background: linear-gradient(#0000 48%, #000 0 52%, #0000 0);
+        atransform: translate(-105%);
+      }
+      
+      &::after {
+         atransform: translate(5%);
+      }
+    }
+    
+    & h2 {
+      font-size: 7em;
+      font-family: Helvetica, Arial, Roboto, sans-serif;
+      font-weight: 900;
+      text-align: center;
+      margin: 0.1em;
+    }
+    
+    .news-body {
+      font-size: 2em;
+      font-family: Garamond, Times, 'Times New Roman', serif;
+      column-count: 3;
+      text-align: justify;
+      word-break: break-word;
+      
+      & p {
+        margin: 0;
+      }
+    }
+  }
+  
+  .cry {
+    font-family: 'Comic Neues','Patrick Hand SC', Helvetica, Arial, sans-serif;
+    line-height: 1.1;
+    top: 63%;
+    left: 43%;
+    font-size: 14em;
+    transform:rotate(-4deg) skew(-4deg);
+    
+    &::first-letter {
+      font-size: 0.9em;
+    }
+    &::before {
+      content: "A";
+      font-size: 0.8em;
+      transform: translate(-100%, 20%);
+    }
+    &::after {
+      content: "AH!";
+      font-size: 1.1em;
+      transform: translate(0, -7%)
+    }
+  }
+  
+  .character {
+    .body {
+      .chest {
+        top:-1%;
+        left: 40%;
+        transform: translate(-50%) skew(-9deg)
+      }
+    }
+  }
+}
+
+section:nth-child(2) {
+  .bubble-1 {
+    width: 33%;
+    left: 10%;
+    top: 15%;
+    
+    &::before {
+      content: "";
+      width: 7em;
+      height: 3em;
+      box-shadow: 0.1em 0.1em;
+      border-radius: 0 0 100% 0;
+      top: 100%;
+      left: 0;
+      transform: translateX(-70%);
+    }
+  }
+  .bubble-2 {
+    width: 35%;
+    left:25%;
+    top: 70%;
+    
+    &::before {
+      content: "";
+      width: 3em;
+      height: 1.5em;
+      box-shadow: -0.1em -0.1em;
+      border-radius: 100% 0 0 0;
+      top: 0;
+      left: 100%;
+      transform: translate(-50%, -100%);
+    }
+  }
+  .character {
+    transform: scaleX(-1);
+    bottom: -1%;
+    left: 65%;
+    
+    .body {
+      height: 41.5%;
+      
+      .chest {
+        left: 55%;
+        top: 0;
+        border-radius: 90% / 30%;
+      }
+      
+      .arm {
+        transform: scaleX(-1) rotate(-10deg);
+        left: 82%;
+        top: 15%;
+        
+        & ~ & {
+          transform: rotate(-4deg);
+          top: 12.5%;
+          left: -0%;
+          width: 27%;
+          clip-path: polygon(0 0, 60% 0, 110% 30%, 110% 100%, 0 100%);
+        }
+      }
+    }
+    
+    .head {
+      top: 5%;
+     
+      .neck {
+        transform: none;
+        top: 72%;
+        left: 15%;
+      }
+      
+      .face {
+        .eyebrow {
+          top: 22%;
+          
+          & ~ & {
+            top: 22%;
+            transform: scaleX(-1);
+            left: 65%;
+          }
+        }
+        .mouth {
+          width: 35%;
+          left: 45%;
+          height: 14%;
+          
+          &::after {
+            top: 98%;
+            width: 30%;
+          }
+        }
+        .eye {
+          overflow: hidden;
+          
+          &::before {
+            width: 30%;
+            height: 30%;
+            top: 40%;
+          }
+          &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: 
+              linear-gradient(#8001 37%, #0000 0),
+              linear-gradient(var(--skin) 37%, #000 0 45%, #0000 0)
+          }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon with two panels. In the first panel, a white man wakes up yelling from a dream with The New York Thymes newspaper announcing 'W3C Shocks Internet: Tailwind Replaces CSS' in big letters. In the second panel, an off-screen person says 'Wow! That must have been a heck of a nightmare', to which the previous character replies 'How am I supposed to know? I am just a React Developer!'">
+      <section>
+        <div class="dream-border"></div>
+        <div class="dream-bubbles"></div>
+        <div class="movement-lines"></div>
+        <div class="dream">
+          <h1>The New York Thymes</h1>
+          <h2 class="newspaper">W3C Shocks Internet: Tailwind Replaces CSS</h2>
+          <div class="news-body">
+    <p>AP Washington. In a surprising turn of events, the World Wide Web Consortium (W3C) has de-clared a decision to replace CSS with the popular Tailwind utility-first framework. This unexpected move has sent shockwaves th-rough the web development community, sparking heated debates and discussions.</p>
+    
+    <p>According to an official statement released by the W3C, the decision was made in an effort to streamline web development, enhance code efficiency, and improve the overall user experience. The announcement claims that Tailwind CSS's utility-first approach will simplify the process of styling web applications, making it easier for developers to create visually appealing and responsive designs.</p>
+    
+    <p>W3C spokesperson, Dr. Anita Bath, commented on the decision, saying, "We believe that embracing Tailwind as the new standard for styling will lead to more consistent and maintain-able code across the web. The utility-first methodology aligns with modern development practices and provides a robust foundation for creating beautiful and efficient user interfaces."</p>
+    
+    <p>The news has triggered mixed reactions within the web development community. While some developers applaud the move as a step towards modernization, others express concerns about the potential learning curve and the impact on existing projects built with tradi-tional CSS.</p>
+    
+    <p>In response to the skepticism, the W3C has assured developers that a comprehensive migration guide and tools will be provided to ease the transition from CSS to Tailwind. The consortium also plans to collaborate with leading web development communities to gather feedback and address any challenges that may arise during the adoption process.</p>
+    
+    <p>Social media platforms have exploded with memes, hundreds of jokes, and discussions and reactions to this unexpected news. The hashtag #CSSvsTailwind is trending on social media, with developers sharing their thoughts, memes, and humorous takes on the unexpected change.</p>
+    
+    <p>While this news may come as a shock to many, it is crucial to note that this article is entirely fictional. As of the last knowledge update in January 2022, there has been no such announcement from the W3C regarding the replacement of CSS with Tailwind or any other framework.</p>
+            
+            <p>Text generated by ChatGPT, modified by Alvaro Montoro.</p>
+          </div>
+        </div>
+        <div class="cry">AAAAA</div>
+        <div class="character">
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="hair-back"></div>
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="hair-top"></div>
+              <div class="ear"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="bubble bubble-1">Wow! that must have been a heck of a nightmare!</div>
+        <div class="bubble bubble-2">How am I supposed to know? I am just a React Developer!</div>
+        <div class="character">
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="hair-back"></div>
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="hair-top"></div>
+              <div class="ear"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
