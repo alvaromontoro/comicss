@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Comic+Neue&family=Patrick+Hand+SC&display=swap');
+
+article {
+  --skin: #fb9;
+  --hair: #741;
+  --jacket: #933;
+  font-size: 1vmin;
+  width: 90em;
+  display: grid;
+  gap: 1em;
+  font-family: 'Patrick Hand SC','Comic Neue', serif;
+}
+
+section {
+  border: 0.5em solid;
+  aspect-ratio: 3/2;
+  position: relative;
+  overflow: hidden;
+  
+  & *,
+  & *::before,
+  & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+}
+
+/* common */
+.hat {
+  width: 20%;
+  height: 5%;
+  background: #369;
+  border-radius: 50%;
+  top: 69%;
+  left: 79%;
+  transform: rotate(15deg);
+  
+  &::before {
+    content: "";
+    left: 50%;
+    transform: translate(-50%, -95%);
+    width: 50%;
+    height: 500%;
+    background: inherit;
+    clip-path: polygon(100% 100%, 80% 70%, 80% 0, 78% 0%, 25% 60%, 10% 100%);
+  }
+}
+
+.box {
+  --shadow: radial-gradient(35% 7.5% at 50% 7.5%, #0002 29%, #5001 80%, #0000),;
+  width: 20%;
+  aspect-ratio: 1.3;
+  background: #b85;
+  top: 65%;
+  left: 49%;
+  transform: translateX(-50%);
+  clip-path: polygon(0 15%, 15% 0, 85% 0,100% 15%, 200% 200%, -100% 200%);
+  box-shadow:
+    -2em 4em 2em -3em #0002,
+    2em 4em 2em -3em #0003;
+  background:
+    var(--shadow)
+    linear-gradient(#a74 15%, #0000 0),
+    radial-gradient(#0000 50%, #7002) 50% 100% / 100% 85%,
+    linear-gradient(#0000 20%, #0003),
+    repeating-linear-gradient(#0000 0 20%, #0002 0 21%)
+    #b85;
+}
+.crowd {
+  --x: 27%;
+  --y: 40%;
+  width: 100%;
+  height: 27%;
+  background: #236;
+  background: linear-gradient(#236, #125);
+  bottom: -5%;
+  -webkit-mask:
+    radial-gradient(closest-side circle at 10% 30%, #000 99%, #0000),
+    radial-gradient(9% 60% at 9% 110%, #000 99%, #0000),
+    radial-gradient(closest-side circle at var(--x) var(--y), #000 65%, #0000 0),
+    radial-gradient(7% 50% at 25% 110%, #000 99%, #0000),
+    radial-gradient(7% 50% at 29% 110%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 45% 33%, #000 79%, #0000 0),
+    radial-gradient(10% 55% at 45% 110%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 62% 28%, #000 99%, #0000 0),
+    radial-gradient(9% 70% at 62% 120%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 74% 35%, #000 78%, #0000 0),
+    radial-gradient(9% 70% at 76% 120%, #000 99%, #0000),
+    radial-gradient(closest-side circle at 91.5% 30%, #000 99%, #0000 0),
+    radial-gradient(7.5% 63% at 93% 110%, #000 99%, #0000);
+  z-index: 2;
+  clip-path: polygon(0 0.25%, 100% 0.25%, 100% 100%, 0 100%);
+  
+  & + & {
+    --y: 41%;
+    --x: 29%;
+    z-index: 1;
+    transform: scaleX(-1) rotate(-1deg);
+    bottom: 4%;
+    background: #369;
+    background: linear-gradient(#369 20%, #258);
+    width: 85%;
+    left: -2%;
+  }
+  
+  & + & + & {
+    left: 80%;
+    bottom: 6%;
+    width: 85%;
+    transform: rotate(-2deg);
+  }
+}
+section:has(.crowd) {
+  background: 
+    linear-gradient(#0000 94%, #258 0),
+    radial-gradient(140% 60% at 50% 100%, #6a4 , #686 43%, #0000 43.5%),
+    linear-gradient(#8bd, #9cf5); /*69c*/
+}
+
+.hobbit {
+  width: 25%;
+  height: 45%;
+  top: 45%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+
+  .head {
+    width: 33%;
+    height: 35%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    
+    .hair-back {
+      width: 1em;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--hair);
+      color: var(--hair);
+      top: 15%;
+      lefT: -5%;
+      box-shadow:
+        -0.25em 1em 0 0.25em,
+        0 5em,
+        0 4em 0 0.5em,
+        7em 1em 0 0.25em,
+        7em 4.25em 0 0.12em,
+        6.75em 5em 0 0.25em
+    }
+    
+    .ear {
+      width: 16%;
+      height: 40%;
+      background: var(--skin);
+      box-shadow: inset 0 0 0 9em #c003;
+      border-radius: 0 100% 50% 100%;
+      top: 35%;
+      left: -10%;
+      transform: rotate(-5deg);
+      
+      & + & {
+        transform: scaleX(-1) rotate(-10deg);
+        left: 90%;
+      }
+    }
+    
+    .face {
+      width: 100%;
+      height: 90%;
+      top: 10%;
+      border-radius: 100% / 130% 130% 60% 60%;
+      background: var(--skin);
+      
+      .mouth {
+        width: 30%;
+        height: 15%;
+        background: linear-gradient(#fff 30%, #0000 0),
+          radial-gradient(80% 80% at 50% 100%, #c00 40%, #000 0);
+        background-repeat: no-repeat;
+        border-radius: 50% / 100% 100% 30% 30%;
+        top: 72%;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      
+      .hair {
+        width: 20%;
+        aspect-ratio: 1;
+        background: var(--hair);
+        border-radius: 50%;
+        color: var(--hair);
+        top: 20%;
+        box-shadow: 
+          -0.6em 0.5em 0 -0.3em,
+          0.6em -1em,
+          2em -1.5em 0 0.2em,
+          3em -2em,
+          3.7em -1.7em 0 -0.2em,
+          4.9em -1.5em 0 0.1em,
+          6em -0.6em,
+          6.5em 0.5em 0 -0.2em
+          ;
+        filter: drop-shadow(-0.1em -0.7em)
+      }
+      
+      .eye {
+        --p: 22%;
+        width: 18%;
+        aspect-ratio: 1;
+        background: radial-gradient(circle at 30% 30%, #fff 20%, #000 0);
+        border-radius: 50%;
+        left: var(--p);
+        top: 45%;
+        
+        & + & {
+          left: auto;
+          right: var(--p);
+        }
+       
+        &::before {
+          content: "";
+          width: 170%;
+          height: 130%;
+          border: 0.2em solid #0000;
+          border-top: 0.6em solid var(--hair);
+          border-radius: 50%;
+          left: 50%;
+          top: 0;
+          transform: translate(-50%, -50%) rotate(-10deg);
+        }
+        
+        & + &::before {
+          transform: translate(-50%, -50%) rotate(10deg);
+        }
+      }
+    }
+  }
+  
+  .body {
+    width: 70%;
+    height: 45%;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    
+    .chest {
+      --hand: radial-gradient(farthest-side circle at 50% 100%, var(--skin) 99%, #0000) 15% 78% / 3em 1.5em no-repeat;
+      width: 80%;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border-radius: 100% / 190% 190% 10% 10%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%, 50% 80%, 45% 100%, 0 100%);
+      background:
+        conic-gradient(from -30deg at 40% 20%, #fff 70deg, #0000 0),
+        conic-gradient(from -40deg at 60% 20%, #fff 70deg, #0000 0),
+        conic-gradient(from -30deg at 40% 22%, #0001 70deg, #0000 0),
+        conic-gradient(from -40deg at 60% 22%, #0001 70deg, #0000 0),
+        radial-gradient(circle at 50% 14%, #0005 0.2em, #0000 0),
+        radial-gradient(circle at 50% 24%, #0005 0.2em, #0000 0),
+        radial-gradient(circle at 50% 34%, #0005 0.2em, #0000 0),
+        conic-gradient(from -17.5deg at 49% 45%, #e8e8e8 38deg, #0000 0),
+        radial-gradient(circle at 51% 52%, gold 0.3em, #0000 0),
+        radial-gradient(circle at 50.5% 63%, gold 0.3em, #0000 0),
+        radial-gradient(circle at 51% 74%, gold 0.3em, #0000 0),
+        var(--hand),
+        linear-gradient(#0003 0 0) 18% 85% / 25% 5% no-repeat,
+        radial-gradient(at 20% 80%, #0002, #0000 50%),
+        var(--jacket)
+        ;
+    }
+    
+    .arm {
+      width: 40%;
+      height: 80%;
+      left: 60%;
+      top: 3%;
+      transform: rotate(-10deg);
+      
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 0 100% 0 0;
+        background: 
+          radial-gradient(140% 60% at 20% 80%, #0002, #0000 70%),
+          var(--jacket);
+      }
+      
+      &::before {
+        content:"";
+        width: 50%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--skin);
+        top: 90%;
+        left: 50%;
+      }
+      
+      &.arm-2 {
+        transform: scaleX(-1) rotate(-10deg);
+        left: -4%;
+        
+        &::after {
+          background: 
+          radial-gradient(100% 80% at 40% 80%, #0003, #0000 70%),
+          var(--jacket);
+        }
+      }
+    }
+  }
+  
+  .legs {
+    width: 50%;
+    height: 40%;
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-50%);
+    
+    .pants {
+      width: 100%;
+      height: 54%;
+      background: #222;
+      border-radius: 50% / 0 0 100% 100%;
+      border-radius: 100%;
+    }
+    
+    .leg {
+      --p: 15%;
+      width: 20%;
+      height: 60%;
+      bottom: 0%;
+      border-radius: 0 0 0.5em 0;
+      left: var(--p);
+      background: var(--skin);
+      
+      & + & {
+        left: auto;
+        right: var(--p);
+        transform: scaleX(-1)
+      }
+      
+      &::before {
+        content: "";
+        height: 80%;
+        bottom: 40%;
+        width: 150%;
+        left: 50%;
+        transform: translate(-50%) skew(3deg) skewY(-3deg);
+        background: #222;
+      }
+      
+      &::after {
+        content: "";
+        width: 150%;
+        height: 25%;
+        bottom: 0;
+        right: 1em;
+        border-radius: 100% 0 0 20%;
+        background: 
+          radial-gradient(50% 10% at 50% 10%, var(--hair) 99%, #0000),
+          radial-gradient(50% 6% at 40% 15%, var(--hair) 99%, #0000),
+          radial-gradient(50% 8% at 50% 23%, var(--hair) 99%, #0000),
+          radial-gradient(farthest-side at 100% 80%, #0000 80%, #6002 0 99%, #0000) 40% 100% / 0.75em 0.75em no-repeat,
+          radial-gradient(farthest-side at 100% 80%, #0000 80%, #6002 0 99%, #0000) 20% 100% / 0.6em 0.75em no-repeat,
+          radial-gradient(farthest-side at 100% 80%, #0000 80%, #6002 0 99%, #0000) 5% 100% / 0.5em 0.75em no-repeat
+          var(--skin);
+      }
+    }
+  }
+  
+  &.hobbit-pop {
+    display: grid;
+    place-items: center;
+    background: none;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: repeating-conic-gradient(from 180deg,#0000 0 14deg, #000 0 16.25deg);
+      border-radius: 100% / 120% 120% 90% 80%;
+      -webkit-mask: radial-gradient(55% 40% at 50% 55%, #0000 65%, #000 0);
+      z-index: 1;
+    }
+    &::after {
+      content: "POP!";
+      font-size: 5.5em;
+      margin-top: 10%;
+    }
+  }
+}
+.speech {
+  font-size: 2.6em;
+  line-height: 1;
+  text-align: center;
+  
+  &::before {
+    content: "";
+    width: 2em;
+    height: 2em;
+    border-radius: 0 0 100% 0;
+    border-right: 0.1em solid #000;
+    border-bottom: 0.1em solid #000;
+    clip-path: polygon(5% 5%, 100% 5%, 100% 100%, 5% 100%);
+    top: 100%;
+  }
+}
+.title {
+  background: #ffc;
+  border: 0.2em solid #000;
+  border-top: 0;
+  border-left: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0.25em 0.6em;
+  font-size: 2.5em;
+  font-family: 'Patrick Hand SC','Comic Neue', serif;
+}
+/* common */
+section:nth-child(1) {
+  .speech { 
+    width: 41%;
+    text-wrap: balance;
+    text-align: center;
+    left: 54%;
+    top: 3%;
+    &::before {
+      left: 8%;
+    }
+  }
+  .hobbit {
+    .body {
+      .arm-2 {
+        width: 34%;
+        height: 75%;
+        top: 5%;
+        left: 7%;
+        transform: none;
+        
+        &::after {
+          display: none;
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          border-radius: 100% / 140% 120% 30% 60%;
+          transform: rotate(26deg);
+          clip-path: polygon(0 0, 45% 0, 50% 60%, 80% 80%, 70% 100%, 0 100%) ;
+          background:
+            var(--jacket);
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+section:nth-child(2) {
+  .speech {
+    top: 22%;
+    left: 22%;
+    &::before {
+      transform: scaleX(-1);
+      left: 80%;
+    }
+  }
+  .box {
+    --shadow:;
+  }
+  .hobbit-pop {
+    &::after {
+      content: "POP!";
+      font-size: 5.5em;
+      font-family: 'Patrick Hand SC','Comic Neue', serif;
+      margin-top: 10%;
+    }
+  }
+  .comment {
+    font-size: 2em;
+    top: 65%;
+    left: 70%;
+    transform: rotate(-10deg);
+    
+    &.comment-2 {
+      transform: rotate(10deg);
+      left: 3%;
+      top: 63%;
+    }
+  }
+  
+  .surprise-lines {
+    width: 3em;
+    aspect-ratio: 1;
+    background: repeating-conic-gradient(at -10% 70%, #0000 0 30deg, #000 0 35deg);
+    -webkit-mask: radial-gradient(at -10% 70%, #0000 40%, #000 0);
+    top: 76%;
+    left: 13%;
+    z-index: 2;
+    transform: rotate(-20deg);
+    
+    & + & {
+      top: 60%;
+      left: 83%;
+      transform: rotate(-110deg);
+    }
+    
+    & + & + & {
+      top: 74%;
+      left: 58%;
+      transform: rotate(-78deg);
+    }
+  }
+}
+
+section:nth-child(3) {
+  background: 
+    radial-gradient(250% 60% at 50% 100%, #6a4 , #686 33%, #0000 33.5%),
+    
+    radial-gradient(circle at 70% 60%, #fc4 15%, #ccc 15.1% 18%, #0000 18.1%),
+    
+    radial-gradient(130% 100% at 63% 100%, #6a4, #696 80%, #0000 80.1%) 100% 100% / 70.1% 84%,
+    radial-gradient(240% 100% at 10% 0%, #0000 50.9%, #696 51.1%, #6a4) 0% 100% / 30.1% 84%,
+    linear-gradient(#8bd, #9cf5);
+  background-repeat: no-repeat;
+  
+  .door {
+    border-radius: 50%;
+    width: 29%;
+    aspect-ratio: 1;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    box-shadow: inset 0 0 1em -0.5em;
+    background: repeating-conic-gradient(#0000 0 9.5%, #0001 0 10%);
+    
+    &::before {
+      content:"";
+      width: 83.5%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 
+        0 0 1.6em -0.5em #555,
+        inset 0.125em 0.25em 0.75em #0005,
+        inset -0.25em -0.25em 0.5em #ffc4;
+      background:
+        radial-gradient(circle at 14% 52%, #333 0.6em, #0000 0),
+        radial-gradient(circle at 30% 51%, #333 0.25em, #0000 0),
+        radial-gradient(farthest-side at 50% 100%, #333 99%, #0000) 14% 50% / 13% 3.5% no-repeat,
+        radial-gradient(farthest-side at 50% 0%, #333 99%, #0000) 22% 52% / 12% 3.5% no-repeat,
+        repeating-linear-gradient(#0000 0 13.5%, #fff1 0 14.25%, #0001 0 15%),
+        #fb5;
+    }
+  }
+  
+  .ring {
+    width: 1.25em;
+    height: 1.75em;
+    border: 0.35em solid gold;
+    border-radius: 50%;
+    border-top-color: #0000;
+    top: 92%;
+    left:-2%;
+  }
+  .speech {
+    top: 18%;
+    left: 32%;
+    width: 30%;
+    &::before {
+      height: 3em;
+    }
+  }
+  .hobbit-pop {
+    left: 27%;
+    top: 65%;
+    
+    .head {
+      .face {
+        .mouth {
+          border-radius: 50% / 20% 20% 100% 100%;
+        }
+        
+        .eye {
+          &::before {
+            height: 160%;
+          }
+        }
+      }
+    }
+    
+    .body {
+      .chest {
+        --hand: linear-gradient(#0000 0 0);
+      }
+    }
+    
+    &::before {
+      scale: 1.1 1.3;
+      -webkit-mask: radial-gradient(55% 50% at 50% 50%, #0000 70%, #000 0)
+    }
+    &::after {
+      transform: rotate(-40deg) skew(-20deg);
+      top: -25%;
+      left: -40%;
+    }
+  }
+}
+
+section:nth-child(4) {
+  background: 
+    linear-gradient(#69c9, #9cf5);,
+    linear-gradient(#c9c9, #c9c0)
+    ;
+  
+  .index-finger {
+    width: 27%;
+    height: 50%;
+    background: var(--skin);
+    border-radius: 6% 20% 30% 4% / 100%;
+    transform: rotate(10deg);
+    top: 55%;
+    left: -11%;
+    transform: rotate(15deg);
+    box-shadow: inset -3em 1em 2em #c002;
+    
+    &::before {
+      content: "";
+      width: 70%;
+      height: 50%;
+      top: -118%;
+      left: 34%;
+      transform:  rotate(10deg);
+      background: #fdb;
+      transform-origin: 0 100%;
+      border-radius: 100% / 70%;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 140%;
+      background: 
+        radial-gradient(at 66% 50%, #0000 20%, var(--skin) 90%),
+        repeating-radial-gradient(50% 50%, #0000 0 5%, #cc000004 0 6%) 110% 50% / 80% 80% no-repeat,
+        radial-gradient(at 90% 35%, #6002, #0000 20%),
+        var(--skin);
+      transform-origin: 0 100%;
+      transform: translateY(-95%) rotate(15deg);
+      border-radius: 100% / 80% 100% 60% 10%;
+      box-shadow: 
+        -4em 5em 0 -4em var(--skin),
+        0em 1.5em 0 -0.7em #c002,
+        inset -3em 1em 2em #c002,
+        inset 1em 1em  1em var(--skin),
+        inset 2em 3em 2em -2.24em #fff8;
+    }
+  }
+  .thumb {
+    bottom: 0;
+    height: 55%;
+    width: 30%;
+    background: var(--skin);
+    border-radius: 100% 40% 0 10% / 100% 40% 0 20%;
+    left: 60%;
+    box-shadow: 
+      inset -1em 1em 1em var(--skin),
+      inset -1em 2em 1em -1em #fff8,
+      inset 2em  0 2em #c003,
+      0 15em #c003,
+      0 15em var(--skin);
+    
+    &::before {
+      content: "";
+      width: 30%;
+      height: 60%;
+      background: var(--skin);
+      border-radius: 50% / 0 100% 100% 0;
+      top: 50%;
+      right: -5%;
+    }
+    
+    &::after {
+      content: "";
+      width: 60%;
+      height: 60%;
+      background: red;
+      border-radius: 100% / 80% 20% 50% 200%;
+      top: 10%;
+      right: -1%;
+     background: 
+       radial-gradient(100% 70% at 60% 75%, #0000 96%, #fffb 0),
+       radial-gradient(140% 60% at 70% 100%, #fff3 20%, #fff0 0)
+       #fca;
+      transform: rotate(-2deg)
+    }
+  }
+  .ring,
+  .ring::before,
+  .ring::after{
+    content: "";
+    font-size: 0.75em;
+    width: 50em;
+    aspect-ratio: 2;
+    background: #f000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100% / 60%;
+    abox-shadow: 
+      /* shadow */
+      inset 0 11em 2em #0002,
+      -1em 2em 2em -1.5em #0001,
+      1em 2em 2em -1.5em #0001;
+  }
+  
+  .ring {
+    top: 40%;
+    transform: translate(-50%, -50%) rotate(15deg);
+  }
+  
+  .ring::before {
+    font-size: 1em;
+    box-shadow: 
+      /* inside */
+      inset 0 1em 1em #fc0,
+      inset 3.5em 0 2em #c001,
+      inset -2.5em 0 2em #c001,
+      inset 0 10em #da0;
+  }
+  .ring::after {
+    font-size: 1em;
+    box-shadow: 
+      /* outside part */
+      inset 0 -1em 1em #fc0,
+      inset 0 -10em 1em gold,
+      inset 0 -11em #ffc800,
+      /* outer edge */
+      -0.5em 0 #fc0,
+      0.5em 0 #fc0;
+  }
+  
+  & span {
+    font-size: 4em;
+    font-family: 'Elvish Ring';
+    color: #c002;
+    text-shadow: 1px 1px 1px #fff4, -1px -1px 1px #c002;
+    z-index:1;
+    aopacity: 0.75;
+    
+    &:nth-child(1) { top: 51%; left: 3%;  }
+    &:nth-child(2) { top: 55%; left: 7%; }
+    &:nth-child(3) { top: 55.5%; left: 8.5%; }
+    &:nth-child(4) { top: 59%; left: 13.5%; }
+    &:nth-child(5) { top: 63%; left: 16.5%; }
+    &:nth-child(6) { top: 67%; left: 21%; }
+    &:nth-child(7) { top: 67%; left: 26%; }
+    &:nth-child(8) { top: 69%; left: 30%; }
+    &:nth-child(9) { top: 68.5%; left: 34%; }
+    &:nth-child(10) { top: 69.6%; left: 38.5%; }
+    &:nth-child(11) { top: 70%; left: 41.5%; }
+    &:nth-child(12) { top: 70.5%; left: 46%; }
+    &:nth-child(13) { top: 71%; left: 49.5%; }
+    &:nth-child(14) { top: 70%; left: 58%; }
+    &:nth-child(15) { top: 69.5%; left: 61.25%; }
+    &:nth-child(16) { top: 69%; left: 66%; }
+    &:nth-child(17) { top: 68.5%; left: 71.25%; }
+    &:nth-child(18) { top: 67.5%; left: 74.4%; }
+    &:nth-child(19) { top: 64%; left: 76%; }
+    &:nth-child(20) { top: 63.5%; left: 82%; }
+    &:nth-child(21) { top: 62%; left: 86%; }
+    &:nth-child(22) { top: 52%; left: 90%; font-size:6em; }
+    &:nth-child(23) { top: 54%; left: 94%; }
+    /* letters in the inside */
+    &:nth-child(n+24) { 
+      z-index: 0; 
+      font-size: 3.75em; 
+      text-shadow: 1px 1px 1px #fff3, -1px -1px 1px #a002; 
+    }
+    &:nth-child(24) { top: 25.5%; left: 10%; }
+    &:nth-child(25) { top: 23%; left: 14.5%; }
+    &:nth-child(26) { top: 19%; left: 16.5%; }
+    &:nth-child(27) { top: 21%; left: 22%; }
+    &:nth-child(28) { top: 20.25%; left: 24%; }
+    &:nth-child(29) { top: 19%; left: 28%; }
+    &:nth-child(30) { top: 18%; left: 29.5%; }
+    &:nth-child(31) { top: 16.5%; left: 34%; }
+    &:nth-child(32) { top: 13.5%; left: 36%; }
+    &:nth-child(33) { top: 12.5%; left: 42%; }
+    &:nth-child(34) { top: 14%; left: 46%; }
+    &:nth-child(35) { top: 14%; left: 50%; }
+    &:nth-child(36) { top: 14.5%; left: 53.75%; }
+    &:nth-child(37) { top: 13%; left: 56%; }
+    &:nth-child(38) { top: 13%; left: 60%; }
+    &:nth-child(39) { top: 13%; left: 64%; }
+    &:nth-child(40) { top: 14.5%; left: 67%; }
+    &:nth-child(41) { top: 20%; left:73.5%; }
+    &:nth-child(42) { top: 20%; left: 76.5%; }
+    &:nth-child(43) { top: 20%; left: 78%; rotate: 10deg; }
+    &:nth-child(44) { top: 21.25%; left: 83.5%; rotate: 8deg; }
+    &:nth-child(45) { top: 25%; left: 87.5%; }
+    &:nth-child(46) { top: 27%; left: 90%; }
+    &:nth-child(47) { top: 32%; left: 93%; }
+    
+    
+    
+    font-family: 'Courier New', Courier, monospace, monospace;
+    font-size: 3.5em !important;
+    &:nth-child(1) { top: 51%; left: 2%;  }
+    &:nth-child(2) { top: 56%; left: 5.5%; }
+    &:nth-child(3) { top: 58.5%; left: 9%; }
+    &:nth-child(4) { top: 62%; left: 13.25%; }
+    &:nth-child(5) { top: 65%; left: 17%; }
+    &:nth-child(6) { top: 67%; left: 21%; }
+    &:nth-child(7) { top: 69%; left: 25%; }
+    &:nth-child(8) { top: 70%; left: 28.5%; }
+    &:nth-child(9) { top: 71%; left: 34%; }
+    &:nth-child(10) { top: 72.5%; left: 38%; }
+    &:nth-child(11) { top: 73%; left: 42%; }
+    &:nth-child(12) { top: 73.25%; left: 46.1%; }
+    &:nth-child(13) { top: 73.25%; left: 49.75%; }
+    &:nth-child(14) { top: 72%; left: 57%; }
+    &:nth-child(15) { top: 71.25%; left: 61.5%; }
+    &:nth-child(16) { top: 70%; left: 65.75%; }
+    &:nth-child(17) { top: 68.76%; left: 70%; }
+    &:nth-child(18) { top: 68%; left: 74.4%; }
+    &:nth-child(19) { top: 66%; left: 78%; }
+    &:nth-child(20) { top: 64%; left: 82%; }
+    &:nth-child(21) { top: 61%; left: 86%; }
+    &:nth-child(22) { top: 58%; left: 90.75%; font-size:3.5em; }
+    &:nth-child(23) { top: 54%; left: 94.5%; }
+    
+    &:nth-child(24) { top: 27%; left: 8%; }
+    &:nth-child(25) { top: 23%; left: 12%; }
+    &:nth-child(26) { top: 21%; left: 15.5%; }
+    &:nth-child(27) { top: 19.5%; left: 19%; }
+    &:nth-child(28) { top: 18%; left: 23%; }
+    &:nth-child(29) { top: 17%; left: 26.75%; }
+    &:nth-child(30) { top: 16%; left: 30.5%; }
+    &:nth-child(31) { top: 15%; left: 34.25%; }
+    &:nth-child(32) { top: 14%; left: 37.75%; }
+    &:nth-child(33) { top: 14%; left: 42%; }
+    &:nth-child(34) { top: 14%; left: 45.5%; }
+    &:nth-child(35) { top: 14%; left: 51%; }
+    &:nth-child(36) { top: 14.5%; left: 54.5%; }
+    &:nth-child(37) { top: 15%; left: 58%; }
+    &:nth-child(38) { top: 16%; left: 62%; }
+    &:nth-child(39) { top: 17%; left: 66%; }
+    &:nth-child(40) { top: 17.5%; left: 69.5%; }
+    &:nth-child(41) { top: 19%; left:74.35%; }
+    &:nth-child(42) { top: 21%; left: 77%; }
+    &:nth-child(43) { top: 22%; left: 81%; rotate: 10deg; }
+    &:nth-child(44) { top: 25%; left: 85.5%; rotate: 8deg; }
+    &:nth-child(45) { top: 28%; left: 89%; }
+    &:nth-child(46) { top: 32%; left: 93%; }
+    &:nth-child(47) { top: 37%; left: 96%; }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon with four vertical panels parodying the farewell speech by Bilbo Baggins in The Lord of the Rings. A hobbit says farewell and disappears during his birthday speech, to the surprise of all the attendants. He then pops back next to his house saying 'Ha! You always work like a charm, my precious friend!' The last panel is a close-up of a ring with the CSS code: 'display: none; opacity: 0; visibility: hidden !important'">
+      <section>
+        <div class="title">Sometime, somewhere in Middle Earth...</div>
+        <div class="tree"></div>
+        <div class="poster"></div>
+        <div class="box"></div>
+        <div class="hobbit">
+          <div class="legs">
+            <div class="leg"></div>
+            <div class="leg"></div>
+            <div class="pants"></div>
+          </div>
+          <div class="body">
+            <div class="arm arm-1"></div>
+            <div class="chest"></div>
+            <div class="arm arm-2"></div>
+          </div>
+          <div class="head">
+            <div class="hair-back"></div>
+            <div class="ear"></div>
+            <div class="ear"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair"></div>
+            </div>
+          </div>
+        </div>
+        <div class="crowd"></div>
+        <div class="crowd"></div>
+        <div class="crowd"></div>
+        <div class="hat"></div>
+        <div class="speech">I regret to announce that &#8209;though, as I said, eleventy&#8209;one years is far too short a time to spend among you&#8209; this is the END. I am going. I am leaving NOW.</div>
+      </section>
+      <section>
+        <div class="tree"></div>
+        <div class="poster"></div>
+        <div class="box"></div>
+        <div class="hobbit hobbit-pop"></div>
+        <div class="crowd"></div>
+        <div class="crowd"></div>
+        <div class="crowd"></div>
+        <div class="hat"></div>
+        <div class="speech">GOOD-BYE!</div>
+        <div class="comment">Wow!</div>
+        <div class="comment comment-2">He vanished!</div>
+        <div class="surprise-lines"></div>
+        <div class="surprise-lines"></div>
+        <div class="surprise-lines"></div>
+      </section>
+      <section>
+        <div class="title">...A few minutes later...</div>
+        <div class="hobbit hobbit-pop">
+          <div class="legs">
+            <div class="leg"></div>
+            <div class="leg"></div>
+            <div class="pants"></div>
+          </div>
+          <div class="body">
+            <div class="arm"></div>
+            <div class="arm arm-2"></div>
+            <div class="ring"></div>
+            <div class="chest"></div>
+          </div>
+          <div class="head">
+            <div class="hair-back"></div>
+            <div class="ear"></div>
+            <div class="ear"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair"></div>
+            </div>
+          </div>
+        </div>
+        <div class="door"></div>
+        <div class="speech">Ha! You always work like a charm, my precious friend!</div>
+      </section>
+      <section>
+        <div class="index-finger"></div>
+        <div class="ring">
+          <span>d</span>
+          <span>i</span>
+          <span>s</span>
+          <span>p</span>
+          <span>l</span>
+          <span>a</span>
+          <span>y</span>
+          <span>:</span>
+          <span>n</span>
+          <span>o</span>
+          <span>n</span>
+          <span>e</span>
+          <span>;</span>
+          <span>o</span>
+          <span>p</span>
+          <span>a</span>
+          <span>c</span>
+          <span>i</span>
+          <span>t</span>
+          <span>y</span>
+          <span>:</span>
+          <span>0</span>
+          <span>;</span>
+          <span>v</span>
+          <span>i</span>
+          <span>s</span>
+          <span>i</span>
+          <span>b</span>
+          <span>i</span>
+          <span>l</span>
+          <span>i</span>
+          <span>t</span>
+          <span>y</span>
+          <span>:</span>
+          <span>h</span>
+          <span>i</span>
+          <span>d</span>
+          <span>d</span>
+          <span>e</span>
+          <span>n</span>
+          <span>!</span>
+          <span>i</span>
+          <span>m</span>
+          <span>p</span>
+          <span>o</span>
+          <span>r</span>
+          <span>t</span>
+        </div>
+        <div class="thumb"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

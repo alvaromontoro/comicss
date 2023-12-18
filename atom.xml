@@ -2100,12 +2100,31 @@
     <title>Nightmare</title>
     <link href="https://comicss.art/?id=111" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/111/nightmare.html"/>
-    <id>https://comicss.art/?id=110</id>
+    <id>https://comicss.art/?id=111</id>
     <updated>2023-12-11T00:00:00Z</updated>
     <summary>New Cartoon: Nightmare</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/111/nightmare.png" alt="Cartoon with two panels. In the first panel, a white man wakes up yelling from a dream with The New York Thymes newspaper announcing 'W3C Shocks Internet: Tailwind Replaces CSS' in big letters. In the second panel, an off-screen person says 'Wow! That must have been a heck of a nightmare', to which the previous character replies 'How am I supposed to know? I am just a React Developer!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Nightmare</title>
+    <link href="https://comicss.art/?id=112" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/112/eleventy-one.html"/>
+    <id>https://comicss.art/?id=112</id>
+    <updated>2023-12-18T00:00:00Z</updated>
+    <summary>New Cartoon: Eleventy-One</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/112/eleventy-one.png" alt="Cartoon with four vertical panels parodying the farewell speech by Bilbo Baggins in The Lord of the Rings. A hobbit says farewell and disappears during his birthday speech, to the surprise of all the attendants. He then pops back next to his house saying 'Ha! You always work like a charm, my precious friend!' The last panel is a close-up of a ring with the CSS code: 'display: none; opacity: 0; visibility: hidden !important'" /></p>
       </div>
     </content>
     <rights>Copyright 2023 Alvaro Montoro</rights>

@@ -1116,5 +1116,15 @@
       <enclosure url="https://comicss.art/comics/111/nightmare.png" length="270000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=112</guid>
+      <title>Eleventy-One</title>
+      <link>https://comicss.art/?id=112</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/112/eleventy-one.png" length="449000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

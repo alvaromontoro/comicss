@@ -876,4 +876,12 @@ const posts = [
     title: "Nightmare",
     ariaLabel: "Cartoon with two panels. In the first panel, a white man wakes up yelling from a dream with The New York Thymes newspaper announcing 'W3C Shocks Internet: Tailwind Replaces CSS' in big letters. In the second panel, an off-screen person says 'Wow! That must have been a heck of a nightmare', to which the previous character replies 'How am I supposed to know? I am just a React Developer!'"
   },
+  {
+    id: 112,
+    uid: "eleventy-one",
+    boxes: 4,
+    vertical: true,
+    title: "Eleventy-One",
+    ariaLabel: "Cartoon with four vertical panels parodying the farewell speech by Bilbo Baggins in The Lord of the Rings. A hobbit says farewell and disappears during his birthday speech, to the surprise of all the attendants. He then pops back next to his house saying 'Ha! You always work like a charm, my precious friend!' The last panel is a close-up of a ring with the CSS code: 'display: none; opacity: 0; visibility: hidden !important'"
+  },
 ]
