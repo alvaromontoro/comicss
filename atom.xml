@@ -2116,7 +2116,7 @@
     </author>
   </entry>
   <entry>
-    <title>Nightmare</title>
+    <title>Eleventy-One</title>
     <link href="https://comicss.art/?id=112" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/112/eleventy-one.html"/>
     <id>https://comicss.art/?id=112</id>
@@ -2125,6 +2125,25 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/112/eleventy-one.png" alt="Cartoon with four vertical panels parodying the farewell speech by Bilbo Baggins in The Lord of the Rings. A hobbit says farewell and disappears during his birthday speech, to the surprise of all the attendants. He then pops back next to his house saying 'Ha! You always work like a charm, my precious friend!' The last panel is a close-up of a ring with the CSS code: 'display: none; opacity: 0; visibility: hidden !important'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Goldilocks</title>
+    <link href="https://comicss.art/?id=113" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/113/goldilocks.html"/>
+    <id>https://comicss.art/?id=112</id>
+    <updated>2023-12-25T00:00:00Z</updated>
+    <summary>New Cartoon: Goldilocks</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/113/goldilocks.png" alt="comic strip with 4 panels. The first one is a cover for Goldilocks and the Three Bears, with a girl and three bear heads, the names have been scratched and rewritten to GoldiloCSS and the Three Breaks. The following panels show some code and the result of it with a comment from GoldiloCSS. In the first one, she uses word-break: break-all, and all the words break at inconvenient places. She says 'too hard'. In the second one she uses word-break: keep-all. The words wrap to the next line unless they wouldn't fit, thent hey exceed the space allocated to them. GoldiloCSS comments 'Too soft'. In the last panel, she uses word-break:break-word and the words wrap to the next line unless they wouldn't fit, then they break. GoldiloCSS comments 'Just right... kind of...'" /></p>
       </div>
     </content>
     <rights>Copyright 2023 Alvaro Montoro</rights>

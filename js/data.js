@@ -884,4 +884,12 @@ const posts = [
     title: "Eleventy-One",
     ariaLabel: "Cartoon with four vertical panels parodying the farewell speech by Bilbo Baggins in The Lord of the Rings. A hobbit says farewell and disappears during his birthday speech, to the surprise of all the attendants. He then pops back next to his house saying 'Ha! You always work like a charm, my precious friend!' The last panel is a close-up of a ring with the CSS code: 'display: none; opacity: 0; visibility: hidden !important'"
   },
+  {
+    id: 113,
+    uid: "goldilocks",
+    boxes: 4,
+    horizontal: true,
+    title: "Goldilocks",
+    ariaLabel: "comic strip with 4 panels. The first one is a cover for Goldilocks and the Three Bears, with a girl and three bear heads, the names have been scratched and rewritten to GoldiloCSS and the Three Breaks. The following panels show some code and the result of it with a comment from GoldiloCSS. In the first one, she uses word-break: break-all, and all the words break at inconvenient places. She says 'too hard'. In the second one she uses word-break: keep-all. The words wrap to the next line unless they wouldn't fit, thent hey exceed the space allocated to them. GoldiloCSS comments 'Too soft'. In the last panel, she uses word-break:break-word and the words wrap to the next line unless they wouldn't fit, then they break. GoldiloCSS comments 'Just right... kind of...'"
+  },
 ]

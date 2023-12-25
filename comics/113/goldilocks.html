@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Patrick+Hand+SC&display=swap');
+
+article {
+  font-size: 1vmin;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1em;
+  background: white;
+  
+  & section {
+    border: 0.5em solid;
+    width: 40em;
+    aspect-ratio: 1;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: white;
+    
+    & *,
+    & *::before,
+    & *::after {
+      position: absolute;
+      box-sizing: border-box;
+    }
+    
+    & pre {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(25% + 0.25em);
+      border-bottom: 0.25em solid #000;
+      background: #123;
+      color: #eee;
+      margin: 0;
+      padding: 0.75em 1em;
+      font-size: 1.75em;
+      line-height: 1.35;
+      
+      & * { position: relative; }
+      
+      .s { color: #cc9; }
+      .p { color: #c9c; }
+      .v { color: #fa4; }
+    }
+    
+    .text {
+      width: 50%;
+      aaspect-ratio: 1;
+      border: 0.125em solid red;
+      font-family: arial, sans-serif;
+      font-size: 2.15em;
+      top: 30%;
+      left: 4%;
+    }
+    
+    .speech {
+      white-space: pre;
+      background: #adf;
+      border-radius: 100% / 95%;
+      padding: 0.5em 1em;
+      font-size: 2.2em;
+      font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, sans-serif;
+      top: 76%;
+      right: 7%;
+      
+      &::before {
+        content: "";
+        width: 2em;
+        height: 3.5em;
+        border-radius: 0 0 0 100%;
+        border-left: 0.5em solid #adf;
+        top: 97%;
+        left: 50%;
+      }
+    }
+  }
+  
+  & section:nth-child(1) {
+    aspect-ratio: 5/6;
+    width: 33.333em;
+    border: 0;
+    background: #a398;
+    
+    & h1 {
+      font-size: 4em;
+       color: #fff;
+      text-align: center;
+      line-height: 1;
+      margin-top: 0.8em;
+      font-family: 'Bowlby One SC';
+      font-weight: 400;
+      width: 100%;
+      
+      & * {
+        position: relative;
+        text-align: center;
+      }
+      
+      & span {
+        font-size: 0.5em;
+        display: block;
+      }
+      
+      & del {
+        text-decoration: blue line-through
+      }
+      
+      & ins {
+        font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, sans-serif;
+        text-decoration: none;
+        color: blue;
+        position: absolute;
+        left: 50%;
+        
+        &:nth-of-type(1) {
+          left: 64%;
+          top: -23%;
+          rotate: -5deg;
+        }
+        &:nth-of-type(2) {
+          left: 68%;
+          top: 38%;
+          rotate: 3deg;
+        }
+      }
+    }
+    
+    .bear {
+      width: 30%;
+      aspect-ratio: 1;
+      
+      &:nth-of-type(1) {
+        top: 31%;
+        left: 53%;
+        rotate: 20deg;
+        scale: 0.7;
+      }
+      
+      &:nth-of-type(2) {
+        top: 50%;
+        left: 63%;
+        rotate: -6deg;
+        scale: 0.8;
+      }
+      
+      &:nth-of-type(3) {
+        top: 72%;
+        left: 58%;
+        rotate: 10deg;
+        scale: 0.9;
+      }
+      
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: 
+          radial-gradient(closest-side circle at 18% 12%, #c96 50%, #963 51.5% 98.5%, #0000),
+          radial-gradient(closest-side circle at 82% 12%, #c96 50%, #963 51.5% 98.5%, #0000);
+      }
+      
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 100% / 110% 110% 70% 70%;
+        background: 
+          /* snout */
+          radial-gradient(100% 70% at 50% 63%, #000 6%, #0000 6.5%),
+          linear-gradient(#000 0 0) 50% 70% / 1.5% 10% no-repeat,
+          radial-gradient(circle at 50% 70%, #c96 21%, #0000 21.5%),
+          /* eyes */
+          radial-gradient(circle at 18.5% 57%, #fff 0.18em, #0000 0.2em),
+          radial-gradient(circle at 78.5% 57%, #fff 0.18em, #0000 0.2em),
+          radial-gradient(circle at 20% 59%, #000 0.5em, #0000 0.55em),
+          radial-gradient(circle at 80% 59%, #000 0.5em, #0000 0.55em),
+          #963;
+      }
+    }
+    
+    .goldilocks {
+      --skin: #fca;
+      --hair: #ff5;
+      --dress: #bef;
+      width: 45%;
+      height: 48%;
+      bottom: 4%;
+      left: 35%;
+      transform: translate(-50%, 0%);
+      
+      .hair-back {
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 90%;
+        height: 70%;
+        background: var(--hair);
+        border-radius: 100% / 100% 100% 110% 110%;
+        
+        &::before {
+          content: "";
+          width: 40%;
+          height: 20%;
+          color: var(--hair);
+          border-radius: 50% / 0 0 100% 100%;
+          transform: translate(-91.5%, 300%) rotate(-15deg);
+          box-shadow: 2em 0.2em;
+          filter: drop-shadow(0.25em 2em var(--hair)) drop-shadow(1em 0.75em)
+        }
+        
+        &::after {
+          content: "";
+          width: 40%;
+          height: 20%;
+          color: var(--hair);
+          border-radius: 50% / 0 0 100% 100%;
+          transform: scaleX(-1) translate(-91.5%, 300%) rotate(-15deg);
+          box-shadow: 2em 0.2em;
+          right: 0;
+          filter: drop-shadow(0.5em 2.25em var(--hair)) drop-shadow(1em 0.75em)
+        }
+      }
+      
+      .head {
+        width: 85%;
+        height: 48%;
+        left: 50%;
+        top: 5%;
+        transform: translate(-50%, 0%);
+
+        .ear {
+          width: 1.25em;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background: var(--skin);
+          top: 57.5%;
+          box-shadow: inset 0 0 0 9em #c001;
+          
+          & + & {
+            right: 0;
+          }
+        }
+        
+        .face {
+          width: 90%;
+          height: 100%;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          border-radius: 100% / 110% 110% 85% 85%;
+          background:
+            /* eyes */
+            radial-gradient(circle at 26.5% 58.5%, #fff 0.18em, #0000 0.2em),
+            radial-gradient(circle at 70.5% 58.5%, #fff 0.18em, #0000 0.2em),
+            radial-gradient(circle at 28% 60%, #000 0.5em, #0000 0.55em),
+            radial-gradient(circle at 72% 60%, #000 0.5em, #0000 0.55em),
+            /* mouth */
+            radial-gradient(75% 100% at 50% 0, #0000 80%, #c00 82% 98%, #0000) 50% 68% / 1.25em 1em,
+            /* cheeks */
+            radial-gradient( at 18% 69%, #f002 0.75em, #0000 0.8em),
+            radial-gradient( at 82% 69%, #f002 0.75em, #0000 0.8em),
+            /* hair */
+            radial-gradient(60% 55% at 15% 0, var(--hair) 80%, #0000 81%),
+            radial-gradient(40% 58% at 85% 0, var(--hair) 80%, #0000 81%)
+            var(--skin);
+          background-repeat: no-repeat;
+          box-shadoW:
+            inset 0 2.6em 0 -1.9em var(--dress);
+        }
+      }
+      
+      .body {
+        width: 100%;
+        height: 55%;
+        bottom: 0;
+        
+        .neck {
+          width: 12%;
+          height: 16%;
+          background: #fff;
+          border-radius: 50%;
+          left: 50%;
+          top: 2.5%;
+          transform: translate(-90%);
+          box-shadow: 1.4em 0 #fff;
+        }
+        .leg {
+          width: 17%;
+          height: 60%;
+          background: 
+            radial-gradient(130% 40% at 50% 100%, #0000 50%, var(--dress) 0 60%, #0000 0),
+            var(--skin);
+          border-radius: 100% / 130% 130% 60% 60%;
+          box-shadow: inset 0 -3em 0 -2em var(--dress);
+          transform: rotate(10deg);
+          bottom: 0;
+          left: 30%;
+          
+          & + & {
+            transform: rotate(-15deg);
+            left: 55%;
+          }
+        }
+        
+        .arm {
+          width: 12%;
+          height: 52%;
+          background: var(--skin);
+          border-radius: 100% / 130% 130% 60% 60%;
+          transform: rotate(32deg);
+          top: 12%;
+          left: 25%;
+          
+          & + & {
+            transform: rotate(-29deg);
+            left: 62%;
+          }
+        }
+        
+        .dress {
+          width: 100%;
+          height: 80%;
+          background: 
+/*             linear-gradient(109deg, #0001 39%, #0000 0), */
+            radial-gradient(100% 120% at 50% 0, #0000 50%, #fff 50.5% 55%, #0000 55.5%),
+            var(--dress);
+          border-radius: 100% / 0 0 70% 70%;
+          -webkit-mask: conic-gradient(at 50% -30%, #0000 160deg, #000 0 200deg, #0000 0);
+        }
+      }
+    }
+  }
+  
+  & section:nth-child(2) {
+    .text {
+      word-break: break-all;
+    }
+  }
+  
+  & section:nth-child(3) {
+    .text {
+      word-break: keep-all;
+    }
+  }
+  
+  & section:nth-child(4) {
+    .text {
+      word-break: break-word;
+    }
+    
+    .speech {
+      top: 65%;
+      right: 5%;
+      
+      &::before {
+        height: 7em;
+        width: 4em;
+      }
+      
+      &::after {
+        content: "...kind of...";
+        top: 190%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        font-size: 0.8em;
+        background: #adf;
+        border-radius: 100% / 95%;
+        padding: 0.2em 0.75em 0.3em 0.75em;
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article role="img" aria-label="comic strip with 4 panels. The first one is a cover for Goldilocks and the Three Bears, with a girl and three bear heads, the names have been scratched and rewritten to GoldiloCSS and the Three Breaks. The following panels show some code and the result of it with a comment from GoldiloCSS. In the first one, she uses word-break: break-all, and all the words break at inconvenient places. She says 'too hard'. In the second one she uses word-break: keep-all. The words wrap to the next line unless they wouldn't fit, thent hey exceed the space allocated to them. GoldiloCSS comments 'Too soft'. In the last panel, she uses word-break:break-word and the words wrap to the next line unless they wouldn't fit, then they break. GoldiloCSS comments 'Just right... kind of...'">
+      <section>
+        <h1>Goldilo<del>cks</del><ins>CSS</ins> <span>and the</span> Three <del>Bears</del> <ins>Breaks</ins></h1>
+        <div class="bear"></div>
+        <div class="bear"></div>
+        <div class="bear"></div>
+        <div class="goldilocks">
+          <div class="hair-back"></div>
+          <div class="body">
+            <div class="arm"></div>
+            <div class="arm"></div>
+            <div class="leg"></div>
+            <div class="leg"></div>
+            <div class="dress"></div>
+            <div class="neck"></div>
+          </div>
+          <div class="head">
+            <div class="ear"></div>
+            <div class="ear"></div>
+            <div class="face"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <pre><code><span class="s">.bio</span> {
+      <span class="p">border</span>: <span class="v">1px</span> <span class="s">solid red</span>;
+      <span class="p">word-break</span>: <span class="s">break-all</span>;</code></pre>
+        <div class="text">Then, Goldilocks went to Medical School to become a doctor and treat patients with pneumonoultramicroscopicsilicovolcanokoniosis.</div>
+        <div class="speech">Hmmm... Too hard...</div>
+      </section>
+      <section>
+        <pre><code><span class="s">.bio</span> {
+      <span class="p">border</span>: <span class="v">1px</span> <span class="s">solid red</span>;
+      <span class="p">word-break</span>: <span class="s">keep-all</span>;</code></pre>
+        <div class="text">Then, Goldilocks went to Medical School to become a doctor and treat patients with pneumonoultramicroscopicsilicovolcanokoniosis.</div>
+        <div class="speech">...Too soft...</div>
+      </section>
+      <section>
+        <pre><code><span class="s">.bio</span> {
+      <span class="p">border</span>: <span class="v">1px</span> <span class="s">solid red</span>;
+      <span class="p">word-break</span>: <span class="s">break-word</span>;</code></pre>
+        <div class="text">Then, Goldilocks went to Medical School to become a doctor and treat patients with pneumonoultramicroscopicsilicovolcanokoniosis.</div>
+        <div class="speech">...Just right!</div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

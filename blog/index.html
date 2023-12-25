@@ -108,6 +108,51 @@
         </footer>
       </article>
       -->
+      <article id="goldilocks">
+        <h2>GoldiloCSS and the Three (Word-)Breaks</h2>
+        <p>
+          Once upon a time, there was a girl named <a href="/?id=113">GoldiloCSS</a>. She had lived all her life with three bears 
+          in a cabin in the forest and wanted to get out and see the world. She knew there was more to life 
+          than sleeping and eating porridge and honey all day. 
+        </p>
+        <p>
+          So, GoldiloCSS decided to apply to Med School and prepared her bio (in HTML format for some weird 
+          reason that is not important to this story), but she soon found a problem: there were really long 
+          words, and they made the lines look terrible and unbalanced. Luckily for her, GoldiloCSS knew CSS 
+          (thus her name) and tried the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break"><code>word-break</code></a>
+          property.
+        </p>
+        <p>
+          She first used <code>word-break:&nbsp;break-all</code>, but all the words were breaking instead of wrapping if 
+          they fit inside the following line. It was tough to read. She looked at the breaks and said, 
+          "These breaks are too hard."
+        </p>
+        <p>
+          GoldiloCSS then used<code>word-break:&nbsp;keep-all</code>. This time, the words wrapped correctly if they fit in 
+          the following line... but if they didn't, they kept going and overlapping other parts of the bio. 
+          That didn't look great either, and she complained, "These breaks are too soft!"
+        </p>
+        <p>
+          Finally, GoldiloCSS used <code>word-break:&nbsp;break-word</code>. In this case, if a word fit in the following 
+          line, it would wrap, and if it didn't, it would break the word over several lines. She looked at 
+          the text, and it was more balanced. She said, "Just right! ...or kind of?" because the long words 
+          still looked weird when broken.
+        </p>
+        <p>
+          That day, GoldiloCSS learned several lessons: 
+        </p>
+        <ul>
+          <li><code>word-break</code> is a powerful property,</li>
+          <li>there are other useful properties for breaking words like hyphens or overflow-wrap,</li>
+          <li>the way a word breaks affects readability and accessibility.</li>
+        </ul>
+        <p>
+          After finishing writing her bio, she was tired. She ate some porridge and slept for a while. That life wasn't that bad after all; she wanted to enjoy it before her next adventure.
+        </p>
+        <footer>
+          Published on <time datetime="2023-12-25">December 25, 2023</time>
+        </footer>
+      </article>
       <article id="riddle">
         <h2>Riddle: Divtober is over... or is it?</h2>
         <p>This week's cartoon is an interactive joke! My children told me a (terrible) joke the other day:</p>
