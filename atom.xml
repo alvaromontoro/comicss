@@ -2138,7 +2138,7 @@
     <title>Goldilocks</title>
     <link href="https://comicss.art/?id=113" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/113/goldilocks.html"/>
-    <id>https://comicss.art/?id=112</id>
+    <id>https://comicss.art/?id=113</id>
     <updated>2023-12-25T00:00:00Z</updated>
     <summary>New Cartoon: Goldilocks</summary>
     <content type="xhtml">
@@ -2147,6 +2147,25 @@
       </div>
     </content>
     <rights>Copyright 2023 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Headaches</title>
+    <link href="https://comicss.art/?id=114" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/114/headaches.html"/>
+    <id>https://comicss.art/?id=114</id>
+    <updated>2024-01-14T00:00:00Z</updated>
+    <summary>New Cartoon: Headaches</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/114/headaches.png" alt="Comic strip titled 'Types of headaches' with four panels showing a person with a red are indicating the zone of the headache, and a title underneath it indicating the type of headache. The first panel is for Migraine, and the red area occupies the right side of the forehead and eye. The second panel is for stress, and the red area is the forehead and both sides of the head. The third panel is for tension, and the red area is around the forehead. The fourth panel is for Tailwind, and the whole head and body are red." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
     <author>
       <name>Alvaro Montoro</name>
       <email>alvaromontoro@gmail.com</email>

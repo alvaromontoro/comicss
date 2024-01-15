@@ -892,4 +892,12 @@ const posts = [
     title: "Goldilocks",
     ariaLabel: "comic strip with 4 panels. The first one is a cover for Goldilocks and the Three Bears, with a girl and three bear heads, the names have been scratched and rewritten to GoldiloCSS and the Three Breaks. The following panels show some code and the result of it with a comment from GoldiloCSS. In the first one, she uses word-break: break-all, and all the words break at inconvenient places. She says 'too hard'. In the second one she uses word-break: keep-all. The words wrap to the next line unless they wouldn't fit, thent hey exceed the space allocated to them. GoldiloCSS comments 'Too soft'. In the last panel, she uses word-break:break-word and the words wrap to the next line unless they wouldn't fit, then they break. GoldiloCSS comments 'Just right... kind of...'"
   },
+  {
+    id: 114,
+    uid: "headaches",
+    boxes: 1,
+    vertical: true,
+    title: "Headaches",
+    ariaLabel: "Comic strip titled 'Types of headaches' with four panels showing a person with a red are indicating the zone of the headache, and a title underneath it indicating the type of headache. The first panel is for Migraine, and the red area occupies the right side of the forehead and eye. The second panel is for stress, and the red area is the forehead and both sides of the head. The third panel is for tension, and the red area is around the forehead. The fourth panel is for Tailwind, and the whole head and body are red."
+  },
 ]
