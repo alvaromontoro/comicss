@@ -900,4 +900,12 @@ const posts = [
     title: "Headaches",
     ariaLabel: "Comic strip titled 'Types of headaches' with four panels showing a person with a red are indicating the zone of the headache, and a title underneath it indicating the type of headache. The first panel is for Migraine, and the red area occupies the right side of the forehead and eye. The second panel is for stress, and the red area is the forehead and both sides of the head. The third panel is for tension, and the red area is around the forehead. The fourth panel is for Tailwind, and the whole head and body are red."
   },
+  {
+    id: 115,
+    uid: "counting-sheep",
+    boxes: 9,
+    vertical: true,
+    title: "Do Web Developers Dream of CSSheep?",
+    ariaLabel: "comic with 9 vertical panels, all of them showing a person in bed with a timer at the bottom right side of the panel. Panel 1: 22:30. The person smiles: 'as a web developer, I do not count sheep to go to sleep. I count front-end technologies that I would like to learn'. Panel 2: 22:31. The person starts falling asleep while dreaming/counting the CSS3 logo. Panel 3: 22:32. The person is sleeping merrilly while dreaming/counting the CSS3 and BEM logos. Panel 4: 22:33. The person opens an eye slightly while counting the CSS3, BEM, and Tailwind logos. Panel 5: 22:34. The person is startled while counting the CSS, BEM, Tailwind, and Bootstrap logos. Panel 6: 22:35. The person starts frawning while counting the CSS, BEM, Tailwind, Bootstrap, and Less logos. Panel 7: 22:36. The person looks worried while counting the CSS, BEM, Tailwind, Bootstrap, Less, and CSS-in-JS (JSS) logos. Panel 8: 22:45. The dream/counting bubble bursts with a worried looking person. Panel 9: 06:55. The person looks sad and sleepy, with bags under the eyes from not sleeping all night."
+  },
 ]
