@@ -908,4 +908,12 @@ const posts = [
     title: "Do Web Developers Dream of CSSheep?",
     ariaLabel: "comic with 9 vertical panels, all of them showing a person in bed with a timer at the bottom right side of the panel. Panel 1: 22:30. The person smiles: 'as a web developer, I do not count sheep to go to sleep. I count front-end technologies that I would like to learn'. Panel 2: 22:31. The person starts falling asleep while dreaming/counting the CSS3 logo. Panel 3: 22:32. The person is sleeping merrilly while dreaming/counting the CSS3 and BEM logos. Panel 4: 22:33. The person opens an eye slightly while counting the CSS3, BEM, and Tailwind logos. Panel 5: 22:34. The person is startled while counting the CSS, BEM, Tailwind, and Bootstrap logos. Panel 6: 22:35. The person starts frawning while counting the CSS, BEM, Tailwind, Bootstrap, and Less logos. Panel 7: 22:36. The person looks worried while counting the CSS, BEM, Tailwind, Bootstrap, Less, and CSS-in-JS (JSS) logos. Panel 8: 22:45. The dream/counting bubble bursts with a worried looking person. Panel 9: 06:55. The person looks sad and sleepy, with bags under the eyes from not sleeping all night."
   },
+  {
+    id: 116,
+    uid: "cloud-developer",
+    boxes: 1,
+    vertical: true,
+    title: "Cloud Developer",
+    ariaLabel: "Cartoon of a person using a computer with clouds in the background, next to a box with the following CSS code: .cloud-developer { background: azure; isolation: isolate; rest: none; stress: 100; content: none; }"
+  },
 ]

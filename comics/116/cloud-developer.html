@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: azure;
+}
+
+@keyframes moveHorizontal {
+  from { background-position: 0 20%; }
+  from { background-position: 2em 20%; }
+}
+
+@keyframes moveVertical {
+  from { background-position: 20% 0; }
+  from { background-position: 20% 2em; }
+}
+
+
+article {
+  --line-color: #9cf;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-bottom: 0.5em solid;
+  color: #369;
+  
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  #alt-text {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translate(-100in, 0);
+  }
+  
+  code {
+    display: inline-block;
+    white-space: pre;
+    right: 3em;
+    top: 0.5em;
+    color: #eee;
+    font-size: 2em;
+    padding: 2.5em 4em 1.5em 2em;
+    border-radius: 0.5em;
+    font-family: monospace, monospace;
+    line-height: 1.5;
+    background: 
+      radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 0),
+      radial-gradient(circle at 2.1em 1em, #cc5 0.35em, #0000 0),
+      radial-gradient(circle at 3.2em 1em, #6c6 0.35em, #0000 0),
+      #123;
+    box-shadow: 0.5em 2em 2em #0007;
+    z-index: 1;
+    
+    & * { position: relative; }
+    
+    .p { color: #4b4; }
+    .s { color: #dd7; }
+    .v { color: #c9c; }
+    .n { color: #d77; }
+  }
+  
+  .person {
+    --skin: #fff;
+    --skin-dark: #d8eef8;
+    --shirt: darkorange;
+    width: 45%;
+    aspect-ratio: 1.2;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    .computer {
+      width: 50%;
+      height: 39%;
+      bordeR: 0.4em solid;
+      border-radius: 0.5em;
+      background: radial-gradient(circle at 50% 55%, var(--skin) 1.25em, var(--skin-dark) 0); /* alternatively, the computer can be #eee */
+      bottom: -0.1%;
+      left: 50%;
+      transform: translateX(-50%) perspective(100em) rotateX(-13deg);
+      transform-origin: 50% 100%;
+    }
+
+    .body {
+      width: 50%;
+      height: 61%;
+      bottom: 0;
+      left: 48%;
+      transform: translateX(-50%);
+      
+      .chest {
+        width: 100%;
+        height: 200%;
+        background: var(--shirt);
+        border-radius: 130% / 20% 20% 220% 220%;
+      }
+      
+      .arm {
+        width: 50%;
+        height: 87.25%;
+        transform: translate(-23%) skew(-15deg);
+        bottom: 0;
+        
+        &::before {
+          content: "";
+          width: 90%;
+          height: 80%;
+          border: 0.35em solid;
+          bottom: 0;
+          border-radius: 0 0 0 4.25em;
+          background: 
+            linear-gradient(currentColor 0 0) 100% 70% / 60% 0.3em no-repeat
+            var(--skin);
+          left: 1%;
+        }
+        
+        &::after {
+          content: "";
+          width:100%;
+          height: 60%;
+          background: var(--shirt);
+          border-radius: 100% / 0 0 20% 20%;
+        }
+        
+        & + & {
+          transform: scaleX(-1) skew(-20deg);
+          left: 65.75%;
+          
+          &::before {
+            border-radius: 0 0 0 5em;
+          }
+        }
+      }
+    }
+    
+    .head {
+      width: 25%;
+      aspect-ratio: 4 / 5;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      .ear {
+        width: 22%;
+        height: 30%;
+        background: var(--skin-dark);
+        left: -14%;
+        border-radius: 100% 0 0 100% /50%;
+        border: 0.4em solid;
+        border-right: 0;
+        top: 47%;
+        transform: rotate(-10deg);
+        
+        & + & {
+          width: 20%;
+          left: 85%;
+          top: 45%;
+          background: var(--skin);
+          transform: scaleX(-1);
+        }
+      }
+      
+      .neck {
+        width: 58%;
+        height: 66%;
+        top: 55%;
+        border: 0.4em solid;
+        border-bottom-width: 0.45em;
+        border-radius: 100% / 40%;
+        left: 45%;
+        translate: -50% 0;
+        box-shadow: inset 1em 0em var(--skin-dark);
+        background: var(--skin);
+      }
+      
+      .hair-back {
+        width: 30%;
+        height: 50%;
+        background: currentcolor;
+        border-radius: 100% / 80% 80% 120% 120%;
+        left: -8%;
+        top: 10%;
+      }
+      
+      .face {
+        width: 100%;
+        height: 100%;
+        border: 0.5em solid;
+        border-left: 0.9em solid var(--skin-dark);
+        border-bottom: 0.4em solid ;
+        border-radius: 60% / 5em 5em 10em 10em;
+        background:
+          conic-gradient(from 230deg at 60% 70%, var(--skin-dark) 120deg, #0000 0),
+          linear-gradient(90deg, var(--skin-dark) 52%, var(--skin) 0);
+        background-repeat: no-repeat;
+        
+        .hair-front {
+          width: 135%;
+          height: 45%;
+          background: currentcolor;
+          border-radius:  100% 0 120% 5%;
+          rotate: 20deg;
+          top: -12%;
+          left: -10%;
+          
+          &::before {
+            content: "";
+            width: 25%;
+            height: 25%;
+            right: 0;
+            top: 0;
+            transform: translateY(-90%);
+            background: currentcolor;
+            clip-path: polygon(0 0, 60% 50%, 60% 0, 100% 90%, 20% 100%)
+          }
+        }
+      }
+    }
+  }
+  
+  .clouds {
+    width: 100%;
+    height: 100%;
+    
+    .cloud {
+      --extra: 
+        radial-gradient(circle at 87% 87%, #fff 10%, #0000 10.2%),
+        radial-gradient(circle at 87% 87%, currentcolor 11%, #0000 11.2%);
+      width: 50%;
+      height: 25%;
+      top: 32%;
+      background: 
+        linear-gradient(currentcolor 0 0) 43% 100% / 87% 0.4em,
+        linear-gradient(#fff 0 0) 50% 100% / 70% 20%,
+        radial-gradient(circle at 15% 85%, #fff 12%, #0000 12.2%),
+        radial-gradient(circle at 38% 72%, #fff 22%, #0000 22.2%),
+        radial-gradient(circle at 65% 50%, #fff 32%, #0000 32.2%),
+        var(--extra),
+        radial-gradient(circle at 15% 85%, currentcolor 13%, #0000 13.2%),
+        radial-gradient(circle at 38% 72%, currentcolor 23.5%, #0000 23.8%),
+        radial-gradient(circle at 65% 50%, currentcolor 33.5%, #0000 33.8%);
+      background-repeat: no-repeat;
+      
+      & + & {
+        --extra:
+          radial-gradient(circle at 38% 42%, #fff 12%, #0000 12.2%),
+          radial-gradient(circle at 25% 54%, #fff 12%, #0000 12.2%),
+          radial-gradient(circle at 38% 42%, currentcolor 13.5%, #0000 13.7%),
+          radial-gradient(circle at 25% 54%, currentcolor 13.5%, #0000 13.7%),
+          radial-gradient(circle at 86% 82%, #fff 12%, #0000 12.2%),
+          radial-gradient(circle at 86% 82%, currentcolor 13%, #0000 13.2%);
+        width: 44%;
+        height: 28%;
+        right: 0;
+        top: 48%;
+      }
+    }
+  }
+  
+  .lines {
+    width: 100%;
+    height: 100%;
+    
+    .line {
+      background-size: 2em 2em;
+      background-image: repeating-conic-gradient(var(--line-color) 0 25%, #0000 0 50%);
+      aopacity: 0.5;
+      
+      &.line-horizontal {
+        height: 0.5em;
+        background-position: 0 20%;
+        animation: moveHorizontal 1s infinite linear;
+      }
+      
+      &.line-vertical {
+        width: 0.5em;
+        background-position: 20% 0;
+        animation: moveVertical 1s infinite linear;
+      }
+      
+      &.line-1 {
+        width: 18em;
+        top: 88%;
+        left: 18%;
+      }
+      
+      &.line-2 {
+        left: 18%;
+        bottom: calc(12% - 0.5em);
+        height: 32em;
+        animation-delay: -0.125s;
+      }
+      
+      &.line-3 {
+        width: 36em;
+        bottom: 50em;
+        left: 40%;
+        animation-direction: reverse;
+      }
+      
+      &.line-4 {
+        left: calc(40% + 35.5em);
+        bottom: 38.5em;
+        height: 12em;
+        animation-direction: reverse;
+      }
+      
+      &.line-5 {
+        width: 16em;
+        top: 88%;
+        left: 62%;
+      }
+      
+      &.line-6 {
+        left: calc(62% + 15.5em);
+        bottom: calc(12% - 0.5em);
+        height: 16em;
+        animation-delay: -0.4s;
+        
+        animation-direction: reverse;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-labelledby="alt-text">
+      <span id="alt-text">Cloud developer: a person using a computer with clouds in the background, next to some CSS code.</span>
+      <code><span class="s">.cloud-developer</span> {
+  <span class="p">background</span>: <span class="v">azure</span>;
+  <span class="p">isolation</span>: <span class="v">isolate</span>;
+  <span class="p">rest</span>: <span class="v">none</span>;
+  <span class="p">stress</span>: <span class="v n">100</span>;
+  <span class="p">content</span>: <span class="v">none</span>;
+}</code>
+      <!-- drawing inspired by https://cdn.ttgtmedia.com/rms/onlineimages/cloud_computing-cloud_engineer-f.png -->
+      <section class="clouds">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+      </section>
+      <section class="person">
+        <div class="body">
+          <div class="chest"></div>
+          <div class="arm"></div>
+          <div class="arm"></div>
+        </div>
+        <div class="head">
+          <div class="hair-back"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="hair-front"></div>
+          </div>
+        </div>
+        <div class="computer"></div>
+      </section>
+      <section class="lines">
+        <div class="line line-horizontal line-1"></div>
+        <div class="line line-vertical line-2"></div>
+        <div class="line line-horizontal line-3"></div>
+        <div class="line line-vertical line-4"></div>
+        <div class="line line-horizontal line-5"></div>
+        <div class="line line-vertical line-6"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
