@@ -916,4 +916,12 @@ const posts = [
     title: "Cloud Developer",
     ariaLabel: "Cartoon of a person using a computer with clouds in the background, next to a box with the following CSS code: .cloud-developer { background: azure; isolation: isolate; rest: none; stress: 100; content: none; }"
   },
+  {
+    id: 117,
+    uid: "king",
+    boxes: 1,
+    vertical: true,
+    title: "King",
+    ariaLabel: "Cartoon of a man with a beard, wearing a crown and holding a sceptre, next to a box with the following CSS code: .king { position: absolute; richness: 100; color: RoyalBlue; :first-child { all: inherit; } }"
+  },
 ]

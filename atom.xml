@@ -2210,4 +2210,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>King</title>
+    <link href="https://comicss.art/?id=117" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/117/king.html"/>
+    <id>https://comicss.art/?id=117</id>
+    <updated>2024-02-03T00:00:00Z</updated>
+    <summary>New Cartoon: King</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/117/king.png" alt="Cartoon of a man with a beard, wearing a crown and holding a sceptre, next to a box with the following CSS code: .king { position: absolute; richness: 100; color: RoyalBlue; :first-child { all: inherit; } }" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

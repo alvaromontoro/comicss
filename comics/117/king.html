@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: azure; mintcream;
+}
+
+article {
+  --line-color: gold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-bottom: 0.5em solid;
+  color: #369; #396;
+  
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  #alt-text {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translate(-100in, 0);
+  }
+  
+  code {
+    display: inline-block;
+    white-space: pre;
+    left: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.5em;
+    color: #eee;
+    font-size: 2em;
+    padding: 2.5em 4em 1.5em 2em;
+    border-radius: 0.5em;
+    font-family: monospace, monospace;
+    line-height: 1.5;
+    background: 
+      radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 0),
+      radial-gradient(circle at 2.1em 1em, #cc5 0.35em, #0000 0),
+      radial-gradient(circle at 3.2em 1em, #6c6 0.35em, #0000 0),
+      #123;
+    box-shadow: 0.5em 2em 2em #0007;
+    z-index: 1;
+    
+    & * { position: relative; }
+    
+    .p { color: #4b4; }
+    .s { color: #dd7; }
+    .v { color: #c9c; }
+    .n { color: #d77; }
+  }
+  
+  .person {
+    --skin: #fff;
+    --skin-dark: #d8eef8; #d8f8ee;
+    --shirt: darkorange;
+    width: 45%;
+    aspect-ratio: 1.1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .sceptre {
+      width: 1.25em;
+      height: 100%;
+      background: currentcolor;
+/*       background: gold; */
+      left: 83%;
+      top: 30%;
+      rotate: 10deg;
+      
+      &::before {
+        content: "";
+        width: 7em;
+        height: 6em;
+        background:
+          linear-gradient(gold 0 0) 30% 50% / 1em 2em no-repeat,
+          var(--skin);
+        border: 0.4em solid;
+        border-radius: 100% / 110% 120% 110% 100%;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        box-shadow: inset 1.5em -0.25em var(--skin-dark)
+      }
+      
+      &::after {
+        content: "";
+        width: 400%;
+        aspect-ratio: 0.75;
+        background: red;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -95%);
+        background:
+          radial-gradient(farthest-side, gold 99%, #0000)
+      }
+    }
+    
+    .body {
+      width: 50%;
+      height: 61%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      .shoulder {
+        width: 100%;
+        height: 50%;
+        background: #fff;
+        border-radius: 130% / 70% 70% 200% 200%;
+        border: 0.4em solid;
+      }
+      
+      .chest {
+        width: 92%;
+        height: 200%;
+        background:
+          radial-gradient(140% 100% at 50% 10%, #0000 21%, gold 0 23%, #0000 0),
+          radial-gradient(circle at 50% 32%, gold 1.7em, #0000 1.8em),
+          royalblue;
+        left: 50%;
+        translate: -50% 0;
+        border-radius: 130% / 30% 30% 200% 200%;
+      }
+      
+      .arm {
+        width: 50%;
+        height: 100%;
+        transform: translate(-23%) skew(-15deg) rotate(-20deg);
+        top: 10%;
+        left: -20%;
+        border-radius: 100% 0 0 0;
+        border: 0.5em solid;
+        box-shadow: inset 4.75em 3em royalblue;
+        
+        & + & {
+          border: none;
+          transform: scaleX(-1) skew(-20deg) rotate(-15deg);
+          left: 75%;
+          top: 5%;
+          height: 90%;
+          box-shadow: inset 4.8em 3em royalblue, inset 5.2em 3em currentcolor;
+          border-radius: 100% 0 0 5em;
+        }
+      }
+    }
+    
+    .head {
+      width: 25%;
+      aspect-ratio: 4 / 5;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      .ear {
+        width: 22%;
+        height: 30%;
+        background: var(--skin-dark);
+        left: -14%;
+        border-radius: 100% 0 0 100% /50%;
+        border: 0.4em solid;
+        border-right: 0;
+        top: 47%;
+        transform: rotate(-10deg);
+        
+        & + & {
+          width: 20%;
+          left: 90%;
+          top: 45%;
+          background: var(--skin);
+          transform: scaleX(-1);
+        }
+      }
+      
+      .neck {
+        width: 58%;
+        height: 66%;
+        top: 55%;
+        border: 0.4em solid;
+        border-bottom-width: 0.45em;
+        border-radius: 100% / 40%;
+        left: 50%;
+        translate: -50% 0;
+        box-shadow: inset 1em 0em var(--skin-dark);
+        background: var(--skin);
+      }
+      
+      .hair-back {
+        width: 30%;
+        height: 60%;
+        background: currentcolor;
+        border-radius: 100% / 80% 80% 120% 120%;
+        left: -9%;
+        top: 5%;
+      }
+      
+      .face {
+        width: 100%;
+        height: 100%;
+        border: 0.5em solid;
+        aborder-left: 0.9em solid var(--skin-dark);
+        border-bottom: 0.4em solid ;
+        border-radius: 60% / 5em 5em 10em 10em;
+        background:
+          radial-gradient(farthest-side, #0000 99%, currentcolor),
+          radial-gradient(140% 55% at 50% 100%, currentcolor 15%, #0000 16%),
+          radial-gradient(60% 47% at 50% 100%, #0000 35%, currentcolor 36% 50%, #0000 51%),
+          conic-gradient(from 230deg at 60% 70%, var(--skin-dark) 120deg, #0000 0),
+          linear-gradient(90deg, var(--skin-dark) 52%, #0000 0),
+          var(--skin);
+        background-repeat: no-repeat;
+        box-shadow: inset 0 0 0 0.1em, 2.95em -2.25em 0 -2.5em, 0 0.85em;
+        
+        .hair-front {
+          width: 106%;
+          height: 45%;
+          background: currentcolor;
+          border-radius:  100% 0 120% 5%;
+          rotate: 23deg;
+          top: -12%;
+          left: -6%;
+          
+          &::before {
+            content: "";
+            width: 25%;
+            height: 35%;
+            right: 30%;
+            top: 75%;
+            transform: translateY(-20%) scaleY(-1);
+            background: currentcolor;
+            clip-path: polygon(0 0, 60% 50%, 60% 0, 100% 90%, 20% 100%)
+          }
+        }
+        
+        .crown {
+          width: 160%;
+          height: 70%;
+          background: gold;
+          border-radius: 100% / 60%;
+          left: 48%;
+          top: 0;
+          transform: translate(-50%, -85%);
+          clip-path: polygon(5% 20%, 30% 50%, 50% 0, 70% 50%, 95% 20%, 85% 100%, 15% 100%);
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-labelledby="alt-text">
+      <span id="alt-text">King: a minimalistic cartoon of a man wearing a crown next to some CSS code.</span>
+      <code><span class="s">.king</span> {
+  <span class="p">position</span>: <span class="v">absolute</span>;
+  <span class="p">richness</span>: <span class="v n">100</span>;
+  <span class="p">color</span>: <span class="v">RoyalBlue</span>;
+    
+  <span class="s">&</span> > <span class="s">:first-child</span> {
+    <span class="p">all</span>: <span class="v">inherit</span>;
+  }
+}</code>
+      <section class="person">
+        <div class="body">
+          <div class="arm"></div>
+          <div class="arm"></div>
+          <div class="chest"></div>
+          <div class="shoulder"></div>
+          
+        </div>
+        <div class="head">
+          <div class="hair-back"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="hair-front"></div>
+            <div class="crown"></div>
+          </div>
+        </div>
+        <div class="sceptre"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
