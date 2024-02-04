@@ -924,4 +924,12 @@ const posts = [
     title: "King",
     ariaLabel: "Cartoon of a man with a beard, wearing a crown and holding a sceptre, next to a box with the following CSS code: .king { position: absolute; richness: 100; color: RoyalBlue; :first-child { all: inherit; } }"
   },
+  {
+    id: 118,
+    uid: "phantom-of-the-opera",
+    boxes: 1,
+    vertical: true,
+    title: "Phantom of the Opera",
+    ariaLabel: "Cartoon of the phantom of the opera (a man with a cape and a mask hiding his face) holding a rose next to the following CSS code: #phantom-of-the-opera { mask:url(#face); backface-visibility:hidden; visibility:hidden; pitch:low; volume:soft; }"
+  },
 ]
