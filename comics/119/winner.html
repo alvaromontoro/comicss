@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: #fff8f8;azure;
+}
+
+@keyframes confetti-drop {
+  0% { transform: translate(0, calc(var(--y) - 80em)) rotate(var(--d)); }
+  100% { transform: translate(0, calc(var(--y) + 80em)) rotate(calc(var(--d) + 360deg)); }
+}
+
+article {
+  --line-color: #9cf;
+  --skin: #fff;
+  --skin-dark: #d8eef8;
+  --shirt: #ffd0db;#dae; #bef;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-bottom: 0.5em solid;
+  color: #369;
+  
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  #alt-text {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translate(-100in, 0);
+  }
+  
+  code {
+    display: inline-block;
+    white-space: pre;
+    left: 2em;
+    top: 1.5em;
+    color: #eee;
+    font-size: 2em;
+    padding: 2.5em 4em 1.5em 2em;
+    border-radius: 0.5em;
+    font-family: monospace, monospace;
+    line-height: 1.5;
+    background: 
+      radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 0),
+      radial-gradient(circle at 2.1em 1em, #cc5 0.35em, #0000 0),
+      radial-gradient(circle at 3.2em 1em, #6c6 0.35em, #0000 0),
+      #123;
+    box-shadow: 0.5em 2em 2em #0007;
+    z-index: 1;
+    
+    & * { position: relative; }
+    
+    .p { color: #4b4; }
+    .s { color: #dd7; }
+    .v { color: #c9c; }
+    .n { color: #d77; }
+  }
+  
+  .person {
+    width: 45%;
+    aspect-ratio: 1.1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    
+    .body {
+      width: 50%;
+      height: 61%;
+      bottom: 0;
+      left: 48%;
+      transform: translateX(-50%);
+      
+      .chest {
+        width: 78%;
+        left: 50%;
+        transform: translate(-50%);
+        height: 150%;
+        background: 
+          radial-gradient(circle at 58% 37%, orange 2em, #0000 0),
+          linear-gradient(100deg, #0000 38%, currentcolor 0 46%, #0000 0) 95% 0 / 50% 32% no-repeat,
+          linear-gradient(-110deg, #0000 38%, currentcolor 0 45%, #0000 0) 16% 0 / 50% 32% no-repeat,
+          var(--shirt);
+        border-radius: 130% / 30% 30% 320% 0%;
+        border: 0.4em solid #0000;
+        border-top: 0.5em solid;
+        abox-shadow: -1.75em 13em 0 -1.25em;
+        
+        &::before {
+          content: "";
+          left: 95%;
+          top: 5%;
+          width: 23%;
+          height: 33%;
+          background: var(--shirt);
+          transform: translate(-50%, 0);
+          border-radius: 0 0em 5em 0;
+          transform: skew(10deg) rotate(-2deg);
+          transform-origin: 0 100%;
+        }
+      }
+      
+      .arm {
+        width: 100%;
+        height: 100%;
+        top: 7%;
+        left: 63%;
+        z-index: 1;
+        transform: translate(0, -80%) rotate(-15deg);
+        
+        &::after {
+          content: "";
+          width: 35%;
+          height: 35%;
+          bottom: 0;
+          left: 0;
+          background: 
+            linear-gradient(currentcolor 0 0) 45% 100% / 0.5em 40% no-repeat
+            var(--shirt);
+          border-radius: 0 0 70% 0;
+        }
+        
+        &::before {
+          content: "";
+          bottom: 0%;
+          left: 0;
+          width: 90%;
+          height: 90%;
+          border-radius: 0 0 100% 0;
+          border-right: 0.4em solid;
+          border-bottom: 0.5em solid;
+          box-shadow:
+            inset -2em -2em var(--skin),
+            inset -2.5em -3.5em var(--skin-dark)
+        }
+        
+        & + & {
+          left: -47%;
+          top: 20%;
+          transform: rotate(150deg);
+          &::before {
+            box-shadow:
+            inset -0.5em -0.75em var(--skin-dark),
+            inset -2.25em -3.25em var(--skin),
+              inset -2.65em -3.55em;
+            
+          }
+          &::after {
+            background: var(--shirt);
+            width: 40%;
+            border-radius: 50% / 0 70% 0% 0%;
+            border-bottom: 0.5em solid;
+          }
+        }
+      }
+    }
+    
+    .hand {
+      width: 17%;
+      aspect-ratio: 1.1;
+      border: 0.5em solid;
+      border-left: 0.7em solid;
+      border-bottom: 0.4em solid #0000;
+      border-radius: 50%;
+      background: var(--skin);
+      box-shadow: inset 1.5em 0 0 -0.5em var(--skin-dark);
+      rotate: -10deg;
+      top: -14%;
+      left: 78%;
+    }
+    
+    .trophy {
+      width: 43%;
+      aspect-ratio: 1.1;
+      background: 
+        linear-gradient(gold 0 0) 0 0 / 100% 1em,
+        radial-gradient(36% 70% at 50% 10%, gold 80%, #0000 0),
+        radial-gradient(farthest-side at 100% 0, #0000 88%, gold 0 99%, #0000) 0 0 / 55% 65%,
+        radial-gradient(farthest-side at 0% 0, #0000 88%, gold 0 99%, #0000) 100% 0 / 55% 65%,
+        linear-gradient(currentcolor 0 0) 50% 100% / 6em 1.5em,
+        linear-gradient(gold 0 0) 50% 50% / 2em 100%,
+        #f000;
+      background-repeaT: no-repeat;
+      top: -29%;
+      left: 87%;
+      rotate:-30deg;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 60%, 20% 30%, 20% 20%, 0 10%)
+    }
+    
+    .head {
+      width: 25%;
+      aspect-ratio: 4 / 5;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      .ear {
+        width: 22%;
+        height: 30%;
+        background: var(--skin-dark);
+        left: -14%;
+        border-radius: 100% 0 0 100% /50%;
+        border: 0.4em solid;
+        border-right: 0;
+        top: 47%;
+        transform: rotate(-10deg);
+        
+        & + & {
+          width: 20%;
+          left: 85%;
+          top: 45%;
+          background: var(--skin);
+          transform: scaleX(-1);
+        }
+      }
+      
+      .neck {
+        width: 58%;
+        height: 66%;
+        top: 55%;
+        border: 0.4em solid;
+        border-bottom-width: 0.45em;
+        border-radius: 100% / 40%;
+        left: 45%;
+        translate: -50% 0;
+        box-shadow: inset 1em 0em var(--skin-dark);
+        background: var(--skin);
+      }
+      
+      .hair-back {
+        width: 160%;
+        height: 100%;
+        background: currentcolor;
+        border-radius: 100% / 20%;
+        left: 47%;
+        transform: translate(-50%,0);
+        top: 10%;
+        -webkit-mask:
+          radial-gradient(25% 100% at 0 0, #0000 99%, #000 0) 0 0 / 60% 100% no-repeat,
+          radial-gradient(25% 100% at 100% 0, #0000 99%, #000 0) 100% 0 / 60% 100% no-repeat
+      }
+      
+      .face {
+        width: 100%;
+        height: 100%;
+        border: 0.5em solid;
+        border-left: 0.9em solid var(--skin-dark);
+        border-bottom: 0.4em solid ;
+        border-radius: 60% / 5em 5em 10em 10em;
+        background:
+          radial-gradient(10% 100% at 100% 0, currentcolor 50%, #0000 0),
+          conic-gradient(from 220deg at 65% 68%, var(--skin-dark) 135deg, #0000 0),
+          linear-gradient(90deg, var(--skin-dark) 57%, var(--skin) 0);
+        background-repeat: no-repeat;
+        
+        .hair-side {
+          width: 20%;
+          height: 50%;
+          background: currentcolor;
+          border-radius: 50%;
+          left: -15%;
+        }
+        
+        .hair-front {
+          width: 80%;
+          height: 45%;
+          background: currentcolor;
+          border-radius:  100% 0 120% 5%;
+          rotate: 40deg;
+          top: -20%;
+          left: 40%;
+          
+          &::after {
+            content: "";
+            rotate: -50deg;
+            width: 115%;
+            height: 80%;
+            background: currentcolor;
+            border-radius: 100%;
+            translate: -53% 83%;
+            
+          }
+          
+          &::before {
+            content: "";
+            width: 25%;
+            height: 25%;
+            right: 0;
+            top: 0;
+            transform: translateY(-90%);
+            background: currentcolor;
+            clip-path: polygon(0 0, 60% 50%, 60% 0, 100% 90%, 20% 100%)
+          }
+        }
+      }
+    }
+  }
+  
+  .confettis {
+    width: 100%;
+    height: 100%;
+    
+    .confetti {
+      width: 1.25em;
+      height: 2.5em;
+      background: var(--shirt);
+      left: var(--x);
+      top: var(--y);
+      transform: rotate(var(--d));
+      animation: confetti-drop 10s var(--s) infinite;
+     
+      &:nth-child(2n) { background: currentcolor; }
+      &:nth-child(3n) { background: gold; }
+      
+      &:nth-child(1)  { --x: 30%; --y: 30%; --d:   0deg; --s:  0.0s; }
+      &:nth-child(2)  { --x: 50%; --y: 50%; --d:  20deg; --s: -0.6s; }
+      &:nth-child(3)  { --x: 17%; --y: 40%; --d:  40deg; --s: -1.2s; }
+      &:nth-child(4)  { --x: 76%; --y: 70%; --d:  60deg; --s: -1.3s; }
+      &:nth-child(5)  { --x: 75%; --y: 38%; --d: -20deg; --s: -2.4s; }
+      &:nth-child(6)  { --x: 55%; --y: 33%; --d: -40deg; --s: -2.5s; }
+      &:nth-child(7)  { --x: 30%; --y: 55%; --d: -60deg; --s: -3.6s; }
+      &:nth-child(8)  { --x: 10%; --y: 65%; --d:  30deg; --s: -4.7s; }
+      &:nth-child(9)  { --x: 25%; --y: 75%; --d: -30deg; --s: -4.8s; }
+      &:nth-child(10) { --x: 20%; --y: 85%; --d:  45deg; --s: -5.9s; }
+      &:nth-child(11) { --x: 80%; --y: 90%; --d:  45deg; --s: -5.0s; }
+      &:nth-child(12) { --x: 70%; --y: 82%; --d:  45deg; --s: -6.1s; }
+      &:nth-child(13) { --x: 90%; --y: 82%; --d:  45deg; --s: -6.2s; }
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-labelledby="alt-text">
+      <span id="alt-text">Cartoon with a person with a medal holding a trophy while confetti fall all around. Next to them, there is some CSS code.</span>
+      <code><span class="s">#winner</span> {
+  <span class="p">order</span>: <span class="v">1</span>;
+  <span class="p">running</span>: <span class="v">first</span>;
+  <span class="p">color</span>: <span class="v">gold</span>;
+    
+  <span class="s">&::after</span> {
+    <span class="p">content</span>: <span class="v">"🏆"</span>;
+  }
+}</code>
+      <section class="person">
+        <div class="body">
+          <div class="arm"></div>
+          <div class="arm"></div>
+          <div class="chest"></div>
+        </div>
+        <div class="head">
+          <div class="hair-back"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="hair-side"></div>
+            <div class="hair-front"></div>
+          </div>
+        </div>
+        <div class="hand"></div>
+        <div class="trophy"></div>
+      </section>
+      <section class="confettis">
+        <div class="confetti confetti-0"></div>
+        <div class="confetti confetti-1"></div>
+        <div class="confetti confetti-2"></div>
+        <div class="confetti confetti-3"></div>
+        <div class="confetti confetti-4"></div>
+        <div class="confetti confetti-5"></div>
+        <div class="confetti confetti-6"></div>
+        <div class="confetti confetti-7"></div>
+        <div class="confetti confetti-8"></div>
+        <div class="confetti confetti-9"></div>
+        <div class="confetti confetti-10"></div>
+        <div class="confetti confetti-11"></div>
+        <div class="confetti confetti-12"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

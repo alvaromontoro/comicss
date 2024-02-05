@@ -932,4 +932,12 @@ const posts = [
     title: "Phantom of the Opera",
     ariaLabel: "Cartoon of the phantom of the opera (a man with a cape and a mask hiding his face) holding a rose next to the following CSS code: #phantom-of-the-opera { mask:url(#face); backface-visibility:hidden; visibility:hidden; pitch:low; volume:soft; }"
   },
+  {
+    id: 119,
+    uid: "winner",
+    boxes: 1,
+    vertical: true,
+    title: "Winner",
+    ariaLabel: "Cartoon of a person with an arm up holding a trophy while confetti falls round them. Next to the scene there's the following CSS code: #winner { order: 1; running: first; color: gold; &::after { content: '🏆'; } }"
+  },
 ]

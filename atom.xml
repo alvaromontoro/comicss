@@ -2235,10 +2235,29 @@
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/118/phantom-of-the-opera.html"/>
     <id>https://comicss.art/?id=118</id>
     <updated>2024-02-04T00:00:00Z</updated>
-    <summary>New Cartoon: King</summary>
+    <summary>New Cartoon: Phantom of the Opera</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/118/phantom-of-the-opera.png" alt="Cartoon of the phantom of the opera (a man with a cape and a mask hiding his face) holding a rose next to the following CSS code: #phantom-of-the-opera { mask:url(#face); backface-visibility:hidden; visibility:hidden; pitch:low; volume:soft; }" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Winner</title>
+    <link href="https://comicss.art/?id=118" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/119/winner.html"/>
+    <id>https://comicss.art/?id=119</id>
+    <updated>2024-02-05T00:00:00Z</updated>
+    <summary>New Cartoon: Winner</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/119/winner.png" alt="Cartoon of a person with an arm up holding a trophy while confetti falls round them. Next to the scene there's the following CSS code: #winner { order: 1; running: first; color: gold; ::after { content: 'trophy'; } }" /></p>
       </div>
     </content>
     <rights>Copyright 2024 Alvaro Montoro</rights>
