@@ -2250,7 +2250,7 @@
   </entry>
   <entry>
     <title>Winner</title>
-    <link href="https://comicss.art/?id=118" />
+    <link href="https://comicss.art/?id=119" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/119/winner.html"/>
     <id>https://comicss.art/?id=119</id>
     <updated>2024-02-05T00:00:00Z</updated>
@@ -2258,6 +2258,25 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/119/winner.png" alt="Cartoon of a person with an arm up holding a trophy while confetti falls round them. Next to the scene there's the following CSS code: #winner { order: 1; running: first; color: gold; ::after { content: 'trophy'; } }" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Dictator</title>
+    <link href="https://comicss.art/?id=120" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/120/dictator.html"/>
+    <id>https://comicss.art/?id=120</id>
+    <updated>2024-02-06T00:00:00Z</updated>
+    <summary>New Cartoon: Dictator</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/120/dictator.png" alt="Dictator: a minimalistic cartoon of a man in military attire with medals and sun glasses, next to the following CSS code: .dictator { position: fixed !important; will-change: order !important; opacity: 0 !important; border: double solid !important; .country:has(&) :not(.supporter) { will-change: orphans, widows !important; translate: 100vmax 0 !important; } }" /></p>
       </div>
     </content>
     <rights>Copyright 2024 Alvaro Montoro</rights>

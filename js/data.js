@@ -940,4 +940,12 @@ const posts = [
     title: "Winner",
     ariaLabel: "Cartoon of a person with an arm up holding a trophy while confetti falls round them. Next to the scene there's the following CSS code: #winner { order: 1; running: first; color: gold; &::after { content: '🏆'; } }"
   },
+  {
+    id: 120,
+    uid: "dictator",
+    boxes: 1,
+    vertical: true,
+    title: "Dictator",
+    ariaLabel: "Dictator: a minimalistic cartoon of a man in military attire with medals and sun glasses, next to the following CSS code: .dictator { position: fixed !important; will-change: order !important; opacity: 0 !important; border: double solid !important; .country:has(&) :not(.supporter) { will-change: orphans, widows !important; translate: 100vmax 0 !important; } }"
+  },
 ]

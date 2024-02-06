@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: mintcream;
+}
+
+article {
+  --line-color: gold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-bottom: 0.5em solid #000;
+  color: #396;
+  
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  #alt-text {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translate(-100in, 0);
+  }
+  
+  code {
+    display: inline-block;
+    white-space: pre;
+    left: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.5em;
+    color: #eee;
+    font-size: 2em;
+    padding: 2.5em 4em 1.5em 2em;
+    border-radius: 0.5em;
+    font-family: monospace, monospace;
+    line-height: 1.5;
+    background: 
+      radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 0),
+      radial-gradient(circle at 2.1em 1em, #cc5 0.35em, #0000 0),
+      radial-gradient(circle at 3.2em 1em, #6c6 0.35em, #0000 0),
+      #123;
+    box-shadow: 0.5em 2em 2em #0007;
+    z-index: 1;
+    
+    & * { position: relative; }
+    
+    .p { color: #4b4; }
+    .s { color: #dd7; }
+    .v { color: #c9c; }
+    .n { color: #d77; }
+  }
+  
+  .person {
+    --skin: #fff;
+    --skin-dark: #d8eef8; #d8f8ee;
+    --shirt: darkorange;
+    width: 45%;
+    aspect-ratio: 1.1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    .body {
+      width: 50%;
+      height: 61%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      .chest {
+        width: 92%;
+        height: 160%;
+        background:
+          conic-gradient(from 330deg at 40% 10%, currentcolor 70deg, #0000 0),
+          conic-gradient(from 330deg at 40% 11.5%, #fff 70deg, #0000 0),
+          
+          conic-gradient(from 320deg at 60% 10%, currentcolor 70deg, #0000 0),
+          conic-gradient(from 320deg at 60% 11.5%, #fff 70deg, #0000 0),
+          /* medals */
+          radial-gradient(circle at 30% 30%, gold 1em, #0000 0),
+          radial-gradient(circle at 15% 30%, gold 1em, #0000 0),
+          radial-gradient(circle at 22.5% 37%, gold 1em, #0000 0),
+          conic-gradient(at 50% 100%, #000 45deg, #0000 0 315deg, #000 0) 27.5% 21% / 2em 3em no-repeat,
+          conic-gradient(at 50% 100%, #000 45deg, #0000 0 315deg, #000 0) 11% 21% / 2em 3em no-repeat,
+          conic-gradient(at 50% 100%, #000 45deg, #0000 0 315deg, #000 0) 19.75% 29.5% / 2em 2.5em no-repeat,
+          /* more medals */
+          
+          /* buttons */
+          radial-gradient(circle at 50% 15%, #fff 0.5em, #fff0 0),
+          radial-gradient(circle at 50% 30%, #fff 0.5em, #fff0 0),
+          radial-gradient(circle at 50% 45%, #fff 0.5em, #fff0 0),
+          radial-gradient(circle at 50% 60%, #fff 0.5em, #fff0 0),
+          currentcolor;
+        left: 50%;
+        top: 5%;
+        translate: -50% 0;
+        border-radius: 130% / 10% 10% 20% 20%;
+        box-shadow: -9.4em 0 0 -9em #000;
+        
+        &::before,
+        &::after {
+          content: "";
+          width: 25%;
+          height: 0.75em;
+          background: 
+            linear-gradient(#0000 50%, #000 0),
+            repeating-linear-gradient(90deg,#000 0 20%, gold 0 40%);
+          left: 0%;
+          top: 1.25%;
+          transform: translateX(-20%);
+          rotate: -10deg;
+        }
+        
+        &::after {
+          left: auto;
+          right: 0%;
+          transform: translateX(20%);
+          rotate: 10deg;
+        }
+      }
+      
+      .arm {
+        width: 50%;
+        height: 100%;
+        transform: translate(-23%) skew(-15deg) rotate(-20deg);
+        top: 11%;
+        left: -20%;
+        border-radius: 100% 0 0 0;
+        border: 0.5em solid #000;
+        box-shadow: inset 4.6em 3.25em currentcolor;
+        
+        & + & {
+          transform: scaleX(-1) translate(-23%) skew(-15deg) rotate(-20deg);
+          right: -20%;
+          left: auto;
+          border: none;
+        }
+      }
+    }
+    
+    .head {
+      width: 25%;
+      aspect-ratio: 4 / 5;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      .ear {
+        width: 22%;
+        height: 30%;
+        background: var(--skin-dark);
+        left: -14%;
+        border-radius: 100% 0 0 100% /50%;
+        border: 0.4em solid;
+        border-right: 0;
+        top: 47%;
+        transform: rotate(-10deg);
+        
+        & + & {
+          width: 20%;
+          left: 92%;
+          top: 45%;
+          background: var(--skin);
+          transform: scaleX(-1);
+        }
+      }
+      
+      .neck {
+        width: 60%;
+        height: 66%;
+        top: 65%;
+        border: 0.4em solid;
+        border-bottom-width: 0.45em;
+        border-radius: 100% / 40%;
+        left: 50%;
+        translate: -50% 0;
+        box-shadow: inset 1em 0em var(--skin-dark);
+        background: var(--skin);
+      }
+      
+      .hair-back {
+        width: 30%;
+        height: 60%;
+        background: currentcolor;
+        border-radius: 100% / 80% 80% 120% 120%;
+        left: -9%;
+        top: 5%;
+      }
+      
+      .face {
+        width: 100%;
+        height: 100%;
+        border: 0.5em solid;
+        aborder-left: 0.9em solid var(--skin-dark);
+        border-bottom: 0.4em solid ;
+        border-radius: 60% / 5em 5em 10em 10em;
+        background:
+          radial-gradient(160% 55% at 50% 98%, currentcolor 15%, #0000 16%),
+          radial-gradient(55% 56% at 50% 110%, #0000 45%, currentcolor 46% 60%, #0000 61%),
+          conic-gradient(from 230deg at 60% 70%, var(--skin-dark) 120deg, #0000 0),
+          linear-gradient(90deg, var(--skin-dark) 52%, #0000 0),
+          var(--skin);
+        background-repeat: no-repeat;
+        box-shadow: 
+          
+          2.95em -2.25em 0 -2.5em, 
+          0 1.75em 0 0.2em;
+        
+        .glasses {
+          width: 52%;
+          height: 30%;
+          background: #000;
+          border-radius: 50% / 10% 10% 60% 50%;
+          top: 40%;
+          left: -5%;
+          
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 50% / 10% 10% 50% 60%;
+            left: 115%;
+          }
+          
+          &::after {
+            content: "";
+            width: 25%;
+            height: 55%;
+            border-top: 0.5em solid #000;
+            border-radius: 50% / 100% 100% 0 0;
+            left: 95%;
+            top: 10%;
+          }
+        }
+        
+        .hair-front {
+          width: 113%;
+          height: 45%;
+          background: currentcolor;
+          border-radius:  100% 0 120% 5%;
+          rotate: 18deg;
+          top: -14%;
+          left: -6%;
+          
+          &::before {
+            content: "";
+            width: 25%;
+            height: 35%;
+            right: 30%;
+            top: 75%;
+            transform: translateY(-20%) scaleY(-1);
+            background: currentcolor;
+            clip-path: polygon(0 0, 60% 50%, 60% 0, 100% 90%, 20% 100%)
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-labelledby="alt-text">
+      <span id="alt-text">Dictator: a minimalistic cartoon of a man in military attire with medals and sun glasses, next to some CSS code.</span>
+      <code><span class="s">.dictator</span> {
+  <span class="p">position</span>: <span class="v">fixed</span> <span class="s">!important</span>;
+  <!--   <span class="p">richness</span>: <span class="v n">100</span> <span class="s">!important</span>;
+  <span class="p">will-change</span>: <span class="v">orphans</span>, <span class="v">widows</span> <span class="s">!important</span>; --><span class="p">will-change</span>: <span class="v">order</span> <span class="s">!important</span>;
+  <span class="p">opacity</span>: <span class="v n">0</span> <span class="s">!important</span>;
+  <span class="p">border</span>: <span class="v">double solid</span> <span class="s">!important</span>;
+    
+  <span class="s">.country:has</span>(<span class="s">&</span>) <span class="s">:not</span>(<span class="s">.supporter</span>) {
+    <span class="p">will-change</span>: <span class="v">orphans</span>, <span class="v">widows</span> <span class="s">!important</span>;
+    <span class="p">translate</span>: <span class="v n">100vmax 0</span> <span class="s">!important</span>;
+  }
+<!--     
+  <span class="s">&</span> > <span class="s">:first-child</span>,
+  <span class="s">&:not</span>(<span class="s">:has</span>(> <span class="s">:first-child</span>)) + * {
+    <span class="p">all</span>: <span class="v">inherit</span> <span class="s">!important</span>;
+  } -->}</code>
+      <section class="person">
+        <div class="body">
+          <div class="arm"></div>
+          <div class="arm"></div>
+          <div class="chest"></div>
+        </div>
+        <div class="head">
+          <div class="hair-back"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="hair-front"></div>
+            <div class="glasses"></div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

@@ -1196,5 +1196,15 @@
       <enclosure url="https://comicss.art/comics/119/winner.png" length="91000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=120</guid>
+      <title>Dictator</title>
+      <link>https://comicss.art/?id=120</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/120/dictator.png" length="109000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
