@@ -2286,4 +2286,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Basketball Player</title>
+    <link href="https://comicss.art/?id=121" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/121/basketball-player.html"/>
+    <id>https://comicss.art/?id=121</id>
+    <updated>2024-02-07T00:00:00Z</updated>
+    <summary>New Cartoon: Basketball Player</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/121/basketball-player.png" alt="Basketball player: a minimalistic cartoon of a man spinning a basketball with one finger next to the following CSS code: .basketball-player { elevation: higher; min-height: 75in; max-height: 91in; will-change: position; play-during: url(#game); position: running(ball); flow: 'offense'; }" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: #fa52;
+}
+
+article {
+  --line-color: #963;
+        --skin: #fff;
+    --skin-dark: #f0d0c0; #f0e0e0; #d8f8ee;
+    --shirt: #d55;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-bottom: 0.5em solid var(--line-color);
+  color: var(--line-color);
+  
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  #alt-text {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translate(-100in, 0);
+  }
+  
+  code {
+    display: inline-block;
+    white-space: pre;
+    left: 1.75em;
+    top: 1em;
+    color: #eee;
+    font-size: 2em;
+    padding: 2.5em 4em 1.5em 2em;
+    border-radius: 0.5em;
+    font-family: monospace, monospace;
+    line-height: 1.5;
+    background: 
+      radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 0),
+      radial-gradient(circle at 2.1em 1em, #cc5 0.35em, #0000 0),
+      radial-gradient(circle at 3.2em 1em, #6c6 0.35em, #0000 0),
+      #123;
+    box-shadow: 0.5em 1em 2em #0005;
+    z-index: 1;
+    
+    & * { position: relative; }
+    
+    .p { color: #4b4; }
+    .s { color: #dd7; }
+    .v { color: #c9c; }
+    .n { color: #d77; }
+  }
+  
+  .person {
+    width: 45%;
+    aspect-ratio: 0.8;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    .body {
+      width: 50%;
+      height: 61%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      .chest {
+        width: 85%;
+        height: 160%;
+        background:
+          var(--skin);
+        left: 50%;
+        top: 3%;
+        translate: -50% 0;
+        border-radius: 130% / 10% 10% 20% 20%;
+        border: 0.4em solid #0000;
+        border-top: 0.5em solid;
+        box-shadow: inset 0 0.4em 0 -0.3em var(--skin-dark);
+      }
+      
+      .shirt {
+        width: 86%;
+        height: 160%;
+        background:
+          radial-gradient(80% 24% at 0 0, #0000 90%, var(--shirt) 92%) 0 0 / 25% 100%,
+          radial-gradient(80% 24% at 100% 0, #0000 90%, var(--shirt) 92%) 100% 0 / 25% 100%,
+          radial-gradient(48% 12% at 50% -2%, #0000 98%, var(--shirt)) 50% 0% / 52% 100%,
+          #0000;
+        background-repeat: no-repeat;
+        left: 50%;
+        top: 3%;
+        translate: -50% 0;
+        border-radius: 130% / 10% 10% 20% 20%;
+        abox-shadow: inset 0 1em 0 -0.4em var(--skin-dark);
+        
+        &::before {
+          content: "";
+          width: 10%;
+          height: 14%;
+          background: var(--skin);
+          border-radius: 50%;
+          top: 3%;
+          transform: translate(-20%, 0) rotate(4deg);
+        }
+      }
+      
+      .arm {
+        width: 50%;
+        height: 100%;
+        transform: translate(-23%) skew(-15deg) rotate(-20deg);
+        top: 8.75%;
+        left: -20%;
+        border-radius: 100% 0 0 0;
+        border: 0.45em solid;
+        border-right: 0;
+        border-bottom: 0;
+        border-left-color: var(--skin-dark);
+        box-shadow: 
+          inset 1em 0 var(--skin-dark),
+          inset 3.25em 3em var(--skin),
+          inset 3.6em 3.25em;
+        clip-path: polygon(0 0, 100% 0, 85% 15%, 100% 100%, 0 100%);
+      }
+      
+      .arm-2 {
+        width: 90%;
+        height: 60%;
+        border-radius: 50% / 0 0 100% 100%;
+        left: 90%;
+        top: 7%;
+        transform: skewY(-5deg) rotate(-9deg);
+        box-shadow: 
+          inset 1em -1em var(--skin-dark),
+          inset -1.75em -3em 0 0.5em var(--skin),
+          inset 3.25em -3em 0 var(--skin),
+          inset -2.1em -3.2em 0 0.5em
+          ;
+        
+        
+        &::before {
+          content: "";
+          width: 20%;
+          aspect-ratio: 1;
+          background: var(--skin);
+          left: -2%;
+          top: -9%;
+          border-radius: 50%;
+        }
+      }
+    }
+    
+    .head {
+      width: 25%;
+      aspect-ratio: 3/4;
+      top: 20.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      .ear {
+        width: 22%;
+        height: 30%;
+        background: var(--skin-dark);
+        left: -14%;
+        border-radius: 100% 0 0 100% /50%;
+        border: 0.4em solid;
+        border-right: 0;
+        top: 47%;
+        transform: rotate(-10deg);
+        
+        & + & {
+          width: 20%;
+          left: 90%;
+          top: 45%;
+          background: var(--skin);
+          transform: scaleX(-1);
+        }
+      }
+      
+      .neck {
+        width: 50%;
+        height: 66%;
+        top: 65%;
+        border: 0.4em solid;
+        border-bottom-width: 0.45em;
+        border-bottom: 0;
+        left: 50%;
+        translate: -50% 0;
+        box-shadow: inset 1em 0em 0 -0.1em var(--skin-dark);
+        background: var(--skin);
+      }
+      
+      .face {
+        width: 100%;
+        height: 100%;
+        border: 0.5em solid;
+        border-left: 0.5em solid var(--skin-dark);
+        border-radius: 60% / 5em 5em 10em 10em;
+        background:
+          conic-gradient(from 230deg at 60% 70%, var(--skin-dark) 120deg, #0000 0),
+          linear-gradient(90deg, var(--skin-dark) 52%, #0000 0),
+          var(--skin);
+        background-repeat: no-repeat;
+      }
+    }
+    
+    .hand {
+      width: 5em;
+      height: 6em;
+      background: var(--skin);
+      border-radius: 100% 0 0% 100%;
+      border: 0.4em solid;
+      border-left-width: 0.5em;
+      border-bottom-color: var(--skin);
+      left: 99%;
+      top: 30%;
+      transform: rotate(-3deg);
+      
+      &::before {
+        content: "";
+        width: 40%;
+        height: 100%;
+        border-radius: 80% 20% 0 0;
+        background: var(--skin);
+        border: 0.4em solid;
+        border-bottom: 0;
+        right: 0;
+        transform: translate(0.39em, -98%);
+        border-top-color: var(--skin);
+      }
+    }
+    
+    .ball {
+      animation: spinball 0.25s linear infinite;
+      width: 11em;
+      aspect-ratio: 1;
+      background: 
+        linear-gradient(#0000 48.5%, currentcolor 0 51.5%, #0000 0),
+        linear-gradient(90deg, #0000 48.5%, currentcolor 0 51.5%, #0000 0),
+        radial-gradient(38% 38% at 50% 50%, #0000 92%, currentcolor 0 99%, #0000) -5.5em 0,
+/*         radial-gradient(38% 38% at 50% 50%, #0000 92%, currentcolor 0 99%, #0000) 0 -5.5em / 100% 100%, */
+        darkorange;
+      background: 
+        linear-gradient(#0000 48.5%, currentcolor 0 51.5%, #0000 0),
+        linear-gradient(90deg, #0000 48.5%, currentcolor 0 51.5%, #0000 0),
+        radial-gradient(38% 38% at 50% 50%, #0000 92%, currentcolor 0 99%, #0000) 0 -5.5em,
+/*         radial-gradient(38% 38% at 50% 50%, #0000 92%, currentcolor 0 99%, #0000) 0 -5.5em / 100% 100%, */
+        darkorange;
+      border-radius: 50%;
+      left: 95.5%;
+      top: -1%;
+    }
+  }
+}
+
+@keyframes spinball {
+  0% { background-position: 0 0, 0 0, 0 -5.5em, 0 -5.5em; }
+  100% { background-position: -11em 0, -11em 0, -11em -5.5em, -11em -5.5em; }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-labelledby="alt-text">
+      <span id="alt-text">Basketball player: a minimalistic cartoon of a man spinning a basketball with one finger next to some CSS code.</span>
+    <!--   
+    
+    <span class="p">height</span>: <span class="v">max-content</span>;
+    
+    <span class="p">transition</span>: <span class="v">position</span>;
+    -->
+      <code><span class="s">.basketball-player</span> {
+  <span class="p">elevation</span>: <span class="v">higher</span>;
+  <span class="p">min-height</span>: <span class="v n">75in</span>;
+  <span class="p">max-height</span>: <span class="v n">91in</span>;
+  <span class="p">will-change</span>: <span class="v">position</span>; 
+  <span class="p">play-during</span>: <span class="v">url</span>(<span class="s">#game</span>);
+  <span class="p">position</span>: <span class="v">running</span>(<span class="s">ball</span>);
+  <span class="p">flow</span>: <span class="s">"offense"</span>;
+}</code>
+      <section class="person">
+        <div class="body">
+          <div class="arm-2"></div>
+          <div class="chest"></div>
+          <div class="arm"></div>
+          <div class="shirt"></div>
+        </div>
+        <div class="head">
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="neck"></div>
+          <div class="face"></div>
+        </div>
+        <div class="hand"></div>
+        <div class="ball"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

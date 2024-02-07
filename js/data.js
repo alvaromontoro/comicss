@@ -948,4 +948,12 @@ const posts = [
     title: "Dictator",
     ariaLabel: "Dictator: a minimalistic cartoon of a man in military attire with medals and sun glasses, next to the following CSS code: .dictator { position: fixed !important; will-change: order !important; opacity: 0 !important; border: double solid !important; .country:has(&) :not(.supporter) { will-change: orphans, widows !important; translate: 100vmax 0 !important; } }"
   },
+  {
+    id: 121,
+    uid: "basketball-player",
+    boxes: 1,
+    vertical: true,
+    title: "Basketball Player",
+    ariaLabel: "Basketball player: a minimalistic cartoon of a man spinning a basketball with one finger next to the following CSS code: .basketball-player { elevation: higher; min-height: 75in; max-height: 91in; will-change: position; play-during: url(#game); position: running(ball); flow: 'offense'; }"
+  },
 ]
