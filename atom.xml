@@ -2305,4 +2305,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Astronaut</title>
+    <link href="https://comicss.art/?id=122" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/122/astronaut.html"/>
+    <id>https://comicss.art/?id=122</id>
+    <updated>2024-02-08T00:00:00Z</updated>
+    <summary>New Cartoon: astronaut</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/122/astronaut.png" alt="astronaut: a minimalistic cartoon of a person in an astronaut suit with many stars in the. background. Next to the following CSS code: .astronaut { elevation: above; isolation: isolate; flow-from: spaceship; flow-to: outerspace; transition: float; }" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

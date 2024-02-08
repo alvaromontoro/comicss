@@ -956,4 +956,12 @@ const posts = [
     title: "Basketball Player",
     ariaLabel: "Basketball player: a minimalistic cartoon of a man spinning a basketball with one finger next to the following CSS code: .basketball-player { elevation: higher; min-height: 75in; max-height: 91in; will-change: position; play-during: url(#game); position: running(ball); flow: 'offense'; }"
   },
+  {
+    id: 122,
+    uid: "astronaut",
+    boxes: 1,
+    vertical: true,
+    title: "Astronaut",
+    ariaLabel: "astronaut: a minimalistic cartoon of a person in an astronaut suit with many stars in the. background. Next to the following CSS code: .astronaut { elevation: above; isolation: isolate; flow-from: spaceship; flow-to: outerspace; transition: float; }"
+  },
 ]
