@@ -2324,4 +2324,24 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+
+  <entry>
+    <title>US Politics</title>
+    <link href="https://comicss.art/?id=123" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/123/politics.html"/>
+    <id>https://comicss.art/?id=123</id>
+    <updated>2024-02-17T00:00:00Z</updated>
+    <summary>New Cartoon: US Politics</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/123/politics.png" alt="Minimalistic cartoon of Abraham Lincoln next to three boxes of CSS code: on the top left .democrat{left:100%}; on the center top .undecided{align-self:center}; and on the top right .republican{right:100%}" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -964,4 +964,12 @@ const posts = [
     title: "Astronaut",
     ariaLabel: "astronaut: a minimalistic cartoon of a person in an astronaut suit with many stars in the. background. Next to the following CSS code: .astronaut { elevation: above; isolation: isolate; flow-from: spaceship; flow-to: outerspace; transition: float; }"
   },
+  {
+    id: 123,
+    uid: "politics",
+    boxes: 1,
+    vertical: true,
+    title: "US Politics",
+    ariaLabel: "Minimalistic cartoon of Abraham Lincoln next to three boxes of CSS code: on the top left .democrat{left:100%}; on the center top .undecided{align-self:center}; and on the top right .republican{right:100%}"
+  },
 ]
