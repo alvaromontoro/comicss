@@ -1236,5 +1236,15 @@
       <enclosure url="https://comicss.art/comics/123/politics.png" length="110000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=124</guid>
+      <title>Keeping Your Distance</title>
+      <link>https://comicss.art/?id=124</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/124/keeping-your-distance.png" length="127000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
