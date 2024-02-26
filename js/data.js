@@ -972,4 +972,12 @@ const posts = [
     title: "US Politics",
     ariaLabel: "Minimalistic cartoon of Abraham Lincoln next to three boxes of CSS code: on the top left .democrat{left:100%}; on the center top .undecided{align-self:center}; and on the top right .republican{right:100%}"
   },
+  {
+    id: 124,
+    uid: "keeping-your-distance",
+    boxes: 1,
+    vertical: true,
+    title: "Keeping Your Distance",
+    ariaLabel: "Cartoon with a person separated by an arrow from other people. Each line, the arrow is longer (as it contains a longer CSS name). From top to bottom (shorter to longer): covid-19 (empty arrow), CSS, Bootstrap, BEM, CSS-in-JS, and TailwindCSS."
+  },
 ]
