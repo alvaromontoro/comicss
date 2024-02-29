@@ -980,4 +980,12 @@ const posts = [
     title: "Keeping Your Distance",
     ariaLabel: "Cartoon with a person separated by an arrow from other people. Each line, the arrow is longer (as it contains a longer CSS name). From top to bottom (shorter to longer): covid-19 (empty arrow), CSS, Bootstrap, BEM, CSS-in-JS, and TailwindCSS."
   },
+  {
+    id: 125,
+    uid: "neo",
+    boxes: 1,
+    vertical: true,
+    title: "Neo",
+    ariaLabel: "Cartoon with a man wearing sunglasses and a long robe with Japanese characters falling behind him (like in The Matrix). Next to the following CSS code: #Neo { will-change: all; all: unset; transform: matrix(1, 0, 1, 0, 1, 1); &::after { all: revert; } }"
+  },
 ]
