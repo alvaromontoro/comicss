@@ -2276,7 +2276,7 @@
     <summary>New Cartoon: Dictator</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="https://comicss.art/comics/120/dictator.png" alt="Dictator: a minimalistic cartoon of a man in military attire with medals and sun glasses, next to the following CSS code: .dictator { position: fixed !important; will-change: order !important; opacity: 0 !important; border: double solid !important; .country:has(&) :not(.supporter) { will-change: orphans, widows !important; translate: 100vmax 0 !important; } }" /></p>
+        <p><img src="https://comicss.art/comics/120/dictator.png" alt="Dictator: a minimalistic cartoon of a man in military attire with medals and sun glasses, next to the following CSS code: .dictator { position: fixed !important; will-change: order !important; opacity: 0 !important; border: double solid !important; .country:has(&amp;) :not(.supporter) { will-change: orphans, widows !important; translate: 100vmax 0 !important; } }" /></p>
       </div>
     </content>
     <rights>Copyright 2024 Alvaro Montoro</rights>
