@@ -2381,4 +2381,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Transformer</title>
+    <link href="https://comicss.art/?id=126" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/126/transformer.html"/>
+    <id>https://comicss.art/?id=126</id>
+    <updated>2024-03-05T00:00:00Z</updated>
+    <summary>New Cartoon: Transformer</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/126/transformer.png" alt="Cartoon of Optimus Prime (a robot character from the Transformers series) next to the following CSS code: .autobot, .decepticon { font-family: roboto; appearance: auto; will-change: appearance, transform; transform: scale(0.5); }" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

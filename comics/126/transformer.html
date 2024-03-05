@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: #f753;
+}
+
+article {
+  --white: #fff;
+  --red: #d44;
+  --blue: #36c;
+  --light-blue: #d8eef8;
+  --gray: #bbb;
+  --yellow: #fe0;
+  --light-gray: #ccc;
+  --line-color: #0006;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-bottom: 0.5em solid var(--red);
+  color: var(--line-color);
+  
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  #alt-text {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translate(-100in, 0);
+  }
+  
+  code {
+    display: inline-block;
+    white-space: pre;
+    right: 2.5em;
+    top: 1em;
+    color: #eee;
+    font-size: 2em;
+    padding: 2.5em 4em 1.5em 2em;
+    border-radius: 0.5em;
+    font-family: monospace, monospace;
+    line-height: 1.5;
+    background: 
+      radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 0),
+      radial-gradient(circle at 2.1em 1em, #cc5 0.35em, #0000 0),
+      radial-gradient(circle at 3.2em 1em, #6c6 0.35em, #0000 0),
+      #123;
+    box-shadow: 0.5em 1em 2em #0005;
+    z-index: 1;
+    
+    & * { position: relative; }
+    
+    .p { color: #4b4; }
+    .s { color: #dd7; }
+    .v { color: #c9c; }
+    .n { color: #d77; }
+  }
+  
+  .transformer {
+    width: 70%;
+    aspect-ratio: 1.1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: 
+      linear-gradient(#333 0 0) 50% 40% / 12% 20%,
+      linear-gradient(#333 0 0) 50% 50% / 80% 10%;
+    background-repeat: no-repeat;
+    
+    .head {
+      width: 27%;
+      height: 31%;
+      left: 50%;
+      top: 11%;
+      transform: translate(-50%, 0);
+      z-index: 2;
+      clip-path:
+        polygon(50% 100%, 38% 100%, 27% 90%, 12% 90%, 12% 80%, 0 70%, 0 50%, 5% 45%, 6% 0, 8% 0, 10% 45%, 18% 15%, 22% 13%, 22% 26%, 30% 20%, 40% 17%, 42% 10%, 58% 10%, 60% 17%, 70% 20%, 78% 26%, 78% 13%, 82% 15%, 90% 45%, 92% 0, 94% 0, 95% 45%, 100% 50%, 100% 70%, 88% 80%, 88% 90%, 73% 90%, 62% 100%);
+      background:
+        linear-gradient(90deg, #0001 50%, #0000 0),
+        /* lines */
+        linear-gradient(90deg, #147 0.5em, #0000 0),
+        linear-gradient(90deg, #147 2em, #0000 0) 0 0 / 100% 45%,
+        linear-gradient(90deg, #147 2.75em, #0000 0) 0 100% / 100% 20%,
+        
+        /* eyes */
+        linear-gradient(var(--light-blue) 0 0) 36% 60% / 15% 5%,
+        linear-gradient(var(--light-blue) 0 0) 64% 60% / 15% 5%,
+        linear-gradient(#0002 0 0) 50% 52% / 60% 4%,
+        /* face */
+        linear-gradient(#0002 22%, #0000 0) 50% 100% / 46% 45%,
+        linear-gradient(var(--gray) 0 0) 50% 100% / 46% 45%,
+        /* helmet-deco */
+        conic-gradient(at 50% -60%, var(--blue) 170deg, #0000 0 190deg, var(--blue) 0) 50% 20% / 70% 30%,
+        repeating-linear-gradient(#0002 0 5%, #0000 0 15%, #0002 0 20%) 50% 20% / 60% 28%,
+        linear-gradient(var(--gray) 0 0) 50% 20% / 60% 28%,
+        /* base */
+        var(--blue);
+      background-repeat: no-repeat;
+    }
+    
+    .arm {
+      width: 17%;
+      height: 20%;
+      background: linear-gradient(90deg, #0001 50%, #0000 0), var(--red);
+      border-radius: 1em;
+      transform-origin: 100% 0;
+      transform: rotate(5deg);
+      top: 42.5%;
+      left: 6%;
+      border-left: 0.5em solid #700;
+      border-bottom: 0.5em solid #700;
+      
+      &::before {
+        content: "";
+        top: 99%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 75%;
+        height: 90%;
+        background: 
+          linear-gradient(#0001 0 0), 
+          linear-gradient(90deg, #0001 50%, #0000 0), 
+          var(--red);
+        border-left: 0.5em solid #700;
+      }
+      
+      &::after {
+        content: "";
+        width: 100%;
+        height: 200%;
+        top: 185%;
+        left: 0;
+        background: linear-gradient(90deg, #0001 50%, #0000 0), var(--red);
+        border-radius: 1em;
+        border-left: 0.5em solid #700;
+      }
+      
+      .pipe {
+        width: 40%;
+        height: 100%;
+        transform: translate(calc(-100% - 0.5em));
+        border-radius: 0 0 1em 1em;
+        border-left: 0.5em solid #0004;
+        background: 
+          linear-gradient(90deg, #0001 50%, #0000 0),
+          radial-gradient(farthest-side circle, #0004 0.25em, #0000 0) 0 0 / 2em 2em,
+          radial-gradient(farthest-side circle, #0004 0.25em, #0000 0) 1em 1em / 2em 2em,
+          var(--gray);
+        
+        &::before {
+          content: "";
+          width: 60%;
+          height: 85%;
+          left: 50%;
+          top: 1%;
+          transform: translate(-50%, -100%);
+          background: 
+            linear-gradient(90deg, #0001 50%, #0000 0),
+            linear-gradient(#0001 0 0), 
+            var(--gray);
+        }
+      }
+      
+      & ~ & {
+        transform-origin: 0 0;
+        left: 77%;
+        transform: rotate(-7deg);
+        
+        .pipe {
+          transform: none;
+          left: 100%;
+        }
+      }
+      
+      
+    }
+    
+    .body {
+      background: #f004;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      width: 54%;
+      height: 58%;
+      border-radius: 1em 1em 0 0;
+      clip-path: polygon(0 0, 100% 0, 100% 55%, 93% 69%, 87% 70%, 85% 85%, 95% 85%, 100% 100%, 1% 100%, 5% 85%, 15% 85%, 13% 70%, 7% 69%, 0 55%);
+      border-left: 0.5em solid #700;
+      background:
+        /* halfway shadow */
+        linear-gradient(90deg, #0001 50%, #0000 0),
+        /* line */
+        linear-gradient(105deg, #333 5%, #0000 0) 0 100% / 100% 15%,
+        /* windows */
+        linear-gradient(var(--light-blue) 0 0) 8% 16% / 40% 32%,
+        linear-gradient(var(--light-blue) 0 0) 92% 16% / 40% 32%,
+        /* bottom lights */
+        linear-gradient(var(--yellow) 0 0) 50% 100% / 40% 7%,
+        linear-gradient(var(--yellow) 0 0) 11% 100% / 15% 9%,
+        linear-gradient(var(--yellow) 0 0) 89% 100% / 15% 9%,
+        /* chest */
+        linear-gradient(var(--red) 55%, #0000 0),
+        /* grid */
+        linear-gradient(var(--white) 0 0) 50% 0% / 4% 85%,
+        repeating-linear-gradient(#0000 0 5%, var(--gray) 0 7%) 50% 0% / 35% 85%,
+        linear-gradient(var(--white) 0 0) 50% 0% / 40% 85%,
+        /* abdomen */
+        linear-gradient(var(--gray) 70%, var(--red) 0 85%, var(--white) 0)
+        ;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@keyframes spinball {
+  0% { background-position: 0 0, 0 0, 0 -5.5em, 0 -5.5em; }
+  100% { background-position: -11em 0, -11em 0, -11em -5.5em, -11em -5.5em; }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-labelledby="alt-text">
+      <span id="alt-text">Transformer: a minimalistic cartoon of Optimus Prime (a robot character from the Transformers series</span>
+      <code><span class="s">.autobot</span>,
+    <span class="s">.decepticon</span> {
+      <span class="p">font-family</span>: <span class="v">Roboto</span>;
+      <span class="p">appearance</span>: <span class="v">auto</span>;
+      <span class="p">will-change</span>: <span class="v">appearance</span>, <span class="v">transform</span>;
+      <span class="p">transform</span>: <span class="v">scale</span>(<span class="n">0.5</span>);
+    }</code>
+      <section class="transformer">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="arm">
+          <div class="pipe"></div>
+        </div>
+        <div class="arm">
+          <div class="pipe"></div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

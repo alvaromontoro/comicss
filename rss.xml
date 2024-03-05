@@ -1256,5 +1256,15 @@
       <enclosure url="https://comicss.art/comics/125/neo.png" length="126000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=126</guid>
+      <title>Transformer</title>
+      <link>https://comicss.art/?id=126</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/126/transformer.png" length="113000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
