@@ -2400,4 +2400,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>PR Reviews</title>
+    <link href="https://comicss.art/?id=127" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/127/pr-reviews.html"/>
+    <id>https://comicss.art/?id=127</id>
+    <updated>2024-03-11T00:00:00Z</updated>
+    <summary>New Cartoon: PR Reviews</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/127/pr-reviews.png" alt="Cartoon with two panels title Web developers reviewing JS and 'CSS' (CSS is quoted). The first panel shows an angry-looking person saying 'Wow!! Four parameters in a function call??!! That's way too many!!! PR rejected!'. The second panel shows the same person reading a really long list of Tailwind class names and saying 'That CSS class looks stylish! Approved!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

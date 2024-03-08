@@ -996,4 +996,12 @@ const posts = [
     title: "Transformer",
     ariaLabel: "Cartoon of Optimus Prime (a robot character from the Transformers series) next to the following CSS code: .autobot, .decepticon { font-family: roboto; appearance: auto; will-change: appearance, transform; transform: scale(0.5); }"
   },
+  {
+    id: 127,
+    uid: "pr-reviews",
+    boxes: 2,
+    avertical: true,
+    title: "PR Reviews",
+    ariaLabel: "Cartoon with two panels title Web developers reviewing JS and 'CSS' (CSS is quoted). The first panel shows an angry-looking person saying 'Wow!! Four parameters in a function call??!! That's way too many!!! PR rejected!'. The second panel shows the same person reading a really long list of Tailwind class names and saying 'That CSS class looks stylish! Approved!'"
+  },
 ]
