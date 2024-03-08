@@ -964,4 +964,36 @@ const posts = [
     title: "Astronaut",
     ariaLabel: "astronaut: a minimalistic cartoon of a person in an astronaut suit with many stars in the. background. Next to the following CSS code: .astronaut { elevation: above; isolation: isolate; flow-from: spaceship; flow-to: outerspace; transition: float; }"
   },
+  {
+    id: 123,
+    uid: "politics",
+    boxes: 1,
+    vertical: true,
+    title: "US Politics",
+    ariaLabel: "Minimalistic cartoon of Abraham Lincoln next to three boxes of CSS code: on the top left .democrat{left:100%}; on the center top .undecided{align-self:center}; and on the top right .republican{right:100%}"
+  },
+  {
+    id: 124,
+    uid: "keeping-your-distance",
+    boxes: 1,
+    vertical: true,
+    title: "Keeping Your Distance",
+    ariaLabel: "Cartoon with a person separated by an arrow from other people. Each line, the arrow is longer (as it contains a longer CSS name). From top to bottom (shorter to longer): covid-19 (empty arrow), CSS, Bootstrap, BEM, CSS-in-JS, and TailwindCSS."
+  },
+  {
+    id: 125,
+    uid: "neo",
+    boxes: 1,
+    vertical: true,
+    title: "Neo",
+    ariaLabel: "Cartoon with a man wearing sunglasses and a long robe with Japanese characters falling behind him (like in The Matrix). Next to the following CSS code: #Neo { will-change: all; all: unset; transform: matrix(1, 0, 1, 0, 1, 1); &::after { all: revert; } }"
+  },
+  {
+    id: 126,
+    uid: "transformer",
+    boxes: 1,
+    vertical: true,
+    title: "Transformer",
+    ariaLabel: "Cartoon of Optimus Prime (a robot character from the Transformers series) next to the following CSS code: .autobot, .decepticon { font-family: roboto; appearance: auto; will-change: appearance, transform; transform: scale(0.5); }"
+  },
 ]

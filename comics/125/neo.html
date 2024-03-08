@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: mintcream;
+}
+
+article {
+  --line-color: gold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-bottom: 0.5em solid #000;
+  color: #396;
+  
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  #alt-text {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translate(-100in, 0);
+  }
+  
+  code {
+    display: inline-block;
+    white-space: pre;
+    left: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.5em;
+    color: #eee;
+    font-size: 2em;
+    padding: 2.5em 4em 1.5em 2em;
+    border-radius: 0.5em;
+    font-family: monospace, monospace;
+    line-height: 1.5;
+    background: 
+      radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 0),
+      radial-gradient(circle at 2.1em 1em, #cc5 0.35em, #0000 0),
+      radial-gradient(circle at 3.2em 1em, #6c6 0.35em, #0000 0),
+      #123;
+    box-shadow: 0.5em 2em 2em #0007;
+    z-index: 1;
+    
+    & * { position: relative; }
+    
+    .p { color: #4b4; }
+    .s { color: #dd7; }
+    .v { color: #c9c; }
+    .n { color: #d77; }
+  }
+  
+  .person {
+    --skin: #fff;
+    --skin-dark: #d8eef8; #d8f8ee;
+    --shirt: darkorange;
+    width: 45%;
+    aspect-ratio: 1.1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    .body {
+      width: 50%;
+      height: 61%;
+      bottom: -1%;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      .chest {
+        width: 92%;
+        height: 160%;
+        background:
+          radial-gradient(circle at 50% 10%, var(--skin-dark) 0.3em, #0000 0) 0 0 / 100% 7.5% repeat-y,
+          currentcolor;
+        left: 50%;
+        top: 5%;
+        translate: -50% 0;
+        border-radius: 130% / 10% 10% 20% 20%;
+        box-shadow: -9.4em 0 0 -9em #000;
+        -webkit-mask:
+          radial-gradient(200% 40% at -50% -32%, #0000 99%, #000) 0 0 / 55% 100% no-repeat,
+          radial-gradient(200% 40% at 150% -32%, #0000 99%, #000) 100% 0 / 55% 100% no-repeat;
+      }
+      
+      .arm {
+        width: 50%;
+        height: 100%;
+        top: 15.5%;
+        left: -20%;
+        border-radius: 50% / 100% 0 0 0;
+        background: currentcolor;
+        
+        & + & {
+          right: -20%;
+          left: auto;
+          border-radius: 50% / 0 100% 0 0;
+        }
+      }
+    }
+    
+    .head {
+      width: 25%;
+      aspect-ratio: 4 / 5;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      .ear {
+        width: 22%;
+        height: 34%;
+        background: var(--skin-dark);
+        left: -14%;
+        border-radius: 100% 0 0 100% /50%;
+        border: 0.4em solid;
+        border-right: 0;
+        top: 47%;
+        transform: rotate(-10deg);
+        
+        & + & {
+          width: 20%;
+          left: 92%;
+          top: 45%;
+          background: var(--skin);
+          transform: scaleX(-1);
+        }
+      }
+      
+      .neck {
+        width: 60%;
+        height: 66%;
+        top: 65%;
+        border: 0.4em solid;
+        border-bottom-width: 0.45em;
+        border-radius: 100% / 40%;
+        left: 50%;
+        translate: -50% 0;
+        box-shadow: inset 1em 0em var(--skin-dark);
+        background: var(--skin);
+        
+        &::before, &::after {
+          content: "";
+          width: 66%;
+          height: 33%;
+          bottom: -2%;
+          background: currentcolor;
+          border-radius: 0 100% 0 0;
+          left: -15%;
+          rotate:5deg;
+        }
+        
+        &::after {
+          left: auto;
+          right: -15%;
+          transform: scaleX(-1);
+          rotate:-5deg;
+        }
+      }
+      
+      .hair-back {
+        width: 40%;
+        height: 66%;
+        background: currentcolor;
+        border-radius: 100% / 80% 80% 120% 120%;
+        left: -10%;
+        top: -3%;
+        
+        &::before {
+          acontent: "";
+          width: 100%;
+          height: 50%;
+          background: currentcolor;
+          border-radius: 50%;
+          top: -10%;
+        }
+      }
+      
+      .face {
+        width: 100%;
+        height: 110%;
+        border: 0.5em solid;
+        border-left-color: var(--skin-dark);
+        border-top-color: #0000;
+        border-bottom: 0.4em solid ;
+        border-radius: 60% / 5em 5em 10em 10em;
+        background:
+          conic-gradient(from 230deg at 60% 70%, var(--skin-dark) 120deg, #0000 0),
+          linear-gradient(90deg, var(--skin-dark) 52%, #0000 0),
+          var(--skin);
+        background-repeat: no-repeat;
+        box-shadow: 
+          
+          2.95em -2.5em 0 -2.5em;
+        
+        .glasses {
+          width: 52%;
+          height: 20%;
+          background: #000;
+          border-radius: 50% / 10% 10% 60% 80%;
+          top: 37%;
+          left: -5%;
+          
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 50% / 10% 10% 80% 60%;
+            left: 115%;
+          }
+          
+          &::after {
+            content: "";
+            width: 25%;
+            height: 55%;
+            border-top: 0.5em solid #000;
+            border-radius: 50% / 100% 100% 0 0;
+            left: 95%;
+            top: 10%;
+          }
+        }
+        
+        .hair-front {
+          width: 82%;
+          height: 42%;
+          background: currentcolor;
+          border-radius:  100% 00% 100% 5%;
+          rotate: 40deg;
+          top: -24%;
+          left: 10%;
+          
+          &::before {
+            content: "";
+            width: 25%;
+            height: 35%;
+            right: 27%;
+            top: 66%;
+            transform: translateY(-40%) scaleY(-1);
+            background: currentcolor;
+          }
+        }
+      }
+    }
+  }
+  
+  .letters {
+    font-size: 1.5em;
+    font-weight: 900;
+    display: flex;
+    gap: 0.5em;
+    
+    & > .characters {
+      position: relative;
+      width: 2ch;
+      background-image: linear-gradient(#0000 80%, #fff 0, #396 calc(100% - 2ch));
+      color: #0000;
+      background-clip: text;
+      animation: drop calc(5s - var(--d) / 2) var(--t) linear infinite;
+      animation-play-state: paused;
+    }
+  }
+}
+
+body:has(input:checked) .characters {
+  animation-play-state: running;
+}
+
+@keyframes drop {
+  0% { background-position: 0 -60em; }
+  100% { background-position: 0 60em; }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+
+    </style>
+  </head>
+  <body>
+    <label>
+      <input type="checkbox"> Animation
+    </label>
+    <article role="img" aria-labelledby="alt-text">
+      <span id="alt-text">A minimalistic drawing of Neo (the main character of The Matrix), a man wearing sunglasses and a dark outfit. Japanese letters fall in the background. Next to it, there's some CSS code.</span>
+      <code><span class="s">#Neo</span> {
+      <span class="p">will-change</span>: <span class="v">all</span>;
+      <span class="p">all</span>: <span class="v">unset</span>;
+      <span class="p">transform</span>: <span class="v">matrix</span>(<span class="n">1</span>, <span class="n">0</span>, <span class="n">1</span>, <span class="n">0</span>, <span class="n">1</span>, <span class="n">1</span>); 
+    
+      <span class="s">&::after</span> {
+        <span class="p">all</span>: <span class="v">revert</span>;
+      }
+    }</code>
+      <section class="letters" aria-hidden="true">
+        <div class="characters" style="--d: -1.5s; --t: -7.3s;">アァカサタナハマヤャラワガザダバパイィキシチニヒミリ</div>
+        <div class="characters" style="--d: -3.3s; --t: -1.3s;">グズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴ</div>
+        <div class="characters" style="--d: -2.3s; --t: -3.4s;">ニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォ</div>
+        <div class="characters" style="--d: -5.5s; --t: -2.7s;">ブヅプエェケセテネヘメレヱゲゼデベペオォコソアァカサタナハマヤャラワガザダバパイィ</div>
+        <div class="characters" style="--d: -3.2s; --t: -6.4s;">ャラワガザダアァカサタナハマヤバパイィキシチニヒミリヰギアァカサ</div>
+        <div class="characters" style="--d: -8.0s; --t: -2.8s;">ヲゴゾドボポヴッンアァカサタナハマヤャラワガザダバパイィキキベペオォコソトノホモヨョロ</div>
+        <div class="characters" style="--d: -0.6s; --t: -1.2s;">ポヴッンアァカサタナハマヤポヴッンャラワガザダバパイポヴッンィキシチニヒミ</div>
+        <div class="characters" style="--d: -1.3s; --t: -1.9s;">アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュル</div>
+        <div class="characters" style="--d: -8.0s; --t: -3.3s;">グズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッンア</div>
+        <div class="characters" style="--d: -7.3s; --t: -6.4s;">ニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲ</div>
+        <div class="characters" style="--d: -3.6s; --t: -4.3s;">ブヅプエェケセテネヘメレヱゲゼデベペオォコソアァカサタナハマヤャラワガザダバパイィキシ</div>
+        <div class="characters" style="--d: -2.5s; --t: -8.6s;">ャラワガザダアァカサタナハマヤバパイィ</div>
+        <div class="characters" style="--d: -7.1s; --t: -5.3s;">ヲゴゾドボポヴッンアァカサタナハマヤャラワガザダバパイィキキベペオォコソトノホモヨョロ</div>
+        <div class="characters" style="--d: -1.6s; --t: -4.9s;">ポヴッンアァカサタナハマヤポヴッンャラワガザダバパイポヴッンィキシチニヒミリヰポヴッン</div>
+        <div class="characters" style="--d: -2.7s; --t: -0.0s;">アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクス</div>
+        <div class="characters" style="--d: -2.8s; --t: -3.8s;">グズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモ</div>
+        <div class="characters" style="--d: -4.3s; --t: -8.3s;">ニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼ</div>
+        <div class="characters" style="--d: -3.9s; --t: -4.9s;">ブヅプエェケセテネヘメレヱゲゼデベペオォコソアァカサタナハマヤャラワガザダバパイィキシ</div>
+        <div class="characters" style="--d: -5.0s; --t: -8.0s;">ャラワガザダアァカサタナハマヤバパイィキシチニヒミリヰギアァカサタナ</div>
+        <div class="characters" style="--d: -6.6s; --t: -9.6s;">ヲゴゾドボポヴッンアァカサタナハマヤャラワガザダバパイィキキベペオォコソトノホモヨョ</div>
+        <div class="characters" style="--d: -7.4s; --t: -1.4s;">ポヴッンアァカサタナハマヤポヴッンャラワガザダバパイポヴッンィキシチニヒミリ</div>
+        <div class="characters" style="--d: -8.1s; --t: -0.1s;">アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュル</div>
+        <div class="characters" style="--d: -9.9s; --t: -3.9s;">グズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッンアァカ</div>
+        <div class="characters" style="--d: -9.0s; --t: -5.0s;">ニヒミリヰギジヂビピウゥクスツヌフムユュルグ=</div>
+        <div class="characters" style="--d: -1.2s; --t: -7.2s;">ブヅプエェケセテネヘメレヱゲゼデベペオォコソアァカサタナハマヤャ</div>
+        <div class="characters" style="--d: -7.3s; --t: -3.3s;">ャラワガザダアァカサタナハマヤバパイィキシチニヒミリヰギアァカサタナハマヤジヂビ</div>
+        <div class="characters" style="--d: -1.3s; --t: -2.3s;">ヲゴゾドボポヴッンアァカサタナハマヤャラワガザダバパイィキキベペオォコソトノホモヨョロ</div>
+        <div class="characters" style="--d: -3.4s; --t: -2.7s;">ポヴッンアァカサタナハマヤポヴッンャラワガザダバパイポヴッンィキシチニヒミリヰポヴ</div>
+        <div class="characters" style="--d: -2.7s; --t: -2.8s;">アァカサタナハマヤャラワガザダバパイィ</div>
+        <div class="characters" style="--d: -6.4s; --t: -4.3s;">グズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾ</div>
+        <div class="characters" style="--d: -2.8s; --t: -3.9s;">ニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベ</div>
+        <div class="characters" style="--d: -1.2s; --t: -5.0s;">ブヅプエェケセテネヘメレヱゲゼデベペオォコソアァカサタナハマヤャラワガザダバパイィキシ</div>
+        <div class="characters" style="--d: -1.9s; --t: -6.6s;">ャラワガザダアァカサタナハマヤバパイィキシチニヒミリヰギアァカサタナハマヤジヂビピウゥ</div>
+        <div class="characters" style="--d: -3.3s; --t: -7.4s;">ヲゴゾドボポヴッンアァカサタナハマヤャラワガザダバパイィキキベペオォコソトノホモヨョロ</div>
+        <div class="characters" style="--d: -6.4s; --t: -8.1s;">ポヴッンアァカサタナハマヤポヴッンャラワガザダバパイポヴッンィキシ</div>
+        <div class="characters" style="--d: -4.3s; --t: -9.9s;">アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌ</div>
+        <div class="characters" style="--d: -8.6s; --t: -9.0s;">グズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン</div>
+        <div class="characters" style="--d: -5.3s; --t: -1.2s;">ニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォ</div>
+        <div class="characters" style="--d: -4.9s; --t: -7.3s;">ブヅプエェケセテネヘメレヱゲゼデベペオォコソアァカサタナハマヤャ</div>
+        <div class="characters" style="--d: -0.0s; --t: -1.3s;">ャラワガザダアァカサタナハマヤバパイィキシチニヒミリヰギアァカサタナハマヤジヂビピウゥ</div>
+     </section>
+      <section class="person">
+        <div class="body">
+          <div class="arm"></div>
+          <div class="arm"></div>
+          <div class="chest"></div>
+        </div>
+        <div class="head">
+          <div class="hair-back"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="neck"></div>
+          <div class="face">
+            <div class="hair-front"></div>
+            <div class="glasses"></div>
+          </div>
+        </div>
+      </section>
+      
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

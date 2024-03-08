@@ -2276,7 +2276,7 @@
     <summary>New Cartoon: Dictator</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="https://comicss.art/comics/120/dictator.png" alt="Dictator: a minimalistic cartoon of a man in military attire with medals and sun glasses, next to the following CSS code: .dictator { position: fixed !important; will-change: order !important; opacity: 0 !important; border: double solid !important; .country:has(&) :not(.supporter) { will-change: orphans, widows !important; translate: 100vmax 0 !important; } }" /></p>
+        <p><img src="https://comicss.art/comics/120/dictator.png" alt="Dictator: a minimalistic cartoon of a man in military attire with medals and sun glasses, next to the following CSS code: .dictator { position: fixed !important; will-change: order !important; opacity: 0 !important; border: double solid !important; .country:has(&amp;) :not(.supporter) { will-change: orphans, widows !important; translate: 100vmax 0 !important; } }" /></p>
       </div>
     </content>
     <rights>Copyright 2024 Alvaro Montoro</rights>
@@ -2315,6 +2315,82 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/122/astronaut.png" alt="astronaut: a minimalistic cartoon of a person in an astronaut suit with many stars in the. background. Next to the following CSS code: .astronaut { elevation: above; isolation: isolate; flow-from: spaceship; flow-to: outerspace; transition: float; }" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>US Politics</title>
+    <link href="https://comicss.art/?id=123" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/123/politics.html"/>
+    <id>https://comicss.art/?id=123</id>
+    <updated>2024-02-17T00:00:00Z</updated>
+    <summary>New Cartoon: US Politics</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/123/politics.png" alt="Minimalistic cartoon of Abraham Lincoln next to three boxes of CSS code: on the top left .democrat{left:100%}; on the center top .undecided{align-self:center}; and on the top right .republican{right:100%}" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Keeping Your Distance</title>
+    <link href="https://comicss.art/?id=124" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/124/keeping-your-distance.html"/>
+    <id>https://comicss.art/?id=124</id>
+    <updated>2024-02-26T00:00:00Z</updated>
+    <summary>New Cartoon: Keeping Your Distance</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/124/keeping-your-distance.png" alt="Cartoon with a person separated by an arrow from other people. Each line, the arrow is longer (as it contains a longer CSS name). From top to bottom (shorter to longer): covid-19 (empty arrow), CSS, Bootstrap, BEM, CSS-in-JS, and TailwindCSS." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Neo</title>
+    <link href="https://comicss.art/?id=125" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/125/neo.html"/>
+    <id>https://comicss.art/?id=125</id>
+    <updated>2024-02-29T00:00:00Z</updated>
+    <summary>New Cartoon: Neo</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/125/neo.png" alt="Cartoon with a man wearing sunglasses and a long robe with Japanese characters falling behind him (like in The Matrix). Next to the following CSS code: #Neo { will-change: all; all: unset; transform: matrix(1, 0, 1, 0, 1, 1); ::after { all: revert; } }" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Transformer</title>
+    <link href="https://comicss.art/?id=126" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/126/transformer.html"/>
+    <id>https://comicss.art/?id=126</id>
+    <updated>2024-03-05T00:00:00Z</updated>
+    <summary>New Cartoon: Transformer</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/126/transformer.png" alt="Cartoon of Optimus Prime (a robot character from the Transformers series) next to the following CSS code: .autobot, .decepticon { font-family: roboto; appearance: auto; will-change: appearance, transform; transform: scale(0.5); }" /></p>
       </div>
     </content>
     <rights>Copyright 2024 Alvaro Montoro</rights>
