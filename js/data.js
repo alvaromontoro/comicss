@@ -1004,4 +1004,12 @@ const posts = [
     title: "PR Reviews",
     ariaLabel: "Cartoon with two panels title Web developers reviewing JS and 'CSS' (CSS is quoted). The first panel shows an angry-looking person saying 'Wow!! Four parameters in a function call??!! That's way too many!!! PR rejected!'. The second panel shows the same person reading a really long list of Tailwind class names and saying 'That CSS class looks stylish! Approved!'"
   },
+  {
+    id: 128,
+    uid: "layers",
+    boxes: 1,
+    title: "Layers",
+    vertical: true,
+    ariaLabel: "Cartoon showing CSS code with many nested at-layers. Off-panel someone complains that it may be cold but the code doesn't need so many layers"
+  },
 ]

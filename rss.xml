@@ -1276,5 +1276,15 @@
       <enclosure url="https://comicss.art/comics/127/pr-reviews.png" length="275000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=128</guid>
+      <title>Layers</title>
+      <link>https://comicss.art/?id=128</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/128/layers.png" length="150000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
