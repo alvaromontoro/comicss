@@ -2419,4 +2419,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Layers</title>
+    <link href="https://comicss.art/?id=128" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/128/layers.html"/>
+    <id>https://comicss.art/?id=128</id>
+    <updated>2024-03-18T00:00:00Z</updated>
+    <summary>New Cartoon: Layers</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/128/layers.png" alt="Cartoon showing CSS code with many nested at-layers. Off-panel someone complains that it may be cold but the code doesn't need so many layers" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

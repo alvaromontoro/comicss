@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+      @layer body {
+        @layer skin {
+          @layer base {
+            @layer underwear {
+              @layer tights {
+                @layer socks {
+                  @layer socks2 {
+                    @layer pants {
+                      @layer boots {
+                        @layer undershirt {
+                          @layer t-shirt {
+                            @layer shirt {
+                              @layer sweater {
+                                @layer hoodie {
+                                  @layer jacket {
+                                    @layer scarf {
+                                      @layer beanie {
+                                        @layer earmuffs {
+                                          @layer hat {
+                                            @layer gloves {
+                                              code {
+                                                display: inline-block;
+                                                white-space: pre;
+                                                inset: 0;
+                                                margin-left: 4em;
+                                                color: #eee;
+                                                font-size: 2em;
+                                                font-family: monospace, monospace;
+                                                line-height: 1.5;
+                                                background: #123;
+                                                
+                                                & * { position: relative !important; }
+                                                
+                                                .p { color: #4b4; }
+                                                .s { color: #dd7; }
+                                                .v { color: #c9c; }
+                                                .n { color: #d77; }
+                                              
+                                                &.lines {
+                                                  margin-left: 0em;
+                                                  padding: 0 1.5em 0 0.5em;
+                                                  width: 3.5em;
+                                                  text-align: right;
+                                                  background: none;
+                                                  background: 
+                                                    linear-gradient(#0005 0 0),
+                                                    conic-gradient(at 80% 20%, #123 45deg, #0000 0 315deg, #123 0) 0 0.55em / 100% 5%,
+                                                    conic-gradient(at 80% 20%, #fffa 45deg, #0000 0 315deg, #fffa 0) 0 0.65em / 100% 5%;
+                                                }
+                                              }
+
+                                              article {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+                                                font-size: 1vmin;
+                                                width: 90em;
+                                                height: 60em;
+                                                border: 0.5em solid;
+                                                background: #123;
+                                                overflow: hidden;
+
+                                                & *, & *::before, & *::after {
+                                                  position: absolute;
+                                                  box-sizing: border-box;
+                                                }
+
+                                                .line {
+                                                  border-left: 1.1em solid #ffc;
+                                                  border-bottom: 0.25em solid #ffc;
+                                                  width: 40%;
+                                                  height: 60%;
+                                                  border-radius: 0 0 0 100%;
+                                                  top: 23%;
+                                                  left: 73%;
+                                                }
+
+                                                .bubble {
+                                                  z-index: 1;
+                                                  background: #ffc;
+                                                  font-size: 2.25em;
+                                                  line-height: 1;
+                                                  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+                                                  width: 34%;
+                                                  padding: 1.2em 0.5em;
+                                                  text-align: center;
+                                                  border-radius: 50%;
+                                                  text-wrap: balance;
+                                                  top: 5%;
+                                                  left: 53%;
+
+                                                  &.bubble-2 {
+                                                    top: 30%;
+                                                    left: 60%;
+                                                    width: 31%;
+                                                    padding: 1.25em 1em;
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon showing CSS code with many nested at-layers. Off-panel someone complains that it may be cold but the code doesn't need so many layers">
+      <code><span class="v">@layer</span> <span class="s">body</span> {
+  <span class="v">@layer</span> <span class="s">skin</span> {
+    <span class="v">@layer</span> <span class="s">base</span> {
+      <span class="v">@layer</span> <span class="s">underwear</span> {
+        <span class="v">@layer</span> <span class="s">tights</span> {
+          <span class="v">@layer</span> <span class="s">socks</span> {
+            <span class="v">@layer</span> <span class="s">socks2</span> {
+              <span class="v">@layer</span> <span class="s">pants</span> {
+                <span class="v">@layer</span> <span class="s">boots</span> {
+                  <span class="v">@layer</span> <span class="s">undershirt</span> {
+                    <span class="v">@layer</span> <span class="s">t-shirt</span> {
+                      <span class="v">@layer</span> <span class="s">shirt</span> {
+                        <span class="v">@layer</span> <span class="s">sweater</span> {
+                          <span class="v">@layer</span> <span class="s">hoodie</span> {
+                            <span class="v">@layer</span> <span class="s">jacket</span> {
+                              <span class="v">@layer</span> <span class="s">scarf</span> {
+                                <span class="v">@layer</span> <span class="s">beanie</span> {
+                                  <span class="v">@layer</span> <span class="s">earmuffs</span> {
+                                    <span class="v">@layer</span> <span class="s">hat</span> {
+                                      <span class="v">@layer</span> <span class="s">gloves</span> {
+
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+      </code>
+      <code class="lines">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+      </code>
+      <div class="line"></div>
+      <div class="bubble bubble-1">Look... I get it... it is winter, and chilly, and the forecast says it may snow...</div>
+      <div class="bubble bubble-2">...but your CSS code cannot feel cold!!! and it does NOT need that many layers!!!</div>
+      
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
