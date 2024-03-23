@@ -1012,4 +1012,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon showing CSS code with many nested at-layers. Off-panel someone complains that it may be cold but the code doesn't need so many layers"
   },
+  {
+    id: 129,
+    uid: "appliance",
+    boxes: 1,
+    title: "Appliance",
+    vertical: true,
+    ariaLabel: "Appliance: cartoon of a broken blender leaking its content. It is next to some CSS code: .appliance { color: lightsteelblue; counter-set: top; :has(.warranty) { break-before:avoid; break-after: always; }}"
+  },
 ]
