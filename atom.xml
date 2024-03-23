@@ -2438,4 +2438,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Appliance</title>
+    <link href="https://comicss.art/?id=129" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/129/appliance.html"/>
+    <id>https://comicss.art/?id=129</id>
+    <updated>2024-03-23T00:00:00Z</updated>
+    <summary>New Cartoon: Appliance</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/129/appliance.png" alt="Appliance: cartoon of a broken blender leaking its content. It is next to some CSS code: .appliance { color: lightsteelblue; counter-set: top; :has(.warranty) { break-before:avoid; break-after: always; }}" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
