@@ -25,17 +25,278 @@
     <link rel="shortcut icon" href="/favicon.png" />
 
     <style>
-      @font-face {
-        font-family: 'Comic Neue';
-        src: url(/fonts/comic.woff2) format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+body {
+  background: #36c3;
+}
+
+article {
+  counter-set: top;
+  --line-color: #369;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-bottom: 0.5em solid var(--line-color);
+  color: var(--line-color);
+
+  & *, & *::before, & *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  #alt-text {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transform: translate(-100in, 0);
+  }
+
+  code {
+    display: inline-block;
+    white-space: pre;
+    left: 1.75em;
+    top: 1em;
+    color: #eee;
+    font-size: 2em;
+    padding: 2.5em 4em 1.5em 2em;
+    border-radius: 0.5em;
+    font-family: monospace, monospace;
+    line-height: 1.5;
+    background: 
+      radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 0),
+      radial-gradient(circle at 2.1em 1em, #cc5 0.35em, #0000 0),
+      radial-gradient(circle at 3.2em 1em, #6c6 0.35em, #0000 0),
+      #123;
+    box-shadow: 0.5em 1em 2em #0005;
+    z-index: 1;
+
+    & * { position: relative; }
+
+    .p { color: #4b4; }
+    .s { color: #dd7; }
+    .v { color: #c9c; }
+    .n { color: #d77; }
+  }
+
+  .blender {
+    width: 35%;
+    height: 47%;
+    aoutline: 1px dashed red;
+    bottom: 0;
+    left: 40%;
+    transform: translate(-50%);
+    
+    &::before, &::after {
+      content: "";
+      height: 1em;
+      width: 40%;
+      border-radius: 2em;
+      background: #0c0;
+      bottom: 0;
+      left: 33%;
+      z-index: 1;
+    }
+    
+    &::after {
+      width: 1em;
+      left: 74%;
+    }
+
+    .base {
+      width: 60%;
+      height: 33%;
+      bottom: 0;
+      left: 50%;
+      transform-origin: 50% 100%;
+      transform: translate(-50%);
+      border-radius: 1em;
+      clip-path: polygon(15% 0%, 85% 0, 100% 95%, 100% 100%, 0 100%, 0 95%);
+      border-top: 0.5em solid;
+      border-left: 0.5em solid;
+      background:
+        radial-gradient(circle at 33% 50%, currentcolor 1em, #0000 1.05em),
+        radial-gradient(circle at 50% 50%, currentcolor 1em, #0000 1.05em),
+        radial-gradient(circle at 67% 50%, #fff 1em, #0000 0),
+        linear-gradient(-78deg, #0000 80%, #0002 0 87%, currentcolor 1.05em),
+        /*         linear-gradient(78deg, #0000 80%, #fff4 0), */
+        lightsteelblue;
+    }
+    .top {
+      width: 66.66%;
+      height: 67.1%;
+      top: 0;
+      left: 50%;
+      transform-origin: 50% 100%;
+      transform: translate(-50%);
+      /*       border-radius: 1em; */
+      clip-path: polygon(0% 0%, 100% 0, 100% 5%, 82% 100%, 18% 100%, 0 5%);
+      border-top: 0.5em solid;
+      border-left: 0.5em solid;
+      border-right: 0.5em solid #fff8;
+      background:
+        linear-gradient(81.75deg, currentcolor 16%, #0002 0 23%, #0000 0),
+        linear-gradient(-81.75deg, #fff8 20%,  #0000 0),
+        linear-gradient(#fff6 0 0),
+        conic-gradient(from -10deg at 50% 880%, #0c0c 20deg, #0000 0) 54% 100% / 65% 15%,
+        linear-gradient(currentcolor 0 0) 50% 100% / 1em 1em,
+        
+        conic-gradient(from -60deg at 10% 50%, #0000 150deg, currentcolor 0) 50% calc(100% - 0.5em) / 7em 1em,
+        conic-gradient(from 60deg at 90% 50%, currentcolor 180deg, #0000 0) 50% calc(100% - 0.5em) / 7em 1em;
+      background-repeaT: no-repeat;
+    }
+
+    .lid {
+      border: 1em solid #0000;
+      border-top: 1.5em solid;
+      width: 68%;
+      height: 4.5em;
+      background: currentcolor;
+      background-clip: content-box;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -20%) rotate(5deg);
+      transform-origin: 100% 0;
+    }
+
+    .handle {
+      width: 40%;
+      height: 35%;
+      border: 2em solid #fffb;
+      border-radius: 50%;
+      top: 20%;
+      left: 60%;
+      clip-path: polygon(50% 0, 100% 0, 100% 100%, 34% 100%);
+    }
+
+    .cord {
+      width: 40%;
+      height: 20%;
+      border-radius: 0em 15em 15em 100%;
+      border: 1em solid #000;
+      bottom: 0;
+      left: 70%;
+      border-top-color: #0000;
+
+      &::before {
+        content: "";
+        height: calc(100% + 2em);
+        width: calc(100% + 2em);
+        border-radius: 15em 15em 100% 15em;
+        border: 1em solid #000;
+        bottom: -1em;
+        left: 70%;
+        border-top-color: #0000;
+        border-right-color: #0000;
+        clip-path: polygon(0 0, 20% 0, 10% 23%, 50% 0, 100% 100%, 0 100%);
       }
 
-      
+      &::after {
+        content: "";
+        width: 6em;
+        height: 4em;
+        border-radius: 5em;
+        background: red;
+        left: 170%;
+        top: 40%;
+        background:
+          linear-gradient(90deg, #000 60%, #0000 0),
+          linear-gradient(silver 0 0) 100% 25% / 100% 20% no-repeat,
+          linear-gradient(silver 0 0) 100% 75% / 100% 20% no-repeat
+          ;
+        transform: rotate(-30deg);
+      }
+    }
+
+    .sparks {
+      width: 10%;
+      height: 21%;
+      top: 62%;
+      left: 92%;
+
+      &::before, &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: orange;
+        clip-path: polygon(0 50%, 50% 0, 50% 45%, 100% 50%, 50% 100%, 50% 55%);
+        transform: rotate(-20deg);
+      }
+
+      &::after {
+        transform: rotate(20deg);
+        left: 130%;
+      }
+    }
+    
+    .crack {
+      width: 30%;
+      height: 35%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: 
+        linear-gradient(currentcolor 0 0) 53% 70% / 0.6em 2.5em,
+        linear-gradient(currentcolor 0 0) 50% 60% / 4em 0.5em,
+        linear-gradient(-45deg, #0000 46%, currentcolor 0 55%, #0000 0) 65% 50% / 35% 35%,
+        linear-gradient(-45deg, #0000 46%, currentcolor 0 55%, #0000 0) 30% 85% / 25% 25%,
+        linear-gradient(60deg, #0000 47%, currentcolor 0 55%, #0000 0) 60% 100% / 40% 40%,
+         linear-gradient(35deg, #0000 46%, currentcolor 0 55%, #0000 0) 75% 78% / 35% 35%,
+        linear-gradient(65deg, #0000 44%, currentcolor 0 55%, #0000 0) 40% 34% / 30% 30%;
+      background-repeat: no-repeat;
+    }
+    
+    .leak {
+      width: 1.25em;
+      height: 3em;
+      background: #0c0;
+      border-radius: 0 0 1em 1em;
+      top: 53.75%;
+      left: 49%;
+      clip-path: polygon(0 0, 200% 60%, 200% 200%, 0 100%);
+      filter: drop-shadow(1.25em 0 #0c0)
+    }
+  }
+}
+
+@keyframes spinball {
+  0% { background-position: 0 0, 0 0, 0 -5.5em, 0 -5.5em; }
+  100% { background-position: -11em 0, -11em 0, -11em -5.5em, -11em -5.5em; }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+
     </style>
   </head>
   <body>
-
+    <article role="img" aria-labelledby="alt-text">
+      <span id="alt-text">Appliance: cartoon of a broken blender leaking its content. It is next to some CSS code.</span>
+      <code><span class="s">.appliance</span> {
+      <span class="p">color</span>: <span class="v">lightSteelBlue</span>;
+      <span class="p">counter-set</span>: <span class="v">top</span>;
+    <!--   <span class="p">will-change</span>: <span class="v">position</span>;
+         -->
+      &:<span class="s">has</span>(<span class="s">.warranty</span>) {
+        <span class="p">break-before</span>: <span class="v">avoid</span>;
+        <span class="p">break-after</span>: <span class="v">always</span>;
+      }
+    }</code>
+      <section class="blender">
+        <div class="cord"></div>
+        <div class="sparks"></div>
+        <div class="lid"></div>
+        <div class="handle"></div>
+        <div class="base"></div>
+        <div class="top"></div>
+        <div class="crack"></div>
+        <div class="leak"></div>
+      </section>
+    </article>
     <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
   </body>
   </html>
