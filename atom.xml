@@ -2457,4 +2457,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Spring Break</title>
+    <link href="https://comicss.art/?id=130" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/130/springbreak.html"/>
+    <id>https://comicss.art/?id=130</id>
+    <updated>2024-03-29T00:00:00Z</updated>
+    <summary>New Cartoon: Spring Break</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/130/springbreak.png" alt="a big cartoon with plenty of white space, an undefined character pops up moving around and asking several times 'comiCSS?'. Finally it stops in front of a beach chair where a person is drinking. The character asks 'comiCSS?!' and the person replies 'spring breaCSS'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Comic Neue';
+        src: url(/fonts/comic.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+        font-size: 1vmin;
+        width: 70em;
+        height: 240em;
+        border: 0.5em solid;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+      }
+
+      article *, article *::before, article *::after {
+        position: absolute;
+        box-sizing: border-box;
+      }
+
+      .bubble {
+        --extra: linear-gradient(#0000 0 0);
+        --line: radial-gradient(80% 150% at 100% 0%, #0000 50%, #f00 0 60%, #0000 0 );
+        --rotation: 30deg;
+        width: 7em;
+        height: 6em;
+        padding: 1em;
+        font-size: 2em;
+        font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, sans-serif;
+        text-align: center;
+
+        &::before {
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: 
+            var(--extra),
+            radial-gradient(50% 25% at 50% 25%, #f00 99%, #0000 0 ),
+            var(--line),
+            #fff;
+          ;
+          box-shadow: 0 0 0 1em #ffff;
+          filter: blur(0.35em) contrast(30) sepia() brightness(260%) hue-rotate(var(--rotation));
+          mix-blend-mode: multiply;
+        }
+
+        &::after {
+          position: relative;
+        }
+      }
+
+      .character {
+        --eye1: 30%;
+        --eye2: 60%;
+        --mouth: linear-gradient(#0000 0 0);
+        --extra: linear-gradient(#0000 0 0);
+        bottom: 0;
+        width: 15em;
+        height: 25em;
+        background: 
+          linear-gradient(90deg, #000 0.4em, #fff 0 1em, #000 0) 50% 20% / 1.4em 3em,
+          conic-gradient(at 50% -22%, #0000 170deg, #000 0 190deg, #0000 0) 50% 85% / 70% 66.6%,
+          linear-gradient(#000 0 0) 30% 100.25% / calc(20% + 0.4em) 0.4em,
+          linear-gradient(#000 0 0) 70% 100.25% / calc(20% + 0.4em) 0.4em,
+          radial-gradient(100% 45% at 35% 100%, #fff 10%, #000 0 calc(10% + 0.4em), #0000 0),
+          radial-gradient(100% 45% at 65% 100%, #fff 10%, #000 0 calc(10% + 0.4em), #0000 0);
+        background: 
+          linear-gradient(90deg, #000 0.4em, #fff 0 1em, #000 0) 50% 20% / 1.4em 3em,
+          conic-gradient(at 50% -22%, #0000 170deg, #000 0 190deg, #0000 0) 50% 100% / 70% 71%;
+        background-repeat: no-repeat;
+
+        &::before {
+          content: "";
+          width: 60%;
+          height: 25%;
+          left: 50%;
+          transform: translateX(-50%);
+          border: 0.35em solid;
+          border-radius: 50% 55% 45% 53%;
+          background:
+            var(--extra),
+            var(--mouth),
+            radial-gradient(circle at var(--eye1) 55%, #000 0.4em, #0000 0.42em),
+            radial-gradient(circle at var(--eye2) 55%, #000 0.4em, #0000 0.42em),
+            #fff
+          ;
+          background-repeat: no-repeat;
+        }
+      }
+
+      section {
+        width: 40em;
+        height: 30em;
+      }
+
+      .panel-0 {
+        right: 0;
+        top: 27%;
+
+        .bubble {
+          font-size: 1.5em;
+          left: 45%;
+          top: 4%;
+
+          &::after {
+            content: "comiCSS?";
+          }
+        }
+
+        .character {
+          --mouth: radial-gradient(circle at 48% 80%, #000 0.3em, #0000 0);
+          right: -15%;
+          transform: rotate(-30deg);
+
+          &::before {
+            transform: translate(-50%) rotate(19deg)
+          }
+        }
+      }
+
+      .panel-1{
+        left: 10%;
+        top: 43%;
+
+        .bubble {
+          --line: radial-gradient(80% 120% at 0% 0%, #0000 49.5%, #f00 0 60%, #0000 0 );
+          left: 35%;
+          top: 0%;
+
+          &::after {
+            content: "comiCSS?!";
+          }
+        }
+
+        .character {
+          --eye1: 45%;
+          --eye2: 70%;
+          --mouth: radial-gradient(circle at 57% 80%, #000 0.45em, #0000 0);
+          left: 5%;
+
+          &::before {
+            transform: translate(-50%) rotate(-4deg)
+          }
+
+          &::after {
+            content: "";
+            width: 15%;
+            height: 20%;
+            background: linear-gradient(100deg, #0000 20%, #000 0 30%, #0000 0 40%, #000 0 50%, #0000 0);
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 70%);
+            top: 50%;
+            left: 26%;
+          }
+        }
+      }
+
+      .panel-2 {
+        right: 5%;
+        top: 63%;
+
+        .bubble {
+          width: 8em;
+          font-size: 2.25em;
+          left: 24%;
+          top: -9%;
+
+          &::after {
+            content: "comiCSS?!?!";
+          }
+        }
+
+        .character {
+          --extra: 
+            conic-gradient(at 45% 20%, #fff 107deg, #f000 0 255deg, #fff 0) 44% 48% / 9em 1em;
+          --mouth: radial-gradient(circle at 50% 100%, #000 0.5em, #0000 0) 43% 70% / 4em 2em;
+          right: 0%;
+
+          &::before {
+            transform: translate(-50%) rotate(-5deg);
+          }
+
+          &::after {
+            content: "";
+            width: 15%;
+            height: 15%;
+            background: linear-gradient(80deg, #0000 30%, #000 0 40%, #0000 0 50%, #000 0 60%, #0000 0);
+            clip-path: polygon(0 0%, 100% 30%, 100% 90%, 0 100%);
+            top: 60%;
+            left: 66%;
+          }
+        }
+      }
+
+      .panel-3 {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+
+        .bubble-1 {
+          --line: radial-gradient(80% 140% at 0% 0%, #0000 49.5%, #f00 0 60%, #0000 0 );
+          left: 28%;
+          top: -5%;
+
+          &::after {
+            content: "comiCSS!";
+          }
+        }
+
+        .bubble-2 {
+          --rotation: 190deg;
+          --line: radial-gradient(80% 170% at 100% 0%, #0000 51%, #f00 0 60%, #0000 0 );
+          top: 40%;
+          left: 47%;
+          width: 9em;
+          height: 6em;
+          font-size: 1.75em;
+          
+
+          &::after {
+            content: "spring-breaCSS";
+            white-space: pre;
+          }
+        }
+
+        .character {
+          --eye1: 45%;
+          --eye2: 70%;
+          --mouth: radial-gradient(circle at 50% 0%, #000 0.6em, #0000 0) 63% 115% / 4em 2em;
+          left: 10%;
+
+          &::before {
+            transform: translate(-50%) rotate(-6deg);
+          }
+        }
+
+        .chair {
+          width: 15em;
+          height: 12em;
+          background: #00f3;
+          border: 0.4em solid;
+          border-radius: 2em 2em 0.75em 0.75em;
+          background: repeating-linear-gradient(limegreen 0 20%, #fff 0 40%);
+          transform: perspective(1000px) rotateX(-20deg);
+          bottom: 1em;
+          left: 70%;
+
+          &::before {
+            content: "";
+            width: 1em;
+            height: 2em;
+            background: #000;
+            top: 100%;
+            border-radius: 0 0 4em 4em;
+            left: 1em;
+            box-shadow: 11.5em 0;
+          }
+        }
+
+        .can {
+          bottom: -1%;
+          left: 92%;
+          border: 0.4em solid;
+          border-radius: 0.5em 0.5em 0.7em 0.7em;
+          background: linear-gradient(lightgray 0.2em, #36c 0 );
+          width: 2.5em;
+          height: 4em;
+          rotate: 5deg
+
+        }
+
+        .person {
+          border: 0.4em solid;
+          background: #963;
+          width: 6em;
+          height: 5em;
+          border-radius: 50%;
+          left: 75%;
+          top: 50%;
+        }
+
+        .umbrella {
+          width: 35em;
+          height: 32em;
+          bottom: -1%;
+          left: 53%;
+          background: linear-gradient(90deg, #0000 48.5%, #000 0 51.5%, #0000 0);
+          transform: rotate(15deg);
+          transform-origin: 50% 100%;
+
+          &::after {
+            content: "";
+            border: 0.4em solid;
+            border-radius: 100% / 2em 2em 30% 30%;
+            width: 1.5em;
+            height: 2em;
+            background: #000;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            aspect-ratio: 1.8;
+            background: #0004;
+            border-radius: 50% / 100% 100% 0 0;
+            mask: radial-gradient(70% 100% at 50% 0, #000 99%, #0000);
+            background:
+            radial-gradient(70% 100% at 50% 0, #0000 99%, #000),
+              radial-gradient(95% 165% at 100% 100%, #0000 80%, red 0),
+              radial-gradient(95% 170% at 0% 100%, #0000 80%, red 0),
+              
+              #fff
+            ;
+            border: 0.4em solid;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article aria-label="a big cartoon with plenty of white space, an undefined character pops up moving around and asking several times 'comiCSS?'. Finally it stops in front of a beach chair where a person is drinking. The character asks 'comiCSS?!' and the person replies 'spring breaCSS'">
+      <section class="panel-0">
+        <div class="bubble"></div>
+        <div class="character"></div>
+      </section>
+      <section class="panel-1">
+        <div class="bubble"></div>
+        <div class="character"></div>
+      </section>
+      <section class="panel-2">
+        <div class="bubble"></div>
+        <div class="character"></div>
+      </section>
+      <section class="panel-3">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="character"></div>
+        <div class="person"></div>
+        <div class="chair"></div>
+        <div class="can"></div>
+        <div class="umbrella"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
