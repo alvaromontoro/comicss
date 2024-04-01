@@ -1020,4 +1020,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Appliance: cartoon of a broken blender leaking its content. It is next to some CSS code: .appliance { color: lightsteelblue; counter-set: top; :has(.warranty) { break-before:avoid; break-after: always; }}"
   },
+  {
+    id: 130,
+    uid: "springbreak",
+    boxes: 4,
+    title: "Spring Break",
+    vertical: true,
+    ariaLabel: "a big cartoon with plenty of white space, an undefined character pops up moving around and asking several times 'comiCSS?'. Finally it stops in front of a beach chair where a person is drinking. The character asks 'comiCSS?!' and the person replies 'spring breaCSS'"
+  },
 ]
