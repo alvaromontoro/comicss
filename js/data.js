@@ -1028,4 +1028,12 @@ const posts = [
     vertical: true,
     ariaLabel: "a big cartoon with plenty of white space, an undefined character pops up moving around and asking several times 'comiCSS?'. Finally it stops in front of a beach chair where a person is drinking. The character asks 'comiCSS?!' and the person replies 'spring breaCSS'"
   },
+  {
+    id: 131,
+    uid: "kids-fighting",
+    boxes: 5,
+    title: "Kids Fighting",
+    vertical: true,
+    ariaLabel: "Comic with 5 panels showing two kids who start to fight yelling at each other 'display:grid' and 'display:flex'. Their angry mother stops them by saying 'animation: none !important', and the separates them by saying 'justify-content: space-between !important'"
+  },
 ]
