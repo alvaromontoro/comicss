@@ -1036,4 +1036,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Comic with 5 panels showing two kids who start to fight yelling at each other 'display:grid' and 'display:flex'. Their angry mother stops them by saying 'animation: none !important', and the separates them by saying 'justify-content: space-between !important'"
   },
+  {
+    id: 132,
+    uid: "not-you-i",
+    boxes: 1,
+    title: "Not You (I)",
+    vertical: true,
+    ariaLabel: "Grid with 9 boxes with a word and a browser logo. The sentence reads: 'Thank you for building faster internet for everyone'. The center panel (with the IE logo) reads 'not you'"
+  },
 ]
