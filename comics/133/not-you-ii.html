@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  font-size: 1vmin;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 93em;
+  aspect-ratio: 1;
+  background: #000;
+  gap: 1em;
+  border: 1em solid;
+ 
+  
+  section {
+    position: relative;
+    background: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#c9c9, #c9c0  50%), #fff;
+    
+    h2 {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      text-transform: uppercase;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 4vmin;
+      white-space: pre;
+    }
+    
+    .ie-logo {
+      mix-blend-mode: darken;
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  
+  &::before, &::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+}
+
+
+.logo.css {
+  width: 45%;
+  aspect-ratio: 22 / 25;
+  background: #24d;
+  clip-path: polygon(0 0, 100% 0, 90% 90%, 50% 100%, 10% 90%);
+}
+
+.logo.css::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff18;
+  clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+  mix-blend-mode: plus-lighter;
+}
+
+.logo.css::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #eee;
+  clip-path: polygon(18.5% 18.5%, 81.5% 18.5%, 76% 74%, 50% 80.5%, 24% 74%, 22.25% 57%, 34.25% 57%, 35% 65.5%, 50% 69%, 65% 65.5%, 66% 51.5%, 22% 51.5%, 20.75% 40.5%, 66.5% 40.5%, 67.5% 29.5%, 19.5% 29.5%);
+}
+
+
+
+
+.logo.bem {
+  font-size: 0.25em;
+  width: 80em;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(#000 0 0) 5.75% 13.25% / 21.25% 6.25%,
+    linear-gradient(#000 0 0) 5.75% 25.75% / 21.25% 6.25%
+    ;
+  background-repeat: no-repeat;
+  clip-path: polygon(4.5% 4.5%, 95.5% 4.5%, 95.5% 95.5%, 4.5% 95.5%);
+  mix-blend-mode: multiply;
+}
+
+.logo.bem::before {
+  content: "";
+  position: absolute;
+  width: 58.25%;
+  left: 4.5%;
+  left: 0;
+  top: 35.5%;
+  height: 41.25%;
+  border-radius: 0 25% 25% 0;
+  box-shadow:
+    /* outer dark */
+    inset 0.25em 7.25em 0 -2em #000,
+    inset 0 -7em 0 -2em #000,
+    /* first white */
+    inset 1.75em 9.5em 0 #fff,
+    inset 1.75em -9.25em 0 #fff,
+    /* inner dark */
+    inset 4.5em 15.5em 0 -1.1em #000,
+    inset 4.5em -15.25em 0 -1.1em #000;
+  clip-path: polygon(7.5% 0, 99.9% 0, 99.9% 100%, 7.5% 100%);
+  mix-blend-mode: multiply;
+}
+
+.logo.bem::after {
+  content: "";
+  position: absolute;
+  width: 42%;
+  right: 4.5%;
+  right: 0;
+  bottom: 12.5%;
+  height: 12%;
+  border-radius: 20% / 0 0 0 50%;
+  box-shadow:
+    /* outer dark */
+    inset 0 -5em 0 -2em #000,
+    /* first white */
+    inset -0.25em -5.5em 0 0 #fff,
+    /* inner dark */
+    inset -3.5em -8.75em 0 #000;
+  clip-path: polygon(0 0, 90.5% 0, 90.5% 100%, 0 100%);
+  mix-blend-mode: multiply;
+}
+
+
+
+.logo.bootstrap {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-text: center;
+  color: #fff;
+  background: purple;
+  aspect-ratio: 1;
+  font-size: 8em;
+  border-radius: 0.25em;
+  width: 1.45em;
+  background: linear-gradient(90deg, #90f, #70f);
+}
+
+.logo.bootstrap::before {
+  content: "";
+  height: 100%;
+  width: 0.15em;
+  background: red;
+  left: 0;
+  top: 0;
+  transform: translate(-95%, 0);
+  background: #90f;
+  -webkit-mask:
+    radial-gradient(105% 93% at 0 0, #0000 99%, #000) 0 0 / 100% 51% no-repeat,
+    radial-gradient(105% 93% at 0 100%, #0000 99%, #000) 0 100% / 100% 51% no-repeat
+}
+
+.logo.bootstrap::after {
+  content: "";
+  height: 100%;
+  width: 0.15em;
+  background: red;
+  right: 0;
+  transform: translate(95%, 0);
+  top: 0;
+  background: #70f;
+  -webkit-mask:
+    radial-gradient(105% 93% at 100% 0, #0000 99%, #000) 100% 0 / 100% 51% no-repeat,
+    radial-gradient(105% 93% at 100% 100%, #0000 99%, #000) 100% 100% / 100% 51% no-repeat
+}
+
+
+.logo.css-in-js {
+  font-size: 3em;
+  width: 4.3em;
+  aspect-ratio: 1;
+  border: 0.05em solid;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: 'Source Sans Pro', Roboto, Arial, Helvetica, Verdana, sans-serif;
+  font-weight: 900;
+  flex-direction: column;
+  padding: 0em 0.2em;
+  line-height: 1;
+  background: #fbe000;
+  box-sizing: border-box;
+}
+
+.logo.css-in-js::before {
+  content: "JSS";
+  font-size: 2.7em;
+  position: relative;
+  letter-spacing: -0.025em;
+  transform: translateX(33%)
+}
+
+
+.logo.css-modules {
+  font-size: 2.95em;
+  width: 4.3em;
+  aspect-ratio: 1;
+  border: 0.07em solid;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  flex-direction: column;
+  padding: 0.1em 0.2em;
+  line-height: 1;
+}
+
+.logo.css-modules::before {
+  content: "CSS";
+  position: relative;
+}
+
+.logo.css-modules::after {
+  content: "Modules";
+  text-transform: uppercase;
+  position: relative;
+}
+
+
+.logo.bulma {
+  aspect-ratio: 69 / 100;
+  width: 35%;
+  background: #00d8ba;
+  clip-path: polygon(0% 69%, 9% 25%, 45% 0%, 90% 31%, 63% 50%, 100% 75%, 45% 100%);
+}
+
+
+
+
+.logo.tailwind {
+  font-size: 1vmin;
+  width: 35%;
+  height: 15.5%;
+  filter: drop-shadow(-3.35em 4em #00b9d9);
+  transform: translate(-30%, -100%) scale(1.2);
+}
+
+.logo.tailwind::before,
+.logo.tailwind::after{
+  content: "";
+  width: 35%;
+  height: 100%;
+  border-radius: 4em 4em 0 0;
+  transform: rotate(-45deg);
+  top: 35%;
+  left: 3.33%;
+  box-shadow: 1.25em 1em 0 1.5em #00b9d9;
+  clip-path: polygon(0 0, 80% 80%, 500% 90%, 500% -500%, 0 -500%)
+}
+
+.logo.tailwind::after {
+  transform: rotate(135deg);
+  left: 62%;
+  top: -28%;
+}
+
+
+
+.logo.less {
+  top: 57%;
+  font-size: 1.1vmin;
+  filter: drop-shadow(0.1em 0.1em 0.2em #0004);
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.logo.less::before {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 89%;
+  height: 86.25%;
+  border-radius: 0.5em;
+  box-shadow: inset 0 0 0.1em 0.1em #fff4;
+  background:
+    linear-gradient(#fff 0 0) 0 0 / 20% 10% no-repeat,
+    linear-gradient(#184d84, #0e2e51);
+}
+
+
+.logo.less::after {
+  content: "{less}";
+  position: relative;
+  white-space: pre;
+  font-family: 'Source Sans Pro';
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.logo.purecss {
+  width: 13em;
+  aspect-ratio: 1;
+  background: #1f8dd6;
+  color: #fff;
+}
+
+.logo.purecss::before {
+  content: "P";
+  font-size: 7.5em;
+  font-family: Arial, sans-serif;
+  position: absolute;
+  top: 47.5%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  position: inline-block;
+}
+
+.logo.purecss::after {
+  content: "CSS";
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h2>Thanks</h2>
+        <span class="logo css" role="img" aria-label="logo CSS"></span>
+      </section>
+      
+      <section>
+        <h2>For</h2>
+        <span class="logo bem" role="img" aria-label="logo bem"></span>
+      </section>
+      
+      <section>
+        <h2>Making</h2>
+        <span class="logo purecss" role="img" aria-label="PureCSS logo"></span>
+      </section>
+      
+      <section>
+        <h2>Web</h2>
+        <span class="logo css-in-js" role="img" aria-label="CSS-in-JS logo"></span>
+      </section>
+      
+      <section>
+        <span class="logo tailwind" role="img" aria-label="Tailwind logo"></span>
+        <h2 style="color: red">Not you</h2>
+      </section>
+      
+      <section>
+        <h2>Styling</h2>
+        <span class="logo bulma" role="img" aria-label="Logo Bulma"></span>
+      </section>
+      
+      <section>
+        <h2>Better</h2>
+        <span class="logo less" role="img" aria-label="Less logo"></span>
+      </section>
+      
+      <section>
+        <h2>For</h2>
+        <span class="logo css-modules" role="img" aria-label="CSS Modules logo"></span>
+      </section>
+      
+      <section>
+        <h2>Everyone</h2>
+        <span class="logo bootstrap" role="img" aria-label="Bootstrap logo">B</span>
+      </section>
+    </article>
+    
+    
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

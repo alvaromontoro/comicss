@@ -1044,4 +1044,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Grid with 9 boxes with a word and a browser logo. The sentence reads: 'Thank you for building faster internet for everyone'. The center panel (with the IE logo) reads 'not you'"
   },
+  {
+    id: 133,
+    uid: "not-you-ii",
+    boxes: 1,
+    title: "Not You (II)",
+    vertical: true,
+    ariaLabel: "Grid with 9 panels with CSS and styling technology logos. Each logo has a word that form the sentence 'Thank you for making web styling better for everyone' except TailwindCSS logo (in the center) with the sentence 'not you'"
+  },
 ]

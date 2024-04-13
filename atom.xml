@@ -2514,4 +2514,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Not You (II)</title>
+    <link href="https://comicss.art/?id=133" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/133/not-you-ii.html"/>
+    <id>https://comicss.art/?id=133</id>
+    <updated>2024-04-13T00:00:00Z</updated>
+    <summary>New Cartoon: Not You (II)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/133/not-you-ii.png" alt="Grid with 9 panels with CSS and styling technology logos. Each logo has a word that form the sentence 'Thank you for making web styling better for everyone' except TailwindCSS logo (in the center) with the sentence 'not you'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
