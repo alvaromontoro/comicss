@@ -1323,7 +1323,7 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 12 Apr 2024 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/132/not-you-i.png" length="150000" type="image/png" />
+      <enclosure url="https://comicss.art/comics/132/not-you-i.png" length="225000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
@@ -1333,7 +1333,17 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/133/not-you-ii.png" length="150000" type="image/png" />
+      <enclosure url="https://comicss.art/comics/133/not-you-ii.png" length="122000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=134</guid>
+      <title>Evolution</title>
+      <link>https://comicss.art/?id=134</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/134/evolution.png" length="39000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
   </channel>

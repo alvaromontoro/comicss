@@ -1052,4 +1052,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Grid with 9 panels with CSS and styling technology logos. Each logo has a word that form the sentence 'Thank you for making web styling better for everyone' except TailwindCSS logo (in the center) with the sentence 'not you'"
   },
+  {
+    id: 134,
+    uid: "evolution",
+    boxes: 1,
+    title: "Evolution",
+    horizontal: true,
+    ariaLabel: "Cartoon titled 'Evolution' with drawings of a 5.25 floppy disk, a CD-ROM, an USB drive, an SD card, and a button with the word 'Upload' and an arrow pointing up into a cloud."
+  },
 ]

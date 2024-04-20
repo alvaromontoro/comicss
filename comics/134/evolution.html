@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  aoverflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  position: relative;
+  font-size: 1.4vw;
+/*   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 60em;
+  height: 24em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  & * {
+    position: relative;
+    box-sizing: border-box;
+    
+    &::before, &::after {
+      box-sizing: border-box;
+      position: absolute;
+    }
+  }
+  
+  h1 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    margin: 0;
+    font-size: 5em;
+    font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  
+  span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    
+  }
+  
+  .floppy-525 {
+    --magnetic: #543;
+    --color: #182024;
+    width: 15.75em;
+    aspect-ratio: 1;
+    background: blue;
+    border-radius: 0.2em;
+    clip-path: polygon(0 0, 100% 0, 100% 14%, 98% 14%, 98% 18%, 100% 18%, 100% 100%, 0 100%);
+    mask:
+      radial-gradient(circle at 80% 100%, #0000 0.25em, #000 0.26em) 0 100% / 51% 25% no-repeat,
+      radial-gradient(circle at 20% 100%, #0000 0.25em, #000 0.26em) 100% 100% / 51% 25% no-repeat,
+      radial-gradient(circle at 50.5% 62%, #0000 1.65em, #000 1.7em) 0 0 / 100% 80% no-repeat;
+    background:
+      radial-gradient(circle, var(--magnetic) 2.25em, #0000 0),
+      radial-gradient(circle at 70% 55%, var(--magnetic) 0.4em, #0000 0),
+      var(--color);
+    
+    &::before {
+      content: "";
+      width: 8%;
+      height: 25%;
+      border-radius: 10em;
+      background: var(--magnetic);
+      top: 83%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    &::after {
+      content: "";
+      width:  50%;
+      height: 23%;
+      top: 15%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      border-radius: 0.25em;
+      background: 
+        linear-gradient(#369 15%, #0000 0),
+        repeating-linear-gradient(#0000 0 25%, #369 0 28%) 50% 100% / 90% 80% no-repeat,
+        #fff;
+    }
+  }
+  
+  .cdrom {
+    width: 14.1em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    mask:
+      radial-gradient(farthest-side circle, #0000 15%, #0008 0 15.5%, #0005 0 20%, #0008 0 20.5%, #0005 0 25%, #000 0 97%, #0005 0 99%, #000c 0);
+    background: silver;
+    
+    
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      mask:
+      radial-gradient(farthest-side circle,#0000 15%, #0008 0 25%, #000 0 97%, #0005 0 99%, #000c 0);
+      background:
+        repeating-conic-gradient(from 0.15turn, #f000 0 12%, #f003 15%, #ff03, #0f03, #0ff3, #00f3, #f0f3 23%, #fff0 25% 50%),
+        repeating-conic-gradient(from -0.1turn, #fff0 0 10%, #fffa 15% 20%, #fff0 25% 50%)
+        #ddd;
+    }
+  }
+  
+  .usb-drive {
+    width: 3em;
+    aspect-ratio: 7/20;
+    background: red;
+    border-radius: 100% / 0 0 130% 130%;
+    clip-path: polygon(0 25%, 15% 25%, 15% 0, 85% 0, 85% 25%, 100% 25%, 100% 100%, 0 100%);
+    mask: radial-gradient(circle at 50% 87%, #0000 0.4em, #000 0);
+    background:
+      linear-gradient(silver 25%, #123 0);
+    
+    &::before, &::after {
+      content: "";
+      width: 15%;
+      height: 5%;
+      background: 
+        conic-gradient(at 75% 8%, #0000 75%, gold 0),
+        conic-gradient(at 45% 55%, #000 25%, gold 0 50%, #000 0);
+      top: 15%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+    }
+    
+    &::after {
+      left: 65%;
+      transform: translate(-50%, -50%) scaleX(-1);
+    }
+  }
+  
+  .sd-card {
+    --color: #234;
+    width: 3em;
+    height: 4em;
+    background: red;
+    border-radius: 0.2em;
+    clip-path: polygon(0 0, 80% 0, 100% 15%, 100% 29%, 96% 29%, 96% 37%, 100% 37%, 100% 100%, 60% 100%, 58% 98%, 42% 98%, 40% 100%, 0 100%);
+    background: 
+      linear-gradient(#123 0 0) 50% 100% / 70% 5% no-repeat,
+      linear-gradient(var(--color) 25%, #0000 0 45%, var(--color) 0),
+      linear-gradient(90deg, #0000 5%, var(--color) 0),
+      linear-gradient(darkgray 33%, #0000 0)
+      ;
+    
+    &::before {
+      content: "2GB";
+      width: 75%;
+      height: 75%;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(#f00 28%, #fff 0 30%, #369 0);
+      border-radius: 0.35em;
+      color: #fff;
+      font-family: Helvetica, Arial, sans-serif;
+      position: relative;
+      font-size: 0.65em;
+      display: block;
+      padding: 2.5em 0 0.1em 0.3em;
+      
+    }
+    
+    &::first-letter {
+      font-size: 1.75em;
+    }
+    
+    &::after {
+      content: "LOCK";
+      font-size: 0.25em;
+      color: #fff;
+      transform-origin: 0 0;
+      transform: rotate(90deg);
+      font-family: Helvetica, Arial, sans-serif;
+      top: 40%;
+      left: 22%;
+    }
+  }
+  
+  .cloud {
+    border: 0;
+    background: azure;
+    border: 0.1em solid #369;
+    --color: azure;
+    --shadow: #369;
+    color: var(--shadow);
+    font-size: 0.8em;
+    padding: 0.25em 0.3em 0.25em 1.75em;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1.8em;
+      height: 1.2em;
+      top: 50%;
+      left: 1em;
+      transform: translate(-50%, -60%) scale(0.5);
+      background: 
+      radial-gradient(circle closest-side at 83% 75%, var(--color) 0 99.99%, #0000),
+      radial-gradient(circle closest-side at 60% 45%, var(--color) 0 80%, #0000 0),
+      radial-gradient(circle closest-side at 31% 48%, var(--color) 0 40%, #0000 0),
+      radial-gradient(circle closest-side at 17% 75%, var(--color) 0 99.99%, #0000),
+      linear-gradient(var(--color) 0 0) 50% 100% / 69% 45% no-repeat;
+      background-repeat: no-repeat;
+    filter: drop-shadow(0 0.15em) drop-shadow(0.1em 0) drop-shadow(-0.1em 0) drop-shadow(0 -0.1em);
+    }
+    
+    &::after {
+      content: "";
+      position: absoute;
+      background: red;
+      left: 1em;
+      top:50%;
+      transform: translate(-40%, -20%) rotate(45deg) scale(0.8);
+      width: 0.75em;
+      height: 0.75em;
+      border-left: 0.1em solid #369;
+      border-top: 0.1em solid #369;
+      background: linear-gradient(45deg, #0000 45%, #369 0 55%, #0000 0);
+      clip-path: polygon(0 50%, 50% 80%, 80% 80%, 50% 0, 0 0)
+    }
+    
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-labelledby="alt">
+      <span id="alt">Cartoon titled 'Evolution' with drawings of a 5.25 floppy disk, a CD-ROM, an USB drive, an SD card, and a button with the word 'Upload' and an arrow pointing up into a cloud.</span>
+      <h1>Evolution</h1>
+      <div class="floppy-525"></div>
+      <div class="cdrom"></div>
+      <div class="usb-drive"></div>
+      <div class="sd-card"></div>
+      <button class="cloud">Upload</button>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
