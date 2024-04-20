@@ -2533,4 +2533,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Evolution</title>
+    <link href="https://comicss.art/?id=134" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/134/evolution.html"/>
+    <id>https://comicss.art/?id=134</id>
+    <updated>2024-04-19T00:00:00Z</updated>
+    <summary>New Cartoon: Evolution</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/134/evolution.png" alt="Cartoon titled 'Evolution' with drawings of a 5.25 floppy disk, a CD-ROM, an USB drive, an SD card, and a button with the word 'Upload' and an arrow pointing up into a cloud." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
