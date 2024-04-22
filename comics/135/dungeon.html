@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+      article {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-size: 1vmin;
+        width: 90em;
+        height: 70em;
+        border: 0.5em solid #000; 
+        background:
+          /* shadow */
+          radial-gradient(circle at 50% 5%, #0000, #0002),
+          /* bricks */
+          linear-gradient(#0001 0 0) 10% 10% / 7em 4em,
+          linear-gradient(#00000018 0 0) 95% 70% / 7em 4em,
+          linear-gradient(#0001 0 0) 91% 64% / 7em 4em,
+          linear-gradient(#0001 0 0) 70% 20% / 7em 4em,
+          linear-gradient(#0001 0 0) 42% 50% / 7em 4em,
+          linear-gradient(#0001 0 0) 4% 80% / 7em 4em,
+          /* prisoners shadows */
+          radial-gradient(farthest-side at 50% 0, #0003, #0000) 15% 98% / 20% 3%,
+          radial-gradient(farthest-side at 50% 0, #0003, #0000) 45% 98% / 20% 3%,
+          radial-gradient(farthest-side at 50% 0, #0003, #0000) 85% 98% / 20% 3%,
+          /* wall + floor */
+          linear-gradient(#65837d55 95%, #000 0 calc(95% + 0.25em), #0000 0),
+          linear-gradient(#0000 calc(95% + 0.25em), #65837d88 0, #65837daa),
+          #0000;
+        ;
+        background-repeat: no-repeat;
+
+        & *, & *::before, & *::after {
+          position: absolute;
+          box-sizing: border-box;
+        }
+
+        .bubble {
+          white-space: pre;
+          font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+          font-sizE: 2em;
+          background: #f003;
+          padding:0 1em;
+          line-height: 2.5;
+          text-align: center;
+          transform: translate(0%, -50%);
+          background: #ffc;
+          border: 0.15em solid;
+          border-radius: 100em;
+          z-index: 1;
+
+          &.bubble-1 {
+            top: 10%;
+            left: 19%;
+          }
+
+          &.bubble-2 {
+            top: 22%;
+            left: 14%;
+
+            &::before {
+              content: "";
+              width: 0.65em;
+              height: 4em;
+              background: #ffc;
+              top: 99%;
+              border: 0.15em solid;
+              border-top: 0;
+              border-radius: 0 0 100% 0;
+              left: 5em;
+              transform-origin: 50% 0;
+              transform: skew(-15deg);
+            }
+
+            &::after {
+              content: "";
+              width: 0.65em;
+              height: 1.75em;
+              background: #ffc;
+              top: 0.4%;
+              border: 0.15em solid;
+              border-top: 0;
+              border-bottom: 0;
+              left: 6em;
+              transform-origin: 50% 0;
+              transform: translate(0, -100%) skew(-15deg);
+            }
+          }
+        }
+
+        .person {
+          --skin: #fca;
+          --hair: orange;
+          --pants: #753;
+          width: 20em;
+          aspect-ratio: 0.5;
+          top: 61%;
+          transform: translate(-50%, -50%);
+          filter: drop-shadow(-0.2em 0.5em 0.25em #0003);
+
+          .chain {
+            width: 10%;
+            height: 25%;
+            left: 18%;
+            top: 0;
+            transform: translate(-50%, -50%)  rotate(-15deg);
+
+            &::after {
+              content: "";
+              width: 100%;
+              heighT: 100%;
+              background:
+                radial-gradient(50% 15%  at 50% 15%, #0000 60%, #000 0 99%, #0000),
+                radial-gradient(50% 15% at 50% 33%, #0000 60%, #000 0 99%, #0000),
+                radial-gradient(50% 15% at 50% 51%, #0000 60%, #000 0 99%, #0000),
+                radial-gradient(50% 15% at 50% 69%, #0000 60%, #000 0 99%, #0000);
+             }
+
+             &::before {
+              content: "";
+              width: 150%;
+              aspect-ratio: 1;
+              background: #222;
+              z-index: -1;
+              transform: translate(-50%, -50%) rotate(15deg);
+              left: 50%;
+              top: 0;
+              z-index: -1;
+              border: 0.25em solid;
+             }
+
+             & + & {
+              transform: translate(-50%, -50%) scaleX(-1) rotate(-15deg);
+              left: 82%;
+             }
+          }
+
+          .arm {
+            width: 8%;
+            height: 24%;
+            background: var(--skin);
+            border-right: 0.25em solid;
+            transform-origin: 50% 100%;
+            transform: translate(-50%,0) rotate(-15deg);
+            left: 35%;
+            top: 5%;
+            background: linear-gradient(92deg, #0000 10%, #000 12% 25%, var(--skin) 28%);
+            
+
+            &::before {
+              content: "";
+              width: 200%;
+              aspect-ratio: 1;
+              border: 0.25em solid;
+              border-bottom: 0.05em solid var(--skin);
+              border-radius: 50%;
+              background: var(--skin);
+              left: 50%;
+              transform: translate(-50%, -75%);
+              box-shadow: inset 0.5em 0 #0001;
+            }
+
+            &::after {
+              --top: 20%;
+              content: "";
+              width: 200%;
+              aspect-ratio: 2;
+              background: black;
+              left: 50%;
+              transform: translate(-50%, var(--top));
+            }
+
+            &.arm-2 {
+              transform: scaleX(-1) translate(50%,0) rotate(-15deg);
+              left: 65%;
+
+              &::before {
+                left: 60%;
+                box-shadow: inset -0.5em 0 #0001;
+              }
+
+              &::after {
+                --top: 10%;
+              }
+            }
+          }
+
+          .head {
+            --bg: linear-gradient(#0000 0 0);
+            width: 40%;
+            height: 30%;
+            background: #f002;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%) skewY(6deg) rotate(4deg);
+            border-radius: 100% /  120% 150% 60% 70%;
+            background: 
+              var(--bg),
+              var(--hair);
+            border: 0.25em solid;
+            box-shadow: inset 0.5em 0 #0001;
+            background-repeat: no-repeat;
+
+            .face {
+              --forehead: linear-gradient(#0000 0 0);
+              width: 70%;
+              height: 45%;
+              background: var(--skin);
+              border: 0.25em solid;
+              border-top-color: var(--hair);
+              border-bottom:0.5em solid var(--hair);
+              border-radius: 100% / 120% 120% 60% 60%;
+              left: 50%;
+              top: 9%;
+              transform: translate(-50%) skewY(-6deg) rotate(-4deg);;
+              background:
+                var(--forehead),
+                radial-gradient(250% 110% at 50% 100%, var(--hair) 20%, #000 0 22%, #0000 23%)
+                var(--skin)
+              ;
+            }
+          }
+
+          .body {
+            width: 30%;
+            height: 30%;
+            border-left: 0.25em solid;
+            border-right: 0.25em solid;
+            background: var(--skin);
+            top: 44%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 0.5em 0 #0001;
+
+            &::before {
+              content:"";
+              width: 120%;
+              height: 40%;
+              border: 0.25em solid;
+              border-bottom-color:#0000;
+              top: 90%;
+              left: 50%;
+              transform: translate(-50%);
+              background: var(--pants);
+              border-radius: 50% / 0.5em 0.5em 40% 30%;
+              filter: drop-shadow(0 0.35em #000);
+              background:
+                radial-gradient(40% 100% at 30% 0, var(--pants) 99%, #0000) 0 0 / 35% 100%,
+                radial-gradient(30% 96% at 30% 0, var(--pants) 99%, #0000) -5% 0 / 45% 100%,
+                radial-gradient(35% 100% at 30% 0, var(--pants) 99%, #0000) 20% 0 / 30% 100%,
+                radial-gradient(40% 90% at 30% 0, var(--pants) 99%, #0000) 0 0 / 31% 100%,
+                radial-gradient(33% 95% at 30% 0, var(--pants) 99%, #0000) 11% 0 / 21% 100%,
+                radial-gradient(13% 90% at 30% 0, var(--pants) 99%, #0000) 0% 0 / 17% 100%,
+                radial-gradient(13% 90% at 30% 0, var(--pants) 99%, #0000) 10% 0 / 17% 100%
+              ;
+              background-repeat: repeat-x;
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              box-shadow: inset 0.5em 0 #0001;
+            }
+          }
+
+          .leg {
+            width: 10%;
+            height: 25%;
+            border-left: 0.25em solid;
+            border-right: 0.25em solid;
+            background: var(--skin);
+            top: 64%;
+            left: 40%;
+            transform: translate(-50%);
+            box-shadow: inset 0.5em 0 #0001;
+
+            &::before {
+              content: "";
+              width: 175%;
+              height: 40%;
+              background: 
+                repeating-linear-gradient(90deg, #0000 0 16%, #000 0 22%) 0 100% / 100% 15%,
+                var(--skin);
+              background-repeat: no-repeat;
+              background-clip: content-box;
+              border: 0.25em solid;
+              border-top: 0.2em solid #0000;
+              border-radius: 100% / 120% 110% 50% 80%;
+              left: 50%;
+              top: 93%;
+              transform: translate(-50%, 0) skewY(10deg);
+              box-shadow: inset 0.5em -0.5em #0001;
+            }
+
+            &::after {
+              content: "";
+              width: 70%;
+              height: 7%;
+              top: 54%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+              background: 
+              linear-gradient(#0000 50%, #f002),
+                repeating-linear-gradient(45deg, #0000 0 18%, #000 0 21%);
+              box-shadow: 0.5em -1em 0.6em -0.1em #0002;
+            }
+
+            &.leg-2 {
+              left: 60%;
+              transform: translate(-50%) scaleX(-1);
+              box-shadow: inset -0.5em 0 #0001;
+
+
+              &::before {
+                box-shadow: inset -0.5em -0.5em #0001;
+              }
+
+              &::after {
+                background: 
+                linear-gradient(#0000 50%, #f002),
+                repeating-linear-gradient(-45deg, #0000 0 18%, #000 0 21%);
+              }
+            }
+          }
+
+          &.person-1 {
+            left: 22%;
+
+            .head {
+              --bg:
+                radial-gradient(100% 100% at 90% 30%, #0000 82%, #000 0 90%, #0000 0) 10% 80% / 30% 30%,
+                radial-gradient(100% 100% at 24% 30%, #0000 82%, #000 0 90%, #0000 0) 93% 74% / 30% 30%,
+                radial-gradient(90% 110% at 10% 60%, #0000 82%, #000 0 90%, #0000 0) 95% 60% / 30% 30%
+              ;
+              .face {
+                --forehead: radial-gradient(250% 110% at 50% 0%, var(--hair) 20%, #000 0 22%, #0000 23%);
+                top: 5%;
+                left: 49%;
+
+                .nose {
+                  width: 60%;
+                  height: 30%;
+                  border: 0.25em solid;
+                  background: var(--skin);
+                  border-radius: 0 100% 30% 20%;
+                  border-left: 0;
+                  left: 50%;
+                  top: 57%;
+                  transform: skewY(10deg) rotate(3deg);
+                }
+
+                .eye {
+                  width: 10%;
+                  height: 15%;
+                  background: #000;
+                  border-radius: 50%;
+                  top: 40%;
+                  left:30%;
+                  transform: translate(-50%, 0);
+
+                  &::before {
+                    content: "";
+                    width: 250%;
+                    height: 30%;
+                    background: #000;
+                    left: 50%;
+                    top: 0%;
+                    transform: translateX(-50%) rotate(-5deg);
+                  }
+
+                  & + & {
+                    left: 80%;
+                    transform: translate(-50%, 0) scaleX(-1);
+                  }
+                }
+
+                .mouth {
+                  width: 50%;
+                  height: 20%;
+                  border: 0.25em solid;
+                  border-radius: 50%;
+                  left: 50%;
+                  top: 95%;
+                  transform: translate(-50%) rotate(5deg);
+                  clip-path: polygon(0 0, 70% 0, 100% 30%, 50% 50%, 70% 100%, 0 100%);
+                }
+              }
+            }
+
+            .body {
+              background:
+              radial-gradient(circle at 50% 86%, #000 0.15em, #0000 0),
+                var(--skin)
+              ;
+            }
+          }
+
+          &.person-2 {
+            --hair: #963;
+            --skin: #eb8;
+            --pants: gray;
+            left: 47%;
+            filter: drop-shadow(-0.1em 0.5em 0.2em #0003);
+
+            .chain {
+              left: 57%;
+
+              &::before {
+                left: 30%;
+              }
+
+              & + & {
+                left: 40%;
+                border-left: 0;
+                
+                &::before {
+                  border-left: 0;
+                  z-index: -1;
+                  content: none;
+                }
+              }
+            }
+
+            .body {
+              &::before {
+                content: "";
+                background: linear-gradient(var(--pants) calc(100% - 0.25em), #000 0);
+                border-bottom: 0;
+                height: 35%;
+              }
+
+              &::after {
+                content: "";
+                width: 120%;
+                height: 60%;
+                border: 0.25em solid;
+                border-bottom-color:#0000;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%);
+                background: var(--pants);
+                border-radius: 100% / 0.5em 0.5em 0 0;
+                filter: drop-shadow(0 0.35em #000);
+                background:
+                linear-gradient(#000 0 0) 50% 100% / 27% 45% no-repeat,
+                radial-gradient(100% 100% at 30% 0, var(--pants) 99%, #0000) 100% 0 / 25% 100% repeat-x,
+                radial-gradient(40% 100% at 0% 0, var(--pants) 99%, #0000) 0 0 / 35% 100% repeat-x,
+                  radial-gradient(40% 100% at 30% 0, var(--pants) 99%, #0000) 0 0 / 35% 100% repeat-x,
+                  radial-gradient(30% 96% at 30% 0, var(--pants) 99%, #0000) -5% 0 / 45% 100% repeat-x,
+                  radial-gradient(35% 100% at 30% 0, var(--pants) 99%, #0000) 20% 0 / 30% 100% repeat-x ,
+                  radial-gradient(40% 90% at 30% 0, var(--pants) 99%, #0000) 0 0 / 31% 100% repeat-x,
+                  radial-gradient(33% 95% at 30% 0, var(--pants) 99%, #0000) 11% 0 / 21% 100% repeat-x,
+                  radial-gradient(13% 90% at 30% 0, var(--pants) 99%, #0000) 0% 0 / 17% 100% repeat-x,
+                  radial-gradient(13% 90% at 30% 0, var(--pants) 99%, #0000) 10% 0 / 17% 100% repeat-x
+                ;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%, 60% 50%, 40% 50%, 40% 100%, 0 100%);
+                box-shadow: inset 0.5em 0 #0001;
+              }
+            }
+
+            .arm {
+              transform: translate(-50%,0) rotate(0deg);
+
+              &.arm-2 {
+                left: 63%;
+              }
+            }
+
+            .leg {
+              top: 62%;
+            }
+
+            .head {
+              top: 33%;
+              height: 28%;
+              border-radius: 80% 90% 100% 105% / 95% 88% 100% 90%;
+              --bg:
+                radial-gradient(100% 100% at 90% 80%, #0000 82%, #000 0 90%, #0000 0) 10% 16% / 20% 20%,
+                radial-gradient(100% 100% at 90% 20%, #0000 82%, #000 0 90%, #0000 0) 15% 86% / 30% 30%,
+                radial-gradient(100% 100% at 14% 30%, #0000 82%, #000 0 90%, #0000 0) 84% 84% / 30% 30%,
+                radial-gradient(90% 110% at 10% 60%, #0000 82%, #000 0 90%, #0000 0) 95% 60% / 30% 30%
+              ;
+
+              .face {
+                border-top-color: #000;
+                top: 7%;
+
+                &::before {
+                  content: "";
+                  width: 0.85em;
+                  height: 0.85em;
+                  border: 0.25em solid;
+                  border-radius: 0 0 100% 0;
+                  border-top: 0;
+                  background: var(--hair);
+                  left: 50%;
+                  top: -0.25em;
+                  transform: translate(-50%);
+                }
+
+                .nose {
+                  width: 30%;
+                  height: 30%;
+                  border: 0.25em solid;
+                  background: var(--skin);
+                  border-radius: 0 100% 90% 20%;
+                  border-left: 0;
+                  left: 50%;
+                  top: 51%;
+                  transform: skewY(5deg) rotate(-1deg);
+                }
+
+                .eye {
+                  width: 10%;
+                  height: 15%;
+                  background: #000;
+                  border-radius: 50%;
+                  top: 40%;
+                  left:30%;
+                  transform: translate(-50%, 0);
+
+                  &::before {
+                    content: "";
+                    width: 250%;
+                    height: 30%;
+                    background: #000;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(10deg);
+                  }
+
+                  & + & {
+                    left: 80%;
+                    transform: translate(-50%, 0) scaleX(-1);
+                  }
+                }
+
+                .mouth {
+                  width: 60%;
+                  height: 50%;
+                  border: 0.125em solid #0000;
+                  border-top: 0.25em solid #000;
+                  border-radius: 50%;
+                  left: 50%;
+                  top: 92%;
+                  transform: translate(-50%);
+      
+                }
+              }
+            }
+          }
+
+          &.person-3 {
+            --skin: #fb9;
+            --hair: #a86;
+            --pants: #678;
+            left: 78%;
+            transform: translatE(-50%, -50%) scaleX(-1);;
+
+            .body {
+              background:
+                radial-gradient(farthest-side, #6002, #f000) -50% 70% / 60% 20%,
+                radial-gradient(farthest-side, #6002, #f000) 150% 90% / 60% 40%,
+                radial-gradient(circle at 50% 90%, #000 0.15em, #0000 0),
+                var(--skin)
+              ;
+              background-repeat: no-repeat;
+
+              &::before {
+                top: 97%;
+                transform: translate(-50%) scaleX(-1) skewY(2deg);
+                box-shadow: inset -0.5em 0 #0001;
+              }
+            }
+
+            .arm {
+              background: 
+                linear-gradient(45deg, #0000 30%, #000 0 35%, #0000 0) 60% 48% / 40% 14%,
+                linear-gradient(45deg, #0000 10%, #000 12% 25%, var(--skin) 28%) 50% 50% / 40% 10%,
+                linear-gradient(92deg, #0000 10%, #000 12% 25%, var(--skin) 28%);
+                background-repeat: no-repeat;
+
+                & + & {
+                  background: 
+                  radial-gradient(farthest-side, #6002, #f000) 150% 40% / 60% 40%,
+                  linear-gradient(45deg, #0000 10%, #000 12% 25%, var(--skin) 28%) 50% 50% / 40% 10%,
+                  linear-gradient(92deg, #0000 10%, #000 12% 25%, var(--skin) 28%);
+                  background-repeat: no-repeat;
+                }
+            }
+
+            .leg {
+              height: 27%;
+
+              &::after {
+                box-shadow: 0.5em -1em 0.6em -0.1em #0002;
+              }
+
+              & + &::after {
+                background: repeating-linear-gradient(-45deg, #0000 0 18%, #000 0 21%);
+                box-shadow: -0.5em 2em 0.6em -0.1em #0003;
+              }
+            } 
+
+            .head {
+              top: 32%;
+              transform: translate(-50%,-50%);
+              border-radius: 100% / 110% 120% 80% 90%;
+              --bg:
+                radial-gradient(100% 100% at 90% 20%, #0000 82%, #000 0 90%, #0000 0) 15% 95% / 30% 35%,
+                radial-gradient(100% 100% at 14% 25%, #0000 80%, #000 0 90%, #0000 0) 84% 84% / 20% 20%
+              ;
+
+              .face {
+                width: 75%;
+                transform: translate(-50%);
+                border-radius: 50% / 100%;
+                border-bottom: 0.2em solid var(--hair);
+                bordeR-top: 0.25em solid;
+                background:
+                  radial-gradient(200% 150% at 50% 100%, var(--hair) 20%, #000 20.5% 21%, #0000 22.5%),
+                  radial-gradient(farthest-side, #f002, #f000) 10% 70% / 35% 30%,
+                  radial-gradient(farthest-side, #f002, #f000) 90% 70% / 35% 30%,
+                  radial-gradient(farthest-side, #0001, #f000) 10% 0% / 35% 30%
+                  var(--skin)
+                ;
+                background-repeaT: no-repeat;
+
+                .nose {
+                  width: 25%;
+                  aspect-ratio: 1;
+                  border: 0.25em solid #0000;
+                  border-bottom: 0.25em solid;
+                  border-right: 0.25em solid;
+                  border-radius: 50%;
+                  transform: translate(-50%, -50%) rotate(45deg);
+                  top: 66%;
+                  left: 50%;
+                  background: var(--skin);
+                }
+
+                .eye {
+                  width: 25%;
+                  aspect-ratio: 1;
+                  border: 0.25em solid #0000;
+                  border-top: 0.25em solid;
+                  border-left: 0.25em solid;
+                  border-radius: 50%;
+                  transform: translate(-50%, -50%) rotate(45deg);
+                  top: 50%;
+                  left: 30%;
+
+                  & + & {
+                    left: 70%;
+                  }
+                }
+
+                .mouth {
+                  width: 50%;
+                  height: 40%;
+                  border: 0.125em solid #0000;
+                  border-bottom: 0.25em solid #000;
+                  border-radius: 50%;
+                  left: 50%;
+                  top: 62%;
+                  transform: translate(-50%);
+                }
+              }
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="bubble bubble-1">He used to work as a Web Developer</div>
+      <div class="bubble bubble-2">He says this is 1,000 times better</div>
+      <div class="window"></div>
+      <div class="wall"></div>
+      <div class="person person-1">
+        <div class="chain chain-1"></div>
+        <div class="chain chain-2"></div>
+        <div class="arm arm-1"></div>
+        <div class="arm arm-2"></div>
+        <div class="leg leg-1"></div>
+        <div class="leg leg-2"></div>
+        <div class="body"></div>
+        <div class="head">
+          <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+      </div>
+      <div class="person person-2">
+        <div class="chain chain-1"></div>
+        <div class="chain chain-2"></div>
+        <div class="arm arm-1"></div>
+        <div class="arm arm-2"></div>
+        <div class="leg leg-1"></div>
+        <div class="leg leg-2"></div>
+        <div class="body"></div>
+        <div class="head">
+          <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+      </div>
+      <div class="person person-3">
+        <div class="chain chain-1"></div>
+        <div class="chain chain-2"></div>
+        <div class="arm arm-1"></div>
+        <div class="arm arm-2"></div>
+        <div class="leg leg-1"></div>
+        <div class="leg leg-2"></div>
+        <div class="body"></div>
+        <div class="head">
+          <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
