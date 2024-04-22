@@ -2552,4 +2552,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Dungeon</title>
+    <link href="https://comicss.art/?id=135" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/135/dungeon.html"/>
+    <id>https://comicss.art/?id=135</id>
+    <updated>2024-04-20T00:00:00Z</updated>
+    <summary>New Cartoon: Dungeon</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/135/dungeon.png" alt="cartoon with three men hang chained in a dungeon. Two look sad, one looks happy. One of the sad ones says 'he used to be a web developer. he says this is 1,000 times better'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
