@@ -1356,5 +1356,15 @@
       <enclosure url="https://comicss.art/comics/135/dungeon.png" length="381000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/?id=136</guid>
+      <title>Stay on Top</title>
+      <link>https://comicss.art/?id=136</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/136/stay-on-top.png" length="356000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

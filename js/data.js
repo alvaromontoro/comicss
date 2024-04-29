@@ -1000,7 +1000,6 @@ const posts = [
     id: 127,
     uid: "pr-reviews",
     boxes: 2,
-    avertical: true,
     title: "PR Reviews",
     ariaLabel: "Cartoon with two panels title Web developers reviewing JS and 'CSS' (CSS is quoted). The first panel shows an angry-looking person saying 'Wow!! Four parameters in a function call??!! That's way too many!!! PR rejected!'. The second panel shows the same person reading a really long list of Tailwind class names and saying 'That CSS class looks stylish! Approved!'"
   },
@@ -1067,5 +1066,13 @@ const posts = [
     title: "Dungeon",
     vertical: true,
     ariaLabel: "cartoon with three men hang chained in a dungeon. Two look sad, one looks happy. One of the sad ones says 'he used to be a web developer. he says this is 1,000 times better'"
+  },
+  {
+    id: 136,
+    uid: "stay-on-top",
+    boxes: 1,
+    title: "Stay on Top",
+    vertical: true,
+    ariaLabel: "cartoon with a list titled 'How to stay on top of things': 1. make a list (striked through); 2. track your time; 3. time box your tasks; 4. more difficult tasks first; 5. take breaks; 6. focus, don't multitask; 7. z-index: 4 (striked through); 8. z-index: 9999 (striked through); 9. z-index: 99999999 (striked through); 10. z-index: max(infinity)"
   },
 ]
