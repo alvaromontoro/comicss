@@ -2571,4 +2571,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Stay on Top</title>
+    <link href="https://comicss.art/?id=136" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/136/stay-on-top.html"/>
+    <id>https://comicss.art/?id=136</id>
+    <updated>2024-04-29T00:00:00Z</updated>
+    <summary>New Cartoon: Stay on Top</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/136/stay-on-top.png" alt="cartoon with a list titled 'How to stay on top of things': 1. make a list (striked through); 2. track your time; 3. time box your tasks; 4. more difficult tasks first; 5. take breaks; 6. focus, don't multitask; 7. z-index: 4 (striked through); 8. z-index: 9999 (striked through); 9. z-index: 99999999 (striked through); 10. z-index: max(infinity)" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
