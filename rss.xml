@@ -7,9 +7,9 @@
     <language>en</language>
     <atom:link href="https://comicss.art/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=1</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/1</guid>
       <title>Flexing</title>
-      <link>https://comicss.art/?id=1</link>
+      <link>https://comicss.art/comics/1</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
@@ -17,9 +17,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=2</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/2</guid>
       <title>Word breaking</title>
-      <link>https://comicss.art/?id=2</link>
+      <link>https://comicss.art/comics/2</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
@@ -27,9 +27,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=3</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/3</guid>
       <title>Lioncorn</title>
-      <link>https://comicss.art/?id=3</link>
+      <link>https://comicss.art/comics/3</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
@@ -37,9 +37,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=4</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/4</guid>
       <title>Unilion</title>
-      <link>https://comicss.art/?id=4</link>
+      <link>https://comicss.art/comics/4</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 03 Jan 2022 00:30:00 +0000</pubDate>
@@ -47,9 +47,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=5</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/5</guid>
       <title>At the barbershop</title>
-      <link>https://comicss.art/?id=5</link>
+      <link>https://comicss.art/comics/5</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
@@ -57,9 +57,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=6</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/6</guid>
       <title>Texas Freeze (I)</title>
-      <link>https://comicss.art/?id=6</link>
+      <link>https://comicss.art/comics/6</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate>
@@ -67,9 +67,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=7</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/7</guid>
       <title>Texas Freeze (II)</title>
-      <link>https://comicss.art/?id=7</link>
+      <link>https://comicss.art/comics/7</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 04 Feb 2022 01:00:00 +0000</pubDate>
@@ -77,9 +77,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=8</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/8</guid>
       <title>Texas Freeze (III)</title>
-      <link>https://comicss.art/?id=8</link>
+      <link>https://comicss.art/comics/8</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 04 Feb 2022 02:00:00 +0000</pubDate>
@@ -87,9 +87,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=9</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/9</guid>
       <title>You cannot write...</title>
-      <link>https://comicss.art/?id=9</link>
+      <link>https://comicss.art/comics/9</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
@@ -97,9 +97,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=10</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/10</guid>
       <title>Their love was impossible</title>
-      <link>https://comicss.art/?id=10</link>
+      <link>https://comicss.art/comics/10</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
@@ -107,9 +107,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=11</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/11</guid>
       <title>Superheroes.css</title>
-      <link>https://comicss.art/?id=11</link>
+      <link>https://comicss.art/comics/11</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
@@ -117,9 +117,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=12</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/12</guid>
       <title>Surprised Pikachu</title>
-      <link>https://comicss.art/?id=12</link>
+      <link>https://comicss.art/comics/12</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
@@ -127,9 +127,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=13</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/13</guid>
       <title>Scroll Snap</title>
-      <link>https://comicss.art/?id=13</link>
+      <link>https://comicss.art/comics/13</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 25 Feb 2022 00:00:00 +0000</pubDate>
@@ -137,9 +137,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=14</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/14</guid>
       <title>Accent Colors</title>
-      <link>https://comicss.art/?id=14</link>
+      <link>https://comicss.art/comics/14</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
@@ -147,9 +147,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=15</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/15</guid>
       <title>My CSS is to development</title>
-      <link>https://comicss.art/?id=15</link>
+      <link>https://comicss.art/comics/15</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
@@ -157,9 +157,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=16</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/16</guid>
       <title>Fast, Faster, Fastest</title>
-      <link>https://comicss.art/?id=16</link>
+      <link>https://comicss.art/comics/16</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
@@ -167,9 +167,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=17</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/17</guid>
       <title>2022 CSS Presidential Debate</title>
-      <link>https://comicss.art/?id=17</link>
+      <link>https://comicss.art/comics/17</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
@@ -177,9 +177,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=18</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/18</guid>
       <title>Ghost Costume</title>
-      <link>https://comicss.art/?id=18</link>
+      <link>https://comicss.art/comics/18</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
@@ -187,9 +187,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=19</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/19</guid>
       <title>Eeny, Meeny, Miny, Moe</title>
-      <link>https://comicss.art/?id=19</link>
+      <link>https://comicss.art/comics/19</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
@@ -197,9 +197,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=20</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/20</guid>
       <title>A Very Private Browser</title>
-      <link>https://comicss.art/?id=20</link>
+      <link>https://comicss.art/comics/20</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
@@ -207,9 +207,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=21</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/21</guid>
       <title>Animation Train</title>
-      <link>https://comicss.art/?id=21</link>
+      <link>https://comicss.art/comics/21</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
@@ -217,9 +217,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=22</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/22</guid>
       <title>Grandpa Browser</title>
-      <link>https://comicss.art/?id=22</link>
+      <link>https://comicss.art/comics/22</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
@@ -227,9 +227,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=23</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/23</guid>
       <title>Types of CSS Artists</title>
-      <link>https://comicss.art/?id=23</link>
+      <link>https://comicss.art/comics/23</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
@@ -237,9 +237,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=24</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/24</guid>
       <title>The Slap</title>
-      <link>https://comicss.art/?id=24</link>
+      <link>https://comicss.art/comics/24</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate>
@@ -247,9 +247,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=25</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/25</guid>
       <title>Soy Milk (I)</title>
-      <link>https://comicss.art/?id=25</link>
+      <link>https://comicss.art/comics/25</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
@@ -257,9 +257,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=26</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/26</guid>
       <title>Soy Milk (II)</title>
-      <link>https://comicss.art/?id=26</link>
+      <link>https://comicss.art/comics/26</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
@@ -267,9 +267,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=27</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/27</guid>
       <title>Soy Milk (3D)</title>
-      <link>https://comicss.art/?id=27</link>
+      <link>https://comicss.art/comics/27</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
@@ -277,9 +277,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=28</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/28</guid>
       <title>Cross-Stitch</title>
-      <link>https://comicss.art/?id=28</link>
+      <link>https://comicss.art/comics/28</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 25 Apr 2022 00:00:00 +0000</pubDate>
@@ -287,9 +287,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=29</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/29</guid>
       <title>Four CSS Combinators walk into a bar...</title>
-      <link>https://comicss.art/?id=29</link>
+      <link>https://comicss.art/comics/29</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
@@ -297,9 +297,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=30</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/30</guid>
       <title>Electronic Party</title>
-      <link>https://comicss.art/?id=30</link>
+      <link>https://comicss.art/comics/30</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
@@ -307,9 +307,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=31</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/31</guid>
       <title>Superheroes.CSS (v2)</title>
-      <link>https://comicss.art/?id=31</link>
+      <link>https://comicss.art/comics/31</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
@@ -317,9 +317,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=32</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/32</guid>
       <title>justify-content</title>
-      <link>https://comicss.art/?id=32</link>
+      <link>https://comicss.art/comics/32</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
@@ -327,9 +327,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=33</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/33</guid>
       <title>CSSoomba</title>
-      <link>https://comicss.art/?id=33</link>
+      <link>https://comicss.art/comics/33</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
@@ -337,9 +337,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=34</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/34</guid>
       <title>Integrate</title>
-      <link>https://comicss.art/?id=34</link>
+      <link>https://comicss.art/comics/34</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
@@ -347,9 +347,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=35</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/35</guid>
       <title>Decaf</title>
-      <link>https://comicss.art/?id=35</link>
+      <link>https://comicss.art/comics/35</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
@@ -357,9 +357,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=36</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/36</guid>
       <title>Flex Pikachu</title>
-      <link>https://comicss.art/?id=36</link>
+      <link>https://comicss.art/comics/36</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
@@ -367,9 +367,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=37</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/37</guid>
       <title>Blend In</title>
-      <link>https://comicss.art/?id=37</link>
+      <link>https://comicss.art/comics/37</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
@@ -377,9 +377,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=38</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/38</guid>
       <title>Roses are #f00</title>
-      <link>https://comicss.art/?id=38</link>
+      <link>https://comicss.art/comics/38</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
@@ -387,9 +387,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=39</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/39</guid>
       <title>Not important</title>
-      <link>https://comicss.art/?id=39</link>
+      <link>https://comicss.art/comics/39</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
@@ -397,9 +397,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=40</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/40</guid>
       <title>Magic Trick</title>
-      <link>https://comicss.art/?id=40</link>
+      <link>https://comicss.art/comics/40</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
@@ -407,9 +407,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=41</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/41</guid>
       <title>The Death of IE</title>
-      <link>https://comicss.art/?id=41</link>
+      <link>https://comicss.art/comics/41</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
@@ -417,9 +417,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=42</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/42</guid>
       <title>Moses Flexing the Read Sea</title>
-      <link>https://comicss.art/?id=42</link>
+      <link>https://comicss.art/comics/42</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
@@ -427,9 +427,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=43</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/43</guid>
       <title>Pandora's Box Model</title>
-      <link>https://comicss.art/?id=43</link>
+      <link>https://comicss.art/comics/43</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
@@ -437,9 +437,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=44</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/44</guid>
       <title>Flexcuses</title>
-      <link>https://comicss.art/?id=44</link>
+      <link>https://comicss.art/comics/44</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate>
@@ -447,9 +447,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=45</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/45</guid>
       <title>Nightmare</title>
-      <link>https://comicss.art/?id=45</link>
+      <link>https://comicss.art/comics/45</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate>
@@ -457,9 +457,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=46</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/46</guid>
       <title>Black Coffee</title>
-      <link>https://comicss.art/?id=46</link>
+      <link>https://comicss.art/comics/46</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 25 Jul 2022 00:00:00 +0000</pubDate>
@@ -467,9 +467,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=47</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/47</guid>
       <title>CSS Angry NPC Wojak</title>
-      <link>https://comicss.art/?id=47</link>
+      <link>https://comicss.art/comics/47</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
@@ -477,9 +477,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=48</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/48</guid>
       <title>CSS OOP</title>
-      <link>https://comicss.art/?id=48</link>
+      <link>https://comicss.art/comics/48</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
@@ -487,9 +487,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=49</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/49</guid>
       <title>JS Hulk</title>
-      <link>https://comicss.art/?id=49</link>
+      <link>https://comicss.art/comics/49</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
@@ -497,9 +497,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=50</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/50</guid>
       <title>Wedding Invitation</title>
-      <link>https://comicss.art/?id=50</link>
+      <link>https://comicss.art/comics/50</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
@@ -507,9 +507,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=51</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/51</guid>
       <title>Floatin' Dirty</title>
-      <link>https://comicss.art/?id=51</link>
+      <link>https://comicss.art/comics/51</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
@@ -517,9 +517,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=52</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/52</guid>
       <title>Clear: both</title>
-      <link>https://comicss.art/?id=52</link>
+      <link>https://comicss.art/comics/52</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
@@ -527,9 +527,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=53</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/53</guid>
       <title>Anchor</title>
-      <link>https://comicss.art/?id=53</link>
+      <link>https://comicss.art/comics/53</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
@@ -537,9 +537,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=54</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/54</guid>
       <title>Interwebs</title>
-      <link>https://comicss.art/?id=54</link>
+      <link>https://comicss.art/comics/54</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
@@ -547,9 +547,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=55</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/55</guid>
       <title>Yellow Snow</title>
-      <link>https://comicss.art/?id=55</link>
+      <link>https://comicss.art/comics/55</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
@@ -557,9 +557,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=56</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/56</guid>
       <title>Jaws</title>
-      <link>https://comicss.art/?id=56</link>
+      <link>https://comicss.art/comics/56</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
@@ -567,9 +567,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=57</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/57</guid>
       <title>Zombie Apocalypse</title>
-      <link>https://comicss.art/?id=57</link>
+      <link>https://comicss.art/comics/57</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
@@ -577,9 +577,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=58</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/58</guid>
       <title>The Pomodorito Technique</title>
-      <link>https://comicss.art/?id=58</link>
+      <link>https://comicss.art/comics/58</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
@@ -587,9 +587,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=59</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/59</guid>
       <title>They Never Knew</title>
-      <link>https://comicss.art/?id=59</link>
+      <link>https://comicss.art/comics/59</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
@@ -597,9 +597,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=60</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/60</guid>
       <title>Hobbits and Web Development</title>
-      <link>https://comicss.art/?id=60</link>
+      <link>https://comicss.art/comics/60</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate>
@@ -607,9 +607,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=61</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/61</guid>
       <title>Is that...?</title>
-      <link>https://comicss.art/?id=61</link>
+      <link>https://comicss.art/comics/61</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
@@ -617,9 +617,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=62</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/62</guid>
       <title>Clank!</title>
-      <link>https://comicss.art/?id=62</link>
+      <link>https://comicss.art/comics/62</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
@@ -627,9 +627,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=63</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/63</guid>
       <title>Miss me yet?</title>
-      <link>https://comicss.art/?id=63</link>
+      <link>https://comicss.art/comics/63</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
@@ -637,9 +637,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=64</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/64</guid>
       <title>Cubic Bezier Life</title>
-      <link>https://comicss.art/?id=64</link>
+      <link>https://comicss.art/comics/64</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
@@ -647,9 +647,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=65</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/65</guid>
       <title>Image Format Decision Tree</title>
-      <link>https://comicss.art/?id=65</link>
+      <link>https://comicss.art/comics/65</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate>
@@ -657,9 +657,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=66</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/66</guid>
       <title>Blind Date</title>
-      <link>https://comicss.art/?id=66</link>
+      <link>https://comicss.art/comics/66</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
@@ -667,9 +667,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=67</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/67</guid>
       <title>Toothbrush</title>
-      <link>https://comicss.art/?id=67</link>
+      <link>https://comicss.art/comics/67</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate>
@@ -677,9 +677,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=68</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/68</guid>
       <title>Keyboard Trap</title>
-      <link>https://comicss.art/?id=68</link>
+      <link>https://comicss.art/comics/68</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
@@ -687,9 +687,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=69</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/69</guid>
       <title>A Different Angle</title>
-      <link>https://comicss.art/?id=69</link>
+      <link>https://comicss.art/comics/69</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
@@ -697,9 +697,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=70</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/70</guid>
       <title>On the Twelfth Day of Christmas...</title>
-      <link>https://comicss.art/?id=70</link>
+      <link>https://comicss.art/comics/70</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate>
@@ -707,9 +707,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=71</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/71</guid>
       <title>Metamorphosis</title>
-      <link>https://comicss.art/?id=71</link>
+      <link>https://comicss.art/comics/71</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
@@ -717,9 +717,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=72</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/72</guid>
       <title>Tailwind Dog</title>
-      <link>https://comicss.art/?id=72</link>
+      <link>https://comicss.art/comics/72</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
@@ -727,9 +727,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=73</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/73</guid>
       <title>Wendy's</title>
-      <link>https://comicss.art/?id=73</link>
+      <link>https://comicss.art/comics/73</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
@@ -737,9 +737,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=74</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/74</guid>
       <title>An Apple A Day</title>
-      <link>https://comicss.art/?id=74</link>
+      <link>https://comicss.art/comics/74</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
@@ -747,9 +747,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=75</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/75</guid>
       <title>OOP Beginners' Class</title>
-      <link>https://comicss.art/?id=75</link>
+      <link>https://comicss.art/comics/75</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
@@ -757,9 +757,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=76</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/76</guid>
       <title>CSS Game: Guess the Brand!</title>
-      <link>https://comicss.art/?id=76</link>
+      <link>https://comicss.art/comics/76</link>
       <category>CSS Game</category>
       <description>A game about CSS coded in CSS from comiCSS.</description>
       <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
@@ -767,9 +767,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=77</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/77</guid>
       <title>Wrap Battling</title>
-      <link>https://comicss.art/?id=77</link>
+      <link>https://comicss.art/comics/77</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
@@ -777,9 +777,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=78</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/78</guid>
       <title>The Eye of Sauron</title>
-      <link>https://comicss.art/?id=78</link>
+      <link>https://comicss.art/comics/78</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
@@ -787,9 +787,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=79</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/79</guid>
       <title>Video Problems</title>
-      <link>https://comicss.art/?id=79</link>
+      <link>https://comicss.art/comics/79</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
@@ -797,9 +797,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=80</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/80</guid>
       <title>CSS Is Dead!</title>
-      <link>https://comicss.art/?id=80</link>
+      <link>https://comicss.art/comics/80</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
@@ -807,9 +807,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=81</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/81</guid>
       <title>Selectors' Fight</title>
-      <link>https://comicss.art/?id=81</link>
+      <link>https://comicss.art/comics/81</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
@@ -817,9 +817,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=82</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/82</guid>
       <title>How many...?</title>
-      <link>https://comicss.art/?id=82</link>
+      <link>https://comicss.art/comics/82</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
@@ -827,9 +827,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=83</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/83</guid>
       <title>Off-the-grid</title>
-      <link>https://comicss.art/?id=83</link>
+      <link>https://comicss.art/comics/83</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
@@ -837,9 +837,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=84</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/84</guid>
       <title>CSS Doom</title>
-      <link>https://comicss.art/?id=84</link>
+      <link>https://comicss.art/comics/84</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
@@ -847,9 +847,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=85</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/85</guid>
       <title>Never Late</title>
-      <link>https://comicss.art/?id=85</link>
+      <link>https://comicss.art/comics/85</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
@@ -857,9 +857,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=86</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/86</guid>
       <title>To Grid or Not To Grid</title>
-      <link>https://comicss.art/?id=86</link>
+      <link>https://comicss.art/comics/86</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
@@ -867,9 +867,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=87</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/87</guid>
       <title>Coffee as a CSS Color</title>
-      <link>https://comicss.art/?id=87</link>
+      <link>https://comicss.art/comics/87</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
@@ -877,9 +877,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=88</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/88</guid>
       <title>If styling technologies were human languages...</title>
-      <link>https://comicss.art/?id=88</link>
+      <link>https://comicss.art/comics/88</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
@@ -887,9 +887,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=89</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/89</guid>
       <title>Ouija</title>
-      <link>https://comicss.art/?id=89</link>
+      <link>https://comicss.art/comics/89</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
@@ -897,9 +897,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=90</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/90</guid>
       <title>The CSS of Man</title>
-      <link>https://comicss.art/?id=90</link>
+      <link>https://comicss.art/comics/90</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
@@ -907,9 +907,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=91</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/91</guid>
       <title>You Shall Not Pass!</title>
-      <link>https://comicss.art/?id=91</link>
+      <link>https://comicss.art/comics/91</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
@@ -917,9 +917,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=92</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/92</guid>
       <title>One Ring to Rule Them All</title>
-      <link>https://comicss.art/?id=92</link>
+      <link>https://comicss.art/comics/92</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
@@ -927,9 +927,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=93</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/93</guid>
       <title>Whales' Gradients</title>
-      <link>https://comicss.art/?id=93</link>
+      <link>https://comicss.art/comics/93</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
@@ -937,9 +937,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=94</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/94</guid>
       <title>Style Wars</title>
-      <link>https://comicss.art/?id=94</link>
+      <link>https://comicss.art/comics/94</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
@@ -947,9 +947,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=95</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/95</guid>
       <title>ABCs of CSS</title>
-      <link>https://comicss.art/?id=95</link>
+      <link>https://comicss.art/comics/95</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
@@ -957,9 +957,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=96</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/96</guid>
       <title>CSS MD</title>
-      <link>https://comicss.art/?id=96</link>
+      <link>https://comicss.art/comics/96</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
@@ -967,9 +967,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=97</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/97</guid>
       <title>Duck Test</title>
-      <link>https://comicss.art/?id=97</link>
+      <link>https://comicss.art/comics/97</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
@@ -977,9 +977,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=98</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/98</guid>
       <title>Magic Cards</title>
-      <link>https://comicss.art/?id=98</link>
+      <link>https://comicss.art/comics/98</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate>
@@ -987,9 +987,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=99</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/99</guid>
       <title>Lost in Translation</title>
-      <link>https://comicss.art/?id=99</link>
+      <link>https://comicss.art/comics/99</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
@@ -997,9 +997,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=100</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/100</guid>
       <title>Jack and Rose</title>
-      <link>https://comicss.art/?id=100</link>
+      <link>https://comicss.art/comics/100</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
@@ -1007,9 +1007,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=101</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/101</guid>
       <title>Brains</title>
-      <link>https://comicss.art/?id=101</link>
+      <link>https://comicss.art/comics/101</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
@@ -1017,9 +1017,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=102</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/102</guid>
       <title>Red Border</title>
-      <link>https://comicss.art/?id=102</link>
+      <link>https://comicss.art/comics/102</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
@@ -1027,9 +1027,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=103</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/103</guid>
       <title>News</title>
-      <link>https://comicss.art/?id=103</link>
+      <link>https://comicss.art/comics/103</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
@@ -1037,9 +1037,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=104</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/104</guid>
       <title>Then and Now</title>
-      <link>https://comicss.art/?id=104</link>
+      <link>https://comicss.art/comics/104</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
@@ -1047,9 +1047,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=105</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/105</guid>
       <title>Divtober</title>
-      <link>https://comicss.art/?id=105</link>
+      <link>https://comicss.art/comics/105</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
@@ -1057,9 +1057,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=106</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/106</guid>
       <title>text-wrap</title>
-      <link>https://comicss.art/?id=106</link>
+      <link>https://comicss.art/comics/106</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
@@ -1067,9 +1067,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=107</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/107</guid>
       <title>Reactions (meme)</title>
-      <link>https://comicss.art/?id=107</link>
+      <link>https://comicss.art/comics/107</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
@@ -1077,9 +1077,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=108</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/108</guid>
       <title>Sharing Demos Online</title>
-      <link>https://comicss.art/?id=108</link>
+      <link>https://comicss.art/comics/108</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
@@ -1087,9 +1087,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=109</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/109</guid>
       <title>Coincidence?</title>
-      <link>https://comicss.art/?id=109</link>
+      <link>https://comicss.art/comics/109</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
@@ -1097,9 +1097,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=110</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/110</guid>
       <title>Riddle</title>
-      <link>https://comicss.art/?id=110</link>
+      <link>https://comicss.art/comics/110</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 04 Dec 2023 00:00:00 +0000</pubDate>
@@ -1107,9 +1107,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=111</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/111</guid>
       <title>Nightmare</title>
-      <link>https://comicss.art/?id=111</link>
+      <link>https://comicss.art/comics/111</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
@@ -1117,9 +1117,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=112</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/112</guid>
       <title>Eleventy-One</title>
-      <link>https://comicss.art/?id=112</link>
+      <link>https://comicss.art/comics/112</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
@@ -1127,9 +1127,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=113</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/113</guid>
       <title>Goldilocks</title>
-      <link>https://comicss.art/?id=113</link>
+      <link>https://comicss.art/comics/113</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
@@ -1137,9 +1137,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=114</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/114</guid>
       <title>Headaches</title>
-      <link>https://comicss.art/?id=114</link>
+      <link>https://comicss.art/comics/114</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
@@ -1147,9 +1147,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=115</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/115</guid>
       <title>Do Web Developers Dream of CSSheep?</title>
-      <link>https://comicss.art/?id=115</link>
+      <link>https://comicss.art/comics/115</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
@@ -1157,9 +1157,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=116</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/116</guid>
       <title>Cloud Developer</title>
-      <link>https://comicss.art/?id=116</link>
+      <link>https://comicss.art/comics/116</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
@@ -1167,9 +1167,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=117</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/117</guid>
       <title>King</title>
-      <link>https://comicss.art/?id=117</link>
+      <link>https://comicss.art/comics/117</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
@@ -1177,9 +1177,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=118</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/118</guid>
       <title>Phantom of the Opera</title>
-      <link>https://comicss.art/?id=118</link>
+      <link>https://comicss.art/comics/118</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sun, 04 Feb 2024 00:00:00 +0000</pubDate>
@@ -1187,9 +1187,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=119</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/119</guid>
       <title>Winner</title>
-      <link>https://comicss.art/?id=119</link>
+      <link>https://comicss.art/comics/119</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
@@ -1197,9 +1197,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=120</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/120</guid>
       <title>Dictator</title>
-      <link>https://comicss.art/?id=120</link>
+      <link>https://comicss.art/comics/120</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
@@ -1207,9 +1207,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=121</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/121</guid>
       <title>Basketball Player</title>
-      <link>https://comicss.art/?id=121</link>
+      <link>https://comicss.art/comics/121</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
@@ -1217,9 +1217,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=122</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/122</guid>
       <title>Astronaut</title>
-      <link>https://comicss.art/?id=122</link>
+      <link>https://comicss.art/comics/122</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
@@ -1227,9 +1227,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=123</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/123</guid>
       <title>US Politics</title>
-      <link>https://comicss.art/?id=123</link>
+      <link>https://comicss.art/comics/123</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
@@ -1237,9 +1237,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=124</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/124</guid>
       <title>Keeping Your Distance</title>
-      <link>https://comicss.art/?id=124</link>
+      <link>https://comicss.art/comics/124</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
@@ -1247,9 +1247,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=125</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/125</guid>
       <title>Neo</title>
-      <link>https://comicss.art/?id=125</link>
+      <link>https://comicss.art/comics/125</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
@@ -1257,9 +1257,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=126</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/126</guid>
       <title>Transformer</title>
-      <link>https://comicss.art/?id=126</link>
+      <link>https://comicss.art/comics/126</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
@@ -1267,9 +1267,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=127</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/127</guid>
       <title>PR Reviews</title>
-      <link>https://comicss.art/?id=127</link>
+      <link>https://comicss.art/comics/127</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
@@ -1277,9 +1277,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=128</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/128</guid>
       <title>Layers</title>
-      <link>https://comicss.art/?id=128</link>
+      <link>https://comicss.art/comics/128</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
@@ -1287,9 +1287,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=129</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/129</guid>
       <title>Appliance</title>
-      <link>https://comicss.art/?id=129</link>
+      <link>https://comicss.art/comics/129</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate>
@@ -1297,9 +1297,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=130</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/130</guid>
       <title>Spring Break</title>
-      <link>https://comicss.art/?id=130</link>
+      <link>https://comicss.art/comics/130</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
@@ -1307,9 +1307,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=131</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/131</guid>
       <title>Kids Fighting</title>
-      <link>https://comicss.art/?id=131</link>
+      <link>https://comicss.art/comics/131</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
@@ -1317,9 +1317,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=132</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/132</guid>
       <title>Not You (I)</title>
-      <link>https://comicss.art/?id=132</link>
+      <link>https://comicss.art/comics/132</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 12 Apr 2024 00:00:00 +0000</pubDate>
@@ -1327,9 +1327,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=133</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/133</guid>
       <title>Not You (II)</title>
-      <link>https://comicss.art/?id=133</link>
+      <link>https://comicss.art/comics/133</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
@@ -1337,9 +1337,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=134</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/134</guid>
       <title>Evolution</title>
-      <link>https://comicss.art/?id=134</link>
+      <link>https://comicss.art/comics/134</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
@@ -1347,9 +1347,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=135</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/135</guid>
       <title>Dungeon</title>
-      <link>https://comicss.art/?id=135</link>
+      <link>https://comicss.art/comics/135</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
@@ -1357,9 +1357,9 @@
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
-      <guid isPermaLink="true">https://comicss.art/?id=136</guid>
+      <guid isPermaLink="true">https://comicss.art/comics/136</guid>
       <title>Stay on Top</title>
-      <link>https://comicss.art/?id=136</link>
+      <link>https://comicss.art/comics/136</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
