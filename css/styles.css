@@ -83,8 +83,8 @@ header nav ul {
 
 header nav[aria-label] ul svg {
   width: 2em;
-  min-width: 2em;
-  max-width: 1em;
+  min-width: 1em;
+  max-width: 2em;
   aspect-ratio: 1;
 }
 
