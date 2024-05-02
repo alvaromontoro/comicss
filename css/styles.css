@@ -328,28 +328,6 @@ p.video a {
   }
 }
 
-/* social links */
-.comic-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  & span a {
-    margin: 0 0.25rem;
-    position: relative;
-    
-    & span {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: clip;
-      left: -1000in;
-      top: auto;
-    }
-  }
-}
-
 /* Responsive */
 @media (min-width:768px) {
   header nav ul a svg { display: none; }
