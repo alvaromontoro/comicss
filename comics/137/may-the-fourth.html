@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+body {
+  background: #cab;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  --scale: 2.25;
+  --bubble: white;
+  --bubble-color: black;
+  position: relative;
+  font-size: 1vmin;
+  width: 90em;
+  height: 60em;
+  overflow: hidden;
+  
+  & * {
+    position: absolute;
+    box-sizing: border-box;
+    
+    &::before, &::after {
+      box-sizing: border-box;
+      position: absolute;
+    }
+  }
+
+  #alt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    
+  }
+
+  .floppy {
+    font-size: calc(1em * var(--scale));
+    width: 15.75em;
+    aspect-ratio: 1;
+    bottom: 4em;
+    left: 5%;
+
+    .arm {
+      width: 0.4em;
+      height: 2.5em;
+      top: 96%;
+      left: 20%;
+      background: #000;
+      transform: rotate(20deg);
+      transform-origin: 50% 0;
+
+      & +& {
+        left: 75%;
+        transform: rotate(-20deg);
+      }
+
+      &::before {
+        content: "";
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background: #000;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+        transform-origin: 50% 0;
+
+      }
+    }
+
+    .leg {
+      width:3em;
+      height: 5em;
+      border-radius: 40% 20% 10% 10%/50% ;
+      box-shadow: 0.5em 0;
+      top: calc(100% - 1em);
+      left: 17%;
+
+      &::before {
+        content: "";
+        width: 3em;
+        height: 1em;
+        border-radius: 50% / 100% 100% 0 0;
+        background: #000;
+        top: 100%;
+        left:99%;
+        transform: translate(-5%,-99%);
+      }
+
+      & + & {
+        left: 44%;
+      }
+    }
+
+    .lightsaber {
+      width: 0.5em;
+      height: 6em;
+      background: 
+        linear-gradient(red 90%, gray 0);
+      border-radius: 1em 1em 100% 100% / 1em 1em 10% 10%;
+      transform: rotate(80deg);
+      top: 89%;
+      left: 100%;
+    }
+
+    .eye {
+      --x: 60%;
+      width: 10%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle at var(--x) 60%, #000 30%, #0000 0) white;
+      transform: translate(-50%, -50%);
+      top: 85%;
+      left: 41%;
+      clip-path: polygon(0 10%, 100% 30%, 100% 100%, 0 100%);
+
+      & + & {
+        --x: 40%;
+        transform: translate(-50%, -50%) scaleX(-1);
+        left: 61%;
+      }
+    }
+
+    .mouth {
+      width: 6%;
+      aspect-ratio: 2;
+      border-radius: 50% / 0 0 100% 100%;
+      background: white;
+      transform: translate(-50%, -50%);
+      top: 92%;
+      left: 51%;
+    }
+  }
+
+  .floppy-525 {
+    --magnetic: #543;
+    --color: #182024;
+    width: 15.75em;
+    aspect-ratio: 1;
+    background: blue;
+    border-radius: 0.2em;
+    clip-path: polygon(0 0, 100% 0, 100% 14%, 98% 14%, 98% 18%, 100% 18%, 100% 100%, 0 100%);
+    mask:
+      radial-gradient(circle at 80% 100%, #0000 0.25em, #000 0.26em) 0 100% / 51% 25% no-repeat,
+      radial-gradient(circle at 20% 100%, #0000 0.25em, #000 0.26em) 100% 100% / 51% 25% no-repeat,
+      radial-gradient(circle at 50.5% 62%, #0000 1.65em, #000 1.7em) 0 0 / 100% 80% no-repeat;
+    background:
+      radial-gradient(circle, var(--magnetic) 2.25em, #0000 0),
+      radial-gradient(circle at 70% 55%, var(--magnetic) 0.4em, #0000 0),
+      var(--color);
+    
+    &::before {
+      content: "";
+      width: 8%;
+      height: 25%;
+      border-radius: 10em;
+      background: var(--magnetic);
+      top: 83%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    &::after {
+      content: "";
+      width:  50%;
+      height: 23%;
+      top: 15%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      border-radius: 0.25em;
+      background: 
+        linear-gradient(#369 15%, #0000 0),
+        repeating-linear-gradient(to top, #0000 0 20%, #369 0 23%, #0000 0 28%) 50% 100% / 90% 80% no-repeat,
+        #fff;
+    }
+  }
+
+  .sd {
+    font-size: calc(1em * var(--scale));
+    width: 3em;
+    aspect-ratio: 3/4;
+    right: 12%;
+    bottom:1.25em;
+
+    .eye {
+      transform: translate(-50%, -50%) skew(60deg);
+      width: 0.75em;
+      height: 0.5em;
+      border-right: 0.25em solid #fff;
+      border-bottom: 0.2em solid #fff;
+      top: 60%;
+      left: 15%;
+
+      & + & {
+        lefT: 85%;
+        top: 69%;
+        transform: scaleX(-1) translate(50%, -50%) rotate(-20deg) skew(60deg);
+      }
+    }
+
+    .mouth {
+      width: 30%;
+      height: 0.4em;
+      background: #fff;
+      border-radius: 0 1em 1em 0;
+      mask: radial-gradient(40% 50% at 0 60%, #0000 99%, #000);
+      top: 80%;
+      left: 40%;
+      transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+    .arm {
+      width: 1.75em;
+      height: 0.25em;
+      background: #000;
+      top: 50%;
+      left: 5%;
+      transform: translate(-100%, 0) rotate(220deg);
+
+      &::before {
+        content: "";
+        width: 0.66em;
+        height: 0.66em;
+        background: #000;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 95%;
+      }
+
+      & + & {
+        left: 85%;
+        top: 60%;
+        transform: rotate(-40deg);
+
+        &::before {
+          left: 95%;
+        }
+      }
+    }
+
+    .leg {
+      width: 2em;
+      height: 2em;
+      border-left: 0.4em solid;
+      border-bottom: 0.3em solid;
+      top: calc(100% - 0.75em);
+      border-radius: 0 0 0 1em;
+      transform: skew(-30deg);
+      left: 15%;
+      transform-origin: 0 0;
+
+      &::before {
+        content: "";
+        border-radius: 50% / 0 0 100% 100%;
+        width: 1.3em;
+        height: 0.8em;
+        background: #000;
+        top: 90%;
+        transform: skew(30deg) rotate(-10deg);
+        left: 70%;
+      }
+
+      & + & {
+        left: 70%;
+      }
+    }
+  }
+  
+  .sd-card {
+    --color: #234;
+    width: 3em;
+    aspect-ratio: 3/4;
+    background: red;
+    border-radius: 0.2em;
+    clip-path: polygon(0 0, 80% 0, 100% 15%, 100% 29%, 96% 29%, 96% 37%, 100% 37%, 100% 100%, 60% 100%, 58% 98%, 42% 98%, 40% 100%, 0 100%);
+    background: 
+      linear-gradient(#123 0 0) 50% 100% / 70% 5% no-repeat,
+      linear-gradient(var(--color) 25%, #0000 0 45%, var(--color) 0),
+      linear-gradient(90deg, #0000 5%, var(--color) 0),
+      linear-gradient(gray 35%, #0000 0)
+      ;
+      transform: rotate(10deg);
+    
+    &::before {
+      content: "8GB";
+      width: 75%;
+      height: 75%;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(#d44  30%, #369 0);
+      border-radius: 0.35em;
+      color: #fff4;
+      font-family: Helvetica, Arial, sans-serif;
+      position: relative;
+      font-size: 0.65em;
+      display: block;
+      padding: 2.5em 0 0.1em 0.3em;
+      
+    }
+    
+    &::first-letter {
+      font-size: 1.75em;
+    }
+    
+    &::after {
+      content: "LOCK";
+      font-size: 0.25em;
+      color: #fff4;
+      transform-origin: 0 0;
+      transform: rotate(90deg);
+      font-family: Helvetica, Arial, sans-serif;
+      top: 40%;
+      left: 22%;
+    }
+  }
+
+  .bubble {
+    font-size: 3em;
+    background: var(--bubble);
+    color: var(--bubble-color);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    font-family: 'Patrick Hand SC', Helvetica, Arial, sans-serif;
+    top: 0;
+    left: 30%;
+
+    &::before {
+      content:"";
+      width: 1em;
+      height: 2em;
+      background: inherit;
+      clip-path:polygon(0 0, 100% 0, 0 100%);
+      top: 95%;
+      left: 20%;
+      transform: skew(-10deg);
+    }
+
+    &.bubble-2 {
+      top: 55%;
+      left: 55%;
+      font-weight: bold;
+
+      &::before {
+        transform: scaleX(-1);
+        left: 55%;
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-labelledby="alt">
+      <span id="alt">Cartoon of a floppy disk telling an SD card 'I am your father'. The SD Card, on its knees, yells painfully 'NOOOOOOOOO!'</span>
+      <div class="floppy">
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="arm"></div>
+        <div class="arm"></div>
+        <div class="floppy-525"></div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+        <div class="lightsaber"></div>
+      </div>
+      <div class="sd">
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="arm"></div>
+        <div class="arm"></div>
+        <div class="sd-card"></div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="bubble bubble-1">I am your father</div>
+      <div class="bubble bubble-2">NOOOOOOOOOOOOOOOOOOO!</div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
