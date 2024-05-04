@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Patrick Hand SC';
+  src: url(/fonts/PatrickHandSC.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Bold.ttf);
+  font-weight: 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  background: #36f3;
+  background: color-mix(in srgb, #36b 20%, #fff 80%);
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  font-size: 1vmin;
+  width: 90em;
+  height: 60em;
+  position: relative;
+  aoverflow: hidden;
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.character {
+  position:absolute;
+  height: 80%;
+  width: 20em;
+  bottom: 0;
+}
+
+.table {
+  left: 10%;
+
+  .eye {
+    width: 20%;
+    aspect-ratio: 1;
+    background: #000;
+    border-radius: 50%;
+    top: 60%;
+    left: 37%;
+    clip-path: polygon(0 15%, 100% 30%, 100% 100%, 0 100%);
+    transform: translate(-50%, -50%);
+
+    & + & {
+      left: 70%;
+      transform: translate(-50%, -50%) scaleX(-1);
+    }
+  }
+
+  .leg {
+      width:4em;
+      height: 40%;
+      border-radius: 40% 30% 10% 10% / 50% ;
+      box-shadow: 1em 0;
+      bottom: 0;
+      left: 10%;
+
+      &::before {
+        content: "";
+        width: 5em;
+        height: 2em;
+        border-radius: 50% / 100% 100% 0 0;
+        background: #000;
+        top: 100%;
+        left:99%;
+        transform: translate(-5%,-99%);
+      }
+
+      & + & {
+        left: 50%;
+      }
+    }
+
+  .mouth {
+    width: 17.5%;
+    aspect-ratio: 2;
+    background: #000;
+    border-radius: 50% / 0 0 100% 100%;
+    top: 67%;
+    left: 53%;
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+}
+
+.grid {
+  height: 50%;
+  right: 10%;
+
+  .arm {
+      width: 10em;
+      height: 1em;
+      background: #000;
+      top: 50%;
+      left: 5%;
+      transform: translate(-100%, 0) rotate(220deg);
+
+      &::before {
+        content: "";
+        width: 3em;
+        height: 3em;
+        background: #000;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 95%;
+      }
+
+      & + & {
+        left: 90%;
+        top: 60%;
+        transform: rotate(-40deg);
+
+        &::before {
+          left: 95%;
+        }
+      }
+    }
+
+  .tag {
+    font-size: 20em;
+    transform: translate(-50%, -50%) rotate(10deg);
+    clip-path: none;
+    padding: 0em 0.2em;
+  }
+
+  .eye {
+    transform: translate(-50%, -50%) skew(60deg);
+    width: 4em;
+    height: 2.5em;
+    border-right: 1.4em solid #000;
+    border-bottom: 0.8em solid #000;
+    top: 53%;
+    left: 15%;
+
+    & + & {
+      lefT: 85%;
+      top: 62%;
+      transform: scaleX(-1) translate(50%, -50%) rotate(-20deg) skew(60deg);
+    }
+  }
+
+  .mouth {
+      width: 30%;
+      height: 2em;
+      background: #000;
+      border-radius: 0 1em 1em 0;
+      mask: radial-gradient(40% 50% at 0 60%, #0000 99%, #000);
+      top: 69%;
+      left: 44%;
+      transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+  .leg {
+      bottom: 0;
+      width: 8em;
+      height: 8em;
+      border-left: 1.2em solid;
+      border-bottom: 1em solid;
+      border-radius: 0 0 0 4em;
+      transform: skew(-30deg);
+      left: 20%;
+      transform-origin: 0 0;
+
+      &::before {
+        content: "";
+        border-radius: 50% / 0 0 100% 100%;
+        width: 5em;
+        height: 2.5em;
+        background: #000;
+        bottom: 0;
+        transform: translate(0, 80%) skew(30deg) rotate(-5deg);
+        left: 60%;
+        clip-path: polygon(0 0, 100% 0, 100% 65%, 0 52%);
+      }
+
+      & + & {
+        left: 64%;
+      }
+    }
+}
+
+.bubble {
+  --bubble: #ffc;
+  --bubble-color: #000;
+  font-size: 5em;
+  background: var(--bubble);
+  color: var(--bubble-color);
+  padding: 0.25em 0.5em;
+  border-radius: 0.5em;
+  font-family: 'Patrick Hand SC', Helvetica, Arial, sans-serif;
+  top: 2%;
+  left: 17%;
+
+  &::before {
+    content:"";
+    width: 0.7em;
+    height: 1.7em;
+    background: inherit;
+    clip-path:polygon(0 0, 100% 0, 0 100%);
+    top: 95%;
+    left: 20%;
+    transform: skew(-10deg);
+  }
+
+  &.bubble-1 {
+    &::before {
+      height: 2.6em;
+    }
+  }
+
+  &.bubble-2 {
+    top: 25%;
+    left: 45%;
+    font-weight: bold;
+
+    &::before {
+      transform: scaleX(-1);
+      left: 55%;
+    }
+  }
+}
+
+.tag {
+  color: #3694;
+  font-family: 'Amatic SC', 'Courier New', Courier, monospace, monospace;
+  font-size: 24em;
+  font-weight: bold;
+  letter-spacing: -0.1em;
+  background: #fff;
+  color: color-mix(in srgb, #369 30%, #fff 90%);
+  display: inline-block;
+  line-height: 1;
+  padding: 0 0.1em;
+  text-align: center;
+  clip-path: polygon(3% 53%, 15% 10%, 86% 10%, 98% 54%, 85% 94%, 15% 94%);
+  text-indent: -0.075em;
+  transform: scaleY(1.25);
+  border-radius: 100% / 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shadow {
+  width: 40%;
+  height: 3%;
+  background: radial-gradient(farthest-side at 50% 0, #0001 99%, #0000);
+  top: 100%;
+  transform: translate(-50%, 0);
+  left: 20%;
+
+  & + & {
+    left: 80%
+  }
+}
+
+      
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="character table">
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="tag">&lt;table&gt;</div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="character grid">
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="arm"></div>
+        <div class="arm"></div>
+        <div class="tag">grid</div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="bubble bubble-1">I am your father</div>
+      <div class="bubble bubble-2">NOOOOOOOOOO!</div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

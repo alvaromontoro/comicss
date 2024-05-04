@@ -1373,7 +1373,17 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/137/may-the-fourth.png" length="150000" type="image/png" />
+      <enclosure url="https://comicss.art/comics/137/may-the-fourth.png" length="48000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/138</guid>
+      <title>May the Fourth (II)</title>
+      <link>https://comicss.art/comics/138</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/138/may-the-fourth-ii.png" length="78000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
   </channel>
