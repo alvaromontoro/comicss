@@ -282,7 +282,7 @@ echo "<!doctype html>
         </a>
       </nav>
 
-      <div id=\"comic-strip\" role=\"img\" aria-label=\"${alt}\">" > ./index.html
+      <div id=\"comic-strip\" class="${className}" role=\"img\" aria-label=\"${alt}\">" > ./index.html
 # print the comics
 for (( i = 0; i < panels; i++ )) ; {
   echo "        <img src=\"/comics/${id}/${id}-${uid}-${i}.webp\" alt=\"\" />" >> ./index.html
@@ -325,10 +325,9 @@ echo "      </div>
         </a>
       </nav>
 
-      <p class=\"video\"><a href=\"#\" rel=\"external noreferrer nofollow\">Watch how this comic was coded!</a></p>
-      <p>Permalink: <a aria-label=\"permalink\" id=\"permanent-link\" href=\"https://comicss.art/comics/${id}\">https://comicss.art/comics/${id}</a></p>
-      <p>Image link: <a aria-label=\"image link\" id=\"image-link\" href=\"https://comicss.art/comics/${id}/${uid}.png\">https://comicss.art/comics/${id}/${uid}.png</a></p>
-      <p>Source code: <a aria-label=\"html version\" id=\"code-link\" href=\"https://comicss.art/comics/${id}/${uid}.html\" rel=\"alternate\">https://comicss.art/comics/${id}/${uid}.html</a></p>
+      <p>Permalink: <a aria-label=\"permalink\" id=\"permanent-link\" href=\"/comics/${id}\">https://comicss.art/comics/${id}</a></p>
+      <p>Image link: <a aria-label=\"image link\" id=\"image-link\" href=\"/comics/${id}/${uid}.png\">https://comicss.art/comics/${id}/${uid}.png</a></p>
+      <p>Source code: <a aria-label=\"html version\" id=\"code-link\" href=\"/comics/${id}/${uid}.html\" rel=\"alternate\">https://comicss.art/comics/${id}/${uid}.html</a></p>
 
       <hr />
       <p>This work is licensed under a <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\" rel=\"license external noreferrer nofollow\">Creative Commons Attribution-NonCommercial 4.0 License</a>.</p>
@@ -366,6 +365,7 @@ echo "      </div>
       </nav>
     </footer>
 
+    <script>let postId = 0;</script>
     <script src=\"/js/data.js?last-updated=$(date +%Y-%m-%d)\"></script>
     <script src=\"/js/code.js\"></script>
   </body>
@@ -390,11 +390,11 @@ echo "<!doctype html>
     <meta property=\"og:type\" content=\"website\" />
     <meta property=\"og:url\" content=\"https://comicss.art/comics/${id}\" />
     <meta property=\"og:image\" content=\"https://comicss.art/comics/${id}/thumb.png\" />
-    <meta property=\"og:description\" content=\"A comic about web development created in CSS.\" />
+    <meta property=\"og:description\" content=\"${alt}\" />
     <meta name=\"twitter:card\" content=\"summary_large_image\">
     <meta name=\"twitter:url\" content=\"https://comicss.art/comics/${id}\">
     <meta name=\"twitter:title\" content=\"comiCSS #${id}: ${title}\">
-    <meta name=\"twitter:description\" content=\"A comic about web development created in CSS.\">
+    <meta name=\"twitter:description\" content=\"${alt}\">
     <meta name=\"twitter:image\" content=\"https://comicss.art/comics/${id}/thumb.png\">
     <meta name=\"monetization\" content=\"\$ilp.uphold.com/raZZQiMDDWLe\" />
 
@@ -557,9 +557,9 @@ echo "      </div>
         </a>
       </nav>
 
-      <p>Permalink: <a aria-label=\"permanet link\" id=\"permanent-link\" href=\"https://comicss.art/comics/${id}\">https://comicss.art/comics/${id}</a></p>
-      <p>Image link: <a aria-label=\"image version\" id=\"image-link\" href=\"https://comicss.art/comics/${id}/${uid}.png\">https://comicss.art/comics/${id}/${uid}.png</a></p>
-      <p>Source code: <a aria-label=\"html version\" id=\"code-link\" href=\"https://comicss.art/comics/${id}/${uid}.html\" rel=\"alternate\">https://comicss.art/comics/${id}/${uid}.html</a></p>
+      <p>Permalink: <a aria-label=\"permanet link\" id=\"permanent-link\" href=\"/comics/${id}\">https://comicss.art/comics/${id}</a></p>
+      <p>Image link: <a aria-label=\"image version\" id=\"image-link\" href=\"/comics/${id}/${uid}.png\">https://comicss.art/comics/${id}/${uid}.png</a></p>
+      <p>Source code: <a aria-label=\"html version\" id=\"code-link\" href=\"/comics/${id}/${uid}.html\" rel=\"alternate\">https://comicss.art/comics/${id}/${uid}.html</a></p>
 
       <hr />
       <p>This work is licensed under a <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\" rel=\"license external noreferrer nofollow\">Creative Commons Attribution-NonCommercial 4.0 License</a>.</p>
@@ -598,7 +598,7 @@ echo "      </div>
     </footer>
 
     <script>let postId = ${id};</script>
-    <!-- <script src=\"/js/data.js?\"></script>
-    <script src=\"/js/code.js\"></script> -->
+    <script src=\"/js/data.js?\"></script>
+    <script src=\"/js/code.js\"></script>
   </body>
 </html>" >> "./comics/${id}/index.html"
