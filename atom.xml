@@ -2609,4 +2609,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>May the Fourth (II)</title>
+    <link href="https://comicss.art/comics/138" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/138/may-the-fourth-ii.html"/>
+    <id>https://comicss.art/comics/138</id>
+    <updated>2024-05-04T00:00:00Z</updated>
+    <summary>New Cartoon: May the Fourth (II)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/138/may-the-fourth-ii.png" alt="cartoon of the HTML tag table saying 'I am your father', and the CSS property grid on its knees yelling painfully 'NOOOOOO!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
