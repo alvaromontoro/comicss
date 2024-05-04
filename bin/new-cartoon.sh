@@ -365,7 +365,7 @@ echo "      </div>
       </nav>
     </footer>
 
-    <script>const postId = 0;</script>
+    <script>let postId = 0;</script>
     <script src=\"/js/data.js?last-updated=$(date +%Y-%m-%d)\"></script>
     <script src=\"/js/code.js\"></script>
   </body>
