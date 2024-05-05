@@ -3,7 +3,7 @@ const prev = document.querySelectorAll("main nav a[rel='prev']");
 const first = document.querySelectorAll("main nav a:first-child");
 const last = document.querySelectorAll("main nav a:last-child");
 const rand = document.querySelectorAll("main nav a.random-post");
-let current = postId ? postId - 1 : posts.length - 1;
+let current = (postId || posts.length) - 1;
 
 // changes the images to the specified post
 function changeImages(num, changeHistory = true) {
