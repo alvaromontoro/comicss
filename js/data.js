@@ -1091,4 +1091,12 @@ const posts = [
     vertical: true,
     ariaLabel: "cartoon of the HTML tag table saying 'I am your father', and the CSS property grid on its knees yelling painfully 'NOOOOOO!'"
   },
+  {
+    id: 139,
+    uid: "grief",
+    boxes: 1,
+    vertical: true,
+    title: "Grief",
+    ariaLabel: "Comic with six panels with a character going through the stages of grief: 1. denial, the person says 'Why this? Why me? This is not possible! It has to be a mistake!' 2. Anger, the person angrily says 'I cannot stand for this! I will not! Check again! you are wrong!' 3. bargaining, the person smiles 'if you take it away, I will help you later. One for me, one for you...' 4. Depression, the person sadly says 'All the work I have done... Everything... for nothing...' 5. Acceptance, the person shrugs 'I guess this is the way life works...' In the sixth panel, a different person looks confused and says 'I... I only left a comment in your PR asking to use EM instead of PX...'"
+  },
 ]
