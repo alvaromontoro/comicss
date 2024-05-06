@@ -2628,4 +2628,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Grief</title>
+    <link href="https://comicss.art/comics/139" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/139/grief.html"/>
+    <id>https://comicss.art/comics/139</id>
+    <updated>2024-05-06T00:00:00Z</updated>
+    <summary>New Cartoon: Grief</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/139/grief.png" alt="Comic with six panels with a character going through the stages of grief: 1. denial, the person says 'Why this? Why me? This is not possible! It has to be a mistake!' 2. Anger, the person angrily says 'I cannot stand for this! I will not! Check again! you are wrong!' 3. bargaining, the person smiles 'if you take it away, I will help you later. One for me, one for you...' 4. Depression, the person sadly says 'All the work I have done... Everything... for nothing...' 5. Acceptance, the person shrugs 'I guess this is the way life works...' In the sixth panel, a different person looks confused and says 'I... I only left a comment in your PR asking to use EM instead of PX...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
