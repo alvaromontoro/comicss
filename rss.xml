@@ -1396,5 +1396,15 @@
       <enclosure url="https://comicss.art/comics/139/grief.png" length="332000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/140</guid>
+      <title>Framework Fans vs. Framework Bros</title>
+      <link>https://comicss.art/comics/140</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/140/framework-fans.png" length="362000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

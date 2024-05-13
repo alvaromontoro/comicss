@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      
+article {
+  display: grid;
+  font-size: 1vmin;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  width: 70em;
+  height: 90em;
+  background: white;
+  margin: 7em 3em 3em 3em;
+  position: relative;
+}
+
+section {
+  background: linear-gradient(#c9c8, #c9c4);
+  position: relative;
+  overflow: hidden;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+h1 {
+  left: 50%;
+  top: 0;
+  position: absolute;
+  transform: translate(-50%, -100%);
+  margin: 0;
+  font-size: 5em;
+  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+.bubble {
+  --line: 89%;
+  font-size: 2.75em;
+  font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+  line-height: 1;
+  text-align: center;
+  text-wrap: balance;
+  z-index: 1;
+  mix-blend-mode: darken;
+  padding: 1em 1em 4em 1em;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: 
+      radial-gradient(farthest-side, red 99%, #0000) 0 0 / 100% calc(100% - 3em) no-repeat,
+      radial-gradient(farthest-side, red 99%, #0000) 25% 0 / 60% calc(100% - 4em) no-repeat,
+      radial-gradient(100% 140% at 100% 0, #0000 var(--line), red 0 99%, #0000 0) 60% 100% / 50% 90% no-repeat,
+      #fff;
+      box-shadow: 0 0 0 2em #fff;
+    filter: blur(0.25em) contrast(20) sepia()  hue-rotate(130deg) brightness(2.5);
+    z-index: -1;
+  }
+}
+
+.person {
+  width: 70%;
+  height: 70%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+}
+
+.person-1 {
+  --skin: #ea8;
+  --hair: #963;
+  --lip: #d59;
+  --shirt: mediumseagreen;
+
+  .body {
+    bottom: 0;
+    left: 53%;
+    width: 80%;
+    height: 40%;
+    transform: translateX(-50%);
+
+    .hand {
+      width: 20%;
+      height: 50%;
+      border: 0.3em solid;
+      background: 
+        radial-gradient(100% 120% at 0 100%, #0000 90%, #000 0 99%, #0000 0) 0 0 / 80% 50% no-repeat,
+        radial-gradient(100% 150% at 0 100%, #0000 90%, #000 0 99%, #0000 0) -60% 10% / 70% 40% no-repeat,
+        radial-gradient(100% 150% at 0 100%, #0000 90%, #000 0 99%, #0000 0) -130% 20% / 70% 40% no-repeat,
+        var(--skin);
+      border-radius: 100% / 100% 120% 70% 90%;
+      transform: rotate(-50deg);
+      left: 34%;
+      top: 20%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    }
+
+    .phone {
+      border: 0.3em solid;
+      background:
+      radial-gradient(circle at 15% 10%, #000 6%, #0000 0)
+      silver;
+      width: 25%;
+      height: 60%;
+      border-radius: 0.5em;
+      transform: rotate(-25deg);
+      left: 28.5%;
+      top: -2.5%;
+    }
+
+    .arm {
+      width: 20%;
+      height: 100%;
+      border: 0.3em solid;
+      background: var(--skin);
+      rotate: 7deg;
+      left: 72%;
+      top: 18%;
+      border-radius: 100% / 50% 120% 80% 40%;
+      border-top-color: var(--shirt);
+
+      &::before {
+        content: "";
+        top: -9.5%;
+        left: -9%;
+        width: 140%;
+        height: 60%;
+        border: 0.3em solid;
+        background: var(--shirt);
+        border-radius: 0 100% 0 0;
+        rotatE: 5deg;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 40%, 10% 30%);
+      }
+
+      &::after {
+        content: "";
+        width: 100%;height: 80%;
+        border-radius: 100% / 200% 200% 50% 50%;
+        background:var(--skin);
+        border: 0.3em solid;
+        bottom: 0;
+        left: -9%;
+        transform-origin: 50% 100%;
+        transform: rotate(-40deg);
+        clip-path: polygon(0 10%, 100% 10%, 100% 80%, 0 100%);
+      }
+
+
+
+      &:first-child {
+        left:05%;
+        transform: scaleX(-1) rotate(4deg);
+        border-radius: 0;
+        top: 50%;
+
+        &::before {
+          top: -47%;
+        }
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    .chest {
+      width: 72%;
+      height: 200%;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      border: 0.3em solid;
+      border-radius: 100% / 25% 25% 140% 200%;
+      background: 
+        radial-gradient(100% 50% at 48% -1%, var(--skin) 15%, #000 0 17%, #0000 0),
+        var(--shirt);
+
+      &::before {
+        content: "";
+        width: 50%;
+        height: 32%;
+        border: 0.3em solid;
+        border-radius: 0 0 70% 30%;
+        transform: skewX(-10deg) skewY(10deg);
+        top: 10%;
+        left: -7%;
+        clip-path:polygon(0 0, 55% 100%, 0 100%);
+        background: var(--shirt)
+      }
+
+      &::after {
+        content: "";
+        width:34%;
+        height: 20%;
+        border: 0.2em solid #0000;
+        border-right: 0.2em solid;
+        border-bottom: 0.3em solid;
+        border-radius: 100% / 40% 100% 100% 40%;
+        left: 44%;
+        top: 22%;
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%);
+      }
+    }
+  }
+
+  .head {
+    width: 41%;
+    height: 43%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+
+    .neck {
+      width: 35%;
+      height: 70%;
+      top: 50%;
+      border: 0.3em solid;
+      background: 
+      linear-gradient(#800, #8000 90%),
+        var(--skin);
+      left: 54%;
+      transform: translate(-50%);
+      border-bottom: 0;
+    }
+
+    .hair-back {
+      width: 140%;
+      height: 150%;
+      background: 
+        linear-gradient(#0000 50%, #3004),
+        radial-gradient(farthest-side, #3008, #0000) 50% 60% / 80% 80% no-repeat
+        var(--hair);
+      border: 0.3em solid;
+      border-radius: 100% / 60% 80% 100% 130%;
+      left: 56%;
+      top: -6%;
+      transform: translate(-50%);
+    }
+
+    .face {
+      border: 0.3em solid;
+      border-bottom-width: 0.4em;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(45% 20% at 50% 55%, #f002, #f000), var(--skin);
+      border-radius: 100% / 80% 80% 125% 110%;
+      
+      .ear {
+        width: 25%;
+        height: 30%;
+        border: 0.25em solid;
+        background: var(--skin);
+        border-radius: 50%;
+        left: 92%;
+        top: 48%;
+        transform: rotate(10deg);
+        clip-path: polygon(14% 0, 30% 0, 90% 100%, 10% 100%);
+        border-left: 0.2em solid var(--skin);
+
+        &::before {
+          content: "";
+          width: 80%;
+          height: 80%;
+          border: 0.25em solid;
+          border-radius: 50%;
+          left: 20%;
+          top: 10%;
+          border-right: 0.4em solid var(--skin);
+        }
+
+        &::after {
+          content: "";
+          background: var(--skin);
+          width: 50%;
+          aspect-ratio: 1;
+          border: 0.25em solid;
+          border-radius: 50%;
+          left: 10%;
+          top: 50%;
+          border-left-color: var(--skin);
+          box-shadow: 0.25em 0 0.5em #6006
+        }
+      }
+
+      /* .nose {
+        width: 22%;
+        height: 37%;
+        border-bottom: 0.3em solid;
+        background: radial-gradient(105% 110% at 0 0, #0000 86%, #000 0 99%, #0000);
+        top: 36%;
+        left: 24%;
+        border-radius: 100% / 20%;
+        transform: skewY(10deg) rotate(-6deg);;
+      } */
+      .nose {
+        width: 22%;
+        height: 37%;
+        border-bottom: 0.3em solid;
+        top: 36%;
+        left: 24%;
+        border-radius: 100% / 20%;
+        transform: skewY(10deg) rotate(-6deg);;
+
+        &::before {
+          content: "";
+          width: 200%;
+          height: 100%;
+          border: 0.1em solid #0000;
+          border-right: 0.3em solid;
+          border-radius: 100% / 0 0% 140% 50%;
+          transform: translate(-60%,2%) rotate(5deg);;
+        }
+      }
+
+      .eye {
+        --size: 25%;
+        --pos: 65%;
+        width: 25%;
+        aspect-ratio: 1;
+        border: 0.25em solid;
+        border-radius: 70% 10% 100% 10%;
+        border-bottom: 0.35em solid;
+        transform: rotate(45deg);
+        top: 34%;
+        left: 8%;
+        background:
+          radial-gradient(circle at var(--pos) var(--pos), #000 var(--size), #0000 0),
+          #eee;
+          box-shadow: -0.2em -0.1em #00c4;
+
+        & + & {
+          transform: scaleX(-1) rotate(45deg);
+          left: 54%;
+        }
+      }
+
+      .eyebrow {
+        width: 38%;
+        height: 25%;
+        border-radius: 100% / 50%;
+        border: 0.1em solid #0000;
+        border-right-width: 0.4em;
+        border-top: 0.25em solid;
+        top: 28%;
+        left: 2%;
+        transform: rotate(5deg);
+
+        & + & {
+          transform: scaleX(-1) rotate(5deg);
+          left: 47%;
+        }
+      }
+
+      .hair-top {
+        width: 120%;
+        height: 35%;
+        left: 50%;
+        top: -5%;
+        transform: translate(-50%);
+        background: 
+          radial-gradient(at 40% 0, var(--hair) 10%, #0000 0),
+          radial-gradient(60% 100% at 98% 0, var(--hair) 94%, #000 0 99%, #0000),
+          radial-gradient(45% 100% at 0% 0, var(--hair) 93%, #000 0 99%, #0000);
+          border-radius: 50% / 100% 100% 0 0;
+
+        &::after {
+          content: "";
+          width: 40%;
+          height: 150%;
+          background: #f004;
+          left: 60%;
+          top: 87%;
+          background: 
+          radial-gradient(100% 108% at 5% 100%, #0000 94%, #000 0 99%, var(--hair));
+        }
+      }
+    }
+  }
+}
+
+
+
+.person-2 {
+  --skin: #fb9;
+  --hair: darkorange;
+  --lip: #d59;
+  --shirt: #ccc;
+  height: 80%;
+
+  .body {
+    bottom: 0;
+    left: 53%;
+    width: 80%;
+    height: 47%;
+    transform: translateX(-50%);
+
+    .hand {
+      width: 25%;
+      aspect-ratio: 0.9;
+      border: 0.3em solid;
+      background: var(--skin);
+      border-radius: 100%;
+      transform: rotate(-18deg);
+      left: -48%;
+      top: 20%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    }
+
+    .flag {
+      width: 1em;
+      height: 10em;
+      border: 0.3em solid;
+      border-radius: 100% / 5%;
+      background: indianred;
+      transform: rotate(-9deg);
+      top: -33%;
+      left: -39%;
+
+      .text {
+        left: 50%;
+        top: 0.5em;
+        width: 9em;
+        height: 6em;
+        color: #fff;
+        color: text;
+        display: flex;
+        align-items: center;
+        padding: 0.5em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        filter: drop-shadow(0.5em 0 #000);
+        border-left: 0.25em solid #000; 
+        
+        &::before {
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: darkorchid;
+          clip-path: polygon(0 0, 100% 50%, 0 100%);
+        }
+
+        &::after {
+          content: "That \A Framework";
+          white-space: pre;
+        }
+      }
+    }
+
+    .arm {
+      width: 25%;
+      height: 100%;
+      border: 0.3em solid;
+      background: var(--skin);
+      rotate: -7deg;
+      left: 85%;
+      top: 18%;
+      border-radius: 100% / 50% 120% 100% 80%;
+      border-top-color: var(--shirt);
+
+      &::before {
+        content: "";
+        top: -15%;
+        left: -9%;
+        width: 140%;
+        height: 60%;
+        border: 0.3em solid;
+        background: var(--shirt);
+        border-radius: 0 100% 0 0;
+        rotatE: 5deg;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 40%, 5% 55%);
+      }
+
+
+      &:first-child {
+        left:-20%;
+        transform: scaleX(-1) rotate(-25deg);
+        border-radius: 0;
+        top: 41.5%;
+
+        &::before {
+          top: -47%;
+        }
+
+        &::after {
+          content: "";
+          width: 100%;height: 80%;
+          border-radius: 100% / 200% 200% 50% 50%;
+          background:var(--skin);
+          border: 0.3em solid;
+          bottom: 30%;
+          left: -9%;
+          transform-origin: 50% 100%;
+          transform: scaleX(-1) rotate(-40deg);
+          clip-path: polygon(0 10%, 100% 10%, 100% 80%, 0 100%);
+        }
+      }
+    }
+
+    .chest {
+      width: 80%;
+      height: 200%;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      border: 0.3em solid;
+      border-radius: 100% / 15% 15% 140% 200%;
+      background: 
+        radial-gradient(130% 50% at 48% -1%, var(--skin) 15%, #000 0 16.5%, #0000 0 18%, #000 0 19.5%, #0000 0),
+        var(--shirt);
+      clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 15%, 5% 15%);
+    }
+  }
+
+  .head {
+    width: 41%;
+    height: 40%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+
+    .neck {
+      width: 50%;
+      height: 62%;
+      top: 50%;
+      border: 0.3em solid;
+      background: 
+      linear-gradient(#800, #8000 90%),
+        var(--skin);
+      left: 56%;
+      transform: translate(-50%);
+      border-bottom: 0;
+    }
+
+    .hair-back {
+      width: 25%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--hair);
+      box-shadow:
+        0 0 0 0 var(--hair),
+        0 1.75em 0 0 var(--hair),
+        1em -1.5em 0 0.25em var(--hair),
+        3em -2em 0 0.3em var(--hair),
+        5em -1.4em 0 0.5em var(--hair),
+        7em -1.25em 0 0 vaR(--hair),
+        8.5em 0.6em 0 0.75em var(--hair),
+        9.5em 2.4em 0 0.5em var(--hair),
+        10em 5em 0 0.25em var(--hair),
+
+        0 0 0 0.25em,
+        0 1.75em 0 0.3em,
+        1em -1.5em 0 0.5em,
+        3em -2em 0 0.6em,
+        5em -1.4em 0 0.75em,
+        7em -1.25em 0 0.3em,
+        8.5em 0.6em 0 1em,
+        9.5em 2.4em 0 0.8em,
+        10em 5em 0 0.5em
+        ;
+    }
+
+    .face {
+      border: 0.3em solid;
+      border-bottom-width: 0.4em;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(45% 20% at 50% 55%, #f002, #f000), var(--skin);
+      border-radius: 100% / 130% 110% 60% 80%;
+
+      .mouth {
+        width: 50%;
+        height: 15%;
+        border: 0.25em solid;
+        border-bottom-width: 0.35em;
+        top: 75%;
+        left: 23%;
+        border-radius: 50% / 0 0 100% 100%;
+        transform: skewX(-10deg);
+        background:
+          conic-gradient(#0000 87deg, #000 88deg 93deg, #0000 94deg), 
+          conic-gradient(at 35% 50%, #0000 268deg, #000 0 272deg, #0000 0), 
+          #fff;
+      }
+      
+      .ear {
+        width: 35%;
+        height: 35%;
+        border: 0.3em solid;
+        border-right: 0.35em solid;
+        background: var(--skin);
+        border-radius: 50%;
+        left: 93%;
+        top: 48%;
+        transform: rotate(4deg);
+        aclip-path: polygon(14% 0, 30% 0, 90% 100%, 10% 100%);
+        border-left: 0.2em solid var(--skin);
+
+        &::before {
+          content: "";
+          width: 80%;
+          height: 80%;
+          border: 0.25em solid;
+          border-radius: 50%;
+          left: 20%;
+          top: 10%;
+          border-right: 0.4em solid var(--skin);
+        }
+
+        &::after {
+          content: "";
+          background: var(--skin);
+          width: 50%;
+          aspect-ratio: 1;
+          border: 0.25em solid;
+          border-radius: 50%;
+          left: 10%;
+          top: 50%;
+          border-left-color: var(--skin);
+          box-shadow: 0.25em 0 0.5em #6006
+        }
+      }
+
+      .nose {
+        width: 25%;
+        height: 17%;
+        border: 0.3em solid;
+        border-right: 0.5em solid #0000;
+        border-top: 0.2em solid;
+        top: 53%;
+        left: 24%;
+        border-radius: 100%;
+        transform:  rotate(-6deg);;
+
+        &::before {
+          content: "";
+          
+          width: 150%;
+          height: 100%;
+          border: 0.2em solid #0000;
+          border-right: 0.3em solid;
+          border-radius: 100% / 0 0% 140% 50%;
+          transform: translate(-23%,-78%) rotate(-5deg);;
+        }
+      }
+
+      .eye {
+        --size: 60%;
+        --pos: 65%;
+        --posx: 40%;
+        width: 25%;
+        aspect-ratio: 0.8;
+        border: 0.25em solid;
+        border-radius: 100% / 120% 120% 80% 80%;
+        border-bottom: 0.35em solid;
+        top: 34%;
+        left: 8%;
+        background:
+          radial-gradient(circle at var(--posx) var(--pos), #000 var(--size), #0000 0),
+          #eee;
+
+        & + & {
+          left: 54%;
+        }
+      }
+
+      .eyebrow {
+        width: 38%;
+        height: 35%;
+        border-radius: 100% / 50%;
+        border: 0.1em solid #0000;
+        border-right-width: 0.4em;
+        border-top: 0.5em solid;
+        top: 25%;
+        left: 2%;
+        transform: rotate(-5deg);
+
+        & + & {
+          transform: scaleX(-1) rotate(-5deg);
+          left: 47%;
+        }
+      }
+
+      .hair-top {
+        width: 120%;
+        height: 60%;
+        left: 50%;
+        top: -5%;
+        transform: translate(-50%);
+        background: 
+          radial-gradient(100% 20% at 70% 5%, var(--hair) 99%, #0000 0),
+          radial-gradient(circle at 50% 15%, var(--hair) 15%, #0000 0),
+          radial-gradient(circle at 30% 17%, var(--hair) 15%, #0000 0),
+          radial-gradient(circle at 67% 19%, var(--hair) 15%, #0000 0),
+          radial-gradient(circle at 95% 35%, var(--hair) 17%, #0000 0),
+          radial-gradient(circle at 98% 67%, var(--hair) 13%, #0000 0),
+          radial-gradient(circle at 95% 85%, var(--hair) 8%, #0000 0),
+
+          radial-gradient(circle at 50% 15%, #000 18%, #0000 0),
+          radial-gradient(circle at 30% 17%, #000 17.5%, #0000 0),
+          radial-gradient(circle at 67% 19%, #000 18%, #0000 0),
+          radial-gradient(circle at 95% 35%, #000 19%, #0000 0),
+          radial-gradient(circle at 98% 67%, #000 15%, #0000 0),
+          radial-gradient(circle at 95% 85%, #000 10%, #0000 0);
+          border-radius: 55% / 100% 100% 0 0;
+      }
+    }
+  }
+}
+
+section:nth-of-type(1) {
+  .bubble {
+    width: 80%;
+    top: 2%;
+    left: 2%;
+    
+  }
+
+  .message {
+    font-size: 1.5em;
+    padding: 0.5em;
+    background: #34c759;
+    border-radius: 1em;
+    top: 64%;
+    left: 30%;
+
+    &::before {
+      content: "";
+      width: 1em;
+      height: 1em;
+      background: linear-gradient(to bottom left, #34c759 50%, #0000 0);
+      top: 80%;
+      right: 10%;
+      transform-origin: 0 0;
+      transform: skew(60deg);
+    }
+  }
+
+  .person-1 {
+    left: 65%;
+
+    .head {
+      .face {
+        /* .lip-bottom {
+          width: 33%;
+          height: 10%;
+          left: 29%;
+          top: 83%;
+          background: var(--lip); 
+          border-radius: 50% / 0 0 100% 100%;
+          transform: rotate(-3deg);
+        } */
+
+        .mouth {
+          width: 38%;
+          height: 10%;
+          left: 24%;
+          top: 80%;
+          background: 
+          linear-gradient(#fff 25%, #000 0 50%, #0000 0) 100% 0 / 90% 100% no-repeat,
+            linear-gradient(45deg, #0000 20%, #800 0 ) no-repeat; 
+          border-radius: 50% / 0 0 100% 100%;
+          border: 0.25em solid #000;
+          border-left: 0.4em solid #0000;
+          border-bottom: 0.3em solid;
+          transform: rotate(-3deg);
+
+          /* &::before {
+            content: "";
+            width: 110%;
+            height: 50%;
+            background: #f004;
+            top: -0.25em;
+            left: -10%;
+            transform: translate(0, -100%);
+            background: 
+              radial-gradient(30% 100% at 30% 100%, var(--lip) 99%, #0000),
+              radial-gradient(30% 100% at 70% 100%, var(--lip) 99%, #0000)
+          } */
+        }
+      }
+    }
+  }
+}
+
+section:nth-of-type(2) {
+  .person-2 {
+    left: 60%;
+
+    .head {
+      .face {
+        .eye {
+          --size: 21%;
+        }
+      }
+    }
+  }
+}
+
+section:nth-of-type(3) {
+  .bubble {
+    --line: 83%;
+    top: 8%;
+    left: 12%;
+    padding-bottom: 3.75em;
+    
+    &::before {
+      transform: rotate(-3deg);
+      left: 5%;
+    }
+  }
+
+  .message {
+    font-size: 2.5em;
+    padding: 0.5em;
+    background: #34c759;
+    border-radius: 1em;
+    top: 56%;
+    left: 6%;
+
+    &::before {
+      content: "";
+      width: 1em;
+      height: 1em;
+      background: linear-gradient(to bottom left, #34c759 50%, #0000 0);
+      top: 80%;
+      right: 10%;
+      transform-origin: 0 0;
+      transform: skew(60deg);
+    }
+  }
+
+  .person-1 {
+    left: 65%;
+
+    .body {
+      left: 55%;
+      .hand {
+        top:13%;
+        left: 33%;
+      }
+      
+      .phone {
+        transform: rotate(-30deg);
+        top: -12%;
+        left: 27%;
+      }
+
+      .arm {
+        &::after {
+          bottom: 5%;
+          left: -15%;
+        }
+      }
+    }
+    .head {
+      transform: translate(-50%) rotate(-10deg);
+      
+      .neck {
+        transform: translate(-50%) rotate(10deg);
+      }
+
+      .hair-back {
+        transform:  translate(-50%) rotate(10deg);
+        left: 53%;
+        top: -10%;
+      }
+      
+      .face {
+        box-shadow: inset 0 10em 3em -6em #f003;
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: repeating-linear-gradient(90deg, #0000 0 2%, #00f2 0 4%);
+          mask: linear-gradient(#000, #0000 50%);
+          border-radius: 100% / 80% 80% 125% 110%;
+        }
+
+        .eye {
+          --size: 20%;
+          --pos: 62%;
+        }
+        .mouth {
+          width: 38%;
+          height: 8%;
+          border: 0.3em solid;
+          border-radius: 50% / 130% 100% 10% 0;
+          top:80%;
+          left: 25%;
+          background: linear-gradient(#fff 20%, #000 0 80%, #fff 0);
+        }
+
+        .eyebrow {
+          top: 28%;
+          & + & {
+            top: 25%;
+            left: 45%;
+            width: 40%;
+            height: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+section:nth-of-type(4) {
+  .person-2 {
+    left: 60%;
+
+    .body {
+      &::before {
+        content:"*drop*";
+        font-family: Arial, Helvetica, sans-serif;
+        left: -30%;
+        top: 15%;
+        rotate: 30deg;
+      }
+      .flag {
+        transform: rotate(130deg);
+        left: 0%;
+        top: 70%;
+        height: 12em;
+      }
+    }
+    .head {
+      .face {
+        box-shadow: inset 0 10em 3em -4em #00f1;
+
+        .drop {
+          width: 30%;
+          aspect-ratio: 1;
+          transform: scaleY(1.25);
+          top: 20%;
+          left: 95%;
+          
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 0 100% 100% 100%;
+            border: 0.25em solid;
+            background: radial-gradient(at 35% 75%, #fff 15%, skyblue 0);
+            transform: rotate(45deg);
+          }
+        }
+
+        .eye {
+          --size: 13%;
+          width: 27%;
+          top: 32%;
+
+          &::before {
+            content: "";
+            width: 150%;
+            height: 120%;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #0001;
+            border-radius: 100% / 120% 120% 80% 80%;
+            clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+          }
+
+          & + & {
+            --posx: 60%;
+            transform: scaleX(-1);
+          }
+        }
+
+        .eyebrow {
+          top: 23%;
+          transform: rotate(-5deg);
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <!-- inspired by @pizzacakecomic https://www.reddit.com/r/comics/comments/1c4joz2/modern_fans/ -->
+    <article role="img" aria-label="Cartoon titled 'Framework fans' with 4 panels in a 2x2 grid. The first panel shows a smiling woman looking at her phone and saying 'The developer of that framework you like is trending!'. The second panel is a smiling man with a flag that reads 'That Framework'. In the third panel the woman is still looking at her phone but her face expression is shocked and disgusted, while she says 'Oh... Oh no...'. In the last panel, the man's smile is now awkward as he rips the flag in two.">
+      <h1>Framework Fans</h1>
+      <section>
+        <div class="message">*ding*</div>
+        <div class="bubble">Oh! The developer of that framework you like is trending!</div>
+        <div class="person person-1">
+          <div class="head">
+            <div class="hair-back"></div>
+          </div>
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest">
+              <div class="top"></div>
+            </div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="ear"></div>
+              <div class="lip-top"></div>
+              <div class="lip-bottom"></div>
+              <div class="mouth"></div>
+              <div class="hair-top"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="phone"></div>
+            <div class="hand"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="person person-2">
+          <div class="head">
+            <div class="hair-back"></div>
+          </div>
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest">
+              <div class="top"></div>
+            </div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair-top"></div>
+              <div class="ear"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="hand"></div>
+            <div class="flag">
+              <div class="text"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="message">🌶️🔥🤬🤬</div>
+        <div class="bubble">Oh... Oh no...</div>
+        <div class="person person-1">
+          <div class="head">
+            <div class="hair-back"></div>
+          </div>
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest">
+              <div class="top"></div>
+            </div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="ear"></div>
+              <div class="lip-top"></div>
+              <div class="lip-bottom"></div>
+              <div class="mouth"></div>
+              <div class="hair-top"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="phone"></div>
+            <div class="hand"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="person person-2">
+          <div class="head">
+            <div class="hair-back"></div>
+          </div>
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest">
+              <div class="top"></div>
+            </div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair-top"></div>
+              <div class="ear"></div>
+              <div class="drop"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="hand"></div>
+            <div class="flag">
+              <div class="text"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
