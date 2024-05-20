@@ -1107,4 +1107,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Two versions of the same 4-panel comic showing the same situation: a person receives a message on their phone and says 'Oh! The developer of that framework you like is trending', a second person smiles waving a flag with the text 'That Framework'. Then the first person looks shocked at the phone that shows a message with emojis for fire and angry people 'Oh... Oh no...' says while reading the developer's hot take. The last panel is different in both parts. In the first one (titled Framework Fans), the second person looks shocks and ashamed and drops the flag. In the second one (titled Framework Bros), the second person keeps smiling and now they are waving more flags, with flags coming out of ears and mouth, and even the t-shirt is from That Framework."
   },
+  {
+    id: 141,
+    uid: "technical-support",
+    boxes: 10,
+    horizontal: true,
+    title: "Technical Support",
+    ariaLabel: "Cartoon of a person wearing a headset in front of a computer, replyng to a phone call. The conversation is about how the caller is having issues when translating an element horizontally, it moves fine, then drops to the bottom rapidly. The technical support person asks the caller to open the dev tools and look for other animations. The  caller replies 'I will do it right meow' shocking the technical support, who asks 'are we talking about CSS?' The last panel is a drawing of a cat pushing a glass off a ledge and saying 'What is CSS?'"
+  },
 ]
