@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+article {
+  position: relative;
+  font-size: 1vmin;
+  width: 120em;
+  gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 1em;
+}
+
+*, *::before, *::after {
+  border: 0 !important;
+}
+
+section {
+  aspect-ratio: 5/6;
+  background: linear-gradient(#c9c5 15%, #c9c0 50%), #fff;
+  border:0.4em solid;
+  position: relative;
+  overflow: hidden;
+  border: 0.3em solid !important;
+
+  &:nth-child(8) {
+    background: #fff;
+    border-color: #fff !important;
+  }
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.dialog {
+  font-family: 'Patrick Hand SC', Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-wrap: balance;
+  text-align: center;
+  line-height: 1;
+  top: 5%;
+  right: 4%;
+  width: 60%;
+
+  &:not(.dialog-2)::before {
+    content: "";
+    width: 2em;
+    height: 2.5em;
+    border-radius: 0 0 100% 0;
+    border-right: 0.2em solid !important;
+    border-bottom: 0.05em solid #0000 !important;
+    top: 105%;
+    left: 50%;
+    transform: translate(-70%);
+  }
+
+  &.dialog-2::before {
+    content: "";
+    width: 0.45em;
+    height: 2.5em;
+    border: none !important;
+    background: 
+      linear-gradient(#000 0 0) 0 0 / 0.15em 50%,
+      linear-gradient(#000 0 0) 0 50% / 100% 0.15em,
+      linear-gradient(to bottom left, #000 60%, #0000 0) 100% 100% / 0.15em 50%;
+    background-repeat: no-repeat;
+    transform: skewY(-40deg) skewX(10deg) rotate(-5deg);
+    top: 115%;
+    left: 50%;
+    transform-origin: 0 0;
+  }
+}
+
+.table {
+  width: 90%;
+  height: 15%;
+  border: 0.3em solid;
+  border-bottom: 0;
+  border-right: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#0001 20%, #0000 0), brown;
+
+  &::before {
+    content: "";
+    width: 105%;
+    height: 25%;
+    background: linear-gradient(#0005 0 0), brown;
+    border: 0.3em solid;
+    border-right: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-69%);
+  }
+}
+
+.keyboard {
+  width: 40%;
+  height: 2.5%;
+  border-radius: 0 1em 1em 0;
+  clip-path: polygon(0 50%, 50% 0, 100% 0, 100% 0, 100% 100%, 0 100%);
+  background:
+    radial-gradient(circle at 20% 50%, #fff5 40%, #fff1 0),
+    silver;
+  bottom: 17.5%;
+  left: 40%;
+
+}
+
+.chair {
+  width: 50%;
+  height: 80%;
+  border-radius: 100% / 80% 80% 120% 120%;
+  top: 55%;
+  transform: rotate(-10deg);
+  box-shadow: inset 0 0 0 1.5em darkgray;
+  background: 
+    repeating-linear-gradient(45deg, #0000 0 0.5%, #0003 0 1%),
+    repeating-linear-gradient(-45deg, #0000 0 0.5%, #0003 0 1%);
+
+  &::before {
+    content: "";
+    width: 80%;
+    height: 10%;
+    background: linear-gradient(#0003 0 0), darkgray;
+    transform: rotate(10deg);
+    border-radius: 50% / 100% 100% 10% 10%;
+    top: 45%;
+    left: 5%;
+  }
+}
+
+.computer {
+  width: 40%;
+  height: 30%;
+  border: 0.3em solid;
+  background: silver;
+  transform: skew(-5deg);
+  border-radius: 0.3em;
+  right: -10%;
+  bottom: 28%;
+  background:
+  radial-gradient(circle at 10% 95%, #0001 1.5%, #0000 0),
+  radial-gradient(circle at 15% 95%, #0001 1.5%, #0000 0),
+  radial-gradient(7% 50% at 0 50%, #fff7 99%, #0000 0),
+  linear-gradient(#0000, #0001),
+  silver
+  ;
+  
+  &::before {
+    content: "";
+    width: 25%;
+    height: 80%;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.3em solid;
+    background: silver;
+    transform-origin: 50% 0;
+    transform: skew(10deg);
+    box-shadow: inset 0.3em 0 #fff6;
+    background: 
+    linear-gradient(#0001, #0002),
+    linear-gradient(#0001, #0002),
+      silver;
+  }
+
+  &::after {
+    content: "";
+    width: 55%;
+    height: 10%;
+    border: 0.3em solid;
+    background: linear-gradient(90deg, #00000014 51%, #00000039 0), silver;
+    top: 130%;
+    left: 35%;
+  }
+}
+
+.person {
+  --skin: #eb9;
+  --hair: #963;
+  --shirt: #58c;
+  width: 50%;
+  height: 60%;
+  bottom: 10%;
+  left: 15%;
+
+  .body {
+    width: 100%;
+    height: 46%;
+    bottom: 0;
+    left: -3%;
+    
+    .chest {
+      width: 100%;
+      height: 100%;
+      border-radius: 50% / 125% 125% 0 0;
+      background: 
+      radial-gradient(50% 40% at 52% 3%, var(--skin) 30%, #0002 31% 40%, #0000 41%),
+        var(--shirt);
+    }
+
+    .arm {
+      width: 20%;
+      height: 100%;
+      border-radius: 100% / 120% 120% 50% 50%;
+      background: var(--skin);
+      transform-origin: 50% 100%;
+      transform: rotate(90deg);
+
+      &::before {
+        content: "";
+        width: 120%;
+        aspect-ratio: 0.9;
+        left: 50%;
+        top: 0;
+        background: var(--skin);
+        border-radius: 50%;
+        transform: translate(-50%, -70%);
+      }
+    }
+  }
+
+  .head {
+    width: 57%;
+    height: 50%;
+    left: 60%;
+    transform: translate(-50%);
+
+    .neck {
+      width: 40%;
+      height: 46%;
+      background: linear-gradient(#c002 50%, #c000), var(--skin);
+      top: 66%;
+      left: 12%;
+      border-radius: 100% / 20%;
+      transform: skewX(-5deg);
+    }
+    .headset {
+      width: 40%;
+      aspect-ratio: 0.8;
+      background: #000;
+      border-radius: 50%;
+      transform: rotate(-10deg);
+      top: 40%;
+      left: -10%;
+
+      &::before {
+        content:"";
+        width: 150%;
+        height: 50%;
+        border-radius: 50%;
+        border: 0.3em solid #0000 !important;
+        border-bottom: 0.3em solid #444 !important;
+        transform: rotate(30deg);
+        top: 85%;
+        left: 45%;
+      }
+
+      &::after {
+        content: "";
+        width: 60%;
+        height: 30%;
+        border-radius: 50%;
+        background: #000;
+        transform: rotate(10deg);
+        top: 125%;
+        left: 125%;
+      }
+    }
+
+    .headset-band {
+      left: 5%;
+      top: -10%;
+      width: 90%;
+      height: 47%;
+      border-radius: 50% / 120% 120% 0 0;
+      box-shadow: -0.5em -0.25em;
+      transform: rotate(-10deg);
+    }
+
+    .face {
+      width: 100%;
+      height: 100%;
+      border: 0.3em solid;
+      border-radius: 100% / 80% 70% 110% 130%;
+      background: var(--skin);
+
+      .nose {
+        width: 12%;
+        height: 22%;
+        border-radius: 0 100% 100% 0 / 50%;
+        background: #c003;
+        top: 54%;
+        left: 70%;
+        transform: skewY(30deg) rotate(7sdeg);
+      }
+
+      .eyebrow {
+        width: 30%;
+        height: 20%;
+        border: 0.2em solid #0000 !important;
+        border-top: 0.3em solid var(--hair) !important;
+        border-radius: 100%;
+        top: 30%;
+        left: 40%;
+
+         & + & {
+          top: 30.5%;
+          left: 72%;
+         }
+      }
+
+      .eye {
+        width: 10%;
+        height: 13%;
+        background: radial-gradient(circle at 25% 25%, #fff 10%, #000 0) #000;
+        border-radius: 50%;
+        top: 40%;
+        left: 50%;
+        transform: rotate(7deg);
+
+        & + & {
+          left: 80%;
+        }
+      }
+
+      .mouth {
+        width: 25%;
+        height: 10%;
+        background: #fff;
+        border-radius: 50% / 0 0 100% 100%;
+        transform: rotate(10deg) skew(-10deg);
+        top: 80%;
+        left: 50%;
+      }
+
+      .hair-back {
+        width: 43%;
+        height: 55%;
+        border-radius: 100% / 80% 80% 120% 120%;
+        background: var(--hair);
+        transform: rotate(2deg);
+        left: -10%;
+
+        &::before, &::after {
+          content: "";
+          width: 100%;
+          height: 25%;
+          background: var(--hair);
+          border-radius: 50% / 110% 100% 0 0;
+          transform-origin: 0 0;
+          transform: translate(30%, -70%) rotate(0deg);
+        }
+
+        &::after {
+          transform: translate(60%, -70%) rotate(35deg);
+        }
+      }
+
+      .hair-top {
+        width: 90%;
+        height: 25%;
+        border-radius: 50% / 80% 100% 0 0;
+        background: var(--hair);
+        transform: rotate(3deg);
+        left: 23%;
+        top: -12.5%;
+
+        &::before {
+          content: "";
+          width: 110%;
+          height: 80%;
+          transform-origin: 0 100%;
+          border-radius: 50% / 80% 100% 0 0;
+          background:var(--hair);
+          top: -10%;
+          left: -4%;
+          transform: rotate(16deg);
+        }
+
+        &::after {
+          content: "";
+          width: 110%;
+          height: 40%;
+          transform-origin: 0 100%;
+          border-radius: 50% / 0 0 100% 100%;
+          background: linear-gradient(90deg, #0000 20%, var(--hair) 0);
+          top: 12%;
+          left: -10%;
+          transform: rotate(27deg);
+        }
+      }
+    }
+  }
+}
+
+
+section:nth-child(2) {
+  .dialog {
+    width: 80%;
+    top: 4%;
+    right: 1%;
+
+    &::before {
+      top: 110%;
+      left: 70%;
+      height: 4.5em;
+    }
+  }
+
+  .person {
+    .body {
+      .arm {
+        transform: rotate(70deg);
+      }
+    }
+    .head {
+      .face {
+        .mouth {
+          scale: 0.7 0.5;
+          left: 55%;
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(3) {
+  .dialog {
+    width: 80%;
+    top: 4%;
+    right: 7%;
+
+    &::before {
+      top: 110%;
+      left: 70%;
+      height: 3em;
+    }
+  }
+  .person {
+    .body {
+      .arm {
+        transform: rotate(70deg);
+
+        &.arm-back {
+          transform: rotate(0);
+          left: 105%;
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(4) {
+  .dialog {
+    width: 100%;
+    top: 4%;
+    right: 1%;
+
+    &::before {
+      top: 110%;
+      left: 70%;
+      height: 4.5em;
+    }
+  }
+
+  .person {
+    .body {
+      .arm {
+        transform: rotate(70deg);
+        left: -5%;
+
+        &.arm-back {
+          transform: rotate(0);
+          left: 105%;
+          top: 74%;
+        }
+      }
+    }
+    .head {
+      .face {
+        .mouth {
+          border-radius: 50%; 
+          width: 10%;
+          left: 56%;
+          top: 78%;
+          scale: 0.5;
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(5) {
+  .dialog {
+    width: 95%;
+    top: 2%;
+    right: 3%;
+
+    &::before {
+      left: 74%;
+    }
+  }
+
+  .person {
+    .body {
+      .arm {
+        transform: rotate(70deg);
+        top: 6%;
+      }
+    }
+    .head {
+      .face {
+        .mouth {
+          border-radius: 50%; 
+          width: 10%;
+          left: 60%;
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(6) {
+  .dialog {
+    width: 95%;
+    top:7%;
+    right: 0%;
+
+    &::before {
+      left: 70%;
+      height: 5em;
+    }
+  }
+  .person {
+    .body {
+      .arm {
+        top: 2%;
+        left: 5%;
+        transform: rotate(70deg);
+      }
+    }
+    .head {
+      .face {
+        .mouth {
+          scale: 0.7 0.5;
+          left: 50%;
+          top: 78%;
+          rotate: 5deg;
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(7) {
+  .dialog {
+    width: 70%;
+    top:11%;
+    right: 0%;
+
+    &::before {
+      left: 55%;
+    }
+  }
+  .body {
+    .arm {
+      transform: rotate(70deg);
+      left: -8%;
+
+      &.arm-back {
+        transform: rotate(0);
+        left: 105%;
+        top: 75%;
+      }
+    }
+  }
+}
+
+section:nth-child(8) {
+  .dialog {
+    top: 15%;
+    right: 0;
+    font-size: 4em;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .person {
+    .head {
+      .face {
+        .mouth {
+          background: #0000;
+        }
+        .eyebrow {
+          top: 33%;
+          rotate: 5deg;
+          & + & {
+            top: 30%;
+            rotate: -2deg;
+          }
+        }
+        .eye {
+          scale: 0.8;
+          /* &:not(& + &) {
+            scale: 0.9;
+          } */
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(9) {
+  .dialog {
+    width: 90%;
+    top:7%;
+    right: 0%;
+
+    &::before {
+      left: 65%;
+    }
+  }
+
+  .person {
+    .body {
+      .arm {
+        transform: rotate(70deg);
+        top: 10%;
+      }
+    }
+    .head {
+      .face {
+        .mouth {
+          top: 77.5%;
+          left: 52%;
+          scale: 0.9 -0.8;
+        }
+
+        .eyebrow {
+          rotate: -10deg;
+
+          & + & {
+            rotate: 10deg;
+          }
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(10) {
+  --fur: #aaa;
+  --fur2: #eee;
+  --fur3: #ccc;
+
+  .dialog {
+    width: 40%;
+    top:10%;
+    left: 7%;
+
+    &::before {
+      left: 40%;
+      height: 3em;
+      transform: scaleX(-1)
+    }
+  }
+
+  .paw {
+    width: 7%;
+    height: 15%;
+    background: var(--fur);
+    transform: rotate(-40deg);
+    top: 45%;
+    left: 43%;
+
+    &::before {
+      content: "";
+      width: 65%;
+      aspect-ratio: 1;
+      background: var(--fur);
+      border-radius: 50%;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      box-shadow: -0.5em -0.2em 0 -0.1em var(--fur), 0.5em -0.2em 0 -0.1em var(--fur); 
+    }
+  }
+}
+
+/******/
+
+.counter {
+  width: 90%;
+  height: 35%;
+  bottom: 0;
+  left: 0;
+  background: moccasin;
+  background: lightsalmon;
+  background: color-mix(in srgb, moccasin, indianred);
+
+  &::before {
+    content: "";
+    top: 1em;
+    right: 1em;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #0002 !important;
+    border-right: 1px solid #0002 !important;
+    background: linear-gradient(90deg, #0000 30%, #0002 0 calc(30% + 1px) , #0000 0);
+  }
+}
+
+.lines {
+  width: 0.1em;
+  height: 1.4em;
+  background: #000;
+  top: 53%;
+  left: 43%;
+  filter: drop-shadow(-0.25em 0);
+  clip-path: polygon(-500% 50%, 100% 0, 100% 100%);
+transform: rotate(-45deg);
+
+  &.line-glass {
+    transform: rotate(20deg);
+    left: 52%;
+    top: 45%;
+  }
+}
+
+.glass {
+  --angle: 20deg;
+  width: 22%;
+  height: 25%;
+  background: 
+    radial-gradient(55% 13% at 50% 0, #0001 99%, #0000 0), #9ffc;
+  border-radius: 100% / 20% 20% 30% 30%;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  top: 45%;
+  left: 50%;
+  transform: rotate(var(--angle));
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #0dda;
+    border-radius: 100% / 20% 20% 30% 30%;
+    clip-path: polygon(0 35%, 100% 0, 90% 100%, 10% 100%);
+    transform-origin: 50% 100%;
+    transform: scale(0.75, 0.6);
+    bottom: 0.5em;
+  }
+
+  &::after {
+    content: "";
+    width: 75%;
+    height: 15%;
+    background: #0dd;
+    transform: translate(-50%, -50%) rotate(calc(-1 * var(--angle)));
+    top: 45%;
+    left: 50%;
+    border-radius: 50%;
+  }
+}
+
+.cat {
+  --fur: #aaa;
+  --fur2: #eee;
+  --fur3: #999;
+  width: 45%;
+  height: 45%;
+  bottom: 35%;
+  left: 26%;
+
+  .phone {
+    width: 12%;
+    height: 30%;
+    background: radial-gradient(circle at 50% 25%, #0ff 7%, #0000 0) #333;
+    border-radius: 100% / 50% 50% 200% 200%;
+transform: rotate(-35deg);
+left: 10%;
+top: 12%;
+  }
+
+  .tail {
+    width: 60%;
+    height: 70%;
+    left: -30%;
+    bottom: 0;
+    background:
+    radial-gradient(circle at 20% 30%, var(--fur3) 10%, #0000 0),
+      radial-gradient(farthest-side at 0 100%, #0000 80%, var(--fur3) 0 99%, #0000 0) 45% 100% / 60% 80%;
+    ;
+    background-repeat: no-repeat;
+  }
+  
+  .body {
+    width: 80%;
+    height: 60%;
+    border-radius: 50% / 100% 100% 0% 0%;
+    background: 
+    radial-gradient(60% 100% at 50% 90%, var(--fur2) 60%, #0000 0),
+    var(--fur);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .head {
+    width: 70%;
+    height: 50%;
+    lefT: 50%;
+    transform: translate(-50%);
+
+    .ear {
+      width: 40%;
+      aspect-ratio: 0.7;
+      border-radius: 10% 100%;
+      background: pink;
+      box-shadow: inset 0 0 0 0.5em var(--fur);
+
+      & + & {
+        right: 0;
+        transform: scaleX(-1)
+      }
+    }
+
+    .face {
+      width: 100%;
+      height: 100%;
+      border-radius: 100% / 120% 120% 80% 80%;
+      background:
+      radial-gradient(5% 50% at 50% 0, var(--fur3) 90%, #0000 0),
+      radial-gradient(5% 40% at 35% 0, var(--fur3) 90%, #0000 0),
+      radial-gradient(5% 40% at 65% 0, var(--fur3) 90%, #0000 0),
+        radial-gradient(50% 25% at 50% 90%, var(--fur2) 70%, #0000 0),
+        var(--fur);
+      background-repeat: no-repeat;
+
+      .eye {
+        --pos: 22%;
+        width: 14%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: 
+        radial-gradient(circle at 25% 25%, #fff 15%, #0000 0)
+          #000;
+          border: 0.1em solid gold !important;
+        left: var(--pos);
+        top: 55%;
+
+        & + & {
+          left: auto;
+          right: var(--pos);
+        }
+      }
+
+      .nose {
+        width: 15%;
+        height: 10%;
+        background: #000;
+        border-radius: 50%;
+        top:75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before {
+          content: "";
+          width: 200%;
+          height: 250%;
+          background: radial-gradient(70% 100% at 50% 0, #0000 90%, #000 0 99%, #0000 0) 0 0 / 50% 100%;
+          left: 50%;
+          top: 80%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .whiskers {
+        width: 100%;
+        height: 100%;
+
+        &::before, &::after {
+          content: "";
+          width: 40%;
+          height: 40%;
+          background:
+          radial-gradient(90% 90% at 60% 90%, #0000 90%, #000 0 95%, #0000 0) 0 0 / 90% 100%,
+          radial-gradient(90% 90% at 70% 105%, #0000 90%, #000 0 95%, #0000 0) 0 0 / 100% 100%,
+          radial-gradient(100% 90% at 85% 120%, #0000 90%, #000 0 95%, #0000 0) 100% 0 / 90% 100%;
+            background-repeat: no-repeat;
+            top: 75%;
+            left: -10%;
+            transform: rotate(-5deg);
+        }
+
+        &::After {
+          right: -10%;
+          left: auto;
+          transform: scaleX(-1) rotate(4deg);
+        }
+      }
+    }
+  }
+}
+      
+    </style>
+  </head>
+  <body>
+<article role="img" aria-label="Cartoon with 10 panels of a person wearing a headset in front of a computer, replyng to a phone call. The conversation is about how the caller is having issues when translating an element horizontally, it moves fine, then drops to the bottom rapidly. The technical support person asks the caller to open the dev tools and look for other animations. The  caller replies 'I will do it right meow' shocking the technical support, who asks 'are we talking about CSS?' The last panel is a drawing of a cat pushing a glass off a ledge and saying 'What is CSS?'">
+      <section>
+        <div class="dialog">Hello, technical support. How may I help you?</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog dialog-2">Hello, something weird happens when I translate an element horizontally</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog">I can certainly help with&nbsp;that. Could you tell me more?</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog dialog-2">Well... I translate the element horizontally, and suddenly... boom! it goes vertically all the way down!</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog">Hmmm... that is weird. Maybe another animation is affecting it too. Could you open the dev tools and try again?</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog dialog-2">I do not know what that is, but I will get to it right meow</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog">Ok. I will wait while you...</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog">...</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog">Did you... did you just meow? We&nbsp;are talking about CSS, right?</div>
+        <div class="chair"></div>
+        <div class="person">
+          <div class="body">
+            <div class="arm arm-back"></div>
+            <div class="chest"></div>
+            <div class="arm arm-front"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="nose"></div>
+              <div class="hair-back"></div>
+              <div class="hair-top"></div>
+              <div class="headset"></div>
+              <div class="headset-band"></div>
+            </div>
+          </div>
+        </div>
+        <div class="keyboard"></div>
+        <div class="computer"></div>
+        <div class="table"></div>
+      </section>
+      <section>
+        <div class="dialog">What is CSS?</div>
+        <div class="cat">
+          <div class="tail"></div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear"></div>
+            <div class="ear"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="nose"></div>
+              <div class="whiskers"></div>
+            </div>
+            <div class="phone"></div>
+          </div>
+        </div>
+        <div class="counter"></div>
+        <div class="glass"></div>
+        <div class="paw"></div>
+        <div class="lines line-paw"></div>
+        <div class="lines line-glass"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
