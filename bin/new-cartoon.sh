@@ -402,7 +402,7 @@ echo "<!doctype html>
 
     <link rel=\"shortcut icon\" href=\"/favicon.png\" />
 
-    <link rel="canonical" href="https://comicss.art/comics/${id}" />
+    <link rel=\"canonical\" href=\"https://comicss.art/comics/${id}\" />
 
     <link rel=\"stylesheet\" href=\"/css/almond.lite.min.css\" />
     <link rel=\"stylesheet\" href=\"/css/styles.css\" />

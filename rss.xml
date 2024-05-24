@@ -1382,7 +1382,7 @@
       <link>https://comicss.art/comics/138</link>
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
-      <pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 May 2024 00:00:01 +0000</pubDate>
       <enclosure url="https://comicss.art/comics/138/may-the-fourth-ii.png" length="78000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
@@ -1414,6 +1414,16 @@
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       <enclosure url="https://comicss.art/comics/141/technical-support.png" length="482000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/142</guid>
+      <title>Spelling Bee</title>
+      <link>https://comicss.art/comics/142</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/142/spelling-bee.png" length="83000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
   </channel>

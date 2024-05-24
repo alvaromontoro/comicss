@@ -1115,4 +1115,12 @@ const posts = [
     title: "Technical Support",
     ariaLabel: "Cartoon of a person wearing a headset in front of a computer, replyng to a phone call. The conversation is about how the caller is having issues when translating an element horizontally, it moves fine, then drops to the bottom rapidly. The technical support person asks the caller to open the dev tools and look for other animations. The  caller replies 'I will do it right meow' shocking the technical support, who asks 'are we talking about CSS?' The last panel is a drawing of a cat pushing a glass off a ledge and saying 'What is CSS?'"
   },
+  {
+    id: 142,
+    uid: "spelling-bee",
+    boxes: 1,
+    title: "Spelling Bee",
+    vertical: true,
+    ariaLabel: "Spelling bee contestant: a minimalistic cartoon of a person in front of a microphone, with some CSS code next to it: .speeling-bee { .contestant { speak: spell-out; word-break: break-all; stress: 100; } }"
+  },
 ]
