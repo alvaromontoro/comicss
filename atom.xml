@@ -2614,7 +2614,7 @@
     <link href="https://comicss.art/comics/138" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/138/may-the-fourth-ii.html"/>
     <id>https://comicss.art/comics/138</id>
-    <updated>2024-05-04T00:00:00Z</updated>
+    <updated>2024-05-04T00:00:01Z</updated>
     <summary>New Cartoon: May the Fourth (II)</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -2676,6 +2676,25 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/141/technical-support.png" alt="Cartoon of a person wearing a headset in front of a computer, replyng to a phone call. The conversation is about how the caller is having issues when translating an element horizontally, it moves fine, then drops to the bottom rapidly. The technical support person asks the caller to open the dev tools and look for other animations. The  caller replies 'I will do it right meow' shocking the technical support, who asks 'are we talking about CSS?' The last panel is a drawing of a cat pushing a glass off a ledge and saying 'What is CSS?'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Spelling Bee</title>
+    <link href="https://comicss.art/comics/142" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/142/spelling-bee.html"/>
+    <id>https://comicss.art/comics/142</id>
+    <updated>2024-05-23T00:00:00Z</updated>
+    <summary>New Cartoon: Spelling Bee</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/142/spelling-bee.png" alt="Spelling bee contestant: a minimalistic cartoon of a person in front of a microphone, with some CSS code next to it: .speeling-bee { .contestant { speak: spell-out; word-break: break-all; stress: 100; } }" /></p>
       </div>
     </content>
     <rights>Copyright 2024 Alvaro Montoro</rights>
