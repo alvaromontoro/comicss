@@ -2704,4 +2704,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Cheese Attack</title>
+    <link href="https://comicss.art/comics/143" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/143/cheese-attack.html"/>
+    <id>https://comicss.art/comics/143</id>
+    <updated>2024-06-10T00:00:00Z</updated>
+    <summary>New Cartoon: Cheese Attack</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/143/cheese-attack.png" alt="Comic with four panels showing a person talking down to another character next to a comiCSS sign, about how drawing in CSS is not good, SVG is better, chatGPT can do it, Tailwind is better... a third character shows up in the second panel and throws a slice of cheese to the character that is doing all the talking 'Cheese Attack!!'. In the last panel, that third character says that the person with the slice of cheese will be distracted for a while and it's time to leave before they come back." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

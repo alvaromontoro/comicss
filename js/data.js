@@ -1123,4 +1123,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Spelling bee contestant: a minimalistic cartoon of a person in front of a microphone, with some CSS code next to it: .speeling-bee { .contestant { speak: spell-out; word-break: break-all; stress: 100; } }"
   },
+  {
+    id: 143,
+    uid: "cheese-attack",
+    boxes: 4,
+    title: "Cheese Attack",
+    ariaLabel: "Comic with four panels showing a person talking down to another character next to a comiCSS sign, about how drawing in CSS is not good, SVG is better, chatGPT can do it, Tailwind is better... a third character shows up in the second panel and throws a slice of cheese to the character that is doing all the talking 'Cheese Attack!!'. In the last panel, that third character says that the person with the slice of cheese will be distracted for a while and it's time to leave before they come back."
+  },
 ]
