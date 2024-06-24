@@ -1130,4 +1130,11 @@ const posts = [
     title: "Cheese Attack",
     ariaLabel: "Comic with four panels showing a person talking down to another character next to a comiCSS sign, about how drawing in CSS is not good, SVG is better, chatGPT can do it, Tailwind is better... a third character shows up in the second panel and throws a slice of cheese to the character that is doing all the talking 'Cheese Attack!!'. In the last panel, that third character says that the person with the slice of cheese will be distracted for a while and it's time to leave before they come back."
   },
+  {
+    id: 144,
+    uid: "sleep-like-a-baby",
+    boxes: 4,
+    title: "Sleep like a baby",
+    ariaLabel: "Comic with four panels in a 2x2 grid. It has two characters talking. The first one asks 'Hey! I haven't seen you in a while. How's the new project? Lots of hours? Do you even sleep?' The second replies 'Oh, I sleep like a baby' The first one asks 'deeply and well?' And the second one replies sadly 'No. I wake up every 3 hours crying and calling for my mom'"
+  },
 ]
