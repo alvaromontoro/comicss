@@ -2723,4 +2723,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Sleep like a baby</title>
+    <link href="https://comicss.art/comics/144" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/144/sleep-like-a-baby.html"/>
+    <id>https://comicss.art/comics/144</id>
+    <updated>2024-06-24T00:00:00Z</updated>
+    <summary>New Cartoon: Sleep like a baby</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/144/sleep-like-a-baby.png" alt="Comic with four panels in a 2x2 grid. It has two characters talking. The first one asks 'Hey! I haven't seen you in a while. How's the new project? Lots of hours? Do you even sleep?' The second replies 'Oh, I sleep like a baby' The first one asks 'deeply and well?' And the second one replies sadly 'No. I wake up every 3 hours crying and calling for my mom'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
