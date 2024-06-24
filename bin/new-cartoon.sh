@@ -287,7 +287,7 @@ echo "<!doctype html>
       <div id=\"comic-strip\" class=\"${className}\" role=\"img\" aria-label=\"${alt}\">" > ./index.html
 # print the comics
 for (( i = 0; i < panels; i++ )) ; {
-  echo "        <img src=\"/comics/${id}/${id}-${uid}-${i}.webp\" alt=\"\" />" >> ./index.html
+  echo "        <img src=\"/comics/${id}/${id}-${uid}-${i}.webp\" alt=\"\" width=\"350\" />" >> ./index.html
 }
 # continue printing the page
 echo "      </div>
@@ -519,7 +519,7 @@ echo "<!doctype html>
       <div id=\"comic-strip\" role=\"img\" class=\"${className}\" aria-label=\"${alt}\">" > "./comics/${id}/index.html"
 # print the comics
 for (( i = 0; i < panels; i++ )) ; {
-  echo "        <img src=\"/comics/${id}/${id}-${uid}-${i}.webp\" alt=\"\" />" >> "./comics/${id}/index.html"
+  echo "        <img src=\"/comics/${id}/${id}-${uid}-${i}.webp\" alt=\"\" width=\"350\" />" >> "./comics/${id}/index.html"
 }
 # continue printing the comic page
 echo "      </div>
