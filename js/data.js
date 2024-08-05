@@ -1137,4 +1137,11 @@ const posts = [
     title: "Sleep like a baby",
     ariaLabel: "Comic with four panels in a 2x2 grid. It has two characters talking. The first one asks 'Hey! I haven't seen you in a while. How's the new project? Lots of hours? Do you even sleep?' The second replies 'Oh, I sleep like a baby' The first one asks 'deeply and well?' And the second one replies sadly 'No. I wake up every 3 hours crying and calling for my mom'"
   },
+  {
+    id: 145,
+    uid: "haircut",
+    boxes: 2,
+    title: "Haircut",
+    ariaLabel: "cartoon with two panels showing two people talking. One has long spiky hair, the other one has a more classic hair and says 'cool haircut! did you go to the hairdresser?'. The person with spiky hair replies: 'No, I was just reviewing the new Junior's PR'"
+  },
 ]
