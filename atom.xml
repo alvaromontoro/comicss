@@ -2742,4 +2742,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Haircut</title>
+    <link href="https://comicss.art/comics/145" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/145/haircut.html"/>
+    <id>https://comicss.art/comics/145</id>
+    <updated>2024-08-04T00:00:00Z</updated>
+    <summary>New Cartoon: Haircut</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/145/haircut.png" alt="cartoon with two panels showing two people talking. One has long spiky hair, the other one has a more classic hair and says 'cool haircut! did you go to the hairdresser?'. The person with spiky hair replies: 'No, I was just reviewing the new Junior's PR'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
