@@ -2761,4 +2761,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Order</title>
+    <link href="https://comicss.art/comics/146" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/146/order.html"/>
+    <id>https://comicss.art/comics/146</id>
+    <updated>2024-08-12T00:00:00Z</updated>
+    <summary>New Cartoon: Order</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/146/order.png" alt="cartoon with 4 panels showing a disorganized book shelf. Then two characters talking: 'your shelf is always messy!', then the other one replies '.shelf .book order:unset' all the books in the shelf become ordered. The first character replies 'I get why that worked, but it makes no sense'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

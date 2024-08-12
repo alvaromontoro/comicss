@@ -108,6 +108,44 @@
         </footer>
       </article>
       -->
+      <article id="order">
+        <h2>Order, please... or not?</h2>
+        <p>
+          It's a new week, and it's a new comic. This time, it goes "back to the roots," as I wanted, and it is more related 
+          to a CSS property: order. The CSS code user in the comic is also in the code that generates it.
+        </p>
+        <p>
+          The books in the first panel have different order values, but in the third panel, I applied an "order: unset" that puts 
+          all the books back in their original order—which is part of the pun. It makes no sense that unsetting the order puts 
+          the content in order.
+        </p>
+        <h3>Tailwind... again!</h3>
+        <p>
+          While I poke fun at Tailwind again with the title of the book series, this is an example of where Tailwind would be 
+          convenient.
+        </p>
+        <p>
+          Let me explain: I've been drawing these comics that look similar because they are a copy-paste of each other. Sometimes, I 
+          forget to remove some of the previous code, which "pollutes" the CSS code. If I used a utility-first CSS library to 
+          generate the comics, it would be cleaner and friendlier (not the HTML, though).
+        </p>
+        <p>
+          I already created a utility-class for the Batman comics... maybe I should do the same for this one, considering that
+          it's becoming an usual comic.
+        </p>
+        <h3>The "...or not?" part of the title</h3>
+        <p>
+          While using the <code>order</code> property may seem like a great idea in some cases, it needs to be used with caution as it may negatively 
+          impact the page's accessibility. <b>People usually expect the visual order to be the actual order of the elements</b>. Playing with 
+          the order may confuse some users, especially keyboard users, who may notice how the cursor jumps all around the place.
+        </p>
+        <p>
+          So remember: <code>order</code> can be really fun and really powerful. But with great power comes great responsibility. Don't break the site!
+        </p>
+        <footer>
+          Published on <time datetime="2024-08-12">August 12, 2024</time>
+        </footer>
+      </article>
       <article id="infinity">
         <h2>CSS Infinity... and beyond!</h2>
         <p>
