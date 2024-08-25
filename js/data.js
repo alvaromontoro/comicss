@@ -1151,4 +1151,12 @@ const posts = [
     title: "Order",
     ariaLabel: "cartoon with 4 panels showing a disorganized book shelf. Then two characters talking: 'your shelf is always messy!', then the other one replies '.shelf .book order:unset' all the books in the shelf become ordered. The first character replies 'I get why that worked, but it makes no sense'"
   },
+  {
+    id: 147,
+    uid: "floating-on-air",
+    boxes: 2,
+    title: "Floating on Air",
+    vertical: true,
+    ariaLabel: "Cartoon with 3 panels, the first show two show a person smiling and with hearts for eyes saying 'she makes me so happy, I could float on air'. In the last panel, two people tagged as Flex and Grid say simultaneously: 'Don't even think about it!'"
+  },
 ]
