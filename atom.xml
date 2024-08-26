@@ -2780,4 +2780,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Floating on Air</title>
+    <link href="https://comicss.art/comics/147" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/147/floating-on-air.html"/>
+    <id>https://comicss.art/comics/147</id>
+    <updated>2024-08-26T00:00:00Z</updated>
+    <summary>New Cartoon: Floating on Air</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/147/floating-on-air.png" alt="Cartoon with 3 panels, the first show two show a person smiling and with hearts for eyes saying 'she makes me so happy, I could float on air'. In the last panel, two people tagged as Flex and Grid say simultaneously: 'Don't even think about it!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
