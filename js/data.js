@@ -1164,6 +1164,7 @@ const posts = [
     uid: "favorite-drink",
     boxes: 1,
     title: "Favorite Drink",
+    vertical: true,
     ariaLabel: "What is web developers' favorite drink? :root beer"
   },
 ]
