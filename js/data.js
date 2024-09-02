@@ -1159,4 +1159,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon with 3 panels, the first show two show a person smiling and with hearts for eyes saying 'she makes me so happy, I could float on air'. In the last panel, two people tagged as Flex and Grid say simultaneously: 'Don't even think about it!'"
   },
+  {
+    id: 148,
+    uid: "favorite-drink",
+    boxes: 1,
+    title: "Favorite Drink",
+    ariaLabel: "What is web developers' favorite drink? :root beer"
+  },
 ]
