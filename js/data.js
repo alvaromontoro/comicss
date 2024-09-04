@@ -1167,4 +1167,12 @@ const posts = [
     vertical: true,
     ariaLabel: "What is web developers' favorite drink? :root beer"
   },
+  {
+    id: 149,
+    uid: "great-dancers",
+    boxes: 1,
+    title: "Great Dancers",
+    vertical: true,
+    ariaLabel: "Why are CSS Developers great dancers? Because they know all the steps()"
+  },
 ]

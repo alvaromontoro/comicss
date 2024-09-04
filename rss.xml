@@ -1486,5 +1486,15 @@
       <enclosure url="https://comicss.art/comics/148/favorite-drink.png" length="147000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/149</guid>
+      <title>Great Dancers</title>
+      <link>https://comicss.art/comics/149</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/149/great-dancers.png" length="157000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
