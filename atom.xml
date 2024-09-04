@@ -2823,11 +2823,30 @@
     <link href="https://comicss.art/comics/149" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/149/great-dancers.html"/>
     <id>https://comicss.art/comics/149</id>
-    <updated>2024-09-04T00:00:00Z</updated>
+    <updated>2024-09-03T00:00:00Z</updated>
     <summary>New Cartoon: Great Dancers</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/149/great-dancers.png" alt="Why are CSS Developers great dancers? Because they know all the steps()" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Driver's License</title>
+    <link href="https://comicss.art/comics/150" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/150/drivers-license.html"/>
+    <id>https://comicss.art/comics/150</id>
+    <updated>2024-09-04T00:00:00Z</updated>
+    <summary>New Cartoon: Driver's License</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/150/drivers-license.png" alt="Why do Web Developers have a tough time getting a driver's license? They pass the written test or the driving test, but they rarely clear:both" /></p>
       </div>
     </content>
     <rights>Copyright 2024 Alvaro Montoro</rights>

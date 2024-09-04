@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Bold.ttf);
+  font-weight: 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+article {
+  --bg: #c4f1f4;
+  --line: #341a47;
+  --paint: pink;
+  --tire: #64709a;
+  --tire-dark: var(--line);
+  --tire-light: #87a4c2;
+  --metal: #9ccbeb;
+  --metal-dark: #80a8ca;
+  --glass: #a7f3fe;
+  font-weight: 200;
+  font-size: 2vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+  position: relative;
+}
+
+section {
+  position: relative;
+  width: 90vmin;
+  aspect-ratio: 1;
+  border: 1.25vmin solid;
+  background: var(--bg);
+}
+
+section *,
+section *::before,
+section *::after {
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.text {
+  font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-size: 7.25vmin;
+  width: 100%;
+  transform: translate(0, -50%);
+  text-align: center;
+  font-weight: bold;
+  text-wrap: balance;
+  line-height: 1.1;
+  
+  &.top {
+    top: 15%;
+  }
+  
+  &.bottom {
+    top: 85%;
+  }
+  
+  code, span {
+    position: relative;
+    font-weight: bold;
+    background: #ccc;
+    padding: 0 0.2em;
+    vertical-align: middle;
+  }
+  
+/*   font-family: 'Patrick Hand SC','Amatic SC', Helvetica, Arial, sans-serif;
+  font-size: 5.5vmin;
+  transform: translate(0, -50%) scaleY(1.2);
+  line-height: 1;
+  
+  code, span {
+    clip-path: polygon(0 14%, 100% 14%, 100% 100%, 0 100%);
+    top: -0.1em;
+  } */
+}
+
+
+.car {
+  width: 70%;
+  height: 50%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--line);
+  
+  .bumper {
+    width: 53%;
+    height: 14%;
+    border: 0.4em solid;
+    border-radius: 50% / 20% 20% 60% 60%;
+    bottom: 7%;
+    left: 0;
+    transform: rotate(2deg);
+    background: var(--metal);
+    box-shadow: inset 0 -0.5em var(--metal-dark);
+  }
+  
+  .light {
+    width: 11%;
+    height: 16%;
+    border-radius:100% 110% 110% 100% / 100%;
+    border: 0.3em solid;
+    background: 
+      var(--metal);
+    box-shadow: inset -0.35em -0.35em var(--metal-dark);
+    top: 70%;
+    left: 2%;
+    
+    &::before {
+      content: "";
+      width: 80%;
+      height: 80%;
+      border: 0.3em solid;
+      top: 50%;
+      left: 4%;
+      transform: translate(0, -50%);
+      border-radius: 50%;
+      background: #fff;
+    }
+    
+    & ~ & {
+      left: 37%;
+      top: 71.5%;
+    }
+  }
+  
+  .mirror {
+    width: 10%;
+    height: 14%;
+    border-radius: 120% 70% 70% 120% / 100%;
+    border: 0.3em solid;
+    background: var(--metal);
+    box-shadow: inset 0.35em -0.35em var(--metal-dark);
+    top: 47%;
+    left: 15%;
+    
+    & ~ & {
+      top: 47%;
+      left: 59.5%;
+    }
+  }
+  
+  .frame {
+    width: 60%;
+    left: 3%;
+    height: 45%;
+    bottom: 14%;
+    border: 0.5em solid;
+    border-radius: 100% 0 0 0;
+    transform: rotate(2deg);
+    border-right: 0;
+    border-top: 0.25em solid;
+    border-bottom: 0;
+    background: 
+      radial-gradient(95% 270% at 100% 120%, #0000 70%, var(--line) 70.5% calc(70.5% + 0.25em), #0000 calc(70.5% + 0.3em)) 0 60% / 100% 40% no-repeat,
+      radial-gradient(12% 33% at 89% 100%, var(--line) 99%, #0000),
+      var(--paint);
+    mask: radial-gradient(9% 30% at 90% 100%, #0000 99%, #000);
+    clip-path: polygon(0 30%, 95% 25%, 100% 100%, 0 100%);
+  }
+  
+  .glass {
+    width: 41%;
+    height: 30%;
+    border: 0.4em solid;
+    border-radius: 50% 20% 50% 50% / 250% 300% 0 0;
+    left: 20%;
+    bottom: calc(46% - 0.35em);
+    transform-origin: 0 100%;
+    transform: skew(-15deg);
+    box-shadow: 
+      inset 3em 0 0 -2.6em var(--paint),
+       inset 4em 0 0 -3.3em,
+      inset -3em 0 0 -2.6em var(--paint),
+       inset -4em 0 0 -3.3em;
+    background: 
+      linear-gradient(-55deg, #0000 30%, #fff4 0 32%, #0000 0 35%, #fff4 0 43%, #0000 0),
+      var(--glass);
+    
+    &::before, &::after {
+      content: "";
+      width: 0.4em;
+      height: 1em;
+      background: var(--paint);
+      top: 95%;
+      right: 0%;
+    }
+    &::after {
+      left: 0;
+    }
+  }
+  
+  .door {
+    width: 45%;
+    left: 50%;
+    height: 36%;
+    bottom: 10%;
+    border: 0.35em solid;
+    border-radius: 30% / 0 70% 0 0;
+    background: 
+      radial-gradient(14% 44% at 84.5% 99%, var(--line) 99%, #0000),
+      linear-gradient(#0000 80%, var(--line) 0 calc(80% + 0.35em), var(--metal) 0 95%, var(--metal-dark) 0),
+      radial-gradient(100% 200% at 0% 50%, #0000 70%, var(--line) 70.5% calc(70.5% + 0.25em), #0000 calc(70.5% + 0.3em)),
+      
+      radial-gradient(105% 220% at 100% 50%, #0000 70%, var(--line) 70.5% calc(70.5% + 0.25em), #0000 calc(70.5% + 0.3em)),
+      
+      
+      linear-gradient(90deg, #0008 20%, #0000 0),
+      var(--paint);
+    mask: radial-gradient(11% 41% at 84.5% 99%, #0000 99%, #000);
+    background-repeat: no-repeat;
+    
+    &::before {
+      content: "";
+      width: 20%;
+      height: 15%;
+      left: 46%;
+      top: 4%;
+      border: 0.4em solid;
+      background: var(--metal);
+      border-radius: 80% 120% 120% 80% / 100%;
+    }
+  }
+  
+  .tire {
+    width: 18%;
+    height: 25%;
+    border: 0.4em solid;
+    border-radius: 50% / 100%;
+    background:
+      radial-gradient(20% 45% at 80% 55%, var(--tire) 99.99%, #0000),
+      radial-gradient(20% 50% at 80% 50%, var(--tire-light) 99.99%, #0000),
+      var(--line);
+    
+    &::before {
+      content:"";
+      width: 30%;
+      height: 54%;
+      border: 0.3em solid;
+      background: var(--metal);
+        border-radius: 50%;
+      left: 83%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: inset 0.1em -0.3em var(--metal-dark)
+    }
+    
+    &.tire-1 {
+      bottom: 0;
+      left: 45%;
+    }
+    
+    &.tire-2 {
+      bottom: 0;
+      left: 5%;
+      transform-origin: 50% 100%;
+      transform: scale(0.9);
+      background: var(--line);
+      
+      &::before { content: none; }
+    }
+    
+    &.tire-3 {
+      bottom: 0;
+      left: 75%;
+      transform-origin: 50% 100%;
+      atransform: scale(0.975);
+    }
+    
+    &.tire-4 {
+      bottom: 0;
+      left: 44%;
+      transform-origin: 50% 100%;
+      transform: scale(0.9);
+      background: 
+        linear-gradient(#0004 0 0),
+        var(--line);
+      
+      
+      &::before { content: none; }
+    }
+    
+  }
+  
+  .hood {
+    width: 30%;
+    height: 33%;
+    background: red;
+    top: 25.66%;
+    left: 52%;
+    border-radius: 0 60% 0 0/100%;
+    border: 0.35em solid;
+    background: 
+      var(--glass);
+    box-shadow:
+      inset -0.5em 0.5em var(--paint),
+      inset -0.8em 0.75em
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <p class="text top">Why do Web Developers have a tough time getting a driver's license?</p>
+        <p class="text bottom">They pass the written test or the driving test, but they rarely <span>clear:both</span></p>
+        <div class="car">
+    <!--       <div class="hood"></div> -->
+          <div class="tire tire-4"></div>
+          <div class="tire tire-3"></div>
+          <div class="tire tire-2"></div>
+          <div class="door"></div>
+          <div class="tire tire-1"></div>
+          <div class="mirror"></div>
+          <div class="frame"></div>
+          <div class="bumper"></div>
+          <div class="glass"></div>
+          <div class="mirror"></div>
+          <div class="light"></div>
+          <div class="light"></div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
