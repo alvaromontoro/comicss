@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Bold.ttf);
+  font-weight: 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+article {
+  --bg: #fdd8e9;
+  font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 2vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+  position: relative;
+}
+
+section {
+  position: relative;
+  width: 90vmin;
+  aspect-ratio: 1;
+  border: 1.25vmin solid;
+  background: var(--bg);
+}
+
+section * {
+  position: absolute;
+}
+
+.text {
+  margin: 0;
+  font-size: 7.5vmin;
+  width: 100%;
+  transform: translate(0, -50%);
+  text-align: center;
+  font-weight: bold;
+  
+  &.top {
+    top: 12%;
+  }
+  
+  &.bottom {
+    top: 88%;
+  }
+  
+  code, span {
+    position: relative;
+    font-weight: bold;
+    background: #ccc;
+    padding: 0 0.2em;
+    vertical-align: middle;
+  }
+}
+
+
+.steps {
+  --c: #900;
+  width: 55%;
+  aspect-ratio: 1;
+  top: 49.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: darken;
+  
+  .step {
+    width: 20%;
+    height: 40%;
+    filter: blur(0.5em) contrast(20);
+    background: white;
+    box-shadow: 0 0 0 0.5em white;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 66%;
+      border-radius: 100% / 80% 80% 140% 140%;
+      background: var(--c);
+      transform: rotate(5deg);
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 12%;
+      width: 70%;
+      height: 45%;
+      border-radius: 100% / 100% 100% 90% 90%;
+      background: var(--c);
+    }
+    
+    &.right {
+      --c: #c0c;
+      transform: scaleX(-1);
+    }
+    
+    &.step-1 { 
+      bottom: 0; 
+    }
+    &.step-2 { 
+      bottom: 0; 
+      left: 25%;
+    }
+    &.step-3 {
+      left: 43%;
+      top: -4%;
+      transform: rotate(60deg);
+    }
+    &.step-4 { 
+      bottom: 0; 
+      left:80%;
+    }
+  }
+  
+  .line::before {
+    content: "";
+    position: absolute;
+    width: 1.25em;
+    aspect-ratio: 1;
+    border-top: 0.4em solid #000;
+    border-right: 0.4em solid #000;
+    left: 100%;
+    transform: translate(-100%, -60%) rotate(35deg);
+  }
+  .line-1 {
+    width: 22%;
+    height: 32%;
+    border-radius:100% 0 0 0;
+    border: 0em dashed #0000;
+    border-left: 0.4em dashed black;
+    border-top: 0.4em dashed black;
+    top: 25%;
+    left: 7%;
+  }
+  
+  .line-2 {
+    width: 32%;
+    height: 0%;
+    border: 0em dashed #0000;
+    border-top: 0.4em dashed black;
+    top: 80%;
+    left: 47.5%;
+    
+    &::before {
+      transform: translate(-85%, -60%) rotate(45deg);
+    }
+  }
+  
+  .line-3 {
+    width: 53%;
+    height: 18%;
+    border-radius:50% / 100% 100% 0 0;
+    border: 0em dashed #0000;
+    border-left: 0.4em dashed black;
+    border-top: 0.4em dashed black;
+    border-right: 0.4em dashed black;
+    top: 36%;
+    left: 35%;
+    
+    &::before {
+      left: 0;
+      top: 100%;
+      transform: translate(-60%, -105%) rotate(135deg);
+    }
+   
+    &::after {
+      content: "";
+      position: absolute;
+      top: -0.4em;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 20%;
+      aspect-ratio: 1;
+      border: 0.4em dashed #000;
+      border-radius: 50%;
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <p class="text top">Why are CSS Developers great dancers?</p>
+        <p class="text bottom">Because they know all the <span>steps()</span></p>
+        <div class="steps">
+          <div class="step step-1"></div>
+          <div class="step step-2 right"></div>
+          <div class="step step-3"></div>
+          <div class="step step-4 right"></div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
