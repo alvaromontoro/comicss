@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+article {
+  font-size: 0.75vmin;
+  width: 120em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5em;
+
+  section {
+    /* width: 50%; */
+    box-sizing: border-box;
+    border: 0.5em solid;
+    aspect-ratio: 1; /* 3 / 2; */
+    position: relative;
+    overflow: hidden;
+    /* background: linear-gradient(#0001, #0001);
+    background: repeating-linear-gradient(-45deg, #0000 0 0.5em, #0001 0 0.6em);
+    background: 
+      repeating-linear-gradient(-45deg, #0000 0 0.25em, #0001 0 0.3em) 0 0 / 100% 20% no-repeat,
+      repeating-linear-gradient(-45deg, #0000 0 0.5em, #0001 0 0.6em); */
+
+    & *,
+    & *::before,
+    & *::after {
+      box-sizing: border-box;
+      position: absolute;
+    }
+
+    .counter {
+      width: 60%;
+      height: 8%;
+      background: #fff;
+      border-top: 0.4em solid;
+      border-right: 0.4em solid;
+      bottom: 0;
+      left:0;
+    }
+
+    .helpdesk {
+      width: 3em;
+      height: 3em;
+      border-left: 0.4em solid;
+      transform-origin: 0 0;
+      transform: skew(-20deg);
+      bottom: 8%;
+      left: 35%;
+      background: #fff;
+
+      &::before {
+        content: "comiCSS";
+        border: 0.2em solid;
+        height: 100%;
+        left: -0.3em;
+        padding: 0 0.5em;
+        display: grid;
+        background: #fff;
+        place-items: center;
+        font-size: 2em;
+        transform-origin: -0.2em -0.2em;
+        border-bottom: 0;
+        transform: skew(40deg);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+      }
+    }
+
+    .bubble {
+      top: 1em;
+      left: 1em;
+      right: 1em;
+      border: 0.4em solid;
+      border-radius: 2em;
+      padding: 2em;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background: white;
+
+      &::before {
+        content:"";
+        width: 2em;
+        height: 3em;
+        background: red;
+        top: 100%;
+        border-left: 0.4em solid;
+        background: linear-gradient(to bottom right, #fff calc(50% - 0.4em), #000 0 50%, #0000 0);
+      }
+
+      &.right::before {
+        transform: scaleX(-1);
+        right: 10%;
+      }
+
+      &::after {
+        display: block;
+        position: relative;
+        text-wrap: balance;
+        font-size: 2.5em;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.person { 
+  --skin-color: #fff;
+  --skin: linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, var(--skin-color);
+  width: 20em;
+  aspect-ratio: 2 / 3;
+  bottom: 0;
+
+  .body {
+    width: 40%;
+    height: 43%;
+    left: 49%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+
+    .chest {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      border-radius: 4em 4em 0 0;
+      aborder-radius: 100% 100% 0 0;
+    }
+
+    .arm {
+      width: 1em;
+      height: 20em;
+      background: #000;
+      top: 25%;
+      left: calc(100% - 1.1em);
+      transform-origin: 100% 0;
+      transform: rotate(-15deg);
+
+
+      & ~ & {
+        left: 0;
+        transform-origin: 0 0;
+        transform: rotate(10deg);
+      }
+    }
+  }
+
+  .head {
+    width: 45%;
+    height: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .neck {
+      width: 15%;
+      height: 30%;
+      border: 0.4em solid;
+      border-radius: 2em;
+      left: 49%;
+      top: 90%;
+      transform: translate(-50%);
+      background: var(--skin);
+    }
+
+    .face {
+      width: 100%;
+      height: 100%;
+      border: 0.4em solid;
+      border-radius: 3em;
+      background: var(--skin);
+
+      .mouth {
+        left: 60%;
+        top: 82%;
+        width: 30%;
+        height: 7%;
+        background: #000;
+        border-radius: 50% / 0 0 100% 100%;
+        transform: translate(-50%);
+      }
+
+      .ear {
+        --skin: repeating-linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, var(--skin-color);
+        width: 30%;
+        aspect-ratio: 1;
+        border: 0.4em solid;
+        border-radius: 50%;
+        background: red;
+        background: var(--skin);
+        clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+        top: 59.5%;
+        left: 0;
+        transform: translate(-50%);
+      }
+
+      .eye {
+        width: 8%;
+        height: 13%;
+        background: #000;
+        border-radius: 6em;
+        left: 40%;
+        top: 50%;
+
+        & + & {
+          left: 80%;
+        }
+      }
+
+      .eyebrow {
+        --diff: ;
+        width: 25%;
+        height: 5%;
+        background: #000;
+        border-radius: 6em;
+        left: 45%;
+        top: 45%;
+        transform: translate(-50%, -50%) var(--diff);
+
+        & + & {
+          transform: translate(-50%, -50%) scaleX(-1) var(--diff);
+          left: 85%;
+        }
+      }
+
+      .nose {
+        width: 15%;
+        aspect-ratio: 0.8;
+        border: 0.4em solid;
+        top: 66%;
+        left: 60%;
+        border-radius: 0 10em 10em 0;
+        border-left: 0;
+      }
+    }
+  }
+}
+
+.person-1 {
+  --skin-color: chartreuse;
+  left: 12%;
+  transform: scale(1.1);
+  bottom: 1%;
+
+  .body {
+    width: 50%;
+    height: 50%;
+    .arm {
+        top: 1%;
+        left: 30%;
+        width: 40%;
+        height: 115%;
+        transform: rotate(-80deg);
+
+        & ~ & {
+          left: 5%;
+          top: 30%;
+          height: 115%;
+          box-shadow: -0.25em 2em #fff;;
+          transform: rotate(-60deg);
+        }
+
+        &::before{ 
+          content: "";
+          width: 120%;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          border: 0.4em solid;
+          background: var(--skin-color);
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+  }
+  .head {
+    top: -7.5%;
+    .neck {width: 25%;}
+    .face {
+      background: 
+        linear-gradient(to bottom right, #0000 40%, #000 0 60%, #0000 0) 50% 20% / 50% 6% no-repeat,
+        linear-gradient(to top right, #0000 30%, #000 0 70%, #0000 0) 30% 22% / 6% 6% no-repeat,
+        linear-gradient(to top right, #0000 30%, #000 0 70%, #0000 0) 40% 21% / 6% 6% no-repeat,
+        linear-gradient(to top right, #0000 30%, #000 0 70%, #0000 0) 50% 20% / 6% 6% no-repeat,
+        linear-gradient(to top right, #0000 30%, #000 0 70%, #0000 0) 60% 19% / 6% 6% no-repeat,
+        linear-gradient(to top right, #0000 30%, #000 0 70%, #0000 0) 70% 18% / 6% 6% no-repeat,
+                var(--skin);
+      border-radius: 0 0 3em 4em;
+      .eyebrow {
+        --diff: rotate(13deg);
+        top: 44%;
+        height: 6%;
+        width: 44%;
+        border-radius: 1em 0 0 1em;
+      }
+
+      .mouth {
+        transform: translateX(-50%) scale(0.85);
+        width: 30%;
+      }
+
+      .hair {
+        width: calc(100% + 0.7em);
+        height: 20%;
+        background: radial-gradient(60% 100% at 50% 100%, #000 99%, #0000) 0 0 / 10% 100%;
+        left: -0.3em;
+        top: -12%;
+        transform-origin: 0 100%;
+      }
+    }
+  }
+}
+
+.person-2 {
+  transform: scaleX(-1);
+  right: 6%;
+  aspect-ratio: 2/3.15;
+
+  .head {
+    .face {
+      border-radius: 5em 5em 3em 3em;
+      .ear {
+        top: 65%;
+      }
+      .eyebrow {
+        --diff: rotate(2deg);
+        height: 4%;
+        top: 40%;
+      }
+
+      .hair {
+        width: 135%;
+        height: 20%;
+        background: #000;
+        border-radius: 50% / 100% 100% 0 0;
+        left: -0.3em;
+        top: 0%;
+        transform-origin: 0 100%;
+        transform: rotate(-5deg);
+
+        &::before,
+        &::after {
+          content: "";
+          width: 105%;
+          height: 100%;
+          border-radius: 50% / 100% 100% 0 0;
+          transform-origin: 0 100%;
+          transform: rotate(10deg);
+          background: #000;
+        }
+
+        &::after {
+          width: 100%;
+          transform: rotate(16deg);
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(1) {
+  .bubble {
+    width: 60%;
+    left: 25%;
+    top: 10%;
+
+    &::before {
+      left: 31% !important;
+      height: 6em;
+      transform: skew(-30deg) !important;
+    }
+
+    &::after {
+      text-wrap: wrap;
+      content: "Be very scared of me! Frankenstein's Monster!!";
+    }
+  }
+
+  .person-1 {
+    .head {
+      .face {
+        .mouth {
+          transform: translate(-50%) rotate(8deg) scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(2) {
+  .bubble {
+    width: 68%;
+    top: 15%;
+    left: 10%;
+
+    &::before {
+      height: 6em;
+      left: 79%;
+      transform: skew(25deg);
+    }
+
+    &::after {
+      white-space: pre-wrap;
+      text-wrap: wrap;
+      content: "You are not a monster.\a You are just misunderstood!";
+    }
+  }
+
+
+  .person-2 {
+    .body {
+      .arm {
+        transform: rotate(-10deg);
+        & ~ & {
+          transform: rotate(12deg);
+        }
+      }
+    }
+    .head {
+      .face {
+        .mouth {
+          top: 85%;
+          width: 25%;
+          height: 5%;
+          transform: translateX(-50%) rotate(2deg);
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(3) {
+  .bubble {
+    width: 51%;
+    top: 5%;
+    left: 38%;
+
+    &::before {
+      height: 5em;
+      left: 15% !important;
+      height: 4.5em;
+      transform: scaleX(1) skew(-35deg) !important;
+    }
+    &::after {
+      white-space: pre-wrap;
+      text-wrap: wrap;
+      content: "I use divs as buttons all the time...\a\a...ON PURPOSE!!!";
+    }
+  }
+
+  .person-1 {
+    transform: scale(1.1) rotate(3deg);
+    .head {
+      .face {
+        .mouth {
+          transform: translate(-50%) scaleY(-1) scale(0.6);
+        }
+
+        .eyebrow {
+          top: 47%;
+        }
+
+        .mouth {
+          width: 10%;
+          top: 85%;
+          height: 2.5%;
+          transform: translate(-50%) scale(3) scaleY(-1) rotate(5deg);
+        }
+      }
+    }
+
+    .body {
+      .arm {
+        transform: rotate(-28deg);
+        left: 51%;
+        top: 9%;
+
+        & ~ & {
+          left: 8%;
+          top:9%;
+          transform: rotate(32deg);
+        }
+      }
+    }
+  }
+}
+
+
+
+section:nth-child(4) {
+  .bubble {
+    max-width: 50%;
+    width: fit-content;
+    left: 26%;
+    top: 15%;
+    &::before {
+      height: 6em;
+      right: 10%;
+      transform: skew(20deg);
+    }
+    &::after {
+      content: "Oh, ****! You really are a monster!!!";
+    }
+  }
+
+  .person-2 {
+    right: -3%;
+    transform-origin: 100% 100%;
+    left: 25%;
+    transform: scaleX(-1) rotate(-3deg);
+
+    .lines {
+      width: 4em;
+      aspect-ratio: 1;
+      top: 0;
+      left: 105%;
+      transform: translate(0, 70%) rotate(-20deg);
+      border-radius:  100%;
+      background: 
+        conic-gradient(at -50% 50%, #0000 76deg, #000 0 80deg, #0000 0),
+        conic-gradient(at -50% 50%, #0000 90deg, #000 0 94deg, #0000 0),
+        conic-gradient(at -50% 50%, #0000 104deg, #000 0 108deg, #0000 0);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 30% 50%);
+    }
+    .head {
+      .face {
+        background:
+        linear-gradient(#00f2, #00f0 70%),
+        var(--skin)
+        ;
+        .eyebrow {
+          top: 40%;
+          --diff: rotate(-20deg);
+        }
+        .mouth {
+          top: 77%;
+          border-radius: 50%;
+          width: 40%;
+          height: auto;
+          aspect-ratio: 1;
+          transform: translate(-50%) scaleY(1) scale(0.6);
+          clip-path: polygon(0 0, 100% 0, 150% 50%, -100% 100%);
+        }
+      }
+    }
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Inspired by El Batracio Amarillo #150 -->
+    <article role="img" aria-label="Comic with 4 panels. In the first one Frankenstein's Monster looks menacing yelling 'Be very scared of Frankenstein's Monster!'. A person replies 'You are not a monster, you are just misunderstood'. The monster replies 'I use divs as buttons... on purpose'. The person looks disappointed and terrified in the last panel.">
+      <section>
+        <div class="bubble right"></div>
+        <div class="person person-1">
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="ear"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair"></div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    
+      <section>
+        <div class="bubble"></div>
+        <div class="person person-2">
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="ear"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section>
+        <div class="bubble right"></div>
+        <div class="person person-1">
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="ear"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair"></div>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+    
+      <section>
+        <div class="bubble"></div>
+    
+        <div class="person person-2">
+          <div class="body">
+            <div class="arm"></div>
+            <div class="chest"></div>
+            <div class="arm"></div>
+          </div>
+          <div class="head">
+            <div class="neck"></div>
+            <div class="face">
+              <div class="ear"></div>
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="eyebrow"></div>
+              <div class="eyebrow"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+              <div class="hair"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
