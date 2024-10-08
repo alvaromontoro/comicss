@@ -1506,5 +1506,25 @@
       <enclosure url="https://comicss.art/comics/150/drivers-license.png" length="290000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/151</guid>
+      <title>Frankenstein's Monster</title>
+      <link>https://comicss.art/comics/151</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/151/frankensteins-monster.png" length="184000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/152</guid>
+      <title>Costumes</title>
+      <link>https://comicss.art/comics/152</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/152/costumes.png" length="262000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

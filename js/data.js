@@ -1183,4 +1183,18 @@ const posts = [
     vertical: true,
     ariaLabel: "Why do Web Developers have a tough time getting a driver's license? They pass the written test or the driving test, but they rarely clear:both"
   },
+  {
+    id: 151,
+    uid: "frankensteins-monster",
+    boxes: 4,
+    title: "Frankenstein's Monster",
+    ariaLabel: "Comic with 4 panels. In the first one Frankenstein's Monster looks menacing yelling 'Be very scared of Frankenstein's Monster!'. A person replies 'You are not a monster, you are just misunderstood'. The monster replies 'I use divs as buttons... on purpose'. The person looks disappointed and terrified in the last panel."
+  },
+  {
+    id: 152,
+    uid: "costumes",
+    boxes: 4,
+    title: "CSS Halloween Party",
+    ariaLabel: "Cartoon with 4 panels titled 'halloween costumes'. First panel: the CSS3 logo with a skeleton make up on, and the text 'CSS will go as a skeleton... because it is at the core of all styling'. Second panel: the CSS modules logo with Frankenstein's monster features, and the text 'CSS Modules will go as Frankenstein because it is made of many parts and components'. Third panel: The boostrap logo wrapped in clothe, and the text: 'Bootstrap will go as a mummy... because it is old and dusty, but it gets the job done'. In the last panel, the Tailwind logo with fangs and the text: 'Tailwind will be Dracula... because it sucks.'"
+  },
 ]
