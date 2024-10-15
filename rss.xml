@@ -1526,5 +1526,85 @@
       <enclosure url="https://comicss.art/comics/152/costumes.png" length="262000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/153</guid>
+      <title>Lazy River</title>
+      <link>https://comicss.art/comics/153</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/153/lazy-river.png" length="176000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/154</guid>
+      <title>Negative Animation Delay</title>
+      <link>https://comicss.art/comics/154</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 15 Oct 2024 00:00:01 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/154/negative-animation-delay.png" length="239000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/155</guid>
+      <title>What is blue...?</title>
+      <link>https://comicss.art/comics/155</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 15 Oct 2024 00:00:02 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/155/blue-not-heavy.png" length="77000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/156</guid>
+      <title>Optimistic</title>
+      <link>https://comicss.art/comics/156</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 15 Oct 2024 00:00:03 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/156/optimistic.png" length="188000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/157</guid>
+      <title>Why did the SVG go to the dentist?</title>
+      <link>https://comicss.art/comics/157</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 15 Oct 2024 00:00:04 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/157/svg-dentist.png" length="142000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/158</guid>
+      <title>What does HTML...</title>
+      <link>https://comicss.art/comics/158</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 15 Oct 2024 00:00:05 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/158/html-parties.png" length="111000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/159</guid>
+      <title>Color Search</title>
+      <link>https://comicss.art/comics/159</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 15 Oct 2024 00:00:06 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/159/color-search.png" length="168000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/160</guid>
+      <title>Leaving the University</title>
+      <link>https://comicss.art/comics/160</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 15 Oct 2024 00:00:07 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/160/repeating-conic-gradient.png" length="254000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

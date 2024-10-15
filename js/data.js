@@ -1197,4 +1197,68 @@ const posts = [
     title: "CSS Halloween Party",
     ariaLabel: "Cartoon with 4 panels titled 'halloween costumes'. First panel: the CSS3 logo with a skeleton make up on, and the text 'CSS will go as a skeleton... because it is at the core of all styling'. Second panel: the CSS modules logo with Frankenstein's monster features, and the text 'CSS Modules will go as Frankenstein because it is made of many parts and components'. Third panel: The boostrap logo wrapped in clothe, and the text: 'Bootstrap will go as a mummy... because it is old and dusty, but it gets the job done'. In the last panel, the Tailwind logo with fangs and the text: 'Tailwind will be Dracula... because it sucks.'"
   },
+  {
+    id: 153,
+    uid: "lazy-river",
+    boxes: 1,
+    title: "Lazy River",
+    vertical: true,
+    ariaLabel: "why did the web developer stop going to the lazy river? they had to use a float"
+  },
+  {
+    id: 154,
+    uid: "negative-animation-delay",
+    boxes: 1,
+    title: "Negative Animation Delay",
+    vertical: true,
+    ariaLabel: "I was going to tell you a joke about negative animation-delay... but you didn't get it"
+  },
+  {
+    id: 155,
+    uid: "blue-not-heavy",
+    boxes: 1,
+    title: "What is blue...?",
+    vertical: true,
+    ariaLabel: "What is blue and not too heavy? LightBlue"
+  },
+  {
+    id: 156,
+    uid: "optimistic",
+    boxes: 1,
+    title: "Optimistic",
+    vertical: true,
+    ariaLabel: "why are CSS developers so optimistic? they never see the glass half :empty"
+  },
+  {
+    id: 157,
+    uid: "svg-dentist",
+    boxes: 1,
+    title: "Why did the SVG go to the dentist?",
+    vertical: true,
+    ariaLabel: "Why did the svg go to the dentist? it lost a filling"
+  },
+  {
+    id: 158,
+    uid: "html-parties",
+    boxes: 1,
+    title: "What does HTML...",
+    vertical: true,
+    ariaLabel: "what does html wear at parties? address"
+  },
+  {
+    id: 159,
+    uid: "color-search",
+    boxes: 1,
+    title: "Color Search",
+    vertical: true,
+    ariaLabel: "I looked for the perfect grayish-purplish color. It took a long time, but I finally found it in a DECADE"
+  },
+  {
+    id: 160,
+    uid: "repeating-conic-gradient",
+    boxes: 1,
+    title: "Leaving the University",
+    vertical: true,
+    ariaLabel: "why did the repeating-conic-gradient leave the university? It already had 360 degrees"
+  },
 ]
