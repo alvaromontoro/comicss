@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Bold.ttf);
+  font-weight: 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+article {
+  --bg: #ffb13b55;
+  --bg-light: #fff5ff;
+  font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 2vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+  position: relative;
+/*   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ */
+}
+
+section {
+  position: relative;
+  width: 90vmin;
+  aspect-ratio: 1;
+  border: 1.25vmin solid;
+  background: var(--bg);
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.text {
+  margin: 0;
+  font-size: 7.5vmin;
+  width: 100%;
+  transform: translate(0, -50%);
+  text-align: center;
+  font-weight: bold;
+  
+  &.top {
+    top: 15%;
+  }
+  
+  &.bottom {
+    top: 85%;
+  }
+  
+  code, span {
+    position: relative;
+    font-weight: bold;
+    background: #ccc;
+    padding: 0 0.2em;
+    vertical-align: middle;
+  }
+  
+  b {
+    position: relative;
+    font-weigth: bold;
+  }
+}
+
+/* inspired by https://www.alamy.com/cute-cartoon-root-beer-float-character-with-text-im-rooting-for-you-kawaii-root-beer-character-with-whipped-cream-cherry-on-top-and-drinking-straw-image348799593.html */
+svg {
+  width: 55%;
+  aspect-ratio: 1;
+  top: 49.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--line);
+  
+}
+
+.logo.html {
+  top: 45%;
+  left: 50%;
+  width: 30%;
+  aspect-ratio: 22 / 25;
+  background: #f73d01;
+  clip-path: polygon(0 0, 100% 0, 90% 90%, 50% 100%,10% 90%);
+  transform: translate(-50%, -50%);
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff1;
+    clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+    mix-blend-mode: plus-lighter;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #eee;
+    clip-path: polygon(18.50% 18.45%, 81.06% 18.45%, 79.96% 29.51%, 32.38% 29.51%, 33.48% 40.78%, 78.85% 40.78%, 75.55% 74.56%, 50.00% 80.97%, 24.23% 74.56%, 22.47% 57.28%, 35.02% 57.28%, 35.90% 66.02%, 49.78% 69.51%, 63.66% 66.02%, 65.20% 51.84%, 21.81% 51.84%);
+  }
+
+  .eye {
+    --pos: 33.3%;
+    width: 18%;
+    aspect-ratio: 1;
+    background: radial-gradient(circle at 35% 33%, #fff 19%, #0000 20%),
+      radial-gradient(circle at 18% 58%, #fff 9%, #0000 10%),
+      #000;
+    border-radius: 50%;
+    top: 40%;
+    left: var(--pos);
+    transform: translate(-50%, -50%);
+    
+    & ~ & {
+      left: calc(100% - var(--pos));
+    }
+  }
+  
+  .mouth {
+    width: 18%;
+    aspect-ratio: 2;
+    background: radial-gradient(farthest-side at 50% 0, #0000 50%, #000 0 99%, #0000);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.dress {
+  top: 55%;
+  left: 50%;
+  width: 30%;
+  aspect-ratio: 22 / 25;
+  transform: translate(-50%, -50%);
+
+  &::before {
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 110%;
+    height: 100%;
+    background: hotpink;
+    clip-path: polygon(0 100%, 100% 100%, 89% 40%, 50% 40%, 11% 40%);
+    border-radius: 100% / 20%;
+    background: repeating-conic-gradient(at 50% -250%, #fcd 0 1.25deg, #fbc 1.26deg 3.75deg, #fcd 3.76deg 5deg);
+  }
+  
+  &::after {
+    content: "";
+    width: 89%;
+    height:10%;
+    background: #fab;
+    top: 40%;
+      left: 50%;
+    transform: translate(-50%, -50%)
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <p class="text top">What does HTML wear at parties?</p>
+        <p class="text bottom"><span>&lt;address&gt;</span></p>
+        <div class="logo html">
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="dress"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

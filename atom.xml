@@ -2884,7 +2884,159 @@
     <summary>New Cartoon: Costumes</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><img src="https://comicss.art/comics/152/costumes.png" alt="Cartoon with 4 panels titled 'halloween costumes'. First panel: the CSS3 logo with a skeleton make up on, and the text 'CSS will go as a skeleton... because it is at the core of all styling'. Second panel: the CSS modules logo with Frankenstein's monster features, and the text 'CSS Modules will go as Frankenstein because it is made of many parts and components'. Third panel: The boostrap logo wrapped in clothe, and the text: 'Bootstrap will go as a mummy... because it is old and dusty, but it gets the job done'. In the last panel, the Tailwind logo with fangs and the text: 'Tailwind will be Dracula... because it sucks.'"" /></p>
+        <p><img src="https://comicss.art/comics/152/costumes.png" alt="Cartoon with 4 panels titled 'halloween costumes'. First panel: the CSS3 logo with a skeleton make up on, and the text 'CSS will go as a skeleton... because it is at the core of all styling'. Second panel: the CSS modules logo with Frankenstein's monster features, and the text 'CSS Modules will go as Frankenstein because it is made of many parts and components'. Third panel: The boostrap logo wrapped in clothe, and the text: 'Bootstrap will go as a mummy... because it is old and dusty, but it gets the job done'. In the last panel, the Tailwind logo with fangs and the text: 'Tailwind will be Dracula... because it sucks.'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Lazy River</title>
+    <link href="https://comicss.art/comics/153" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/153/lazy-river.html"/>
+    <id>https://comicss.art/comics/153</id>
+    <updated>2024-10-15T00:00:00Z</updated>
+    <summary>New Cartoon: Lazy River</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/153/lazy-river.png" alt="why did the web developer stop going to the lazy river? they had to use a float" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Negative Animation Delay</title>
+    <link href="https://comicss.art/comics/154" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/154/negative-animation-delay.html"/>
+    <id>https://comicss.art/comics/154</id>
+    <updated>2024-10-15T00:00:01Z</updated>
+    <summary>New Cartoon: Negative Animation Delay</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/154/negative-animation-delay.png" alt="I was going to tell you a joke about negative animation-delay... but you didn't get it" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>What is blue...?</title>
+    <link href="https://comicss.art/comics/155" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/155/blue-not-heavy.html"/>
+    <id>https://comicss.art/comics/155</id>
+    <updated>2024-10-15T00:00:02Z</updated>
+    <summary>New Cartoon: What is blue...?</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/155/blue-not-heavy.png" alt="What is blue and not too heavy? LightBlue" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Optimistic</title>
+    <link href="https://comicss.art/comics/156" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/156/optimistic.html"/>
+    <id>https://comicss.art/comics/156</id>
+    <updated>2024-10-15T00:00:03Z</updated>
+    <summary>New Cartoon: Optimistic</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/156/optimistic.png" alt="why are CSS developers so optimistic? they never see the glass half :empty" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Why did the SVG go to the dentist?</title>
+    <link href="https://comicss.art/comics/157" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/157/svg-dentist.html"/>
+    <id>https://comicss.art/comics/157</id>
+    <updated>2024-10-15T00:00:04Z</updated>
+    <summary>New Cartoon: Why did the SVG go to the dentist?</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/157/svg-dentist.png" alt="Why did the svg go to the dentist? it lost a filling" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>What does HTML...</title>
+    <link href="https://comicss.art/comics/158" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/158/html-parties.html"/>
+    <id>https://comicss.art/comics/158</id>
+    <updated>2024-10-15T00:00:05Z</updated>
+    <summary>New Cartoon: What does HTML...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/158/html-parties.png" alt="what does html wear at parties? address" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Color Search</title>
+    <link href="https://comicss.art/comics/159" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/159/color-search.html"/>
+    <id>https://comicss.art/comics/159</id>
+    <updated>2024-10-15T00:00:06Z</updated>
+    <summary>New Cartoon: Color Search</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/159/color-search.png" alt="I looked for the perfect grayish-purplish color. It took a long time, but I finally found it in a DECADE" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Leaving the University</title>
+    <link href="https://comicss.art/comics/160" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/160/repeating-conic-gradient.html"/>
+    <id>https://comicss.art/comics/160</id>
+    <updated>2024-10-15T00:00:07Z</updated>
+    <summary>New Cartoon: Leaving the University</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/160/repeating-conic-gradient.png" alt="why did the repeating-conic-gradient leave the university? It already had 360 degrees" /></p>
       </div>
     </content>
     <rights>Copyright 2024 Alvaro Montoro</rights>
