@@ -1606,5 +1606,15 @@
       <enclosure url="https://comicss.art/comics/160/repeating-conic-gradient.png" length="254000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/161</guid>
+      <title>Reading</title>
+      <link>https://comicss.art/comics/161</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/161/reading.png" length="281000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
