@@ -3046,4 +3046,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Reading</title>
+    <link href="https://comicss.art/comics/161" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/161/reading.html"/>
+    <id>https://comicss.art/comics/161</id>
+    <updated>2024-10-19T00:00:00Z</updated>
+    <summary>New Cartoon: Reading</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/161/reading.png" alt="comic with for panels, there are two characters talking about what they have been reading and talking about how long it is compared to previous works from the same author, it took them a long time to read it. A third person arrives and asks what novel they are reading. They reply they are not reading any novel, they are reviewing some Tailwind code." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
