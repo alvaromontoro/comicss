@@ -3065,4 +3065,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Organs</title>
+    <link href="https://comicss.art/comics/162" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/162/organs.html"/>
+    <id>https://comicss.art/comics/162</id>
+    <updated>2024-10-20T00:00:00Z</updated>
+    <summary>New Cartoon: Organs</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/162/organs.png" alt="comic with four panels showcasing organs. The lungs say 'we breathe air for you', the heart says 'I pump blood for you', the liver says 'I filter was for you', and the brain says 'use table layout, floats everywhere, hardcode all values'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

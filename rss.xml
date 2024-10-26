@@ -1616,5 +1616,15 @@
       <enclosure url="https://comicss.art/comics/161/reading.png" length="281000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/162</guid>
+      <title>Organs</title>
+      <link>https://comicss.art/comics/162</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/162/organs.png" length="179000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
