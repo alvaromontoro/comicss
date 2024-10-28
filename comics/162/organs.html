@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/162/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/162/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+        display: grid;
+        font-size: 0.8vmin;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em;
+        width: 90em;
+      }
+
+      section {
+        border: 0.5em solid;
+        aspect-ratio: 9/10;
+        background: linear-gradient(#c9c8, #c9c0);
+        position: relative;
+        overflow: clip;
+
+        & *, 
+        & *::before,
+        & *::after {
+          position: absolute;
+          box-sizing: border-box;
+        }
+
+        .bubble {
+          --string: radial-gradient(80% 150% at 20% 0, #0000 50%, #00f 0 56.5%, #0000 0) 20% 50% / 80% 80% no-repeat;
+          width: 60%;
+          height: 70%;
+          top: 10%;
+          left: 50%;
+
+          &::after {
+            top: 0%;
+            left: 6%;
+            font-family: "Patrick Hand SC", "Comic Neue", "Comic Sans", "Comic Sans MS", "Amatic SC", Helvetica, Arial, sans-serif;
+            font-size: 2.25em;
+            text-transform: uppercase;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            width: 80%;
+            height: 50%;
+            line-height: 0.85;
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 80%;
+            background:
+              radial-gradient(45% 17% at 45% 32%, #00f 99%, #ffc0),
+              radial-gradient(25% 7% at 35% 24%, #00f 99%, #ffc0),
+              var(--string),
+              #fff;
+            box-shadow: 0 0 0 1em #fff;
+            filter: blur(1em) contrast(100) sepia(1) brightness(5.5) hue-rotate(250deg);
+            mix-blend-mode: multiply;
+            
+          }
+        }
+
+        .organ {
+          width: 60%;
+          aspect-ratio: 1;
+          background: #f003;
+          left: 50%;
+          top: 60%;
+          transform: translate(-50%,-50%);
+        }
+
+        &:nth-child(1) {
+          .bubble {
+            --string: radial-gradient(75% 75% at 20% 55%, #0000 52%, #00f 0 67%, #0000 0) 60% 50% / 60% 70% no-repeat;
+            top: -2%;
+            left: 40%;
+            &::after {
+              content: "We clean air for you!";
+            }
+          }
+
+          .lungs {
+            top: 63%;
+            background:
+              radial-gradient(100% 125% at 0 0, #0000 90%, #faa 0 99%, #0000) 0 0 / 53% 60%,
+              radial-gradient(100% 125% at 100% 0, #0000 90%, #faa 0 99%, #0000) 100% 0 / 53% 60%
+            ;
+            background-repeat: no-repeat;
+            transform: translate(-50%, -50%) scale(0.85);
+
+            &::before,
+            &::after {
+              --x: 100%;
+              content: "";
+              width: 50%;
+              height: 80%;
+              background: 
+                radial-gradient(20% 10% at calc(25% + var(--x) / 2) 8%, #fff1 45%, #0000 0),
+                radial-gradient(200% 120% at var(--x) 5%, #0000 45.5%, #0001 46.5% 47%, #0000 47.5%),
+                radial-gradient(185% 240% at var(--x) 5%, #0000 45.5%, #0001 46.5% 47%, #0000 47.5%),
+                radial-gradient(75% 15% at var(--x) 102%, #0003 99%, #0000),
+                brown;
+              bottom: 0;
+              left: 0;
+              border-radius: 100% 20% 50% 30% ;
+              transform: translate(-18%) skewY(-10deg);
+              box-shadow: inset 2em -0.5em #0002;
+            }
+
+            &::after {
+              --x: 0%;
+              left: 50%;
+              border-radius: 20% 100% 30% 50% ;
+              transform: translate(18%) skewY(10deg);
+              box-shadow: inset 1.5em 0.5em #0002;
+            }
+          }
+
+          .face {
+            width: 60%;
+            height: 12%;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -50%);
+
+            &::before,
+            &::after {
+              content: "";
+              width: 40%;
+              left: 0%;
+              height: 100%;
+              background:
+                radial-gradient(2.5em 2.5em at 25% 51%, #fff 11%, #0000 12%),
+                radial-gradient(2.5em 2.5em at 71% 51%, #fff 11%, #0000 12%),
+                radial-gradient(2.5em 2.5em at 30% 37%, #fff 22%, #0000 23%),
+                radial-gradient(2.5em 2.5em at 75% 37%, #fff 22%, #0000 23%),
+                radial-gradient(2.5em 2.5em at 35% 45%, #000 65%, #0000 66%),
+                radial-gradient(2.5em 2.5em at 81% 45%, #000 65%, #0000 66%),
+                radial-gradient(farthest-side at 50% 0%, #000 99%, #0000) 60% 90% / 2em 1em no-repeat;
+            }
+
+
+            &::after {
+              left: 56%;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          .bubble {
+            --string: radial-gradient(70% 85% at 80% 65%, #0000 51%, #00f 0 67%, #0000 0) 30% 70% / 60% 70% no-repeat;
+            top: 0;
+            left: 10%;
+            width: 65%;
+            &::after {
+              content: "I pump blood for you!";
+            }
+          }
+
+          .heart {
+            aspect-ratio: 3/2;
+            width: 40%;
+            top: 77%;
+            border-radius: 50% / 0% 0% 100% 100%;
+            background: #e55;
+            box-shadow: inset 1em -0.5em #0002;
+            aclip-path: polygon(-50% -100%, 0% 30%, 40% 110%, 65% 110%, 200% -100%);
+            abox-shadow: 0 0 0 4in #f000;
+            transform: translate(-50%, -50%) scaleY(1.1) skewY(-1deg);
+
+            &::after {
+              content: "";
+              width: 55%;
+              aspect-ratio: 2;
+              right:0;
+              top: 0;
+              transform: translateY(-95%);
+              background:
+              radial-gradient(80% 110% at 65% 40%, #fff2 20%, #0000 0),
+               #e55;
+              border-radius: 50% / 100% 100% 0 0;
+              box-shadow: -1em 0 0.5em -0.75em #0004
+            }
+
+            &::before {
+              content: "";
+              width: 60%;
+              aspect-ratio: 2;
+              left:0;
+              top: 0;
+              transform: translateY(-95%);
+              background: #e55;
+             background:
+             
+               radial-gradient(35% 240% at 107% 120%, #0000 50%, #369 0 99%, #0000 0) 95% -5% / 90% 99% no-repeat,
+             radial-gradient(45% 90% at 45% 100%, #e55 99%, #0000),
+             linear-gradient(#369 0 0 ) 65% 0 / 25% 50% no-repeat;
+             background-repeat: no-repeat;
+             box-shadow: inset 3em -1em 0 -2em #0002;
+             border-radius: 50% / 100% 0 0 0;
+            }
+          }
+
+          .face {
+              width: 37%;
+              left: 48%;
+              top: 72%;
+              transform: translate(-50%, -50%);
+              height: 12%;
+              background:
+                radial-gradient(2.5em 2.5em at 28% 51%, #fff 11%, #0000 12%),
+                radial-gradient(2.5em 2.5em at 74% 51%, #fff 11%, #0000 12%),
+                radial-gradient(2.5em 2.5em at 32% 37%, #fff 22%, #0000 23%),
+                radial-gradient(2.5em 2.5em at 77% 37%, #fff 22%, #0000 23%),
+                radial-gradient(2.5em 2.5em at 35% 45%, #000 65%, #0000 66%),
+                radial-gradient(2.5em 2.5em at 81% 45%, #000 65%, #0000 66%),
+                radial-gradient(farthest-side at 50% 0%, #000 99%, #0000) 60% 90% / 3em 1.5em no-repeat;
+            
+          }
+        }
+
+        &:nth-child(3) {
+          .bubble {
+            --string: radial-gradient(66% 85% at 80% 55%, #0000 50%, #00f 0 67%, #0000 0) 20% 80% / 60% 80% no-repeat;
+            top: 2%;
+            left: 10%;
+            &::after {
+              content: "I filter waste for you!";
+            }
+          }
+
+          .liver {
+            aspect-ratio: 10/6;
+            top: 73%;
+            border-radius: 40% 3em 100% 3em;
+            box-shadow: inset 1.5em -2em #0002;
+            background:
+              radial-gradient(circle at 15% 30%, #fff1 10%, #0000 0),
+              radial-gradient(55% 150% at 0 0, #b0423D 99%, #0000),
+              radial-gradient(56% 160% at 0 0, #ff05 99%, #0000),
+              radial-gradient(100% 60% at 0 10%, #0000 99%, #0002),
+              radial-gradient(100% 80% at 0 10%, #b0423D 99%, #0000);
+            ; 
+            -webkit-mask: 
+              radial-gradient(70% 100% at 0 0, #000 99%, #0000),
+              radial-gradient(100% 80% at 0 10%, #000 99%, #0000);
+            mask: 
+              radial-gradient(70% 100% at 0 0, #000 99%, #0000),
+              radial-gradient(100% 70% at 0 10%, #000 99%, #0000);
+            transform: translate(-50%, -50%) skew(-7deg) rotate(-2deg) scale(0.9);
+          
+          }
+
+          .face {
+              width: 37%;
+              left: 48%;
+              top: 72%;
+              transform: translate(-50%, -50%);
+              height: 12%;
+              background:
+                radial-gradient(2.5em 2.5em at 28% 51%, #fff 11%, #0000 12%),
+                radial-gradient(2.5em 2.5em at 74% 51%, #fff 11%, #0000 12%),
+                radial-gradient(2.5em 2.5em at 32% 37%, #fff 22%, #0000 23%),
+                radial-gradient(2.5em 2.5em at 77% 37%, #fff 22%, #0000 23%),
+                radial-gradient(2.5em 2.5em at 35% 45%, #000 65%, #0000 66%),
+                radial-gradient(2.5em 2.5em at 81% 45%, #000 65%, #0000 66%),
+                radial-gradient(farthest-side at 50% 0%, #000 99%, #0000) 60% 90% / 3em 1.5em no-repeat;
+            
+          }
+        }
+
+        &:nth-child(4) {
+          .bubble:nth-of-type(1) {
+            --string: radial-gradient(73% 85% at 80% 55%, #0000 50%, #00f 0 68%, #0000 0) 20% 80% / 60% 65% no-repeat;
+            top: 1%;
+            left: 10%;
+            height:75%;
+            width: 50%;
+            width: 55%;
+            &::before {
+              background:
+                radial-gradient(45% 13% at 45% 32%, #00f 99%, #ffc0),
+                radial-gradient(25% 6% at 35% 24%, #00f 99%, #ffc0),
+                var(--string),
+                #fff;
+            }
+            &::after {
+              content: "Invest in NFT";
+              content: "use table layouts";
+            }
+          }
+
+          .bubble:nth-of-type(2) {
+            --string: radial-gradient(80% 85% at 30% 60%, #0000 48%, #00f 0 67%, #0000 0) 20% 60% / 60% 50% no-repeat;
+            --string: radial-gradient(80% 85% at 30% 60%, #0000 48%, #00f 0 67%, #0000 0) 10% 60% / 50% 60% no-repeat;
+            top: 28%;
+            left: 47%;
+            height:45%;
+            width: 45%;
+            width: 55%;
+            &::after {
+              content: "Use tailwind";
+              content: "float everything"
+            }
+          }
+
+          /* based on https://www.vecteezy.com/vector-art/10565520-happy-brain-cartoon-character-vector */
+          .brain {
+            --color: pink;
+            --line: #faa;
+            --ellipse: radial-gradient(farthest-side, #000 99%, #0000);
+            --lines1: , #0000 90%, var(--line) 0 99%, #0000;
+            --lines2: , #0000 85%, var(--line) 0 99%, #0000;
+            --lines3: , #0000 80%, var(--line) 0 99%, #0000;
+            --lines4: , #0000 80%, #eee 0 99%, #0000;
+            aspect-ratio: 4/3;
+            width: 66%;
+            top: 77%;
+            background:
+              /* lines */
+              /* center top */
+              radial-gradient(farthest-side at -30% 60% var(--lines4)) 58.5% 12% / 1.5% 8%,
+              radial-gradient(farthest-side at 0% 90% var(--lines4)) 60% 19% / 3.5% 3%,
+              radial-gradient(farthest-side at 10% 80% var(--lines1)) 51% 2.5% / 13% 19%,
+              radial-gradient(farthest-side at 10% 70% var(--lines2)) 60% 23% / 7% 14%,
+              /* right top */
+              radial-gradient(farthest-side at 10% 80% var(--lines3)) 72% 14% / 7% 7%,
+              radial-gradient(farthest-side at 20% 80% var(--lines2)) 77.5% 20% / 6.5% 8.5%,
+              radial-gradient(farthest-side at 0% 77% var(--lines3)) 80% 27% / 3% 5%,
+              /* right center */
+              radial-gradient(farthest-side at -30% 100% var(--lines3)) 82% 36% / 3.5% 7%,
+              radial-gradient(farthest-side at -30% 60% var(--lines3)) 84.5% 44% / 3% 10%,
+              radial-gradient(farthest-side at -20% 30% var(--lines3)) 84% 52.5% / 4% 6%,
+              radial-gradient(farthest-side at -30% 70% var(--lines4)) 86% 42.5% / 2% 6.6%,
+              /* center bottom */
+              radial-gradient(farthest-side at 30% 0% var(--lines3)) 60.5% 71% / 9% 4%,
+              radial-gradient(65% 90% at 50% 0% var(--lines3)) 65% 71.5% / 5% 3%,
+              /* right bottom */
+              radial-gradient(farthest-side at 70% 0% var(--lines2)) 25% 63% / 9% 7%,
+              radial-gradient(farthest-side at 90% 40% var(--lines3)) 21% 56% / 3.5% 8%,
+              /* right center */
+              radial-gradient(farthest-side at 100% 30% var(--lines2)) 32.5% 54% / 5% 14%,
+              radial-gradient(farthest-side at 90% 40% var(--lines3)) 30% 43% / 3.5% 8%,
+              radial-gradient(100% 80% at 110% 40% var(--lines4)) 30% 52% / 1.75% 6%,
+              /* right top */
+              radial-gradient(farthest-side at 100% 80% var(--lines2)) 33% 16% / 7% 12%,
+              radial-gradient(farthest-side at 70% 70% var(--lines3)) 26% 27.5% / 8% 10%,
+              radial-gradient(farthest-side at 90% 70% var(--lines3)) 21.5% 37% / 5% 8%,
+              radial-gradient(80% 70% at 80% 80% var(--lines4)) 20% 35.5% / 2.5% 6%,
+              radial-gradient(farthest-side at 90% 90% var(--lines4)) 34% 18.5% / 3% 5.5%,
+              /* base color */
+              var(--color)
+              ;
+            background-repeat: no-repeat;
+            -webkit-mask:
+              var(--ellipse) 55% 45% / 42% 45% no-repeat,
+              var(--ellipse) 66% 5% / 30% 30% no-repeat,
+              var(--ellipse) 43% 5% / 25% 30% no-repeat,
+              var(--ellipse) 32% 12% / 27% 40% no-repeat,
+              var(--ellipse) 25% 16% / 27% 25% no-repeat,
+              var(--ellipse) 16% 33% / 27% 25% no-repeat,
+              var(--ellipse) 14% 48% / 25% 25% no-repeat,
+              var(--ellipse) 23% 61% / 25% 25% no-repeat,
+              var(--ellipse) 33% 66% / 25% 25% no-repeat,
+              var(--ellipse) 46% 68% / 22% 25% no-repeat,
+              var(--ellipse) 66% 67% / 22% 25% no-repeat,
+              var(--ellipse) 75% 64% / 18% 20% no-repeat,
+              var(--ellipse) 84% 33% / 26% 26% no-repeat,
+              var(--ellipse) 85% 47% / 25% 37% no-repeat,
+              var(--ellipse) 83% 23% / 23% 40% no-repeat;
+            
+            &::before {
+              content: "";
+              width: 100%;
+              height: 25%;
+              top: 45%;
+              left: 0;
+              transform: translateY(-50%);
+              background-color: #f004;
+              background:
+                radial-gradient(closest-side circle at 45% 61%, #fff 15%, #0000 16%),
+                radial-gradient(closest-side circle at 69% 61%, #fff 15%, #0000 16%),
+                radial-gradient(closest-side circle at 47% 48%, #fff 20%, #0000 21%),
+                radial-gradient(closest-side circle at 71% 48%, #fff 20%, #0000 21%),
+                radial-gradient(closest-side circle at 48% 55%, #000 65%, #0000 66%),
+                radial-gradient(closest-side circle at 72% 55%, #000 65%, #0000 66%);
+                clip-path: polygon(20% 38%, 58% 45%, 80% 38%, 100% 100%, 0 100%);
+            }
+
+            &::after {
+              content: "";
+              width: 10%;
+              aspect-ratio: 2;
+              left: 60%;
+              top: 55%;
+              background:
+              radial-gradient(at 30% 100%, #c00 30%, #0000 31%),
+              #000;
+              transform: translate(-50%, -50%) rotate(-6deg);
+              border-radius: 50% /100% 100%  0 0;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <div class="bubble"></div>
+        <div class="organ lungs"></div>
+        <div class="face"></div>
+      </section>
+      <section>
+        <div class="bubble"></div>
+        <div class="organ heart"></div>
+        <div class="face"></div>
+      </section>
+      <section>
+        <div class="bubble"></div>
+        <div class="organ liver"></div>
+        <div class="face"></div>
+      </section>
+      <section>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="organ brain"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
