@@ -1283,4 +1283,11 @@ const posts = [
     title: "Halloween Logic Gates",
     ariaLabel: "Cartoon with different panels showing a pumpkin made with two circles. Only some parts of it have colors: trick OR treat has the whole pumpkin in orange; trick AND treat only the part where the circles intersect; etc."
   },
+  {
+    id: 164,
+    uid: "ai-edits",
+    boxes: 2,
+    title: "AI Edits",
+    ariaLabel: "cartoon with two panels. A person off-panel asks 'did Alvaro start using AI to edit the comics?', another person in the panel replies 'I don't know. You think he does?'. The first person is now in-panel and has large breasts and a cleavage 'I have a suspicion he did'"
+  },
 ]
