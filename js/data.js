@@ -1275,4 +1275,12 @@ const posts = [
     title: "Organs",
     ariaLabel: "comic with four panels showcasing organs. The lungs say 'we breathe air for you', the heart says 'I pump blood for you', the liver says 'I filter was for you', and the brain says 'use table layout, floats everywhere, hardcode all values'"
   },
+  {
+    id: 163,
+    uid: "logic-gates",
+    boxes: 6,
+    horizontal: true,
+    title: "Halloween Logic Gates",
+    ariaLabel: "Cartoon with different panels showing a pumpkin made with two circles. Only some parts of it have colors: trick OR treat has the whole pumpkin in orange; trick AND treat only the part where the circles intersect; etc."
+  },
 ]
