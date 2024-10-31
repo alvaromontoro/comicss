@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  width: 90em;
+  font-size: 1vmin;
+}
+
+div {
+  aspect-ratio: 7/6;
+  border: 0.5em solid;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Patrick Hand SC', Roboto, Helvetica, sans-serif;
+  text-align: center;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(30% 76% at 110% 50%, #0000 calc(81% - 1px), darkorange 81% 87%, #0000 calc(87% + 1px)) -20% 51% / 50% 34%,
+      radial-gradient(30% 76% at -10% 50%, #0000 calc(81% - 1px), darkorange 81% 87%, #0000 calc(87% + 1px)) 120% 52% / 50% 32%,
+      linear-gradient(orange 0 0) 48% 59% / 1em 1em,
+      radial-gradient(circle at 42% 45%, #000 1em, #0000 calc(1em + 1px)),
+      radial-gradient(circle at 58% 45%, #000 1em, #0000 calc(1em + 1px)),
+      conic-gradient(#0000 155deg, #000 0 205deg, #0000 0) 50% 43% / 20% 20%,
+      radial-gradient(farthest-side at 50% 0, #000 calc(100% - 1px), #0000) 50% 62% / 5em 1.25em,
+      orange;
+    background-repeat: no-repeat;
+    -webkit-mask:
+      radial-gradient(farthest-side circle at 40% 50%, #000 30%, #0000 calc(30% + 1px)),
+      radial-gradient(farthest-side circle at 60% 50%, #000 30%, #0000 calc(30% + 1px));
+    mask:
+      radial-gradient(farthest-side circle at 40% 50%, #000 30%, #0000 calc(30% + 1px)),
+      radial-gradient(farthest-side circle at 60% 50%, #000 30%, #0000 calc(30% + 1px));
+  }
+  
+  &::after {
+    content: "";
+    white-space: pre;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 3.25em;
+    font-size: 2.5em;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(farthest-side circle at 40% 50%, #0000 calc(29% - 1px), #000a 29% 30%, #0000 calc(30% + 1px)),
+      radial-gradient(farthest-side circle at 60% 50%, #0000 calc(29% - 1px), #000a 29% 30%, #0000 calc(30% + 1px));
+  }
+}
+
+/* trick */
+article > :nth-child(1) {
+  background: orange;
+  color: #000;
+  font-size: 4em;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+  border-width: 0.125em;
+  box-sizing: border-box;
+  line-height: 1;
+  &::before, &::after { content: none; }
+}
+
+
+/* trick */
+article > :nth-child(2) {
+  &::after { content: "trick\a\a  "; }
+  &::before { 
+    -webkit-mask:
+      radial-gradient(farthest-side circle at 40% 50%, #000 30%, #0000 calc(30% + 1px));
+    mask:
+      radial-gradient(farthest-side circle at 40% 50%, #000 30%, #0000 calc(30% + 1px));
+  }
+}
+
+/* treat */
+article > :nth-child(3) {
+  &::after { content: "treat\a\a   "; }
+  &::before { 
+    -webkit-mask:
+      radial-gradient(farthest-side circle at 60% 50%, #000 30%, #0000 calc(30% + 1px));
+    mask:
+      radial-gradient(farthest-side circle at 60% 50%, #000 30%, #0000 calc(30% + 1px));
+  }
+}
+
+/* OR */
+article > :nth-child(4) {
+  &::after { content: "trick OR treat\a\a mask-composite: initial"; }
+  &::before { mask-composite: initial; }
+}
+
+/* AND */
+article > :nth-child(5) {
+  &::after { content: "trick AND treat\a\a mask-composite: intersect"; }
+  &::before { mask-composite: intersect; }
+}
+
+/* XOR */
+article > :nth-child(6) {
+  &::after { content: "trick XOR treat\a\a mask-composite: exclude"; }
+  &::before { mask-composite: exclude; }
+}
+
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>
+        Halloween Logic Gates Masks
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </article>
+    <!-- <p style="font-family: Roboto, Helvetica, sans-serif;">*Needs 3-4 layers</p> -->
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
