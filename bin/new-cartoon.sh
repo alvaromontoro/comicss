@@ -28,6 +28,8 @@ id=$(ls ./comics | wc -l)
 let id=id+0
 let previousId=id-1
 let nextId=id+1
+let random1=$(jot -r 1 1 $id)
+let random2=$(jot -r 1 1 $id)
 
 ###################################################################
 ### create the comic basic structure
@@ -170,7 +172,7 @@ echo "<!doctype html>
 
     <link rel=\"shortcut icon\" href=\"/favicon.png\" />
 
-    <link rel="canonical" href="https://comicss.art" />
+    <link rel=\"canonical\" href=\"https://comicss.art\" />
 
     <link rel=\"stylesheet\" href=\"/css/almond.lite.min.css\" />
     <link rel=\"stylesheet\" href=\"/css/styles.css\" />
@@ -262,7 +264,7 @@ echo "<!doctype html>
           </svg>
           <span>Previous</span>
         </a>
-        <a class=\"random-post\" href=\"/comics/74\">
+        <a class=\"random-post\" href=\"/comics/${random1}\">
           <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 100 100\" class=\"random\" aria-hidden=\"true\">
             <path class=\"random\" d=\"M100,25 80,2 80,48Z\" />
             <path class=\"random\" d=\"M100,75 80,98 80,52Z\" />
@@ -305,7 +307,7 @@ echo "      </div>
           </svg>
           <span>Previous</span>
         </a>
-        <a class=\"random-post\" href=\"/comics/85\">
+        <a class=\"random-post\" href=\"/comics/${random2}\">
           <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 100 100\" class=\"random\" aria-hidden=\"true\">
             <path class=\"random\" d=\"M100,25 80,2 80,48Z\" />
             <path class=\"random\" d=\"M100,75 80,98 80,52Z\" />
@@ -494,7 +496,7 @@ echo "<!doctype html>
           </svg>
           <span>Previous</span>
         </a>
-        <a class=\"random-post\" href=\"/comics/74\">
+        <a class=\"random-post\" href=\"/comics/${random1}\">
           <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 100 100\" class=\"random\" aria-hidden=\"true\">
             <path class=\"random\" d=\"M100,25 80,2 80,48Z\" />
             <path class=\"random\" d=\"M100,75 80,98 80,52Z\" />
@@ -537,7 +539,7 @@ echo "      </div>
           </svg>
           <span>Previous</span>
         </a>
-        <a class=\"random-post\" href=\"/comics/85\">
+        <a class=\"random-post\" href=\"/comics/${random2}\">
           <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 100 100\" class=\"random\" aria-hidden=\"true\">
             <path class=\"random\" d=\"M100,25 80,2 80,48Z\" />
             <path class=\"random\" d=\"M100,75 80,98 80,52Z\" />
