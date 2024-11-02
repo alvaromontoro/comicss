@@ -397,6 +397,29 @@ section:nth-child(2) {
         }
       }
   }
+
+  .person-1 {
+    .head {
+      .face {
+        .mouth {
+          width: 20%;
+          height: 5%;
+          top: 85%;
+          left: 45%;
+          transform: rotate(5deg) scale(0.5) scaleY(-1);
+        }
+      }
+    }
+
+    .arm {
+        transform: rotate(-9deg);
+        
+        & ~ & {
+          transform: rotate(8deg);
+        }
+      }
+  }
+  
 }
 
 section:nth-child(3) {
@@ -439,6 +462,14 @@ section:nth-child(3) {
         }
       }
     }
+
+    .arm {
+        transform: rotate(-12deg);
+        
+        & ~ & {
+          transform: rotate(12deg);
+        }
+      }
   }
 
   .person-2 {
@@ -457,10 +488,10 @@ section:nth-child(3) {
     }
 
     .arm {
-        transform: rotate(-20deg);
+        transform: rotate(-11deg);
         
         & ~ & {
-          transform: rotate(15deg);
+          transform: rotate(12deg);
           aleft: 5%;
         }
       }

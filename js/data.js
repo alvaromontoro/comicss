@@ -1286,8 +1286,8 @@ const posts = [
   {
     id: 164,
     uid: "ai-edits",
-    boxes: 2,
+    boxes: 4,
     title: "AI Edits",
-    ariaLabel: "cartoon with two panels. A person off-panel asks 'did Alvaro start using AI to edit the comics?', another person in the panel replies 'I don't know. You think he does?'. The first person is now in-panel and has large breasts and a cleavage 'I have a suspicion he did'"
+    ariaLabel: "Comic with 4 panels in a 2x2 grid. A woman and a man are talking - Man: 'Hey, Ann! Long time no see here on comiCSS! How are you doing?' Woman: 'Yeah... I've been worried about showing up around here since people started using AI to edit cartoons and images. It always takes a sexist turn...' Man: And you think Alvaro will use AI to edit the CSS comics?. Woman (changed in this last panel to look slimmer and taller, and to have darker skin, cleavage, and bigger breasts): 'I dunno... But I have a suspicion he just started...'"
   },
 ]
