@@ -1636,5 +1636,15 @@
       <enclosure url="https://comicss.art/comics/163/logic-gates.png" length="171000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/164</guid>
+      <title>AI Edits</title>
+      <link>https://comicss.art/comics/164</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/164/ai-edits.png" length="150000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

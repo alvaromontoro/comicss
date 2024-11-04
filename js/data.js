@@ -1283,4 +1283,11 @@ const posts = [
     title: "Halloween Logic Gates",
     ariaLabel: "Cartoon with different panels showing a pumpkin made with two circles. Only some parts of it have colors: trick OR treat has the whole pumpkin in orange; trick AND treat only the part where the circles intersect; etc."
   },
+  {
+    id: 164,
+    uid: "ai-edits",
+    boxes: 4,
+    title: "AI Edits",
+    ariaLabel: "Comic with 4 panels in a 2x2 grid. A woman and a man are talking - Man: 'Hey, Ann! Long time no see here on comiCSS! How are you doing?' Woman: 'Yeah... I've been worried about showing up around here since people started using AI to edit cartoons and images. It always takes a sexist turn...' Man: And you think Alvaro will use AI to edit the CSS comics?. Woman (changed in this last panel to look slimmer and taller, and to have darker skin, cleavage, and bigger breasts): 'I dunno... But I have a suspicion he just started...'"
+  },
 ]
