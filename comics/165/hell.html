@@ -13,13 +13,13 @@
     <meta property="og:title" content="comiCSS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://comicss.art" />
-    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
     <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://comicss.art/">
     <meta name="twitter:title" content="comiCSS">
     <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
-    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
     <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
 
     <link rel="shortcut icon" href="/favicon.png" />
@@ -40,6 +40,7 @@
     aspect-ratio: 1; /* 3 / 2; */
     position: relative;
     overflow: hidden;
+    background: linear-gradient(#0004, #0002);
     /* background: linear-gradient(#0001, #0001);
     background: repeating-linear-gradient(-45deg, #0000 0 0.5em, #0001 0 0.6em);
     background: 
@@ -96,6 +97,31 @@
         text-align: center;
       }
     }
+  }
+}
+
+.table {
+  width: 50%;
+  height: 15%;
+  border: 0.5em solid;
+  border-bottom: 0;
+  border-right: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+
+  &::before {
+    content: "HELL";
+    font-size: 2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 0.2em solid;
+    border-bottom: 0;
+    padding: 0 1em;
+    top: -0.25em;
+    left: 5%;
+    background: gold;
+    transform: translateY(-100%) skew(-9deg);
+    box-shadow: 0.8em 0.6em 0 -0.6em;
   }
 }
 
@@ -230,13 +256,12 @@
 }
 
 .person-1 {
-  left: 12%;
-  transform: scaleX(-1);
-  left: 65%;
+  left: 4%;
 
   .body {
     .arm {
-      transform: rotate(-9deg) translate(0em, -0.5em);
+      transform: rotate(-10deg) translate(0em, -0.5em);
+      left: 87.75%;
       & ~ & {
         transform: rotate(10deg);
       }
@@ -244,6 +269,7 @@
   }
   .head {
     .face {
+      
       .eyebrow {
         --diff: rotate(2deg);
         top: 41%;
@@ -286,15 +312,52 @@
 }
 
 .person-2 {
-  --skin-color: #e8e8e8;
-  left: 5%;
-  bottom: -2%;
+  --skin-color: #f77;
+  right: 3%;
+  bottom: 10%;
+  transform: scaleX(-1);
+
+  .body {
+    top:58%;
+    height: 70%;
+
+    .arm {
+      background: var(--skin-color);
+      border: 0.4em solid;
+      width: 1.5em;
+      left: 80%;
+      top: 15%;
+      transform-origin: 50% 0;
+      transform: rotate(-15deg);
+
+      & ~ & {
+        left: auto;
+        left: 2%;
+        transform: rotate(20deg);
+      }
+    }
+  }
 
   .head {
     .face {
-      background: 
-      radial-gradient(20% 50% at 0 0, #000 99%, #0000 ),
-      var(--skin);
+      background: var(--skin);
+
+      &::after {
+        content: "";
+        width: 75%;
+        height: 20%;
+        background: #fffc;
+        left: 50%;
+        transform: translatE(-50%, -100%);
+        border-radius: 40% 40% 20% 20% / 100%;
+        top: 0;
+        background:
+          radial-gradient(50% 160% at 50% -50%, #0000 calc(99% - 1px), #000 99%)
+      }
+
+      .mouth {
+        transform: translate(-50%) scaleY(-0.8) rotate(2deg);
+      }
 
       .ear {
         top: 51%;
@@ -303,140 +366,23 @@
       .eyebrow {
         height: 4%;
       }
-
-      .hair {
-        width: 119%;
-        height: 30%;
-        top: -0.4em;
-        left: 50%;
-        transform: translate(-50%);
-        border-radius: 3em 4em 0 0;
-        background:
-          radial-gradient(70% 100% at 0 0, #000 99%, #0000 ),
-          radial-gradient(40% 100% at 100% 0, #000 99%, #0000 );
-      }
-    }
-
-    .hair-back {
-      left: 50%;
-      top: -5%;
-      transform: translate(-55%, 0);
-      width: 120%;
-      height: 115%;
-      background: 
-        radial-gradient(20% 114% at 0 0, #0000 calc(100% - 1px), #000) 0 100% / 52% 80%,
-        radial-gradient(20% 115% at 100% 0, #0000 calc(100% - 1px), #000) 100% 100% / 52% 80%
-        #f000;
-      border-radius: 100% / 18%;
-      background-repeat: no-repeat;
-
     }
   }
 }
 
 section:nth-child(1) {
-  .bubble.bubble1 {
-    width: 60%;
-    left: 20%;
+  .bubble {
+    width: 65%;
     top: 10%;
-
-    &::before {
-     left: 80%;
-     height: 6em;
-      transform: skew(35deg) !important;
-    }
-
-    &::after {
-      text-wrap: balance;
-      content: "Hey, Ann! Long time no see here on comiCSS! How are you doing?";
-    }
-  }
-}
-
-section:nth-child(2) {
-  .bubble.bubble1 {
-    width: 80%;
     left: 10%;
-    top: 8%;
-    width: 90%;
-    left: 5%;
 
     &::before {
-     left: 25%;
-     height: 6em;
-      transform: skew(-15deg) !important;
+      height: 5em;
+      transform: scaleX(-1) skew(-15deg) !important;
     }
 
     &::after {
-      text-wrap: balance;
-      content: "Yeah... I've been worried about showing up around here since people started using AI to edit all cartoons and images...";
-      content: "Yeah... I've been worried about showing up around here since people started using AI to edit cartoons and images in a sexist way...";
-      content: "Yeah... I've been worried about showing up around here since people started using AI to edit cartoons and images. It always takes a sexist turn...";
-    }
-  }
-
-  .person-2 {
-    .head {
-      .face {
-        .eyebrow {
-          --diff: rotate(-10deg);
-        }
-        .mouth {
-          border-radius: 50%;
-          width: 20%;
-        }
-      }
-    }
-
-    .arm {
-        transform: rotate(-20deg);
-        
-        & ~ & {
-          transform: rotate(15deg);
-          aleft: 5%;
-        }
-      }
-  }
-
-  .person-1 {
-    .head {
-      .face {
-        .mouth {
-          width: 20%;
-          height: 5%;
-          top: 85%;
-          left: 45%;
-          transform: rotate(5deg) scale(0.5) scaleY(-1);
-        }
-      }
-    }
-
-    .arm {
-        transform: rotate(-9deg);
-        
-        & ~ & {
-          transform: rotate(8deg);
-        }
-      }
-  }
-  
-}
-
-section:nth-child(3) {
-  .bubble.bubble2 {
-    width: 70%;
-    top: 16%;
-    left: 18%;
-
-    &::before {
-      height: 6em;
-      right: 15%;
-      transform: skew(25deg) !important;
-    }
-    &::after {
-      text-wrap: balance;
-      content: "And you think Alvaro will use AI that will edit you in the CSS comics?";
-      content: "And you think Alvaro will use AI to edit the CSS comics?";
+      content: "I'm sorry, but I can't find your name on the list.";
     }
   }
 
@@ -445,100 +391,85 @@ section:nth-child(3) {
       .face {
         .mouth {
           border-radius: 50%;
-          width: 20%;
-          height: 15%;
-          top: 79%;
-          left: 45%;
-          transform: rotate(-5deg) scale(0.5);
+          width: 19%;
         }
         .eyebrow {
-          top: 41%;
-          --diff: rotate(6deg);
-
-          &~& {
-            top: 45%;
-            --diff: rotate(5deg);
-          }
+          --diff: rotate(-4deg);
+          top: 40%;
         }
       }
     }
-
-    .arm {
-        transform: rotate(-12deg);
-        
-        & ~ & {
-          transform: rotate(12deg);
-        }
-      }
   }
 
   .person-2 {
     .head {
       .face {
-        .mouth {
-          height: 3%;
-          width: 15%;
-          transform: translate(-50%, 70%) scaleY(-1);
-        }
-
         .eyebrow {
           --diff: rotate(-4deg);
         }
       }
     }
-
-    .arm {
-        transform: rotate(-11deg);
-        
-        & ~ & {
-          transform: rotate(12deg);
-          aleft: 5%;
-        }
-      }
   }
 }
 
-section:nth-child(4) {
+section:nth-child(2) {
   .bubble {
-    width: 72%;
-    width: 65%;
-    top: 15%;
-    left: 20%;
+    width: 85%;
+    top: 3%;
+    
+    left: 5%;
 
     &::before {
-      height:5em;
-      left: 15%;
-      transform: skew(-30deg) !important;
+      height: 7em;
+      
+      left: 24%;
+      transform: scaleX(-1) skew(20deg) !important;
     }
 
     &::after {
-      text-wrap: balance;
-      content: "I dunno... But I have the suspicion it already began...";
-      content: "I dunno... But I have the suspicion he already started...";
-      content: "I dunno... But I have the suspicion he just started...";
+      content: "That makes sense! As a Web Developer I did great things for humanity: I built accessible websites by adding aria-label to all elements.";
+      content: "That makes sense! When I was alive, I did great things for humanity: I built accessible websites by adding aria-label to all elements.";
+      
+      
     }
   }
 
+  /* tailwind */
+  /* .bubble {
+    top: 3%;
+    &::before { height: 7em; }
+    &::after {
+      content: "That makes sense! When I was alive, I did great things for humanity: I made the web better for everyone by adding Tailwind to all my projects.";
+      }
+  } */
+
   .person-1 {
-    bottom: -1%;
-    transform: scaleX(-1) rotate(-2deg);
+    .body {
+      .arm {
+        transform: rotate(-15deg) translate(0em, -0.5em);
+        left: 87.75%;
+        & ~ & {
+          transform: rotate(12deg);
+        }
+      }
+    }
+  }
+
+  .person-2 {
     .head {
       .face {
-        background: 
-        radial-gradient(50% 15% at 90% 70%, #f002, #f000),
-        radial-gradient(50% 15% at 30% 70%, #f002, #f000),
-          var(--skin);
-
         .mouth {
-          transform: translate(-50%)  scale(0.75);
-          width: 16%;
-          height: 10%;
-          border-radius: 50%;
+          height: 2.5%;
+          top: 85%;
         }
 
         .eyebrow {
-          top: 37%;
-          --diff: rotate(-10deg);
+          top: 45%;
+
+          &~& {
+            top: 43%;
+            --diff: rotate(10deg);
+          }
         }
       }
     }
@@ -547,110 +478,158 @@ section:nth-child(4) {
       .arm {
         transform: rotate(-10deg);
 
+        &~& {
+          top: 18%;
+          transform: rotate(-3deg);
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(3) {
+  .bubble {
+    width: 70%;
+    top: 7%;
+    left: 13%;
+
+    &::before {
+      height: 5em;
+      left: 73%;
+      transform: scaleX(-1) skew(-25deg) !important;
+    }
+
+    &::after {
+      content: "Oh! I see the mistake now! You are at the wrong desk! Go upstairs and turn right.";
+    }
+  }
+  .person-1 {
+    .head {
+      .face {
+        .mouth {
+          height: 12%;
+          top: 81%;
+          left: 58%;
+        }
+        .eyebrow {
+          --diff: rotate(4deg);
+          top: 40%;
+        }
+      }
+    }
+    .body {
+      .arm {
+        transform: rotate(-10deg) translate(0em, -0.5em);
+        left: 87.75%;
         & ~ & {
-          transform: rotate(8deg);
-          top:22%;
-          left: 0.1em;
+          transform: rotate(15deg);
+        }
+      }
+    }
+  }
+  .person-2 {
+    .head {
+      .face {
+        .mouth {
+          width: 15%;
+          height: 6%;
+          top: 85%;
+        }
+
+        .eyebrow {
+          --diff: rotate(-3deg);
+          top: 40%;
+        }
+      }
+    }
+
+    .body {
+      .arm {
+        transform: rotate(-26deg);
+
+        &~& {
+          transform: rotate(20deg);
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(4) {
+  .table {
+    &::before {
+      content: "DOUBLE HELL";
+    }
+  }
+
+  .person-1 {
+    transform: rotate(-2deg);
+    bottom: -1%;
+
+    .head {
+      .face {
+        background:
+        linear-gradient(#07f3, #00f0 60%),
+          var(--skin);
+
+        .eyebrow {
+          top: 40%;
+          --diff: rotate(-16deg);
+        }
+
+        .mouth {
+          width: 20%;
+          height: 5%;
+          top: 84%;
+          left: 58%;
+          transform: translatE(-50%) scaleY(-1) rotate(2deg);
         }
       }
     }
   }
 
+
   .person-2 {
-    bottom: 5%;
-    --skin-color: #ddd;
-
-    .body {
-      width: 35%;
-
-      .breast {
-        width: 62%;
-        aspect-ratio: 1;
-        background: #000;
-        border-radius: 50%;
-        border-radius: 100% / 120% 120% 80% 90%;
-        border: 0.2em solid #0000;
-        border-left: 0.5em solid #0000;
-        border-bottom: 0.4em solid #fff;
-        border-right: 0.4em solid #fff;
-        top: 20%;
-        left: 60%;
-        transform: rotate(-22deg);
-
-        &~& {
-          width: 60%;
-          border-radius: 50%;
-          transform: rotate(5deg);
-          border-left: 0.2em solid #0000;
-          left: 20%;
-          top: 23%;
-        }
-      }
-      .chest {
-        border-radius: 100% / 30% 30% 110% 150%;
-        height: 170%;
-        background:
-          conic-gradient(from 315deg at 76% 15%, var(--skin-color) 45deg, #0000 0)
-          #000;
-          border: 0.5em solid;
-
-          &::before {
-            content: "";
-            width: 80%;
-            aspect-ratio: 1;
-            border-radius: 50%;
-            background: #000;
-            top: 65%;
-            left: -20%
-          }
-      }
-      .arm {
-        transform: rotate(-30deg);
-        right: 5.5%;
-        left: auto;
-          top:14%;
-        
-        & ~ & {
-          transform: rotate(25deg);
-          left: 5%;
-          top:14%;
-        }
-      }
-    }
     .head {
-      .neck {
-        background: var(--skin-color);
-        border-radius: 0;
-        border-bottom: 0;
-        top: 88%;
-      }
       .face {
-        .eyebrow {
-          top: 46%;
-          --diff: rotate(14deg);
+        
+        border-radius: 3.5em 3.5em 3em 3em;
+
+        &::after {
+          top: 0.1em;
+          height: 30%;
+          border-radius: 30% / 100%;
         }
 
-        /* .eye {
-          box-shadow: -0.25em 0 0.75em #0ff;
-          &~& {
-            box-shadow: 0.25em 0 0.75em #0ff;
-          }
-        } */
-        .mouth {
-          top: 85%;
-          width: 23%;
-          height: 5%;
-          transform: translateX(-50%) scaleY(-1) rotate(2deg);
-          /* box-shadow: 0 0.25em red;
+        &::before {
+          content:"";
+          width: 40%;
+          height: 15%;
+          background: #000;
+          top: 100%;;
+          left: 59%;
+          transform: translateX(-50%);
+          clip-path: polygon(0 0, 100% 0, 70% 100%, 50% 70%, 30% 100%);
+        }
 
-          &::before {
-            content: "";
-            width: 100%;
-            height: 60%;
-            border-radius: 50% / 100% 100% 0 0;
-            background: red;
-            transform: translatEY(-100%);
-          } */
+        .eyebrow {
+          --diff: rotate(8deg);
+        }
+
+        .ear {
+          height: 20%;
+          width: 40%;
+          top: 57%;
+        }
+        .mouth {
+          transform: translate(-50%);
+          background:
+            linear-gradient(75deg, #0000 40%, #000 0 60%, #0000 0) 0 0 / 33.33% 100%,
+            linear-gradient(-75deg, #0000 40%, #000 0 60%, #0000 0) 16.66% 0 / 33.33% 100%,
+           yellow;
+          border: 0.4em solid;
+          width: 46%;
+          height: 11%;
         }
       }
     }
@@ -658,31 +637,23 @@ section:nth-child(4) {
 }
 
 section:nth-child(5) {
-  border: 0;
-  font-size: 2.25em;
+  all: unset;
   grid-column: 1/3;
-  aspect-ratio: auto;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  transform: translateY(-0.5em);
+  text-align: right;
+  font-size: 2em;
+  font-family: Roboto, Helvetica, Arial, Verdana, sans-serif;
+  line-height: 0;
+
+  span {
+    position: relative;
+    font-size: 0.9em;
+  }
 }
 
-.lines {
-      width: 4em;
-      aspect-ratio: 1;
-      top: 6%;
-      left: 75%;
-      transform: translate(0, 70%) rotate(-10deg);
-      border-radius:  100%;
-      background: 
-        conic-gradient(at -50% 50%, #0000 76deg, #000 0 80deg, #0000 0),
-        conic-gradient(at -50% 50%, #0000 90deg, #000 0 94deg, #0000 0),
-        conic-gradient(at -50% 50%, #0000 104deg, #000 0 108deg, #0000 0);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 30% 50%);
-    }
     </style>
   </head>
   <body>
-    <article role="img" aria-label="Comic with 4 panels in a 2x2 grid. A woman and a man are talking - Man: 'Hey, Ann! Long time no see here on comiCSS! How are you doing?' Woman: 'Yeah... I've been worried about showing up around here since people started using AI to edit cartoons and images. It always takes a sexist turn...' Man: And you think Alvaro will use AI to edit the CSS comics?. Woman (changed in this last panel to look slimmer and taller, and to have darker skin, cleavage, and bigger breasts): 'I dunno... But I have a suspicion he just started...'">
+    <article role="img" aria-label="">
       <section>
         <div class="bubble bubble1 right"></div>
         <div class="person person-1">
@@ -711,11 +682,8 @@ section:nth-child(5) {
             <div class="arm"></div>
             <div class="chest"></div>
             <div class="arm"></div>
-            <div class="breast"></div>
-            <div class="breast"></div>
           </div>
           <div class="head">
-            <div class="hair-back"></div>
             <div class="neck"></div>
             <div class="face">
               <div class="ear"></div>
@@ -729,6 +697,8 @@ section:nth-child(5) {
             </div>
           </div>
         </div>
+
+        <div class="table"></div>
       </section>
       
       <section>
@@ -776,6 +746,7 @@ section:nth-child(5) {
             </div>
           </div>
         </div>
+        <div class="table"></div>
       </section>
       
       <section>
@@ -823,10 +794,11 @@ section:nth-child(5) {
             </div>
           </div>
         </div>
+        <div class="table"></div>
       </section>
     
       <section>
-        <div class="bubble right"></div>
+        <!-- <div class="bubble right"></div> -->
         <div class="person person-1">
             <div class="lines"></div>
           <div class="body">
@@ -850,14 +822,12 @@ section:nth-child(5) {
         </div>
         <div class="person person-2">
           <div class="body">
+            <div class="tail"></div>
             <div class="arm"></div>
             <div class="chest"></div>
             <div class="arm"></div>
-            <div class="breast"></div>
-            <div class="breast"></div>
           </div>
           <div class="head">
-            <div class="hair-back"></div>
             <div class="neck"></div>
             <div class="face">
               <div class="ear"></div>
@@ -871,8 +841,9 @@ section:nth-child(5) {
             </div>
           </div>
         </div>
+        <div class="table"></div>
       </section>
-      <section>*No CSS was harmed (or edited) with AI during the drawing of this cartoon</section>
+      <section><span>COMI</span>CSS.ART</section>
     </article>
     <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
   </body>
