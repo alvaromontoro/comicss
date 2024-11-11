@@ -3122,4 +3122,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Hell</title>
+    <link href="https://comicss.art/comics/165" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/165/hell.html"/>
+    <id>https://comicss.art/comics/165</id>
+    <updated>2024-11-11T00:00:00Z</updated>
+    <summary>New Cartoon: Hell</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/165/hell.png" alt="A person is at the gate of Hell, a demon says 'you are not in the list', he replies 'of course not! I cared about everyone, even added aria-label to every HTML tag'. The demon replies 'I see, follow me' and guides him to a place called Double Hell" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

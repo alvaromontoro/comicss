@@ -1290,4 +1290,11 @@ const posts = [
     title: "AI Edits",
     ariaLabel: "Comic with 4 panels in a 2x2 grid. A woman and a man are talking - Man: 'Hey, Ann! Long time no see here on comiCSS! How are you doing?' Woman: 'Yeah... I've been worried about showing up around here since people started using AI to edit cartoons and images. It always takes a sexist turn...' Man: And you think Alvaro will use AI to edit the CSS comics?. Woman (changed in this last panel to look slimmer and taller, and to have darker skin, cleavage, and bigger breasts): 'I dunno... But I have a suspicion he just started...'"
   },
+  {
+    id: 165,
+    uid: "hell",
+    boxes: 4,
+    title: "Hell",
+    ariaLabel: "A person is at the gate of Hell, a demon says 'you are not in the list', he replies 'of course not! I cared about everyone, even added aria-label to every HTML tag'. The demon replies 'I see, follow me' and guides him to a place called Double Hell"
+  },
 ]
