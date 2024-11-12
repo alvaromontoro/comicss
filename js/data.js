@@ -1297,4 +1297,11 @@ const posts = [
     title: "Hell",
     ariaLabel: "A person is at the gate of Hell, a demon says 'you are not in the list', he replies 'of course not! I cared about everyone, even added aria-label to every HTML tag'. The demon replies 'I see, follow me' and guides him to a place called Double Hell"
   },
+  {
+    id: 166,
+    uid: "web3",
+    boxes: 4,
+    title: "Homework",
+    ariaLabel: "Comic with 4 panels in a 2x2 grid. A child goes talk to their grandparent and says in school they are studying history of the Internet but doesn't understand why they went from web to web 2.0 to web 4. The grandparent replies: we don't talk about web3"
+  },
 ]

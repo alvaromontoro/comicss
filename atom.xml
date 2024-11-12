@@ -3141,4 +3141,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>web3</title>
+    <link href="https://comicss.art/comics/166" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/166/web3.html"/>
+    <id>https://comicss.art/comics/166</id>
+    <updated>2024-11-08T00:00:00Z</updated>
+    <summary>New Cartoon: web3</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/166/web3.png" alt="Comic with 4 panels in a 2x2 grid. A child goes talk to their grandparent and says in school they are studying history of the Internet but doesn't understand why they went from web to web 2.0 to web 4. The grandparent replies: we don't talk about web3" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
