@@ -3160,4 +3160,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Push-ups</title>
+    <link href="https://comicss.art/comics/167" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/167/push-ups.html"/>
+    <id>https://comicss.art/comics/167</id>
+    <updated>2024-11-25T00:00:00Z</updated>
+    <summary>New Cartoon: Push-ups</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/167/push-ups.png" alt="comic with 4 panels in a 2x2 grid. There are two characters, one of them has the tshirt off and shows a lot of muscles. The other one asks 'Wow, Dave! How did you get like that? You are a web developer!' Dave replies: 'every time I add a Tailwind class... I do one push-up'. In the last panel he adds 'I started with the tutorial yesterday, and have not finished my first page yet... please help...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

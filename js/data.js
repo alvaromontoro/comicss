@@ -1304,4 +1304,11 @@ const posts = [
     title: "Homework",
     ariaLabel: "Comic with 4 panels in a 2x2 grid. A child goes talk to their grandparent and says in school they are studying history of the Internet but doesn't understand why they went from web to web 2.0 to web 4. The grandparent replies: we don't talk about web3"
   },
+  {
+    id: 167,
+    uid: "push-ups",
+    boxes: 4,
+    title: "Push-ups",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. There are two characters, one of them has the tshirt off and shows a lot of muscles. The other one asks 'Wow, Dave! How did you get like that? You are a web developer!' Dave replies: 'every time I add a Tailwind class... I do one push-up'. In the last panel he adds 'I started with the tutorial yesterday, and have not finished my first page yet... please help...'"
+  },
 ]
