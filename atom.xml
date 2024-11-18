@@ -3179,4 +3179,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Seasons Inputs</title>
+    <link href="https://comicss.art/comics/168" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/168/seasons-inputs.html"/>
+    <id>https://comicss.art/comics/168</id>
+    <updated>2024-11-16T00:00:00Z</updated>
+    <summary>New Cartoon: Seasons Inputs</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/168/seasons-inputs.png" alt="different 'creative' password inputs: a regular password field shows dots instead of letters, summer password has suns instead, winter password has snowflakes, spring password has flowers, christmas password has santas, june corporate passwords has dots but they are the colors of the pride flag" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
