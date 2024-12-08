@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@property --color {
+  syntax: "<color";
+  inherits: true;
+  initial-value: #000;
+}
+
+label {
+  --color: #0000;
+  display: block;
+  position: relative;
+  font-size: 1em;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 4em;
+
+  span {
+    position: absolute;
+    top: -0.5em;
+    left: 0.75em;
+    background: #fff;
+    line-height: 1em;
+    z-index: 1;
+    padding: 0 0.25em;
+  }
+
+  input {
+    height: 4em;
+    width: 35em;
+    position: relative;
+    border-radius: 0.5em;
+    border: 1px solid #777;
+    color: #0000;
+  }
+}
+
+@keyframes flicker {
+  0%, 55%, 100% { --color: #000; }
+  60%, 95% { --color: #0000; }
+}
+
+input:focus {
+  animation: flicker 1.5s linear infinite;
+}
+
+.password {
+  background: 
+    radial-gradient(circle at  5% 55%, #000 calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 10% 55%, #000 calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 15% 55%, #000 calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 20% 55%, #000 calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 25% 55%, #000 calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 30% 55%, #000 calc(0.6em - 1px), #0000 0.6em),
+    linear-gradient(var(--color) 0 0) 32.75% 55% / 0.1em 2.25em no-repeat;
+}
+
+.winter-password span::after {
+  color: #0cc;
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  background:
+    linear-gradient(#0cc 0 0) 50% 50% / 20% 20%,
+    linear-gradient(90deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 50% 50% / 80% 92%,
+    linear-gradient(30deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 50% 50% / 80% 80%,
+    linear-gradient(-30deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 50% 50% / 80% 80%,
+    linear-gradient(90deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 20% 20% / 20% 20%,
+    linear-gradient(90deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 82% 20% / 20% 20%,
+    linear-gradient(90deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 20% 80% / 20% 20%,
+    linear-gradient(90deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 80% 80% / 20% 20%,
+    linear-gradient(-30deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 10% 35% / 20% 20%,
+    linear-gradient(30deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 90% 35% / 20% 20%,
+    linear-gradient(30deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 13% 63% / 20% 20%,
+    linear-gradient(-30deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 87% 63% / 20% 20%,
+    linear-gradient(45deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 42% 12% / 15% 15%,
+    linear-gradient(-45deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 60% 12% / 15% 15%,
+    linear-gradient(45deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 60% 88% / 15% 15%,
+    linear-gradient(-45deg, #0000 calc(50% - 0.05em), #0cc 0 calc(50% + 0.05em), #0000 0) 42% 88% / 15% 15%
+    ;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1.6em 0 ) drop-shadow(3.2em 0) drop-shadow(3.2em 0)
+}
+
+.winter {
+  background:linear-gradient(var(--color) 0 0) 35.5% 55% / 0.1em 2.25em no-repeat
+}
+
+
+.summer-password span::after {
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  background:
+    radial-gradient(circle, gold calc(0.45em - 1px), #fff0 0.45em) 50% 50% / 1.5em 1.5em;
+  filter: drop-shadow(1.6em 0 gold) drop-shadow(3.2em 0 gold) drop-shadow(3.2em 0 gold)
+}
+
+.summer-password span::before {
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  background:
+    conic-gradient(from 140deg at 50% 0, darkorange 0 80deg, #0000 0) 50% 0% / 1.5em 0.5em,
+    conic-gradient(from -40deg at 50% 100%, darkorange 0 80deg, #0000 0) 50% 100% / 1.5em 0.5em,
+    conic-gradient(from 50deg at 0% 50%, darkorange 0 80deg, #0000 0) 0% 0% / 0.5em 1.5em,
+    conic-gradient(from 230deg at 100% 50%, darkorange 0 80deg, #0000 0) 100% 0% / 0.5em 1.5em,
+    conic-gradient(from 100deg at 0 0, darkorange 0 80deg, #0000 0) 25% 25% / 0.5em 0.5em,
+    conic-gradient(from 190deg at 100% 0, darkorange 0 80deg, #0000 0) 75% 25% / 0.5em 0.5em,
+    conic-gradient(from 10deg at 0 100%, darkorange 0 80deg, #0000 0) 25% 75% / 0.5em 0.5em,
+    conic-gradient(from 270deg at 100% 100%, darkorange 0 80deg, #0000 0) 75% 75% / 0.5em 0.5em
+    ;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1.6em 0 darkorange) drop-shadow(3.2em 0 darkorange) drop-shadow(3.2em 0 darkorange)
+}
+
+.summer {
+  background: linear-gradient(var(--color) 0 0) 35.5% 55% / 0.1em 2.25em no-repeat;
+}
+
+.spring-password span::after {
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  background:
+    radial-gradient(circle, gold calc(0.4em - 1px), #fff0 0.4em) 50% 50% / 1.5em 1.5em;
+  filter: drop-shadow(1.6em 0 gold) drop-shadow(3.2em 0 gold) drop-shadow(3.2em 0 gold)
+}
+
+.spring-password span::before {
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  background:
+    radial-gradient(circle, hotpink 0 0.2em, #0000 0)  50%   0% / 1.5em 0.5em,
+    radial-gradient(circle, hotpink 0 0.2em, #0000 0)  50% 100% / 1.5em 0.5em,
+    radial-gradient(circle, hotpink 0 0.2em, #0000 0)   0%   0% / 0.5em 1.5em,
+    radial-gradient(circle, hotpink 0 0.2em, #0000 0) 100%   0% / 0.5em 1.5em,
+    radial-gradient(circle, hotpink 0 0.2em, #0000 0)  15%  15% / 0.5em 0.5em,
+    radial-gradient(circle, hotpink 0 0.2em, #0000 0)  85%  15% / 0.5em 0.5em,
+    radial-gradient(circle, hotpink 0 0.2em, #0000 0)  15%  85% / 0.5em 0.5em,
+    radial-gradient(circle, hotpink 0 0.2em, #0000 0)  85%  85% / 0.5em 0.5em
+    ;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1.6em 0 hotpink) drop-shadow(3.2em 0 hotpink) drop-shadow(3.2em 0 hotpink)
+}
+
+.spring {
+  background: linear-gradient(var(--color) 0 0) 35.5% 55% / 0.1em 2.25em no-repeat;
+}
+
+.christmas-password span::after {
+  color: #000;
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  background:
+    linear-gradient(#000 0 0) 50% 15% / 50% 5%,
+    linear-gradient(#000 0 0) 50% 0% / 25% 15%,
+    radial-gradient(circle at 43% 30%, #000 0.06em, #0000 0),
+    radial-gradient(circle at 57% 30%, #000 0.06em, #0000 0),
+    radial-gradient(circle at 50% 55%, #000 0.06em, #0000 0),
+    radial-gradient(circle at 50% 70%, #000 0.06em, #0000 0),
+    radial-gradient(circle at 50% 85%, #000 0.06em, #0000 0),
+    radial-gradient(farthest-side at 50% 0, #0000 60%, #000 0 99%, #0000) 50% 40% / 15% 7.5%,
+    linear-gradient(-60deg, #0000 45%, #000 0 55%, #0000 0) 0 80% / 40% 30%,
+    linear-gradient(60deg, #0000 45%, #000 0 55%, #0000 0) 95% 80% / 40% 30%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1.6em 0) drop-shadow(3.2em 0) drop-shadow(3.2em 0)
+}
+
+.christmas-password span::before {
+  color: #ddc;
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  background:
+    radial-gradient(closest-side circle at 50% 30%, #ddc 55%, #0000 0)  50%  25% / 1.5em 1.5em,
+    radial-gradient(closest-side circle at 50% 70%, #ddc 99%, #0000 0)  50% 100% / 1.5em 1.5em
+    ;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1.6em 0) drop-shadow(3.2em 0) drop-shadow(3.2em 0)
+}
+
+.christmas {
+  background: linear-gradient(var(--color) 0 0) 35.5% 55% / 0.1em 2.25em no-repeat;
+}
+
+
+
+.fall-password span::after {
+  --c: brown;
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  color: var(--c);
+  background:
+    radial-gradient(50% 200% at 10% -50%, #0000 90%, var(--c) 0 99%, #0000) 50% 100% / 1.5em 1.35em no-repeat;
+  filter: drop-shadow(1.6em 0) drop-shadow(3.2em 0) drop-shadow(3.2em 0)
+}
+
+.fall-password span::before {
+  --c: #ce7420;
+  content: "";
+  color: var(--c);
+  position: absolute;
+  top: 160%;
+  left: 0%;
+  width: 1.5em;
+  height: 1.5em;
+  background:
+    radial-gradient(farthest-side at 60% 30%, var(--c) 99%, #0000) 0 70% / 50% 40%,
+    radial-gradient(farthest-side at 30% 30%, var(--c) 99%, #0000) 100% 70% / 50% 40%,
+    radial-gradient(farthest-side at 60% 30%, var(--c) 99%, #0000) 20% 28% / 30% 30%,
+    conic-gradient(at 100% 0, #0000 190deg, var(--c) 0 250deg, #0000 0) 80% 29% / 30% 30%,
+    radial-gradient(farthest-side at 100% 50%, var(--c) 99%, #0000) 45% 0% / 20% 50%,
+    radial-gradient(farthest-side at 10% 50%, var(--c) 99%, #0000) 60% 0% / 20% 50%
+    ;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1.6em 0) drop-shadow(3.2em 0) drop-shadow(3.2em 0)
+}
+.fall {
+  background: linear-gradient(var(--color) 0 0) 35.5% 55% / 0.1em 2.25em no-repeat;
+}
+
+.spring {
+  background: linear-gradient(var(--color) 0 0) 35.5% 55% / 0.1em 2.25em no-repeat;
+}
+
+.corporate-june {
+  background: 
+    radial-gradient(circle at  5% 55%, red calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 10% 55%, darkorange calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 15% 55%, gold calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 20% 55%, green calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 25% 55%, blue calc(0.6em - 1px), #0000 0.6em),
+    radial-gradient(circle at 30% 55%, purple calc(0.6em - 1px), #0000 0.6em),
+    linear-gradient(var(--color) 0 0) 33.25% 55% / 0.1em 2.25em no-repeat;
+}
+    </style>
+  </head>
+  <body>
+
+    <label>
+      <span>Password</span>
+      <input class="password" type="password" />
+    </label>
+
+    <label class="spring-password">
+      <span>Spring Password</span>
+      <input class="spring" type="password" />
+    </label>
+
+    <label class="summer-password">
+      <span>Summer Password</span>
+      <input class="summer" type="password" />
+    </label>
+
+    <label class="fall-password">
+      <span>Fall Password</span>
+      <input class="fall" type="password" />
+    </label>
+
+    <label class="winter-password">
+      <span>Winter Password</span>
+      <input class="winter" type="password" />
+    </label>
+
+    <label class="christmas-password">
+      <span>Christmas Password</span>
+      <input class="christmas" type="password" />
+    </label>
+
+    <label>
+      <span>June Password (Corporate)</span>
+      <input class="corporate-june" type="password" />
+    </label>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
