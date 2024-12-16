@@ -3198,4 +3198,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>If you give a mouse a cookie</title>
+    <link href="https://comicss.art/comics/169" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/169/mouse-cookie.html"/>
+    <id>https://comicss.art/comics/169</id>
+    <updated>2024-12-16T00:00:00Z</updated>
+    <summary>New Cartoon: If you give a mouse a cookie</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/169/mouse-cookie.png" alt="Cartoon with two panels showing a mouse with a cookie. In the first panel, the mouse is smiling and looking happy, and has the text 'if you give a mouse a cookie...'. The second panel shows an angry mouse along with the text (partially covered by the mouse): ...he is going to ask what the **** is this? No HTTPS? No domain or expiration date? Have you not heard about GDPR? Who did even let you close to this code? This sucks! And you call yourself a developer? Can I talk to your manager? Do they know what a ****** developer you are? Aren't you ashame? You should be ashamed! ...An that's why you never give a mouse a ****ing cookie. The end." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

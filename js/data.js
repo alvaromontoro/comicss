@@ -1319,4 +1319,11 @@ const posts = [
     vertical: true,
     ariaLabel: "different 'creative' password inputs: a regular password field shows dots instead of letters, summer password has suns instead, winter password has snowflakes, spring password has flowers, christmas password has santas, june corporate passwords has dots but they are the colors of the pride flag"
   },
+  {
+    id: 169,
+    uid: "mouse-cookie",
+    boxes: 2,
+    title: "If you give a mouse a cookie",
+    ariaLabel: "Cartoon with two panels showing a mouse with a cookie. In the first panel, the mouse is smiling and looking happy, and has the text 'if you give a mouse a cookie...'. The second panel shows an angry mouse along with the text (partially covered by the mouse): ...he is going to ask what the **** is this? No HTTPS? No domain or expiration date? Have you not heard about GDPR? Who did even let you close to this code? This sucks! And you call yourself a developer? Can I talk to your manager? Do they know what a ****** developer you are? Aren't you ashame? You should be ashamed! ...An that's why you never give a mouse a ****ing cookie. The end."
+  },
 ]
