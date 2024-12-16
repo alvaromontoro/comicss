@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1vmin;
+  width: 90em;
+  gap: 1em;
+}
+
+section {
+  border: 0.5em solid;
+  aspect-ratio: 5 / 6;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(#c9c5, #c9c0 80%);
+  
+  *, *::before, *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+}
+
+p {
+  margin: 0;
+  font-size: 3.25em;
+  color: #d00;
+  font-family: Garamond, Franklin, serif;
+  text-align: center;
+  width: 100%;
+  padding: 0.25em;
+}
+
+.cookie {
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50% 35% 60% 65%;
+  border: 0.4em solid;
+  top: 80%;
+  left: 75%;
+  rotate: 22deg;
+  background: 
+    radial-gradient(at 20% 30%, #321 8%, #0000 0),
+    radial-gradient(at 45% 50%, #321 8%, #0000 0),
+    #c96;
+}
+
+.mouse { 
+  --fur: #dcc;
+  --skin: #fcc;
+  width: 70%;
+  height: 60%;
+  bottom: 0;
+  left: 10%;
+  
+  .body {
+    left: 5%;
+    width: 90%;
+    height: 100%;
+    border-radius: 100% / 130% 130% 80% 80%;
+    border: 0.4em solid;
+    top: 75%;
+    background: 
+      radial-gradient(30% 14% at 50% 0, #0005 30%, #0000 70%, #0000 0 ),
+      linear-gradient(#000 0.3em, #369 0) 60% 44% / 32% 50% no-repeat,
+      radial-gradient(50% 100% at 0 70%, #0000 calc(80% - 1px), #000 80% calc(80% + 0.2em), #369 calc(80% + 0.2em + 1px) calc(100% - 0.3em - 1px), #000 calc(100% - 0.3em) calc(100% - 1px), #0000),
+      radial-gradient(50% 100% at 35% 60%, #0000 calc(80% - 1px), #000 80% calc(80% + 0.2em), #369 calc(80% + 0.2em + 1px) calc(100% - 0.3em - 1px), #000 calc(100% - 0.3em) calc(100% - 1px), #0000),
+      var(--fur);
+  }
+  
+  .head {
+    width: 100%;
+    aspect-ratio: 1;
+    
+    .ear {
+      width: 45%;
+      aspect-ratio: 0.9;
+      border-radius: 100% / 90% 90% 120% 120%;
+      border: 0.4em solid;
+      left: 50%;
+      top: -5%;
+      transform: translate(-50%, -50%) rotate(10deg) scale(0.95);
+      background: 
+        
+        radial-gradient(40% 45% at 55% 54%, var(--skin) 90%, #0000 0),
+        radial-gradient(41% 45% at 53% 55%, #000 90%, #0000 0),
+        var(--fur);
+      
+      & ~ & {
+        top: 20%;
+        left: 0;
+        transform: translate(-50%, -50%) rotate(-50deg);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 99%);
+      }
+    }
+    
+    .face {
+      top: 10%;
+      width: 80%;
+      left: 50%;
+      transform: translate(-50%);
+      aspect-ratio: 1.1;
+      border-radius: 100% / 100% 140% 60% 90%;
+      border: 0.4em solid;
+      background: var(--fur);
+      
+      .eye {
+        width: 17%;
+        aspect-ratio: 1;
+        top: 45%;
+        left: 42%;
+        border-radius: 50%;
+        background: 
+          radial-gradient(circle at 30% 35%, #fff calc(15% - 1px), #0000 15%),
+          radial-gradient(circle at 20% 55%, #fff calc(9% - 1px), #0000 9%),
+          #000;
+        
+        & + & {
+          left: 74%;
+          top: 30%;
+        }
+      }
+      
+      .nose {
+        width: 20%;
+        aspect-ratio: 1.2;
+        background: 
+          radial-gradient( at 65% 30%, #fffd calc(15% - 1px), #0000 15%),
+          #000;
+        border-radius: 50%;
+        top: 67%;
+        left: 94%;
+        transform: rotate(-15deg);
+      }
+      
+      .mouth {
+        width: 30%;
+        height: 15%;
+        border-radius: 50%;
+        box-shadow: -0.5em 0.5em 0 -0.25em;
+        top: 83%;
+        left: 50%;
+      }
+      
+      .whiskers {
+        width: 35%;
+        height: 12%;
+        border-radius: 50%;
+        top: 75%;
+        left: 32%;
+        border-top: 0.4em solid;
+        border-right: 0.4em solid #0000;
+        box-sizing: content-box;
+        
+        &::before, &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          border-top: 0.4em solid;
+          border-right: 0.4em solid #0000;
+          box-sizing: content-box;
+          border-radius: 50%;
+          transform-origin: 100% 0;
+          transform: rotate(-15deg);
+          top: 15%;
+        }
+        
+        &::after {
+          transform: rotate(-7deg);
+          top: 3%;
+          width: 110%;
+          right: -5%;
+        }
+        
+        & ~ & {
+          width: 25%;
+          transform: scaleX(-1) rotate(7deg);
+          left: 98%;
+          top: 60%;
+        }
+      }
+    }
+  }
+}
+
+section:nth-child(2) {
+  .cookie {
+    top: 85%;
+    rotate: 40deg;
+  }
+  .mouse {
+    .head {
+      .face {
+        background:
+          linear-gradient(-160deg, #f002, #f000 40%),
+          var(--fur)
+          ;
+        
+        
+        .eye {
+          clip-path: polygon(0 10%, 100% 20%, 100% 100%, 0 100%);
+          
+          & + & {
+            clip-path: polygon(100% 0%, 60% 0%, 0% 60%, 0% 100%, 100% 100%);
+          }
+        }
+        
+        .mouth {
+          box-shadow: -0.7em 0.5em 0 -0.25em;
+          transform: scaleY(-1) rotate(-20deg);
+          top: 94%;
+          left: 60%;
+          width: 20%;
+          
+        }
+        
+        .whiskers {
+          transform-origin: 100% 0;
+          transform: rotate(-19deg);
+          
+          & ~ & {
+            transform-origin: 50% 50%;
+            transform: scaleX(-1) rotate(-19deg);
+            left: 96%;
+            top: 65.6%;
+          }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article role="img" aria-label="Cartoon with two panels showing a mouse with a cookie. In the first panel, the mouse is smiling and looking happy, and has the text 'if you give a mouse a cookie...'. The second panel shows an angry mouse along with the text (partially covered by the mouse): ...he is going to ask what the **** is this? No HTTPS? No domain or expiration date? Have you not heard about GDPR? Who did even let you close to this code? This sucks! And you call yourself a developer? Can I talk to your manager? Do they know what a ****** developer you are? Aren't you ashame? You should be ashamed! ...An that's why you never give a mouse a ****ing cookie. The end.">
+      <section>
+        <p>If you give a mouse a cookie...</p>
+        <div class="cookie"></div>
+        <div class="mouse">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="whiskers"></div>
+              <div class="whiskers"></div>
+              <div class="nose"></div>
+            </div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <p>...he's going to ask "What the **** is this?! No HTTPS? No domain? No expiration date? And haven't you heard about GDPR? Who did even let you close to this code? This sucks! And you call yourself a web developer? Can I talk to your manager? Do they know what a ****** developer you are? Aren't you ashamed? You should be ashamed!" And that's why you never give a mouse a ****ing cookie. The end.</p>
+        <div class="cookie"></div>
+        <div class="mouse">
+          <div class="body"></div>
+          <div class="head">
+            <div class="ear"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye"></div>
+              <div class="mouth"></div>
+              <div class="whiskers"></div>
+              <div class="whiskers"></div>
+              <div class="nose"></div>
+            </div>
+            <div class="ear"></div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
