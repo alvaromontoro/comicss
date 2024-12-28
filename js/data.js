@@ -1326,4 +1326,11 @@ const posts = [
     title: "If you give a mouse a cookie",
     ariaLabel: "Cartoon with two panels showing a mouse with a cookie. In the first panel, the mouse is smiling and looking happy, and has the text 'if you give a mouse a cookie...'. The second panel shows an angry mouse along with the text (partially covered by the mouse): ...he is going to ask what the **** is this? No HTTPS? No domain or expiration date? Have you not heard about GDPR? Who did even let you close to this code? This sucks! And you call yourself a developer? Can I talk to your manager? Do they know what a ****** developer you are? Aren't you ashame? You should be ashamed! ...An that's why you never give a mouse a ****ing cookie. The end."
   },
+  {
+    id: 170,
+    uid: "argument",
+    boxes: 4,
+    title: "Argument",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. All of them have 3 people, two of them are talking about how CSS or Tailwind is better than the other, while the third person is more and more interested in the conversation. In the last panel, the two people agree that everything is ok as long as they are using what's best for each other, and the third person is disappointed because they didn't fight 'That is not how it is supposed to go!!'"
+  },
 ]

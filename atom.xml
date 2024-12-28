@@ -3217,4 +3217,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Argument</title>
+    <link href="https://comicss.art/comics/170" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/170/argument.html"/>
+    <id>https://comicss.art/comics/170</id>
+    <updated>2024-12-30T00:00:00Z</updated>
+    <summary>New Cartoon: Argument</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/170/argument.png" alt="comic with 4 panels in a 2x2 grid. All of them have 3 people, two of them are talking about how CSS or Tailwind is better than the other, while the third person is more and more interested in the conversation. In the last panel, the two people agree that everything is ok as long as they are using what's best for each other, and the third person is disappointed because they didn't fight 'That is not how it is supposed to go!!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2024 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
