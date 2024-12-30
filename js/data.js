@@ -1333,4 +1333,12 @@ const posts = [
     title: "Argument",
     ariaLabel: "comic with 4 panels in a 2x2 grid. All of them have 3 people, two of them are talking about how CSS or Tailwind is better than the other, while the third person is more and more interested in the conversation. In the last panel, the two people agree that everything is ok as long as they are using what's best for each other, and the third person is disappointed because they didn't fight 'That is not how it is supposed to go!!'"
   },
+  {
+    id: 171,
+    uid: "wherewolf",
+    boxes: 1,
+    title: ":where(.wolf)",
+    vertical: true,
+    ariaLabel: "Cartoon of a wolf's head talking some CSS code, witht he title :where(.wolf)"
+  },
 ]
