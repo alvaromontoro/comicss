@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/171/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/171/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Amatic SC';
+        src: url(/fonts/AmaticSC-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: 'Amatic SC';
+        src: url(/fonts/AmaticSC-Bold.ttf);
+        font-weight: 900;
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      html {
+        background: #9cf8;
+      }
+
+      article {
+        font-size: 1vmin;
+        width: 90vmin;
+        aspect-ratio: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      article *,
+      article *::before,
+      article *::after {
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      h1 {
+        font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
+        font-size: 10em;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%);
+        right: 0;
+        left: auto;
+        transform: none;
+      }
+
+
+      .bubble {
+        width: 55%;
+        height: 50%;
+        right:-3%;
+        top: 0%;
+        mix-blend-mode: multiply;
+        background: #9cf8;
+        clip-path: polygon(1px 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 1px), 1px calc(100% - 1px));
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background:
+          radial-gradient(40% 25% at 55% 25%, #f00 99%, #0000),
+          radial-gradient(40% 25% at 45% 26%, #f00 99%, #0000),
+          radial-gradient(45% 25% at 50% 27%, #f00 99%, #0000), 
+            radial-gradient(50% 90% at 10% -10%, #0000 88%, #f00 0 99%, #0000),
+            #fff;
+          box-shadow: 0 0 0 4em #fff;
+          filter: blur(1.5em) contrast(100) sepia(3) brightness(2.3) hue-rotate(250deg);
+          mix-blend-mode: darken;
+          mask: linear-gradient(#000 0 0);
+        }
+
+        div {
+          font-family: 'Courier New', Courier, monospace, monospace;
+          white-space: pre;
+          font-size: 3em;
+          line-height: 1.25;
+          left: 50%;
+          top: 15%;
+          transform: translate(-50%);
+          font-weight: bold;
+          color: #000b;
+        }
+      }
+      
+      .werewolf {
+        --fur: #b77;
+        --fur-dark: #644;
+        width: 50%;
+        height:70%;
+        top: 10%;
+        top: auto;
+        bottom: 2%;
+        color: var(--fur-dark);
+
+        .shadow {
+          width: 100%;
+          height: 8%;
+          background: #0002;
+          border-radius: 100%;
+          top: 96%;
+        }
+        
+        .body {
+          width: 86%;
+          height: 56.5%;
+          left: 50%;
+          bottom: 0;
+          transform: translate(-50%);
+
+          .claw {
+            width: 8%;
+            height: 12%;
+            background: #ffc;
+            
+            border: 0.8em solid;
+
+            &:nth-of-type(1) {
+              border-radius: 30% 100% 0% 0%;
+              top: -32%;
+              left: 118%;
+              rotate: 30deg;
+            }
+
+            &:nth-of-type(2) {
+              border-radius: 30% 100% 0% 0%;
+              top: -24.5%;
+              left: 123.5%;
+              rotate: 50deg;
+            }
+
+            &:nth-of-type(3) {
+              border-radius:  100% 30% 0% 0%;
+              top: -34%;
+              left: 109%;
+              rotate: 10deg;
+            }
+
+            &:nth-of-type(4) {
+              border-radius:  100% 30% 0% 0%;
+              top: -30%;
+              left: 100%;
+              rotate: -24deg;
+            }
+          }
+
+          .paw2 {
+            width: 13%;
+            aspect-ratio: 1;
+            background: #fcc6;
+            border-radius: 50%;
+            left: 108%;
+            top: -17%;
+            border-bottom: 0.45em solid #0000;
+            background-clip: content-box;
+            box-shadow:
+              -2.5em -3.5em 0 -1.5em #fcc6,
+              -0.4em -4.5em 0 -1.5em #fcc6,
+              2.0em -4em 0 -1.5em #fcc6,
+              3.5em -2.25em 0 -1.5em #fcc6
+          }
+
+          .paw {
+            width: 24%;
+            aspect-ratio: 1;
+            border: 1em solid;
+            background: var(--fur);
+            border-radius: 50%;
+            left: 102.25%;
+            top: -24%;
+            border-bottom: 0.45em solid #0000;
+            background-clip: content-box;
+
+            &::after {
+              content:"";
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              background: var(--fur);
+            }
+
+            &::before {
+              content:"";
+              width: 40%;
+              aspect-ratio: 1;
+              background: var(--fur);
+              border-radius: 50%;
+              top: -15%;
+              left: -8%;
+              /* border: 0.85em solid; */
+              box-shadow:
+              2.5em -1em var(--fur),
+                4.9em -0.5em var(--fur),
+                6.4em 1.5em var(--fur),
+                0 0 0 0.8em ,
+                2.4em -1em  0 0.8em,
+                5em -0.5em 0 0.8em,
+                6.5em 1.5em 0 0.8em
+            }
+          }
+
+          .tail {
+            width: 55%;
+            height: 30%;
+            left: -15%;
+            top: 45%;
+            border-radius: 50% / 0 0 100% 100%;
+            border: 1em solid;
+            border-top: 0;
+            background:
+              radial-gradient(50% 50% at 45% 0, #0000 calc(100% - 1em - 1px), var(--fur-dark) calc(100% - 1em) calc(100% - 1px), var(--fur)) no-repeat
+            ;
+            transform: rotate(10deg);
+
+            &::before {
+              content: "";
+              left: 5%;
+              width: 86%;
+              height: 100%;
+              border-radius: 50% / 0 0 100% 100%;
+              border: 1em solid var(--fur);
+              border-left-color: var(--fur-dark);
+              border-top: 0;
+              background:
+                radial-gradient(50% 50% at 45% 0, #0000 calc(100% - 1em - 1px), var(--fur-dark) calc(100% - 1em) calc(100% - 1px), var(--fur)) no-repeat
+              ;
+              clip-path: polygon(0 1em, 100% 1em, 100% 100%, 0 100%);
+              transform: rotate(15deg);
+            }
+          }
+          
+          .arm {
+            width: 50%;
+            height: 53%;
+            top: 10%;
+            left: 2%;
+            background: var(--fur);
+            border: 1em solid;
+            border-radius: 100% 0 0 70%;
+
+            & ~ & {
+              transform: scaleX(-1);
+              right: 3%;
+              left: auto;
+            }
+          }
+
+          .arm2 {
+            width: 70%;
+            height: 35%;
+            background: 4;
+            left: 60%;
+            top: -2%;
+            border-radius: 50% / 0 0 100% 100%;
+            border: 1em solid;
+            border-top: 0;
+            background: radial-gradient(farthest-side at 55% 0,  #0000 calc(60% - 1em - 1px), var(--fur-dark) calc(60% - 1em) calc(60% - 1px), var(--fur) 60%);
+            background-repeat: no-repeat;
+            transform: rotate(-30deg);
+          }
+
+          .foot {
+            --p: 32%;
+            width: 27%;
+            height: 17%;
+            border: 1em solid;
+            background:
+              radial-gradient(farthest-side at 0 100%, #0000 99%, var(--fur)) 0 100% / 60% 80%,
+              radial-gradient(100% 160% at 100% 100%, #0000 calc(100% - 1em - 1px), var(--fur-dark) calc(100% - 1em) calc(100% - 1px), #0000) 10% 100% / 50% 50% no-repeat, 
+              radial-gradient(100% 160% at 100% 100%, #0000 calc(100% - 1em - 1px), var(--fur-dark) calc(100% - 1em) calc(100% - 1px), #0000) 55% 100% / 50% 50% no-repeat, 
+              var(--fur);
+            bottom: -2%;
+            left: var(--p);
+            transform: translate(-50%);
+            border-radius: 120% 20% 3em 2em;
+            height: 18%;
+
+            & ~ & {
+              left: calc(100% - var(--p));
+              transform: translate(-50%) scaleX(-1);
+            }
+          }
+
+          .leg {
+            --p: 35%;
+            width: 22%;
+            height: 50%;
+            border: 1em solid #0006;
+            left: var(--p);
+            bottom: 10%;
+            border-radius: 100% / 15%;
+            transform: translate(-50%);
+            background: #369;
+            ;
+            & ~ & {
+              left: calc(100% - var(--p));
+              aclip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 60% 100%, 30% 90%, 0 100%);
+            }
+          }
+
+          .chest {
+            width: 68%;
+            height: 80%;
+            background: #f00;
+            border-radius: 100% / 130% 130% 80% 80%;
+            left: 50%;
+            transform: translate(-50%);
+            border: 1em solid #0006;
+            clip-path: polygon(0 30%, 20% 30%, 20% 0,80% 0, 80% 30%, 100% 30%, 100% 100%, 84.5% 100%, 84.5% 80%, 65% 80%, 65% 100%, 38% 100%, 35% 80%, 15.5% 80%, 15.5% 100%, 0 100%);
+            background: 
+            radial-gradient(circle at 52% 81%, #0006 1em, #0000 0),
+              linear-gradient(var(--fur) 0 0) 22% 33% / 30% 20% no-repeat,
+              radial-gradient(circle at 50% 37%, var(--fur) 1.8em, #0000 0),
+              linear-gradient(var(--fur) 0 0) 42% 50% / 30% 20% no-repeat,
+              radial-gradient(circle at 50% 37%, var(--fur-dark) 2.5em, #0000 0),
+              radial-gradient(circle at 60% 42%, var(--fur) 1.5em, #0000 0),
+              radial-gradient(circle at 60% 42%, var(--fur-dark) 2.3em, #0000 0),
+              linear-gradient(#0006 0 0) 50% 75% / 100% 1em no-repeat,
+              linear-gradient(#369 5%, var(--fur) 0 75%, #369 0);
+             
+          }
+        }
+
+        .head {
+          width: 86%;
+          height: 51%;
+          left: 50%;
+          transform: translate(-50%);
+
+          .ear {
+            --p: 12%;
+            width: 30%;
+            height: 50%;
+            border: 1em solid;
+            left: var(--p);
+            top: -10%;
+            border-radius: 50% 250% 50% 100%;
+            transform-origin: 0 100%;
+            transform: rotate(-15deg);
+            background: 
+              linear-gradient(#f888 0 0),
+              var(--fur);
+              box-shadow: 
+              inset 1em 0 var(--fur),
+                inset -2em 1em var(--fur);
+
+            & ~ & {
+              left: calc(100% - var(--p));
+              transform: scaleX(-1) rotate(-25deg);
+              top: -8%;
+            }
+          }
+
+          .ear {
+            --p: 63%;
+            width: 30%;
+            height: 50%;
+            border: 1em solid;
+            left: var(--p);
+            top: -22%;
+            border-radius: 50% 250% 50% 100%;
+            transform-origin: 0 100%;
+            transform: rotate(20deg);
+            background: 
+              /* linear-gradient(#f888 0 0), */
+              linear-gradient(#fcc6 0 0),
+              var(--fur);
+              box-shadow: 
+              inset 1em 0 var(--fur),
+                inset -2em 1em var(--fur);
+
+            & ~ & {
+              left: calc(105% - var(--p));
+              transform: scaleX(-1) rotate(20deg);
+              top: -22%;
+            }
+          }
+
+          .face {
+            width: 100%;
+            height: 100%;
+          
+            background: var(--fur);
+            border: 1em solid;
+            border-radius: 48%;
+
+            &::before {
+              content: "";
+              width: 20%;
+              aspect-ratio: 1;
+              border-radius: 50%;
+              background: var(--fur);
+              top: 102%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              border: 0.8em solid;
+              box-shadow: 
+              -6em -1em 0 -0.85em var(--fur),
+                 6em -1.2em 0 -0.85em var(--fur),
+                 -11em -3.5em 0 -0.85em var(--fur),
+                 11em -3.75em 0 -0.85em var(--fur),
+                 -14.5em -7.5em 0 -0.85em var(--fur),
+                 14em -7em 0 -0.85em var(--fur),
+                -6em -1em,
+                 6em -1.2em,
+                 -11em -3.5em,
+                 11em -3.75em,
+                 -14.5em -7.5em,
+                 14em -7em;
+                 z-index: 0;
+            }
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              border-radius: 48%;
+              z-index: 0;
+
+              background: 
+                /* radial-gradient(farthest-side at 100% 100%, #0000 calc(100% - 1em - 1px), var(--fur-dark) calc(100% - 1em) calc(100% - 1px), #0000) 15% 15% / 20% 20% no-repeat */
+                var(--fur);
+
+            }
+
+            & * { z-index: 1;}
+
+            .nose {
+              width: 15%;
+              aspect-ratio: 1.7;
+              background: var(--fur-dark);
+              border-radius:50%/ 40%40% 60% 60%;
+              transform: translate(-50%, -50%);
+              top: 60%;
+              left: 50%;
+
+              &::before {
+                content: "";
+                width: 0.9em;
+                height: 100%;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%);
+                background: var(--fur-dark);
+              }
+            }
+
+            .hair {
+              width: 20%;
+              aspect-ratio: 1;
+              background: var(--fur);
+              border-radius: 50%;
+              left: 50%;
+              transform: translate(-50%, -60%);
+              border: 0.85em solid;
+              box-shadow: 
+              4em 1.5em 0 -1.2em var(--fur),
+                3.5em 5em 0 -1.2em  var(--fur),
+                4em 1.5em 0 -0.3em
+                /* ,
+                2.5em 4.5em 0 -0.3em,
+                2.5em 4.5em 0 -0.3em var(--fur) */
+                ;
+                clip-path: polygon(0 0, 500% 0, 500% 500%, 350% 500%, 50% 61%, 0 61%);
+            }
+
+            .eye {
+              --p: 25%;
+              width: 15%;
+              aspect-ratio: 1;
+              background: radial-gradient(circle at 30% 35%, #fff calc(22% - 1px), #222 22%);
+              border-radius: 50%;
+              left: var(--p);
+              top:45%;
+              transform: translate(-50%);
+
+              & ~ & {
+                left: calc(100% - var(--p));
+              }
+            }
+
+            .cheeck {
+              --p: 17%;
+              width: 15%;
+              aspect-ratio: 1.4;
+              background: #f888;
+              border-radius: 50%;
+              left: var(--p);
+              top: 58%;
+              transform: translate(-50%);
+
+              & ~ & {
+                left: calc(100% - var(--p));
+              }
+
+              &::before, &::after {
+                content: "";
+                width: 12%;
+                height: 70%;
+                background: #f003;
+                border-radius: 10em;
+                rotate: 45deg;
+                top: 12%;
+                left: 25%;
+              }
+
+              &::after {
+                left: 60%;
+              }
+            }
+
+            .mouth {
+              width: 32%;
+              height: 17%;
+              background: var(--fur-dark);
+              border: 0.85em solid;
+              border-top-width: 1em;
+              border-radius: 50% / 20% 20% 80% 80%;
+              transform: translate(-50%, -50%);
+              top: 78%;
+              left: 50%;
+
+              &::before, &::after {
+                --p: 20%;
+                content: "";
+                width: 17%;
+                height: 55%;
+                left: var(--p);
+                background: #ffc;
+                border-radius: 0 0 20% 120%;
+                transform: translate(-50%) skewX(5deg);
+              }
+
+              &::after {
+                left: calc(100% - var(--p));
+                transform: translate(-50%) skewX(-5deg);
+                border-radius: 0 0 100% 20%;
+              }
+
+              div {
+                display: none;
+                width: 100%;
+                height: 100%;
+                border-radius: 50% / 20% 20% 80% 80%;
+                overflow: hidden;
+                
+                &::before, &::after {
+                  --p: 28%;
+                  content: "";
+                  width: 12%;
+                  height: 30%;
+                  left: var(--p);
+                  bottom: -5%;
+                  background: #ffc;
+                  border-radius: 120% 20% 0 0;
+                  transform: translate(-50%) skewX(5deg);
+                }
+
+                &::after {
+                  left: calc(100% - var(--p));
+                  transform: translate(-50%) skewX(-5deg);
+                  border-radius: 20% 100% 0 0;
+                }
+              }
+            }
+          }
+
+          
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="bubble">
+        <div>#Moon.full ~ #me {
+  transition: all;
+}</div>
+      </div>
+      <div class="werewolf">
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="claw"></div>
+          <div class="claw"></div>
+          <div class="claw"></div>
+          <div class="claw"></div>
+          <div class="tail"></div>
+          <div class="foot"></div>
+          <div class="foot"></div>
+          <div class="leg"></div>
+          <div class="leg"></div>
+          <div class="arm"></div>
+          <div class="arm2"></div>
+          
+          <div class="paw"></div>
+
+          <div class="paw2"></div>
+          <!-- <div class="paw"></div> -->
+          <div class="chest"></div>
+          
+        </div>
+        <div class="head">
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="hair-back"></div>
+          <div class="hair-back"></div>
+          <div class="face">
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="cheeck"></div>
+            <div class="cheeck"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth">
+              <div></div>
+            </div>
+            <div class="hair"></div>
+          </div>
+        </div>
+      </div>
+      <h1>:where(.wolf)</h1>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
