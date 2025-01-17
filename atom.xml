@@ -3255,4 +3255,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>#DECAFF #C0FFEE at 200 Degrees</title>
+    <link href="https://comicss.art/comics/172" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/172/decaff-coffee.html"/>
+    <id>https://comicss.art/comics/172</id>
+    <updated>2025-01-17T00:00:00Z</updated>
+    <summary>New Cartoon: #DECAFF #C0FFEE at 200 Degrees</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/172/decaff-coffee.png" alt="a color gradient from purple to light blue" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -1341,4 +1341,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon of a wolf's head talking some CSS code, witht he title :where(.wolf)"
   },
+  {
+    id: 172,
+    uid: "decaff-coffee",
+    boxes: 1,
+    title: "#DECAFF #C0FFEE at 200 Degrees",
+    vertical: true,
+    ariaLabel: "a color gradient from purple to light blue"
+  },
 ]
