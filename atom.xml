@@ -3274,4 +3274,42 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>GDPR</title>
+    <link href="https://comicss.art/comics/173" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/173/gdpr.html"/>
+    <id>https://comicss.art/comics/173</id>
+    <updated>2025-02-15T00:00:00Z</updated>
+    <summary>New Cartoon: GDPR</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/173/gdpr.png" alt="cartoon showing two characters, one is complaining that GDPR is a terrible policy then starts complaining of how privacy is lacking in the USA and how it would be great to have some law to protect it while the other character repeatedly replies to every complaint 'GDPR'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>AI Act</title>
+    <link href="https://comicss.art/comics/174" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/174/ai-act.html"/>
+    <id>https://comicss.art/comics/174</id>
+    <updated>2025-02-17T00:00:00Z</updated>
+    <summary>New Cartoon: AI Act</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/174/ai-act.png" alt="cartoon showing two characters. One is complaining that the AI Act is terrible and slows down progress in the EU. Then a panel describes an apocalyptic situation after AI replaces humans beings. The complaining character asks for potential solutions and ignores the other character when they continuosly reply 'AI Act'. In the last panel, a terminator has killed both characters." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

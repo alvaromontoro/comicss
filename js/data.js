@@ -1349,4 +1349,18 @@ const posts = [
     vertical: true,
     ariaLabel: "a color gradient from purple to light blue"
   },
+  {
+    id: 173,
+    uid: "gdpr",
+    boxes: 6,
+    title: "GDPR",
+    ariaLabel: "cartoon showing two characters, one is complaining that GDPR is a terrible policy then starts complaining of how privacy is lacking in the USA and how it would be great to have some law to protect it while the other character repeatedly replies to every complaint 'GDPR'"
+  },
+  {
+    id: 174,
+    uid: "ai-act",
+    boxes: 6,
+    title: "AI Act",
+    ariaLabel: "cartoon showing two characters. One is complaining that the AI Act is terrible and slows down progress in the EU. Then a panel describes an apocalyptic situation after AI replaces humans beings. The complaining character asks for potential solutions and ignores the other character when they continuosly reply 'AI Act'. In the last panel, a terminator has killed both characters."
+  },
 ]

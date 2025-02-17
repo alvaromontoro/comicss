@@ -1726,5 +1726,25 @@
       <enclosure url="https://comicss.art/comics/172/decaff-coffee.png" length="83000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/173</guid>
+      <title>GDPR</title>
+      <link>https://comicss.art/comics/173</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/173/gdpr.png" length="308000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/174</guid>
+      <title>AI Act</title>
+      <link>https://comicss.art/comics/174</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/174/ai-act.png" length="353000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
