@@ -1746,5 +1746,15 @@
       <enclosure url="https://comicss.art/comics/174/ai-act.png" length="353000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/175</guid>
+      <title>Primes</title>
+      <link>https://comicss.art/comics/175</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/175/primes.png" length="80000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

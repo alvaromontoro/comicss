@@ -1363,4 +1363,12 @@ const posts = [
     title: "AI Act",
     ariaLabel: "cartoon showing two characters. One is complaining that the AI Act is terrible and slows down progress in the EU. Then a panel describes an apocalyptic situation after AI replaces humans beings. The complaining character asks for potential solutions and ignores the other character when they continuosly reply 'AI Act'. In the last panel, a terminator has killed both characters."
   },
+  {
+    id: 175,
+    uid: "primes",
+    boxes: 1,
+    title: "Primes",
+    vertical: true,
+    ariaLabel: "prime symbols: single prime, double prime, triple prime,  quadruple prime, and Optimus Prime (with a drawing of the transformer instead of any prime symbol)"
+  },
 ]
