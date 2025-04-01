@@ -3312,4 +3312,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Primes</title>
+    <link href="https://comicss.art/comics/175" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/175/primes.html"/>
+    <id>https://comicss.art/comics/175</id>
+    <updated>2025-04-01T00:00:00Z</updated>
+    <summary>New Cartoon: Primes</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/175/primes.png" alt="prime symbols: single prime, double prime, triple prime,  quadruple prime, and Optimus Prime (with a drawing of the transformer instead of any prime symbol)" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

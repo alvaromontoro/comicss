@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+  <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+  <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+  <title>comiCSS</title>
+
+  <meta property="og:title" content="comiCSS" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://comicss.art" />
+  <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
+  <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://comicss.art/">
+  <meta name="twitter:title" content="comiCSS">
+  <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+  <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
+  <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+  <link rel="shortcut icon" href="/favicon.png" />
+
+  <style>
+    @font-face {
+      font-family: 'Cormorant';
+      src: url(/fonts/Cormorant.ttf);
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Tesdt';
+      src: url(/fonts/Cormorant.ttf);
+    }
+
+    article {
+      display: grid;
+      max-width: 90em;
+      margin: auto;
+      grid-template-columns: repeat(5, 1fr);
+      font-size: 1vmin;
+      margin-top: 10em;
+    }
+
+    h1 {
+      grid-column: 1 / 6;
+      text-align: center;
+      font-size: 5em;
+      margin-bottom: 1em;
+      font-family: 'Cormorant', 'Times New Roman', Times, serif;
+    }
+
+    section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p:first-child {
+      font-size: 2em;
+      font-family: monospace, monospace;
+      margin: 0;
+    }
+
+    p:last-child:not(.optimus-prime) {
+      font-size: 4em;
+      font-family: Verdana, Arial, sans-serif;
+    }
+
+    h2 {
+      font-size: 3em;
+      margin: 1em 0;
+      font-family: 'Cormorant', 'Times New Roman', Times, serif;
+    }
+
+    h2:has(+ .optimus-prime) {
+      color: #c00;
+      font-family: Test, sans-serif;
+      font-weight: 400;
+    }
+
+    .optimus-prime {
+      width: 10.8em;
+      height: 12.4em;
+      display: inline-blokc;
+      clip-path: polygon(50% 100%, 38% 100%, 27% 90%, 12% 90%, 12% 80%, 0 70%, 0 50%, 5% 45%, 6% 0, 8% 0, 10% 45%, 18% 15%, 22% 13%, 22% 26%, 30% 20%, 40% 17%, 42% 10%, 58% 10%, 60% 17%, 70% 20%, 78% 26%, 78% 13%, 82% 15%, 90% 45%, 92% 0, 94% 0, 95% 45%, 100% 50%, 100% 70%, 88% 80%, 88% 90%, 73% 90%, 62% 100%);
+      background:
+        linear-gradient(90deg, #0001 50%, #0000 0),
+        /* lines */
+        linear-gradient(90deg, #147 0.5em, #0000 0),
+        linear-gradient(90deg, #147 2em, #0000 0) 0 0 / 100% 45%,
+        linear-gradient(90deg, #147 2.75em, #0000 0) 0 100% / 100% 20%,
+        /* eyes */
+        linear-gradient(#d8eef8 0 0) 36% 60% / 15% 5%,
+        linear-gradient(#d8eef8 0 0) 64% 60% / 15% 5%,
+        linear-gradient(#0002 0 0) 50% 52% / 60% 4%,
+        /* face */
+        linear-gradient(#0002 22%, #0000 0) 50% 100% / 46% 45%,
+        linear-gradient(#bbb 0 0) 50% 100% / 46% 45%,
+        /* helmet-deco */
+        conic-gradient(at 50% -60%, #36c 170deg, #0000 0 190deg, #36c 0) 50% 20% / 70% 30%,
+        repeating-linear-gradient(#0002 0 5%, #0000 0 15%, #0002 0 20%) 50% 20% / 60% 28%,
+        linear-gradient(#bbb 0 0) 50% 20% / 60% 28%,
+        /* base */
+        #36c;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <h1>Prime Symbols</h1>
+    <section>
+      <p>&amp;prime;</p>
+      <h2>Single<br>Prime</h2>
+      <p>&prime;</p>
+    </section>
+    <section>
+      <p>&amp;Prime;</p>
+      <h2>Double<br>Prime</h2>
+      <p>&Prime;</p>
+    </section>
+    <section>
+      <p>&amp;tprime;</p>
+      <h2>Triple<br>Prime</h2>
+      <p>&tprime;</p>
+    </section>
+    <section>
+      <p>&amp;qprime;</p>
+      <h2>Quadruple<br>Prime</h2>
+      <p>&qprime;</p>
+    </section>
+    <section>
+      <p>&amp;oprime;</p>
+      <h2>Optimus<br>Prime</h2>
+      <p class="optimus-prime"></p>
+    </section>
+  </article>
+  <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+</body>
+</html>
