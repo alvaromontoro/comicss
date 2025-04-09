@@ -104,6 +104,7 @@ header nav ul svg circle {
 main h1 {
   color: var(--accent);
   font-weight: bold;
+  text-wrap: balance;
 }
 
 .home main > p {
