@@ -833,7 +833,7 @@ const posts = [
     uid: "text-wrap",
     boxes: 1,
     vertical: true,
-    title: "test-wrap",
+    title: "text-wrap",
     ariaLabel: "cartoon with three characters whose body is the text 'my body is a very long text that wraps along four or maybe five lines' squeezed together and have stick legs. The first character is on a skateboard, it has the body text well balanced, and is saying 'looking prety...' to the second character. The second character is wearing boots, its body text has two words in the last line, and replies 'looking balanced' to the first character. The last character looks sad/tired, its body text is grayer and the last line only contains an unbalanced one word. It says looking at the other characters 'I hate you two...'"
   },
   {
@@ -1370,5 +1370,37 @@ const posts = [
     title: "Primes",
     vertical: true,
     ariaLabel: "prime symbols: single prime, double prime, triple prime,  quadruple prime, and Optimus Prime (with a drawing of the transformer instead of any prime symbol)"
+  },
+  {
+    id: 176,
+    uid: "signal",
+    boxes: 1,
+    vertical: true,
+    title: "I was secretly added to a CSS security Signal chat",
+    ariaLabel: "The punch emoji, the CSS logo, and the fire emoji"
+  },
+  {
+    id: 177,
+    uid: "vibe-coding",
+    boxes: 1,
+    vertical: true,
+    title: "Vibe Coding Keyboard",
+    ariaLabel: "illustration of a keyboard with a single Tab key"
+  },
+  {
+    id: 178,
+    uid: "tariffs",
+    boxes: 1,
+    title: "Tariffs",
+    vertical: true,
+    ariaLabel: "a fake tv newscast showing that the US governement has imposed tariffs on the use of JavaScript and CSS because they have too many imports and exports"
+  },
+  {
+    id: 179,
+    uid: "standing-desk",
+    boxes: 6,
+    vertical: true,
+    title: "Standing Desk",
+    ariaLabel: "cartoon with several cartoons showing a character working at a work station with the desk down, then up, then down, then up, then down... and at the end of the day the character looks sad saying 'I was so busy going up and down that I forgot to work!'"
   },
 ]

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/178/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/178/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+body {
+  background: #ccc;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vmin;
+  aspect-ratio: 16/9;
+  transform: translate(-50%, -50%);
+  
+  background: 
+  radial-gradient(200% 100% at 50% 97%, #f853, #ff00 40%),
+  radial-gradient(200% 100% at 50% 0%, #f851, #ff00 40%),
+    #333;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+.news {
+  font-size: 1vw;
+  font-size: 1cqw;
+  width: 95em;
+  height: 12.5em;
+  margin: auto;
+  position: absolute;
+  bottom: 2.5em;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  font-family: Arial, Roboto, sans-serif;
+  display: grid;
+  grid-template-columns: 23% 77%;
+  grid-template-rows: 30% 65% 5%;
+  z-index: 3;
+  filter: drop-shadow(0 -1em 4em #222c);
+
+  .breaking {
+    display: grid;
+    grid-row: 1 / 4;
+    grid-column: 1;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 30% 70%;
+    transform-origin: 0 100%;
+    transform: skew(-10deg);
+    position: relative;
+    z-index: 1;
+
+    span {
+      display: grid;
+      place-items: center;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:nth-child(1) {
+        background: 
+          linear-gradient(#fff2, #0000, #0002),
+          #d00;
+        font-size: 2em;
+        letter-spacing: 0.2em;
+        color: #fff;
+      }
+
+      &:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+        width: calc(100% + 0.5em);
+        color: #fff;
+        font-size: 5.5em;
+        background: 
+          linear-gradient(#0002, #fff2, #0000, #0000, #0003),
+          #23b;
+        box-shadow: inset 0 0 1em #0002;
+      }
+
+      &:nth-child(3) {
+        background: #fd4;
+        height: 60%;
+        align-self: flex-end;
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  .editable-text {
+    flex: 1;
+    grid-row: 2;
+    margin-left: -2em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    h1 {
+      margin: 0;
+      background: 
+        linear-gradient(#fff2, #0000, #0002),
+        #d00;
+      flex: 1;
+      padding-inline-start: 0.75em;
+      font-size: 4em;
+      align-items: center;
+      display: flex;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .ticker {
+      height: 25%;
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 1.25em;
+      overflow: hidden;
+      
+
+      span {
+        padding-left: 1em;
+        white-space: pre;
+        transform: translate(-2em);
+
+        &::after {
+          content: "•";
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+}
+
+pre {
+  color: #c586c0;
+  line-height: 1.5;
+  font-size: 0.5em;
+  font-size: 0.66cqw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -62%) rotate(-10deg) skew(3deg) scale(4.5, 4);
+
+  [a] { color: #569dd6; }
+  [b] { color: #9cdcff; }
+  [c] { color: #cf9178; }
+  [d] { color: #ffd701; }
+  [e] { color: #cccccc; }
+  [f] { color: #dcddab; }
+  [g] { color: #50c1ff; }
+  [h] { color: #b5cea9; }
+  [i] { color: #da70d6; }
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <pre><code>import <a a>*</a> as <a b>operations</a> from <a c>"Math"</a><a e>;</a>
+import <a d>{</a> <a b>PI</a> <a d>}</a> from <a c>"./constants"</a><a e>;</a>
+import <a d>{</a> <a b>fourier</a><a e>,</a> <a b>relativity</a> <a d>}</a> from <a c>"../utils"</a><a e>;</a>
+
+export <a a>const</a> <a g>TWOPI</a> <a e>=</a> <a g>PI</a> <a e>*</a> <a h>2</a><a e>;</a>
+export <a a>const</a> <a g>THREE_PI</a> <a e>=</a> <a g>PI</a> <a e>*</a> <a h>3</a><a e>;</a>
+export <a a>const</a> <a f>double</a> <a e>=</a> <a d>(</a><a b>a</a><a d>)</a> <a a>=></a> <a b>operations</a><a e>.</a><a f>double</a><a d>(</a>a<a d>)</a><a e>;</a>
+export <a a>const</a> <a f>halve</a> <a e>=</a> <a b>n</a> <a a>=></a> <a b>n</a> <a e>/</a> <a h>2</a><a e>;</a>
+export <a a>function</a> <a f>chaos</a><a d>(</a><a b>a</a><a e>,</a> <a b>b</a><a d>) {</a>
+  return a <a e>&gt;</a> b <a e>&&</a> <a b>Math</a><a e>.</a><a f>random</a><a i>()</a> <a e>&gt;</a> <a h>0.5</a> 
+    <a e>?</a> <a f>fourier</a><a i>(</a><a b>a</a><a e>,</a> <a b>b</a><a i>)</a>
+    <a e>:</a> <a f>relativity</a><a i>(</a>b<a e>,</a> a<a i>)</a><a e>;</a>
+<a d>}</a></code></pre>
+      <section class="news">
+        <div class="breaking">
+          <span>Breaking</span>
+          <span>News</span>
+          <span>Live</span>
+        </div>
+        <div class="editable-text">
+          <h1>WH: 20% tariffs on JS imports</h1>
+          <div class="ticker">
+            <span>JavaScript developers deemed 'DOM-estic' terrorists</span>
+            <span>'CSS @imports are next' claims top official</span>
+            <span>'Gross!' reply developers</span>
+          </div>
+        </div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

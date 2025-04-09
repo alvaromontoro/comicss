@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/179/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/179/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: url(/fonts/comic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@layer panels {
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vmin;
+    width: 92vmin;
+    margin-bottom: 5vmin;
+  }
+
+  section {
+    --line: #000;
+    position: relative;
+    border: 0.5vmin solid;
+    min-width: 30vmin;
+    height: 30vmin;
+    box-sizing: border-box;
+    background: linear-gradient(#c9c9, #c9c0);
+    flex: 1;
+    overflow: hidden;
+
+    &.double {
+      min-width: 60vmin;
+      flex: 2;
+    }
+
+    &.full {
+      flex: 3;
+      min-width: 90vmin;
+    }
+
+    &.single {
+      aspect-ratio: 3/2;
+      height: auto;
+    }
+    
+    & *,
+    & *::before,
+    & *::after {
+      position: absolute;
+      box-sizing: border-box;
+    }
+  }
+
+
+
+}
+
+@layer character { 
+  .person {
+    /* position */
+    --t: auto;
+    --r: auto;
+    --b: -9%;
+    --l: 5%;
+    
+    /* character colors */
+    --skin: #fff;
+    --face-skin: var(--skin);
+    --line: #000;
+    --body: #111;
+    
+    /* head */
+    --face-shape: 85% 90% 95% 100%;
+    --extra-top: linear-gradient(#0000 0 0);
+    --extra-bottom: linear-gradient(#0000 0 0);
+    --pos: 50%;
+    --pos-eyes: var(--pos);
+    --mouth: linear-gradient(#0000 0 0);
+    --cheeks: linear-gradient(#0000 0 0);
+    --clip-eyes: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    --rotation: 0deg;
+    
+    /* body */
+    --hand-1-t: 70%;
+    --hand-1-l: 30%;
+    --hand-2-t: 60%;
+    --hand-2-l: 80%;
+    bottom: var(--b);
+    left: var(--l);
+    width: 10vmin;
+    height: 25vmin;
+    overflow: hidden;
+    background: 
+      /* hands */
+/*       radial-gradient(circle at var(--hand-1-l) var(--hand-1-t), var(--skin) 0.8vmin, var(--line) 0 1.25vmin, #0000 0),
+      radial-gradient(circle at var(--hand-2-l) var(--hand-2-t), var(--skin) 0.8vmin, var(--line) 0 1.25vmin, #0000 0), */
+      /* neck */
+      linear-gradient(#0000 calc(100% - 0.4vmin), var(--line) 0) 50% 17% / 15% 22%,
+      linear-gradient(90deg, var(--line) 0.4vmin, var(--skin) 0 calc(100% - 0.4vmin), var(--line) 0) 50% 17% / 15% 22%,
+      /* body */
+      conic-gradient(at 50% calc(18% + 2.5vmin), #0000 170deg, var(--body) 0 190deg, #0000 0),
+      conic-gradient(at 50% 18%, #0000 169.8deg, var(--line) 170deg 190deg, #0000 190.2deg);
+    background-repeat: no-repeat;
+    
+    /* different people = different head shapes */
+    &.person-2 {
+      --face-shape: 95% 100% 95% 90% / 100%;
+    }
+    
+    &.person-3 {
+      --face-shape: 100% / 105% 100% 95% 90%;
+    }
+    
+    /* face position */
+    &.right {
+      --pos: 70%;
+      --pos-eyes: 66%;
+    }
+    
+    &.left {
+      --pos: 30%;
+      --pos-eyes: 33%;
+    }
+    
+    &.happy {
+      --mouth: radial-gradient(farthest-side at 50% 0%, var(--line) 95%, #0000 0) var(--pos) 80% / 14% 11%;
+    }
+    
+    &.nomouth {
+      --mouth: linear-gradient(#0000 0 0);
+    }
+    
+    &.smile {
+      --mouth: radial-gradient(farthest-side at 50% 0%, #0000 calc(95% - 0.4vmin), var(--line) 0 95%, #0000 0) var(--pos) 80% / 16% 11%;
+    }
+    
+    &.frown {
+      --mouth: radial-gradient(farthest-side at 50% 100%, #0000 calc(95% - 0.4vmin), var(--line) 0 95%, #0000 0) var(--pos) 80% / 16% 11%;
+    }
+    
+    &.angry {
+      --mouth: radial-gradient(farthest-side at 50% 100%, var(--line) 95%, #0000 0) var(--pos) 80% / 14% 11%;
+    }
+    
+    &.mad {
+      --face-skin: radial-gradient(at var(--pos) 50%, #f004, #f001), #fff;
+    }
+    
+    &.angry {
+      --clip-eyes: polygon(0 10%, 50% 40%, 100% 10%, 100% 100%, 0 100%)
+    }
+    
+    &.sad {
+      --clip-eyes: polygon(0 40%, 50% 0%, 100% 40%, 100% 100%, 0 100%)
+    }
+    
+    &.sigh {
+      --clip-eyes: polygon(0 30%, 100% 30%, 100% 100%, 0 100%);
+    }
+    
+    &.sus {
+      --clip-eyes: polygon(0 30%, 50% 30%, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    &.flush {
+      --cheeks:
+        radial-gradient(at calc(var(--pos) + 18%) 64%, #f003, #0000 20%),
+        radial-gradient(at calc(var(--pos) - 18%) 64%, #f003, #0000 20%);
+    }
+    
+    &.drop {
+      --extra-top: 
+        conic-gradient(at calc(100% - var(--pos)) 0, #0000 155deg, #aff 0 205deg, #0000 0) calc(100% - var(--pos)) 20% / 40% 30%,
+        conic-gradient(at calc(100% - var(--pos)) 0, #0000 154deg, #000 0 206deg, #0000 0) calc(100% - var(--pos)) 10% / 40% 35%,
+        radial-gradient(circle at calc(100% - var(--pos)) 46%, #aff 0.75vmin, #000 0 1vmin, #0ff0 0)
+        ;
+        
+    }
+    
+    &.ashamed {
+      --extra-bottom:
+        radial-gradient(at 20% 0, #00f4, #00f0 30%),
+        radial-gradient(at 50% 0, #00f4, #00f0 30%),
+        radial-gradient(at 80% 0, #00f4, #00f0 30%),
+        repeating-linear-gradient(90deg, #0000 0 11%, #00f3 0 12%) 0 0 / 90% 22%,
+        repeating-linear-gradient(90deg, #0000 0 10%, #00f3 0 11%) 0 0 / 90% 20%,
+        repeating-linear-gradient(90deg, #0000 0 9%, #00f3 0 10%) 0 0 / 90% 18%
+        ;
+    }
+    
+    /* head */
+    &::before {
+      content: "";
+      left: 50%;
+      top: 0;
+      width: 100%;
+      height: 27%;
+      border: 0.45vmin solid var(--line);
+      background: 
+        var(--extra-top),
+        var(--mouth),
+        var(--cheeks),
+        var(--extra-bottom),
+        var(--face-skin);
+      background-repeat: no-repeat;
+      border-radius: var(--face-shape);
+      transform: translate(-50%, 0) rotate(var(--rotation));
+    }
+    
+    /* eyes */
+    &::after {
+      content: "";
+      width: 40%;
+      height: 4.5%;
+      background: #f005;
+      left: var(--pos-eyes);
+      top: 11%;
+      transform: translateX(-50%);
+      background:
+        radial-gradient(10% 50% at 20% 50%, var(--line) 98%, #0000),
+        radial-gradient(10% 50% at 80% 50%, var(--line) 98%, #0000);
+      clip-path: var(--clip-eyes);
+    }
+  }
+}
+
+@layer text {
+  .banner {
+    background: #ffc;
+    width: 100%;
+    padding: 0.5vmin;
+    border-bottom: 0.4vmin solid var(--line);
+    font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    font-size: 2vmin;
+  }
+  
+  .text {
+    font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    font-size: 2.5vmin;
+    --t: 0;
+    --l: 0;
+    --b: auto;
+    --r: auto;
+    top: var(--t);
+    bottom: var(--b);
+    left: var(--l);
+    right: var(--r);
+    
+    &.italic {
+      font-style: italic;
+    }
+    
+    &.large {
+      font-size: 2.75vmin;
+    }
+  }
+  
+  .bubble {
+    --w: auto;
+    --t: 0;
+    --l: 0;
+    --b: auto;
+    --r: auto;
+    --h: 50%;
+    --wline: 50%;
+    top: var(--t);
+    bottom: var(--b);
+    left: var(--l);
+    right: var(--r);
+    width: var(--w);
+    font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+    font-size: 2vmin;
+    text-align: center;
+    
+    &::before {
+      content: "";
+      top: 100%;
+      left: 20%;
+      width: var(--wline);
+      height: var(--h);
+      border-radius: 0 0 100% 0;
+      box-shadow: 0.3vmin 0;
+      transform: translate(-80%, 0);
+    }
+    
+    &.right::before {
+      transform: scaleX(-1) translate(-80%, 0);
+    }
+    
+    &.sigh {
+      font-size: 1vmin;
+      
+      &.to-down {
+        transform: rotate(15deg);
+      }
+      &.to-up {
+        transform: rotate(-15deg);
+      }
+      
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+@layer accessories {
+  .clock {
+    --w: 7vmin;
+    --m: 15;
+    --h: 1;
+    --t: auto;
+    --b: auto;
+    --l: auto;
+    --r: auto;
+    top: var(--t);
+    bottom: var(--b);
+    left: var(--l);
+    right: var(--r);
+    width: var(--w);
+    aspect-ratio: 1;
+    border: 0.45vmin solid var(--line);
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side, #000 5%, #fff 0 80%, #0000 0 95%, #fff 0),
+      repeating-conic-gradient(#000 0 2deg, #0000 0 30deg),
+      radial-gradient(farthest-side, #000 5%, #fff 0 88%, #0000 0 95%, #fff 0),
+      repeating-conic-gradient(#000 0 2deg, #0000 0 6deg),
+      #fff;
+    
+    &::after {
+      content: "";
+      width: 0.3vmin;
+      background: #000;
+      height: 50%;
+      top: 50%;
+      left: 50%;
+      transform-origin: 50% 90%;
+      transform: translate(-50%, -90%) rotate(calc(6deg * var(--m)));
+    }
+    
+    &::before {
+      content: "";
+      width: 0.45vmin;
+      background: #000;
+      height: 35%;
+      top: 50%;
+      left: 50%;
+      transform-origin: 50% 90%;
+      transform: translate(-50%, -90%) rotate(calc(30deg * var(--h)));
+    }
+  }
+  .table {
+    --b: 0;
+    --l: 0;
+    --c: indianred;
+    --accessory-1: linear-gradient(#0000 0 0);
+    --accessory-2: linear-gradient(#0000 0 0);
+    width: 30vmin;
+    height: 25vmin;
+    left: var(--l);
+    bottom: var(--b);
+    background: 
+      /* board */
+      linear-gradient(var(--line) 0.45vmin, #0000 0 calc(100% - 0.45vmin), var(--line) 0) 50% 35% / 100% 2vmin,
+      linear-gradient(90deg, var(--line) 0.45vmin, var(--c) 0 calc(100% - 0.45vmin), var(--line) 0) 50% 35% / 100% 2vmin,
+      /* legs */
+      linear-gradient(var(--line) 0.45vmin, #0000 0 calc(100% - 0.45vmin), var(--line) 0) 20% 100% / 2vmin 65%,
+      linear-gradient(90deg, var(--line) 0.45vmin, var(--c) 0 calc(100% - 0.45vmin), var(--line) 0) 20% 100% / 2vmin 65%,
+      linear-gradient(var(--line) 0.45vmin, #0000 0 calc(100% - 0.45vmin), var(--line) 0) 80% 100% / 2vmin 65%,
+      linear-gradient(90deg, var(--line) 0.45vmin, var(--c) 0 calc(100% - 0.45vmin), var(--line) 0) 80% 100% / 2vmin 65%,
+      var(--accessory-1),
+      var(--accessory-2);
+    background-repeat: no-repeat;
+    
+    &.laptop {
+      --accessory-1:
+        linear-gradient(var(--line) 0 0) 41% 13% / 25% 0.4vmin,
+        radial-gradient(circle at 41% 23.5%, #fff5 0.6vmin, #0000 0),
+        linear-gradient(-70deg, #0000 25%, #000 0 calc(25% + 0.4vmin), silver 0 calc(80% - 0.4vmin), #000 0 80%, #0000 0) 35% 17% / 40% 20%,
+        linear-gradient(var(--line) 0.45vmin, #0000 0 calc(100% - 0.45vmin), var(--line) 0) 10% 30% / 20% 1.25vmin,
+      linear-gradient(90deg, var(--line) 0.45vmin, silver 0 calc(100% - 0.45vmin), var(--line) 0) 10% 30% / 20% 1.25vmin
+        ;
+    }
+  }
+}
+
+
+
+/* demo specific */
+#stand-up-desk section:not(:last-child) {
+  .person::after {
+    transform: translate(-50%, 0) skew(-5deg);
+  }
+}
+    </style>
+  </head>
+  <body>
+
+
+<article style="width: 66vmin" id="stand-up-desk">
+  <section class="double">
+    <div class="text italic large" style="--t:57%; --l:4%;">Day 1 of using a standing desk...</div>
+    <div class="clock" style="--t:10%; --l:5%; --h: 9; --m: 0;"></div>
+    <div class="person right happy" style="--l: 63%; --b: 0;"></div>
+    <div class="table laptop" style="--l:70%; --b: -5vmin;"></div>
+  </section>
+  <section class="double">
+    <div class="clock" style="--t:10%; --l:5%; --h: 10; --m: 45;"></div>
+    <div class="person right smile" style="--l: 63%; --b: -8vmin;"></div>
+    <div class="table laptop" style="--l:70%; --b: -13vmin;"></div>
+  </section>
+  <section class="double">
+    <div class="clock" style="--t:10%; --l:5%; --h: 12; --m: 6;"></div>
+    <div class="person right smile" style="--l: 63%; --b: 0;"></div>
+    <div class="table laptop" style="--l:70%; --b: -5vmin;"></div>
+  </section>
+  <section class="double">
+    <div class="clock" style="--t:10%; --l:5%; --h: 2; --m: 35;"></div>
+    <div class="person right nomouth" style="--l: 63%; --b: -8vmin;"></div>
+    <div class="table laptop" style="--l:70%; --b: -13vmin;"></div>
+  </section>
+   <section class="double">
+    <div class="clock" style="--t:10%; --l:5%; --h: 4; --m: 5;"></div>
+    <div class="person right sigh nomouth" style="--l: 63%; --b: 0;"></div>
+    <div class="table laptop" style="--l:70%; --b: -5vmin;"></div>
+  </section>
+  <section class="double">
+    <div class="clock" style="--t:10%; --l:5%; --h: 5; --m: 0;"></div>
+    <div class="bubble" style="--w:40%; --l: 45%; --t:5%; --h:30%; --wline: 20%;">...I was so busy standing up and sitting down that I forgot to complete any tasks...</div>
+    <div class="person left angry sigh ashamed drop" style="--l: 30%; --b:-2vmin;"></div>
+    <div class="table laptop" style="--l:70%; --b:-10vmin;"></div>
+  </section>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
