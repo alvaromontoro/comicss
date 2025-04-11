@@ -168,7 +168,7 @@ echo "<!doctype html>
     <meta name=\"twitter:title\" content=\"comiCSS\">
     <meta name=\"twitter:description\" content=\"comiCSS: A webcomic about CSS. Coded in CSS.\">
     <meta name=\"twitter:image\" content=\"https://comicss.art/images/thumb.jpg\">
-    <meta name=\"monetization\" content=\"\$ilp.uphold.com/raZZQiMDDWLe\" />
+    <link rel=\"monetization\" href=\"https://fynbos.me/alvaro\">
 
     <link rel=\"shortcut icon\" href=\"/favicon.png\" />
 
@@ -400,7 +400,7 @@ echo "<!doctype html>
     <meta name=\"twitter:title\" content=\"comiCSS #${id}: ${title}\">
     <meta name=\"twitter:description\" content=\"${alt}\">
     <meta name=\"twitter:image\" content=\"https://comicss.art/comics/${id}/thumb.png\">
-    <meta name=\"monetization\" content=\"\$ilp.uphold.com/raZZQiMDDWLe\" />
+    <link rel=\"monetization\" href=\"https://fynbos.me/alvaro\">
 
     <link rel=\"shortcut icon\" href=\"/favicon.png\" />
 
