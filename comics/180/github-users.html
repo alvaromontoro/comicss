@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
+    <meta name="monetization" content="$ilp.uphold.com/raZZQiMDDWLe" />
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+article {
+  text-align: center;
+  font-family: Monospace, monospace;
+  font-size: 1.5vw;
+}
+
+h1 {
+  margin-left: -3vw;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+section {
+  margin: 3em auto;
+}
+h2 {
+  margin-left: -3vw;
+  margin-bottom: 1.5em;
+}
+
+/* 1em 1em/var(--point1), */
+div {
+  --color1: #aceebb;
+  --color2: #4ac26b;
+  --color3: #2ea44e;
+  --color4: #126329;
+  --point1:1em 1em linear-gradient(var(--color1) 0 0) no-repeat;
+  --point2:1em 1em linear-gradient(var(--color2) 0 0) no-repeat;
+  --point3:1em 1em linear-gradient(var(--color3) 0 0) no-repeat;
+  --point4:1em 1em linear-gradient(var(--color4) 0 0) no-repeat;
+  --colors: linear-gradient(#0000 0 0);
+  width: 53em;
+  height: 7em;
+  border: 0.5em solid #fff;
+  position: relative;
+  background: 
+    linear-gradient(#fff 0 0) 100% 100% / 1em 6em no-repeat,
+    linear-gradient(#fff 10%, #0000 0 90%, #fff 0) 0 0 / 1em 1em repeat,
+    linear-gradient(90deg, #fff 10%, #0000 0 90%, #fff 0) 0 0 / 1em 1em repeat,
+    var(--colors),
+    #e8e8e8;
+  margin-left: 3em;
+  text-align: left;
+  margin: auto;
+ 
+  &::before, &::after {
+    content: "Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec";
+    white-space: pre;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    position: absolute;
+    transform: translate(0, -100%);
+  }
+  
+  &::after {
+    content: "\aMon \a\a Wed \a\a Fri";
+    transform: translate(-100%, 0);
+    line-height: 1;
+  }
+
+  &.regular {
+    --colors:
+      00em 3em / var(--point1),
+      01em 2em / var(--point2),
+      01em 1em / var(--point3),
+      02em 1em / var(--point4),
+      02em 5em / var(--point1),
+      02em 6em / var(--point1),
+      02em 3em / var(--point2),
+      03em 3em / var(--point1),
+      04em 2em / var(--point2),
+      05em 1em / var(--point3),
+      07em 1em / var(--point4),
+      05em 4em / var(--point1),
+      04em 5em / var(--point2),
+      03em 5em / var(--point3),
+      07em 5em / var(--point4),
+      07em 4em / var(--point1),
+      07em 4em / var(--point2),
+      06em 3em / var(--point3),
+      06em 2em / var(--point4),
+      06em 1em / var(--point1),
+      06em 4em / var(--point2),
+      08em 2em / var(--point3),
+      08em 3em / var(--point4),
+
+      09em 2em / var(--point1),
+      10em 3em / var(--point2),
+      11em 1em / var(--point3),
+      10em 2em / var(--point4),
+
+      13em 3em / var(--point2),
+      13em 2em / var(--point3),
+      14em 1em / var(--point4),
+      16em 1em / var(--point1),  
+      14em 5em / var(--point2),
+      12em 4em / var(--point3),
+      14em 4em / var(--point4),
+      17em 5em / var(--point1),
+      12em 5em / var(--point2),
+      16em 4em / var(--point3),
+      15em 3em / var(--point4),
+      15em 2em / var(--point1),
+      15em 1em / var(--point2),
+      11em 5em / var(--point3),
+      17em 2em / var(--point4),
+      18em 3em / var(--point1),
+
+      19em 2em / var(--point1),
+      20em 3em / var(--point2),
+      21em 1em / var(--point3),
+      21em 2em / var(--point4),
+
+      20em 4em / var(--point1),
+      23em 2em / var(--point2),
+      24em 1em / var(--point3),
+      26em 1em / var(--point4),  
+      24em 5em / var(--point1),
+      22em 6em / var(--point2),
+      24em 4em / var(--point3),
+      27em 4em / var(--point4),
+      28em 4em / var(--point1),
+      26em 0em / var(--point2),
+      25em 3em / var(--point3),
+      25em 4em / var(--point4),
+      25em 1em / var(--point1),
+      21em 5em / var(--point2),
+      27em 2em / var(--point3),
+      28em 1em / var(--point3),
+      28em 3em / var(--point4),
+      28em 5em / var(--point4),
+
+      32em 3em / var(--point1),
+      33em 2em / var(--point4),
+      34em 1em / var(--point3),
+      36em 1em / var(--point2),  
+      34em 5em / var(--point1),
+      33em 5em / var(--point4),
+      34em 4em / var(--point3),
+      36em 5em / var(--point2),
+      37em 5em / var(--point1),
+      36em 4em / var(--point4),
+      35em 3em / var(--point3),
+      36em 2em / var(--point2),
+      35em 1em / var(--point1),
+      35em 5em / var(--point4),
+      37em 1em / var(--point3),
+      38em 0em / var(--point2),
+
+      39em 5em / var(--point2),
+      40em 2em / var(--point3),
+      40em 1em / var(--point3),
+      41em 3em / var(--point4),
+      39em 4em / var(--point4),
+
+      42em 2em / var(--point2),
+      43em 3em / var(--point3),
+      44em 2em / var(--point1),
+      46em 2em / var(--point4),  
+      43em 5em / var(--point2),
+      42em 1em / var(--point3),
+      44em 5em / var(--point1),
+      47em 5em / var(--point2),
+      48em 6em / var(--point3),
+      46em 5em / var(--point4),
+      45em 4em / var(--point2),
+      45em 3em / var(--point3),
+      45em 2em / var(--point2),
+      45em 1em / var(--point3),
+      47em 0em / var(--point1),
+      48em 2em / var(--point4),
+
+      49em 5em / var(--point1),
+      50em 2em / var(--point2),
+      50em 1em / var(--point3),
+      51em 3em / var(--point4),
+      49em 4em / var(--point1)
+      ;
+  }
+
+  &.weekend {
+    --colors:
+       4em 0em / var(--point2),
+      14em 0em / var(--point2),
+      15em 0em / var(--point2),
+      24em 0em / var(--point2),
+      31em 0em / var(--point2),
+      33em 0em / var(--point2),
+      46em 0em / var(--point2),
+      51em 0em / var(--point2),
+      34em 0em / var(--point3),
+      43em 0em / var(--point3),
+      12em 0em / var(--point3),
+      50em 0em / var(--point4),
+
+       7em 6em / var(--point2),
+      17em 6em / var(--point2),
+      16em 6em / var(--point2),
+      27em 6em / var(--point2),
+      37em 6em / var(--point2),
+      41em 6em / var(--point2),
+      47em 6em / var(--point2),
+      50em 6em / var(--point2),
+       9em 6em / var(--point4),
+      19em 6em / var(--point3),
+      21em 6em / var(--point4),
+      29em 6em / var(--point3),
+      33em 6em / var(--point4),
+      45em 6em / var(--point3),
+      49em 6em / var(--point4),
+      51em 6em / var(--point4),
+      linear-gradient(var(--color1) 0 0) 0em 0em / 53em 1em no-repeat,
+      linear-gradient(var(--color1) 0 0) 0em 6em / 53em 1em no-repeat
+      ;
+  }
+
+  &.cheater {
+    --colors: linear-gradient(var(--color4) 0 0);
+  }
+
+  &.new-job {
+    --colors:
+      40em 3em / var(--point1),
+      41em 2em / var(--point4),
+      41em 3em / var(--point3),
+      41em 4em / var(--point4),
+      41em 5em / var(--point2),
+      41em 6em / var(--point4),
+      42em 0em / var(--point4),
+      42em 1em / var(--point3),
+      42em 2em / var(--point4),
+      42em 3em / var(--point4),
+      42em 4em / var(--point4),
+      43em 5em / var(--point1),
+      47em 2em / var(--point1)
+      ;
+  }
+
+  &.cupid {
+    --colors:
+      03em 3em / var(--point2),
+      04em 2em / var(--point2),
+      05em 1em / var(--point3),
+      07em 1em / var(--point3),
+      05em 4em / var(--point3),
+      04em 5em / var(--point3),
+      03em 6em / var(--point2),
+      07em 5em / var(--point3),
+      07em 6em / var(--point2),
+      07em 4em / var(--point3),
+      06em 3em / var(--point2),
+      06em 2em / var(--point3),
+      06em 1em / var(--point2),
+      06em 0em / var(--point4),
+      08em 2em / var(--point3),
+      08em 3em / var(--point3),
+
+      13em 3em / var(--point2),
+      13em 2em / var(--point2),
+      14em 1em / var(--point3),
+      16em 1em / var(--point3),  
+      14em 5em / var(--point3),
+      14em 6em / var(--point2),
+      14em 4em / var(--point3),
+      17em 5em / var(--point3),
+      18em 6em / var(--point2),
+      16em 4em / var(--point3),
+      15em 3em / var(--point2),
+      15em 2em / var(--point3),
+      15em 1em / var(--point2),
+      15em 0em / var(--point4),
+      17em 2em / var(--point3),
+      18em 3em / var(--point3),
+
+      22em 1em / var(--point2),
+      23em 2em / var(--point2),
+      24em 1em / var(--point3),
+      26em 1em / var(--point3),  
+      24em 5em / var(--point3),
+      24em 6em / var(--point2),
+      24em 4em / var(--point3),
+      27em 4em / var(--point3),
+      28em 4em / var(--point2),
+      26em 4em / var(--point3),
+      25em 3em / var(--point2),
+      25em 2em / var(--point3),
+      25em 1em / var(--point2),
+      25em 0em / var(--point4),
+      27em 2em / var(--point3),
+      28em 1em / var(--point3),
+
+      32em 3em / var(--point2),
+      33em 2em / var(--point2),
+      34em 1em / var(--point3),
+      36em 1em / var(--point3),  
+      34em 5em / var(--point3),
+      33em 6em / var(--point2),
+      34em 4em / var(--point3),
+      36em 5em / var(--point3),
+      37em 5em / var(--point2),
+      36em 4em / var(--point3),
+      35em 3em / var(--point2),
+      35em 2em / var(--point3),
+      35em 1em / var(--point2),
+      35em 0em / var(--point4),
+      37em 1em / var(--point3),
+      38em 0em / var(--point3),
+
+      42em 2em / var(--point2),
+      43em 3em / var(--point2),
+      44em 2em / var(--point3),
+      46em 2em / var(--point3),  
+      43em 5em / var(--point3),
+      42em 6em / var(--point2),
+      44em 5em / var(--point3),
+      47em 5em / var(--point3),
+      48em 6em / var(--point2),
+      46em 5em / var(--point3),
+      45em 4em / var(--point2),
+      45em 3em / var(--point3),
+      45em 2em / var(--point2),
+      45em 1em / var(--point4),
+      47em 3em / var(--point3),
+      48em 2em / var(--point3)
+    ;
+  }
+
+  &.wizard {
+    --colors: 
+      linear-gradient(var(--color4) 0 0) 1em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 1em 3em / 3em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 3em 1em / 1em 5em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 5em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 6em 1em / 2em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 6em 3em / 1em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 6em 5em / 2em 1em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 9em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 10em 5em / 2em 1em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 13em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 14em 5em / 2em 1em no-repeat,
+      
+      linear-gradient(var(--color4) 0 0) 17em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 18em 1em / 2em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 18em 5em / 2em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 19em 1em / 1em 5em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 23em 1em / 1em 3em no-repeat,
+      linear-gradient(var(--color4) 0 0) 25em 2em / 1em 2em no-repeat,
+      linear-gradient(var(--color4) 0 0) 27em 1em / 1em 3em no-repeat,
+      linear-gradient(var(--color4) 0 0) 24em 4em / 1em 2em no-repeat,
+      linear-gradient(var(--color4) 0 0) 26em 4em / 1em 2em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 29em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 30em 1em / 2em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 30em 5em / 2em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 31em 1em / 1em 5em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 33em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 34em 1em / 2em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 34em 3em / 2em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 35em 2em / 1em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 34em 4em / 1em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 35em 5em / 1em 1em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 37em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 38em 5em / 2em 1em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 41em 1em / 1em 5em no-repeat,
+      linear-gradient(var(--color4) 0 0) 42em 1em / 1em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 42em 5em / 1em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 43em 2em / 1em 3em no-repeat,
+
+      linear-gradient(var(--color4) 0 0) 46em 1em / 1em 3em no-repeat,
+      linear-gradient(var(--color4) 0 0) 48em 1em / 1em 3em no-repeat,
+      linear-gradient(var(--color4) 0 0) 50em 1em / 1em 3em no-repeat,
+      linear-gradient(var(--color4) 0 0) 46em 5em / 1em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 48em 5em / 1em 1em no-repeat,
+      linear-gradient(var(--color4) 0 0) 50em 5em / 1em 1em no-repeat,
+
+      4em 0em / var(--point2),
+      25em 1em / var(--point3),
+      34em 6em / var(--point2),
+      51em 6em / var(--point3),
+      15em 3em / var(--point2),
+      44em 1em / var(--point2),
+
+      linear-gradient(var(--color1) 0 0);
+    ;
+  }
+
+  &.mondrian {
+    --colors:
+      linear-gradient(var(--color1) 0 0) 00em 00em / 04em 04em no-repeat,
+      linear-gradient(var(--color3) 0 0) 00em 05em / 07em 04em no-repeat,
+      linear-gradient(var(--color3) 0 0) 05em 00em / 05em 04em no-repeat,
+      linear-gradient(var(--color4) 0 0) 08em 05em / 02em 02em no-repeat,
+      linear-gradient(var(--color4) 0 0) 11em 00em / 11em 01em no-repeat,
+      linear-gradient(var(--color2) 0 0) 11em 02em / 03em 05em no-repeat,
+      linear-gradient(var(--color1) 0 0) 15em 02em / 03em 03em no-repeat,
+      linear-gradient(var(--color3) 0 0) 19em 02em / 03em 03em no-repeat,
+      linear-gradient(var(--color2) 0 0) 15em 06em / 07em 01em no-repeat,
+      linear-gradient(var(--color2) 0 0) 23em 00em / 07em 07em no-repeat,
+      linear-gradient(var(--color4) 0 0) 31em 00em / 05em 03em no-repeat,
+      linear-gradient(var(--color2) 0 0) 31em 04em / 05em 03em no-repeat,
+      linear-gradient(var(--color3) 0 0) 37em 00em / 04em 04em no-repeat,
+      linear-gradient(var(--color1) 0 0) 37em 05em / 08em 02em no-repeat,
+      linear-gradient(var(--color1) 0 0) 42em 00em / 03em 01em no-repeat,
+      linear-gradient(var(--color2) 0 0) 42em 02em / 03em 02em no-repeat,
+      linear-gradient(var(--color4) 0 0) 46em 00em / 03em 06em no-repeat,
+      linear-gradient(var(--color3) 0 0) 50em 01em / 02em 06em no-repeat
+      ;
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <h1>Types of GitHub Users</h1>
+      <section>
+        <h2>Just a Developer</h2>
+        <div class="regular"></div>
+      </section>
+      <section>
+        <h2>The Unrealistic Expectations</h2>
+        <div class="cheater"></div>
+      </section>
+      <section>
+        <h2>The Weekender</h2>
+        <div class="weekend"></div>
+      </section>
+      <section>
+        <h2>The "Getting Ready to Search for a New Job"</h2>
+        <div class="new-job"></div>
+      </section>
+      <section>
+        <h2>The GitHub Wizard</h2>
+        <div class="wizard"></div>
+      </section>
+      <section>
+        <h2>The Mondrian</h2>
+        <div class="mondrian"></div>
+      </section>
+      <section>
+        <h2>The Cupid Shuffle</h2>
+        <div class="cupid"></div>
+      </section>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
