@@ -3407,4 +3407,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Types of GitHub Users</title>
+    <link href="https://comicss.art/comics/180" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/180/github-users.html"/>
+    <id>https://comicss.art/comics/180</id>
+    <updated>2025-04-14T00:00:00Z</updated>
+    <summary>New Cartoon: Types of GitHub Users</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/180/github-users.png" alt="illustration mimicking the GitHub contribution diagram for different types of people: regular developer (different sharesgreen in different locations), the overachiever (everything in dark green), the 'I am looking for a new job' (no contributions until suddenly a big one), the Macarena (the graphic looks like a cartoon dancing in different poses)" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
