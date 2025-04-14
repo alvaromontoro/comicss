@@ -1403,4 +1403,12 @@ const posts = [
     title: "Standing Desk",
     ariaLabel: "cartoon with several cartoons showing a character working at a work station with the desk down, then up, then down, then up, then down... and at the end of the day the character looks sad saying 'I was so busy going up and down that I forgot to work!'"
   },
+  {
+    id: 180,
+    uid: "github-users",
+    boxes: 7,
+    title: "Types of GitHub Users",
+    vertical: true,
+    ariaLabel: "illustration mimicking the GitHub contribution diagram for different types of people: regular developer (different sharesgreen in different locations), the overachiever (everything in dark green), the 'I am looking for a new job' (no contributions until suddenly a big one), the Macarena (the graphic looks like a cartoon dancing in different poses)"
+  },
 ]
