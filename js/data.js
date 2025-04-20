@@ -1411,4 +1411,12 @@ const posts = [
     vertical: true,
     ariaLabel: "illustration mimicking the GitHub contribution diagram for different types of people: regular developer (different sharesgreen in different locations), the overachiever (everything in dark green), the 'I am looking for a new job' (no contributions until suddenly a big one), the Macarena (the graphic looks like a cartoon dancing in different poses)"
   },
+  {
+    id: 181,
+    uid: "unattended-children",
+    boxes: 1,
+    title: "Unattended Children",
+    vertical: true,
+    ariaLabel: "cartoon of a sign with a child drinking coffee and the text 'unattended children will be given an espresso and a class in CSS'"
+  },
 ]
