@@ -3426,4 +3426,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Unattended Children</title>
+    <link href="https://comicss.art/comics/181" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/181/unattended-children.html"/>
+    <id>https://comicss.art/comics/181</id>
+    <updated>2025-04-21T00:00:00Z</updated>
+    <summary>New Cartoon: Unattended Children</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/181/unattended-children.png" alt="cartoon of a sign with a child drinking coffee and the text 'unattended children will be given an espresso and a class in CSS'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
