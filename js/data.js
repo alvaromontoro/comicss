@@ -1419,4 +1419,12 @@ const posts = [
     vertical: true,
     ariaLabel: "cartoon of a sign with a child drinking coffee and the text 'unattended children will be given an espresso and a class in CSS'"
   },
+  {
+    id: 182,
+    uid: "hi-im-css",
+    boxes: 3,
+    horizontal: true,
+    title: "Hi, I'm CSS...",
+    ariaLabel: "comic with three panels showing the new CSS logo (a purple square with the letters CSS inside) with a face saying 'Hi, my name is CSS, but when people see me, they call me FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUC'"
+  },
 ]

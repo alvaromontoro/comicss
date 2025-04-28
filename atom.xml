@@ -3445,4 +3445,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Hi, I'm CSS...</title>
+    <link href="https://comicss.art/comics/182" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/182/hi-im-css.html"/>
+    <id>https://comicss.art/comics/182</id>
+    <updated>2025-04-28T00:00:00Z</updated>
+    <summary>New Cartoon: Hi, I'm CSS...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/182/hi-im-css.png" alt="comic with three panels showing the new CSS logo (a purple square with the letters CSS inside) with a face saying 'Hi, my name is CSS, but when developers see me, they call me FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUCK'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
