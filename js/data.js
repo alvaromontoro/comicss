@@ -1427,4 +1427,11 @@ const posts = [
     title: "Hi, I'm CSS...",
     ariaLabel: "comic with three panels showing the new CSS logo (a purple square with the letters CSS inside) with a face saying 'Hi, my name is CSS, but when people see me, they call me FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUC'"
   },
+  {
+    id: 183,
+    uid: "upwind-downwind-headwind-tailwind",
+    boxes: 4,
+    title: "Upwind. Downwind. Headwind. Tailwind.",
+    ariaLabel: "upwind-downwind-headwind-tailwind"
+  },
 ]
