@@ -1434,4 +1434,12 @@ const posts = [
     title: "Upwind. Downwind. Headwind. Tailwind.",
     ariaLabel: "upwind-downwind-headwind-tailwind"
   },
+  {
+    id: 184,
+    uid: "everything-is-cascading",
+    boxes: 1,
+    title: "Everything is Cascading",
+    vertical: true,
+    ariaLabel: "parody of the book cover for Everything is Tuberculosis by John Green: a yellow background with the tile (Everything is Cascading) and the author (Al Montoro) in big laters, a subtitle below the author (Not a bestselling author of the comiCSS series). The center of the drawing looks like a microscope preview with the text The History and Persistence of the Most Hated Language"
+  },
 ]

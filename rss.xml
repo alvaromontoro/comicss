@@ -1836,5 +1836,15 @@
       <enclosure url="https://comicss.art/comics/183/upwind-downwind-headwind-tailwind.png" length="176000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/184</guid>
+      <title>Everything is Cascading</title>
+      <link>https://comicss.art/comics/184</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/184/everything-is-cascading.png" length="111000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

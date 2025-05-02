@@ -3483,4 +3483,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Everything is Cascading</title>
+    <link href="https://comicss.art/comics/184" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/184/everything-is-cascading.html"/>
+    <id>https://comicss.art/comics/184</id>
+    <updated>2025-05-01T00:00:00Z</updated>
+    <summary>New Cartoon: Everything is Cascading</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/184/everything-is-cascading.png" alt="parody of the book cover for Everything is Tuberculosis by John Green: a yellow background with the tile (Everything is Cascading) and the author (Al Montoro) in big laters, a subtitle below the author (Not a bestselling author of the comiCSS series). The center of the drawing looks like a microscope preview with the text The History and Persistence of the Most Hated Language" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
