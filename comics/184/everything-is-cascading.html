@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/184/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/184/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Oswald';
+        src: url(/fonts/Oswald.ttf);
+      }
+
+      section {
+        --yellow: #f2df69;
+        --red: #f88d6b;
+        --green: #1d8f76;
+        --dark-green: color-mix(in srgb, var(--green) 80%, #000);
+        font-size: 1vmin;
+        position: relative;
+        aspect-ratio: 2/3;
+        width: 60vmin;
+        text-transform: uppercase;
+        font-family: Oswald, sans-serif;
+        text-align: center;
+        background:
+          /* some periods */
+          radial-gradient(circle at 40% 40%, var(--yellow) 0.25em, #0000 0),
+          radial-gradient(circle at 60% 70%, var(--yellow) 0.25em, #0000 0),
+          radial-gradient(circle at 30% 60%, var(--yellow) 0.25em, #0000 0),
+          radial-gradient(circle at 50% 54%, var(--yellow) 0.25em, #0000 0),
+          radial-gradient(circle at 66% 43%, var(--yellow) 0.25em, #0000 0),
+          radial-gradient(circle at 43% 76%, var(--yellow) 0.25em, #0000 0),
+          /* hashes */
+          linear-gradient(60deg, #0000 45%, var(--yellow) 0 55%, #0000 0) 30% 48% / 2.5em 2.5em no-repeat,
+          linear-gradient(60deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(30% + 0.75em) calc(48% - 0.5em) / 2.5em 2.5em no-repeat,
+          linear-gradient(-30deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(30% + 0.25em) calc(48% - 0.6em) / 2em 2.5em no-repeat,
+          linear-gradient(-30deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(30% + 0.75em) calc(48% + 0.3em) / 2em 2.5em no-repeat,
+          
+          linear-gradient(60deg, #0000 45%, var(--yellow) 0 55%, #0000 0) 68% 68% / 2.5em 2.5em no-repeat,
+          linear-gradient(60deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(68% + 0.75em) calc(68% - 0.5em) / 2.5em 2.5em no-repeat,
+          linear-gradient(-30deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(68% + 0.2em) calc(68% - 0.6em) / 2em 2.5em no-repeat,
+          linear-gradient(-30deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(68% + 0.6em) calc(68% + 0.3em) / 2em 2.5em no-repeat,
+          
+          linear-gradient(-60deg, #0000 45%, var(--yellow) 0 55%, #0000 0) 40% 65% / 2.5em 2.5em no-repeat,
+          linear-gradient(-60deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(40% - 0.7em) calc(65% - 0.5em) / 2.5em 2.5em no-repeat,
+          linear-gradient(30deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(40% + 0em) calc(65% - 0.5em) / 2em 2.5em no-repeat,
+          linear-gradient(30deg, #0000 45%, var(--yellow) 0 55%, #0000 0) calc(40% - 0.7em) calc(65% + 0.25em) / 2em 2.5em no-repeat,
+          /* base */
+          radial-gradient(closest-side circle at 49.25% 57.25%, var(--red) 64%, #0000 0) -0.25em 0 / 100% 100%,
+          conic-gradient(at 49.25% 50%, #0000 142.75deg, var(--green) 0 217.25deg, #0000 0) -0.25em 0 / 100% 45% no-repeat,
+          var(--yellow);
+        
+        &::after {
+          content: "{";
+          font-family: monospace, monospace;
+          position: absolute;
+          top: 45%;
+          left: 55%;
+          font-size: 4em;
+          color: var(--yellow);
+          rotate: -20deg;
+        }
+        
+        &::before {
+          content: "}";
+          font-family: monospace, monospace;
+          position: absolute;
+          top: 68%;
+          left: 45%;
+          font-size: 4em;
+          color: var(--yellow);
+          rotate: 20deg;
+        }
+        
+        h1 {
+          font-weight: 400;
+          margin: 0;
+          font-size: 7.5em;
+          letter-spacing: 0.125em;
+          line-height: 1.33;
+          padding-top: 0.25em;
+        }
+        
+        h2 {
+          font-weight: 350;
+          font-size: 2.66em;
+          margin-top: 6em;
+          line-height: 1.96;
+          transform: scale(1.66, 1);
+          letter-spacing: 0.125em;
+          color: var(--dark-green);
+        }
+        
+        p {
+          margin: 0;
+          
+          &.author {
+            font-size: 7.5em;
+            letter-spacing: 0.125em;
+            line-height: 1.33;
+            padding-top: 0.7em;
+          }
+          
+          &.bestselling {
+            margin-top: 0.25em;
+            font-size: 2em;
+            font-style: italic;
+            transform: scale(1.2, 0.9);
+            line-height: 1.66;
+            
+            &::first-line {
+              font-size: 0.9em;
+              font-style: normal;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Everything is Cascading</h1>
+      <h2>The<br>history and<br>persistence of<br>a most hated<br>language</h2>
+      <p class="author">Al Montoro</p>
+      <p class="bestselling">
+        Not a bestselling author of<br>
+        The ComiCSS series
+      <p>
+    </section>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
