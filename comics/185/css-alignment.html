@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/185/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/185/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+table {
+  font-size: 1.75vmin;
+  border: 0;
+  
+  td, th {
+    background: #fff;
+    width: 15em;
+    height: 15em;
+  }
+  
+  tr:first-child th,
+  tr th:first-child {
+    height: auto;
+    width: auto;
+    padding: 0.25em;
+    text-transform: uppercase;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+  }
+
+  tr th:first-child {
+    text-align: right;
+  }
+  
+  td {
+    border: 0.1em solid;
+    background: #123;
+    font-family: monospace, monospace;
+    color: #eee;
+    overflow: hidden;
+    text-align: center;
+       
+    div {
+      text-align: left;
+      display: inline-block;
+      margin: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      font-size: 0.8em;
+
+      .a {
+        color: #8c7;
+      }
+      .p {
+        color: #c9c;
+      }
+      .s {
+        color: #fc5;
+      }
+      .v {
+        color: #7dd;
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <table cellspacing="5px">
+      <tr>
+        <th></th>
+        <th>Lawful</th>
+        <th>Neutral</th>
+        <th>Chaotic</th>
+      </tr>
+      <tr>
+        <th>Good</th>
+        <td>
+          <div><span class="s">.element1</span>,
+<span class="s">.element2</span> {
+  <span class="p">property</span>: <span class="v">value</span>;
+}</div>
+        </td>
+        <td>
+          <div><span class="s">.element1</span>, <span class="s">.element2</span> {
+  <span class="p">property</span>: <span class="v">value</span>;
+}</div>
+        </td>
+        <td>
+          <div><span class="a">:is</span>(<span class="s">.element1</span>, <span class="s">.element2</span>) {
+  <span class="p">property</span>: <span class="v">value</span>;
+}</div>
+        </td>
+      </tr>
+      <tr>
+        <th>Neutral</th>
+        <td>
+          <div><span class="s">.element1</span> {
+  <span class="p">property</span>: <span class="v">value</span>;
+}
+
+<span class="s">.element2</span> {
+  <span class="p">property</span>: <span class="v">value</span>;
+}</div>
+        </td>
+        <td>
+          <div><span class="s">.element1</span>,
+<span class="s">.element2</span>
+{
+  <span class="p">property</span>: <span class="v">value</span>;
+}</div>
+        </td>
+        <td>
+          <div><span class="s">.element1</span>,<span class="s">.element2</span>{<span class="p">property</span>:<span class="v">value</span>}</div>
+        </td>
+      </tr>
+      <tr>
+        <th>Evil</th>
+        <td>
+          <div><span class="a">@layer elements</span> {
+  <span class="s">.element1</span>,
+  <span class="s">.element2</span> {
+    <span class="p">property</span>: <span class="v">value</span>;
+  }
+}</div>
+        </td>
+        <td>
+          <div><span class="s">[class="element1"]</span>,
+<span class="s">[class="element2"]</span> {
+  <span class="p">property</span>: <span class="v">value</span>;
+}</div>
+        </td>
+        <td>
+          <div><span class="s">.element1</span>
+      , <span class="s">.element2</span>
+  {<span class="p">property</span>
+  : <span class="v">value</span>}</div>
+        </td>
+      </tr>
+    </table>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
