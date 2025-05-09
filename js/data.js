@@ -1442,4 +1442,12 @@ const posts = [
     vertical: true,
     ariaLabel: "parody of the book cover for Everything is Tuberculosis by John Green: a yellow background with the tile (Everything is Cascading) and the author (Al Montoro) in big laters, a subtitle below the author (Not a bestselling author of the comiCSS series). The center of the drawing looks like a microscope preview with the text The History and Persistence of the Most Hated Language"
   },
+  {
+    id: 185,
+    uid: "css-alignment",
+    boxes: 1,
+    title: "CSS Alignment",
+    vertical: true,
+    ariaLabel: "the same snippet of CSS formatted in different ways organized based on the Dungeons and Dragons alignment grid of: good, netrual, and evil; vs lawful, neutral, and chaotic"
+  },
 ]
