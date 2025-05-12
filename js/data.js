@@ -1458,4 +1458,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon of the CSS logo holding a lightsaber and saying 'I am your father', while the Tailwind logo kneels in despair yelling 'NOOOOOOOOOO!'"
   },
+  {
+    id: 187,
+    uid: "visited-link",
+    boxes: 3,
+    title: "Visited Link",
+    ariaLabel: "Cartoon with the CSS and JS logos chitchatting, CSS says 'It looks like Zelda visited Link', and a confused JS replies 'How... How can you tell?'"
+  },
 ]
