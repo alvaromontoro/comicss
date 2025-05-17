@@ -1461,8 +1461,9 @@ const posts = [
   {
     id: 187,
     uid: "visited-link",
-    boxes: 3,
+    boxes: 1,
     title: "Visited Link",
-    ariaLabel: "Cartoon with the CSS and JS logos chitchatting, CSS says 'It looks like Zelda visited Link', and a confused JS replies 'How... How can you tell?'"
+    vertical: true,
+    ariaLabel: "Cartoon with the CSS and JS logos looking at a visited link. CSS continuously claims it's purple while JS claims it's blue. In the end JS believes CSS and is worried about being colorblind"
   },
 ]
