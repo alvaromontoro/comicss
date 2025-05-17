@@ -108,6 +108,39 @@
         </footer>
       </article>
       -->
+      <article id="js-colorblind">
+        <h2>CSS, Colors, and JavaScript</h2>
+        <p>
+          Some may say that if you have to explain a joke, then it is not really funny... I prefer to see it as a little 
+          <em>educational</em> opportunity. So here's a short story about colors, links, and JavaScript.
+        </p>
+        <p>
+          CSS is the domain of styling, layout, and colors &mdash;this last one being a feature that has expanded immensely in 
+          recent years. But did you know that JavaScript can read those styles, too? The <code>getComputedStyle</code> method 
+          can be used to retrieve the final computed styles for a given element: margins, paddings, backgrounds, colors... or 
+          mostly. There are some limitations, mainly due to security reasons, and <a href="/comics/187/">today's cartoon</a>
+          explores that.
+        </p>
+        <p>
+          By default, browsers display links in blue, and after being visited, they show them in purple. JavaScript being able 
+          to detect these color changes could become a privacy risk. For example, a hacker could generate a list of links, make 
+          a user visit the page, and then check which links have already been visited, essentially revealing the user's browsing 
+          history.
+        </p>
+        <p>
+          To prevent this, the <code>getComputedStyle</code> method will always return the default styles for a link, even if it 
+          has been visited. That way, attackers will not be able to detect if a link is purple and they won't be able to find out 
+          if the person's browsing behavior.
+        </p>
+        <p>
+          Anyway, that's why CSS sees the link purple while JS still sees it blue. I hope you enjoyed the comic and, maybe, learned
+          something new about CSS and JavaScript. And if you want to learn more about the <code>getComputedStyle</code> method, 
+          check out the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle" rel="external nofollow">MDN 
+          documentation</a>.
+        <footer>
+          Published on <time datetime="2025-05-19">May 19, 2025</time>
+        </footer>
+      </article>
       <article id="everything-is-cascading">
         <h2>Everything is CSS</h2>
         <p>
@@ -1336,8 +1369,8 @@
           Published on <time datetime="2022-11-21">November 21, 2022</time>
         </footer>
       </article>
-      <article>
-        <h2 id="the-pomodorito-technique">The Pomodorito Technique</h2>
+      <article id="the-pomodorito-technique">
+        <h2>The Pomodorito Technique</h2>
         <p>You may have heard about the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" rel="external noreferrer nofollow">Pomodoro Technique</a>, <strong>a time management method that consists of repeating work and break intervals</strong> to help keep focus while getting some needed rest. It is pretty popular in the US among tech employees.</p>
         <p>The origin of the name is funny: the method's creator used a tomato-shaped kitchen timer to control the work/break blocks (Pomodoro means tomato in Italian). So that is why each work block is called a "Pomodoro."</p>
         <p>The method is simple. First, you pick a task and then:</p>
