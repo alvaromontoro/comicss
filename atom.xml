@@ -3540,4 +3540,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Visited Link</title>
+    <link href="https://comicss.art/comics/187" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/187/visited-link.html"/>
+    <id>https://comicss.art/comics/187</id>
+    <updated>2025-05-19T00:00:00Z</updated>
+    <summary>New Cartoon: Visited Link</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/187/visited-link.png" alt="Cartoon with the CSS and JS logos looking at a visited link. CSS continuously claims it's purple while JS claims it's blue. In the end JS believes CSS and is worried about being colorblind" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

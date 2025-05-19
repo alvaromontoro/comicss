@@ -1458,4 +1458,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon of the CSS logo holding a lightsaber and saying 'I am your father', while the Tailwind logo kneels in despair yelling 'NOOOOOOOOOO!'"
   },
+  {
+    id: 187,
+    uid: "visited-link",
+    boxes: 1,
+    title: "Visited Link",
+    vertical: true,
+    ariaLabel: "Cartoon with the CSS and JS logos looking at a visited link. CSS continuously claims it's purple while JS claims it's blue. In the end JS believes CSS and is worried about being colorblind"
+  },
 ]
