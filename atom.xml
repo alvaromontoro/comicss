@@ -3559,4 +3559,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>The Many Faces of CSS</title>
+    <link href="https://comicss.art/comics/188" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/188/faces-of-css.html"/>
+    <id>https://comicss.art/comics/188</id>
+    <updated>2025-05-26T00:00:00Z</updated>
+    <summary>New Cartoon: The Many Faces of CSS</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/188/faces-of-css.png" alt="cartoon with CSS saying 'Many complain about how difficult I am, but I want to prove I'm easy and versatile. To show... The Many Faces of CSS (because changing styles is my thing)'. Vanilla: new CSS loapolitan: yellow, brown and pink logo. Dark: logo that looks like batman. Kawaii: cute pinkish logo. 3D: logo with lights and shadows. Halloween: logo wearing a JS costume. Halloween 2: logo wearing a Tailwind mask. Vintage: the old CSS logo. Cubist: new CSS logo with multiple colors and all the letters in different spots" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

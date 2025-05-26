@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/188/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/188/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand';
+        src: url(/fonts/PatrickHand-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'Source Sans 3';
+        src: url(/fonts/SourceSans3.ttf);
+      }
+
+      @font-face {
+        font-family: 'Bebas Neue';
+        src: url(/fonts/BebasNeue-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+
+article {
+  font-size: 1vmin;
+  width: 90em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+
+  section {
+    border: 0.5em solid;
+    aspect-ratio: 0.9;
+    position: relative;
+    background: linear-gradient(#c9c9, #c9c0 50%);
+    border-radius: 0.2em 0.4em 0.5em;
+
+    & *,
+    & *::before,
+    & *::after {
+      box-sizing: border-box;
+      position: absolute;
+    }
+
+    &:first-child {
+      border: 0;
+      grid-column: 1 / 4;
+      aspect-ratio: 4;
+      overflow: visible;
+      translate: 0 1em;
+      background: none;
+    }
+
+    h2 {
+      height: 2.5em;
+      width: 100%;
+      border-bottom: 0.2em solid;
+      background: #ffc;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+      font-size: 2.5em;
+      text-transform: uppercase;
+    }
+  }
+
+  .css {
+    width: 16em;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateY(3em);
+
+    .eye {
+      --pos: 33%;
+      left: var(--pos);
+      top: 25%;
+      width: 22%;
+      aspect-ratio: 1;
+      background: radial-gradient(#000 30%, #fff calc(30% + 1px));
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      & ~ & {
+        left: calc(100% - var(--pos));
+      }
+    }
+
+    .mouth {
+      top: 43%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      width: 22%;
+      height: 11%;
+      border-radius: 50% / 0 0 100% 100%;
+      scale: 1 0.8;
+    }
+
+    .css-logo {
+      inset: 0;
+      background: rebeccapurple;
+      border-radius: 0 20% 20% 20%;
+
+      &::before {
+        content: "CSS";
+        font-family: 'Bebas Neue';
+        color: #fff;
+        font-size: 7.5em;
+        scale: 1 0.9;
+        line-height: 0;
+        bottom: 0;
+        right: 0;
+        transform: translate(-0.2em, calc(-100% - 0.55em));
+      }
+    }
+  }
+
+  section:nth-child(1) {
+    .text {
+      width: 70%;
+      height: 50%;
+      font-size: 2.5em;
+      text-align: center;
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+      top: 50%;
+      left: 66%;
+      transform: translate(-50%, -50%);
+
+      &::before {
+        content: "";
+        width: 32%;
+        height: 80%;
+        border: 0.2em solid;
+        border-bottom: 0.1em solid;
+        border-radius: 50%;
+        clip-path: polygon(20% 100%, 100% 55%, 100% 100%);
+        right: 81%;
+        top: 50%;
+        rotate: 4deg;
+      }
+
+      * {
+        position: relative;
+        margin: 0;
+        line-height: 1;
+        text-wrap: balance;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 0.1em;
+      }
+
+      span {
+        display: inline-block;
+        transform: translate(0, 0.3em);
+      }
+    }
+
+    .css {
+      left: 17%;
+      top: 60%;
+      clip-path: polygon(-100% -100%, 150% -100%, 150% 82%, -100% 82%);
+      transform: translate(-50%, -50%) translateY(4em);
+
+      .css-logo {
+        rotate: 4deg;
+      }
+
+      .eye {
+        clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0 100%);
+        rotate: 4deg;
+
+        & ~ & {
+          top: 27%;
+        }
+      }
+
+      .mouth {
+        scale: 1 -0.8;
+        top: 34%;
+      }
+    }
+  }
+
+  section:nth-child(2) {
+    &::before {
+      font-size: 1.5em;
+      content: "Hmmm... Vanilla!";
+      position: absolute;
+      top: 25%;
+      left: 55%;
+      transform: rotate(-5deg);
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+    }
+  }
+
+  section:nth-child(3) {
+    &::before {
+      font-size: 1.5em;
+      content: "Hmmm... Real vanilla!";
+      position: absolute;
+      top: 25%;
+      left: 55%;
+      transform: rotate(-5deg);
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+    }
+    .css {
+      .css-logo {
+        background: linear-gradient(0deg, pink 33.33%, brown 0 66.66%, #fffaad 0);
+      }
+    }
+  }
+
+  section:nth-child(4) {
+    box-shadow: 
+      inset 0 0 0 99vmax #0004;
+    background:
+      radial-gradient(circle at 23% 52%, #303030 5%, #0000 0),
+      radial-gradient(circle at 77% 52%, #303030 5%, #0000 0),
+      linear-gradient(#c9c, #c9c0);
+    
+    &::before {
+      font-size: 1.5em;
+      color: #fff;
+      content: "I am the \a night!";
+      white-space: pre;
+      line-height: 1;
+      position: absolute;
+      top: 27%;
+      left: 5%;
+      transform: rotate(-10deg);
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+    }
+    
+    .css {
+      .css-logo {
+        --logo1: #ff0;
+        --suit1: #333;
+        --suit2: #111;
+        --suit3: #292929;
+        background:
+          conic-gradient(at 50% 45%, var(--suit3) 50deg, #0000 0 310deg, var(--suit3) 0),
+          conic-gradient(at 50% -600%, #0000 170deg, #fca 0 190deg, #0000 0) 50% 50% / 100% 18%,
+          conic-gradient(at 0 0, #0000 140deg, var(--suit3) 0) 50% 81% / 5% 5% no-repeat,
+          conic-gradient(at 100% 0, var(--suit3) 220deg, #0000 0) 50% 81% / 5% 5% no-repeat,
+          radial-gradient(4% 3.5% at 46.5% 89%, var(--logo1) calc(100% - 1px), #0000),
+          radial-gradient(4% 3.5% at 53.5% 89%, var(--logo1) calc(100% - 1px), #0000),
+          radial-gradient(8% 3.25% at 50% 78.75%, var(--logo1) calc(100% - 1px), #0000),
+          radial-gradient(20% 10% at 50% 83%, var(--suit3) 65%, var(--logo1) calc(65% + 1px) calc(100% - 1px), #0000),
+          linear-gradient(var(--suit2) 0 0) 50% 100% / 3% 20%,
+          conic-gradient(at 50% 60%, var(--suit3) 63deg, var(--suit2) 0 72deg, var(--suit1) 0 288deg, var(--suit2) 0 297deg, var(--suit3) 0) 0 100% / 100% 40%,
+          
+          var(--suit3);
+        background-repeat: no-repeat;
+        
+      &::after {
+        content: "";
+        position: absolute;
+        top: -15%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background: 
+          conic-gradient(at 0 0, #0000 145deg, var(--suit3) 0 180deg, #0000 0) 0 0 / 100% 35% no-repeat,
+          conic-gradient(at 100% 0, var(--suit3) 0 215deg, #0000 0) 0 0 / 100% 35% no-repeat;
+      }
+        
+        &::before {
+          all: unset;
+          content: " CSS";
+          white-space: pre;
+          position: absolute;
+          top: 84%;
+          left: 50%;
+          font-family: 'Bebas Neue';
+          transform: translate(-50%, -50%);
+          color: #ff08;
+          letter-spacing: 1.2em;
+          text-align: center;
+        }
+/*         background:
+          radial-gradient(45% 27% at 0 0, #630 99%, #0000 0),
+          radial-gradient(60% 28% at 100% 0, #630 99%, #0000 0),
+          linear-gradient(#000 0 0) 0 40% / 13% 0.4em no-repeat,
+          linear-gradient(#000 0 0) 100% 40% / 13% 0.4em no-repeat,
+          linear-gradient(#000 0 0) 50% 40% / 9% 0.4em no-repeat,
+          linear-gradient(#fca 0 58%, #0000 0),
+          linear-gradient(#c00 0 0) 75% 100% / 25% 15% no-repeat,
+          linear-gradient(#0000 85%, #000 0),
+          repeating-linear-gradient(90deg, #c00 0 20%, gold 0 40%)
+          ; */
+      }
+      
+      .eye {
+        --pos: 31%;
+        clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+        background: #fff;
+        transform: translate(-50%, -50%) scale(0.9, 0.8);
+        top: 24%;
+        
+        & ~& {
+          clip-path: polygon(0 40%, 100% 20%, 100% 100%, 0 100%);
+        }
+/*         --pos: 28%;
+        top: 40%;
+        outline: 0.4em solid;
+        outline-offset: 0.7em;
+        z-index: 1; */
+      }
+      
+      .mouth {
+        scale: 1 -0.6;
+        rotate: 7deg;
+        top: 44%;
+        background: #a33;
+/*         background: #fa8;
+        border-radius: 0;
+        top: 10%;
+        left: 40%;
+        width: 8%;
+        aspect-ratio: 0.6;
+        height: auto;
+        transform: skew(-15deg) rotate(-10deg) scale(0.7);
+        
+        &::before {
+          content: "";
+          background: inherit;
+          width: 100%;
+          height: 100%;
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+          top: 90%;
+          left: -40%;
+          transform: skew(5deg);
+        } */
+      }
+    }
+  }
+
+  section:nth-child(5) {
+    &::before {
+      font-size: 1.5em;
+      content: "OwO!";
+      position: absolute;
+      top: 47%;
+      left: 80%;
+      transform: rotate(-3deg);
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+    }
+    
+    .css {
+      .css-logo {
+        background: pink;
+      }
+
+      .mouth {
+        background: #0000;
+        scale: 1;
+        top: 40%;
+
+        &::after,
+        &::before {
+          content: "";
+          width: 2em;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          border: 0.4em solid;
+          left: 50%;
+          top: 0;
+          translate: 0.2em;
+          transform: translate(-100%);
+          clip-path: polygon(0 30%, 100% 50%, 100% 100%, 0 100%);
+        }
+
+        &::after {
+          translate: calc(100% - 0.2em) 0;
+          clip-path: polygon(0 50%, 100% 30%, 100% 100%, 0 100%);
+        }
+      }
+
+      .eye {
+        --pos: 20%;
+        aspect-ratio: 1.7;
+        top: 38%;
+        background:
+          repeating-linear-gradient(-45deg, #0000 0 20%, #f004 0 30%)
+          hotpink;
+        border: 0.5em solid hotpink;
+
+        &::before {
+          content: "";
+          width: 130%;
+          aspect-ratio: 1;
+          background: radial-gradient(at 33% 33%, #fff 20%, #0000 calc(20% + 1px)),
+            radial-gradient(circle at 15% 60%, #fff 8%, #000 calc(8% + 1px)),
+            #000;
+          border-radius: 50%;
+          left: 100%;
+          transform: translate(-30%, -85%);
+        }
+
+        & ~ & {
+          &::before {
+            right: 100%;
+            transform: translate(30%, -85%);
+            left: auto;
+          }
+        }
+      }
+    }
+  }
+
+  section:nth-child(6) {
+    &::before {
+      font-size: 1.5em;
+      content: "What's popping? \a I'm popping!";
+      position: absolute;
+      top: 23%;
+      left: 62%;
+      text-align:center;
+      line-height: 1;
+      transform: rotate(-3deg);
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+      white-space: pre;
+    }
+    
+    .css {
+      .mouth {
+        box-shadow: -0.4em 0.4em 0.75em 0.1em #0007;
+      }
+      
+      .eye, .mouth {
+        box-shadow: 
+          inset -0.3em 0.3em 0.6em #fff8,
+          inset 0.2em -0.2em 0.4em #0002,
+          inset 0 0 0 100vmax #0001,
+          -0.3em 0.3em 0.5em 0.1em #0007;
+        
+      }
+      
+      .eye {
+        &::before {
+          content: "";
+          width: 30%;
+          aspect-ratio: 1;
+          background: #fff;
+          left: 66%;
+          top: 33%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          filter: blur(0.5em)
+        }
+      }
+      
+      .mouth {
+/*        background: linear-gradient(#fff 40%, #c22 0, #f55 70%) */
+      }
+      
+      .css-logo {
+        background:
+          radial-gradient(circle at 75% 25%, #fff5, #fff0 50%),
+          rebeccapurple
+          ;
+        box-shadow: 
+          inset -1px 1px 1px #0006,
+          inset 1px -1px 3px #fff4,
+          inset -0.25em 0.25em 0.5em #fff3,
+          inset 0.5em -0.5em 1em #0003,
+          -0.5px 0.5px #330066,
+          -1px 1px #330066,
+          -1.5px 1.5px #330066,
+          -2px 2px #330066,
+          -2.5px 2.5px #330066,
+          -3px 3px #330066,
+          -0.6em 0.6em 0.5em #0002,
+          -0.85em 0.85em 1.25em #0004;
+        
+        &::before {
+          color: #f4f4f4;
+          text-shadow: -0.06em 0.06em 0.1em #0006;
+        }
+      }
+    }
+  }
+
+  section:nth-child(7) {
+    .css {
+      &::before {
+        content: "";
+        width: 105%;
+        height: 105%;
+        background: #f0db4fee;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        mask:
+          radial-gradient(circle at 66% 27%, #0000 18%, #000 calc(18% + 1px)) 0 0 / 51% 100% no-repeat,
+          radial-gradient(circle at 35% 26.5%, #0000 18%, #000 calc(18% + 1px)) 100% 0 / 51% 100% no-repeat
+          ;
+      }
+
+      &::after {
+        content: "JS";
+        font-size: 7em;
+        font-family: 'Source Sans 3', 'Bebas Neue';
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        scale: 1 1.1;
+        line-height: 1.15;
+        bottom: 0em;
+        right: 0.25em;
+      }
+
+
+      .css-logo {
+        z-index: -1;
+      }
+
+      .mouth { z-index: -1; }
+    }
+  }
+
+  section:nth-child(8) {
+    &::before {
+      font-size: 1.5em;
+      content: "BOOO!";
+      position: absolute;
+      top: 50%;
+      left: 82%;
+      transform: rotate(4deg);
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+    }
+    
+    .logo.tailwind {
+      font-size: 1em;
+      width: 35%;
+      height: 15.5%;
+      filter: drop-shadow(-3.35em 4em #00b9d9);
+      transform: translate(-30%, -100%) scale(1.2);
+
+      filter: drop-shadow(-2.4em 3.1em #00b9d9);
+      transform:translate(-33%, 18%)  scale(1.5);
+      top: 55%;
+      left: 50%;
+
+      &::before, &::after{
+        content: "";
+        width: 35%;
+        height: 100%;
+        border-radius: 4em 4em 0 0;
+        transform: rotate(-45deg);
+        top: 35%;
+        left: 3.33%;
+        box-shadow: 1.25em 1em 0 1.5em #00b9d9;
+        clip-path: polygon(0 0, 80% 80%, 500% 90%, 500% -500%, 0 -500%)
+      }
+
+      &:after {
+        transform: rotate(135deg);
+        left: 62%;
+        top: -27%;
+      }
+    }
+
+    .css {
+      .eye {
+        top: 22%;
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+        
+        & ~ &{
+          clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 100%);
+        }
+      }
+      .mouth {
+        scale: 1 -1;
+        top: 27%;
+        rotate: 3deg;
+        height: 8%;
+        width: 18%;
+        background: 
+          conic-gradient(at 20% 10%, #0000 150deg, #fff 0 210deg, #0000 0),
+          conic-gradient(at 80% 10%, #0000 150deg, #fff 0 210deg, #0000 0),
+          linear-gradient(#d66 60%, #fff 0)
+      }
+    }
+  }
+
+  section:nth-child(9) {
+    .css {
+      aspect-ratio: 22 / 25;
+      
+      .eye {
+        top: 23%;
+        aborder: 0.3em solid;
+        box-shadow: -0.2em 0.2em 0.5em 0.1em #0008
+      }
+      
+      .mouth {
+        top: 38%;
+        background: #000;
+        box-shadow: -0.2em 0.2em 0.5em 0.1em #0008;
+        background: linear-gradient(#fff 30%, #d44 0);
+      }
+      
+      .css-logo {
+        background: #24d;
+        border-radius: 0;
+        clip-path: polygon(0 0, 100% 0, 90% 90%, 50% 100%, 10% 90%);
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: #ffffff18;
+          clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+          mix-blend-mode: plus-lighter;
+        }
+
+        &::before {
+          transform: none;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: #eee;
+          clip-path: polygon(18.5% 18.5%, 81.5% 18.5%, 76% 74%, 50% 80.5%, 24% 74%, 22.25% 57%, 34.25% 57%, 35% 65.5%, 50% 69%, 65% 65.5%, 66% 51.5%, 22% 51.5%, 20.75% 40.5%, 66.5% 40.5%, 67.5% 29.5%, 19.5% 29.5%);
+        }
+      }
+    }
+  }
+
+  section:nth-child(10) {
+    &::before {
+      font-size: 1.5em;
+      content: "Oh, no! Not again!";
+      position: absolute;
+      top: 25%;
+      left: 55%;
+      transform: rotate(-5deg);
+      font-family: 'Patrick Hand', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', serif;
+    }
+    
+    .css {
+      .css-logo {
+        background:
+          linear-gradient(82deg, turquoise 90%, #0000 calc(90% + 1px)) 0 0 / 65% 50%,
+          linear-gradient(turquoise 0 0) 0 0 / 56% 100%,
+          linear-gradient(rebeccapurple 0 0) 0 0 / 100% 30%,
+          mediumseagreen;
+        ;
+        background-repeat: no-repeat;
+
+        &::before {
+          content:"C   S";
+          white-space: pre;
+          letter-spacing: -0.035em;
+          rotate: -90deg;
+          scale: 1;
+          translate: 0.2em -0.62em;
+          color: rebeccapurple;
+        }
+
+        &::after {
+          content:"S";
+          font-family: 'Bebas Neue';
+          color: rebeccapurple;
+          font-size: 9em;
+          scale: 1 0.9;
+          top: -23%;
+          left: -8%;
+          rotate: 45deg;
+        }
+      }
+
+      .eye {
+        top: 45%;
+        left: 30%;
+
+        & ~ & {
+          top: 15%;
+          left: 80%;
+        }
+      }
+
+      .mouth {
+        rotate: -10deg;
+        top: 22%;
+        left: 45%;
+      }
+    }
+  }
+}
+
+      
+    </style>
+  </head>
+  <body>
+
+    <article role="img" aria-label="cartoon with CSS saying 'Many cficult I am, but I want to prove I'm easy and versatile. To show...S (because changing styles is my thing)'. Vanilla: new CSS logo. Neapolitan: yellow, brown and pink logo. Dark: logo that looks like batman. Kawaii: cute pinkish logo. 3D: logo with lights and shadows. Halloween: logo wearing a JS costume. Halloween 2: logo wearing a Tailwind mask. Vintage: the old CSS logo. Cubist: new CSS logo with multiple colors and all the letters in different spots">
+  <section>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="text">
+      <p>Many complain about how difficult I am, but I want to prove I<span>'</span>m easy and versatile. To show...</p>
+      <h1>The Many Faces of CSS</h1>
+      <p>(because changing styles is my thing)
+    </div>
+  </section>
+  <section>
+    <h2>Vanilla</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+  <section>
+    <h2>Neapolitan</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+  <section>
+<!--     <h2>Magical</h2> -->
+    <h2>Dark</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+  <section>
+    <h2>Kawaii</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+  <section>
+    <h2>3D</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+  <section>
+    <h2>Halloween</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+  <section>
+    <h2>Halloween II</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="logo tailwind"></div>
+  </section>
+  <section>
+    <h2>Vintage</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+  <section>
+    <h2>Cubist</h2>
+    <div class="css">
+      <div class="css-logo"></div>
+      <div class="eye"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+</article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
