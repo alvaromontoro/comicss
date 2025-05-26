@@ -1466,4 +1466,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon with the CSS and JS logos looking at a visited link. CSS continuously claims it's purple while JS claims it's blue. In the end JS believes CSS and is worried about being colorblind"
   },
+  {
+    id: 188,
+    uid: "faces-of-css",
+    boxes: 9,
+    horizontal: true,
+    title: "The Many Faces of CSS",
+    ariaLabel: "cartoon with CSS saying 'Many complain about how difficult I am, but I want to prove I'm easy and versatile. To show... The Many Faces of CSS (because changing styles is my thing)'. Vanilla: new CSS loapolitan: yellow, brown and pink logo. Dark: logo that looks like batman. Kawaii: cute pinkish logo. 3D: logo with lights and shadows. Halloween: logo wearing a JS costume. Halloween 2: logo wearing a Tailwind mask. Vintage: the old CSS logo. Cubist: new CSS logo with multiple colors and all the letters in different spots"
+  },
 ]
