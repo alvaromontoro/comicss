@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/189/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/189/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand';
+        src: url(/fonts/PatrickHand-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'Source Sans Pro';
+        src: url(/fonts/SourceSans3.ttf);
+      }
+
+      @font-face {
+        font-family: 'Bebas Neue';
+        src: url(/fonts/BebasNeue-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+  position: relative;
+  font-size: 1vmin;
+  width: 60em;
+  height: 80em;
+  
+  *, 
+  *::before,
+  *::after {
+    position: absolute;
+    box-sixing: border-box;
+  }
+  
+  .shadow {
+    width: 60%;
+    height: 3%;
+    background: #0002;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50% / 0 0 100% 100%;
+  }
+  
+  .dialog {
+    font-family: 'Patrick Hand';
+    font-size: 4em;
+    width: 70%;
+    height: 50%;
+    text-wrap: balance;
+    text-align: center;
+    padding: 2em;
+    left: 20%;
+    top: 0%;
+    line-height: 1;
+    
+    &::before {
+      content: "";
+      inset: 0;
+      background:
+        radial-gradient(40% 20% at 40% 25%, blue 80%, #0000 0),
+        radial-gradient(40% 22% at 58% 24%, blue 80%, #0000 0),
+        radial-gradient(farthest-side at 0 0, #0000 75%, blue 0 99%, #0000 0) 60% 40% / 20% 35% no-repeat,
+        #fff;
+      filter: blur(0.5em) contrast(100) brightness(1.5);
+      filter: blur(0.5em) contrast(200) hue-rotate(30deg) brightness(100) grayscale(0.5) hue-rotate(300deg) brightness(4) grayscale(0.5);
+      box-shadow: 0 0 0 5em #fff;
+      mix-blend-mode: multiply;
+    }
+    
+    &::after {
+      content: "They say I am old, but I've never been in better shape() in my life";
+      position: relative;
+    }
+  }
+  
+  .css {
+    font-size: 1.66em;
+    width: 16em;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    
+    .legs {
+      width: 110%;
+      height: 100%;
+      left: -5%;
+      top: 71%;
+      
+      &::before,
+      &::after {
+        content: "";
+        inset: 0;
+        background: #000;
+        clip-path: 
+          shape(
+            evenodd from 36% 100%,
+            hline to 5%,
+            curve to 30% 95% with 10% 88%,
+            curve to 40% 0% with 20% 50%,
+            hline to 47%,
+            curve to 36% 100% with 25% 52%
+          );
+      }
+      
+      &::after {
+        scale: -1 1;
+      }
+    }
+
+    .eye {
+      --pos: 33%;
+      left: var(--pos);
+      top: 25%;
+      width: 22%;
+      aspect-ratio: 1;
+      background: radial-gradient(#000 30%, #fff calc(30% + 1px));
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      & ~ & {
+        left: calc(100% - var(--pos));
+      }
+    }
+    
+    .arm {
+      width: 40%;
+      height: 80%;
+      background: #000;
+      top: 45%;
+      left: -33%;
+      clip-path: 
+        shape(
+          evenodd from 100% 0,
+          curve to 73% 20% with 65% 10%,
+          curve to 45% 50% with 40% 30%,
+          curve to 45% 80% with 30% 65%,
+          curve to 50% 98% with 35% 90%,
+          curve to 65% 100% with 55% 100%,
+          curve to 57% 80% with 90% 95%,
+          curve to 63% 53% with 70% 66%,
+          curve to 90% 27% with 95% 40%,
+          curve to 100% 0 with 120% 20%
+        );
+      
+      &.arm-2 {
+        clip-path: none;
+        height: 60%;
+        width: 60%;
+        left: 95%;
+        scale: 1.2 1.1;
+        rotate: 5deg;
+        top: 8%;
+        clip-path:
+          shape(
+            evenodd from 2% 85%,
+            curve to 25% 80% with 12.5% 70%,
+            curve to 65% 80% with 40% 60%,
+            curve to 60% 40% with 50% 75%,
+            curve to 45% 30% with 50% 40%,
+            curve to 55% 20% with 45% 20%,
+            curve to 75% 85% with 75% 20%,
+            curve to 30% 95% with 60% 100%,
+            curve to 2% 85% with 0% 100%
+          )
+      }
+    }
+
+    .mouth {
+      top: 43%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      width: 22%;
+      height: 11%;
+      border-radius: 50% / 0 0 100% 100%;
+      scale: 1 0.8;
+    }
+
+    .css-logo {
+      inset: 0;
+      background: rebeccapurple;
+      border-radius: 0 20% 20% 20%;
+      clip-path:
+        shape(
+          from 2% 0,
+          hline to 100%,
+          vline by 45%,
+          curve to 90% 70% with 100% 65%,
+          curve to 82% 85% with 88% 83%,
+          curve to 75% 97% with 82% 95%,
+          curve to 25% 97% with 50% 100%,
+          curve to 18% 85% with 18% 95%,
+          curve to 10% 70% with 12% 83%,
+          curve to 0 45% with 0 65%,
+          smooth to 2% 0, 
+          close
+        );
+
+      &::before {
+        content: "CSS";
+        font-family: 'Bebas Neue';
+        color: #fff5;
+        font-size: 7.5em;
+        scale: 1 0.9;
+        line-height: 0;
+        bottom: 0;
+        right: 0;
+        transform: translate(-0.2em, calc(-100% - 0.55em));
+      }
+      
+      &::after {
+        content: "";
+        width: 45%;
+        height: 25%;
+        bottom: 8%;
+        left: 50%;
+        transform: translate(-50%);
+        background: #fff;
+        background:
+          radial-gradient(55% 100% at 60% 50%, #0000 94%, #fff 0 99%, #0000) 0 0 / 100% 50%,
+          radial-gradient(55% 100% at 40% 50%, #0000 94%, #fff 0 99%, #0000) 0 0 / 100% 50%,
+          linear-gradient(#fff 0 0) 50% 50% / 2.5% 90% no-repeat,
+          linear-gradient(#fff 0 0) 50% 50% / 60% 5% no-repeat
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article role="img" aria-label="Cartoon with the CSS logo modified to have legs, arms, and a face. It has big muscles and says 'They say I am old, but I have never been in better shape() in my life'">
+      <div class="dialog"></div>
+      <div class="shadow"></div>
+      <div class="css">
+        <div class="legs"></div>
+        <div class="arm arm-1"></div>
+        <div class="arm arm-2"></div>
+        <div class="css-logo"></div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
