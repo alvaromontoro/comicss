@@ -3578,4 +3578,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Better Shape()</title>
+    <link href="https://comicss.art/comics/189" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/189/better-shape.html"/>
+    <id>https://comicss.art/comics/189</id>
+    <updated>2025-06-02T00:00:00Z</updated>
+    <summary>New Cartoon: Better Shape()</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/189/better-shape.png" alt="Cartoon with the CSS logo modified to have legs, arms, and a face. It has big muscles and says 'They say I am old, but I have never been in better shape() in my life'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

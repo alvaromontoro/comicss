@@ -1474,4 +1474,12 @@ const posts = [
     title: "The Many Faces of CSS",
     ariaLabel: "cartoon with CSS saying 'Many complain about how difficult I am, but I want to prove I'm easy and versatile. To show... The Many Faces of CSS (because changing styles is my thing)'. Vanilla: new CSS loapolitan: yellow, brown and pink logo. Dark: logo that looks like batman. Kawaii: cute pinkish logo. 3D: logo with lights and shadows. Halloween: logo wearing a JS costume. Halloween 2: logo wearing a Tailwind mask. Vintage: the old CSS logo. Cubist: new CSS logo with multiple colors and all the letters in different spots"
   },
+  {
+    id: 189,
+    uid: "better-shape",
+    boxes: 1,
+    title: "Better Shape()",
+    vertical: true,
+    ariaLabel: "Cartoon with the CSS logo modified to have legs, arms, and a face. It has big muscles and says 'They say I am old, but I have never been in better shape() in my life'"
+  },
 ]
