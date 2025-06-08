@@ -3597,4 +3597,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Sheriff</title>
+    <link href="https://comicss.art/comics/190" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/190/sheriff.html"/>
+    <id>https://comicss.art/comics/190</id>
+    <updated>2025-06-09T00:00:00Z</updated>
+    <summary>New Cartoon: Sheriff</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/190/sheriff.png" alt="cartoon with two panels. The first one shows a sheriff with a curly mustache, curly cowboy hat, curly eyebrows, and additional shadows that make it 'fancy'; it is titled Sheriff. The second one is the same sheriff, but the mustache is straight also the eyebrows and the cowboy hat; it is titled Sans-Sheriff." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

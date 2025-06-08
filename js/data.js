@@ -1482,4 +1482,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon with the CSS logo modified to have legs, arms, and a face. It has big muscles and says 'They say I am old, but I have never been in better shape() in my life'"
   },
+  {
+    id: 190,
+    uid: "sheriff",
+    boxes: 2,
+    title: "Sheriff",
+    ariaLabel: "cartoon with two panels. The first one shows a sheriff with a curly mustache, curly cowboy hat, curly eyebrows, and additional shadows that make it 'fancy'; it is titled Sheriff. The second one is the same sheriff, but the mustache is straight also the eyebrows and the cowboy hat; it is titled Sans-Sheriff."
+  },
 ]
