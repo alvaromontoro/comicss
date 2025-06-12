@@ -3616,4 +3616,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>AliceBlue</title>
+    <link href="https://comicss.art/comics/191" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/191/aliceblue.html"/>
+    <id>https://comicss.art/comics/191</id>
+    <updated>2025-06-12T00:00:00Z</updated>
+    <summary>New Cartoon: AliceBlue</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/191/aliceblue.png" alt="The logo of CSS (a purple square with 3 rounded corners) with an angry face saying 'we are going to change the color from aliceblue to just alblue, because fuck ICE!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
