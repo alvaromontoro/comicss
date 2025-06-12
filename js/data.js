@@ -1489,4 +1489,12 @@ const posts = [
     title: "Sheriff",
     ariaLabel: "cartoon with two panels. The first one shows a sheriff with a curly mustache, curly cowboy hat, curly eyebrows, and additional shadows that make it 'fancy'; it is titled Sheriff. The second one is the same sheriff, but the mustache is straight also the eyebrows and the cowboy hat; it is titled Sans-Sheriff."
   },
+  {
+    id: 191,
+    uid: "aliceblue",
+    boxes: 1,
+    title: "AliceBlue",
+    vertical: true,
+    ariaLabel: "The logo of CSS (a purple square with 3 rounded corners) with an angry face saying 'we are going to change the color from aliceblue to just alblue, because fuck ICE!'"
+  },
 ]
