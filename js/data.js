@@ -1491,10 +1491,10 @@ const posts = [
   },
   {
     id: 191,
-    uid: "aliceblue",
+    uid: "kerning-the-frog",
     boxes: 1,
-    title: "AliceBlue",
     vertical: true,
-    ariaLabel: "The logo of CSS (a purple square with 3 rounded corners) with an angry face saying 'we are going to change the color from aliceblue to just alblue, because fuck ICE!'"
+    title: "Kerning the Frog",
+    ariaLabel: "cartoon of a puppet frog saying 'It is not easy being #00800' with poor kerning (the letters are oddly spaced). It has the title (bad) kerning the frog"
   },
 ]
