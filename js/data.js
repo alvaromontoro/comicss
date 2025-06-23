@@ -1497,4 +1497,11 @@ const posts = [
     title: "Kerning the Frog",
     ariaLabel: "cartoon of a puppet frog saying 'It is not easy being #00800' with poor kerning (the letters are oddly spaced). It has the title (bad) kerning the frog"
   },
+  {
+    id: 192,
+    uid: "css-nightmare",
+    boxes: 4,
+    title: "CSS Nightmare",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. Two characters talk: one says 'last night I dreamed that all CSS frameworks disappeared and web developers could only code using vanilla CSS'. The second person replies 'Oh, my! That sounds awful! What a terrible nightmare!' The first person first surprised, then ashamed says 'yes... of course... a nightmare...'"
+  },
 ]
