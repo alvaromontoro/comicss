@@ -1504,4 +1504,12 @@ const posts = [
     title: "CSS Nightmare",
     ariaLabel: "comic with 4 panels in a 2x2 grid. Two characters talk: one says 'last night I dreamed that all CSS frameworks disappeared and web developers could only code using vanilla CSS'. The second person replies 'Oh, my! That sounds awful! What a terrible nightmare!' The first person first surprised, then ashamed says 'yes... of course... a nightmare...'"
   },
+  {
+    id: 193,
+    uid: "benefits-of-tailwind",
+    boxes: 1,
+    title: "Benefits of Tailwind",
+    vertical: true,
+    ariaLabel: "Pie chart titled Benefits of Using TailwindCSS. The chart is 30% green, 55% yellow, and 15% orange. The legend is Reduced Code Bloat (red), Maintainability (blue), and Learning Curve (pink)"
+  },
 ]
