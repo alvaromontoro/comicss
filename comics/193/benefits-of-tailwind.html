@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/193/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/193/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: bold;
+  src: url(/fonts/Roboto-Bold.ttf);
+}
+
+figure {
+  font-size: 1vmin;
+  width: 90em;
+  height: 50em;
+  margin: 0;
+  padding: 0;
+  font-family: roboto, helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  figcaption {
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+  }
+  
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  [role="img"] {
+    position: absolute;
+    inset: 7em 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+    .chart {
+      --lines: linear-gradient(#0000 0 0);
+      width: 80%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      justify-self: end;
+      font-size: 4em;
+      position: relative;
+      overflow: hidden;
+      background:
+        var(--lines),
+        conic-gradient(
+          #347433 30%,
+          #ffc107 0 85%,
+          #ff6f3c 0
+        );
+      
+      :has(input:checked) & {
+        --lines: repeating-linear-gradient(-45deg, #0000 0 0.25em, #0005 0 0.5em);
+        
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: 
+            radial-gradient(#0005 45%, #0000 0) 0 0 / 0.5em 0.5em,
+            #347433;
+          mask: conic-gradient(
+              #347433 30%,
+              #0000 0
+            );
+        }
+        
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: 
+            conic-gradient(#0000 75%, #0005 0) 0.6em 0.6em / 0.5em 0.5em,
+            #ff6f3c;
+          mask: conic-gradient(
+              #0000 85%,
+              #ff6f3c 0
+            );
+        }
+      }
+    }
+
+    .legend {
+      list-style: "";
+      margin: 0;
+      padding: 0;
+      font-size: 4em;
+      line-height: 1.75;
+
+      li {
+        &::before {
+          content: "";
+          display: inline-block;
+          height: 1em;
+          aspect-ratio: 1;
+          margin-inline-end: 0.5em;
+          background: var(--c);
+          position: relative;
+          top: 0.15em;
+        }
+        
+        &:nth-child(1) { --c: #bb2222; }
+        &:nth-child(2) { --c: #4da8da; }
+        &:nth-child(3) { --c: #ff90bb; }
+        
+        :has(input:checked) & {
+          &:nth-child(1) { --c: repeating-linear-gradient(#0005 0 0.25em, #0000 0 0.5em), #bb2222; }
+          &:nth-child(2) { --c: repeating-linear-gradient(90deg, #0005 0 0.25em, #0000 0 0.5em),#4da8da; }
+          &:nth-child(3) { --c: conic-gradient(#0000 135deg, #0005 0 225deg, #0000 0) 0.25em 0.125em / 0.5em 0.5em, #ff90bb; }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <figure>
+      <figcaption>Benefits of Using TailwindCSS</figcaption>
+      <div role="img" aria-label="Pie chart: 30% green, 55% yellow, and 15% orange. The legend is Reduced Code Bloat (red), Maintainability (blue), and Learning Curve (pink)">
+        <ul class="legend">
+          <li>Reduced Code Bloat</li>
+          <li>Maintainability</li>
+          <li>Learning Curve</li>
+        </ul>
+        <div class="chart"></div>
+      </div>
+      <label>
+        <input type="checkbox"/>
+        Show patterns
+      </label>
+    </figure>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

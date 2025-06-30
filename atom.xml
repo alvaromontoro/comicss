@@ -3640,11 +3640,30 @@
     <link href="https://comicss.art/comics/192" />
     <link rel="alternate" type="text/html" href="https://comicss.art/comics/192/css-nightmare.html"/>
     <id>https://comicss.art/comics/192</id>
-    <updated>2025-06-19T00:00:00Z</updated>
+    <updated>2025-06-23T00:00:00Z</updated>
     <summary>New Cartoon: CSS Nightmare</summary>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><img src="https://comicss.art/comics/192/css-nightmare.png" alt="comic with 4 panels in a 2x2 grid. Two characters talk: one says 'last night I dreamed that all CSS frameworks disappeared and web developers could only code using vanilla CSS'. The second person replies 'Oh, my! That sounds awful! What a terrible nightmare!' The first person first surprised, then ashamed says 'yes... of course... a nightmare...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Benefits of Tailwind</title>
+    <link href="https://comicss.art/comics/193" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/193/benefits-of-tailwind.html"/>
+    <id>https://comicss.art/comics/193</id>
+    <updated>2025-06-30T00:00:00Z</updated>
+    <summary>New Cartoon: Benefits of Tailwind</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/193/benefits-of-tailwind.png" alt="Pie chart titled Benefits of Using TailwindCSS. The chart is 30% green, 55% yellow, and 15% orange. The legend is Reduced Code Bloat (red), Maintainability (blue), and Learning Curve (pink)" /></p>
       </div>
     </content>
     <rights>Copyright 2025 Alvaro Montoro</rights>
