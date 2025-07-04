@@ -1526,4 +1526,12 @@ const posts = [
     title: "Independence Day (II)",
     ariaLabel: "Comic strip with 2 panels, the first one has a cheerful IE logo saying 'Happy Independence Day! Because you cannot write independence without IE! I am back, baby!' The second panel has many speech bubbles from characters off-panel saying 'Neither inefficient... or embarrassing... or inferior... or asinine... weird... simpleton... retired... ancient...' And a disappointed looking IE logo replies 'OK... I get it! I'll leave now'"
   },
+  {
+    id: 196,
+    uid: "summer-at-venn",
+    boxes: 1,
+    title: "Summer at the Venns' House",
+    vertical: true,
+    ariaLabel: "Cartoon with two ice cream cones overlapping each other looking like a Venn diagram"
+  },
 ]
