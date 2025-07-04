@@ -1956,5 +1956,15 @@
       <enclosure url="https://comicss.art/comics/195/independence-day-ii.png" length="143000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/196</guid>
+      <title>Summer at the Venns' House</title>
+      <link>https://comicss.art/comics/196</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/196/summer-at-venn.png" length="150000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
