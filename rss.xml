@@ -1936,5 +1936,25 @@
       <enclosure url="https://comicss.art/comics/193/benefits-of-tailwind.png" length="84000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/194</guid>
+      <title>Independence Day (I)</title>
+      <link>https://comicss.art/comics/194</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/194/independence-day-i.png" length="150000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/195</guid>
+      <title>Independence Day (II)</title>
+      <link>https://comicss.art/comics/195</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 04 Jul 2025 00:00:01 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/195/independence-day-ii.png" length="143000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

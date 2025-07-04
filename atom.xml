@@ -3673,4 +3673,42 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Independence Day (I)</title>
+    <link href="https://comicss.art/comics/194" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/194/independence-day-i.html"/>
+    <id>https://comicss.art/comics/194</id>
+    <updated>2025-07-04T00:00:00Z</updated>
+    <summary>New Cartoon: Independence Day (I)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/194/independence-day-i.png" alt="Comic strip with 3 panels. The first one happens on July 4, 2025, the IE logo is smiling while saying 'Happy Independence Day! Because you cannot write independence without IE! I'm back, baby!' The second panel has the Chrome and Safari logos looking disgusted and disappointed. The third panel is happening on July 4, 2026, the Chrome and Safari logos cheerfully saying 'Happy Autonomy Day!' while an angry IE logo is seeing in a corner of the panel saying 'jerks!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Independence Day (II)</title>
+    <link href="https://comicss.art/comics/195" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/195/independence-day-ii.html"/>
+    <id>https://comicss.art/comics/195</id>
+    <updated>2025-07-04T00:00:01Z</updated>
+    <summary>New Cartoon: Independence Day (II)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/195/independence-day-ii.png" alt="Comic strip with 2 panels, the first one has a cheerful IE logo saying 'Happy Independence Day! Because you cannot write independence without IE! I am back, baby!' The second panel has many speech bubbles from characters off-panel saying 'Neither inefficient... or embarrassing... or inferior... or asinine... weird... simpleton... retired... ancient...' And a disappointed looking IE logo replies 'OK... I get it! I'll leave now'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/195/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/195/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand';
+        src: url(/fonts/PatrickHand-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Bold.ttf);
+  font-weight: 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+article {
+  display: flex;
+  font-size: 1vmin;
+  width: 89em;
+  gap: 1em;
+  --dialog: #fdd; #fd9; #ffc;
+  --dialog2: #cce8ff;
+  --dialog3: #bbeed8;
+
+  section {
+    --s: 12em;
+    border: 0.5em solid;
+    abackground: linear-gradient(#c9c9 5%, #c9c0 50%);
+    flex: 1;
+    aspect-ratio: 1; 4/5;
+    position: relative;
+    overflow: hidden;
+
+    *, *::before, *::after {
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    .ie {
+      width: var(--s);
+      height: calc(var(--s) * 1.7);
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    
+    .bubble {
+      padding: 0.6em 0.75em;
+      border-radius: 100%;
+    }
+
+    .bubble, .whisper {
+      font-family: 'Patrick Hand', sans-serif;
+      font-size: 2.35em;
+      text-wrap: balance;
+      text-align: center;
+      white-space: pre-wrap;
+      line-height: 1;
+
+      span {
+        position: relative;
+        top: 0.25em;
+      }
+    }
+    
+    .leg {
+      --r1: 0deg;
+      --r2: 0deg;
+      --p: 33%;
+      left: var(--p);
+      width: 20%;
+      height: 45%;
+      bottom: 0;
+      border-left: 0.5em solid;
+      transform-origin: 50% 0;
+      rotate: var(--r1);
+      
+      & ~ & {
+        left: calc(100% - var(--p));
+        scale: -1 1;
+      }
+      
+      
+      &::before {
+        content: "";
+        bottom: 0;
+        width: 150%;
+        aspect-ratio: 3;
+        background: #000;
+        border-radius: 50% / 100% 100% 0 0;
+        translate: -100% 0;
+        transform-origin: 100% 100%;
+        box-shadow: 0 1em 0 0.6em #fff;
+        rotate: var(--r2);
+      }
+    }
+
+    .eye {
+      --px: 50%;
+      --py: 55%;
+      border: 0.25em solid;
+      border-radius: 50%;
+      background: 
+        radial-gradient(circle at var(--px) var(--py), #000 20%, #0000 0), #fff;
+      aspect-ratio: 1;
+      width: 23%;
+      transform: translate(-50%, -50%);
+      top: 20%;
+      left: 35%;
+      top: 18%;
+
+      & ~ & {
+        left: 65%;
+        /*             left: 72%; */
+      }
+
+      &.eye-2 {
+        left: 40%;
+
+        & ~ & {
+          left: 75%;
+        }
+      }
+
+      &.half {
+        clip-path: polygon(0 45%, 100% 45%, 100% 100%, 0 100%);
+        overflow: hidden;
+        top: 21%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(#000 52%, #0000 0);
+        }
+      }
+    }
+
+    .mouth {
+      --r: 2deg;
+      --p: 57%;
+      --pos: 40%;
+      border: 0.25em solid;
+      border-radius: 50% / 0 0 100% 100%;
+      background: 
+        radial-gradient(at var(--pos) 100%, #c44 30%, #0000 0),
+        linear-gradient(#fff 29%, #000 0 35%, #600 0);
+      aspect-ratio: 2;
+      width: 30%;
+      transform: translate(-50%) rotate(var(--r));
+      top: 28%;
+      left: var(--p);
+      top: 26%;
+
+      &.flip {
+        background: 
+          linear-gradient(#0000 65%, #000 0 71%, #fff 0),
+          radial-gradient(at var(--pos) 0%, #c44 30%, #600 0)
+          ;
+        transform: translate(-50%) scaleY(-1) rotate(var(--r));
+      }
+    }
+
+    .whisper {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.125em;
+      font-size: 4em;
+      border-bottom: 0.11em solid;
+      margin: 0;
+      text-align: center;
+      font-family: 'Amatic SC';
+      background: #ffc;
+      font-weight: 900;
+      transform: scale(1, 0.9);
+      letter-spacing: -0.05em;
+      transform-origin: 50% 0;
+    }
+
+    &:nth-child(1) {
+      .whisper {
+        left: 68%;
+        top: 69%;
+        rotate: 6deg;
+      }
+
+      .bubble-1 {
+        top: 15%;
+        left: 7%;
+        background: var(--dialog2);
+        padding: 0.5em 0.75em;
+        border-radius: 100%;
+
+        &::before {
+          content: "";
+          width: 0.35em;
+          height: 1.5em;
+          background: inherit;
+          rotate: -40deg;
+          left: 90%;
+          top: 70%;
+        }
+      }
+
+      .bubble-2 {
+        top: 28%;
+        left: 20%;
+        width: 70%;
+        background: var(--dialog2);
+        padding: 0.5em 0em 0.75em;
+        border-radius: 100%;
+
+        &::before {
+          content: "";
+          width: 2.5em;
+          height: 3em;
+          abackground: inherit;
+          box-shadow: inset -0.4em 0 var(--dialog2);
+          rotate: -37deg;
+          left: 58%;
+          top: 90%;
+          border-radius: 0 0 100% 0;
+        }
+      }
+
+      .ie {
+        height: calc(var(--s) * 1.65);
+        
+        .leg {
+          --p: 39%;
+          --r1: 4deg;
+          --r2: -4deg;
+          height: 44%;
+          bottom: -1%;
+          
+          & ~ & {
+            --p: 45%;
+            --r1: -4deg
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+/*       .ie {
+        .mouth {
+          background: none;
+          border-top: none;
+          height: 5%;
+          width: 24%;
+          aspect-ratio: auto;
+        }
+      } */
+      
+      .ie {
+        .ie-logo {
+          top: 2%;
+        }
+        .mouth {
+          --p: 50%;
+          top: 28%;
+          left:55%;
+        }
+        
+        .leg {
+          --p: 41%;
+          --r1: 0deg;
+          --r2: 0deg;
+          height: 44%;
+          bottom: -0%;
+          
+          & ~ & {
+            --p: 50%;
+            --r1: 0deg
+          }
+        }
+      }
+
+      .dots {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 5em;
+        line-height: 1;
+        letter-spacing: -0.7em;
+        transform: translate(-50%, -50%);
+        top: 39%;
+        left: 50%;
+      }
+      
+      .bubble-1 {
+        top: 5%;
+        left: 10%;
+        background: var(--dialog);
+        
+        &::before {
+          content: "";
+          width: 0.4em;
+          height: 3em;
+          background: inherit;
+          rotate: 20deg;
+          top: 80%;
+          left: 50%;
+        }
+      }
+      
+      .bubble-3 {
+        top: 25%;
+        left: 15%;
+        background: var(--dialog);
+        &::before {
+          content: "";
+          width: 0.4em;
+          height: 3em;
+          background: inherit;
+          rotate: 25deg;
+          top: 80%;
+          left: 30%;
+        }
+      }
+      
+      .bubble-5 {
+        top: 45%;
+        left: 10%;
+        background: var(--dialog);
+        
+        &::before {
+          content: "";
+          width: 10em;
+          height: 5em;
+          box-shadow: inset -0.4em 0 var(--dialog);
+          top: 80%;
+          right: 45%;
+          border-radius: 0 0 100% 0;
+          rotate: 20deg;
+          transform-origin: 100% 0;
+        }
+      }
+      
+      .bubble-4 {
+        top: 15%;
+        left: 53%;
+        background: var(--dialog3);
+        
+        &::before {
+          content: "";
+          width: 0.4em;
+          height: 3em;
+          background: inherit;
+          rotate: -15deg;
+          top: 80%;
+          left: 50%;
+        }
+      }
+      
+      .bubble-6 {
+        top: 35%;
+        left: 64%;
+        background: var(--dialog3);
+        
+        &::before {
+          content: "";
+          width: 10em;
+          height: 5em;
+          box-shadow: inset 0.4em 0 var(--dialog3);
+          top: 85%;
+          left: 46%;
+          border-radius: 0 0 0 100%;
+          rotate: -20deg;
+          transform-origin: 0 0;
+        }
+      }
+      
+      .bubble-2 {
+        top: 76%;
+        left: 60%;
+        width: 38%;
+        background: var(--dialog2);
+        
+        text-wrap: balance;
+
+        &::before {
+          content: "";
+          width:1.75em;
+          height: 1.5em;
+          abackground: inherit;
+          box-shadow: inset -0.4em 0 var(--dialog2);
+          rotate: 0deg;
+          left: 19%;
+          top: -45%;
+          border-radius: 0 100% 0 0;
+        }
+      }
+      
+      .whisper {
+        left: 78%;
+        top: 95%;
+        rotate: 2deg;
+      }
+      
+      .whisper-2 {
+        left: 4%;
+        top: 69%;
+        rotate: 2deg;
+      }
+      
+      .whisper-3 {
+        left: 0%;
+        top: 75%;
+        rotate: -4deg;
+      }
+      
+      .whisper-4 {
+        right: -3%;
+        top: 58%;
+        rotate: 3deg;
+      }
+    }
+  }
+}
+
+
+/* Internet Explorer */
+/* Far from perfect, but good enough, I guess... just like the real IE */
+.ie-logo {
+  --c: #1EBBEE;
+  width: var(--s);
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: inline-block;
+  mix-blend-mode: darken;
+}
+
+.ie-logo::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:
+    linear-gradient(#0000 57.5%, #fff 0 66%, #0000 0) 100% 50% / 25% 100% no-repeat,
+    radial-gradient(135% 130% at 50% 100%, #fff 30%, #0000 30.25%) 63% 0% / 50% 46% no-repeat,
+    radial-gradient(135% 145% at 50% 0%, #fff 30%, #0000 30.25%) 64% 100% / 50% 42.5% no-repeat,
+    radial-gradient(88% 88% at 56% 52%,  var(--c) 50%, #0000 50.25%)
+    ;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 75%, 10% 50%);
+}
+
+.ie-logo::after {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  width: 115%;
+  height: 44%;
+  border: calc(var(--s) * 0.04) solid var(--c);
+  border-top: calc(var(--s) * 0.1) solid var(--c);
+  border-bottom: calc(var(--s) * 0.01) solid #0000;
+  border-left: calc(var(--s) * 0.06) solid var(--c);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  box-shadow: calc(var(--s) * -0.25) calc(var(--s) * -0.055) #fff;
+}
+
+
+      
+    </style>
+  </head>
+  <body>
+<article>
+  <section>
+    <h2>July 4, 2025</h2>
+    <div class="bubble bubble-1">Happy Independence Day!</div>
+    <div class="bubble bubble-2">Because you can<span>'</span>t write "Indepedence" without IE!</div>
+    <div class="whisper whisper-1">I<span>'</span>m back, baby!</div>
+    <div class="ie">
+      <div class="leg"></div>
+      <div class="leg"></div>
+      <div class="arm"></div>
+      <div class="arm"></div>
+      <span class="ie-logo logo" role="img" aria-label="IE logo"></span>
+      <div class="eye eye-2"></div>
+      <div class="eye eye-2"></div>
+      <div class="mouth"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="dots">...</div>
+    <div class="bubble bubble-1">Neither <span>'</span>inefficient<span>'</span></div>
+    <div class="bubble bubble-3">or <span>'</span>inferior<span>'</span></div>
+    <div class="bubble bubble-4">or <span>'</span>embarrassing<span>'</span></div>
+    <div class="bubble bubble-5"><span>'</span>weird<span>'</span></div>
+    <div class="bubble bubble-6">or <span>'</span>asinine<span>'</span></div>
+    <div class="bubble bubble-2">Ok... I get it! I<span>'</span>ll leave now</div>
+    <div class="whisper whisper-1">...@@$#<span>*</span>£€$...</div>
+     <div class="whisper whisper-2">...retired...</div>
+    <div class="whisper whisper-3">...ancient...</div>
+    <div class="whisper whisper-4">...simpleton...</div>
+    <div class="ie">
+      <div class="leg"></div>
+      <div class="leg"></div>
+      <div class="arm"></div>
+      <div class="arm"></div>
+      <span class="ie-logo logo" role="img" aria-label="Chrome logo"></span>
+      <div class="eye eye-2 half"></div>
+      <div class="eye eye-2 half"></div>
+      <div class="mouth flip"></div>
+      </span>
+    </div>
+  </section>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

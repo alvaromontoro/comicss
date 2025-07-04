@@ -1512,4 +1512,18 @@ const posts = [
     vertical: true,
     ariaLabel: "Pie chart titled Benefits of Using TailwindCSS. The chart is 30% green, 55% yellow, and 15% orange. The legend is Reduced Code Bloat (red), Maintainability (blue), and Learning Curve (pink)"
   },
+  {
+    id: 194,
+    uid: "independence-day-i",
+    boxes: 3,
+    title: "Independence Day (I)",
+    ariaLabel: "Comic strip with 3 panels. The first one happens on July 4, 2025, the IE logo is smiling while saying 'Happy Independence Day! Because you cannot write independence without IE! I'm back, baby!' The second panel has the Chrome and Safari logos looking disgusted and disappointed. The third panel is happening on July 4, 2026, the Chrome and Safari logos cheerfully saying 'Happy Autonomy Day!' while an angry IE logo is seeing in a corner of the panel saying 'jerks!'"
+  },
+  {
+    id: 195,
+    uid: "independence-day-ii",
+    boxes: 2,
+    title: "Independence Day (II)",
+    ariaLabel: "Comic strip with 2 panels, the first one has a cheerful IE logo saying 'Happy Independence Day! Because you cannot write independence without IE! I am back, baby!' The second panel has many speech bubbles from characters off-panel saying 'Neither inefficient... or embarrassing... or inferior... or asinine... weird... simpleton... retired... ancient...' And a disappointed looking IE logo replies 'OK... I get it! I'll leave now'"
+  },
 ]
