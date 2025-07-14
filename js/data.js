@@ -660,6 +660,7 @@ const posts = [
     boxes: 4,
     vertical: true,
     title: "CSS Doom",
+    video: "RW1zIN0TgJU",
     ariaLabel: "Cartoon with 4 panels showing two people walking. One says 'you look down, did the layoffs impact you?' Then they start a conversation about how everything seems to be going poorly and it has been that way for a long time (2016 to be precise). One says that has been doing research and thinks that has found the root cause, shows the CSS wikipedia article: CSS latest version was published in April 12, 2016."
   },
   {
@@ -741,6 +742,7 @@ const posts = [
     uid: "r2d2",
     boxes: 1,
     vertical: true,
+    video: "VpzllyPHs08",
     title: "Style Wars",
     ariaLabel: "Cartoon showing R2D2, a roboto from the movie Star Wars, projecting a hologram that reads: 'Help me, CSS. You are my only hope!'"
   },
@@ -897,6 +899,7 @@ const posts = [
     uid: "headaches",
     boxes: 1,
     vertical: true,
+    video: "jpNWEWnhyjU",
     title: "Headaches",
     ariaLabel: "Comic strip titled 'Types of headaches' with four panels showing a person with a red are indicating the zone of the headache, and a title underneath it indicating the type of headache. The first panel is for Migraine, and the red area occupies the right side of the forehead and eye. The second panel is for stress, and the red area is the forehead and both sides of the head. The third panel is for tension, and the red area is around the forehead. The fourth panel is for Tailwind, and the whole head and body are red."
   },
@@ -1323,6 +1326,7 @@ const posts = [
     id: 169,
     uid: "mouse-cookie",
     boxes: 2,
+    video: "fP0QHyT1fYQ",
     title: "If you give a mouse a cookie",
     ariaLabel: "Cartoon with two panels showing a mouse with a cookie. In the first panel, the mouse is smiling and looking happy, and has the text 'if you give a mouse a cookie...'. The second panel shows an angry mouse along with the text (partially covered by the mouse): ...he is going to ask what the **** is this? No HTTPS? No domain or expiration date? Have you not heard about GDPR? Who did even let you close to this code? This sucks! And you call yourself a developer? Can I talk to your manager? Do they know what a ****** developer you are? Aren't you ashame? You should be ashamed! ...An that's why you never give a mouse a ****ing cookie. The end."
   },
@@ -1509,6 +1513,7 @@ const posts = [
     uid: "benefits-of-tailwind",
     boxes: 1,
     title: "Benefits of Tailwind",
+    video: "HurdPSFAXGA",
     vertical: true,
     ariaLabel: "Pie chart titled Benefits of Using TailwindCSS. The chart is 30% green, 55% yellow, and 15% orange. The legend is Reduced Code Bloat (red), Maintainability (blue), and Learning Curve (pink)"
   },
@@ -1531,7 +1536,17 @@ const posts = [
     uid: "summer-at-venn",
     boxes: 1,
     title: "Summer at the Venns' House",
+    video: "qhmZqHgpnmU",
     vertical: true,
     ariaLabel: "Cartoon with two ice cream cones overlapping each other looking like a Venn diagram"
+  },
+  {
+    id: 197,
+    uid: "levels-of-wcag-conformance",
+    boxes: 4,
+    horizontal: true,
+    video: "4B-yudjkXRY",
+    title: "Levels of WCAG Conformance",
+    ariaLabel: "Comic with 4 panels titled 'Levels of WCAG Conformance'. The first panel is titled 'A' and shows a smiling person saying 'piece of cake!'. The second panel is titled 'AA' and shows the same person with some concern on their face while sighing 'tricky!'. The third panel is titled 'AAA' and shows the same person with a panicking face saying 'this is tough...'. The fourth panel is titled 'AAAAAAAAARGH' and it shows the same person hitting their head against the computer while saying 'I hate this!'"
   },
 ]
