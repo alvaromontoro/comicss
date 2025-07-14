@@ -3730,4 +3730,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Levels of WCAG Conformance</title>
+    <link href="https://comicss.art/comics/197" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/197/levels-of-wcag-conformance.html"/>
+    <id>https://comicss.art/comics/197</id>
+    <updated>2025-07-14T00:00:00Z</updated>
+    <summary>New Cartoon: Levels of WCAG Conformance</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/197/levels-of-wcag-conformance.png" alt="Comic with 4 panels titled 'Levels of WCAG Conformance'. The first panel is titled 'A' and shows a smiling person saying 'piece of cake!'. The second panel is titled 'AA' and shows the same person with some concern on their face while sighing 'tricky!'. The third panel is titled 'AAA' and shows the same person with a panicking face saying 'this is tough...'. The fourth panel is titled 'AAAAAAAAARGH' and it shows the same person hitting their head against the computer while saying 'I hate this!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

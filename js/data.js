@@ -1534,4 +1534,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon with two ice cream cones overlapping each other looking like a Venn diagram"
   },
+  {
+    id: 197,
+    uid: "levels-of-wcag-conformance",
+    boxes: 4,
+    horizontal: true,
+    title: "Levels of WCAG Conformance",
+    ariaLabel: "Comic with 4 panels titled 'Levels of WCAG Conformance'. The first panel is titled 'A' and shows a smiling person saying 'piece of cake!'. The second panel is titled 'AA' and shows the same person with some concern on their face while sighing 'tricky!'. The third panel is titled 'AAA' and shows the same person with a panicking face saying 'this is tough...'. The fourth panel is titled 'AAAAAAAAARGH' and it shows the same person hitting their head against the computer while saying 'I hate this!'"
+  },
 ]
