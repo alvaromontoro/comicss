@@ -3749,4 +3749,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Color Shopping List</title>
+    <link href="https://comicss.art/comics/198" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/198/color-shopping-list.html"/>
+    <id>https://comicss.art/comics/198</id>
+    <updated>2025-07-21T00:00:00Z</updated>
+    <summary>New Cartoon: Color Shopping List</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/198/color-shopping-list.png" alt="comic with 4 panels in a 2x2 grid. A character is working on a computer and saying 'tomato... salmon... tuna... tuna? Oh no! This is not my Figma color list, this is the shopping list! Which means...' The last panel is another character confused, pushing a shopping cart and asking 'Excuse me, do you know when I can find some chartreuse? And how do you even cook a gainsboro?' and sighs 'and what the heck is a lemon chiffon?'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

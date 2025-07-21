@@ -1549,4 +1549,11 @@ const posts = [
     title: "Levels of WCAG Conformance",
     ariaLabel: "Comic with 4 panels titled 'Levels of WCAG Conformance'. The first panel is titled 'A' and shows a smiling person saying 'piece of cake!'. The second panel is titled 'AA' and shows the same person with some concern on their face while sighing 'tricky!'. The third panel is titled 'AAA' and shows the same person with a panicking face saying 'this is tough...'. The fourth panel is titled 'AAAAAAAAARGH' and it shows the same person hitting their head against the computer while saying 'I hate this!'"
   },
+  {
+    id: 198,
+    uid: "color-shopping-list",
+    boxes: 4,
+    title: "Color Shopping List",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. A character is working on a computer and saying 'tomato... salmon... tuna... tuna? Oh no! This is not my Figma color list, this is the shopping list! Which means...' The last panel is another character confused, pushing a shopping cart and asking 'Excuse me, do you know when I can find some chartreuse? And how do you even cook a gainsboro?' and sighs 'and what the heck is a lemon chiffon?'"
+  },
 ]
