@@ -300,37 +300,62 @@ p.video a {
 .blog-youtube {
   position: relative;
   display: inline-block;
+}
 
-  &::after {
-    --base: #f33;
-    content: "";
-    position: absolute;
-    width: 20%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: 
-      conic-gradient(at 100% 50%, #0000 240deg, #fff 0 300deg, #0000 0) 55% 50% / 40% 100% no-repeat,
+.blog-youtube::after {
+  --base: #f33;
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    conic-gradient(at 100% 50%, #0000 240deg, #fff 0 300deg, #0000 0) 55% 50% / 40% 100% no-repeat,
     var(--base);
-  }
+}
 
-  img {
-    width: 480px;
-    max-width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border: 1px solid #0008;
-    position: relative;
-    display: block;
-  }
+.blog-youtube img {
+  width: 480px;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border: 1px solid #0008;
+  position: relative;
+  display: block;
+}
 
-  &:hover {
-    &::after {
-      --base: #000a;
-    }
-  }
+.blog-youtube:hover::after {
+  --base: #000a;
+}
+
+.error-404 {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.error-404 h1 {
+  font-size: 6rem;
+  color: var(--accent);
+  margin: 0;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.error-404 h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.error-404 p {
+  font-size: 1.125rem;
+  margin: 1.5rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Responsive */
