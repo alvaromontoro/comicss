@@ -121,6 +121,20 @@ echo "  <entry>
 </feed>" >> ./atom.xml
 
 ###################################################################
+### add the comic to the sitemap
+echo "Updating sitemap..."
+# remove the closing </urlset> tag
+sed -i '' -e '$ d' ./sitemap.xml
+# add the new comic entry and close the urlset
+echo "  <url>
+    <loc>https://comicss.art/comics/${id}</loc>
+    <lastmod>$(date +%Y-%m-%d)</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>" >> ./sitemap.xml
+
+###################################################################
 ### add the comic to the archive
 echo "Updating archive file..."
 # remove the footer (source with some changes: https://stackoverflow.com/a/13383331/3695983)
@@ -171,6 +185,7 @@ echo "<!doctype html>
     <link rel=\"monetization\" href=\"https://fynbos.me/alvaro\">
 
     <link rel=\"shortcut icon\" href=\"/favicon.png\" />
+    <link rel=\"sitemap\" type=\"application/xml\" href=\"/sitemap.xml\" />
 
     <link rel=\"canonical\" href=\"https://comicss.art\" />
 

@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of all content
+Allow: /comics/
+Allow: /archive/
+Allow: /about/
+Allow: /blog/
+Allow: /contact/
+
+# Disallow unnecessary files and directories
+Disallow: /bin/
+Disallow: /.git/
+Disallow: /css/*.map
+Disallow: /js/*.map
+
+# Sitemap location
+Sitemap: https://comicss.art/sitemap.xml
+
+# Additional feeds
+Sitemap: https://comicss.art/atom.xml
+Sitemap: https://comicss.art/rss.xml
