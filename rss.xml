@@ -1986,5 +1986,15 @@
       <enclosure url="https://comicss.art/comics/198/color-shopping-list.png" length="180000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/199</guid>
+      <title>Tanning</title>
+      <link>https://comicss.art/comics/199</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/199/tanning.png" length="238000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

@@ -1556,4 +1556,11 @@ const posts = [
     title: "Color Shopping List",
     ariaLabel: "comic with 4 panels in a 2x2 grid. A character is working on a computer and saying 'tomato... salmon... tuna... tuna? Oh no! This is not my Figma color list, this is the shopping list! Which means...' The last panel is another character confused, pushing a shopping cart and asking 'Excuse me, do you know when I can find some chartreuse? And how do you even cook a gainsboro?' and sighs 'and what the heck is a lemon chiffon?'"
   },
+  {
+    id: 199,
+    uid: "tanning",
+    boxes: 4,
+    title: "Tanning",
+    ariaLabel: "comic with 4 panels showing three people talking. Person 1: We have a coupon for the tanning salon. Want to come with us? Person 2: I want a tan too, but I can't go coz of my sinus infection. Maybe tomorrow? Person 1: It expires today. That salon is pricey, I couldn’t afford such a cost without a coupon. It’d be a sin not to use it. Would a tangerine help? Person 2: W... What...? Hmmm... Hypothesis: the cartoonist is randomly inserting trigonometric functions into the comic. Person 3: EIGHT!"
+  },
 ]

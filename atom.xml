@@ -3768,4 +3768,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Tanning</title>
+    <link href="https://comicss.art/comics/199" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/199/tanning.html"/>
+    <id>https://comicss.art/comics/199</id>
+    <updated>2025-07-28T00:00:00Z</updated>
+    <summary>New Cartoon: Tanning</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/199/tanning.png" alt="comic with 4 panels showing three people talking. Person 1: We have a coupon for the tanning salon. Want to come with us? Person 2: I want a tan too, but I can't go coz of my sinus infection. Maybe tomorrow? Person 1: It expires today. That salon is pricey, I couldn’t afford such a cost without a coupon. It’d be a sin not to use it. Would a tangerine help? Person 2: W... What...? Hmmm... Hypothesis: the cartoonist is randomly inserting trigonometric functions into the comic. Person 3: EIGHT!" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
