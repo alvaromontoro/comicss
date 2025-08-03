@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/200/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/200/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Bebas Neue';
+        src: url(/fonts/BebasNeue-Regular.ttf);
+      }
+
+      @font-face {
+        font-family: 'Jost';
+        src: url(/fonts/Jost.ttf);
+      }
+
+body {
+  background: #f7e6c0;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  --c1: #7c212e;
+  --c2: #f7e6c0;
+  --s: 6px;
+  --so: var(--s);
+  --g: calc(var(--s) * 0.75);
+  font-size: var(--s);
+  display: grid;
+  grid-auto-rows: auto;
+  font-family: Jost, Helvetica, sans-serif;
+  position: relative;
+  width: fit-content;
+  margin: 20px;
+}
+
+section {
+  width: 140em;
+  height: 100em;
+  position: relative;
+}
+
+h1 {
+  width: 100%;
+  top: 100%;
+  color: red;
+  order: 2;
+  display: grid;
+  place-items: center;
+  font-size: calc(var(--s) * 10.1);
+  line-height: 1.25;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: calc(140 * var(--so));
+  background: var(--c1);
+  color: var(--c2);
+  box-shadow: 0 -2px 0 -1px var(--c1);
+}
+
+ul {
+  --p: / span 2;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  position: absolute;
+  inset: 0;
+  padding: calc(var(--g) * 4) calc(var(--g) * 2.5) 0px calc(var(--g) * 2.5);
+  margin: 0;
+  gap: var(--g);
+  background:
+    linear-gradient(to bottom right, #0000 50%, var(--c1) 0 calc(50% + var(--g) * 2), #0000 0) 0 0 / 50% 100% no-repeat,
+    linear-gradient(to bottom left, #0000 50%, var(--c1) 0 calc(50% + var(--g) * 2), #0000 0) 100% 0 / 50% 100% no-repeat
+    ;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  
+  li {
+    outline: var(--g) solid var(--c1);
+    grid-column: var(--c) var(--p);
+    grid-row: var(--r);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--color);
+    
+    h2 {
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 2em;
+      margin-bottom: 0.1em;
+      line-height: 1.05;
+    }
+    
+    p {
+      font-weight: 400;
+      margin: 0;
+      font-size: 1.25em;
+      line-height: 1.1;
+      text-wrap: balance;
+      
+      &.sub {
+        text-transform: uppercase;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.css-logo.old {
+  position: absolute;
+  width: 28em;
+  aspect-ratio: 22 / 25;
+  background: #24d;
+  clip-path: polygon(0 0, 100% 0, 90% 90%, 50% 100%, 10% 90%);
+  rotate: 10deg;
+  top: 16%;
+  right: -2%;
+  scale: 1.25;
+}
+
+.css-logo.old::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff18;
+  clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+  mix-blend-mode: plus-lighter;
+}
+
+.css-logo.old::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #eee;
+  clip-path: polygon(18.5% 18.5%, 81.5% 18.5%, 76% 74%, 50% 80.5%, 24% 74%, 22.25% 57%, 34.25% 57%, 35% 65.5%, 50% 69%, 65% 65.5%, 66% 51.5%, 22% 51.5%, 20.75% 40.5%, 66.5% 40.5%, 67.5% 29.5%, 19.5% 29.5%);
+}
+
+.css-logo.new {
+  width: 30em;
+  position: absolute;
+  aspect-ratio: 1;
+  background: rebeccapurple;
+  top: 16%;
+  left: -5%;
+  rotate:-7deg;
+  border-radius: 0 20% 20% 20%;
+  scale: 1.25;
+
+  &::before {
+    content: "CSS";
+    position: absolute;
+    bottom: 0%;
+    right: 8%;
+    color: #fff;
+    font-size: 15em;
+    font-family: 'Bebas Neue', 'Roboto Condensed', sans-serif;
+    line-height: 1;
+    scale: 1 0.9;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Inspired by Parks and Recreation's Swanwon Pyramid of Greatness -->
+    <article>
+  <h1>CSS Pyramid of Greatness</h1>
+  <section>
+    <ul>
+      <li style="--r: 2; --c: 10; --color: #ffffff;">
+        <h2>Style</h2>
+        <p>If you need it defined, you don't have it.</p>
+      </li>
+      <li style="--r: 3; --c:  9; --color: #76b06f;">
+        <h2>Front-End</h2>
+        <p>The only type of development that matters</p>
+      </li>
+      <li style="--r: 3; --c: 11; --color: #a0d4d9;">
+        <h2>Positioning</h2>
+        <p>Always aim for the z&#8209;index:999999;</p>
+      </li>
+      <li style="--r: 4; --c:  8; --color: #fadaae;">
+        <h2>Display</h2>
+      </li>
+      <li style="--r: 4; --c: 10; --color: #faf79d;">
+        <h2>Cascade</h2>
+      </li>
+      <li style="--r: 4; --c: 12; --color: #c1a865;">
+        <h2>Selectors</h2>
+      </li>
+      <li style="--r: 5; --c:  7; --color: #faf79d;">
+        <h2>animation-delay</h2>
+        <p>Time is money, money is power...</p>
+      </li>
+      <li style="--r: 5; --c:  9; --color: #e69875;">
+        <h2>content</h2>
+        <p>Faking content since the ::before times.</p>
+      </li>
+      <li style="--r: 5; --c: 11; --color: #f5e6c2;">
+        <h2>:has()</h2>
+        <p>Family selector.</p>
+      </li>
+      <li style="--r: 5; --c: 13; --color: #fadaae;">
+        <h2>Vanilla<br>CSS</h2>
+        <p>The best revenge.</p>
+      </li>
+      <li style="--r: 6; --c:  6; --color: #a0d4d9;">
+        <h2>Layers</h2>
+        <p>Layer up, it's cold out there.</p>
+      </li>
+      <li style="--r: 6; --c:  8; --color: #faf79d;">
+        <h2>CSS Art</h2>
+        <p>Regret nothing,<br>the end.</p>
+      </li>
+      <li style="--r: 6; --c: 10; --color: #ccb485;">
+        <h2>Libraries</h2>
+        <p>Punk-ass book jockeys!</p>
+      </li>
+      <li style="--r: 6; --c: 12; --color: #f5e6c2;">
+        <h2>Border-radius</h2>
+        <p>Real CSS has curves.</p>
+      </li>
+      <li style="--r: 6; --c: 14; --color: #e69875;">
+        <h2>Tailwind</h2>
+        <p>That's right.<br>It's on here twice.<br>Avoid it.</p>
+      </li>
+      <li style="--r: 7; --c:  5; --color: #faf79d;">
+        <h2>Colors</h2>
+      </li>
+      <li style="--r: 7; --c:  7; --color: #ccb485;">
+        <h2>FlexBox</h2>
+      </li>
+      <li style="--r: 7; --c:  9; --color: #f5e6c2;">
+        <h2>Grid</h2>
+      </li>
+      <li style="--r: 7; --c: 11; --color: #faf79d;">
+        <h2>Box<br>Model</h2>
+      </li>
+      <li style="--r: 7; --c: 13; --color: #e69875;">
+        <h2>Specificity</h2>
+      </li>
+      <li style="--r: 7; --c: 15; --color: #fadaae;">
+        <h2>Tables</h2>
+        <p class="sub">(data only)</p>
+      </li>
+      <li style="--r: 8; --c:  4; --color: #ccb485;">
+        <h2>Sass</h2>
+        <p>For emergencies only.</p>
+      </li>
+      <li style="--r: 8; --c:  6; --color: #e69875;">
+        <h2>caniuse</h2>
+        <p>A map. A guide. A companion. A friend.</p>  
+      </li>
+      <li style="--r: 8; --c:  8; --color: #c1a865;">
+        <h2>Text-wrap</h2>
+        <p>For when you need to feel pretty.</p>
+      </li>
+      <li style="--r: 8; --c: 10; --color: #e69875;">
+        <h2>Loops</h2>
+        <p>Allowd in dreams only, but one can dream.</p>
+      </li>
+      <li style="--r: 8; --c: 12; --color: #76b06f;">
+        <h2>Transition</h2>
+        <p>Separates the juniors from the seniors.</p>
+      </li>
+      <li style="--r: 8; --c: 14; --color: #f5e6c2;">
+        <h2>Tailwind</h2>
+        <p>Avoid it.</p>
+      </li>
+      <li style="--r: 8; --c: 16; --color: #faf79d;">
+        <h2>font-weight</h2>
+        <p>Be bold... or don't.</p>
+      </li>
+      <li style="--r: 9; --c:  3; --color: #f5e6c2;">
+        <h2>Classes</h2>
+        <p>A handful is<br>sufficient.</p>
+      </li>
+      <li style="--r: 9; --c:  5; --color: #ccb485;">
+        <h2>light-dark()</h2>
+        <p>Let there be light... or darkness</p>
+      </li>
+      <li style="--r: 9; --c:  7; --color: #a0d4d9;">
+        <h2>Filters</h2>
+        <p>Treat yo'self.</p>
+      </li>
+      <li style="--r: 9; --c:  9; --color: #76b06f;">
+        <h2>Typography</h2>
+        <p>It ain't good if they can't read it.</p>
+      </li>
+      <li style="--r: 9; --c: 11; --color: #faf79d;">
+        <h2>Sticky</h2>
+        <p>Like duct tape:<br>a great ally.</p>
+      </li>
+      <li style="--r: 9; --c: 13; --color: #f5e6c2;">
+        <h2>You</h2>
+        <p>You are your biggest ally</p>
+      </li>
+      <li style="--r: 9; --c: 15; --color: #a0d4d9;">
+        <h2>Gradients</h2>
+        <p>Are the conic ones a metaphor? Well, yes and no.</p>
+      </li>
+      <li style="--r: 9; --c: 17; --color: #f5e6c2;">
+        <h2>Logical Properties</h2>
+        <p>They are the logical properties to use.</p>
+      </li>
+      <li style="--r:10; --c:  2; --color: #a0d4d9;">
+        <h2>Animations</h2>
+        <p>To move things and stay warm in winter.</p>
+      </li>
+      <li style="--r:10; --c:  4; --color: #c1a865;">
+        <h2>Custom Properties</h2>
+        <p>No need to copy the same color 73 times.</p>
+      </li>
+      <li style="--r:10; --c:  6; --color: #faf79d;">
+        <h2>Pseudo-classes</h2>
+        <p>Use them. Don't trust them. They are fake.</p>
+      </li>
+      <li style="--r:10; --c:  8; --color: #e69875;">
+        <h2 aria-label="Accessibility">a11y</h2>
+        <p>Alwayw in mind.</p>
+      </li>
+      <li style="--r:10; --c: 10; --color: #fadaae;">
+        <h2>Padding</h2>
+        <p>It's good to have some space for yourself...</p>
+      </li>
+      <li style="--r:10; --c: 12; --color: #a0d4d9;">
+        <h2>Margin</h2>
+        <p>...and stay away from haters and other bad elements.</p>
+      </li>
+      <li style="--r:10; --c: 14; --color: #ccb485;">
+        <h2>Text-decoration</h2>
+        <p>Acceptable at links and highlights.</p>
+      </li>
+      <li style="--r:10; --c: 16; --color: #a0d4d9;">
+        <h2>!important</h2>
+        <p>Nobody likes to be yelled at.</p>
+      </li>
+      <li style="--r:10; --c: 18; --color: #faf79d;">
+        <h2>Chartreuse</h2>
+        <p>Perfect for highlights and social gatherings.</p>
+      </li>
+    </ul>
+  </section>
+  <div class="css-logo new"></div>
+  <div class="css-logo old"></div>
+</article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
