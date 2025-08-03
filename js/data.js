@@ -1563,4 +1563,12 @@ const posts = [
     title: "Tanning",
     ariaLabel: "comic with 4 panels showing three people talking. Person 1: We have a coupon for the tanning salon. Want to come with us? Person 2: I want a tan too, but I can't go coz of my sinus infection. Maybe tomorrow? Person 1: It expires today. That salon is pricey, I couldn’t afford such a cost without a coupon. It’d be a sin not to use it. Would a tangerine help? Person 2: W... What...? Hmmm... Hypothesis: the cartoonist is randomly inserting trigonometric functions into the comic. Person 3: EIGHT!"
   },
+  {
+    id: 200,
+    uid: "pyramid-of-greatness",
+    boxes: 1,
+    title: "CSS Pyramid of Greatness",
+    vertical: true,
+    ariaLabel: "Cartoon showing a triangle titled 'CSS Pyramid of Greatness'. The triangle contains 55 rectangles with information and key features of CSS. From 'Animations: moving things around and keeping you warm in winter' to 'Tailwind: Avoid it'. Check the live demo for more information and all 55 of them."
+  },
 ]
