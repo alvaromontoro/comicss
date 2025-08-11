@@ -3806,4 +3806,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>The Old Way</title>
+    <link href="https://comicss.art/comics/201" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/201/the-old-way.html"/>
+    <id>https://comicss.art/comics/201</id>
+    <updated>2025-08-11T00:00:00Z</updated>
+    <summary>New Cartoon: The Old Way</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/201/the-old-way.png" alt="comic with 4 panels in a 2x2 grid. In the first panel, a character asks 'Hey, dude! What are you up to?' a second character replies 'Just building a website... the old way: no frameworks, no webpack, no AI, no libraries... Just crafting HTML, JS, and CSS. It is so much fun!' to the shock of the first character who backs away slowly, to go and tell a different person 'I tell you! He has lost his ******* mind!' in the last panel" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -1571,4 +1571,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon showing a triangle titled 'CSS Pyramid of Greatness'. The triangle contains 55 rectangles with information and key features of CSS. From 'Animations: moving things around and keeping you warm in winter' to 'Tailwind: Avoid it'. Check the live demo for more information and all 55 of them."
   },
+  {
+    id: 201,
+    uid: "the-old-way",
+    boxes: 4,
+    title: "The Old Way",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. In the first panel, a character asks 'Hey, dude! What are you up to?' a second character replies 'Just building a website... the old way: no frameworks, no webpack, no AI, no libraries... Just crafting HTML, JS, and CSS. It is so much fun!' to the shock of the first character who backs away slowly, to go and tell a different person 'I tell you! He has lost his ******* mind!' in the last panel"
+  },
 ]
