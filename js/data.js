@@ -1578,4 +1578,11 @@ const posts = [
     title: "The Old Way",
     ariaLabel: "comic with 4 panels in a 2x2 grid. In the first panel, a character asks 'Hey, dude! What are you up to?' a second character replies 'Just building a website... the old way: no frameworks, no webpack, no AI, no libraries... Just crafting HTML, JS, and CSS. It is so much fun!' to the shock of the first character who backs away slowly, to go and tell a different person 'I tell you! He has lost his ******* mind!' in the last panel"
   },
+  {
+    id: 202,
+    uid: "pedro-pascal",
+    boxes: 4,
+    title: "Pedro Pascal",
+    ariaLabel: "comic with 4 panels in a 2x2 grid showing 2 characters talking. A person says 'Check this out! I created a library for comiCSS that...' and a econd character interrupts him 'Let me stop you right there! A comic? Really? That's a dead medium! Seriously... A comic... and about CSS... No one will read that! You should focus on something more interesting like movies or series... something with Pedro Pascal. Pedro Pascal is everywhere, and it's all good. But CSS? In a comic? Nope!' and adding as he leaves 'I would stop with the CSS nonsense and include something with Pedro Pascal, you'll get views and traction... But it's your call. Bye bye!'. In the last panel, it is revealed that the first person was Pedro Pascal wearing a mask (a caricature of him). Pedro says 'I can't connect with the character. What's his deal? Is he happy? Sad? ...and what is CSS? And the dialog? Terrible! Of course I'm everywhere. I'm Pedro ******* Pascal!'"
+  },
 ]
