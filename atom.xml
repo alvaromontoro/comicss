@@ -3825,4 +3825,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Pedro Pascal</title>
+    <link href="https://comicss.art/comics/202" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/202/pedro-pascal.html"/>
+    <id>https://comicss.art/comics/202</id>
+    <updated>2025-08-18T00:00:00Z</updated>
+    <summary>New Cartoon: Pedro Pascal</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/202/pedro-pascal.png" alt="comic with 4 panels in a 2x2 grid showing 2 characters talking. A person says 'Check this out! I created a library for comiCSS that...' and a econd character interrupts him 'Let me stop you right there! A comic? Really? That's a dead medium! Seriously... A comic... and about CSS... No one will read that! You should focus on something more interesting like movies or series... something with Pedro Pascal. Pedro Pascal is everywhere, and it's all good. But CSS? In a comic? Nope!' and adding as he leaves 'I would stop with the CSS nonsense and include something with Pedro Pascal, you'll get views and traction... But it's your call. Bye bye!'. In the last panel, it is revealed that the first person was Pedro Pascal wearing a mask (a caricature of him). Pedro says 'I can't connect with the character. What's his deal? Is he happy? Sad? ...and what is CSS? And the dialog? Terrible! Of course I'm everywhere. I'm Pedro ******* Pascal!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

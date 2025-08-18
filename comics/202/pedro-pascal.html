@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/202/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/202/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-panel:nth-child(4) {
+  [character="al"] {
+    .head .face {
+      transform-origin: 50% 100%;
+      translate: 0 2%;
+      rotate: 3deg;
+    }
+  }
+}
+
+css-panel:nth-child(5) {
+  #director::before {
+    translate: -555%;
+    transform: skew(-50deg)
+  }
+  
+  #second::before {
+    transform: skew(-45deg);
+  }
+
+  css-person {
+    .body {
+      .hand {
+        left: 235%;
+        top: 23%;
+      }
+    }
+    .head .face {
+      transform-origin: 0 0;
+      rotate: 5deg;
+      translate: 210% 134%;
+
+      .mouth {
+        border: 0.3em solid;
+        background: #fff;
+      }
+      .eye {
+        border: 0.3em solid;
+        background: #fff;
+      }
+    }
+  }
+}
+
+/* Based on Dennis Salvatier's https://dribbble.com/shots/23688393-MCU-Fantastic-Four */
+#pedro-pascal {
+  --skin: #fca;
+  --skin-dark: #eb9;
+  --hair: #654;
+  --hair-dark: #543;
+  --hair-light: #fed;
+  width: 50%;
+  height: 45%;
+  top: 26%;
+  left: 4%;
+  
+  .hair-back {
+    width: 95%;
+    height:80%;
+    border: 0.5em solid;
+    border-radius: 40% / 50%;
+    top: 12%;
+    background: var(--hair);
+    border-top-color: var(--hair);
+  }
+  
+  .hair-back-2 {
+    width: 62%;
+      height: 45%;
+      border-radius: 50%;
+      border: 0.4em solid;
+      border-top: 0.2em solid #0000;
+      border-left: 0.4em solid #0000;
+      border-bottom: 0.2em solid #0000;
+      top: -16%;
+      left: 24%;
+    rotate: 20deg;
+      background: 
+        radial-gradient(50% 60% at 40% 20%, #0000 80%, #000 0 calc(80% + 0.4em), var(--hair) 0) no-repeat;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%);
+  }
+  
+  .ear {
+    width: 16%;
+    height: 23%;
+    border: 0.4em solid;
+    border-left: 0.5em solid;
+    border-radius: 100% / 80% 80% 120% 120%;
+    background: var(--skin);
+    top:60%;
+    left: -1%;
+    rotate: -10deg;
+    
+    & ~ & {
+      scale: -1 1;
+      rotate: 13deg;
+      left: 81%;
+    }
+    
+    &::before {
+      content: "";
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      border: 0.1em solid #0000;
+      border-top: 0.4em solid;
+      border-right: 0.3em solid;
+      top: 20%;
+      left: 10%;
+      box-shadow: inset -0.5em 0.5em var(--skin-dark);
+    }
+  }
+
+  .face {
+    width: 82%;
+    height: 72%;
+    bottom: 0;
+    left: 49%;
+    translate: -50%;
+    
+    &::after {
+      content: "";
+      width: 95%;
+      height: 50%;
+      
+      background: 
+        linear-gradient(-165deg, var(--hair) 15%, #0000 0),
+        var(--skin);
+      z-index: -1;
+      left: 50%;
+      translate: -50%;
+      border-radius: 3em 3em 0 0;
+    }
+
+    &::before {
+      content: "";
+      inset: 0;
+      border-radius: 100% / 75% 58%;
+      border: 0.5em solid;
+      clip-path: polygon(3% 30%, 97% 40%, 104% 100%, 104% 120%, 0 120%, -3% 100% );
+      background: 
+        radial-gradient(100% 120% at 100% 0, #0000 85%, #000 0 99%, #0000 0) 15% 90% / 1em 2em,
+        radial-gradient(100% 120% at 100% 10%, #0000 84%, #000 0 99%, #0000 0) 12% 92% / 1em 3em,
+        radial-gradient(100% 120% at 100% 40%, #0000 80%, #000 0 99%, #0000 0) 8% 85% / 1em 3em,
+        radial-gradient(100% 120% at 100% 50%, #0000 80%, #000 0 99%, #0000 0) 3% 85% / 1em 3em,
+
+        radial-gradient(100% 120% at 0% 20%, #0000 85%, #000 0 99%, #0000 0) 83% 90% / 1em 2em,
+        radial-gradient(100% 120% at 0% 10%, #0000 84%, #000 0 99%, #0000 0) 88% 90% / 1em 3em,
+        radial-gradient(100% 110% at 0% 40%, #0000 80%, #000 0 99%, #0000 0) 92% 84% / 1em 3em,
+        radial-gradient(100% 120% at 0% 50%, #0000 80%, #000 0 99%, #0000 0) 97% 80% / 1em 3em,
+        var(--skin);
+      background-repeat: no-repeat;
+    }
+    
+    .hair-top-5 {
+      width: 30%;
+      height: 26%;
+      border-radius: 100% 0 0 0;
+      border: 0.4em solid;
+      border-bottom: 0;
+      background: var(--hair);
+      transform: skew(-10deg);
+      top: -33%;
+      left: 10%;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    }
+    
+    .hair-top-3 {
+      width: 35%;
+      height: 30%;
+      border-radius: 100% 10%;
+      border: 0.4em solid;
+      border-bottom: 0;
+      background: var(--hair);
+      transform: skew(-10deg);
+      top: -38.5%;
+      left: 37%;
+      rotate: 10deg;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 70%);
+    }
+    
+    .hair-top-4 {
+      width: 24%;
+      height: 30%;
+      border-radius: 100% 10%;
+      border: 0.4em solid;
+      background: var(--hair);
+      transform: skew(-10deg);
+      top: -15%;
+      left: -5%;
+      rotate: 70deg;
+      aclip-path: polygon(0 0, 100% 0, 100% 50%, 0 70%);
+      clip-path: polygon(0 0, 10% 0, 70% 100%, 0 100%);
+    }
+    
+    .hair-top-2 {
+      width: 15%;
+      height: 15%;
+      border: 0.4em solid;
+      transform: skew(-30deg);
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+      left: 85%;
+      top: -9%;
+      background: var(--hair);
+    }
+    
+    .bangs-1 {
+      width: 37%;
+      height: 28%;
+      border-radius: 50%;
+      border: 0.4em solid;
+      left: 55%;
+      top: -15%;
+      border-top-color: #0000;
+      border-left-color: #0000;
+      background: 
+        radial-gradient(90% 100% at 65% -5%, #0000 60%, #000 calc(60% + 0.5em), var(--hair) 0) no-repeat;
+      clip-path: polygon(60% 20%, 100% 45%, 100% 100%, 0 100%, 0 70%);
+    }
+    
+    .bangs-3,.bangs-2 {
+      width: 42%;
+      height: 35%;
+      border-radius: 50%;
+      border: 0.4em solid;
+      border-top: 0.2em solid #0000;
+      border-left: 0.4em solid #0000;
+      border-bottom: 0.2em solid #0000;
+      top: -11%;
+      left: 7%;
+      background: 
+        radial-gradient(50% 60% at 40% 80%, #0000 80%, #000 0 calc(80% + 0.4em), var(--hair) 0) no-repeat;
+    }
+    
+    .bangs-2 {
+      width: 40%;
+      height: 42%;
+      top: -15%;
+      left: 22%;
+      rotate: -4deg;
+      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    }
+    
+    .hair-side {
+      width: 10%;
+      height: 40%;
+      top: 7%;
+      border-radius: 0 0 100% 0;
+      background: var(--hair);
+      border-right: 0.4em solid;
+      box-shadow: 
+       0 -1em var(--hair),
+        0.1em 0;
+      
+      &::before {
+        content: "";
+        width: 300%;
+        height: 30%;
+        border-radius: 100%;
+        border: 0.3em solid #0000;
+        border-bottom: 0.4em solid var(--hair-light);
+        rotate: -20deg;
+        top: 40%;
+        right: 0;
+        filter: drop-shadow(-0.1em 0.8em var(--hair-light));
+      }
+      
+      & ~ & {
+        scale: -1 1;
+        right: 0;
+        width: 13%;
+        border-radius: 80% 0 100% 0;
+        box-shadow: 
+          0.25em -1em var(--hair),
+          0.15em 0;
+        
+        &::before {
+          width: 200%;
+        }
+      }
+    }
+    
+    .nose-lines {
+      width: 0.3em;
+      height: 2.5em;
+      background: #000;
+      border-radius: 0 100% 100% 0;
+      top: 43%;
+      left: 55%;
+      translate: 0 -0.35em;
+      
+      &::after {
+        content: "";
+        width: 100%;
+        height: 85%;
+        border-radius: 100% 0 0 100%;
+        background: #000;
+        left: -2.25em;
+        top: 0.35em;
+        rotate: -4deg;
+      }
+    }
+    
+    .nose {
+      width: 11%;
+      aspect-ratio: 1;
+      border-radius: 0 0 0.75em 0;
+      border-bottom: 0.4em solid;
+      border-right: 0.4em solid;
+      rotate: 35deg;
+      transform: skew(-20deg);
+      top: 61%;
+      left: 44%;
+      background:var(--skin);
+      
+      &::before, &::after {
+        content: "";
+        width: 0.3em;
+        height: 1.2em;
+        bottom: -0.4em;
+        background: #000;
+        transform-origin: 0 100%;
+        rotate: -35deg;
+        border-radius: 50% / 100% 100% 0 0;
+      }
+      &::after {
+        width: 1em;
+        height: 0.3em;
+        top: 0;
+        right: -0.4em;
+        transform-origin: 100% 0;
+        rotate: 33deg;
+      }
+    }
+    
+    .forehead {
+      width: 25%;
+      height: 1.75%;
+      background: #000;
+      border-radius: 50%;
+      top: 28%;
+      left: 36%;
+      
+      &::before {
+        content: "";
+        width: 80%;
+        height: 80%;
+        background: #000;
+        border-radius: 50%;
+        top: -110%;
+        left: 30%;
+      }
+    }
+
+    .chin {
+      width:32%;
+      height: 25%;
+      left: 50%;
+      translate: -50%;
+      border-radius: 50%;
+      border: 0.1em solid #0000;
+      border-bottom: 0.5em solid;
+      bottom: -3%;
+      background: 
+        linear-gradient(#000 0 0) 50% 85% / 0.22em 0.9em,
+
+        linear-gradient(77deg, #0000 30%, #000 0 33%, #0000 0) 0.4em 90% / 100% 30%,
+        linear-gradient(75deg, #0000 30%, #000 0 33%, #0000 0) -0.2em 93% / 100% 25%,
+
+        linear-gradient(100deg, #0000 30%, #000 0 33%, #0000 0) 1.8em 93% / 100% 30%,
+        linear-gradient(100deg, #0000 30%, #000 0 33%, #0000 0) 2.3em 94% / 100% 24%,
+        var(--skin);
+      background-repeat: no-repeat;
+    }
+
+    .lip {
+      width:19%;
+      height: 13%;
+      left: 50%;
+      translate: -50%;
+      border-radius: 0 0 100% 100%;
+      border: 0.1em solid #0000;
+      border-bottom: 0.35em solid;
+      top: 72%;
+    }
+    
+    .eyebrow {
+      width: 20%;
+      height: 5%;
+      border-radius: 0 0 100% 0;
+      background: var(--hair-dark);
+      rotate: 20deg;
+      top: 36%;
+      left: 33%;
+      translate: -50%;
+      
+      &::after {
+        content: "";
+        width: 24%;
+        height: 200%;
+        border-radius: 0 0 100% 0;
+        background: var(--hair-dark);
+        transform-origin: 0 0;
+        transform: skew(-40deg);
+      }
+      
+      & ~ & {
+        scale: -1 1;
+        rotate: -15deg;
+        left: 66%;
+        top: 37%;
+      }
+    }
+
+    .mustache {
+      width: 26%;
+      height: 7%;
+      background: var(--hair-dark);
+      top:72.5%;
+      left: 50%;
+      translate: -50%;
+      border-radius: 1em 1em 100% 100%;
+
+      &::before, &::after {
+        content:"";
+        width: 14%;
+        height: 200%;
+        border-radius: 0 100% 100% 0 / 50%;
+        background: var(--hair-dark);
+        rotate: 45deg;
+        translate: -50% -15%;
+      }
+
+      &::after {
+        rotate: -45deg;
+        scale: -1 1;
+        left: 100%;
+      }
+    }
+
+    .eye {
+      width: 7.5%;
+      height: 14%;
+      background: 
+        radial-gradient(circle at 33% 40%, #fff 25%, #0000 0),
+        #000;
+      border-radius: 50%;
+      top: 45%;
+      left: 28%;
+
+      & + & {
+        left: 64%;
+      }
+
+      &::after {
+        content: "";
+        width: 150%;
+        height: 20%;
+        border-radius: 50% / 100% 100% 0 0;
+        left: 50%;
+        translate: -50%;
+        background: #000;
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="Pedro Pascal">
+      <css-panel>
+        <css-speech top="0" left="0" line="left-40 longer" width="65">Check this out! I created a library for comiCSS that...</css-speech>
+        <css-speech line="short left-50" right-line style="top: 13%;left:37%;">Let me stop you right there! A comic? Really? That's a dead medium!</css-speech>
+        <css-person character="al" left="5" arms="left-15"></css-person>
+        <css-person character="john" right="5" facing="left" eyebrows=" low" mouth="frown small" arms="right--15"></css-person>
+      </css-panel>
+      <css-panel>
+        <css-speech line="left-55 skewest long" right-line>Seriously... A comic... and about CSS... No one will read that! You should focus on something more interesting like movies or series... something with Pedro Pascal. Pedro Pascal is everywhere, and it's all good. But CSS? In a comic? Nope!</css-speech>
+        <css-person character="al" arms="right--15 left-15" eyebrows="sad low" mouth="frown small sided" left="5"></css-person>
+        <css-person character="john" arms="right--25 left-20 right-fold--5" right="5" facing="left" eyebrows="suspicious angry" mouth="frown small side-right"></css-person>
+      </css-panel>
+      <css-panel>
+        <!-- <css-speech line="left-85 skewest long" top="10" left="10" width="80" right-line>So stop with the comic nonsense. Do you have anything with Pedro Pascal? No? Not interested. Bye bye!</css-speech> -->
+        <css-speech line="left-85 skewest long" top="10" left="10" width="80" right-line>I would stop with the CSS nonsense and include something with Pedro Pascal, you'll get views and traction... But it's your call. Bye bye!</css-speech>
+        <css-person arms="left-10 right--10" character="al" height="short" eyebrows="sad low" mouth="no-mouth" left="10"></css-person>
+        <css-person character="john" rotate="3" left="85" eyebrows="suspicious angry" mouth="frown small side-right"></css-person>
+      </css-panel>
+      <css-panel>
+        <css-speech line="left-0 skewest longest" id="director" style="top: 3%;">...aaand CUT!!</css-speech>
+        <!-- <css-speech left="40" top="0" line="skewest left-15 short">Hey, I'm not feeling this character. Is he happy? Is he sad?</css-speech> -->
+        <css-speech left="40" top="0" line="skew left-15 short" style="padding: 0.5em 0.5em">I can't connect with the character. What's his deal? Is he happy? Sad?</css-speech>
+        <css-speech left="55" top="25" line="skewest left-5 short" id="second" style="width:31%;">...and what is "CSS"?</css-speech>
+        <!-- <css-speech type="whisper" top="65" left="45" rotate="4">And of course I'm everywhere.<br>I'm Pedro ******** Pascal!</css-speech> -->
+        <css-speech type="whisper" left="50" rotate="4" style="top: 62%">And the dialog? Terrible!<br>Of course I'm everywhere.<br>I'm Pedro ******* Pascal!</css-speech>
+        <css-person character="al" height="tall" left="10" arms="left-10 right--40 right-fold--90"></css-person>
+        
+        <css-speech type="whisper" left="5" rotate="-10" top="70">*unmasks*</css-speech>
+        
+        <!-- Based on Dennis Salvatier's https://dribbble.com/shots/23688393-MCU-Fantastic-Four -->
+        <div id="pedro-pascal">
+          <div class="hair-back-2"></div>
+          <div class="hair-back"></div>
+          <div class="ear"></div>
+          <div class="ear"></div>
+          <div class="face">
+            <div class="chin"></div>
+            <div class="lip"></div>
+            <div class="mustache"></div>
+            <div class="nose"></div>
+            <div class="nose-lines"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>
+            <div class="forehead"></div>
+            <div class="hair-side"></div>
+            <div class="hair-side"></div>
+            <div class="hair-top-1"></div>
+            <div class="hair-top-2"></div>
+            <div class="hair-top-3"></div>
+            <div class="hair-top-4"></div>
+            <div class="hair-top-5"></div>
+            <div class="bangs-1"></div>
+            <div class="bangs-2"></div>
+            <div class="bangs-3"></div>
+          </div>
+        </div>
+      </css-panel>
+    </css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
