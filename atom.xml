@@ -3844,4 +3844,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Hippopotenuse</title>
+    <link href="https://comicss.art/comics/203" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/203/hippopotenuse.html"/>
+    <id>https://comicss.art/comics/203</id>
+    <updated>2025-08-19T00:00:00Z</updated>
+    <summary>New Cartoon: Hippopotenuse</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/203/hippopotenuse.png" alt="Cartoon of a hippopotamus sleeping on the hypotenuse of a right triangle" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
