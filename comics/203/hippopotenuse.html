@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/203/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/203/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Bold.ttf);
+  font-weight: 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #caf3;
+}
+article {
+  font-size: 1vmin;
+  position: relative;
+  width: 50em;
+  aspect-ratio: 1;
+  
+  *, *::before, *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 10em;
+    font-family: 'Amatic SC', sans-serif;
+    line-height: 1;
+    margin: 0;
+    translate: 30% -50%;
+    
+    &::before {
+      content: "";
+      width: 2em;
+      height: 2.2em;
+      border-radius: 50%;
+      border: 0.05em solid;
+      clip-path: polygon(0 0, 50% 0, 10% 100%, 0 100%);
+      top: 0.5em;
+      translatE: -53% 0;
+      rotate: -6deg;
+    }
+    
+    &::after {
+      content: "";
+      width: 0.5em;
+      aspect-ratio: 1;
+      border: 0.05em solid;
+      top: 200%;
+      left: -28.25%;
+      border-top: 0;
+      border-left: 0;
+    }
+  }
+  
+  .triangle {
+    --w: 50em;
+    --h: 37.5em;
+    --b: 0.75em;
+    --b2: calc(var(--b) / 2);
+    width: var(--w);
+    height: var(--h);
+    bottom: 0;
+    left: 0;
+    filter: drop-shadow(-1em -1em 5em #fff4);
+    
+    &::before {
+      content: "";
+      inset: 0;
+      background: #fff;
+      clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    }
+    
+    > div {
+      height: var(--b);
+      background: #000;
+      bottom: 0;
+      border-radius: 1em;
+      
+      &.opposite {
+        width: var(--h);
+        right: calc(var(--b2) / -2);
+        transform-origin: calc(100% - var(--b2)) var(--b2);
+        rotate: 90deg;
+      }
+      
+      &.adjacent {
+        width: var(--w);
+      }
+      
+      &.hypotenuse {
+        width: hypot(var(--w), var(--h));
+        transform-origin: var(--b2) var(--b2);
+        rotate: atan(-37.5 / 50)
+      }
+    }
+  }
+  
+  .letter {
+    font-size: 7em;
+    font-family: 'Amatic SC';
+    font-weight: 700;
+    
+    &.a {
+      top: 100%;
+      left: 0;
+      translate: -150% -50%;
+    }
+    
+    &.b {
+      top: 20%;
+      left: 100%;
+      translate: 50% -30%;
+    }
+    
+     &.c {
+      top: 100%;
+      left: 100%;
+      translate: 50% -50%;
+    }
+     &.t {
+      top: 87%;
+      left: 32%;
+      translate: 50% -50%;
+       font-weight: 400;
+       font-size: 6em;
+    }
+  }
+  
+  .square {
+    width: 15%;
+    aspect-ratio: 1;
+    border: 0.5em solid;
+    border-right: 0;
+    border-bottom: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .arc {
+    width: 40%;
+    height: 20%;
+    left: 0;
+    bottom: 0;
+    background:
+      radial-gradient(100% 200% at 0 100%, #0000 80%, #000 0 82%, #0000 0)
+  }
+  
+  .hippo {
+    --b: 0.75em solid;
+    --c: #cbd;
+    --cl: #edf;
+    --cd: #a9b;
+    --s: pink;
+    width: 100%;
+    height: 45%;
+    left: 0;
+    bottom: 0;
+    transform-origin: 0.375em calc(100% - 0.375em);
+    rotate: atan(-37.5 / 50);
+    translate: 9% -15%;
+    
+    .tail {
+      width: 6em;
+      aspect-ratio: 1;
+      border-radius: 0 0 0 100%;
+      border: var(--b) #0000;
+      border-bottom: var(--b);
+      border-left: var(--b);
+      top: 35%;
+      left: 8%;
+      scale: 1 1.2;
+      
+      &::after {
+        content: "";
+        width: 80%;
+        aspect-ratio: 1;
+        border: var(--b);
+        border-radius: 0 50% 50% 50%;
+        rotate: 40deg;
+        translate: -50% -50%;
+        background: var(--cd);
+        
+      }
+    }
+    
+    .body {
+      left: 42%;
+      bottom: 0;
+      translate: -50%;
+      width: 59%;
+      height: 85%;
+      border: var(--b);
+      border-radius: 50% / 100% 100% 0 0;
+      background: var(--c);
+      box-shadow: inset 1em 1em var(--cd);
+    }
+    
+    .leg {
+      width: 18%;
+      height: 40%;
+      border: var(--b);
+      border-right: 0;
+      border-radius: 50% 0 0 50% / 100%;
+      bottom: 0;
+      box-shadow: inset 0 3.5em 0 -2em var(--cd);
+      background: 
+        radial-gradient(circle at 8% 90%, var(--cl) 10%, #0000 0),
+        radial-gradient(circle at 5% 66%, var(--cl) 10%, #0000 0),
+        var(--c);
+      
+      & + & {
+        left: 30%;
+        height: 35%;
+        width: 15%;
+      }
+    }
+    
+    .head {
+      width: 33%;
+      height: 64%;
+      border: var(--b);
+      bottom: 0;
+      left: 57%;
+      border-radius: 50% / 70% 80% 0 0;
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 20% 100%);
+      background: var(--c);
+      box-shadow: inset -0.5em 0.5em var(--cd);
+      
+      &::before, &::after {
+        content: "";
+        width: 20%;
+        aspect-ratio: 2;
+        border-radius: 50% / 100% 100% 0 0;
+        border: var(--b);
+        border-bottom: 0;
+        left: 32%;
+        top: 35%;
+        rotate: -10deg;
+      }
+      
+      &::after {
+        left: 68%;
+        top: 28%;
+        rotate: 5deg;
+      }
+    }
+    
+    .snout {
+       width: 30%;
+      height: 38%;
+      border: var(--b);
+      bottom: 0;
+      right: 0;
+      border-radius: 50% 50% 2em 50% / 100% 60% 2em 0;
+      clip-path: polygon(10% -100%, 100% -100%, 100% 100%, 20% 100%);
+      background: var(--c);
+      box-shadow: -1em 0 var(--cd), inset -0.75em 0 var(--cd);
+      
+      &::before, &::after {
+        content: "";
+        width: 22%;
+        aspect-ratio: 1.1;
+        border: var(--b);
+        border-radius: 50%;
+        top: -27%;
+        left: 40%;
+        background: 
+          radial-gradient(circle at 50% 60%, var(--cd) 30%, #0000 0),
+          var(--c);
+        border-bottom: var(--b) var(--c);
+      }
+      
+      &::after {
+        left: 70%;
+        top: -18%;
+        rotate: 20deg;
+      }
+    }
+    
+    .mouth {
+      width: 3em;
+      aspect-ratio: 1;
+      border-radius: 0 0 0 100%;
+      border: var(--b) #0000;
+      border-bottom: var(--b);
+      border-left: var(--b);
+      border-top: 0;
+      bottom: 0;
+      left: 68%;
+      
+      &::after {
+        content: "";
+        width: 150%;
+        aspect-ratio: 1;
+        border: var(--b) #0000;
+        border-top: var(--b);
+        border-left: var(--b);
+        border-radius: 50%;
+        rotate: 45deg;
+        translate: -60% -20%;
+      }
+    }
+    
+    .ear {
+      width: 5em;
+      aspect-ratio: 0.8;
+      border: var(--b);
+      border-bottom: var(--b) var(--c);
+      border-radius: 100% / 80% 80% 120% 120%;
+      background: var(--s);
+      box-shadow: inset 0 0 0 1em var(--c);
+      top: 35%;
+      left: 53%;
+      rotate: -60deg;
+      
+      & + & {
+        top: 23%;
+        left: 70%;
+        rotate: 20deg;
+      }
+    }
+  }
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <article role="img" aria-label="Cartoon of a hippopotamus sleeping on the hypotenuse of a right triangle">
+  <h1>Hippopotenuse</h1>
+  <div class="hippo">
+    <div class="tail"></div>
+    <div class="body"></div>
+    <div class="leg"></div>
+    <div class="leg"></div>
+    <div class="ear"></div>
+    <div class="ear"></div>
+    <div class="head"></div>
+    <div class="snout"></div>
+    <div class="mouth"></div>
+  </div>
+  <div class="triangle">
+    <div class="adjacent"></div>
+    <div class="opposite"></div>
+    <div class="hypotenuse"></div>
+  </div>
+  <div class="letter a">A</div>
+  <div class="letter b">B</div>
+  <div class="letter c">C</div>
+  <div class="letter t">&theta;</div>
+  <div class="arc"></div>
+  <div class="square"></div>
+</article>
+
+
+<a id="youtube" href="https://www.youtube.com/watch?v=JedgPLVlxjU" target="_blank">
+  <span>Watch how this component was coded</span>
+</a>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
