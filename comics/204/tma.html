@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-panel:nth-child(2) {
+  [character="jill"] {
+    .body {
+      .hand {
+        top: 27%;
+        left: 140%;
+      }
+    }
+  }
+  
+  [character="al"] {
+    .body {
+      .hand {
+        top: 39%;
+        left: 163%;
+      }
+    }
+  }
+}
+
+
+css-panel:nth-child(3) {
+  [character="jill"] {
+    .body {
+      .hand {
+        top: 29%;
+        left: 160%;
+      }
+    }
+  }
+  
+  [character="al"] {
+    .head {
+      .face {
+        .eyebrow {
+          translate: -10%;
+        }
+        .eye {
+          left: 35%;
+          
+          & ~ & {
+            left: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-child(5) {
+  [character="al"] {
+    .head {
+      .eye {
+        height: 3%;
+        width: 20%;
+        translate: -30% 1em;
+      }
+    }
+    .body {
+      z-index: 1;
+      
+      .hand {
+        top: -45%;
+        left:85%;
+        z-index: 999;
+      }
+      .arm:not(.arm ~ .arm) {
+        rotate: -95deg;
+        
+        &::after {
+          height: 130%;
+          rotate: -125deg;
+          z-index:1 ;
+          translate: 1em 0;
+          top: 99%;
+        }
+        
+      }
+    }
+  }
+}
+
+.bell {
+  font-size: 1.2em;
+  rotate: 10deg;
+  filter: brightness(0) drop-shadow(0em -10em) drop-shadow(-2em -5em) drop-shadow(-3em -14em);
+  /* filter: drop-shadow(1em -2em) drop-shadow(-1em -3em); */
+  &::before, &::after {
+    rotate: -30deg;
+    content: "\1F514";
+    translate: -1em -2em
+  }
+  
+  &::after {
+    rotate: -10deg;
+    translate: -1em -4em;
+  }
+}
+
+.email {
+  width: 60%;
+  height: 50%;
+  top: 7%;
+  left: 30%;
+  font-family: 'Courier', 'Courier Sans', 'Courier Sans MS', monospace, monospace;
+  font-size: 1.5em;
+  border: 0.2em solid;
+  mask: linear-gradient(#000 42%, #0000 69%);
+  border-radius: 0.75em;
+  background:
+    radial-gradient(circle at calc(100% - 0.75em) 0.75em, #6b7 0.25em, #0000 calc(0.25em + 0.5px)),
+    radial-gradient(circle at calc(100% - 1.5em) 0.75em, #fc5 0.25em, #0000 calc(0.25em + 0.5px)),
+    radial-gradient(circle at calc(100% - 2.25em) 0.75em, #d55 0.25em, #0000 calc(0.25em + 0.5px))
+    ;
+
+  * {
+    position: relative;
+  }
+  
+  p {
+    padding: 0.5em;
+  }
+  
+  p:first-child {
+    border-bottom: 1px solid #ccc;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    margin-bottom: 0.25em;
+  }
+  
+  p:last-child {
+    white-space:pre;
+  }
+  
+  li {
+    margin-left: 2em;
+  }
+}
+
+.signal {
+  left: 91%; top: 57%; filter:brightness(0); font-size: 1.3em;
+  
+  &::before {
+    content: "";
+    width: 0.2em ;
+    height: 2.5em;
+    background: #000;
+    transform-origin: 50% 0%;
+    top: 120%;
+    left: 80%;
+    rotate: -20deg;
+  }
+  
+  &::after {
+    content: "";
+    width: 0.2em ;
+    height: 5em;
+    background: #000;
+    transform-origin: 50% 100%;
+    bottom: 120%;
+    left: 10%;
+    rotate: -20deg;
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Too Many Acronyms">
+  <css-panel>
+    <css-prop type="chair" top="75" style="left: 17%" rotate="3"></css-prop>
+    <css-prop type="chair" top="75" left="65" facing="left" rotate="-5"></css-prop>
+<!--     <css-speech line="left-35 skew">I'm getting ready the agenda for our CSS brown bag: we'll talk about width in <code>border-bottom</code>, <code>word-space: normal</code>, introduce  <code>matchparent</code> in <code>marker-side</code></css-speech> -->
+    <css-speech line="left-35 skew short" style="top:-2%;">I'm getting the agenda ready for our CSS brown bag: we'll introduce the rare <code>matchparent</code> in <code>marker-side</code>, and talk about the width in <code>border-bottom</code>, some more about borders (small and medium), <code>word-space: normal</code>, and maybe <code>transform</code> translates if we have time...</css-speech>
+    <css-person character="jill" arms="left--35 left-fold--20" mouth="side-right sided" left="10" facing="left" style="bottom:-3%"></css-person>
+    <css-person character="al" arms="left--35 left-fold--80" mouth="smile small" left="60" style="bottom:1%"></css-person>
+    <css-prop type="counter" right="75">
+      <css-prop type="laptop" left="20"></css-prop>
+    </css-prop>
+    <css-prop type="counter" left="75">
+      <css-prop type="laptop" left="20" style="scale:-1 1"></css-prop>
+    </css-prop>
+  </css-panel>
+  
+  <css-panel>
+    <css-prop type="chair" top="75" style="left: 17%" rotate="3"></css-prop>
+    <css-prop type="chair" top="75" left="65" facing="left" rotate="-5"></css-prop>
+    <css-speech type="whisper" rotate="2" top="65" top="80" left="35">...aaand sent!</css-speech>
+    <css-speech width="70" left="20" line="left-60 longer" right-line>Sounds like a lot... will people get scared with so much CSS?</css-speech>
+    <css-speech width="55" top="20" line="short left-60 skew" >Good point! I'll use acronyms to make it shorter and less scary!</css-speech>
+    <css-speech type="whisper" rotate="-10" top="80" left="10">*type*</css-speech>
+    <css-person character="jill" mouth="small" arms="left--40 left-fold--85" left="10" facing="left" style="bottom:-3%"></css-person>
+    <css-person character="al" arms="left--15 left-fold--90" mouth="small sided side-right" left="60" style="bottom:1%"></css-person>
+    <css-prop type="counter" right="75">
+      <css-prop type="laptop" left="20"></css-prop>
+    </css-prop>
+    <css-prop type="counter" left="75">
+      <css-prop type="laptop" left="20" style="scale:-1 1"></css-prop>
+    </css-prop>
+  </css-panel>
+  
+  <css-panel>
+    <css-prop type="chair" top="75" style="left: 17%" rotate="3"></css-prop>
+    <css-prop type="chair" top="75" left="60" facing="left" rotate="-5"></css-prop>
+    <css-speech type="whisper" rotate="-10" style="top:68%;left:79%;">*new mail*</css-speech>
+    <div class="signal">&#128276;</div>
+    <div class="email">
+      <p><b>Subject</b> Brown bag ;-)</p>
+      <p>In this meeting:</p>
+      <ul>
+        <li>MSM</li>
+        <li>BBW</li>
+        <li>BD S&M</li>
+        <li>WSN</li>
+        <li>TTs (TBD)</li>
+      </ul>
+      <p>   .<br>   .<br>   .</p>
+    </div>
+    <css-person character="jill" arms="left-15" mouth="smirk" left="10" facing="left" style="bottom:-3%"></css-person>
+    <css-person character="al" left="55" style="bottom:1%; rotate: -2deg" mouth="no-mouth" eyebrows="high"></css-person>
+    <css-prop type="counter" right="75">
+      <css-prop type="laptop" left="20"></css-prop>
+    </css-prop>
+    <css-prop type="counter" left="75">
+      <css-prop type="laptop" left="20" style="scale:-1 1"></css-prop>
+    </css-prop>
+  </css-panel>
+  
+  <css-panel>
+    <css-prop type="chair" top="75" left="20" rotate="3"></css-prop>
+    <css-prop type="chair" top="75" facing="left" rotate="-10" style="left:58%"></css-prop>
+    <div class="bell" top="65" left="5">&#128276;</div>
+    <css-speech width="75" line="long left-20" top="5" right-line>Wow! So many replies already! Most of the back-end guys... I&nbsp;didn't know they were into this!</css-speech>
+    <css-speech line="skewer short left-10" top="30" left="30">Oh! And Linda from HR!</css-speech>
+    <css-person character="jill" arms="righ--40" eyebrows="high" left="10" facing="left" style="bottom:-3%; rotate: -3deg"></css-person>
+    <css-person character="al" mouth="sad" left="60" style="bottom:-3%;rotate:14deg;" arms="left--15 left-fold--5" eyebrows="sad" eyes="closed"></css-person>
+    <css-prop type="counter" right="75">
+      <css-prop type="laptop" left="20"></css-prop>
+    </css-prop>
+    <css-prop type="counter" left="75">
+      <css-prop type="laptop" left="20" style="scale:-1 1"></css-prop>
+    </css-prop>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

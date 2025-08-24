@@ -3863,4 +3863,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Too Many Acronyms</title>
+    <link href="https://comicss.art/comics/204" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/204/tma.html"/>
+    <id>https://comicss.art/comics/204</id>
+    <updated>2025-08-25T00:00:00Z</updated>
+    <summary>New Cartoon: Too Many Acronyms</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/204/tma.png" alt="comic with 4 panels in a 2x2 grid showing two characters chatting while working on their computers. One says 'I'm getting the agenda ready for our CSS brown bag: we'll introduce the rare matchparent in marker-side, and talk about the width in border-bottom, some more about borders (small and medium), word-space: normal, and maybe transform translates if we have time...', the other one replies 'Sounds like a lot... will people get scared with so much CSS?' The first one replies 'Good point! I'll use acronyms to make it shorter and less scary! ...and sent!' The second character looks shocked as he receives a new email 'subject: brown bag. In this meeting: msm, bbw, bd sm, wsn, tts (tbd)' And the first character exclaims excited: 'Wow! So many replies already! Most of the back-end guys... I didn't know they were into this! Oh! And Linda from HR!' as the second character covers his face in desperation." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
