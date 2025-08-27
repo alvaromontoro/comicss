@@ -1601,4 +1601,11 @@ const posts = [
     title: "Too Many Acronyms",
     ariaLabel: "comic with 4 panels in a 2x2 grid showing two characters chatting while working on their computers. One says 'I'm getting the agenda ready for our CSS brown bag: we'll introduce the rare matchparent in marker-side, and talk about the width in border-bottom, some more about borders (small and medium), word-space: normal, and maybe transform translates if we have time...', the other one replies 'Sounds like a lot... will people get scared with so much CSS?' The first one replies 'Good point! I'll use acronyms to make it shorter and less scary! ...and sent!' The second character looks shocked as he receives a new email 'subject: brown bag. In this meeting: msm, bbw, bd sm, wsn, tts (tbd)' And the first character exclaims excited: 'Wow! So many replies already! Most of the back-end guys... I didn't know they were into this! Oh! And Linda from HR!' as the second character covers his face in desperation."
   },
+  {
+    id: 205,
+    uid: "initials",
+    boxes: 4,
+    title: "Nicknames",
+    ariaLabel: "Cartoon with 4 panels in a 2x2 grid titled 'CSS Short Names'. It shows different people (all seem happy but the last one who looks annoyed) saying: - Hello! My name is text-emphasis: sesame, but my friends call me Tess. - Hi, I'm shape-inside: auto, but people call me Sia for short. - Howdy, my name is text-orientation: mixed, and people call me Tom. - My name is align-self: stretch... and I hate this conversation."
+  },
 ]

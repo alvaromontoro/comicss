@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/205/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/205/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-comic {margin: 20px;}
+css-panel:nth-child(3) {
+  css-person {
+    .head {
+      .face {
+        border-radius: 3.6em 4.3em;
+        
+        .eyebrow {
+          height: 3%;
+        }
+        .mouth {
+          top: 84%;
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-child(4) {
+  css-person {
+    .head {
+      .face {
+        .mouth {
+          top: 84%;
+        }
+      }
+    }
+  }
+}  
+    </style>
+  </head>
+  <body>
+<css-comic title="CSS Short Names">
+  <css-panel>
+    <css-speech top="10" left="10" line="left-40">Hello! My name is<br><code><b>t</b>ext-<b>e</b>mphasis-<b>s</b>tyle: <b>s</b>esame</code><br>but my friends call me <b>Tess</b>.</css-speech>
+    <css-person character="jill" left="20"></css-person>
+  </css-panel>
+  <css-panel>
+    <css-speech left="15" top="10" line="left-35 long">Hi, I'm <code><b>s</b>hape-<b>i</b>nside: <b>a</b>uto</code>,<br/> but people call me <b>Sia</b> for short.</css-speech>
+    <css-person skin="dark" chest="thin" mouth="small" hair="curly long" arms="left-15 right--15" left="20"></css-person>
+  </css-panel>
+  <css-panel>
+    <css-speech left="20" top="5" line="left-30 long">Howdy! My name is<br><code><b>t</b>ext-<b>o</b>rientation: <b>m</b>ixed</code>,<br>and people call me <b>Tom</b>.</css-speech>
+    <css-person character="john" skin="medium" facial-hair="mustache" mouth="small sided side-right" head="bald" left="20" arms="left-10 right--15 right-fold--20"></css-person>
+  </css-panel>
+  <css-panel>
+    <css-speech left="10" top="15" line="left-40 skewer" width="80">My name is <code><b>a</b>lign-<b>s</b>elf: <b>s</b>tretch</code> ...and I hate this conversation.</css-speech>
+    <css-person mouth="frown sided side-right small" facial-hair="unshaven" eyebrows="low" head="bald" left="20"></css-person>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
