@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/206/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/206/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+    
+    <style>
+/* css-comic {
+  margin: 200px;
+} */
+code {
+  font-size: 0.975em;
+}
+
+css-panel:nth-child(n + 4) {
+  .arm, .arm::before, .arm::after {
+    border-color: #0000 !important;
+    box-shadow: none !important;
+  }
+}
+
+css-panel:nth-child(4) {
+  .hand {
+    top: -5% !important;
+    left: 300% !important;
+  }
+  
+  [character="al"] {
+    .head {
+/*       .face { */
+        rotate: -5deg;
+        transform-origin: 50% 100%;
+        translate: -54%;
+/*       } */
+    }
+  }
+}
+
+css-panel:nth-child(5) {
+  .arm:not(.arm ~ .arm) {
+    rotate: -100deg;
+  }
+  
+  .hand {
+    top: -20% !important;
+    left: 279% !important;
+  }
+  
+  [character="al"] {
+    .head {
+      .face {
+        rotate: -3deg;
+        transform-origin: 50% 100%;
+        
+        .eyebrow {
+          translate: -10%;
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Trust issues">
+  <css-panel>
+    <css-person rotate="2" character="al" mouth="surprise small sided side-right" eyebrows="suspicious" arms="right--25 right-fold--5 left-15 left-fold--20" facing="left" right="5"></css-person>
+    <css-speech top="15" left="15" width="55" line=" left-85" right-line>Trust issues? Of course I have trust issues!</css-speech>
+  </css-panel>
+  
+  <css-panel>
+    <css-person character="al" mouth="small sided side-right" eyebrows="high sad" arms="right--15 right-fold--20" facing="left" right="5"></css-person>
+    <css-speech top="10" left="20" width="50" line="skewer left-75" right-line>You see, I've been working with CSS for a while already...</css-speech>
+  </css-panel>
+  
+  <css-panel style="background: gray">
+    <css-person character="al" mouth="frown small sided side-right" eyebrows="angry" arms="right--90 right-fold--20 left-25" facing="left" right="5"></css-person>
+    <css-speech right-line line="left-80 skew" top="20" left="10">...And, in CSS, this is <code>gray</code>...</css-speech>
+    <css-speech type="whisper" style="color:#fff">#808080</css-speech>
+  </css-panel>
+  
+  <css-panel style="background: darkgray">
+    <css-person rotate="2" character="al" mouth="frown  side-left" eyebrows="angry low" arms="right--90 right-fold--20 left-15" left="5"></css-person>
+    <css-speech top="20" left="15">...but this is <code>darkgray</code></css-speech>
+<!--     <css-speech type="whisper" width="25" rotate="-7" top="60" left="30">How wouldn't I have trust issues?</css-speech> -->
+<!--     <css-speech type="whisper" width="25" rotate="-7" top="60" left="30">Who wouldn't have trust issues?</css-speech> -->
+    <css-speech type="whisper" width="40" rotate="-7" style="left:27%;top:58%;">And don't get me started with the sea greens!</css-speech>
+    <css-speech type="whisper" style="color:#fff">#A9A9A9</css-speech>
+  </css-panel>
+  
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
