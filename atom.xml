@@ -3901,4 +3901,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Trust Issues</title>
+    <link href="https://comicss.art/comics/206" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/206/trust-issues.html"/>
+    <id>https://comicss.art/comics/206</id>
+    <updated>2025-09-01T00:00:00Z</updated>
+    <summary>New Cartoon: Trust Issues</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/206/trust-issues.png" alt="comic with 4 panels in a 2x2 grid. The same character says Trust issues? Of course I have trust issues! You see, I've been working with CSS for a while already... (over a dark gray background) ...And, in CSS, this is gray... (over a light gray background) ...but this is darkgray. Then sighs And don't get me started with the sea greens!" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

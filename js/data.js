@@ -1608,4 +1608,11 @@ const posts = [
     title: "Nicknames",
     ariaLabel: "Cartoon with 4 panels in a 2x2 grid titled 'CSS Short Names'. It shows different people (all seem happy but the last one who looks annoyed) saying: - Hello! My name is text-emphasis: sesame, but my friends call me Tess. - Hi, I'm shape-inside: auto, but people call me Sia for short. - Howdy, my name is text-orientation: mixed, and people call me Tom. - My name is align-self: stretch... and I hate this conversation."
   },
+  {
+    id: 206,
+    uid: "trust-issues",
+    boxes: 4,
+    title: "Trust Issues",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. The same character says Trust issues? Of course I have trust issues! You see, I've been working with CSS for a while already... (over a dark gray background) ...And, in CSS, this is gray... (over a light gray background) ...but this is darkgray. Then sighs And don't get me started with the sea greens!"
+  },
 ]
