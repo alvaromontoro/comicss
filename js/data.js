@@ -1615,4 +1615,11 @@ const posts = [
     title: "Trust Issues",
     ariaLabel: "comic with 4 panels in a 2x2 grid. The same character says Trust issues? Of course I have trust issues! You see, I've been working with CSS for a while already... (over a dark gray background) ...And, in CSS, this is gray... (over a light gray background) ...but this is darkgray. Then sighs And don't get me started with the sea greens!"
   },
+  {
+    id: 207,
+    uid: "random",
+    boxes: 4,
+    title: "Random",
+    ariaLabel: "Comic title Random with 4 panels in a 2x2 grid. Each panel has two characters talking: Person 1: Great! Because the readers need this comic to be even more confusing! Person 2: I'm fine... wait, what's going on? Person 2: I think the comic creator is playing with the random() function! Person 1: Hi, how are you? Comic footer: comiCSS: a webcomic about CSS. Coded with love in CSS. comicss.art"
+  },
 ]
