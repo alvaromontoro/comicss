@@ -576,7 +576,7 @@ echo "      </div>
         </a>
       </nav>
 
-      <p>Permalink: <a aria-label=\"permanet link\" id=\"permanent-link\" href=\"/comics/${id}\">https://comicss.art/comics/${id}</a></p>
+      <p>Permalink: <a aria-label=\"permanent link\" id=\"permanent-link\" href=\"/comics/${id}\">https://comicss.art/comics/${id}</a></p>
       <p>Image link: <a aria-label=\"image version\" id=\"image-link\" href=\"/comics/${id}/${uid}.png\">https://comicss.art/comics/${id}/${uid}.png</a></p>
       <p>Source code: <a aria-label=\"html version\" id=\"code-link\" href=\"/comics/${id}/${uid}.html\" rel=\"alternate\">https://comicss.art/comics/${id}/${uid}.html</a></p>
 
