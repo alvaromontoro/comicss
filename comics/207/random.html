@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/207/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/207/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-comic {
+  footer {
+    order: 1000;
+  }
+  
+  css-panel {
+    order: random(2, 900);
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="Random">
+      <css-panel>
+        <css-speech top="20" left="15">Hi, how are you?</css-speech>
+        <css-person character="al" left="5"></css-person>
+        <css-person character="jill" facing="left" right="5"></css-person>
+      </css-panel>
+      
+      <css-panel>
+        <css-speech top="15" left="15" right-line line="left-65 skew long">I'm fine... wait, what's going on?</css-speech>
+        <css-person character="al" arms="right-25 left-15" eyebrows="suspicious" mouth="yawn small sided" left="5"></css-person>
+        <css-person character="jill" facing="left" right="5" mouth="small frown side-left" eyebrows="high"></css-person>
+      </css-panel>
+      
+      <css-panel>
+        <css-speech top="20" left="10" width="80" right-line line="left-60 skew ">I think the comic creator is playing with the <code>random()</code> function!</css-speech>
+        <css-person character="al" eyebrows="sad high" mouth="yawn sided side-right" left="5"></css-person>
+        <css-person character="jill" arms="right--25" facing="left" right="5" mouth="small sided frown side-left" eyebrows="angry high"></css-person>
+      </css-panel>
+      
+      <css-panel>
+        <css-speech top="15" left="10" line="left-25 skew">Great! Because the readers need this comic to be even more confusing!</css-speech>
+        <css-person character="al" arms="left-25 right--25" eyebrows="sad high" mouth="frown sided" left="5"></css-person>
+        <css-person character="jill" arms="left-15 right--15" facing="left" right="5" mouth="sided small frown side-left" eyebrows="sad high"></css-person>
+      </css-panel>
+    </css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

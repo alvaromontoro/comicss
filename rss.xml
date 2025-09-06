@@ -2066,5 +2066,15 @@
       <enclosure url="https://comicss.art/comics/206/trust-issues.png" length="166000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/207</guid>
+      <title>Random</title>
+      <link>https://comicss.art/comics/207</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/207/random.png" length="138000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

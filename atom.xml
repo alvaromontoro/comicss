@@ -3920,4 +3920,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Random</title>
+    <link href="https://comicss.art/comics/207" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/207/random.html"/>
+    <id>https://comicss.art/comics/207</id>
+    <updated>2025-09-06T00:00:00Z</updated>
+    <summary>New Cartoon: Random</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/207/random.png" alt="Comic title Random with 4 panels in a 2x2 grid. Each panel has two characters talking: Person 1: Great! Because the readers need this comic to be even more confusing! Person 2: I'm fine... wait, what's going on? Person 2: I think the comic creator is playing with the random() function! Person 1: Hi, how are you? Comic footer: comiCSS: a webcomic about CSS. Coded with love in CSS. comicss.art" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
