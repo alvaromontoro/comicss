@@ -3939,4 +3939,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Hell (v2)</title>
+    <link href="https://comicss.art/comics/208" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/208/hell.html"/>
+    <id>https://comicss.art/comics/208</id>
+    <updated>2025-09-08T00:00:00Z</updated>
+    <summary>New Cartoon: Hell (v2)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/208/hell.png" alt="comic with 4 panels in a 2x2 grid showing a man in hell talking to the devil. Devil: Sorry, today we are running super late. You will have to punish yourself creating a website. Man (smiling): A website? That's not that terrible! The devil and the man continue looking at each other awkwardly in silence. Man (really scared): It's with Tailwing, isn't it? The devil looks at him with an evil grin on his face." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

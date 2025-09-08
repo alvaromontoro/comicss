@@ -1622,4 +1622,11 @@ const posts = [
     title: "Random",
     ariaLabel: "Comic title Random with 4 panels in a 2x2 grid. Each panel has two characters talking: Person 1: Great! Because the readers need this comic to be even more confusing! Person 2: I'm fine... wait, what's going on? Person 2: I think the comic creator is playing with the random() function! Person 1: Hi, how are you? Comic footer: comiCSS: a webcomic about CSS. Coded with love in CSS. comicss.art"
   },
+  {
+    id: 208,
+    uid: "hell",
+    boxes: 4,
+    title: "Hell (v2)",
+    ariaLabel: "comic with 4 panels in a 2x2 grid showing a man in hell talking to the devil. Devil: Sorry, today we are running super late. You will have to punish yourself creating a website. Man (smiling): A website? That's not that terrible! The devil and the man continue looking at each other awkwardly in silence. Man (really scared): It's with Tailwing, isn't it? The devil looks at him with an evil grin on his face."
+  },
 ]
