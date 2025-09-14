@@ -3958,4 +3958,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>CSS Balloon</title>
+    <link href="https://comicss.art/comics/209" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/209/balloon.html"/>
+    <id>https://comicss.art/comics/209</id>
+    <updated>2025-09-15T00:00:00Z</updated>
+    <summary>New Cartoon: CSS Balloon</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/209/balloon.png" alt="comic with 8 panels in a 4x2 grid showing a character that is overwhelmed by bad news at work and on TV. He walks towards a wardrobe where he gets a balloon, inflates it and walks towards a door. The next panel is a colorful sky with the person floating away with the balloon next to the CSS code translate: Infinity Infinity. The last panel shows two people left behind, one says 'Wait... you can do that with CSS?' The other sadly says 'Don't leave us behind!!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

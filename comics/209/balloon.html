@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/209/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/209/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-comic {
+  grid-template-columns: repeat(4, 1fr);
+  translate: -0%;
+  padding: 0 30px;
+
+  h1,
+  footer {
+    grid-column: 1 / 5;
+  }
+}
+
+.mess-1::before {
+  height: 13em !important;
+}
+
+.mess-2::before {
+  height: 10em !important;
+  transform: skew(-40deg) !important;
+  left: 0;
+}
+
+
+.mess-3::before {
+  height: 7em !important;
+  transform: skew(-55deg) !important;
+  left: -20%;
+}
+
+.mess-4::before {
+  left: 0%;
+  scale:-1 1;
+  rotate: 90deg;
+  transform-origin: 0 0;
+  width: 0.75em !important;
+  height: 5em;
+  top: 80%;
+}
+
+
+.mess-5::before {
+  width:1.25em;
+  height: 7em !important;
+  transform: skew(-55deg) !important;
+  left: 0;
+}
+
+.mess-6::before {
+  height: 3.5em !important;
+  transform: skew(-70deg) !important;
+  left: 115%;
+  width: 1.5em;
+  border-left: 0.35em solid;
+  filter: drop-shadow(0.2em 0)
+}
+
+.mess-7::before {
+  left: 100%;
+  scale:1 -1;
+  rotate: 90deg;
+  transform-origin: 0 0;
+  width: 0.75em !important;
+  height: 4em;
+  top: 40%;
+
+}
+
+.drawer {
+  width: 30%;
+  height: 14%;
+  border: 0.3em solid;
+  top: 84%;
+  left: 63%;
+  rotate: -1deg;
+  background:
+    repeating-linear-gradient(45deg, #0000 0 0.25em, #000 0 0.4em) 0 0 / 1.125em 0.5em repeat-y;
+
+  &::before {
+    content: "";
+    width: 1.25em;
+    height: 115%;
+    border: 0.3em solid;
+    bottom: -0.3em;
+    translate: -50%;
+    background: #fff;
+  }
+}
+
+.lines {
+  width: 0.18em;
+  height: 3em;
+  background: #000;
+  top: 50%;
+  left: 18%;
+  filter: drop-shadow(-0.5em 0) drop-shadow(-0.5em -0.1em)
+}
+
+.lines + .lines {
+  top: 85%;
+  left: 18%;
+  rotate: 10deg;
+}
+
+[character="john"] {
+  .head {
+    transform-origin: 50% 110%;
+    rotate: -2deg;
+  }
+}
+
+[character="jill"] {
+  .head {
+    transform-origin: 50% 110%;
+    rotate: -3deg;
+  }
+}
+
+css-prop[type~="tv"] {
+  width: 30em;
+  height: 20em;
+  border: 1em solid;
+  background: 
+    linear-gradient(#fff 0 0) 1em 1em / 3em 2em no-repeat,
+    linear-gradient(gold 0 0) 1em calc(100% - 1em) / 3em 3em no-repeat,
+    #ccc;
+
+  &::before {
+    content: "";
+    width: calc(100% - 2em);
+    height: 2em;
+    bottom: 1em;
+    left: 1em;
+    background: conic-gradient(at 3em 50%, red 25%, white 0 50%, navy 0);
+  }
+}
+
+css-panel:nth-child(5) {
+  .balloon {
+    width: 6%;
+    height: 5%;
+    background: rebeccapurple;
+    border: 0.3em solid;
+    border-radius: 30% 100% 70% 120%;
+    top: 68%;
+    left: 47%;
+    z-index: 1;
+  }
+
+  .face {
+    background: linear-gradient(#88f3, #00f0 50%), var(--skin) !important;
+  }
+  .hand {
+    left: 115% !important;
+    top: -20% !important;
+    z-index: 1;
+
+    & ~ & {
+      left: 130% !important;
+    }
+  }
+  .arm {
+    &:not(& ~ &) {
+      &::after {
+        transform-origin: 50% 0;
+        rotate: -140deg;
+      }
+    }
+  }
+}
+
+
+css-panel:nth-child(6) {
+  .balloon {
+    width: 0.3em;
+    height: 30em;
+    background: black;
+    top: 28%;
+    left: 61.5%;
+
+    &::before {
+      content: "";
+      width: 2em;
+      height: 1.5em;
+      border-bottom: 0.3em solid;
+      top: 20%;
+      left: 50%;
+      translate: -50% -50%;
+      background:
+        conic-gradient(at 50% 0.5em, #0000 40%, rebeccapurple 0 60%, #0000 0),
+        conic-gradient(at 50% 0, #0000 40%, #000 0 60%, #0000 0)
+    }
+
+    &::after {
+      content: "";
+      width: 9em;
+      aspect-ratio: 0.75;
+      border: 0.3em solid;
+      background: rebeccapurple;
+      left: 50%;
+      translate: -50% -50%;
+      border-radius: 100% / 80% 80% 120% 120%;
+    }
+  }
+  .hand {
+    left: 230% !important;
+    top: 58% !important;
+  }
+  .lines {
+    left: 29.5%;
+
+    & ~ & {
+      rotate: 15deg;
+      left: 26%;
+    }
+  }
+}
+
+css-panel:nth-child(7) {
+  .balloon {
+    width: 0.3em;
+    height: 30em;
+    background: black;
+    top: 25%;
+    left: 54%;
+
+    &::before {
+      content: "";
+      width: 2em;
+      height: 1.5em;
+      border-bottom: 0.3em solid;
+      top: 20%;
+      left: 50%;
+      translate: -50% -50%;
+      background:
+        conic-gradient(at 50% 0.5em, #0000 40%, rebeccapurple 0 60%, #0000 0),
+        conic-gradient(at 50% 0, #0000 40%, #000 0 60%, #0000 0)
+    }
+
+    &::after {
+      content: "";
+      width: 9em;
+      aspect-ratio: 0.75;
+      border: 0.3em solid;
+      background: rebeccapurple;
+      left: 50%;
+      translate: -50% -50%;
+      border-radius: 100% / 80% 80% 120% 120%;
+    }
+  }
+  
+  .hand {
+    left: 250% !important;
+    top: 52% !important;
+  }
+  
+  .lines {
+    & ~ & {
+      left: 17%;
+      rotate: 20deg;
+    }
+  }
+  
+  .window {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 0.3em solid;
+    background: lightskyblue;
+    background: linear-gradient(#fff0, #fff9), lightskyblue;
+    left: 85%;
+    top: 25%;
+    box-shadow:
+      0 0 0 2em #fff,
+      0 0 0 2.25em #000;
+  }
+}
+
+css-panel:nth-child(8) {
+  border: 0;
+  background: linear-gradient(#fff0, #fff9), lightskyblue;
+  box-shadow: inset 0 0 3em 1em #fff;
+/*   , 0 0 1em -0.5em lightskyblue; */
+  border-radius: 1em;
+  
+  .cloud {
+    width: 3.5em;
+    height: 2em;
+    background: #fff;
+    border-radius: 50% / 100% 100% 0 0;
+    top: 20%;
+    left: 20%;
+    
+    &::before {
+      content: "";
+      bottom: 0;
+      left: 60%;
+      width: 180%;
+      height: 220%;
+      background: #fff;
+      border-radius: 50% / 100% 100% 0 0;
+    }
+    
+    &::after {
+      content: "";
+      bottom: 0;
+      left: 175%;
+      width: 150%;
+      height: 140%;
+      background: #fff;
+      border-radius: 50% / 100% 100% 0 0;
+    }
+    
+    & ~ & {
+      top: 80%;
+      left: 60%;
+      width: 4em;
+      
+      &::before {
+        width: 120%;
+        height: 150%;
+        box-shadow: 7em 0 #fff;
+      }
+      
+      &::after {
+        left: 135%;
+        height: 260%;
+        
+      }
+    }
+  }
+  
+  .balloon {
+    width: 0.3em;
+    height: 30em;
+    background: black;
+    top: -13%;
+    left: 64%;
+    transform-origin: 50% 90%;
+    rotate: 5deg;
+    
+
+    &::before {
+      content: "";
+      width: 2em;
+      height: 1.5em;
+      border-bottom: 0.3em solid;
+      top: 20%;
+      left: 50%;
+      translate: -50% -50%;
+      background:
+        conic-gradient(at 50% 0.5em, #0000 40%, rebeccapurple 0 60%, #0000 0),
+        conic-gradient(at 50% 0, #0000 40%, #000 0 60%, #0000 0)
+    }
+
+    &::after {
+      content: "";
+      width: 9em;
+      aspect-ratio: 0.75;
+      border: 0.3em solid;
+      background: rebeccapurple;
+      left: 50%;
+      translate: -50% -50%;
+      border-radius: 100% / 80% 80% 120% 120%;
+    }
+  }
+  
+  css-person[character="al"] {
+    bottom: 26%;
+    left: 44.5%;
+    rotate: 8deg;
+    
+    .pants {
+      width: 100%;
+      height: 64%;
+      background: red;
+      left: 49%;
+      top: 112%;
+      translate: -50%;
+      width: 40%;
+      background:
+        linear-gradient(#000 10%, #0000 0) no-repeat,
+        conic-gradient(at 0 140%, #000 9deg, #0000 0) 0 0 / 51% 100% no-repeat,
+        conic-gradient(at 0 140%, #000 9deg, #0000 0) 110% 0 / 51% 100% no-repeat;
+      transform-origin: 0 0;
+      transform: skew(-5deg);
+      
+      &::before, &::after {
+        content: "";
+        width: 25%;
+        height: 20%;
+        top: 95%;
+        background: #000;
+        border-radius: 0 100% 100% 100%;
+      }
+      
+      &::after {
+        left: 51%;
+        top: 97%;
+      }
+    }
+    
+    .hand {
+      top: -75%;
+      left: 210%;
+      
+      & ~ & {
+        top: 125%;
+        left: -52%;
+      }
+    }
+    
+    .head {
+      transform-origin: 50% 120%;
+      rotate: -10deg;
+    }
+    
+    .body {
+      .arm {
+        rotate: -140deg;
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<!-- inspired on a Pearls Before Swine  cartoon by Stephan Pastis -->
+<css-comic title="CSS Balloon">
+  <css-panel>
+    <css-speech line="longest" class="mess-1">Entry-level gatekeeping</css-speech>
+    <css-speech top="15" left="25" class="mess-2">Bad PR comments</css-speech>
+    <css-speech no-line left="60" style="top:2%;">AI slop</css-speech>
+    <css-speech no-line style="top:14%;left:-6%;width:16%;padding: 0.5em 0.25em;">AI slop</css-speech>
+    <css-speech no-line style="top:28%;left:18%;padding:0.5em 0.5em">Silo</css-speech>
+    <css-speech no-line style="top:44%;left:67%">Layoffs</css-speech>
+    <css-speech line="skewest longest" top="30" left="45" style="white-space:pre;" class="mess-3">Unrealistic expectations</css-speech>
+    <css-speech top="60" left="35" class="mess-4">Micromanagement</css-speech>
+    <css-speech no-line style="top:74%" left="20">Layoffs</css-speech>
+    <css-speech no-line left="65" top="75" style="white-space:pre">Poor WLB</css-speech>
+    <css-person character="al" mouth="frown small" eyebrows="sad" facing="left" left="40" height="tall" arms="right-fold--5"></css-person>
+    <css-prop type="counter desk" style="right:63%">
+      <css-prop type="laptop"></css-prop>
+    </css-prop>
+  </css-panel>
+
+  <css-panel>
+    <css-prop type="tv" top="35" left="80"></css-prop>
+    <css-speech line="longest left-85 skewer" class="mess-5" right-line>Terrible shameful politics</css-speech>
+    <css-speech style="top:13%" left="55" line="left-35 skewest short" right-line>Unemployment</css-speech>
+    <css-speech no-line left="65" style="top:-1%;">War</css-speech>
+    <css-speech no-line style="top:36%;left:-1%;">AI slop</css-speech>
+    <css-speech no-line style="top:50%;left:2%;">Hate</css-speech>
+    <css-speech no-line style="top:47%;left:47%">Layoffs</css-speech>
+    <css-speech line="skewest longest" top="20" left="0" style="white-space:pre;" class="mess-6" right-line>Extreme weather</css-speech>
+    <css-speech top="65" left="5" class="mess-7">More shameful politics</css-speech>
+    <css-speech no-line left="50" top="80">Hunger</css-speech>
+    <css-speech no-line left="0" top="80">War</css-speech>
+    <css-person character="al" mouth="frown sided side-left" eyebrows="sad high" left="20" height="tall" arms="right-fold--10 left-15 left-fold--20"></css-person>
+
+  </css-panel>
+
+  <css-panel>
+    <div class="lines"></div>
+    <div class="lines"></div>
+    <css-person character="al" mouth="flat small side-left" eyebrows="high" left="10" height="tall" arms="right--10 left-10"></css-person>
+    <css-prop type="counter" left="75" style="height:20%"></css-prop>
+  </css-panel>
+
+  <css-panel>
+    <div class="balloon"></div>
+    <css-person character="al" mouth="surprise small " eyebrows="sad high" left="20" height="tall" arms="right--90 right-fold--90 left--75 left-fold--90"></css-person>
+    <div class="drawer"></div>
+    <css-speech type="whisper" top="50" left="50">scale(1.1)</css-speech>
+    <css-speech type="whisper" top="45" left="55" style="rotate:20deg">scale(1.2)</css-speech>
+    <css-speech type="whisper" top="55" left="45" rotate="-10">scale(1.0)</css-speech>
+    <css-prop type="counter" left="75" style="height:20%"></css-prop>
+   
+  </css-panel>
+
+  <css-panel>
+    <div class="lines"></div>
+    <div class="lines"></div>
+    <div class="balloon"></div>
+    <css-person character="al" mouth="no-mouth" eyebrows="sad high" left="20" height="tall" arms="right-fold--80 left-15 left-fold--20"></css-person>
+  </css-panel>
+
+  <css-panel>
+    <div class="lines"></div>
+    <div class="lines"></div>
+    <div class="balloon"></div>
+    <css-person character="al" mouth="flat small side-right" eyebrows="sad high" left="10" height="tall" arms="right--30 right-fold--70 left-20 left-fold--10"></css-person>
+    <div class="window"></div>
+  </css-panel>
+
+  <css-panel>
+    <css-speech type="whisper" style="right:0;left:auto">translate: Infinity Infinity;</css-speech>
+    <div class="balloon" style="scale:0.125"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <css-person character="al" mouth="sided side-right small" eyebrows="sad high" left="20" height="tall" arms="right-fold--10 left-25 left-fold--20" style="scale:0.125">
+      <div class="pants"></div>
+    </css-person>
+  </css-panel>
+
+  <css-panel>
+    <!--     <css-speech line="longer left-30" left="5" top="5">I didn't know we could do that</css-speech> -->
+    <css-speech line="longer left-25" left="5" top="5">Wait... You can do that with CSS?</css-speech>
+    <!--     <css-speech style="width:52%" left="35" top="20" line=" left-45 skewest">You could have taken us with you, jerk!</css-speech> -->
+    <css-speech style="width:33%;top: 22%;" left="45" line=" left-35 skewest short">Don't leave us behind!!</css-speech>
+    <css-person character="john" left="5" eyebrows="suspicious high" mouth="frown small sided side-right" arms="left-15 right--15 left-fold--30"></css-person>
+    <css-person character="jill" rotate="-1" left="35" eyebrows="sad high" mouth="frown sided side-right" arms="left-20 right--25"></css-person>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
