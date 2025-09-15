@@ -1629,4 +1629,12 @@ const posts = [
     title: "Hell (v2)",
     ariaLabel: "comic with 4 panels in a 2x2 grid showing a man in hell talking to the devil. Devil: Sorry, today we are running super late. You will have to punish yourself creating a website. Man (smiling): A website? That's not that terrible! The devil and the man continue looking at each other awkwardly in silence. Man (really scared): It's with Tailwing, isn't it? The devil looks at him with an evil grin on his face."
   },
+  {
+    id: 209,
+    uid: "balloon",
+    boxes: 8,
+    title: "CSS Balloon",
+    horizontal: true,
+    ariaLabel: "comic with 8 panels in a 4x2 grid showing a character that is overwhelmed by bad news at work and on TV. He walks towards a wardrobe where he gets a balloon, inflates it and walks towards a door. The next panel is a colorful sky with the person floating away with the balloon next to the CSS code translate: Infinity Infinity. The last panel shows two people left behind, one says 'Wait... you can do that with CSS?' The other sadly says 'Don't leave us behind!!'"
+  },
 ]
