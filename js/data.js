@@ -1637,4 +1637,12 @@ const posts = [
     horizontal: true,
     ariaLabel: "comic with 8 panels in a 4x2 grid showing a character that is overwhelmed by bad news at work and on TV. He walks towards a wardrobe where he gets a balloon, inflates it and walks towards a door. The next panel is a colorful sky with the person floating away with the balloon next to the CSS code translate: Infinity Infinity. The last panel shows two people left behind, one says 'Wait... you can do that with CSS?' The other sadly says 'Don't leave us behind!!'"
   },
+  {
+    id: 210,
+    uid: "oreo",
+    boxes: 1,
+    title: "Background-Repeat Oreos",
+    vertical: true,
+    ariaLabel: "background-repeat with oreos: no-repeat only has one cream at the top and the text ORE O; repeat has 2.5 creams and the text ORERERO; round has two creams but larger than usual and the text OREEREEO; space has two creams with a gap in between and the text ORE REO"
+  },
 ]

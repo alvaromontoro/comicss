@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/210/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/210/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Bold.ttf);
+  font-weight: 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@keyframes flow {
+  from { 
+    transform: translate(100vw, -50%) rotate(800deg);
+  }
+  to {
+    transform: translate(-45vmin, -50%) rotate(0deg);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform-origin: 50% 70%;
+    transform: translate(-45vmin, -50%) rotate(0deg) perspective(1000px) rotate3d(1, 0, 0, 0deg);
+    abox-shadow: 0 0 #fff, 0 0 #222;
+    opacity: 1;
+  }
+  50% { opacity: 1; }
+  100% {
+    transform-origin: 50% 70%;
+    transform: translate(-45vmin, -50%) rotate(0deg)  perspective(1000px) rotate3d(1, 0, 0, 90deg);
+    abox-shadow: 0 3em #fff, 0 6em #222;
+    opacity: 0;
+  }
+}
+
+.cookie {
+  animation: 
+    flow 9s 0s cubic-bezier(0.175, 0.885, 0.32, 1.075)
+    forwards,
+    fall 0.5s 9.5s forwards
+    ;
+  width: 18.75em;
+  aspect-ratio: 1;
+  background: #222; linear-gradient(#f00 50%, #222 0);
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(100vw, -50%);
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  
+  &::after {
+    content: "OREO";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000c;
+    text-shadow: -1px -1px #fff5, 1px 1px #000;
+    rotate: 20deg;
+    font-size: 2em;
+    font-family: Helvetica;
+    background:
+      radial-gradient(farthest-side, #000, #222 70%, #0000 0 90%, #222),
+      repeating-conic-gradient(#222 0 3deg, #fff3 4deg, #222 0 4.5deg, #000 0 5deg),
+      #222;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    transform-origin: 50% 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 9em;
+    background: red;
+    transform: rotate3d(1,0,0,90deg);
+    transform-style: preserve-3d;
+    background:
+      radial-gradient(50% 100% at 50% 50%, #000 99%, #0000 0) 50% 0% / 100% 3em no-repeat,
+      radial-gradient(50% 100% at 50% 50%, #000 99%, #0000 0) 50% 100% / 100% 3em no-repeat,
+      radial-gradient(45% 100% at 50% 50%, #fff 99%, #0000 0) 50% 0% / 100% 3em no-repeat;
+  }
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #aededf;
+}
+
+main {
+  width: 100vw;
+  position: relative;
+  font-size: 1vmin;
+}
+
+@keyframes slide {
+  from { max-width: 0em; }
+  to { max-width: 6em; }
+}
+
+article {
+  width: 90em;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5em;
+
+  h1 {
+    grid-column: 1 / 5;
+    letter-spacing: -0.05em;
+    text-align: center;
+    margin: 0;
+    font-size: 6.5em;
+    font-family: 'Amatic SC', Helvetica, sans-serif;
+    scale: 1 0.9;
+    opacity: 0;
+    animation: toVisible 1s 15s forwards;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 3em;
+    font-family: monospace, monospace;
+    font-weight: 400;
+    opacity: 0;
+    scale: 1 0.9;
+
+    section:nth-child(2) & {
+      animation: toVisible 0.5s 16s forwards;
+    }
+
+    section:nth-child(3) & {
+      animation: toVisible 0.5s 18.5s forwards;
+    }
+
+    section:nth-child(4) & {
+      animation: toVisible 0.5s 21s forwards;
+    }
+
+    section:nth-child(5) & {
+      animation: toVisible 0.5s 23.5s forwards;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 5em;
+    font-weight: 700;
+    margin-top: 1.2em;
+    font-family: 'Amatic SC', Helvetica, sans-serif; 
+    white-space: pre;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    section:nth-child(2) & {
+      animation: toVisible 1s 10.5s forwards;
+    }
+
+    section:nth-child(3) & {
+      animation: toVisible 1s 12.5s forwards;
+    }
+
+    section:nth-child(4) & {
+      animation: toVisible 1s 13.25s forwards;
+    }
+
+    section:nth-child(5) & {
+      animation: toVisible 1s 13.75s forwards;
+    }
+
+    span {
+      white-space: pre;
+      overflow: hidden;
+      display: inline-block;
+      max-width: 0em;
+
+
+      section:nth-child(2) & {
+        animation: slide 7s 16.5s forwards;
+      }
+
+      section:nth-child(3) & {
+        animation: slide 7s 19s forwards;
+      }
+
+      section:nth-child(4) & {
+        animation: slide 7s 21.5s forwards;
+      }
+
+      section:nth-child(5) & {
+        animation: slide 7s 24s forwards;
+      }
+
+    }
+  }
+
+  section {
+    display: grid;
+    grid-template-rows: auto 13.5em auto;
+    align-items: center;
+  }
+}
+
+@keyframes toPos {
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes toHeight {
+  to {
+    height: 7.5em;
+  }
+}
+
+@keyframes toVisible {
+  to { opacity: 1; }
+}
+
+.oreo {
+  --durationToPos: 1s;
+  --delayToPos: 12s;
+  --durationToHeight: 1s;
+  --delayToHeight: 15s;
+  opacity: 0;
+  margin: 3em 0;
+  width: 18.75em;
+  height: 7.5em;
+  height: 3em;
+  background: radial-gradient(45% 100% at 50% 50%, #fff 99%, #0000 0) 50% 0% / 100% 3.1em;
+  animation:
+    toVisible 0.25s 9.6s forwards,
+    toPos calc(var(--durationToPos) / 4) var(--delayToPos) linear forwards,
+    toHeight var(--durationToHeight) var(--delayToHeight) forwards;
+
+  &.no-repeat { 
+    background-repeat: no-repeat;
+    translate: 0 0;
+    --durationToPos: 0s;
+    --delayToHeight: 16.5s;
+  }
+
+  &.repeat { 
+    background-repeat: repeat;
+    translate: -23.5em 0; 
+    --durationToPos: 2.35s;
+    --delayToHeight: 19s;
+  }
+
+  &.round { 
+    background-repeat: round;
+    translate: -47em 0;
+    --durationToPos: 4.7s;
+    --delayToHeight: 21.5s;
+  }
+
+  &.space { 
+    background-repeat: space; 
+    translate: -70.75em 0;
+    --durationToPos: 7.075s;
+    --delayToHeight: 24s;
+  }
+}
+
+.oreo::before,
+.oreo::after {
+  content:"";
+  position: relative;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 100%;
+  height: 3em;
+  background: #222;
+  border-radius: 10em;
+}
+
+.oreo::after {
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+    </style>
+  </head>
+  <body>
+ <main>
+  <div class="cookie"></div>
+  <article>
+    <h1>Background-Repeat</h1>
+    <section>
+      <h2>no-repeat</h2>
+      <div class="oreo no-repeat"></div>
+      <p>ORE<span> </span>O</p>
+    </section>
+    <section>
+      <h2>repeat</h2>
+      <div class="oreo repeat"></div>
+      <p>ORE<span>RER</span>O</p>
+    </section>
+    <section>
+      <h2>round</h2>
+      <div class="oreo round"></div>
+      <p>ORE<span>EREE</span>O</p>
+    </section>
+    <section>
+      <h2>space</h2>
+      <div class="oreo space"></div>
+      <p>ORE<span> RE</span>O</p>
+    </section>
+  </article>
+</main>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

@@ -3977,4 +3977,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Background-Repeat Oreos</title>
+    <link href="https://comicss.art/comics/210" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/210/oreo.html"/>
+    <id>https://comicss.art/comics/210</id>
+    <updated>2025-09-19T00:00:00Z</updated>
+    <summary>New Cartoon: Background-Repeat Oreos</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/210/oreo.png" alt="background-repeat with oreos: no-repeat only has one cream at the top and the text ORE O; repeat has 2.5 creams and the text ORERERO; round has two creams but larger than usual and the text OREEREEO; space has two creams with a gap in between and the text ORE REO" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
