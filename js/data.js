@@ -1650,6 +1650,6 @@ const posts = [
     uid: "two-properties-walk-into-a-bar",
     boxes: 4,
     title: "Two CSS properties walk into a bar...",
-    ariaLabel: "Comic with 4 panels in a 2x2 grid titled 'Two CSS properties walk into a bar...' Two characters tagged 'display' and 'flex' are talking while talking: 'I don't know... are you sure it will be Ok?', 'Of course! Whatever you heard, it's just an urban legend. Nothing to worry about.' and get inside a bar. Meanwhile in a different part of town, in a different bar, a big noise happen, the barman looks over the counter to a customer on the floor (off panel) 'Sir, are you ok?' and the person replies 'Wahat the **** did just happen?'"
+    ariaLabel: "Comic with 4 panels in a 2x2 grid titled 'Two CSS properties walk into a bar...' Two characters tagged 'display' and 'flex' are talking while talking: 'I don't know... are you sure it will be Ok?', 'Of course! Whatever you heard, it's just an urban legend. Nothing to worry about.' and get inside a bar. Meanwhile in a different part of town, in a different bar, a big noise happen, the barman looks over the counter to a customer on the floor (off panel) 'Sir, are you ok?' and the person replies 'What the **** did just happen?'"
   },
 ]
