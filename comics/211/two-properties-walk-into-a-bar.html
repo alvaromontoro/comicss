@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/211/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/211/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+ .nametag {
+  background: #fff;
+  font-family: courier, 'courier new', 'courier new ms', monospace, monospace;
+  padding: 0.25em;
+  border: 0.2em solid;
+}
+
+.sign {
+  font-size: 5em;
+  border: 0.06em solid;
+  padding: 0.2em 0.5em;
+  left: 75%;
+  top: 8%;
+}
+.bar {
+  height: 80%;
+  width: 80%;
+  right: 0;
+  top: 0;
+  border-left: 0.35em solid;
+  border-bottom: 0.35em solid;
+  background: #fff;
+  
+  .window {
+    width: 25%;
+    aspect-ratio: 1;
+    border: 0.3em solid;
+    top: 45%;
+    left: 15%;
+    background: 
+      linear-gradient(90deg, #0000 calc(45% + 0.3em), #fff 0 calc(55% - 0.3em), #0000 0),
+      linear-gradient(#0000 45%, #000 0 calc(45% + 0.3em), #fff 0 calc(55% - 0.3em), #000 0 55%, #0000 0),
+      linear-gradient(90deg, #0000 45%, #000 0 calc(45% + 0.3em), #fff 0 calc(55% - 0.3em), #000 0 55%, #0000 0);
+    box-shadow:
+      0 0 0 0.7em #fff,
+      0 0 0 1em #000
+  }
+  
+  .door {
+    width: 30%;
+    height: 60%;
+    border: 0.3em solid;
+    border-bottom: 0;
+    bottom: 0;
+    left: 60%;
+    background: radial-gradient(circle at 85% 50%, #fff calc(0.5em - 0.5px), #000 0.5em calc(0.7em - 0.5px), #0000 0.7em);
+  }
+  
+  .name {
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    border: 0.1em solid;
+    top: 20%;
+    left: 30%;
+    text-transform: uppercase;
+    white-space: pre;
+    padding: 0.1em;
+    
+    span {
+      font-size: 1.2em;
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+}
+
+.glass {
+  width: 3.5em;
+  height: 4em;
+  outline: 1px solid red;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  border-top: 0.25em solid;
+  border-bottom: 0.3em solid;
+  translate: 0 -105%;
+  left: 10%;
+  background:
+    linear-gradient(81deg, #000 22.5%, #fff 0 30%, #0000 0),
+    linear-gradient(-81deg, #000 22.5%, #fff 0 30%, #0000 0),
+    linear-gradient(#fff 50%, #d85 0 90%, #fff 0)
+    #fff;
+}
+
+css-title {
+  background: #ffd;
+}
+
+css-panel:nth-child(2) {
+  [character="al"] {
+    .head {
+      .face {
+        .eyebrow {
+          translate: -10%;
+        }
+        .eye {
+          left: 35%;
+          
+          & ~ & {
+            left: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-child(3) {
+  .door {
+    width: 20%;
+    border: 0.35em solid;
+    height: 70%;
+    right: -1em;
+    bottom: -1em;
+  }
+}
+
+css-panel:nth-child(4) {
+  background: linear-gradient(-15deg, #0000 40%, #000 0 calc(40% + 0.3em), #0000 0);
+  
+  css-speech {
+    background: linear-gradient(#cf06, #cf00 80%), #fff;
+    
+    span {
+      font-size: 1.5em;
+      font-weight: bold;
+      rotate: 5deg;
+      display: inline-block;
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Two CSS properties walk into a bar...">
+  <css-panel>
+    <css-title>Friday evening somewhere cool in town.</css-title>
+    <css-person character="al" left="40" arms="left-25" eyebrows="high"></css-person>
+    <css-person character="jill" left="5" arms="right--25 left-15"  eyebrows="sad" mouth="frown small sided"></css-person>
+    <css-speech width="60" top="10" left="0" line="left-45 long skew">I don't know... are you sure it will be Ok?</css-speech>
+    <css-speech top="25" left="60" line="short skewest left-15">Of course!</css-speech>
+    <div class="nametag" left="55" rotate="2" style="top: 83%;">display</div>
+    <div class="nametag" top="85" rotate="-5" style="left: 22%">flex</div>
+  </css-panel>
+  
+  <css-panel>
+    <div class="door"></div>
+    <div class="sign">BAR</div>
+    <css-person character="al" left="0" arms="left-10 right--30 right-fold--30" ></css-person>
+    <css-person character="jill" left="35" arms="right--20 left-20"  eyebrows="high" mouth="small sided side-right"></css-person>
+    <div class="nametag" left="15" rotate="-1" style="top: 83%;">display</div>
+    <div class="nametag" top="85" rotate="1" style="left: 52%">flex</div>
+    <css-speech width="60" top="5" left="5" line="long left-30">Whatever you heard, it's just an urban legend. Nothing to worry about.</css-speech>
+    <css-speech type="whisper" left="20" rotate="7" style="top:73%; white-space:pre;">you first</css-speech>
+  </css-panel>
+  
+  <css-panel>
+    <css-title>Meanwhile, somewhere else in town...</css-title>
+    
+    <div class="bar">
+      <div class="window"></div>
+      <div class="door"></div>
+      <div class="name">scroll<span>bar</span>-color</div>
+    </div>
+    <css-speech top="15" left="0" rotate="-5" right-line line="left-85 skewer"><span>CRASH!</span></css-speech>
+  </css-panel>
+  
+  <css-panel>
+    <css-person head="bald" facial-hair="mustache" facing="left" left="70" mouth="frown small sided side-left" eyebrows="high" style="bottom:8%;rotate:-15deg"></css-person>
+    <css-prop type="counter high" left="65">
+      <div class="glass"></div>
+    </css-prop>
+    <css-speech top="10" left="40" line="left-70 long skew" right-line>Sir, are you Ok?</css-speech>
+    <css-speech width="45" line="longest left=50" top="60" left="15">What the **** did just happen?</css-speech>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
