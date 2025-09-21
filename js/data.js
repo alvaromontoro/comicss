@@ -1645,4 +1645,11 @@ const posts = [
     vertical: true,
     ariaLabel: "background-repeat with oreos: no-repeat only has one cream at the top and the text ORE O; repeat has 2.5 creams and the text ORERERO; round has two creams but larger than usual and the text OREEREEO; space has two creams with a gap in between and the text ORE REO"
   },
+  {
+    id: 211,
+    uid: "two-properties-walk-into-a-bar",
+    boxes: 4,
+    title: "Two CSS properties walk into a bar...",
+    ariaLabel: "Comic with 4 panels in a 2x2 grid titled 'Two CSS properties walk into a bar...' Two characters tagged 'display' and 'flex' are talking while talking: 'I don't know... are you sure it will be Ok?', 'Of course! Whatever you heard, it's just an urban legend. Nothing to worry about.' and get inside a bar. Meanwhile in a different part of town, in a different bar, a big noise happen, the barman looks over the counter to a customer on the floor (off panel) 'Sir, are you ok?' and the person replies 'What the **** did just happen?'"
+  },
 ]
