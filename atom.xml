@@ -4015,4 +4015,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>azimuth</title>
+    <link href="https://comicss.art/comics/212" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/212/azimuth.html"/>
+    <id>https://comicss.art/comics/212</id>
+    <updated>2025-09-29T00:00:00Z</updated>
+    <summary>New Cartoon: azimuth</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/212/azimuth.png" alt="comic with 4 panels showing a man and a woman talking. He asks 'Hey, Jill! Do you remember the name of the CSS property used to set the direction of sound sources in audio playback?' She replies 'Azimuth', and he quickly answers 'Bless you!' There's an awkward silence, and to her despair, he says 'But, really, do you remember the name of the CSS property used to set the direction of sound sources in audio playback?'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

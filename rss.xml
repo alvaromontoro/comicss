@@ -2116,5 +2116,15 @@
       <enclosure url="https://comicss.art/comics/211/two-properties-walk-into-a-bar.png" length="232000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/212</guid>
+      <title>azimuth</title>
+      <link>https://comicss.art/comics/212</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/212/azimuth.png" length="167000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
