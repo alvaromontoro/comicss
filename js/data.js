@@ -1652,4 +1652,12 @@ const posts = [
     title: "Two CSS properties walk into a bar...",
     ariaLabel: "Comic with 4 panels in a 2x2 grid titled 'Two CSS properties walk into a bar...' Two characters tagged 'display' and 'flex' are talking while talking: 'I don't know... are you sure it will be Ok?', 'Of course! Whatever you heard, it's just an urban legend. Nothing to worry about.' and get inside a bar. Meanwhile in a different part of town, in a different bar, a big noise happen, the barman looks over the counter to a customer on the floor (off panel) 'Sir, are you ok?' and the person replies 'What the **** did just happen?'"
   },
+  {
+    id: 212,
+    uid: "azimuth",
+    boxes: 4,
+    title: "azimuth",
+    video: "bYwf1fM3o-U",
+    ariaLabel: "comic with 4 panels showing a man and a woman talking. He asks 'Hey, Jill! Do you remember the name of the CSS property used to set the direction of sound sources in audio playback?' She replies 'Azimuth', and he quickly answers 'Bless you!' There's an awkward silence, and to her despair, he says 'But, really, do you remember the name of the CSS property used to set the direction of sound sources in audio playback?'"
+  },
 ]
