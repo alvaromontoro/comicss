@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/213/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/213/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+        font-family: 'Bebas Neue';
+        src: url(/fonts/BebasNeue-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+  font-family: 'Lato';
+  font-weight: bold;
+  src: url(/fonts/Lato-Bold.ttf);
+}
+
+.css-logo {
+  font-size: 0.8vmin;
+  width: 30em;
+  position: relative;
+  aspect-ratio: 1;
+  background: rebeccapurple;
+  border-radius: 0 20% 20% 20%;
+  display: inline-block;
+  margin-bottom: 4em;
+
+  &::before {
+    content: "CSS";
+    position: absolute;
+    bottom: 0%;
+    right: 8%;
+    color: #fff;
+    font-size: 15em;
+    font-family: 'Bebas Neue', 'Roboto Condensed', sans-serif;
+    line-height: 1;
+    scale: 1 0.9;
+  }
+}
+
+article {
+  font-size: 1vmin;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 4em auto;
+  width: 102em;
+  gap: 5em;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 90%;
+    left: 50%;
+    top: 52%;
+    translate: -50% -50%;
+    background: repeating-linear-gradient(#36c2 0 6.125%, #0000 0 12.5%); }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5em 2em;
+  position: relative;
+  
+  &:nth-child(1) {
+    background: radial-gradient(circle at -10% 50%, #f003, #f000),
+    radial-gradient(circle at 94% 50%, #0f03, #f000 80%),
+    linear-gradient(#6cfc, #fc7c);
+  }
+  
+  &:nth-child(2) {
+    background: linear-gradient(#0002, #0004);
+    
+    .css-logo {
+      background: #000;
+      &::before {
+        color: #fff8;
+      }
+      
+      &::after {
+        content:"";
+        position: absolute;
+        width: 60%;
+        height: 20%;
+        top: 0;
+        left: 50%;
+        translate: -50% -60%;
+        border-radius:50% / 100%;
+        box-shadow: inset 2em -1em, inset -2em -1em;
+      }
+    }
+    
+    .eyes {
+      &::before, &::after {
+        background: #ff0;
+        clip-path: polygon(0 20%, 100% 50%, 100% 100%, 0 100%);
+      }
+      
+      &::after {
+        scale: -1 1;
+      }
+    }
+    
+    .mouth {
+      aspect-ratio: 2.75;
+      background: #f55;
+      rotate: 5deg;
+      clip-path: polygon(0 0, 12% 0, 25% 50%, 37% 0, 63% 0, 75% 45%, 88% 0, 100% 0, 100% 100%, 0 100%)
+    }
+  }
+}
+
+h2 {
+  font-size: 5em;
+  margin: 0;
+  margin-bottom: 1em;
+  font-family: Jost, 'Bebas Neue', Helvetica, sans-serif;
+}
+
+.mouth {
+  width: 7.5%;
+  aspect-ratio: 2;
+  border-radius: 50% / 0 0 100% 100%;
+  background: red;
+  background: radial-gradient(80% 100% at 50% 100%, #f99 40%, #d44 0);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.eyes {
+  position: absolute;
+  width: 27%;
+  height: 10%;
+  top: 48%;
+  left: 50%;
+  z-index: 2;
+  translate: -50% -50%;
+  display: flex;
+  justify-content: space-between;
+  
+  &::before, &::after {
+    content: "";
+    background: #fff;
+    background: radial-gradient(circle at 35% 35%, #fff 20%, #000 calc(20% + 1px));
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1;
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+  <section>
+    <h2>September 30</h2>
+    <div class="eyes"></div>
+    <div class="mouth"></div>
+    <div class="css-logo" role="img" aria-label="CSS logo"></div>
+  </section>
+  
+  <section>
+    <h2>October 1</h2>
+    <div class="eyes"></div>
+    <div class="mouth"></div>
+    <div class="css-logo" role="img" aria-label="CSS logo"></div>
+  </section>
+</article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

@@ -4034,4 +4034,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>October 1st</title>
+    <link href="https://comicss.art/comics/213" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/213/october.html"/>
+    <id>https://comicss.art/comics/213</id>
+    <updated>2025-10-01T00:00:00Z</updated>
+    <summary>New Cartoon: October 1st</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/213/october.png" alt="cartoon with two panels. The first one is titled September 30 and shows the CSS logo with kawaii eyes and a big smile over a colorful background. The second one is titled October 1 and shows the CSS logo in dark colors with eerie eyes, fangs, and horns over a gray background" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

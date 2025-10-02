@@ -1660,4 +1660,11 @@ const posts = [
     video: "bYwf1fM3o-U",
     ariaLabel: "comic with 4 panels showing a man and a woman talking. He asks 'Hey, Jill! Do you remember the name of the CSS property used to set the direction of sound sources in audio playback?' She replies 'Azimuth', and he quickly answers 'Bless you!' There's an awkward silence, and to her despair, he says 'But, really, do you remember the name of the CSS property used to set the direction of sound sources in audio playback?'"
   },
+  {
+    id: 213,
+    uid: "october",
+    boxes: 2,
+    title: "October 1st",
+    ariaLabel: "cartoon with two panels. The first one is titled September 30 and shows the CSS logo with kawaii eyes and a big smile over a colorful background. The second one is titled October 1 and shows the CSS logo in dark colors with eerie eyes, fangs, and horns over a gray background"
+  },
 ]
