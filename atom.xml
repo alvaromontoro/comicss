@@ -4053,4 +4053,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Skeletons</title>
+    <link href="https://comicss.art/comics/214" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/214/skeletons.html"/>
+    <id>https://comicss.art/comics/214</id>
+    <updated>2025-10-05T00:00:00Z</updated>
+    <summary>New Cartoon: Skeletons</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/214/skeletons.png" alt="Comic with 4 panels in a 2x2 grid titled Spooktober. Two skeletons talk to each other: - Cool! We are skeletons! - *sigh* ...It's just as I suspected... - That the author was going to draw us as something spooky for October of for Halloween? - No! That the comic author is an idiot that doesn't know how to draw skeletons! We look like monkeys! The footer of the comic has the text: comiCSS a comic coded in CSS by Alvaro 'doesn't-know-how-to-draw-skeletons' Montoro" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -2136,5 +2136,15 @@
       <enclosure url="https://comicss.art/comics/213/october.png" length="442000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/214</guid>
+      <title>Skeletons</title>
+      <link>https://comicss.art/comics/214</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/214/skeletons.png" length="196000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
