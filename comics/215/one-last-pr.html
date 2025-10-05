@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/215/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/215/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+.hair-extra {
+  width: 20%;
+  aspect-ratio: 1;
+  scale: 1 1.25;
+  top: 12%;
+  left: 18%;
+  z-index: 1;
+  
+  &::before {
+    content: "";
+    inset: 0;
+    background: #000;
+    border: 0.35em solid;
+    border-radius: 80% 0;
+    rotate: -45deg;
+  }
+}
+css-panel:nth-child(2) {
+  css-person {
+    bottom: 0%;
+    transform: skew(-0.1deg) rotate(1deg);
+    
+    .body {
+      .hand {
+        top: 32%;
+        left: 190%;
+        
+        & ~ & {
+          top: 35%;
+          left: 260%;
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-child(3) {
+  .hair-extra {
+    scale: 1 1.1;
+    rotate: 6deg;
+    translate: 66% 30%;
+    
+    &::before {
+      background: #fff !important;
+    }
+  }
+  css-person {
+    --skin-color: #f8f8f2;
+    bottom: -3%;
+    
+    .body {
+      .hand {
+        top: 29%;
+        left: 225%;
+        
+        & ~ & {
+          top: 30%;
+          left: 190%;
+        }
+      }
+      
+      .chest {
+        border-radius: 60% 3em 0 0;
+      }
+      
+      .arm {
+        left: 85%;
+        top: 14%;
+        
+        &::after {
+            left: 50%;
+            translate: -25% 103%;
+            rotate: -105deg !important;
+          }
+        
+        & ~ & {
+          top: 15%;
+          left: 27%;
+          
+          &::after {
+            left: 50%;
+            translate: 0 100%;
+            rotate: -95deg !important;
+          }
+        }
+      }
+    }
+    
+    .head {
+      transform-origin: 50% 120%;
+      rotate: 10deg;
+      left: 58%;
+      
+      .face {
+        border-radius: 10em 10em 6.5em 7em;
+        transform-origin: 50% 100%;
+        rotate: -6deg;
+        top: 5%;
+        background:
+          radial-gradient(30% 1.25% at 60% 30%, #0002 99%, #0000 0),
+          radial-gradient(25% 1.25% at 60% 34%, #0002 99%, #0000 0),
+          radial-gradient(farthest-side at 100% 100%, #0000 85%, #0003 0 95%, #0000 0) 37% 93% / 25% 20% no-repeat,
+/*           radial-gradient(farthest-side at 100% 100%, #0000 85%, #0004 0 95%, #0000 0) 33% 87% / 20% 15% no-repeat, */
+          radial-gradient(100% 100% at 15% 65%, #0000 65%, #0003 0 75%, #0000 0) 87% 94% / 25% 18% no-repeat,
+          radial-gradient(circle at 85% 15%, #0001 0.25em, #0000 0),
+          radial-gradient(circle at 80% 20%, #0001 0.5em, #0000 0),
+          var(--skin)
+          ;
+        
+        .eyebrow {
+          border: 0.3em solid;
+          background: #fff;
+          height: 7%;
+          scale: 1.2 1;
+        }
+      }
+    }
+  }
+  
+  css-speech {
+    color: #777;
+    
+    &[type="whisper"] {
+      rotate: -3deg;
+    }
+    
+    &::before {
+      background: linear-gradient(to bottom right, var(--bg) calc(50% - 0.15em), #777 0 50%, #0000 0);
+    }
+    
+    &.second::After {
+      content: "";
+      width: 0.9em;
+      height: 2.75em;
+      background: #fff;
+      border-inline: 0.2em solid #777;
+      top: 0;
+      left: 50%;
+      transform: translate(0, -99.75%) skew(30deg);
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Long PR Review">
+  <css-panel>
+    <css-person character="al" left="30" eyebrows="sad high" arms="left--50 left-fold--60 right--45 right-fold--65">
+      <div class="hair-extra"></div>
+    </css-person>
+    <css-prop type="counter desk" facing="left" left="60">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+    <css-speech line="longer left-40 skewer" top="5" right-line>I still have time for a PR</css-speech>
+    <css-speech left="35" top="20" width="55" line="left-40 skewest short">Steve said he just updated some classes</css-speech>
+  </css-panel>
+  
+  <css-panel>
+    <css-person arms="left--20 left-fold--90 right--25"  mouth="frown   side-right" eyebrows="low sad" left="35">
+      <div class="hair-extra"></div>
+    </css-person>
+    <css-prop type="counter desk" facing="left" left="60">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+    <css-speech left="25" top="10" no-line>...It's been... 30 years...</css-speech>
+    <css-speech class="second" left="35" top="30" width="55" line="left-50 skewest short">...Still one class to go...</css-speech>
+    
+    <css-speech type="whisper" top="70" left="15">Damn you, Steve!<br><br>Damn you, Tailwind!</css-speech>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

@@ -1674,4 +1674,11 @@ const posts = [
     title: "Skeletons",
     ariaLabel: "Comic with 4 panels in a 2x2 grid titled Spooktober. Two skeletons talk to each other: - Cool! We are skeletons! - *sigh* ...It's just as I suspected... - That the author was going to draw us as something spooky for October of for Halloween? - No! That the comic author is an idiot that doesn't know how to draw skeletons! We look like monkeys! The footer of the comic has the text: comiCSS a comic coded in CSS by Alvaro 'doesn't-know-how-to-draw-skeletons' Montoro"
   },
+  {
+    id: 215,
+    uid: "one-last-pr",
+    boxes: 2,
+    title: "One Last PR",
+    ariaLabel: "comic strip with two panels showing a man in front of a computer 'I still have time for one more PR. Steve said he just updated some classes.' The next panels shows an old man in front of the same computer 'It has been 30 years... still one class to go... damn you Steve... Damn you Tailwin!'"
+  },
 ]
