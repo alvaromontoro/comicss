@@ -4072,4 +4072,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>One Last PR</title>
+    <link href="https://comicss.art/comics/215" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/215/one-last-pr.html"/>
+    <id>https://comicss.art/comics/215</id>
+    <updated>2025-10-06T00:00:00Z</updated>
+    <summary>New Cartoon: One Last PR</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/215/one-last-pr.png" alt="comic strip with two panels showing a man in front of a computer 'I still have time for one more PR. Steve said he just updated some classes.' The next panels shows an old man in front of the same computer 'It has been 30 years... still one class to go... damn you Steve... Damn you Tailwin!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
