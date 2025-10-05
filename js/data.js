@@ -1667,4 +1667,11 @@ const posts = [
     title: "October 1st",
     ariaLabel: "cartoon with two panels. The first one is titled September 30 and shows the CSS logo with kawaii eyes and a big smile over a colorful background. The second one is titled October 1 and shows the CSS logo in dark colors with eerie eyes, fangs, and horns over a gray background"
   },
+  {
+    id: 214,
+    uid: "skeletons",
+    boxes: 4,
+    title: "Skeletons",
+    ariaLabel: "Comic with 4 panels in a 2x2 grid titled Spooktober. Two skeletons talk to each other: - Cool! We are skeletons! - *sigh* ...It's just as I suspected... - That the author was going to draw us as something spooky for October of for Halloween? - No! That the comic author is an idiot that doesn't know how to draw skeletons! We look like monkeys! The footer of the comic has the text: comiCSS a comic coded in CSS by Alvaro 'doesn't-know-how-to-draw-skeletons' Montoro"
+  },
 ]

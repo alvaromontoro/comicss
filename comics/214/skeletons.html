@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/214/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/214/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-panel {
+  background: linear-gradient(orange -125%, transparent 50%);
+}
+css-person {
+  /* to avoid havint to put !important */
+  .head.head {
+    height: 44%;
+    top: 3%;
+
+    .hair-back {
+      height: 128% !important;
+    }
+
+    .neck {
+      height: 40%;
+    }
+
+    .face {
+      border-radius: 5em 5em 0em 4em;
+      background:
+        radial-gradient(28% 30% at 0 100%, #0000, #0002 99%, #0000),
+        var(--skin);
+
+      .hair {
+        [character="al"] & {
+          top: -2%;
+          left: 0;
+        }
+
+        [character="jill"] & {
+          height: 40%;
+          background:
+            radial-gradient(80% 100% at 0 0, #000 94%, #0000 0),
+            radial-gradient(55% 100% at 100% 0, #000 79%, #0000 0)
+        }
+      }
+
+      .eye {
+        scale: 1.75 1.1;
+        translate: 0 10%;
+        border-radius: 100%;
+      }
+
+      .mouth {
+        background: red;
+        border-radius: 0;
+        height: 20%;
+        width: 80%;
+        translate: 0;
+        right: -0.35em;
+        left: auto;
+        border-left: 0.35em solid;
+        border-right: 0.35em solid;
+        border-bottom: 0.35em solid;
+        border-radius: 0 0 2em 2em;
+        background:
+          linear-gradient(#0000 40%, #000 0 55%, #0000 0),
+          repeating-linear-gradient(90deg, #0000 0 16%, #000 0 calc(16% + 0.3em)),
+          var(--skin-color);
+        bottom: 0;
+        translate: 0 85%;
+
+        [character="jill"] & {
+          --skin-color: #e8e8e8;
+        }
+      }
+
+      .nose {
+        border: 0;
+        background: #000;
+        border-radius: 15em 3em 3em 3em;
+        width: 0.5em;
+        height: 1em;
+        top: 75%;
+
+        &::before {
+          content: "";
+          inset: 0;
+          border-radius: 3em 15em 3em 3em;
+          background: #000;
+          translate: 150%;
+        }
+      }
+
+      .ear {
+        background: #000;
+        aspect-ratio: 0.6;
+        scale: 0.2;
+        left: 8%;
+        top: 60%;
+        clip-path: none;
+      }
+
+      .eyebrow {
+        display: none;
+      }
+    }
+  }
+}
+
+css-panel:nth-child(3) {
+  css-person[character="jill"] {
+    /* to avoid havint to put !important */
+    .head.head {
+      .face {
+        .eye {
+          translate: 0 25%;
+          clip-path: polygon(0 15%, 100% 15%, 100% 100%, 0 100%);
+
+          & ~ & {
+            scale: -1.75 1.1;
+          }
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-child(2) {
+  css-person[character="al"] {
+    .hand {
+      left: 240%;
+      top: 37%;
+    }
+  }
+}
+
+css-panel:nth-child(2),
+css-panel:nth-child(4) {
+  css-person[character="al"] {
+    /* to avoid havint to put !important */
+    .head.head {
+      .face {
+        .mouth {
+          background:
+            radial-gradient(200% 110% at 50% 0%, #0000 40%, #000 0 53%, #0000 0),
+            repeating-linear-gradient(90deg, #0000 0 16%, #000 0 calc(16% + 0.3em)),
+            var(--skin-color);
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-child(5) {
+  css-person[character="jill"] {
+    /* to avoid havint to put !important */
+    .head.head {
+      .face {
+        .mouth {
+          background:
+            radial-gradient(180% 100% at 50% 100%, #0000 40%, #000 0 55%, #0000 0),
+            repeating-linear-gradient(90deg, #0000 0 16%, #000 0 calc(16% + 0.3em)),
+            var(--skin-color);
+        }
+        .eye {
+          border-radius: 0 0 50% 50%;
+          clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%);
+
+          & ~ & {
+            scale: -1.75 1.1;
+          }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Spooktober">
+  <css-panel>
+    <css-speech left="15" top="20" line=" skew">Cool! We are skeletons!</css-speech>
+    <css-person character="al" left="5" arms="right--30 right-fold--85"></css-person>
+    <css-person character="jill" facing="left" right="5"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech type="whisper" left="35" rotate="-10" style="top:18%;">*sigh*</css-speech>
+    <css-speech left="25" line="long skew left-55" right-line style="top:22%">...It's just as I suspected...</css-speech>
+    <css-person character="al" left="5"></css-person>
+    <css-person character="jill" arms="right--15 left-15" facing="left" right="5"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech left="10" line="left-25 skew" style="top:12%;width:72%;">That the author was going to draw us as something spooky for October or for Halloween?</css-speech>
+    <css-person character="al" arms="left-20 right-fold--15" left="5"></css-person>
+    <css-person character="jill" arms="left-20 left-fold--15 right--20" facing="left" right="5"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech line="longest skewer left-55" right-line style="top:6%;text-wrap:balance"><b style="font-weight:600">No!</b> That the comic author is an idiot <br>that doesn't know how to draw skeletons!</css-speech>
+    <css-speech left="25" no-line style="top:27%;clip-path:polygon(0 0, 41% 0, 41.5% 0.2em, 45.5% 0.2em, 44.5% 0, 100% 0, 100% 100%, 54% 100%, 54% 93%, 51% 93%, 51% 100%, 0 100%)">We look like monkeys!</css-speech>
+    <css-person character="al" arms="right--15 left-15" left="5"></css-person>
+    <css-person character="jill" arms="right--30 left-25" facing="left" right="5"></css-person>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+    <script>
+      setTimeout(() => { document.querySelector("footer").innerHTML = "<section><b>comiCSS</b>: a comic coded in CSS by Alvaro \"doesn't-know-how-to-draw-skeletons\" Montoro</section>" }, 50);
+      </script>
+  </body>
+  </html>
