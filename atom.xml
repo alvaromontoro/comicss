@@ -4091,4 +4091,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Midlife Crisis</title>
+    <link href="https://comicss.art/comics/216" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/216/midlife-crisis.html"/>
+    <id>https://comicss.art/comics/216</id>
+    <updated>2025-10-13T00:00:00Z</updated>
+    <summary>New Cartoon: Midlife Crisis</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/216/midlife-crisis.png" alt="comic with 4 panels in a 2x2 grid titled Midlife Crisis. Two characters speak: - We have a problem with Steve! - What is it? - He is going through a midlife crisis... - Oh no! Did he buy a motorbike? - No. worse! - A speedboat? - Way worse! - Oh, no! Please tell me it's not... - Sadly, yes! - Really? Again??. The last panel shows a character (Steve) typing in a computer while someone off-panel says: He is building a new JS framework?!" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

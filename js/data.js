@@ -1681,4 +1681,11 @@ const posts = [
     title: "One Last PR",
     ariaLabel: "comic strip with two panels showing a man in front of a computer 'I still have time for one more PR. Steve said he just updated some classes.' The next panels shows an old man in front of the same computer 'It has been 30 years... still one class to go... damn you Steve... Damn you Tailwin!'"
   },
+  {
+    id: 216,
+    uid: "midlife-crisis",
+    boxes: 4,
+    title: "Midlife Crisis",
+    ariaLabel: "comic with 4 panels in a 2x2 grid titled Midlife Crisis. Two characters speak: - We have a problem with Steve! - What is it? - He is going through a midlife crisis... - Oh no! Did he buy a motorbike? - No. worse! - A speedboat? - Way worse! - Oh, no! Please tell me it's not... - Sadly, yes! - Really? Again??. The last panel shows a character (Steve) typing in a computer while someone off-panel says: He is building a new JS framework?!"
+  },
 ]
