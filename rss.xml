@@ -2156,5 +2156,15 @@
       <enclosure url="https://comicss.art/comics/215/one-last-pr.png" length="132000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/216</guid>
+      <title>Midlife Crisis</title>
+      <link>https://comicss.art/comics/216</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/216/midlife-crisis.png" length="205000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/216/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/216/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+.john-speech::after {
+  content: "";
+  width: 0.75em;
+  border: 0.15em solid;
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+  height: 3.3em;
+  top: 0;
+  left: 65%;
+  background: #fff;
+  transform: skew(-10deg);
+  translate: -100% -100%;
+}
+
+.john-speech2::after {
+  content: "";
+  width: 0.75em;
+  border: 0.15em solid;
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+  height: 3.1em;
+  top: 0;
+  left: 40%;
+  background: #fff;
+  transform: skew(15deg);
+  translate: -100% -100%;
+}
+
+.jill-speech::after {
+  content: "";
+  width: 0.85em;
+  border: 0.15em solid;
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+  height: 3em;
+  top: 0;
+  left: 30%;
+  background: #fff;
+  transform: skew(20deg);
+  translate: -100% -100%;
+}
+
+.jill-speech2::after {
+  content: "";
+  width: 0.85em;
+  border: 0.15em solid;
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+  height: 5.25em;
+  top: 0;
+  left: 30%;
+  background: #fff;
+  transform: skew(20deg);
+  translate: -100% -100%;
+}
+
+.off-panel::before {
+  width: 1.25em;
+  left: 110%;
+  height: 5em;
+  transform: skew(-60deg) !important;
+}
+
+[character="al"] {
+  .hand {
+    top: 30% !important;
+    left: 210% !important;
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Midlife Crisis">
+  <css-panel>
+    <css-speech left="10" style="top:-2%" no-line>We have a problem with Steve!</css-speech>
+    <css-speech style="top:9%" left="40" line="longer left-70" right-line>What is it?</css-speech>
+    <css-speech class="john-speech" top="20" width="55" line="short left-45 skewest">He is going through... <b>a midlife crisis!</b></css-speech>
+    <css-person character="john" left="5" mouth="frown" eyebrows="high" arms="left-20 right--25 right-fold--20"></css-person>
+    <css-person character="jill" facing="left" right="5" mouth="yawn small sided side-left" eyebrows="high sad" arms="left-15 right--15"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech left="10" style="top:-2%" no-line>Oh no! Did he buy a motorbike?</css-speech>
+    <css-speech style="top:9%" left="20" no-line>No. worse!</css-speech>
+    <css-speech class="john-speech2" style="top:30.25%;left:29%; width:31%;" top="30" width="25" line="left-15 short skewest">Way worse!</css-speech>
+    <css-speech class="jill-speech" style="top:19%;left:47%;width:37%" left="50" line="left-40 long" right-line>A speedboat?</css-speech>
+    <css-person character="john" left="5" mouth="frown small sided side-right" eyebrows="sad high" arms="left-15 right--10 right-fold--15"></css-person>
+    <css-person character="jill" facing="left" right="5" mouth="frown small sided side-right" eyebrows="sad high" arms="left-15 right--15"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech left="10" top="0" no-line>Oh! Please tell me it's not...</css-speech>
+    <css-speech top="15" left="20" line="long">Sadly, yes!</css-speech>
+    <css-speech class="jill-speech2" top="30" left="45" width="40" line="left-40 short" right-line>Really? Again??</css-speech>
+    <css-person character="john" left="5" mouth="frown small sided side-right" eyebrows="sad high" arms="left-15 right--15 right-fold--15"></css-person>
+    <css-person character="jill" facing="left" right="5" mouth="frown small sided side-left" eyebrows="low" arms="left-15 right--10"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech class="off-panel" top="10" left="40" right-line>He is building a new JS framework?!</css-speech>
+    <css-person character="al" eyebrows="high" mouth="smile small" facing="left" left="25" arms="left--60 left-fold--40 right--40 right-fold--80"></css-person>
+    <css-prop type="counter desk">
+      <css-prop type="laptop"></css-prop>
+    </css-prop>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
