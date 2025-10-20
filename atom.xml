@@ -4110,4 +4110,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>No Trespassing</title>
+    <link href="https://comicss.art/comics/217" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/217/no-trespassing.html"/>
+    <id>https://comicss.art/comics/217</id>
+    <updated>2025-10-20T00:00:00Z</updated>
+    <summary>New Cartoon: No Trespassing</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/217/no-trespassing.png" alt="Comic with 4 panels in a 2x2 grid titled The Sign. Two people are talking: - I haven't seen any solicitors lately. It's really nice. - Yes. None since I put the sign at the gate. - What sign? asks the first person surprised. The last panel is a drawing of a fence with a sign: No Trespassing. Violators will be forced to code using TailwindCSS" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
