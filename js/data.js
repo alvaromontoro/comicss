@@ -1695,4 +1695,12 @@ const posts = [
     title: "No Trespassing",
     ariaLabel: "Comic with 4 panels in a 2x2 grid titled The Sign. Two people are talking: - I haven't seen any solicitors lately. It's really nice. - Yes. None since I put the sign at the gate. - What sign? asks the first person surprised. The last panel is a drawing of a fence with a sign: No Trespassing. Violators will be forced to code using TailwindCSS"
   },
+  {
+    id: 218,
+    uid: "latibulate",
+    boxes: 1,
+    title: "Latibulate",
+    vertical: true,
+    ariaLabel: "latibulate (verb, archaic) to position oneself in a safe place, like a corner, to avoid reality or difficult conditions. .latibulate { position: fixed; bottom: 0; right: 0; scale: 0.5; }"
+  },
 ]

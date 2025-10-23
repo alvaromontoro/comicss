@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/218/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/218/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  font-size: 1vmin;
+  width: 90em;
+  aspect-ratio: 1;
+  
+  position: relative;
+  
+}
+.definition {
+  background: #fff;
+  padding: 1.25em 3em;
+  font-size: 3.5em;
+  font-family: serif;
+  
+  .term { 
+    font-weight: 600;
+    font-family: sans-serif;
+  }
+  .type {
+    font-style: italic;
+    color: #666;
+  }
+}
+.code {
+  background: #345;
+
+  .latibulate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    scale: 0.5;
+  }
+
+  code {
+    white-space: pre;
+    position: absolute;
+    line-height: 1.5;
+    font-size: 3vmin;
+    color: #eee;
+    font-size: monospace, monospace;
+
+    .selector {
+      color: #fe8;
+    }
+
+    .property {
+      color: #c9c;
+    }
+
+    .value {
+      color: #8c8;
+
+      &.number {
+        color: #f84;
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<article>
+  <section class="definition">
+    <span class="term">latibulate</span>
+    <span class="type">(verb, archaic)</span>
+    <span class="explanation">to position oneself in a safe place, like a corner, to avoid reality or difficult conditions.</span>
+  </section>
+  <section class="code">
+    <code class="latibulate"><span class="selector">.latibulate</span> {
+  <span class="property">position</span>: <span class="value keyword">fixed</span>;
+  <span class="property">bottom</span>: <span class="value number">0</span>;
+  <span class="property">right</span>: <span class="value number">0</span>;
+  <span class="property">scale</span>: <span class="value number">0.5</span>;
+}</code>
+  </section>    
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
