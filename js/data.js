@@ -1703,4 +1703,12 @@ const posts = [
     vertical: true,
     ariaLabel: "latibulate (verb, archaic) to position oneself in a safe place, like a corner, to avoid reality or difficult conditions. .latibulate { position: fixed; bottom: 0; right: 0; scale: 0.5; }"
   },
+  {
+    id: 219,
+    uid: "guess-the-movie",
+    boxes: 1,
+    title: "Guess The Movie",
+    vertical: true,
+    ariaLabel: "A cartoon character indicatng that today is not a comic but a CSS game, and to click on view source with the link"
+  },
 ]
