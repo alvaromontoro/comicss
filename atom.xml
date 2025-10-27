@@ -4148,4 +4148,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Guess The Movie</title>
+    <link href="https://comicss.art/comics/219" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/219/guess-the-movie.html"/>
+    <id>https://comicss.art/comics/219</id>
+    <updated>2025-10-27T00:00:00Z</updated>
+    <summary>New Cartoon: Guess The Movie</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/219/guess-the-movie.png" alt="A cartoon character indicatng that today is not a comic but a CSS game, and to click on view source with the link" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

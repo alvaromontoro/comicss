@@ -1,0 +1,1982 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/219/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/219/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+:root {
+  counter-reset: hints correct logos;
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 85%;
+  }
+}
+
+.center {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 75%, #fff3, #fff2 10%, #fff0 0 15%, #fff1 0, #ffffff08 20%, #fff0 0),
+    
+    radial-gradient(farthest-side circle at 30% 20%, #fff0 5%, #ffffff08 8%, #fff0 0 15%, #ffffff08 0, #fff0 40%),
+    
+    repeating-radial-gradient(circle at 90% 60%, #fff0 0 23%, #fff2  23.1%),
+    radial-gradient(80% 15% at 100% 90%, #f6b4, #f6b0),
+    radial-gradient(at 0 100%, #fff3, #fff0),
+    radial-gradient(farthest-side at 100% 50%, #ffc5, #fff0),
+    linear-gradient(190deg, #4bf 5%, #78ecef, #cdf 90%);
+}
+
+form {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+}
+
+header {
+  margin: 2rem;
+}
+
+h1 {
+  margin: 2rem;
+}
+
+h1, h2 {
+  margin: 0 auto 2rem auto;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  max-width: 20rem;
+  min-width: fit-content;
+  font-weight: 700;
+  box-sizing: border-box;
+  position: relative;
+  filter: drop-shadow(0 0.5rem 0.5rem #3694) drop-shadow(0 -0.5rem 0.5rem #def3)
+}
+
+h1::before,
+h1::after,
+h2::before,
+h2::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 20%;
+  left: 0;
+  transform: translate(-50%, 0);
+  border-radius: 0.5rem; 
+  background: 
+    radial-gradient(farthest-side at 0% 100%, #0000 99%, #0002) 100% 100% / 50% 20% no-repeat,
+    radial-gradient(at 100% 100%, #0002, #0000),
+    radial-gradient(80% 15% at 50% 0%, #ff02 40%, #3ae0),
+    radial-gradient(80% 15% at 50% 100%, #59f5 40%, #3ae0),
+    linear-gradient(90deg, #e35eb500, #d34ea5 60%),
+    linear-gradient(#f284b0, #e03cfe);
+  clip-path: polygon(0 10%, 16% 50%, 0 90%, 0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+h1::after,
+h2::after {
+  left: 100%;
+  transform: scaleX(-1) translate(50%, 0);
+}
+
+h1 div,
+h2 div {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff1fe;
+  border-radius: 0.5rem 0.5rem 0.25rem 0.25rem;
+  z-index: 1;
+  box-shadow:
+    inset 0 1.5rem 1rem -1.5rem #ff04,
+    inset 0 -1.5rem 1rem -1rem #e03cfe,
+    inset 0 0 1rem #e03cfe;
+  background: 
+    radial-gradient(80% 15% at 50% 0%, #ff03 40%, #3ae0),
+    radial-gradient(60% 15% at 50% 100%, #59f5 40%, #3ae0),
+    linear-gradient(#f284b0, #e03cfe);
+}
+
+h1 span,
+h2 span {
+  display: block;
+  color: #ffec84;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+
+ul {
+  --m: min(10vw, 80px);
+  display: flex;
+  position: relative;
+  margin: 3rem auto 0 auto;
+  margin: 0 auto 0 auto;
+  width: 100vw;
+  max-width: 1200px;
+  overflow: scroll;
+  padding: 0;
+  list-style: none;
+  mask: linear-gradient(90deg, #0000, #000 var(--m) calc(100% - var(--m)), #0000);
+  scroll-snap-type: x mandatory;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), 0 calc(100% - 2rem));
+  scroll-behavior: smooth;
+}
+
+li {
+  counter-increment: logos;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: none;
+  flex: 1;
+  min-width: 100%;
+  padding: 3rem calc(var(--m) + 2rem) 2rem calc(var(--m) + 2rem);
+  list-style: none;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+  li {
+    grid-template-columns: none;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(100% - var(--m) * 2);
+  height: 100%;
+  background: #fff6;
+  background: 
+    linear-gradient(#82e1ff77, #f1f8fe77),
+    #fff8
+    ;
+  box-shadow: 
+    inset 0 0.5rem 0.25rem -0.25rem #fff8,
+    0 0.5rem 1.5rem #1232; /* #96cef688; */
+  z-index: -1;
+  transform: translateX(-50%);
+  border-radius: 1rem;;
+}
+
+li::before {
+  content: "PUZZLE " counter(logos);
+  position: absolute;
+  top: 0;
+  left: calc(var(--m) + 2rem);
+  transform: translate(0, -50%);
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  padding: 1rem 3rem;
+  background: 
+    radial-gradient(circle at 1.75rem 50%, #fff9 3.5%, #fff0 0),
+    radial-gradient(circle at 1.8rem 53%, #00000008 3.5%, #3690 5%),
+    radial-gradient(circle at calc(100% - 1.75rem) 50%, #fff9 3.5%, #fff0 0),
+    radial-gradient(circle at calc(100% - 1.7rem) 53%, #00000008 3.5%, #3690 5%),
+    linear-gradient(#2cb6ff 15%, #53cbef 85%);
+  color: #eeee;
+  text-shadow: 1px 1px 2px #0001;
+  box-shadow: 
+    inset 0 0.25rem 0.25rem -0.25rem #fff,
+    inset 0 0 0 0.5rem #fff9,
+    0 0.5rem 1rem -0.25rem #3693
+}
+
+li > div:nth-child(2) {
+  flex: 1;
+  position: relative;
+}
+
+.code {
+  width: 100%;
+  overflow: scroll;
+  height: 300px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #123;
+  color: #eee;
+  border-radius: 0.5rem;
+}
+
+.code .s { color: #fd8; }
+.code .c { color: #999; }
+.code .p { color: #c9c; }
+.code .n { color: #f80; }
+.code .t { color: #7b7; }
+.code .v { color: #88f; }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+:focus {
+  outline: 1px dashed #369;
+  outline-offset: 0.25rem;
+}
+
+input {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 4rem;
+  font-size: 1.75rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 0.25rem solid #fffc;
+  background: 
+    linear-gradient(#fff5, #fff8);
+  background-clip: padding-box;
+  border-radius: 0.5rem;
+}
+
+input:valid {
+  counter-increment: correct;
+  border-color: #52cba9;
+  background: 
+/*     linear-gradient(50deg, #0000 16%, #52cba9 0 26%, #0000 0) calc(100% - 0.5em) 50% / 1em 1em no-repeat,
+    linear-gradient(-50deg, #0000 30%, #52cba9 0 40%, #0000 0) calc(100% - 0.5em) 50% / 1em 1em no-repeat, */
+    #b6f8e4;
+}
+
+section {
+  display: flex;
+  gap: 1rem;
+}
+
+output {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  /* aspect-ratio: 1;
+  background: linear-gradient(50deg, #0000 16%, #52cba9 0 26%, #0000 0) 0 0,
+    linear-gradient(-50deg, #0000 30%, #52cba9 0 40%, #0000 0) 100% 0; */
+  background-repeat: no-repeat;
+  display: none;
+  text-indent: -100px;
+  overflow: hidden;
+  font-size: 0;
+  border-left: 0.25rem solid #52cba9;
+  border-bottom: 0.25rem solid #52cba9;
+  aspect-ratio: 2;
+  rotate: -45deg;
+  border-radius: 0.25rem;
+  transform: skew(-5deg);
+/*   position: absolute;
+  left: -10000in; */
+}
+
+input:valid + output {
+  display: block;
+}
+
+@media (max-width: 500px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+details {
+  flex: 1;
+  margin-bottom: 0rem;
+  max-width: 100%;
+  border-radius: 0.5rem 0.5rem 1rem 1rem;
+}
+
+input[type="reset"],
+summary {
+  padding: 0.75rem;
+  color: #ecf6fe;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  background: 
+    radial-gradient(80% 15% at 50% 0%, #ff01 40%, #3ae0),
+    radial-gradient(80% 15% at 50% 100%, #59f8 40%, #3ae0),
+    linear-gradient(#fff2, #fff0 25% 75%, #fff2),
+    #689cfd;
+  box-shadow:
+    inset 0 0.5rem 1rem -0.5rem #fff3,
+    inset 0 -0.5rem 1rem -0.5rem #36cc;
+  background:
+    linear-gradient(#2cb6ff 15%, #53cbef 85%);
+    ;
+  box-shadow:
+    inset 0 0.5rem 1rem -0.5rem #fff3,
+    inset 0 -0.5rem 1rem -0.5rem #36c7,
+    0 1rem 1rem -0.5rem #3693;
+}
+
+details:not(#instructions) > div {
+  padding: 1rem;
+  max-width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  background: #f0f3f6;
+  border-radius: 0 0 1rem 1rem;
+}
+
+details:not(#instructions)[open] {
+  counter-increment: hints;
+}
+
+details:not(#instructions)[open] > div {
+  box-shadow: 0 1rem 1rem -0.5rem #3693;
+}
+
+input:valid ~ section details summary {
+  pointer-events: none;
+}
+
+input:valid ~ section details[open] summary,
+details:not(#instructions)[open] summary {
+  pointer-events: none;
+  box-shadow:
+    inset 0 0.5rem 1rem -0.5rem #fff2,
+    inset 0 -0.5rem 1rem -0.5rem #36c7,
+    0 0.5rem #f0f3f6;
+}
+
+#instructions {
+  width: 90vmin;
+  max-width: 700px;
+  margin: 5rem auto 2rem auto;
+  border: 1px solid #32ab89;
+  border-radius: 0.5rem;
+  background: #b6f8e4;
+  color: #32ab89;
+  box-shadow: 0 1rem 1rem -0.5rem #1232;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  box-shadow: 0 0 0 100vmax #0005;
+  z-index: 999;
+
+  &::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0000;
+    z-index: -1;
+  }
+}
+
+#instructions summary {
+  background: none;
+  color: #32ab89;
+  box-shadow: none;
+  font-size: 1rem;
+  padding: 2rem 2rem 0.75rem 2.5rem;
+  background:
+    linear-gradient(45deg, #0000 45%, #32ab89 0 55%, #0000 0) 1.875rem 2.25rem / 0.75rem 0.75rem no-repeat,
+    linear-gradient(-45deg, #0000 45%, #32ab89 0 55%, #0000 0) 1.875rem 2.25rem / 0.75rem 0.75rem no-repeat,
+    radial-gradient(farthest-side circle, #0000 80%, #32ab89 0 99.99%, #0000) 1.75rem 2.125rem / 1rem 1rem no-repeat
+    ;
+  background-color: #b6f8e4;
+}
+
+#instructions summary p {
+  padding-left: 0.75rem;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 1.125em;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+#instructions summary::marker,
+#instructions summary::-webkit-details-marker {
+  color: #0000;
+}
+
+#instructions:not([open]) {
+  display: none;
+}
+
+#final {
+  display: none;
+}
+
+form:invalid #final {
+  display: none;
+}
+
+#final {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: #000c;
+  color: #eee;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+
+#final span::after {
+  content: counter(hints);
+  font-weight: bolder;
+}
+
+#final h2 {
+  transform: translate(0, -50%);
+  filter: drop-shadow(0 1rem 1rem #3697);
+}
+
+#final > div {
+  position: relative;
+  border-radius: 1rem;
+  max-width: 90%;
+  padding: 0rem calc(10vw + 2rem) 1rem calc(10vw + 2rem);
+  list-style: none;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  background: #fff6;
+  background: 
+    linear-gradient(#82e1ffcc, #f1f8fecc),
+    #fffc
+    ;
+  box-shadow: 
+    inset 0 0.5rem 0.25rem -0.25rem #fff8,
+    0 1rem 1.5rem #0004;
+  color: #222;
+}
+
+input[type="reset"] {
+  border: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: var(--m);
+  translate: -50% -50%;
+  width: 1.5rem;
+  height: 3rem;
+  filter: drop-shadow(0.1em 0.1em 0.3em #0004);
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    clip-path: polygon(0 0, 25% 0, 100% 50%, 25% 100%, 0 100%, 75% 50%);
+    scale: -1 1;
+  }
+
+  &.next {
+    left: auto;
+    right: var(--m);
+    translate: 50% -50%;
+
+    &::before {
+      scale: 1 1;
+    }
+  }
+}
+
+.arrow span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#progress {
+  display: flex;
+  margin: 3rem auto 1rem auto;
+  width: fit-content;
+  box-shadow: 0 1rem 1rem -0.5rem #1232;
+}
+
+#progress a {
+  --s: clamp(4px, 1.7vw, 10px);
+  height: var(--s);
+  width: var(--s);
+  background: #fff;
+  border-top: 2px solid #0005;
+  border-bottom: 2px solid #0005;
+}
+
+#progress a:first-child {
+  border-left: 2px solid #0005;
+  border-radius: 10px 0 0 10px;
+}
+
+#progress a:last-child {
+  border-right: 2px solid #0005;
+  border-radius: 0 10px 10px 0;
+}
+
+#progress a span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: clip;
+}
+
+form:has(#input-01:valid) #progress [href="#slide-01"],
+form:has(#input-02:valid) #progress [href="#slide-02"],
+form:has(#input-03:valid) #progress [href="#slide-03"],
+form:has(#input-04:valid) #progress [href="#slide-04"],
+form:has(#input-05:valid) #progress [href="#slide-05"],
+form:has(#input-06:valid) #progress [href="#slide-06"],
+form:has(#input-07:valid) #progress [href="#slide-07"],
+form:has(#input-08:valid) #progress [href="#slide-08"],
+form:has(#input-09:valid) #progress [href="#slide-09"],
+form:has(#input-10:valid) #progress [href="#slide-10"], 
+form:has(#input-11:valid) #progress [href="#slide-11"],
+form:has(#input-12:valid) #progress [href="#slide-12"],
+form:has(#input-13:valid) #progress [href="#slide-13"],
+form:has(#input-14:valid) #progress [href="#slide-14"],
+form:has(#input-15:valid) #progress [href="#slide-15"],
+form:has(#input-16:valid) #progress [href="#slide-16"],
+form:has(#input-17:valid) #progress [href="#slide-17"],
+form:has(#input-18:valid) #progress [href="#slide-18"],
+form:has(#input-19:valid) #progress [href="#slide-19"],
+form:has(#input-20:valid) #progress [href="#slide-20"], 
+form:has(#input-21:valid) #progress [href="#slide-21"],
+form:has(#input-22:valid) #progress [href="#slide-22"],
+form:has(#input-23:valid) #progress [href="#slide-23"],
+form:has(#input-24:valid) #progress [href="#slide-24"],
+form:has(#input-25:valid) #progress [href="#slide-25"],
+form:has(#input-26:valid) #progress [href="#slide-26"],
+form:has(#input-27:valid) #progress [href="#slide-27"],
+form:has(#input-28:valid) #progress [href="#slide-28"],
+form:has(#input-29:valid) #progress [href="#slide-29"],
+form:has(#input-30:valid) #progress [href="#slide-30"], 
+form:has(#input-31:valid) #progress [href="#slide-31"],
+form:has(#input-32:valid) #progress [href="#slide-32"],
+form:has(#input-33:valid) #progress [href="#slide-33"],
+form:has(#input-34:valid) #progress [href="#slide-34"],
+form:has(#input-35:valid) #progress [href="#slide-35"],
+form:has(#input-36:valid) #progress [href="#slide-36"],
+form:has(#input-37:valid) #progress [href="#slide-37"],
+form:has(#input-38:valid) #progress [href="#slide-38"],
+form:has(#input-39:valid) #progress [href="#slide-39"],
+form:has(#input-40:valid) #progress [href="#slide-40"], 
+form:has(#input-41:valid) #progress [href="#slide-41"],
+form:has(#input-42:valid) #progress [href="#slide-42"],
+form:has(#input-43:valid) #progress [href="#slide-43"],
+form:has(#input-44:valid) #progress [href="#slide-44"],
+form:has(#input-45:valid) #progress [href="#slide-45"],
+form:has(#input-46:valid) #progress [href="#slide-46"],
+form:has(#input-47:valid) #progress [href="#slide-47"],
+form:has(#input-48:valid) #progress [href="#slide-48"],
+form:has(#input-49:valid) #progress [href="#slide-49"],
+form:has(#input-50:valid) #progress [href="#slide-50"] {
+  border-color: #52cba9;
+  background: #b6f8e4;
+}
+
+form:has(#input-01:user-invalid) #progress [href="#slide-01"],
+form:has(#input-02:user-invalid) #progress [href="#slide-02"],
+form:has(#input-03:user-invalid) #progress [href="#slide-03"],
+form:has(#input-04:user-invalid) #progress [href="#slide-04"],
+form:has(#input-05:user-invalid) #progress [href="#slide-05"],
+form:has(#input-06:user-invalid) #progress [href="#slide-06"],
+form:has(#input-07:user-invalid) #progress [href="#slide-07"],
+form:has(#input-08:user-invalid) #progress [href="#slide-08"],
+form:has(#input-09:user-invalid) #progress [href="#slide-09"],
+form:has(#input-10:user-invalid) #progress [href="#slide-10"], 
+form:has(#input-11:user-invalid) #progress [href="#slide-11"],
+form:has(#input-12:user-invalid) #progress [href="#slide-12"],
+form:has(#input-13:user-invalid) #progress [href="#slide-13"],
+form:has(#input-14:user-invalid) #progress [href="#slide-14"],
+form:has(#input-15:user-invalid) #progress [href="#slide-15"],
+form:has(#input-16:user-invalid) #progress [href="#slide-16"],
+form:has(#input-17:user-invalid) #progress [href="#slide-17"],
+form:has(#input-18:user-invalid) #progress [href="#slide-18"],
+form:has(#input-19:user-invalid) #progress [href="#slide-19"],
+form:has(#input-20:user-invalid) #progress [href="#slide-20"], 
+form:has(#input-21:user-invalid) #progress [href="#slide-21"],
+form:has(#input-22:user-invalid) #progress [href="#slide-22"],
+form:has(#input-23:user-invalid) #progress [href="#slide-23"],
+form:has(#input-24:user-invalid) #progress [href="#slide-24"],
+form:has(#input-25:user-invalid) #progress [href="#slide-25"],
+form:has(#input-26:user-invalid) #progress [href="#slide-26"],
+form:has(#input-27:user-invalid) #progress [href="#slide-27"],
+form:has(#input-28:user-invalid) #progress [href="#slide-28"],
+form:has(#input-29:user-invalid) #progress [href="#slide-29"],
+form:has(#input-30:user-invalid) #progress [href="#slide-30"], 
+form:has(#input-31:user-invalid) #progress [href="#slide-31"],
+form:has(#input-32:user-invalid) #progress [href="#slide-32"],
+form:has(#input-33:user-invalid) #progress [href="#slide-33"],
+form:has(#input-34:user-invalid) #progress [href="#slide-34"],
+form:has(#input-35:user-invalid) #progress [href="#slide-35"],
+form:has(#input-36:user-invalid) #progress [href="#slide-36"],
+form:has(#input-37:user-invalid) #progress [href="#slide-37"],
+form:has(#input-38:user-invalid) #progress [href="#slide-38"],
+form:has(#input-39:user-invalid) #progress [href="#slide-39"],
+form:has(#input-40:user-invalid) #progress [href="#slide-40"], 
+form:has(#input-41:user-invalid) #progress [href="#slide-41"],
+form:has(#input-42:user-invalid) #progress [href="#slide-42"],
+form:has(#input-43:user-invalid) #progress [href="#slide-43"],
+form:has(#input-44:user-invalid) #progress [href="#slide-44"],
+form:has(#input-45:user-invalid) #progress [href="#slide-45"],
+form:has(#input-46:user-invalid) #progress [href="#slide-46"],
+form:has(#input-47:user-invalid) #progress [href="#slide-47"],
+form:has(#input-48:user-invalid) #progress [href="#slide-48"],
+form:has(#input-49:user-invalid) #progress [href="#slide-49"],
+form:has(#input-50:user-invalid) #progress [href="#slide-50"] {
+  border-color: #db9299;
+  background: #f8b6b4;
+}
+    </style>
+  </head>
+  <body>
+
+<details open id="instructions">
+  <summary>
+    <h3 style="display:inline;">Instructions</h3>
+    <p>Guess the name of the movie described by the CSS code in the dark box. The selectors, properties, and values contain clues to help you solve the puzzle (or you can use one of the two available hints).</p>
+    <p>Swipe right or left to navigate between questions, or use the arrow buttons on either side of the card.</p>
+    <p>Click anywhere on this banner to close these instructions.</p>
+  </summary>
+</details>
+<form autocomplete="off">
+  <header>
+    <h1>
+      <div>
+        Guess the Movie
+        <span>(CSS Edition)</span>
+      </div>
+    </h1>
+    <nav id="progress">
+      <a href="#slide-01" title="Go to puzzle 1"><span>Go to puzzle 1 </span></a>
+      <a href="#slide-02" title="Go to puzzle 2"><span>Go to puzzle 2 </span></a>
+      <a href="#slide-03" title="Go to puzzle 3"><span>Go to puzzle 3 </span></a>
+      <a href="#slide-04" title="Go to puzzle 4"><span>Go to puzzle 4 </span></a>
+      <a href="#slide-05" title="Go to puzzle 5"><span>Go to puzzle 5 </span></a>
+      <a href="#slide-06" title="Go to puzzle 6"><span>Go to puzzle 6 </span></a>
+      <a href="#slide-07" title="Go to puzzle 7"><span>Go to puzzle 7 </span></a>
+      <a href="#slide-08" title="Go to puzzle 8"><span>Go to puzzle 8 </span></a>
+      <a href="#slide-09" title="Go to puzzle 9"><span>Go to puzzle 9 </span></a>
+      <a href="#slide-10" title="Go to puzzle 10"><span>Go to puzzle 10</span></a>
+      <a href="#slide-11" title="Go to puzzle 11"><span>Go to puzzle 11</span></a>
+      <a href="#slide-12" title="Go to puzzle 12"><span>Go to puzzle 12</span></a>
+      <a href="#slide-13" title="Go to puzzle 13"><span>Go to puzzle 13</span></a>
+      <a href="#slide-14" title="Go to puzzle 14"><span>Go to puzzle 14</span></a>
+      <a href="#slide-15" title="Go to puzzle 15"><span>Go to puzzle 15</span></a>
+      <a href="#slide-16" title="Go to puzzle 16"><span>Go to puzzle 16</span></a>
+      <a href="#slide-17" title="Go to puzzle 17"><span>Go to puzzle 17</span></a>
+      <a href="#slide-18" title="Go to puzzle 18"><span>Go to puzzle 18</span></a>
+      <a href="#slide-19" title="Go to puzzle 19"><span>Go to puzzle 19</span></a>
+      <a href="#slide-20" title="Go to puzzle 20"><span>Go to puzzle 20</span></a>
+      <a href="#slide-21" title="Go to puzzle 21"><span>Go to puzzle 21</span></a>
+      <a href="#slide-22" title="Go to puzzle 22"><span>Go to puzzle 22</span></a>
+      <a href="#slide-23" title="Go to puzzle 23"><span>Go to puzzle 23</span></a>
+      <a href="#slide-24" title="Go to puzzle 24"><span>Go to puzzle 24</span></a>
+      <a href="#slide-25" title="Go to puzzle 25"><span>Go to puzzle 25</span></a>
+      <a href="#slide-26" title="Go to puzzle 26"><span>Go to puzzle 26</span></a>
+      <a href="#slide-27" title="Go to puzzle 27"><span>Go to puzzle 27</span></a>
+      <a href="#slide-28" title="Go to puzzle 28"><span>Go to puzzle 28</span></a>
+      <a href="#slide-29" title="Go to puzzle 29"><span>Go to puzzle 29</span></a>
+      <a href="#slide-30" title="Go to puzzle 30"><span>Go to puzzle 30</span></a>
+      <a href="#slide-31" title="Go to puzzle 31"><span>Go to puzzle 31</span></a>
+      <a href="#slide-32" title="Go to puzzle 32"><span>Go to puzzle 32</span></a>
+      <a href="#slide-33" title="Go to puzzle 33"><span>Go to puzzle 33</span></a>
+      <a href="#slide-34" title="Go to puzzle 34"><span>Go to puzzle 34</span></a>
+      <a href="#slide-35" title="Go to puzzle 35"><span>Go to puzzle 35</span></a>
+      <a href="#slide-36" title="Go to puzzle 36"><span>Go to puzzle 36</span></a>
+      <a href="#slide-37" title="Go to puzzle 37"><span>Go to puzzle 37</span></a>
+      <a href="#slide-38" title="Go to puzzle 38"><span>Go to puzzle 38</span></a>
+      <a href="#slide-39" title="Go to puzzle 39"><span>Go to puzzle 39</span></a>
+      <a href="#slide-40" title="Go to puzzle 40"><span>Go to puzzle 40</span></a>
+      <a href="#slide-41" title="Go to puzzle 41"><span>Go to puzzle 41</span></a>
+      <a href="#slide-42" title="Go to puzzle 42"><span>Go to puzzle 42</span></a>
+      <a href="#slide-43" title="Go to puzzle 43"><span>Go to puzzle 43</span></a>
+      <a href="#slide-44" title="Go to puzzle 44"><span>Go to puzzle 44</span></a>
+      <a href="#slide-45" title="Go to puzzle 45"><span>Go to puzzle 45</span></a>
+      <a href="#slide-46" title="Go to puzzle 46"><span>Go to puzzle 46</span></a>
+      <a href="#slide-47" title="Go to puzzle 47"><span>Go to puzzle 47</span></a>
+      <a href="#slide-48" title="Go to puzzle 48"><span>Go to puzzle 48</span></a>
+      <a href="#slide-49" title="Go to puzzle 49"><span>Go to puzzle 49</span></a>
+      <a href="#slide-50" title="Go to puzzle 50"><span>Go to puzzle 50</span></a>
+    </nav>
+  </header>
+  <ul>
+    <li id="slide-01">
+      <div class="code code-01" id="code-01" role="text">
+        <pre><span class="s">#Django</span> {
+  <span class="p">chains</span>: <span class="v">none</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-01" pattern="[Dd][Jj]ango [Uu]nchained" aria-labelledby="code-01" required />
+        <output id="correct-01" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Jamie Foxx starred this western.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Directed by Quentin Tarantino.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow next" href="#slide-02"><span>Go to puzzle 2</span></a>
+    </li>
+    <li id="slide-02">
+      <div class="code code-02" id="code-02" role="text">
+        <pre><span class="s">#Schindler ul</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-02" pattern="[Ss]chindler's [Ll]ist" aria-labelledby="code-02" required />
+        <output id="correct-02" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Based on the true story of Oskar Schindler.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Directed by Steven Spielberg.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-01"><span>Go to puzzle 1</span></a>
+      <a class="arrow next" href="#slide-03"><span>Go to puzzle 3</span></a>
+    </li>
+    <li id="slide-03">
+      <div class="code code-03" id="code-03" role="text">
+        <pre><span class="s">.lamb</span> {
+  <span class="p">volume</span>: <span class="n">0</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-03" pattern="[Tt]he [Ss]ilence [Oo]f [Tt]he [Ll]ambs" aria-labelledby="code-03" required />
+        <output id="correct-03" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>5 words.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Jodie Foster and Anthony Hopkins star.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-02"><span>Go to puzzle 2</span></a>
+      <a class="arrow next" href="#slide-04"><span>Go to puzzle 4</span></a>
+    </li>
+    <li id="slide-04">
+      <div class="code code-04" id="code-04" role="text">
+        <pre><span class="s">.boat</span> {
+  <span class="p">float</span>: <span class="v">none</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-04" pattern="[Tt]itanic" aria-labelledby="code-04" required />
+        <output id="correct-04" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>It won 11 Academy Awards.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Starring Leonardo DiCaprio and Kate Winslet.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-03"><span>Go to puzzle 3</span></a>
+      <a class="arrow next" href="#slide-05"><span>Go to puzzle 5</span></a>
+    </li>
+    <li id="slide-05">
+      <div class="code code-05" id="code-05" role="text">
+        <pre><span class="s">.sense:nth-of-type</span>(<span class="n">6</span>) {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-05" pattern="[Tt]he ([Ss]ixth|6th) [Ss]ense" aria-labelledby="code-05" required />
+        <output id="correct-05" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>3 words (or numbers)</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>"I see dead people."</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-04"><span>Go to puzzle 4</span></a>
+      <a class="arrow next" href="#slide-06"><span>Go to puzzle 6</span></a>
+    </li>
+
+    <li id="slide-06">
+      <div class="code code-06" id="code-06" role="text">
+        <pre><span class="s">picture.show:last-of-type</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-06" pattern="[Tt]he [Ll]ast [Pp]icture [Ss]how" aria-labelledby="code-06" required />
+        <output id="correct-06" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>4 words</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Jeff Bridges starred this 1971 coming-of-age drama.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-05"><span>Go to puzzle 5</span></a>
+      <a class="arrow next" href="#slide-07"><span>Go to puzzle 7</span></a>
+    </li>
+    <li id="slide-07">
+      <div class="code code-07" id="code-07" role="text">
+        <pre><span class="s">.clockwork</span> {
+  <span class="p">color</span>: <span class="v">orange</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-07" pattern="[Aa] [Cc]lock[Ww]ork [Oo]range" aria-labelledby="code-07" required />
+        <output id="correct-07" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Directed by Stanley Kubrick.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Based on Anthony Burgess' 1962 dystopian novel.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-06"><span>Go to puzzle 6</span></a>
+      <a class="arrow next" href="#slide-08"><span>Go to puzzle 8</span></a>
+    </li>
+    <li id="slide-08">
+      <div class="code code-08" id="code-08" role="text">
+        <pre><span class="p">@keyframes</span> <span class="v">movie</span> {
+  <span class="s">to</span> { <span class="p">left</span>: <span class="s">max</span>(<span class="n">Infinity</span>); }
+}</pre>
+      </div>
+      <div>
+        <input id="input-08" pattern="[Ff]rom [Hh]ere [Tt]o [Ee]ternity" aria-labelledby="code-08" required />
+        <output id="correct-08" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1953 American romantic war drama directed by Fred Zinnemann.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Starring Burt Lancaster, Montgomery Clift, and Frank Sinatra.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-07"><span>Go to puzzle 7</span></a>
+      <a class="arrow next" href="#slide-09"><span>Go to puzzle 9</span></a>
+    </li>
+    <li id="slide-09">
+      <div class="code code-09" id="code-09" role="text">
+        <pre><span class="s">.rebel:not</span>(<span class="s">.cause</span>) {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-09" pattern="[Rr]ebel [Ww]ithout [Aa] [Cc]ause" aria-labelledby="code-09" required />
+        <output id="correct-09" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1955 drama starring James Dean and Natalie Wood.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The film debut of Dennis Hopper.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-08"><span>Go to puzzle 8</span></a>
+      <a class="arrow next" href="#slide-10"><span>Go to puzzle 10</span></a>
+    </li>
+    <li id="slide-10">
+      <div class="code code-10" id="code-10" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">transform</span>: <span class="s">matrix</span>(<span class="n">1</span>, <span class="n">1</span>, <span class="n">1</span>, <span class="n">1</span>, <span class="n">1</span>, <span class="n">1</span>);
+}</pre>
+      </div>
+      <div>
+        <input id="input-10" pattern="[Tt]he [Mm]atrix" aria-labelledby="code-10" required />
+        <output id="correct-10" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2 words!</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Keanu Reeves stars as Neo.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-09"><span>Go to puzzle 9</span></a>
+      <a class="arrow next" href="#slide-11"><span>Go to puzzle 11</span></a>
+    </li>
+    <li id="slide-11">
+      <div class="code code-11" id="code-11" role="text">
+        <pre><span class="s">.one</span> {
+  <span class="p">animation</span>: <span class="s">fly</span> <span class="n">1s -1s 1</span> <span class="v">forwards</span>;
+
+  <span class="s">& .cuckoo</span> {
+    <span class="c">/* ... */</span>
+  }
+}</pre>
+      </div>
+      <div>
+        <input id="input-11" pattern="[Oo]ne [Ff]lew [Oo]ver [Tt]he [Cc]uckoo's [Nn]est" aria-labelledby="code-11" required />
+        <output id="correct-11" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>6 words.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Miloš Forman directed Jack Nicholson in this 1975 movie.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-10"><span>Go to puzzle 10</span></a>
+      <a class="arrow next" href="#slide-12"><span>Go to puzzle 12</span></a>
+    </li>
+    <li id="slide-12">
+      <div class="code code-12" id="code-12" role="text">
+        <pre><span class="s">.samurai:nth-child</span>(<span class="n">7</span>)<span class="s">:last-child</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-12" pattern="([Ss]even|7) [Ss]amurai" aria-labelledby="code-12" required />
+        <output id="correct-12" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Akira Kurosawa wrote and directed this movie.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>2 words (or 1 number and 1 word).</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-11"><span>Go to puzzle 11</span></a>
+      <a class="arrow next" href="#slide-13"><span>Go to puzzle 13</span></a>
+    </li>
+    <li id="slide-13">
+      <div class="code code-13" id="code-13" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">background</span>: <span class="v">#008000</span>;
+  <span class="p">width</span>: <span class="v">63360in</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-13" pattern="[Tt]he [Gg]reen [Mm]ile" aria-labelledby="code-13" required />
+        <output id="correct-13" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Based on a Stephen King's novel.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Starring Tom Hanks and Michael Clarke Duncan.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-12"><span>Go to puzzle 12</span></a>
+      <a class="arrow next" href="#slide-14"><span>Go to puzzle 14</span></a>
+    </li>
+    <li id="slide-14">
+      <div class="code code-14" id="code-14" role="text">
+        <pre><span class="s">.house:lang</span>(<span class="s">es</span>) {
+  <span class="p">color</span>: <span class="v">white</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-14" pattern="[Cc]asa[Bb]lanca" aria-labelledby="code-14" required />
+        <output id="correct-14" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Starring Humphrey Bogart and Ingrid Bergman</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>"Louis, I think this is the beginning of a beautiful friendship."</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-13"><span>Go to puzzle 13</span></a>
+      <a class="arrow next" href="#slide-15"><span>Go to puzzle 15</span></a>
+    </li>
+    <li id="slide-15">
+      <div class="code code-15" id="code-15" role="text">
+        <pre><span class="s">.fail:nth-of-type</span>(<span class="n">12</span>) {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-15" pattern="([Tt]welf|12)[Tt][Hh] [Ff]ail" aria-labelledby="code-15" required />
+        <output id="correct-15" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2023 Indian biographical drama directed, produced and written by Vidhu Vinod Chopra.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The story of Manoj Kumar Sharma, who overcame extreme poverty to become an Indian police officer.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-14"><span>Go to puzzle 14</span></a>
+      <a class="arrow next" href="#slide-16"><span>Go to puzzle 16</span></a>
+    </li>
+    <li id="slide-16">
+      <div class="code code-16" id="code-16" role="text">
+        <pre><span class="s">.knight</span> {
+  <span class="p">color</span>: <span class="v">#000</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-16" pattern="[Tt]he [Dd]ark [Kk]night" aria-labelledby="code-16" required />
+        <output id="correct-16" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>3 words.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Batman movie starring Christian Bale and Heath Ledger.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-15"><span>Go to puzzle 15</span></a>
+      <a class="arrow next" href="#slide-17"><span>Go to puzzle 17</span></a>
+    </li>
+    <li id="slide-17">
+      <div class="code code-17" id="code-17" role="text">
+        <pre><span class="s">.knight</span> {
+  <span class="p">color</span>: <span class="v">#000</span>;
+  <span class="p">transform</span>: <span class="s">translateY</span>(<span class="n">-100%</span>);
+}</pre>
+      </div>
+      <div>
+        <input id="input-17" pattern="[Tt]he [Dd]ark [Kk]night [Rr]ises" aria-labelledby="code-17" required />
+        <output id="correct-17" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>4 words.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The sequel to the movie in the previous puzzle.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-16"><span>Go to puzzle 16</span></a>
+      <a class="arrow next" href="#slide-18"><span>Go to puzzle 18</span></a>
+    </li>
+    <li id="slide-18">
+      <div class="code code-18" id="code-18" role="text">
+        <pre><span class="s">.idiot:nth-child</span>(<span class="n">3</span>)<span class="s">:last-of-type</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-18" pattern="(3|[Tt]hree) [Ii]diots" aria-labelledby="code-18" required />
+        <output id="correct-18" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2009 Indian Hindi-language coming-of-age satirical comedy.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>It stars Aamir Khan, R. Madhavan, and Sharman Joshi in the title roles.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-17"><span>Go to puzzle 17</span></a>
+      <a class="arrow next" href="#slide-19"><span>Go to puzzle 19</span></a>
+    </li>
+    <li id="slide-19">
+      <div class="code code-19" id="code-19" role="text">
+        <pre><span class="s">.book</span> {
+  <span class="p">color</span>: <span class="v">green</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-19" pattern="[Gg]reen [Bb]ook" aria-labelledby="code-19" required />
+        <output id="correct-19" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Starring Viggo Mortensen and Mahershala Ali.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Won Best Movie at the 91st Academy Awards (2019).</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-18"><span>Go to puzzle 18</span></a>
+      <a class="arrow next" href="#slide-20"><span>Go to puzzle 20</span></a>
+    </li>
+    <li id="slide-20">
+      <div class="code code-20" id="code-20" role="text">
+        <pre><span class="s">#Mary</span> + <span class="s">#Max</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-20" pattern="[Mm]ary [Aa]nd [Mm]ax" aria-labelledby="code-20" required />
+        <output id="correct-20" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2009 Australian stop-motion animated tragicomedy.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>It has the voices of Toni Collette, Philip Seymour Hoffman, and Eric Bana.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-19"><span>Go to puzzle 19</span></a>
+      <a class="arrow next" href="#slide-21"><span>Go to puzzle 21</span></a>
+    </li>
+    <li id="slide-21">
+      <div class="code code-21" id="code-21" role="text">
+        <pre><span class="s">.man:nth-of-type</span>(<span class="n">3</span>) {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-21" pattern="[Tt]he (3[Rr][Dd]|[Tt]hird) [Mm]an" aria-labelledby="code-21" required />
+        <output id="correct-21" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1949 film noir directed by Carol Reed and written by Graham Greene.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>It stars Orson Welles as Harry Lime.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-20"><span>Go to puzzle 20</span></a>
+      <a class="arrow next" href="#slide-22"><span>Go to puzzle 22</span></a>
+    </li>
+    <li id="slide-22">
+      <div class="code code-22" id="code-22" role="text">
+        <pre><span class="s">#Smith</span> {
+  <span class="p">will-change</span>: <span class="v">grid-area</span>;
+  <span class="p">grid-area</span>: <span class="v">washington</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-22" pattern="([Mm][Rr]|[Mm][Rr]\.|[Mm]ister) [Ss]mith [Gg]oes [Tt]o [Ww]ashington" aria-labelledby="code-22" required />
+        <output id="correct-22" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>5 Words.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>1939 political comedy-drama directed by Frank Capra, starring Jean Arthur and James Stewart.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-21"><span>Go to puzzle 21</span></a>
+      <a class="arrow next" href="#slide-23"><span>Go to puzzle 23</span></a>
+    </li>
+    <li id="slide-23">
+      <div class="code code-23" id="code-23" role="text">
+        <pre><span class="s">#oz .wizard</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-23" pattern="[Tt]he [Ww]izard [Oo]f [Oo][Zz]" aria-labelledby="code-23" required />
+        <output id="correct-23" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>"Toto, I don't think we're in Kansas anymore."</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Judy Garland starred as Dorothy Gale and sang 'Over the Rainbow.'</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-22"><span>Go to puzzle 22</span></a>
+      <a class="arrow next" href="#slide-24"><span>Go to puzzle 24</span></a>
+    </li>
+    <li id="slide-24">
+      <div class="code code-24" id="code-24" role="text">
+        <pre><span class="s">:nth-child</span>(<span class="n">5</span>) {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-24" pattern="[Tt]he (5[Tt][Hh]|[Ff]ifth) [Ee]lement" aria-labelledby="code-24" required />
+        <output id="correct-24" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Multipass!</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Science-fiction movie starrnig Milla Jovovich, Bruce Willis, and Gary Oldman.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-23"><span>Go to puzzle 23</span></a>
+      <a class="arrow next" href="#slide-25"><span>Go to puzzle 25</span></a>
+    </li>
+    <li id="slide-25">
+      <div class="code code-25" id="code-25" role="text">
+        <pre><span class="s">.spice</span> {
+  <span class="p">color</span>: <span class="v">SandyBrown</span>;
+
+  <span class="s">&</span> + <span class="s">.person .eye</span> {
+    <span class="p">color</span>: <span class="v">blue</span>;
+  }
+}</pre>
+      </div>
+      <div>
+        <input id="input-25" pattern="[Dd][Uu][Nn][Ee]" aria-labelledby="code-25" required />
+        <output id="correct-25" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Based on the 1965 homonymous novel by Frank Herbert.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Epic space opera starring Timothée Chalamet and Zendaya.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-24"><span>Go to puzzle 24</span></a>
+      <a class="arrow next" href="#slide-26"><span>Go to puzzle 26</span></a>
+    </li>
+    <li id="slide-26">
+      <div class="code code-26" id="code-26" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">content</span>: <span class="v">"7"</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-26" pattern="[Ss]e[Vv7]en" aria-labelledby="code-26" required />
+        <output id="correct-26" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Thriller starring Brad Pitt and Morgan Freeman</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Two detectives must solve a <em>sinful</em> case.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-25"><span>Go to puzzle 25</span></a>
+      <a class="arrow next" href="#slide-27"><span>Go to puzzle 27</span></a>
+    </li>
+    <li id="slide-27">
+      <div class="code code-27" id="code-27" role="text">
+        <pre><span class="s">.dictator</span> {
+  <span class="p">scale</span>: <span class="n">5</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-27" pattern="[Tt]he [Gg]reat [Dd]ictator" aria-labelledby="code-27" required />
+        <output id="correct-27" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1940 American political satire written, directed, produced by, and starring Charlie Chaplin.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>It is considered one of the greatest comedy films ever made, and an important work of satire.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-26"><span>Go to puzzle 26</span></a>
+      <a class="arrow next" href="#slide-28"><span>Go to puzzle 28</span></a>
+    </li>
+    <li id="slide-28">
+      <div class="code code-28" id="code-28" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">transform</span>: 
+    <span class="s">translate</span>(<span class="n">0</span>, <span class="n">-100%</span>)
+    <span class="s">translate</span>(<span class="n">-100%</span>, <span class="n">-100%</span>);
+}</pre>
+      </div>
+      <div>
+        <input id="input-28" pattern="[Nn]orth [Bb]y [Nn]orthwest" aria-labelledby="code-28" required />
+        <output id="correct-28" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1959 spy thriller film produced and directed by Alfred Hitchcock.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Starring Cary Grant, Eva Marie Saint, and James Mason.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-27"><span>Go to puzzle 27</span></a>
+      <a class="arrow next" href="#slide-29"><span>Go to puzzle 29</span></a>
+    </li>
+    <li id="slide-29">
+      <div class="code code-29" id="code-29" role="text">
+        <pre><span class="s">.country:not</span>(<span class="s">.men.old</span>) {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-29" pattern="[Nn]o [Cc]ountry [Ff]or [Oo]ld [Mm]en" aria-labelledby="code-29" required />
+        <output id="correct-29" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Javier Bardem was a friendo with a weird hairdo.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>2007 neo-Western written, directed, produced, and edited by Joel and Ethan Coen.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-28"><span>Go to puzzle 28</span></a>
+      <a class="arrow next" href="#slide-30"><span>Go to puzzle 30</span></a>
+    </li>
+    <li id="slide-30">
+      <div class="code code-30" id="code-30" role="text">
+        <pre><span class="s">#Ebbing</span> 
+  ~ <span class="s">.billboard</span>
+  ~ <span class="s">.billboard</span>
+  ~ <span class="s">.billboard</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-30" pattern="(3|[Tt]hree) [Bb]illboards [Oo]utside [Ee]bbing,? [Mm]issouri" aria-labelledby="code-30" required />
+        <output id="correct-30" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>It stars Frances McDormand as Mildred Hayes, also Woody Harrelson and Sam Rockwell.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>2017 crime drama film written, directed, and produced by Martin McDonagh.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-29"><span>Go to puzzle 29</span></a>
+      <a class="arrow next" href="#slide-31"><span>Go to puzzle 31</span></a>
+    </li>
+    <li id="slide-31">
+      <div class="code code-31" id="code-31" role="text">
+        <pre><span class="s">:scope</span> ~ <span class="s">#totoro</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-31" pattern="[Mm]y [Nn]eighb(o|ou)r [Tt]otoro" aria-labelledby="code-31" required />
+        <output id="correct-31" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Animation movie by Studio Ghibli.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Two girls meet a giant friendly spirit of the forest.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-30"><span>Go to puzzle 30</span></a>
+      <a class="arrow next" href="#slide-32"><span>Go to puzzle 32</span></a>
+    </li>
+    <li id="slide-32">
+      <div class="code code-32" id="code-32" role="text">
+        <pre><span class="s">#Heaven</span> > * {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-32" pattern="[Cc]hildren [Oo]f [Hh]eaven" aria-labelledby="code-32" required />
+        <output id="correct-32" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>3 words.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>1997 Iranian family drama written and directed by Majid Majidi.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-31"><span>Go to puzzle 31</span></a>
+      <a class="arrow next" href="#slide-33"><span>Go to puzzle 33</span></a>
+    </li>
+    <li id="slide-33">
+      <div class="code code-33" id="code-33" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">color</span>: <span class="v">gold</span>;
+  <span class="p">animation-duration</span>: <span class="n">0.05s</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-33" pattern="[Tt]he [Gg]old [Rr]ush" aria-labelledby="code-33" required />
+        <output id="correct-33" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1925 silent comedy written, produced, and directed by Charlie Chaplin.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The story of a brave and optimistic gold-digger in Alaska.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-32"><span>Go to puzzle 32</span></a>
+      <a class="arrow next" href="#slide-34"><span>Go to puzzle 34</span></a>
+    </li>
+    <li id="slide-34">
+      <div class="code code-34" id="code-34" role="text">
+        <pre><span class="s">.seal:nth-of-type</span>(<span class="n">7</span>) {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-34" pattern="[Tt]he (7[Tt][Hh]|[Ss]eventh) [Ss]eal" aria-labelledby="code-34" required />
+        <output id="correct-34" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1957 Swedish fantasy film written and directed by Ingmar Bergman.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The journey of a medieval knight and a game of chess he plays with Death.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-33"><span>Go to puzzle 33</span></a>
+      <a class="arrow next" href="#slide-35"><span>Go to puzzle 35</span></a>
+    </li>
+    <li id="slide-35">
+      <div class="code code-35" id="code-35" role="text">
+        <pre>[<span class="s">lang</span>] <span class="s">:not</span>(<span class="s">.found</span>) {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-35" pattern="[Ll]ost [Ii]n [Tt]ranslation" aria-labelledby="code-35" required />
+        <output id="correct-35" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>Bill Murray and Scarlett Johansson starred this </div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>2003 romantic comedy-drama written and directed by Sofia Coppola.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-34"><span>Go to puzzle 34</span></a>
+      <a class="arrow next" href="#slide-36"><span>Go to puzzle 36</span></a>
+    </li>
+    <li id="slide-36">
+      <div class="code code-36" id="code-36" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">animation-delay</span>: <span class="n">2419200s</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-36" pattern="28 [Dd]ays [Ll]ater" aria-labelledby="code-36" required />
+        <output id="correct-36" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2002 post-apocalyptic horror film directed by Danny Boyle.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A virus transforms people into fast, aggressive, and bloodthirsty zombies.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-35"><span>Go to puzzle 35</span></a>
+      <a class="arrow next" href="#slide-37"><span>Go to puzzle 37</span></a>
+    </li>
+    <li id="slide-37">
+      <div class="code code-37" id="code-37" role="text">
+        <pre><span class="s">.sea</span> + <span class="s">#Manchester</span> {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-37" pattern="[Mm]anchester [Bb]y [Tt]he [Ss]ea" aria-labelledby="code-37" required />
+        <output id="correct-37" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2016 drama starring Casey Affleck and Michelle Williams.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Cassey Affleck won the Best Actor Academy Award for this movie.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-36"><span>Go to puzzle 36</span></a>
+      <a class="arrow next" href="#slide-38"><span>Go to puzzle 38</span></a>
+    </li>
+    <li id="slide-38">
+      <div class="code code-38" id="code-38" role="text">
+        <pre><span class="s">.men</span> > * {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-38" pattern="[Cc]hildren [Oo]f [Mm]en" aria-labelledby="code-38" required />
+        <output id="correct-38" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2006 dystopian action thriller directed and co-written by Alfonso Cuarón.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Starring Clive Owen, Julianne Moore, Michael Caine, and Chiwetel Ejiofor.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-37"><span>Go to puzzle 37</span></a>
+      <a class="arrow next" href="#slide-39"><span>Go to puzzle 39</span></a>
+    </li>
+    <li id="slide-39">
+      <div class="code code-39" id="code-39" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">border</span>: <span class="n">0.5px</span> <span class="v">solid red</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-39" pattern="[Tt]he [Tt]hin [Rr]ed [Ll]ine" aria-labelledby="code-39" required />
+        <output id="correct-39" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1998 American epic war film written and directed by Terrence Malick.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Soldiers' struggles and the clash between humanity and nature during the Battle of Guadalcanal.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-38"><span>Go to puzzle 38</span></a>
+      <a class="arrow next" href="#slide-40"><span>Go to puzzle 40</span></a>
+    </li>
+    <li id="slide-40">
+      <div class="code code-40" id="code-40" role="text">
+        <pre><span class="s">.noon</span> {
+  <span class="p">z-index</span>: <span class="n">999999</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-40" pattern="[Hh]igh [Nn]oon" aria-labelledby="code-40" required />
+        <output id="correct-40" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1952 Western starring Gary Cooper and Grace Kelly.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>A town marshal must decide to either face a gang of killers, or leave town.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-39"><span>Go to puzzle 39</span></a>
+      <a class="arrow next" href="#slide-41"><span>Go to puzzle 41</span></a>
+    </li>
+    <li id="slide-41">
+      <div class="code code-41" id="code-41" role="text">
+        <pre><span class="s">#Apocalypse</span> {
+  <span class="p">animation-delay</span>: <span class="n">0s</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-41" pattern="[Aa]pocalypse [Nn]ow" aria-labelledby="code-41" required />
+        <output id="correct-41" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>This 1979 film stars Marlon Brando, Robert Duvall, and Martin Sheen.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Epic war film produced and directed by Francis Ford Coppola.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-40"><span>Go to puzzle 40</span></a>
+      <a class="arrow next" href="#slide-42"><span>Go to puzzle 42</span></a>
+    </li>
+    <li id="slide-42">
+      <div class="code code-42" id="code-42" role="text">
+        <pre><span class="s">#music</span> {
+  <span class="p">volume</span>: <span class="n">100</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-42" pattern="[Tt]he [Ss]ound [Oo]f [Mm]usic" aria-labelledby="code-42" required />
+        <output id="correct-42" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>The story of the Von Trapp family.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>This musical is starred by Julie Andrews and Christopher Plummer.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-41"><span>Go to puzzle 41</span></a>
+      <a class="arrow next" href="#slide-43"><span>Go to puzzle 43</span></a>
+    </li>
+    <li id="slide-43">
+      <div class="code code-43" id="code-43" role="text">
+        <pre><span class="s">link</span>[<span class="s">lang="fr"</span>] {
+  <span class="c">/* ... */</span>
+}</pre>
+      </div>
+      <div>
+        <input id="input-43" pattern="[Tt]he [Ff]rench [Cc]onnection" aria-labelledby="code-43" required />
+        <output id="correct-43" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1971 action thriller starring Gene Hackman, Roy Scheider, and Fernando Rey.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>At the 44th Academy Awards, it earned eight nominations and won five.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-42"><span>Go to puzzle 42</span></a>
+      <a class="arrow next" href="#slide-44"><span>Go to puzzle 44</span></a>
+    </li>
+    <li id="slide-44">
+      <div class="code code-44" id="code-44" role="text">
+        <pre>[<span class="s">lang="es"</span>]<span class="s">:nth-child</span>(<span class="n">11</span>) {
+  <span class="c">/* ;-) */</span>;
+  <span class="p">volume</span>: <span class="n">78</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-44" pattern="[Oo][Nn][Cc][Ee]" aria-labelledby="code-44" required />
+        <output id="correct-44" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>The clue about Spanish is a bit misleading (it's too literal).</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Irish romantic musical drama that was later adapted into a Broadway play.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-43"><span>Go to puzzle 43</span></a>
+      <a class="arrow next" href="#slide-45"><span>Go to puzzle 45</span></a>
+    </li>
+    <li id="slide-45">
+      <div class="code code-45" id="code-45" role="text">
+        <pre><span class="s">.army</span> {
+  <span class="p">box-shadow</span>: <span class="n">1px 1px</span>, <span class="n">2px 2px</span>;
+  <span class="p">filter</span>:
+    <span class="s">drop-shadow</span>(<span class="n">1px 1px</span>)
+    <span class="s">drop-shadow</span>(<span class="n">2px 2px</span>);
+  <span class="p">text-shadow</span>: <span class="n">1px 1px</span>, <span class="n">2px 2px</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-45" pattern="[Aa]rmy [Oo]f [Ss]hadows" aria-labelledby="code-45" required />
+        <output id="correct-45" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1969 Franco-Italian suspense-drama  written and directed by Jean-Pierre Melville.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>The film follows a small group of Resistance fighters as they go through World War II.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-44"><span>Go to puzzle 44</span></a>
+      <a class="arrow next" href="#slide-46"><span>Go to puzzle 46</span></a>
+    </li>
+    <li id="slide-46">
+      <div class="code code-46" id="code-46" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">rotate</span>: <span class="n">90deg</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-46" pattern="[Ss]ideways" aria-labelledby="code-46" required />
+        <output id="correct-46" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2004 comedy-drama starring Paul Giamatti and Thomas Haden Church.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Two friends take a road trip to Santa Barbara County wine country to celebrate an engagement.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-45"><span>Go to puzzle 45</span></a>
+      <a class="arrow next" href="#slide-47"><span>Go to puzzle 47</span></a>
+    </li>
+    <li id="slide-47">
+      <div class="code code-47" id="code-47" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">color</span>: <span class="v">blue</span>;
+  <span class="p">background-color</span>: <span class="v">blue</span>;
+  <span class="p">border-color</span>: <span class="v">blue</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-47" pattern="(3|[Tt]hree) [Cc]ol(o|ou)rs: [Bb]lue" aria-labelledby="code-47" required />
+        <output id="correct-47" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>First part in Krzysztof Kieślowski's trilogy inspired by French Revolutionary ideals.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Juliette Binoche plays the role of a woman who just lost her family in a car accident.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-46"><span>Go to puzzle 46</span></a>
+      <a class="arrow next" href="#slide-48"><span>Go to puzzle 48</span></a>
+    </li>
+    <li id="slide-48">
+      <div class="code code-48" id="code-48" role="text">
+        <pre><span class="s">figure</span> {
+  <span class="p">visibility</span>: <span class="v">hidden</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-48" pattern="[Hh]idden [Ff]igures" aria-labelledby="code-48" required />
+        <output id="correct-48" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>2016 drama starring Taraji P. Henson, Octavia Spencer, and Janelle Monáe.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>It tells the story of three African-American women working as mathematicians at NASA.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-47"><span>Go to puzzle 47</span></a>
+      <a class="arrow next" href="#slide-49"><span>Go to puzzle 49</span></a>
+    </li>
+    <li id="slide-49">
+      <div class="code code-49" id="code-49" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">color</span>: <span class="v">red</span>;
+  <span class="p">color</span>: <span class="v">yellow</span>;
+  <span class="p">color</span>: <span class="v">blue</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-49" pattern="[Pp]rimary [Cc]olors" aria-labelledby="code-49" required />
+        <output id="correct-49" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>1996 movie starring John Travolta and Emma Thompson.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>Inspired in the Bill Clinton 1992 presidential campaign.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-48"><span>Go to puzzle 48</span></a>
+      <a class="arrow next" href="#slide-50"><span>Go to puzzle 50</span></a>
+    </li>
+    <li id="slide-50">
+      <div class="code code-50" id="code-50" role="text">
+        <pre><span class="s">#movie</span> {
+  <span class="p">orphans</span>: <span class="n">1</span>;
+}</pre>
+      </div>
+      <div>
+        <input id="input-50" pattern="[Oo]rphan" aria-labelledby="code-50" required />
+        <output id="correct-50" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>A couple who recently lost their baby adopt a girl who is not as innocent as she appears.</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>2009 horror movie starring Isabelle Fuhrman.</div>
+          </details>
+        </section>
+      </div>
+      <a class="arrow prev" href="#slide-49"><span>Go to puzzle 49</span></a>
+    </li>
+    <!--
+    <li>
+      <div class="code code-">
+        <pre>
+</pre>
+      </div>
+      <div>
+        <input id="input-" pattern="" aria-labelledby="code- correct-" required />
+        <output id="correct-" aria-live="assertive">Correct</output>
+        <section>
+          <details>
+            <summary>Hint 1</summary>
+            <div>8 letters</div>
+          </details>
+          <details>
+            <summary>Hint 2</summary>
+            <div>.</div>
+          </details>
+        </section>
+      </div>
+    </li>
+-->
+  </ul>
+
+  <p class="center">Swipe or tab to go to a different level</p>
+
+  <div id="final" role="dialog" aria-live="assertive" aria-labelledby="final-title" aria-describedby="final-desc">
+    <div>
+      <h2>
+        <div id="final-title">
+          You Did It!
+        </div>
+      </h2>
+      <div id="final-desc">
+        <p>You guessed all the brands correctly!</p>
+        <p>You used <span></span> hints to finish.</p>
+        <p>Refresh the page or click the button below to start again</p>
+      </div>
+      <input type="reset" autofocus value="Reset the Game" />
+    </div>
+  </div>
+</form>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
