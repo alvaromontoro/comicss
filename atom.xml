@@ -4167,4 +4167,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Word Association</title>
+    <link href="https://comicss.art/comics/220" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/220/word-association.html"/>
+    <id>https://comicss.art/comics/220</id>
+    <updated>2025-11-03T00:00:00Z</updated>
+    <summary>New Cartoon: Word Association</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/220/word-association.png" alt="3 cartoons associating regular words with CSS properties, and applying them in the cartoon itself. City turns into Opacity:0.3, and it has a city that fades out. Hens turns into hyphens:auto, and a list of chickens break between lines with hyphens (cutting some in half). Ape turns into shape-outside:url(--head), it has a monkey with text that wraps around its head." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

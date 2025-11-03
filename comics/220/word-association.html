@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/220/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/220/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Patrick Hand';
+  src: url(/fonts/PatrickHand-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(/fonts/AmaticSC-Bold.ttf);
+  font-weight: 900;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+ article {
+  display: grid;
+  width: 90em;
+  font-size: 1vmin;
+  font-family: 'Amatic SC', 'Patrick Hand', sans-serif;
+  margin: 2em;
+  justify-content: space-between;
+
+  section {
+    aspect-ratio: 1;
+    width: 90em;
+    height: 90em;
+    overflow: hidden;
+    container-type: inline-size;
+
+    h2 {
+      text-align: center;
+      margin: 0;
+      margin-block-start: 2cqi;
+      font-size: 9cqi;
+      font-weight: 400;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover span {
+        max-width: 25ch;
+      }
+
+      span {
+        display: inline-block;
+        max-width: 0ch;
+        overflow: clip;
+        white-space: nowrap;
+        transition: max-width 1s;
+      }
+    }
+  }
+}
+
+/* body:hover article section h2 span {
+max-width: 10ch;
+} */
+
+#hens {
+  background: #8c9;
+  /*   border: 1em solid #8c9; */
+  padding-right: 2em;
+  box-sizing: border-box;
+
+  &:hover {
+    h2 span {
+      max-width: 10ch;
+    }
+    .hens {
+      hyphens: auto;
+      background:
+        conic-gradient(at 97.5% 98.5%, #0000 90deg, #000 0 180deg, #0000 0) 0 -38cqi / 100% 53cqi;
+    }
+  }
+
+  .hens {
+    font-size: 11.5cqi;
+    hyphens: manual;
+    text-align: center;
+    /* cheating a little here */
+    background:
+      conic-gradient(at 97% 98%, #0000 90deg, #0000 0 180deg, #0000 0) 0 -38cqi / 100% 53cqi;
+    position: relative;
+    transition: hyphens 0.5s, background 0.5s;
+    transition-delay: 0.75s;
+    transition-behavior: allow-discrete;
+
+    span {
+      --feathers: #fff;
+      --tail: #f00;
+      color: #0000;
+      display: inline;
+      line-height: 2.3em;
+      padding: 0.5em 0;
+      background: 
+        /* head */
+        radial-gradient(farthest-side, #000 calc(100% - 1px), #0000) 75% 22% / 1cqi 1cqi,
+        radial-gradient(farthest-side, var(--feathers) calc(100% - 1px), #0000) 76.25% 20% / 4cqi 4cqi,
+        /* beak */
+        conic-gradient(at 100% 0, #0000 240deg, orange 0) 85% 23% / 2cqi 1cqi,
+        conic-gradient(at 0% 0%, #0000 130deg, orange 0) 85% 26% / 2cqi 1cqi,
+        /* neck */
+        radial-gradient(farthest-side at 0 100%, var(--feathers) calc(100% - 1px), #0000) 76.25% 33% / 4cqi 25%,
+        /* body */
+        radial-gradient(farthest-side at 50% 0, var(--feathers) calc(100% - 1px), #0000) 50% 70% / 60% 30%,
+        /* deco */
+        radial-gradient(farthest-side, #f00 calc(100% - 1px), #0000) 65% 15% / 2cqi 2cqi,
+        radial-gradient(farthest-side, #f00 calc(100% - 1px), #0000) 70% 10% / 2.5cqi 2.5cqi,
+        radial-gradient(farthest-side, #f00 calc(100% - 1px), #0000) 65% 22% / 1.5cqi 1.5cqi,
+        radial-gradient(farthest-side, #f00 calc(100% - 1px), #0000) 80% 33% / 2.5cqi 2.5cqi,
+        /* tail */
+        radial-gradient(farthest-side at 50% 100%, var(--tail) calc(100% - 1px), #0000) 0% 37% / 35% 15%,
+        radial-gradient(farthest-side at 50% 100%, var(--tail) calc(100% - 1px), #0000) 5% 39% / 32% 17%,
+        conic-gradient(at 0 100%, #0000 50deg, var(--tail) 0 80deg, #0000 0) 10% 43% / 20% 15%,
+        /* legs */
+        linear-gradient(orange 0 0) 48% 100% / 0.5cqi 30%,
+        linear-gradient(orange 0 0) 56% 100% / 0.5cqi 30%,
+        #0000;
+      background-repeat:no-repeat;
+      position: relative;
+      filter: drop-shadow(0 -0.25cqi #000) drop-shadow(0 0.25cqi #000) drop-shadow(-0.25cqi 0 #000) drop-shadow(0.25cqi 0 #000);
+
+
+      &:nth-child(5n) {
+        --feathers: #ffb;
+      }
+      &:nth-child(4n-1) {
+        --feathers: #c96;
+      }
+
+      &:nth-child(5n-3) {
+        --feathers: #eb8;
+      }
+
+      &:nth-child(2n + 3) {
+        --tail: var(--feathers);
+      }
+    }
+  }
+}
+
+#city {
+  background: 
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 15% calc(100% - 50em) / 14% 6%,
+    radial-gradient(farthest-side at 50% 90%, #fff 99%, #0000) 28% calc(100% - 50em) / 24% 15%,
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 45% calc(100% - 50em) / 14% 8%,
+    /* cloud2*/
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 70% calc(100% - 57em) / 12% 4%,
+    radial-gradient(farthest-side at 50% 90%, #fff 99%, #0000) 83% calc(100% - 57em) / 17% 10%,
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 90% calc(100% - 57em) / 10% 5%,
+    #bde4f3;
+  background-repeat: no-repeat;
+
+  &:hover {
+    h2 span {
+      max-width: 10ch;
+    }
+
+    .city {
+      opacity: 0.3;
+    }
+  }
+
+  .city {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s 0.75s;
+    position: relative;
+
+    > * {
+      position: absolute;
+    }
+
+    .background {
+      background: #81b2c4;
+      inset: 0;
+      clip-path: polygon(0 40%, 10% 40%, 10% 30%, 12% 30%, 12% 27%, 25% 27%, 25% 30%, 27% 30%, 27% 35%, 27% 45%, 40% 45%, 40% 25%, 60% 30%, 60% 35%, 70% 35%, 70% 34%, 80% 34%, 80% 41%, 83% 41%, 83% 43%, 90% 43%, 90% 36%, 95% 30%, 100% 36%, 100% 100%, 0 100%)
+    }
+
+    .building-3 {
+      width: 24%;
+      height: 25%;
+      bottom: 20%;
+      left: 3%;
+      background:
+        repeating-linear-gradient(90deg, #d33 0 8.333%, #eee 0 16.666%) 18% 37% / 50% 15% no-repeat,
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 22% 50% / 40% 30% no-repeat,
+        linear-gradient(#cf9121 0 0)  20% 50% / 44% 34% no-repeat,
+
+        linear-gradient(#ff05 0 0) 50% 18% / 80% 12% no-repeat,
+        linear-gradient(#cf9121 0 0) 50% 0% / 100% 10% no-repeat,
+        linear-gradient(#4002 0 0) 80% 100% / 20% 57% no-repeat,
+        conic-gradient(at 50% -100%, #0000 140deg, #efc151 0 220deg, #0000 0) 50% 0 / 90% 100% no-repeat,
+        #efc15100;
+    }
+
+    .building-2 {
+      width: 22%;
+      height: 65%;
+      bottom: 20%;
+      left: 45%;
+      background:
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 20% 30% / 20% 14% no-repeat,
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 80% 30% / 20% 14% no-repeat,
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 20% 53% / 20% 14% no-repeat,
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 80% 53% / 20% 14% no-repeat,
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 20% 76% / 20% 14% no-repeat,
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 80% 76% / 20% 14% no-repeat,
+
+        linear-gradient(#cf9121 0 0)  18.5% 29.5% / 25% 16% no-repeat,
+        linear-gradient(#cf9121 0 0)  81.5% 29.5% / 25% 16% no-repeat,
+        linear-gradient(#cf9121 0 0)  18.5% 53% / 25% 16% no-repeat,
+        linear-gradient(#cf9121 0 0)  81.5% 53% / 25% 16% no-repeat,
+        linear-gradient(#cf9121 0 0)  18.5% 76.5% / 25% 16% no-repeat,
+        linear-gradient(#cf9121 0 0)  81.5% 76.5% / 25% 16% no-repeat,
+
+        radial-gradient(circle at 50% 11%, #fff 4%, #0000 0),
+        linear-gradient(#cf9121 0 0) 50% 17% / 95% 3% no-repeat,
+        linear-gradient(#4002 0 0) 50% 100% / 10% 75% no-repeat,
+        conic-gradient(at 50% -1%, #0000 140deg, #efc151 0 220deg, #0000 0) 50% 0 / 90% 100% no-repeat,
+        #efc15100;
+    }
+
+    .building-1 {
+
+      height: 40%;
+      width: 20%;
+      bottom: 20%;
+      left: 30%;
+      background:
+        linear-gradient(#0008 3%, #0000 0),
+        linear-gradient(#0008 0 0) 80% 100% / 25% 32% no-repeat,
+        linear-gradient(90deg, #de5727 10%, #0000 0 45%, #de5727 0 55%, #0000 0 90%, #de5727 0),
+        linear-gradient(#de5727 10%, #0000 0 30%, #de5727 0 40%, #0000 0 60%, #de5727 0),
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 0 0 / 60% 100%,
+        #de5727;
+    }
+
+    .building-5 {
+
+      height: 35%;
+      width: 30%;
+      bottom: 15%;
+      left: 75%;
+      background:
+        linear-gradient(#0008 3%, #0000 0),
+        linear-gradient(#0002 0 0) 80% 100% / 15% 32% no-repeat,
+        linear-gradient(90deg, #de5727 10%, #0000 0 45%, #de5727 0 55%, #0000 0 90%, #de5727 0),
+        linear-gradient(#de5727 10%, #0000 0 30%, #de5727 0 40%, #0000 0 60%, #de5727 0),
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 0 0 / 45% 100%,
+        #de5727;
+    }
+
+
+
+    .building-4 {
+
+      height: 40%;
+      width: 50%;
+      bottom: 16%;
+      left: -30%;
+      background:
+        linear-gradient(#0004 6%, #0000 0),
+        linear-gradient(90deg, #bd7332 10%, #0000 0 45%, #bd7332 0 55%, #0000 0 90%, #bd7332 0),
+        linear-gradient(#bd7332 10%, #0000 0 30%, #bd7332 0 40%, #0000 0 60%, #bd7332 0),
+        repeating-linear-gradient(-45deg, #bed6f2 0 20%, #c4efff 0 22%, #bed6f2 0 25%, #c4efff 0 26%, #bed6f2 0) 60% 0 / 20% 100%,
+        #bd7332;
+    }
+
+    .road {
+      inset: 0;
+      background: 
+        linear-gradient(90deg, #fff 0 50%, #0000 0) 47.5% 83% / 10% 0.5em repeat-x,
+        linear-gradient(#0000 75%, #bbb 0 77%, #999 0 78%, #aaa 0, #999),
+        #0000;
+    }
+  }
+}
+
+#ape {
+  background: #fc9c;
+  
+  &:hover {
+    h2 span {
+      max-width: 20ch;
+    }
+    
+    .ape [class*=shape] {
+       shape-outside: var(--head);
+    }
+  }
+  
+  .ape {
+    --c1: #843213;
+    --c2: #ebd3b1;
+    font-size: 4.5em;
+    padding: 1em;
+    margin-top: 0.5em;
+    
+    [class*=shape] {
+      transition: shape-outside 1s;
+      transition-delay: 0.75s;
+      transition-behavior: allow-discrete;
+    }
+
+    .shape2 {
+      float: left;
+      width: 6.42em;
+      height: 6.7em;
+      --head: radial-gradient(farthest-side, var(--c1) calc(93% - 1px), #000 93% calc(100% - 1px), #0000);
+      background: 
+        radial-gradient(1.66em 2em at 2em 50%, var(--c2) calc(90% - 1px), #0000 90%),
+        radial-gradient(1.66em 2em at calc(100% - 2em) 50%, var(--c2) calc(90% - 1px), #0000 90%),
+        var(--head);
+      margin-left: 0.83em;
+      position: relative;
+      
+      &::before,
+      &::after {
+        --pos: 33%;
+        content: "";
+        width: 25%;
+        top: 60%;
+        aspect-ratio: 0.85;
+        background: 
+          radial-gradient(circle at 35% 50%, #fff 0.15em, #0000 calc(0.15em + 1px)),
+          radial-gradient(circle at 50% 60%, #000 0.4em, #0000 calc(0.4em + 1px)),
+          #fff;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 3;
+        border: 0.125em solid;
+        left: var(--pos);
+        translate: -50% -50%;
+        rotate: -7deg;
+      }
+      
+      &::after {
+        left: calc(100% - var(--pos));
+        rotate: 7deg;
+      }
+      
+      .hair {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        translate: -50% -90%;
+        width: 26%;
+        height: 12%;
+        background: 
+          radial-gradient(farthest-side at 0 100%, #0000 80%, #000 0 99%, #0000) 0 0 / 50% 100% no-repeat,
+          radial-gradient(farthest-side at 100% 100%, #0000 80%, #000 0 99%, #0000) 80% 100% / 45% 70% no-repeat,
+          #0000;
+      }
+    }
+    .shape {
+      --head:
+        radial-gradient(farthest-side, var(--c1) 95%, #000 0 calc(100% - 1px), #0000);
+      width: 8.09em;
+      height: 6.14em;
+      float: left;
+      margin-top: 2.79em;
+      margin-left: -7.25em;
+      background:
+        /* line*/
+        radial-gradient(100% 220% at 0 50%, #0000 calc(48% - 1px), #000 48% 52%, #0000 calc(52% + 1px)) 53% 68% / 20% 16% no-repeat,
+        /* nose */
+        radial-gradient(60% 70% at 40% 70%, #000 calc(30% - 1px), #0000 30% calc(80% - 1px), #000 80% calc(100% - 1px), #0000) 58% 45% / 14% 14% no-repeat,
+        radial-gradient(60% 70% at 60% 70%, #000 calc(30% - 1px), #0000 30% calc(80% - 1px), #000 80% calc(100% - 1px), #0000) 42% 45% / 14% 14% no-repeat,
+        /* mouth */
+        radial-gradient(farthest-side at 60% 100%, #0000 calc(75% - 1px), #000 75% calc(100% - 1px), #0000) 18% 68% / 12% 6% no-repeat,
+        radial-gradient(farthest-side at 40% 100%, #0000 calc(75% - 1px), #000 75% calc(100% - 1px), #0000) 81% 68% / 12% 6% no-repeat,
+        linear-gradient(var(--c2) 50%, #0000 0) 50% 75% / 65% 40% no-repeat,
+        radial-gradient(30% 15% at 50% 66%, var(--c2) calc(90% - 1px), #000 90% calc(100% - 1px), #0000),
+        /* basic skin shape*/
+        radial-gradient(1.66em 2em at 2.87em 11%, var(--c2) calc(90% - 1px), #0000 90%),
+        radial-gradient(1.66em 2em at calc(100% - 2.87em) 11%, var(--c2) calc(90% - 1px), #0000 90%),
+        radial-gradient(50% 48% at 50% 55%, var(--c2) 80%, #0000 0),
+        /* base (fur) */
+        var(--head);
+      mask: linear-gradient(#0000 19%, #000 0);
+    }
+    
+    p {
+      margin: 0;
+      margin-top: -0.5em;
+      font-family: 'Patrick Hand';
+      font-weight: 300 !important;
+    }
+  }
+}
+
+
+
+#column {
+  background: 
+    linear-gradient(#f0f0f0 12%, #ddd 0 15%, #eee 0 19%, #f8f8f8 0 22.6%, #0000 0),
+    #9cf;
+    
+  &:hover {
+    h2 span {
+      max-width: 20ch;
+    }
+    
+    .columns {
+       column-gap: 0;
+    }
+  }
+  
+  .columns {
+    display: flex;
+    column-gap: 19em;
+    transition: column-gap 0.5s;
+    transition-delay: 0.75s;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+    .column {
+      min-width: 13em;
+      width: 13em;
+      height: 80%;
+      background: 
+        linear-gradient(#0001 0 0) 50% 50% / 0.5em 85% no-repeat,
+        linear-gradient(#0001 0 0) 35% 50% / 0.5em 85% no-repeat,
+        linear-gradient(#0001 0 0) 65% 50% / 0.5em 85% no-repeat,
+        linear-gradient(#0001 0 0) 20% 55% / 0.5em 80% no-repeat,
+        linear-gradient(#0001 0 0) 80% 55% / 0.5em 80% no-repeat,
+        radial-gradient(40% 100% at 50% 60%, #fff calc(100% - 1px), #0000),
+        #0000;
+      position: relative;
+      
+      &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 10%;
+        bottom: 0;
+        left: 0;
+        clip-path: polygon(0 10%, 5% 0, 95% 0, 100% 10%, 100% 100%, 0 100%);
+        background:
+          linear-gradient(#0002 10%, #0000 0, #0001),
+          linear-gradient(90deg, #0001, #0000, #0000, #0001),
+          #fff;
+      }
+      
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 8%;
+        top: -1%;
+        left: 0;
+        clip-path: polygon(0 10%, 5% 0, 95% 0, 100% 10%, 100% 100%, 0 100%);
+        background:
+          radial-gradient(closest-side at 20% 40%, #fff 20%, #eee 0, #fff 40% calc(100% - 1px), #0000),
+          radial-gradient(closest-side at 80% 40%, #fff 20%, #eee 0, #fff 40% calc(100% - 1px), #0000),
+          linear-gradient(#fff0, #fff8)  50% 70% / 60% 60% no-repeat,
+          linear-gradient(90deg, #0002, #0000, #0002)  50% 60% / 70% 40% no-repeat,
+          
+          linear-gradient(#fff 50%, #0000 0) 50% 0 / 60% 100% no-repeat,
+          #0000;
+      }
+    }
+  }
+}
+
+
+#outline {
+  background: #fec;
+  position: relative;
+    
+  &:hover {
+    h2 span {
+      max-width: 15ch;
+    }
+    
+    .outline {
+       outline-offset: 2em;
+    }
+  }
+  
+  .outline {
+    font-size: 3em;
+    width: 30%;
+    height: 40%;
+    top: 55%;
+    left: 50%;
+    translate: -50% -50%;
+    position: absolute;
+    background:
+      linear-gradient(#d22 0 0) 50% 50% / 5% 55% no-repeat,
+      #fff;
+    outline: 2em groove gold;
+    transition: outline-offset 0.5s;
+    transition-delay: 0.75s;
+    z-index: 1;
+  }
+  
+  .card {
+    position: absolute;
+    top: 80%;
+    left: 75%;
+    width: 20%;
+    aheight: 10%;
+    background: #fff;
+    font-family: sans-serif;
+    padding: 1em;
+    box-sizing: border-box;
+    border: 0.5em solid #0007;
+    
+    > * {
+      margin: 0.5em 0;
+      color: #555;
+      background: currentcolor;
+    }
+    
+    > p {
+      display: inline-block;
+      float: left;
+      clear: both;
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+  <section id="city">
+    <h2><span dir="rtl">Opa</span><b>city</b><span>: 0.3;</span></h2>
+    <div class="city">
+      <div class="background"></div>
+      <div class="building-5"></div>
+      <div class="building-4"></div>
+      <div class="building-3"></div>
+      <div class="building-2"></div>
+      <div class="building-1"></div>
+      <div class="tree"></div>
+      <div class="road"></div>
+    </div>
+  </section>
+</article>
+
+<article>
+  <section id="hens">
+    <h2>
+      <span dir="rtl">Hyp</span><b>hens</b><span>: auto;</span>
+    </h2>
+
+    <div class="hens" lang="de">
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+      <span>chicken</span>
+    </div>
+  </section>
+</article>
+
+<article>
+  <section id="ape">
+    <h2><span dir="rtl">Sh</span><b>ape</b><span>-Outside: var(--head);</span></h2>
+    <div class="ape">
+      <div id="shape"></div>
+      <div class="shape2"><div class="hair"></div></div>
+      <div class="shape"></div>
+      <p>Apes are a superfamily of Old World simians native to sub-Saharan Africa and Southeast Asia. They were more widespread in Africa, Asia, and Europe in prehistory, and, including humans, are found globally. Apes are more closely related to Old World monkeys than to the New World monkeys. Apes do not have tails due to a mutation of the TBXT gene.</p>
+      <!-- Source: Wikipedia: https://en.wikipedia.org/wiki/Ape -->
+    </div>
+  </section>
+</article>
+
+<article>
+  <section id="column">
+    <h2><b>column</b><span>-gap: 0;</span></h2>
+    <div class="columns">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
+  </section>
+</article>
+
+<article>
+  <section id="outline">
+    <h2><span dir="rtl">out</span><b>line</b><span>-offset: 2em;</span></h2>
+    <div class="outline"></div>
+    <div class="card">
+      <h3>A Thin Red Line.</h3>
+      <p>Circa 2025</p>
+      <p>Author: Alvaro Montoro.</p>
+    </div>
+  </section>
+</article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
