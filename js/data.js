@@ -1711,4 +1711,11 @@ const posts = [
     vertical: true,
     ariaLabel: "A cartoon character indicatng that today is not a comic but a CSS game, and to click on view source with the link"
   },
+  {
+    id: 220,
+    uid: "word-association",
+    boxes: 10,
+    title: "Word Association",
+    ariaLabel: "3 cartoons associating regular words with CSS properties, and applying them in the cartoon itself. City turns into Opacity:0.3, and it has a city that fades out. Hens turns into hyphens:auto, and a list of chickens break between lines with hyphens (cutting some in half). Ape turns into shape-outside:url(--head), it has a monkey with text that wraps around its head."
+  },
 ]
