@@ -4186,4 +4186,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Cookie Jar</title>
+    <link href="https://comicss.art/comics/221" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/221/cookie-jar.html"/>
+    <id>https://comicss.art/comics/221</id>
+    <updated>2025-11-10T00:00:00Z</updated>
+    <summary>New Cartoon: Cookie Jar</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/221/cookie-jar.png" alt="comic strip with 3 panels. The Tailwind logo is asking for help because it has its hand stuck in a jar labelled 'class names'. Someone off-panel says that it could get the hand out if it dropped all the classes and get only one, and how it could make it if it applied itself. In the last panel the Tailwind logo goes back to complaining about having the hand stuck and people not helping." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
