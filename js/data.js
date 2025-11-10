@@ -1718,4 +1718,11 @@ const posts = [
     title: "Word Association",
     ariaLabel: "3 cartoons associating regular words with CSS properties, and applying them in the cartoon itself. City turns into Opacity:0.3, and it has a city that fades out. Hens turns into hyphens:auto, and a list of chickens break between lines with hyphens (cutting some in half). Ape turns into shape-outside:url(--head), it has a monkey with text that wraps around its head."
   },
+  {
+    id: 221,
+    uid: "cookie-jar",
+    boxes: 3,
+    title: "Cookie Jar",
+    ariaLabel: "comic strip with 3 panels. The Tailwind logo is asking for help because it has its hand stuck in a jar labelled 'class names'. Someone off-panel says that it could get the hand out if it dropped all the classes and get only one, and how it could make it if it applied itself. In the last panel the Tailwind logo goes back to complaining about having the hand stuck and people not helping."
+  },
 ]

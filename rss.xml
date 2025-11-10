@@ -2206,5 +2206,15 @@
       <enclosure url="https://comicss.art/comics/220/word-association.png" length="873000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/221</guid>
+      <title>Cookie Jar</title>
+      <link>https://comicss.art/comics/221</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/221/cookie-jar.png" length="145000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
