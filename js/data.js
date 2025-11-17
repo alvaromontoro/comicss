@@ -1730,6 +1730,6 @@ const posts = [
     uid: "toggle-switches",
     boxes: 6,
     title: "Toggle Switches",
-    ariaLabel: "comic with 6 panel, two toggle switches (one on the other off) with eyes and legs are chilling, when the active gets an idea 'let's prank an HTML element!' The other toggle is not into it, so the first ne taps on it, activating it from off to on. The newly on-toggle enthusiastically exclaims I'm in. Let's go!"
+    ariaLabel: "comic with 6 panel, two toggle switches (one on the other off) with eyes and legs are chilling, when the active one says: 'DUUUUDE!!! I just had the best idea ever! What if we go to the Checkbox Mansion and prank that snobby element?' The other toggle is not into it 'I don't know, dude... Last time we tried, it wasn't fun. And I have work tomorrow... it's kinda late...', so the first one taps on it, activating it from off to on. The newly on-toggle enthusiastically exclaims 'IT'S ON!! LET'S DO THIS!!!'"
   },
 ]
