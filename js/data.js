@@ -1725,4 +1725,11 @@ const posts = [
     title: "Cookie Jar",
     ariaLabel: "comic strip with 3 panels. The Tailwind logo is asking for help because it has its hand stuck in a jar labelled 'class names'. Someone off-panel says that it could get the hand out if it dropped all the classes and get only one, and how it could make it if it applied itself. In the last panel the Tailwind logo goes back to complaining about having the hand stuck and people not helping."
   },
+  {
+    id: 222,
+    uid: "toggle-switches",
+    boxes: 6,
+    title: "Toggle Switches",
+    ariaLabel: "comic with 6 panel, two toggle switches (one on the other off) with eyes and legs are chilling, when the active gets an idea 'let's prank an HTML element!' The other toggle is not into it, so the first ne taps on it, activating it from off to on. The newly on-toggle enthusiastically exclaims I'm in. Let's go!"
+  },
 ]

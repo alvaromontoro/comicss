@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/222/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/222/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand';
+        src: url(/fonts/PatrickHand-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+
+@property --x {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 50%;
+}
+
+@property --y {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 50%;
+}
+
+article {
+  font-size: 1vmin;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  scale: 0.5;
+  transform-origin: 0 0;
+}
+
+.dialog {
+  font-family: 'Patrick Hand';
+  font-size: 4.75em;
+  line-height: 1.25;
+  
+  &::before {
+    content: "";
+    width: 3em;
+    height: var(--h, 4em);
+    border-radius: 0 0 100% 0;
+    border: 0.16em solid #0000;
+    border-right: 0.16em solid;
+    border-top: 0;
+    top: 100%;
+    left: var(--l, -2em);
+  }
+}
+
+section {
+  --x: 55%;
+  --y: 50%;
+  transition: --x 0.4s, --y linear 0.3s;
+  font-size: 1em;
+  width: 85em;
+  aspect-ratio: 1;
+  outline: 0.75em solid;
+  border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
+  margin: 2em;
+
+  *, *::before, *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  [role="switch"] {
+    font-size: 27em;
+    appearance: none;
+    display: block;
+    position: absolute;
+    width: 1em;
+    aspect-ratio: 2;
+    border-radius: 10em;
+    background: #69f;
+
+    &::before {
+      content:"";
+      background: #fff;
+      width: 0.36em;
+      aspect-ratio: 1;
+      top: 50%;
+      left: 25%;
+      translate: -50% -50%;
+      border-radius: 50%;
+      transition: left 0.5s;
+    }
+
+    &:checked {
+      &::before {
+        left: 75%;
+      }
+    }
+  }
+
+  .switch1 {
+    bottom: 35%;
+    left: 27%;
+    translate: -50%;
+  }
+  .switch2 {
+    bottom: 35%;
+    left: 65%;
+    translate: -50%;
+  }
+
+  .legs {
+    width: 29em;
+    height: 25em;
+    bottom: 10%;
+    left: 27%;
+    translate: -50%;
+    
+    &::before, &::after {
+      content: "";
+      inset: 0;
+      background: 
+      radial-gradient(60% 200% at 0% 65%, #0000 52%, #000 calc(52% + 1px) 60%, #0000 calc(60% + 1px)) 10em 0,
+      radial-gradient(12% 8% at 78% 100%, #000 calc(100% - 1px), #0000),
+      #f000;
+    }
+    
+    &::after {
+      background: 
+      radial-gradient(60% 200% at 0% 40%, #0000 52%, #000 calc(52% + 1px) 60%, #0000 calc(60% + 1px)) 2em 0,
+      radial-gradient(12% 8% at 45% 100%, #000 calc(100% - 1px), #0000),
+      #f000;
+    }
+
+    &.legs2 {
+      left: 65%;
+      transform: skew(-2deg);
+    }
+  }
+
+  .eyes {
+    width: 17em;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 47%;
+    left: 28%;
+    translate: -50%;
+
+    &::before, &::after {
+      content: "";
+      height: 8em;
+      width: 8em;
+      border: 0.5em solid;
+      border-radius: 50%;
+      position: relative;
+      transition: background 0.5s;
+      background: 
+        linear-gradient(#000 50%, #0000 0),
+        radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+    }
+
+    &.eyes2 {
+      left: 66%;
+    }
+  }
+}
+
+.mouth {
+  width: 3%;
+  aspect-ratio: 1;
+  background: #000;
+  border-radius: 50%;
+  ascale: 0;
+  left: 27%;
+  bottom: 42%;
+  scale: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: scale 0.4s, clip-path 0.5s, left 0.35s;
+  
+  &.mouth2 {
+    left: 65%;
+  }
+}
+
+.shadow {
+  width: 30%;
+  height: 3%;
+  bottom: 7%;
+  background: radial-gradient(farthest-side at 50% 0%, #eee calc(100% - 1px), #0000);
+  left: 28%;
+  translate: -50%;
+
+  &.shadow2 {
+    left: 68%;
+  }
+}
+
+.lines {
+  width: 15%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  mask: radial-gradient(#0000 30%, #000 0);
+  background:
+    linear-gradient(#0000 47.25%, #f00 0 52.75%, #0000 0),
+    linear-gradient(45deg, #0000 48%, #f00 0 52%, #0000 0),
+    linear-gradient(90deg, #0000 47.25%, #f00 0 52.75%, #0000 0),
+    linear-gradient(-45deg, #0000 48%, #f00 0 52%, #0000 0),
+    #f000;
+  bottom: 35.5%;
+  left: 50.25%;
+  display: none;
+}
+
+.arm {
+  width: 24%;
+  height: 12%;
+  border: 1.25em solid;
+  border-top: 0;
+  border-radius: 50% / 0 0 100% 100%;
+  bottom: 31%;
+  left: 34%;
+  
+  &::before {
+    content: "";
+    width: 20%;
+    aspect-ratio: 1;
+    background: #000;
+    left: 100%;
+    top: 0;
+    translate: -20% -50%;
+    border-radius: 50%;
+  }
+}
+
+.panel1 {
+  .eyes {
+    &.eyes1 {
+        &::before, &::after {
+          background: 
+            linear-gradient(#000 var(--y), #0000 0),
+            radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+        }
+      }
+    
+      &.eyes2 {
+        &::before, &::after {
+          background: 
+            linear-gradient(#000 50%, #0000 0),
+            radial-gradient(at var(--x) 55%, #000 0.75em, #fff calc(0.75em + 1px));
+        }
+      }
+    }
+}
+
+.panel2 {
+  --x: 55%;
+  --y: 0%;
+  
+  .legs1 {
+    &::before {
+      transform: skew(3deg);
+    }
+    
+    &::after {
+      transform: skew(-5deg);
+    }
+  }
+  
+  .dialog {
+    left: 35%;
+    top: 10%;
+    font-size: 6em;
+      &::before {
+        border: 0.125em solid #0000;
+        border-right: 0.125em solid;
+        border-top: 0;
+      }
+  }
+  
+  .eyes {
+    &::before, &::after {
+      background: 
+        linear-gradient(#000 var(--y), #0000 0),
+        radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+    }
+
+    &.eyes2 {
+      &::before, &::after {
+        background: 
+          linear-gradient(#000 50%, #0000 0),
+          radial-gradient(at var(--x) 55%, #000 0.75em, #fff calc(0.75em + 1px));
+      }
+    }
+  }
+  
+  .mouth1 {
+    scale: 1;
+    left: 25%;
+  }
+  .switch1 {
+    rotate:-2deg;
+  }
+}
+
+.panel3 {
+  --x: 35%;
+  --y: 0%;
+  
+  .dialog {
+    width: 80%;
+    left: 10%;
+    top: 7%;
+    text-wrap: balance;
+    text-align: center;
+    --l: 25%;
+    --h: 4em;
+  }
+  
+  .eyes {
+    &::before, &::after {
+      background: 
+        linear-gradient(#000 var(--y), #0000 0),
+        radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+    }
+
+    &.eyes2 {
+      &::before, &::after {
+        background: 
+          linear-gradient(#000 50%, #0000 0),
+          radial-gradient(at var(--x) 55%, #000 0.75em, #fff calc(0.75em + 1px));
+      }
+    }
+  }
+  
+  .mouth1 {
+    left: 27%;
+    scale: 1.5 1;
+    clip-path: polygon(0 30%, 100% 50%, 100% 100%, 0% 100%);
+  }
+  
+  .legs1 {
+    &::after {
+      transform: skew(-5deg);
+    }
+  }
+}
+
+.panel4 {
+  --x: 35%;
+  --y: 50%;
+  
+  .dialog {
+    width: 80%;
+    left: 15%;
+    top: 10%;
+    --l: 40%;
+    --h: 3.5em;
+    text-wrap: balance;
+    text-align: center;
+    
+    &::before {
+      scale: -1 1;
+    }
+  }
+  
+  .eyes {
+    &::before {
+      background: 
+        linear-gradient(195deg, #000 var(--y), #0000 0),
+        radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+    }
+    &::after {
+      background: 
+        linear-gradient(165deg, #000 var(--y), #0000 0),
+        radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+    }
+
+    &.eyes2 {
+      &::before, &::after {
+        background: 
+          linear-gradient(#000 50%, #0000 0),
+          radial-gradient(at var(--x) 55%, #000 0.75em, #fff calc(0.75em + 1px));
+      }
+    }
+  }
+  
+  .mouth1 {
+    left: 26%;
+    scale: 1 0.7;
+    clip-path: polygon(0 0%, 100% 0%, 100% 70%, 0% 50%);
+  }
+  
+  .mouth2 {
+    left: 65%;
+    scale: 1.4 -1;
+    translate: 0 20%;
+    rotate: -5deg;
+    clip-path: polygon(0 40%, 100% 50%, 100% 100%, 0% 100%);
+  }
+}
+
+.panel5 {
+  --x: 35%;
+  --y: 50%;
+  
+  .eyes {
+    &::before {
+      background: 
+        linear-gradient(195deg, #000 var(--y), #0000 0),
+        radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+    }
+    &::after {
+      background: 
+        linear-gradient(165deg, #000 var(--y), #0000 0),
+        radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+    }
+    
+    &.eyes2 {
+      &::before, &::after {
+        background: 
+          linear-gradient(#000 0%, #0000 0),
+          radial-gradient(at var(--x) 55%, #000 0.75em, #fff calc(0.75em + 1px));
+      }
+    }
+  }
+  
+  .switch2::before {
+    lleft: 75%;
+    transition-delay: 0.5s;
+  }
+  
+  .lines {
+    display: block;
+    rotate: -9deg;
+  }
+  
+  .arms {
+    display: block;
+  }
+  
+  .mouth2 {
+    scale: 0.75;
+    left: 67%;
+  }
+  
+  .shadow1 {
+    width: 35%;
+    left: 32%;
+  }
+  
+  .switch1 {
+    rotate:2deg;
+  }
+}
+
+
+.panel6 {
+  --x: 55%;
+  --y: 0%;
+  
+  .dialog {
+    left: 20%;
+    top: 16%;
+    font-size: 6em;
+    --l:40%;;
+      &::before {
+        border: 0.125em solid #0000;
+        border-right: 0.125em solid;
+        border-top: 0;
+        scale: -1 1;
+      }
+  }
+  
+  .eyes {
+    &::before, &::after {
+      background: 
+        linear-gradient(180deg, #000 var(--y), #0000 0),
+        radial-gradient(at 55% 55%, #000 0.75em, #fff calc(0.75em + 1px));
+    }
+    
+    &.eyes2 {
+      &::before, &::after {
+        background: 
+          linear-gradient(#000 0%, #0000 0),
+          radial-gradient(at var(--x) calc(55% - var(--x) / 10), #000 0.75em, #fff calc(0.75em + 1px));
+      }
+    }
+  }
+  
+  .mouth1 {
+    left: 27%;
+    scale: 1.5 1;
+    clip-path: polygon(0 30%, 100% 50%, 100% 100%, 0% 100%);
+  }
+  
+  .mouth2 {
+    left: 65%;
+    scale: 1.8 1.4;
+    translate: 0 -20%;
+    clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0% 100%);
+  }
+  
+  .switch2::before {
+    left: 75%;
+  }
+  
+  .arm {
+    height: 0;
+    border-radius:0;
+    rotate: -55deg;
+    left: 73%;
+    bottom: 53%;
+    &::before {
+      top: 0.5em;
+    }
+  }
+  
+  .shadow2 {
+    width: 40%;
+    left: 72%;
+  }
+  
+  .legs2 {
+    &::before {
+      transform: skew(6deg);
+      
+    }
+    
+    &::after {
+      transform: skew(-7deg);
+      translate: -1em;
+    }
+  }
+  
+  .switch1 {
+    rotate:-2deg;
+  }
+  .switch2,.eyes2 {
+    rotate:-4deg;
+  }
+} 
+    </style>
+  </head>
+  <body>
+
+    <!-- inspired by Safely Endangered's comic https://bsky.app/profile/safelyendangered.bsky.social/post/3m5elyfxy5227 -->
+<article>
+  <section class="panel1">
+    <div class="shadow shadow1"></div>
+    <div class="shadow shadow2"></div>
+    <div class="legs legs1"></div>
+    <div class="legs legs2"></div>
+    <input class="switch1" type="checkbox" role="switch" checked>
+    <input class="switch2" type="checkbox" role="switch">
+    <div class="eyes eyes1"></div>
+    <div class="eyes eyes2"></div>
+    <div class="mouth mouth1"></div>
+    <div class="mouth mouth2"></div>
+  </section>
+  <section class="panel2">
+    <div class="shadow shadow1"></div>
+    <div class="shadow shadow2"></div>
+    <div class="legs legs1"></div>
+    <div class="legs legs2"></div>
+    <input class="switch1" type="checkbox" role="switch" checked>
+    <input class="switch2" type="checkbox" role="switch">
+    <div class="eyes eyes1"></div>
+    <div class="eyes eyes2"></div>
+    <div class="mouth mouth1"></div>
+    <div class="mouth mouth2"></div>
+    <div class="dialog">DUUUUDE!!!</div>
+  </section>
+  <section class="panel3">
+    <div class="shadow shadow1"></div>
+    <div class="shadow shadow2"></div>
+    <div class="legs legs1"></div>
+    <div class="legs legs2"></div>
+    <input class="switch1" type="checkbox" role="switch" checked>
+    <input class="switch2" type="checkbox" role="switch">
+    <div class="eyes eyes1"></div>
+    <div class="eyes eyes2"></div>
+    <div class="mouth mouth1"></div>
+    <div class="mouth mouth2"></div>
+    <div class="dialog">I just had the best idea ever! What if we go to the Checkbox Mansion and prank that snobby element?</div>
+  </section>
+  <section class="panel4">
+    <div class="shadow shadow1"></div>
+    <div class="shadow shadow2"></div>
+    <div class="legs legs1"></div>
+    <div class="legs legs2"></div>
+    <input class="switch1" type="checkbox" role="switch" checked>
+    <input class="switch2" type="checkbox" role="switch">
+    <div class="eyes eyes1"></div>
+    <div class="eyes eyes2"></div>
+    <div class="mouth mouth1"></div>
+    <div class="mouth mouth2"></div>
+    <div class="dialog">I don't know, dude... Last time we tried, it wasn't fun. And I have work tomorrow... it's kinda late...</div>
+  </section>
+  <section class="panel5">
+    <div class="shadow shadow1"></div>
+    <div class="shadow shadow2"></div>
+    <div class="legs legs1"></div>
+    <div class="legs legs2"></div>
+    <input class="switch2" type="checkbox" role="switch">
+    <div class="arm"></div>
+    <input class="switch1" type="checkbox" role="switch" checked>
+    
+    <div class="eyes eyes1"></div>
+    <div class="eyes eyes2"></div>
+    <div class="mouth mouth1"></div>
+    <div class="mouth mouth2"></div>
+    <div class="lines"></div>
+    
+  </section>
+  <section class="panel6">
+    <div class="shadow shadow1"></div>
+    <div class="shadow shadow2"></div>
+    <div class="legs legs1"></div>
+    <div class="legs legs2"></div>
+    <div class="arm"></div>
+    <input class="switch1" type="checkbox" role="switch" checked>
+    <input class="switch2" type="checkbox" role="switch">
+    <div class="eyes eyes1"></div>
+    <div class="eyes eyes2"></div>
+    <div class="mouth mouth1"></div>
+    <div class="mouth mouth2"></div>
+    <div class="dialog">IT'S ON!! LET'S DO THIS!!!</div>
+  </section>
+</article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
