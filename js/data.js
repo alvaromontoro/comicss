@@ -1732,4 +1732,11 @@ const posts = [
     title: "Toggle Switches",
     ariaLabel: "comic with 6 panel, two toggle switches (one on the other off) with eyes and legs are chilling, when the active one says: 'DUUUUDE!!! I just had the best idea ever! What if we go to the Checkbox Mansion and prank that snobby element?' The other toggle is not into it 'I don't know, dude... Last time we tried, it wasn't fun. And I have work tomorrow... it's kinda late...', so the first one taps on it, activating it from off to on. The newly on-toggle enthusiastically exclaims 'IT'S ON!! LET'S DO THIS!!!'"
   },
+  {
+    id: 223,
+    uid: "unfinished-projects",
+    boxes: 2,
+    title: "Unfinished Projects",
+    ariaLabel: "comic with two panels. In the first one, a ghost says Remember: if you don't want to end up a ghost like me, don't abandon anything halfway or leave unfinished projects behind! In the second panel, two people with a DEV tag say 'Oh fuck!'"
+  },
 ]

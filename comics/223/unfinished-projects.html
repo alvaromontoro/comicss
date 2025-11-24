@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/223/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/223/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+.nametag {
+  font-size: 0.95em;
+  padding: 0.7em 0.5em 0.5em 0.5em;
+  background: 
+    linear-gradient(90deg, red 8%, #fff0 0 92%, red 0),
+    linear-gradient(red 25%, #fff 0 80%, red 0);
+  border: 0.3em solid;
+  top: 82%;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(0, -5%); }
+}
+
+[character="ghost"] {
+  animation: float 5s alternate infinite;
+  .extra {
+    z-index: 1000;
+  }
+  
+  :not(.extra) {
+    mask: linear-gradient(#fff8 50%, #fff0);
+  }
+  
+  .sheet {
+    border: 0.5em solid;
+    border-radius: 50% / 105% 95% 0 0;
+    top: -5%;
+    left: 50%;
+    width: 95%;
+    height: 120%;
+    translatE: -50%;
+    background: linear-gradient(#fff 5%, #fff8 50%, #fff8);
+    mask: linear-gradient(#000 60%, #0000);
+    
+    &::before {
+      content: "";
+      width: 40%;
+      height: 100%;
+      border-radius: 50% / 100% 100% 0 0;
+      border: 0.4em solid #0000;
+      border-left-color: #000;
+      top: 53%;
+      left: 18%;
+      rotate: -5deg;
+      filter: drop-shadow(-1.5em 2em);
+    }
+    
+    &::after {
+      content: "";
+      width: 40%;
+      height: 100%;
+      border-radius: 50% / 100% 100% 0 0;
+      border: 0.4em solid #0000;
+      border-right-color: #000;
+      top: 63%;
+      left: 53%;
+      rotate: 8deg;
+    }
+  }
+  
+  .eye {
+    border-radius: 1em;
+    width: 4%;
+    height: 8%;
+    background: #000;
+    top: 20%;
+    left: 48%;
+    box-shadow: 3em 0;
+  }
+  
+  .mouth {
+    width: 15%;
+    aspect-ratio: 2;
+    background: #000;
+    border-radius: 50% / 0 0 100% 100%;
+    rotate: 4deg;
+    left: 50%;
+    top: 37%;
+  }
+  
+  .ghost-arm {
+    width: 50%;
+    height: 100%;
+    border: 0.5em solid;
+    border-radius: 100% 4em;
+    transform: skew(-10deg) rotate(5deg);
+    left: 45%;
+    top: 50%;
+    mask: linear-gradient(#000 20%, #0000 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 10% -40%);
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="Unfinished (side) projects">
+      <css-panel>
+        <css-person left="20" character="ghost" height="tall">
+          <div class="extra ghost-arm"></div>
+          <div class="extra sheet"></div>
+          <div class="extra eye"></div>
+          <div class="extra mouth"></div>
+          
+        </css-person>
+        <css-speech top="5" line="left-50 skewer" left="10" width="75">
+          Remember: if you don't want to end up a ghost like me, don't abandon anything halfway or leave unfinished projects behind!
+        </css-speech>
+      </css-panel>
+      
+      <css-panel>
+        <css-person character="al" facing="left" right="5" arms="right--10 left-15" mouth="small frown" eyebrows="sad high"></css-person>
+        <css-person character="john" facing="left" right="35" arms="right--10 left-10" mouth="frown sided side-left small" eyebrows="sad high"></css-person>
+        <css-speech type="whisper" style="font-size: 1.5em" top="50" left="15" rotate="3">Oh, ****!</css-speech>
+        <div class="nametag" left="40" rotate="5">DEV 1</div>
+        <div class="nametag" left="70" rotate="3">DEV 2</div>
+      </css-panel>
+    </css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
