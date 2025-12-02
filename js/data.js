@@ -1739,4 +1739,12 @@ const posts = [
     title: "Unfinished Projects",
     ariaLabel: "comic with two panels. In the first one, a ghost says Remember: if you don't want to end up a ghost like me, don't abandon anything halfway or leave unfinished projects behind! In the second panel, two people with a DEV tag say 'Oh fuck!'"
   },
+  {
+    id: 224,
+    uid: "neapolitan",
+    boxes: 1,
+    title: "Neapolitan",
+    vertical: true,
+    ariaLabel: "The Ice-Cream Web Stack: a neapolitan ice cream with arrows pointing to the chocolate, vanilla, and strawberry. JavaScript is chocolate: Rich, versatile, and everywhere. You cannot avoid it. It comes in many flavors, and people have very strong opinions about each one. HTML is vanilla: The structural backbone of the web. It may seem plain, but it is essential, reliable, and pairs with everything. CSS is strawberry: The color and creativity. It adds personality, style, and makes everything look (and taste) better."
+  },
 ]

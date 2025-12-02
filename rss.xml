@@ -2236,5 +2236,15 @@
       <enclosure url="https://comicss.art/comics/223/unfinished-projects.png" length="123000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/224</guid>
+      <title>Neapolitan</title>
+      <link>https://comicss.art/comics/224</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/224/neapolitan.png" length="453000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
