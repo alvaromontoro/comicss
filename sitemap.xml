@@ -1371,4 +1371,10 @@
     <changefreq>never</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://comicss.art/comics/224</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

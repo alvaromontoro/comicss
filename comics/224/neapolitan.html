@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/224/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/224/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+ body {
+  font-size: 1vmin;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at calc(50vw - 20em) calc(50vh - 20em), #fff, #eee);
+}
+
+article {
+  font-size: 1vmin;
+  width: 80em;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-family: 'Patrick Hand SC', 'Amatic SC', Helvetica, sans-serif;
+
+  *, *::before, *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 7em;
+    font-weight: 200;
+    letter-spacing: -0.0125em;
+    ascale: 1 0.9;
+    line-height: 1;
+  }
+
+  .lang {
+    width: 40%;
+
+    * { position: relative; }
+
+    h2 {
+      font-size: 3.5em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 2.25em;
+      margin: 0;
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+    }
+  }
+
+  .js {
+    left: -5em;
+    top: 28%;
+
+    &::after {
+      width: 10em;
+      height: 10em;
+      right: -4em;
+      bottom: 0;
+      translate: 0 calc(100% - 2em);
+      background:
+        linear-gradient(#000 0 0) 0 0.5em / calc(40% - 0.4em) 0.4em,
+        linear-gradient(to top right, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0) calc(100% - 0.5em) 0.5em / 60% calc(100% - 1em),
+        radial-gradient(1em 1em at calc(100% - 1em) calc(100% - 1em), #000 calc(1em - 1px), #0000 1em);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .html {
+    left: 50%;
+    top: 13%;
+    translate: -50%;
+
+    &::after {
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      width: 4em;
+      height: 21.25em;
+      background:
+        linear-gradient(90deg, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0) 50% 0 / 100% calc(100% - 0.5em),
+        radial-gradient(closest-side circle at 50% calc(100% - 1em), #000 1em, #0000 0)
+        ;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .css {
+    right: -8em;
+    top: 32%;
+
+    &::after {
+      width: 5em;
+      height: 10em;
+      left: 0;
+      bottom: 0;
+      translate: calc(-100% - 1em) calc(100% - 2em);
+      background:
+        linear-gradient(#000 0 0) 0 0.5em / calc(40% - 0.4em) 0.4em,
+        linear-gradient(to top right, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0) calc(100% - 0.66em) 0.5em / 60% calc(100% - 1em),
+        radial-gradient(1em 1em at calc(100% - 1em) calc(100% - 1em), #000 calc(1em - 1px), #0000 1em);
+      background-repeat: no-repeat;
+      scale: -1 1;
+    }
+  }
+
+  .ice-cream {
+    width: 50%;
+    aspect-ratio: 1;
+    background: 
+      repeating-linear-gradient(45deg, #0000 0 5.25%, #0001 0 6%),
+      repeating-linear-gradient(-45deg, #0000 0 5.25%, #0001 0 6%),
+      #eb7;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    border-radius: 1em;
+    box-shadow:
+      inset 0.25em 0.25em 1em #ffb5,
+      inset -0.25em -0.25em 1em #c004,
+      0 0 2em #0002,
+      0.5em 0.5em 1em 0.125em #6001;
+
+    &::before {
+      content: "";
+      width: 90%;
+      aspect-ratio: 1;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      border-radius: 1.5em 1em 0.75em 1.25em;
+      background:
+        radial-gradient(farthest-side at 20% 20%, #fff5, #fff0),
+        linear-gradient(90deg, #836351 33%, #eeedd2 0 67%, #fcbec000 0),
+        radial-gradient(circle, #0001, #0000 0.2em) 0 0 / 17% 16%,
+        radial-gradient(circle, #0001 0.05em, #0000 0.2em) -1em 3em / 21% 13%,
+        radial-gradient(circle, #0001, #0000 0.25em) -20% 30% / 15% 17%,
+        #fcbec0
+        ;
+      box-shadow:
+        0 0 2em #0004,
+        0.5em 1em 1em 0.5em #6004,
+        inset 0.5em 1.5em 3em 0.5em #ffc3,
+        inset -1em -1.5em 4em 0.75em #7001
+    }
+  }
+}     
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <h1>The Ice-Cream Web Stack</h1>
+      <div class="ice-cream"></div>
+      <div class="js lang">
+        <h2>JavaScript</h2>
+        <p>Rich, versatile, and everywhere. You cannot avoid it. It comes in many flavors, and people have <em>very</em> strong opinions about each one.</p>
+      </div>
+      <div class="html lang">
+        <h2>HTML</h2>
+        <p>The structural backbone of the web. It may seem plain, but it is essential, reliable, and pairs with everything.</p>
+      </div>
+      <div class="css lang">
+        <h2>CSS</h2>
+        <p>The color and creativity. It adds personality, style, and makes everything look (and taste) better.</p>
+      </div>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
