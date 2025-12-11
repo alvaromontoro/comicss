@@ -1747,4 +1747,11 @@ const posts = [
     vertical: true,
     ariaLabel: "The Ice-Cream Web Stack: a neapolitan ice cream with arrows pointing to the chocolate, vanilla, and strawberry. JavaScript is chocolate: Rich, versatile, and everywhere. You cannot avoid it. It comes in many flavors, and people have very strong opinions about each one. HTML is vanilla: The structural backbone of the web. It may seem plain, but it is essential, reliable, and pairs with everything. CSS is strawberry: The color and creativity. It adds personality, style, and makes everything look (and taste) better."
   },
+  {
+    id: 225,
+    uid: "elf-on-the-shelf",
+    boxes: 2,
+    title: "Elf on the Shelf",
+    ariaLabel: "Cartoon with a toy elf next to a square over a pot lid, and the text: You know Elf on the Shelf... now discover Grid on a Lid"
+  },
 ]
