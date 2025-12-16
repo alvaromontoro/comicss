@@ -4281,4 +4281,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Santa's Cookies</title>
+    <link href="https://comicss.art/comics/226" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/226/santas-cookie.html"/>
+    <id>https://comicss.art/comics/226</id>
+    <updated>2025-12-15T00:00:00Z</updated>
+    <summary>New Cartoon: Santa's Cookies</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/226/santas-cookie.png" alt="cartoon with two panels showing Santa Claus holding a cookie. In the first panel he looks happy and says 'This is how a web developer gets into the nice list!' and the code on the cookie is CSS: '#Santa .cookie { scale: 1.5 }'. In tthe second panel he looks angry and says '...And this is how they end in the naughty list!!' The cookie has some JS code: document.cookie = session_token=secretvalue;path=/" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

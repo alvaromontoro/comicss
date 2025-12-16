@@ -1754,4 +1754,12 @@ const posts = [
     title: "Elf on the Shelf",
     ariaLabel: "Cartoon with a toy elf next to a square over a pot lid, and the text: You know Elf on the Shelf... now discover Grid on a Lid"
   },
+  {
+    id: 226,
+    uid: "santas-cookie",
+    boxes: 2,
+    title: "Santa's Cookies",
+    vertical: true,
+    ariaLabel: "cartoon with two panels showing Santa Claus holding a cookie. In the first panel he looks happy and says 'This is how a web developer gets into the nice list!' and the code on the cookie is CSS: '#Santa .cookie { scale: 1.5 }'. In tthe second panel he looks angry and says '...And this is how they end in the naughty list!!' The cookie has some JS code: document.cookie = session_token=secretvalue;path=/"
+  },
 ]

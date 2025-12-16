@@ -2256,5 +2256,15 @@
       <enclosure url="https://comicss.art/comics/225/elf-on-the-shelf.png" length="154000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/226</guid>
+      <title>Santa's Cookies</title>
+      <link>https://comicss.art/comics/226</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/226/santas-cookie.png" length="214000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
