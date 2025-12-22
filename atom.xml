@@ -4300,4 +4300,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Centering a Div</title>
+    <link href="https://comicss.art/comics/227" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/227/centering-a-div.html"/>
+    <id>https://comicss.art/comics/227</id>
+    <updated>2025-12-15T00:00:00Z</updated>
+    <summary>New Cartoon: Centering a Div</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/227/centering-a-div.png" alt="comic with 4 panels in a 4x4 grid showing two characters: one sitting down in front of a computer and the other one looking over her shoulder. In the first panel, the person standing says 'Wow! That CSS Art is great! ...But can you center a div?' Annoyed the person sitting down waits until he leaves and says 'He's always making fun of CSS, and playing that silly joke about centering a div... I know! I'll write the ultimate guide to centering with CSS!' and later 'Done! 58 different ways to center a div in CSS: using a grid, with flex, another grid method, the old table-cell, the newer align-content, that trick Temani showed... All verified and working cross browser... Hey John! Come check this out!' He comes back and in a similar way to the first panel, he says 'Wow! That CSS article is great! ...But can you center a div?' while the sitting character looks really annoyed." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

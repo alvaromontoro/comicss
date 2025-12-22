@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/227/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/227/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-panel:nth-child(3) {
+  css-person[character="jill"] {
+    .eye {
+      translate: -100% -10% !important;
+    }
+    
+    .hand {
+      top: 30%;
+      left: 160%;
+    }
+  }
+}
+
+css-panel:nth-child(4) {
+  css-person[character="jill"] {
+    rotate: 3deg;
+    
+    .hand {
+      top: 30%;
+      left: 220%;
+    }
+    
+    .eye {
+      translate: -100% -10% !important;
+    }
+  }
+}
+
+css-panel:nth-child(5) {
+  css-person[character="jill"] {
+    rotate: -2deg;
+
+    .head {
+      transform-origin: 40% 90%;
+      rotate: 5deg;
+      translate: -45% 0;
+      
+      .face {
+        background:
+          linear-gradient(#f003, #f000 60%),
+          var(--skin);
+        .eye {
+          scale: 1 0.85 !important;
+
+      translate: -80% -20% !important;
+
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Centering a div">
+  <css-panel>
+    <css-prop type="chair" top="80" left="30" rotate="3"></css-prop>
+    <css-person character="jill" facing="left" left="20" eyes="" eyebrows="" mouth="flat small side-left" style="translate:0 7%"></css-person>
+    <css-prop type="counter" right="65" style="translate: 0 30%">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+    <css-person character="john" facing="left" left="60" eyes="" eyebrows="high" mouth="side-right" height="tall" arms="left-15 right--20 right-fold--10"></css-person>
+<!--     <css-speech width="70" line="long left-60 skewer" right-line top="5" left="20">That CSS Art is great... but do you know how to center a div?</css-speech> -->
+    <css-speech width="65" line="long left-55 skewer" right-line top="5" left="25">Wow! That CSS Art is great! ...But can you center a div?</css-speech>
+    <css-speech type="whisper" top="55" left="55" rotate="-10">Ha ha!</css-speech>
+  </css-panel>
+
+  <css-panel>
+    <css-prop type="chair" top="80" left="30" rotate="3"></css-prop>
+    <css-person character="jill" facing="left" left="20" arms="left--10 right--40" eyebrows="low" mouth="frown small" style="translate:0 7%"></css-person>
+    <css-prop type="counter" right="65" style="translate: 0 30%">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+<!--     <css-speech line="left-25" right-line>As a matter of fact, I do! Check this out: You can use FlexBox with align-items and justify-content center; or a display:table-cell with vertical-alignment; or margin:auto with flex, but for that one you'd need this or that; and also...</css-speech> 
+<css-speech type="whisper" top="60" style="right: 63%" width="40" rotate="-2">And Temani talked about this trick with...</css-speech> -->
+    <css-speech width="70" line="longer left-30" right-line style="top: 3%">He's always making fun of CSS, and playing that silly joke about centering a div...</css-speech>
+    <css-speech width="50" left="35" line="left-20 skewest short" style="top:27%;left:37%;width:52%;">I know! I'll write the ultimate guide to centering with CSS!</css-speech>
+    <css-speech type="whisper" top="60" right="60" width="40" rotate="-2">That'll show him</css-speech>
+    
+     <css-speech type="whisper" top="80" right="50" width="40" rotate="10"  style="top: 78%; right:52%">*Type*</css-speech>
+     <css-speech type="whisper" top="85" right="55" width="40" rotate="-10" style="top: 82%">*Type*</css-speech>
+  </css-panel>
+
+  <css-panel>
+    <css-prop type="chair" top="80" left="30" rotate="3"></css-prop>
+    <css-person character="jill" facing="left" left="25" arms="left-20 right--50"  eyebrows="high" mouth="small" style="translate:0 7%"></css-person>
+    <css-prop type="counter" right="65" style="translate: 0 30%">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+<!--     <css-speech width="70" line="long left-35" right-line top="10" left="0">...and with align-content, that takes it to 58 different ways to center a div.... Any questions?</css-speech> -->
+<!--     <css-speech width="" line="long left-30 skewer" right-line top="10" left="0">...and grid... another grid one... and flex... and align-content... and that trick Temani showed... I'm done! That's 58! </css-speech> -->
+    <css-speech width="" line="long left-25 skewer" right-line top="0" left="0">Done! 58 different ways to center a div in CSS: using a grid, with flex, another grid method, the old table-cell, the newer align-content, that trick Temani showed... All verified and working cross browser...</css-speech>
+    <css-speech width="45" top="35" left="50" line="left-10 skewest short" style="width:41%;">Hey John! Come check this out!</css-speech>
+    <css-speech type="whisper" top="85" right="55" width="40" rotate="-10" style="top: 82%">*Save*</css-speech>
+  </css-panel>
+
+  <css-panel>
+    <css-prop type="chair" top="80" left="30" rotate="3"></css-prop>
+    <css-person character="jill" facing="left" left="20" eyes="" eyebrows="low angry" mouth="sad small" style="translate:0 7%"></css-person>
+    <css-prop type="counter" right="65" style="translate: 0 30%">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+    <css-person character="john" facing="left" left="60" eyes="" eyebrows="high" mouth="side-right" height="tall" arms="left-20 right--25 right-fold--10"></css-person>
+    <css-speech width="70" line="long left-55 skewer" right-line top="5" left="20">Wow! That CSS article is great! ...But can you center a div?</css-speech>
+    <css-speech type="whisper" top="55" left="55" rotate="5">Ha ha!</css-speech>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
