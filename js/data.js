@@ -1762,4 +1762,11 @@ const posts = [
     vertical: true,
     ariaLabel: "cartoon with two panels showing Santa Claus holding a cookie. In the first panel he looks happy and says 'This is how a web developer gets into the nice list!' and the code on the cookie is CSS: '#Santa .cookie { scale: 1.5 }'. In tthe second panel he looks angry and says '...And this is how they end in the naughty list!!' The cookie has some JS code: document.cookie = session_token=secretvalue;path=/"
   },
+  {
+    id: 227,
+    uid: "centering-a-div",
+    boxes: 4,
+    title: "Centering a Div",
+    ariaLabel: "comic with 4 panels in a 4x4 grid showing two characters: one sitting down in front of a computer and the other one looking over her shoulder. In the first panel, the person standing says 'Wow! That CSS Art is great! ...But can you center a div?' Annoyed the person sitting down waits until he leaves and says 'He's always making fun of CSS, and playing that silly joke about centering a div... I know! I'll write the ultimate guide to centering with CSS!' and later 'Done! 58 different ways to center a div in CSS: using a grid, with flex, another grid method, the old table-cell, the newer align-content, that trick Temani showed... All verified and working cross browser... Hey John! Come check this out!' He comes back and in a similar way to the first panel, he says 'Wow! That CSS article is great! ...But can you center a div?' while the sitting character looks really annoyed."
+  },
 ]
