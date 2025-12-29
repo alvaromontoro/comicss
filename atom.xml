@@ -4319,4 +4319,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>DNA Test</title>
+    <link href="https://comicss.art/comics/228" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/228/dna-test.html"/>
+    <id>https://comicss.art/comics/228</id>
+    <updated>2025-12-29T00:00:00Z</updated>
+    <summary>New Cartoon: DNA Test</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/228/dna-test.png" alt="comic strip with two panels showing two characters. The first one says 'I took one of those DNA tests that tells you about your ancestry.' The other character replies 'Oh, really? How did it go?' The first one answers 'I am 50% CSS, 40% HTML, and 8% JavaScript...' and whispers '...and 2% tailwind...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2025 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
