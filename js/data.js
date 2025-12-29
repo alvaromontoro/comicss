@@ -1769,4 +1769,11 @@ const posts = [
     title: "Centering a Div",
     ariaLabel: "comic with 4 panels in a 4x4 grid showing two characters: one sitting down in front of a computer and the other one looking over her shoulder. In the first panel, the person standing says 'Wow! That CSS Art is great! ...But can you center a div?' Annoyed the person sitting down waits until he leaves and says 'He's always making fun of CSS, and playing that silly joke about centering a div... I know! I'll write the ultimate guide to centering with CSS!' and later 'Done! 58 different ways to center a div in CSS: using a grid, with flex, another grid method, the old table-cell, the newer align-content, that trick Temani showed... All verified and working cross browser... Hey John! Come check this out!' He comes back and in a similar way to the first panel, he says 'Wow! That CSS article is great! ...But can you center a div?' while the sitting character looks really annoyed."
   },
+  {
+    id: 228,
+    uid: "dna-test",
+    boxes: 2,
+    title: "DNA Test",
+    ariaLabel: "comic strip with two panels showing two characters. The first one says 'I took one of those DNA tests that tells you about your ancestry.' The other character replies 'Oh, really? How did it go?' The first one answers 'I am 50% CSS, 40% HTML, and 8% JavaScript...' and whispers '...and 2% tailwind...'"
+  },
 ]

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/228/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/228/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+    
+    <style>
+#ini-speech::before {
+  transform: skew(-5deg)
+}
+
+css-panel:nth-child(3) {
+  .mouth {
+    aspect-ratio: 0.8 !important;
+  }
+}
+    </style>
+  </head>
+  <body>
+
+<css-comic title="DNA Test">
+  <!-- Inspired by Liniers' Macanudo -->
+  <css-panel>
+    <css-speech id="ini-speech" width="80" line="longer left-20" left="5" style="top:3%">I took one of those DNA tests that tells you about your ancestry.</css-speech>
+    <css-speech right-line line="short left-60" left="30" style="top:22%">Oh, really? How did it go?</css-speech>
+    <css-person character="al" left="5" mouth="small" eyebrows="high" arms="left-20 right--20 right-fold--20"></css-person>
+    <css-person character="john" facing="left" right="5"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech width="60" top="15" left="15">I am 50% CSS, 40% HTML, and 8% JavaScript...</css-speech>
+    <css-speech type="whisper" top="70" left="30" rotate="5">...and 2% Tailwind...</css-speech>
+    <css-person character="al" left="5" mouth="frown small sided side-right" eyebrows="sad high" arms="left-15 right--15"></css-person>
+    <css-person character="john" facing="left" mouth="surprise small" eyebrows="high" rotate="4" arms="left-20 right--25" style="right:3%"></css-person>
+  </css-panel>
+</css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
