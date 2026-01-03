@@ -1776,4 +1776,11 @@ const posts = [
     title: "DNA Test",
     ariaLabel: "comic strip with two panels showing two characters. The first one says 'I took one of those DNA tests that tells you about your ancestry.' The other character replies 'Oh, really? How did it go?' The first one answers 'I am 50% CSS, 40% HTML, and 8% JavaScript...' and whispers '...and 2% tailwind...'"
   },
+  {
+    id: 229,
+    uid: "new-year-resolutions",
+    boxes: 4,
+    title: "New Year's Resolutions",
+    ariaLabel: "Comic with 4 panels in a 2x2 grid showing two characters speaking. Person 1: hey! what do you have there? Person 2 (holding a paper): Oh, this? It's a list with my New Year's resolutions. Last year's were unrealistic, but I a positive this year they'll be much better. Last panel is a close up of the paper showing the resolutions for 2025 (crossed out): 1325x845, 750x150, 431x999. And the resolutions for 2026: 1920x1080, 3840x2160, 768x1024, 2560x1440... and someone off-panel says 'Yes, these are better!'"
+  },
 ]
