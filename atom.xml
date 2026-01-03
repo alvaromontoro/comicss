@@ -4338,4 +4338,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>New Year's Resolutions</title>
+    <link href="https://comicss.art/comics/229" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/229/new-year-resolutions.html"/>
+    <id>https://comicss.art/comics/229</id>
+    <updated>2026-01-02T00:00:00Z</updated>
+    <summary>New Cartoon: New Year's Resolutions</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/229/new-year-resolutions.png" alt="Comic with 4 panels in a 2x2 grid showing two characters speaking. Person 1: hey! what do you have there? Person 2 (holding a paper): Oh, this? It's a list with my New Year's resolutions. Last year's were unrealistic, but I a positive this year they'll be much better. Last panel is a close up of the paper showing the resolutions for 2025 (crossed out): 1325x845, 750x150, 431x999. And the resolutions for 2026: 1920x1080, 3840x2160, 768x1024, 2560x1440... and someone off-panel says 'Yes, these are better!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
