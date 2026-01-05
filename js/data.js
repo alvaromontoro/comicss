@@ -1783,4 +1783,11 @@ const posts = [
     title: "New Year's Resolutions",
     ariaLabel: "Comic with 4 panels in a 2x2 grid showing two characters speaking. Person 1: hey! what do you have there? Person 2 (holding a paper): Oh, this? It's a list with my New Year's resolutions. Last year's were unrealistic, but I a positive this year they'll be much better. Last panel is a close up of the paper showing the resolutions for 2025 (crossed out): 1325x845, 750x150, 431x999. And the resolutions for 2026: 1920x1080, 3840x2160, 768x1024, 2560x1440... and someone off-panel says 'Yes, these are better!'"
   },
+  {
+    id: 230,
+    uid: "monster-movie-auditions",
+    boxes: 4,
+    title: "Monster Movie Auditions",
+    ariaLabel: "comic with 4 panels in a 2x2 grid titled 'monster movie auditions' showing Frankenstein's monster roaring, an alien speaking alienese, the devil saying 'I am here for your soul', and a regular person saying 'I use div as buttons'"
+  },
 ]

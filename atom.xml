@@ -4357,4 +4357,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Monster Movie Auditions</title>
+    <link href="https://comicss.art/comics/230" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/230/monster-movie-auditions.html"/>
+    <id>https://comicss.art/comics/230</id>
+    <updated>2026-01-05T00:00:00Z</updated>
+    <summary>New Cartoon: Monster Movie Auditions</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/230/monster-movie-auditions.png" alt="comic with 4 panels in a 2x2 grid titled 'monster movie auditions' showing Frankenstein's monster roaring, an alien speaking alienese, the devil saying 'I am here for your soul', and a regular person saying 'I use div as buttons'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

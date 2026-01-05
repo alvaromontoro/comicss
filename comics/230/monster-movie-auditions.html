@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/230/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/230/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-panel:nth-child(2) {
+  css-speech {
+    font-size: 2em;
+  }
+  css-person {
+    --skin-color: #8e9;
+    translate: 0% -20%;
+    scale: 1.15;
+
+    .body {
+      .hand {
+        left: 280%;
+        top: 32%;
+
+        & ~ & {
+          left: 215%;
+          top: 51%;
+        }
+      }
+    }
+
+    .head {
+      .face {
+        border-radius: 1em 1em 2.5em 3em;
+        background: 
+          radial-gradient(60% 100% at 50% 0, #000 99%, #0000) 0 0 / 12% 12% repeat-x,
+          var(--skin);
+      }
+    }
+  }
+}
+
+
+[character="devil"] {
+  --skin-color: #f77;
+  bottom: 6%;
+
+  .body {
+    .arm {
+      width: 20%;
+      left: 78%;
+
+      &::before {
+        border-left: 0.3em solid;
+        border-right: 0.3em solid;
+        background: linear-gradient(#000 40%, var(--skin-color) 0);
+        box-shadow: none;
+      }
+
+      &::after {
+        border-left: 0.3em solid;
+        border-right: 0.3em solid;
+        background: var(--skin-color);
+        box-shadow: none;
+      }
+    }
+  }
+
+  .head {
+    .face {
+      &::before {
+        content:"";
+        width: 50%;
+        height: 10%;
+        background: #000;
+        top: 100%;;
+        left: 57%;
+        transform-origin: 50% 10%;
+        transform: translateX(-50%) scale(1.1, 1.5);
+        clip-path: polygon(0 0, 100% 0, 80% 90%, 65% 70%, 50% 100%, 35% 70%, 20% 90%);
+      }
+
+      &::after {
+        content: "";
+        width: 80%;
+        height: 25%;
+        background: #fffc;
+        left: 50%;
+        transform: translatE(-50%, -100%);
+        border-radius: 40% 40% 20% 20% / 100%;
+        top: 2%;
+        background:
+          radial-gradient(50% 160% at 50% -50%, #0000 calc(99% - 1px), #000 99%);
+        z-index: -1
+      }
+
+      .ear {
+        height: 20%;
+        width: 40%;
+        top: 57%;
+      }
+
+      .eyebrow {
+        height: 4.5%;
+        border-radius: 50% / 100% 50% 0 0;
+      }
+    }
+  }
+}
+
+
+
+[character="devil"] {
+  .body {
+    .chest {
+      background: 
+        radial-gradient(circle at 40% 40%, #000 0.35em, #0000 0),
+        radial-gradient(circle at 85% 40%, #000 0.35em, #0000 0),
+        radial-gradient(100% 100% at 50% 100%, #0000 calc(94% - 1px), #000 94% calc(100% - 1px), #0000) 95% 60% / 75% 20% no-repeat,
+        var(--skin);
+      border: 0.4em solid;
+      border-bottom: 0;
+    }
+    
+    .arm {
+      &::before, &::after {
+        background: var(--skin);
+        clip-path: none !important;
+      }
+    }
+  }
+  .head {
+    .neck {
+      border-bottom: 1em solid #0000;
+    }
+    .face {
+      border-radius: 3em 3em 3.5em 4em;
+    }
+  }
+}
+
+css-prop[type="trident"] {
+  width: 20%;
+  height: 80%;
+  background: 
+    conic-gradient(at 50% 0, #0000 176deg, #000 176.75deg 183.35deg, #0000 184deg) 0 0 / 100% 25% no-repeat,
+    linear-gradient(#000 0 0) 50% 100% / 1.25em 75% no-repeat;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  rotate: 15deg;
+  
+  &::before {
+    content: "";
+    left: 50%;
+    translate: -50%;
+    width: 70%;
+    aspect-ratio: 0.75;
+    box-shadow: -0.25em 0.75em 0 0.25em, 0.25em 0.75em 0 0.25em;
+    border-radius: 100% / 120% 120% 80% 80%;
+  }
+}
+
+
+[character="alien"] {
+  --skin-color: #bdb;
+  bottom: -3%;
+
+  .body {
+    .chest {
+      background: 
+        radial-gradient(100% 30% at 52% 0, #000 20%, #0000 0),
+        #ccc;
+      border: 0.35em solid;
+
+      &::after,
+      &::before {
+        top: 18%;
+        left: 70%;
+        transform-origin: 50% 0;
+        content: "";
+        width: 15%;
+        height: 18%;
+        background: #000;
+        border-radius: 100% / 130% 130% 80% 80%;
+        rotate: 15deg;
+        border: 0.3em solid #000;
+        scale: 0.8;
+      }
+      &::after {
+        rotate: -15deg;
+      }
+    }
+
+    .arm {
+      &::before, &::after {
+        background: #ccc;
+        box-shadow: none;
+        border-right: 0.35em solid;
+        border-left: 0.35em solid;
+      }
+
+      & ~ & {
+        left: 1.5%;
+        top: 17%;
+      }
+    }
+  }
+
+  .head {
+    height: 45%;
+    top: 6%;
+    .face {
+      --skin: 
+        radial-gradient(60% 70% at 60% 45%, var(--skin-color) 88%, #0000 0),
+        linear-gradient(25deg, #f000 0 0.75em, #000 0 1em, #f000 0) 0% 0 / 50% 1.2em repeat-y,
+        linear-gradient(25deg, #f000 0 0.75em, #000 0 1em, #f000 0) 0% 0.6em / 50% 1.2em repeat-y,
+        var(--skin-color);
+      width: 110%;
+      border-radius: 100% / 80% 80% 120% 130%;
+      border-radius: 100% / 80% 80% 120% 15em;
+
+      .ear,
+      .eyebrow {
+        display: none;
+      }
+
+      .nose {
+        border-radius: 50%;
+        border: 0;
+        background: #000;
+        aspect-ratio: 1;
+        width: 5%;
+        top: 70%;
+        left: 59%;
+        box-shadow: 1em 0;
+      }
+
+      .mouth {
+        scale: -0.6;
+      }
+
+      .eye {
+        --r: -20deg;
+        border-radius: 50%;
+        height: auto;
+        width: 20%;
+        aspect-ratio: 0.7;
+        rotate: var(--r);
+        left: 35%;
+        top: 45%;
+
+        & ~ &{
+          left: 75%;
+          scale: -1 1;
+          rotate: calc(var(--r) * -1)
+        }
+      }
+    }
+  }
+}
+
+
+
+css-panel:nth-child(5) {
+  .eye {
+    clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0 100%);
+  }
+
+  .mouth {
+    height: 5% !important;
+    width: 20% !important;
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Monster Movie Auditions">
+  <!-- Inspired by Liniers' Macanudo -->
+  <css-panel>
+    <css-speech left="35" top="5" line="skewer">AAARGH!!!</css-speech>
+    <css-person mouth="frown side-left" eyebrows="high angry" left="15" arms="left--60 left-fold--20 right--55 right-fold--50"></css-person>
+  </css-panel>
+  
+    <css-panel>
+    <css-speech left="30" width="40" top="25" line="skew left-30 skewest short">ŒšŒ¤ Ð¤¤¬ØÞ ×ðŠšŒ Þ ꒦꒷¤Ø ¤ ŒðÐš¤ :꒷ÞŒ</css-speech>
+    <css-person character="alien" left="15" arms="left-20 left-fold--30 right--20 right-fold--10" eyebrows="angry high" mouth="side-right"></css-person>
+  </css-panel>
+  
+  
+  <css-panel>
+    <css-speech left="35" width="40" top="15" line="skewest left-20">I'm here to take your soul!</css-speech>
+    <css-prop type="trident"></css-prop>
+    <css-person character="devil" left="15" arms="left-20 left-fold--30 right--20 right-fold--10" eyebrows="angry high" mouth="side-right"></css-person>
+    
+  </css-panel>
+  
+
+  <css-panel>
+<!--     <css-speech left="30" top="20" line="skew left-15 short">I use Tailwind.</css-speech> -->
+    <css-speech left="30" top="20" line="skew left-15 short">I use divs as buttons.</css-speech>
+    <css-person character="john" eyebrows="low" left="15" mouth="frown sided side-right "></css-person>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
