@@ -7,6 +7,7 @@ Allow: /archive/
 Allow: /about/
 Allow: /blog/
 Allow: /contact/
+Allow: /games/
 
 # Disallow unnecessary files and directories
 Disallow: /bin/
