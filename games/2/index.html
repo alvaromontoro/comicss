@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS Games: Infinite Ring</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/infinity-ring.css" />
+
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+      <style>
+        /* These styles change from puzzle to puzzle */
+        body:has(.word0:focus) [for="tile-0"],
+        body:has(.word1:focus) [for="tile-2"],
+        body:has(.word2:focus) [for="tile-5"],
+        body:has(.word3:focus) [for="tile-9"],
+        body:has(.word4:focus) [for="tile-11"],
+        body:has(.word5:focus) [for="tile-12"] { 
+          color: light-dark(#00f, #0ff);
+        }
+      </style>
+      <h1>Infinite Ring</h1>
+      <p id="instructions">
+        Hidden in this ring, there are 6 CSS terms. The end letters of each term are the beginning of the 
+        following term. The last one's ending matches the first one's beginning. The numbers on the tiles 
+        indicate the beginning of the term. Each tile can hold between 2 and 4 characters (you must write 
+        the dashes but they don't count as a character.)
+      </p>
+
+      <article id="game-main">
+        <div class="terms">
+          <h2>Definitions</h2>
+          <label for="tile-0">1. It can be pretty or balanced</label>
+          <label for="tile-2">2. Controls breaks between boxes</label>
+          <label for="tile-5">3. Specifies silent periods in speech media</label>
+          <label for="tile-9">4. Default value for background-repeat</label>
+          <label for="tile-11">5. Function to read data-attributes</label>
+          <label for="tile-12">6. Moves things around</label>
+        </div>
+        <ul>
+          <li data-n="1"><input maxlength="4" id="tile-0"  autocomplete="off" value="" required class="word0 word5" pattern="[Tt][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-1"  autocomplete="off" value="" required class="word0" pattern="[Xx][Tt]-"></li>
+          <li data-n="2"><input maxlength="4" id="tile-2"  autocomplete="off" value="" required class="word0 word1" pattern="[Ww][Rr][Aa][Pp]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-3"  autocomplete="off" value="" required class="word1" pattern="-[Bb][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-4"  autocomplete="off" value="" required class="word1" pattern="[Ff][Oo]"></li>
+          <li data-n="3"><input maxlength="4" id="tile-5"  autocomplete="off" value="" required class="word1 word2" pattern="[Rr][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-6"  autocomplete="off" value="" required class="word2" pattern="[Ss][Tt]-?"></li>
+          <li data-n="0"><input maxlength="4" id="tile-7"  autocomplete="off" value="" required class="word2" pattern="-?[Bb][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-8"  autocomplete="off" value="" required class="word2" pattern="[Ff][Oo]"></li>
+          <li data-n="4"><input maxlength="4" id="tile-9"  autocomplete="off" value="" required class="word2 word3" pattern="[Rr][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-10" autocomplete="off" value="" required class="word3" pattern="[Pp][Ee]"></li>
+          <li data-n="5"><input maxlength="4" id="tile-11" autocomplete="off" value="" required class="word3 word4" pattern="[Aa][Tt]"></li>
+          <li data-n="6"><input maxlength="4" id="tile-12" autocomplete="off" value="" required class="word4 word5" pattern="[Tt][Rr]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-13" autocomplete="off" value="" required class="word5" pattern="[Aa][Nn][Ss]?"></li>
+          <li data-n="0"><input maxlength="4" id="tile-14" autocomplete="off" value="" required class="word5" pattern="[Ss]?[Ll][Aa]"></li>
+        </ul>
+      </article>
+
+      <section class="scrim" id="scrim-good" aria-role="alert">
+        <div aria-live="assertive">
+          <h2>Congratulations!!</h2>
+          <p>You solved the puzzle!</h2>
+          <p>Go back to the <a href="/games">games page</a>.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Hints</h2>
+        <ol>
+          <li><a href="https://www.w3.org/TR/css-text-4/" target="_top">CSS Text Module Level 4</a></li>
+          <li><a href="https://www.w3.org/TR/css-text-4/" target="_top">CSS Text Module Level 4</a></li>
+          <li><a href="https://www.w3.org/TR/css-speech-1/" target="_top">CSS Speech Module Level 1</a></li>
+          <li><a href="https://www.w3.org/TR/css-backgrounds-3/" target="_top">CSS Backgrounds and Borders Module Level 3</a></li>
+          <li><a href="https://www.w3.org/TR/css-values-5/" target="_top">CSS Values and Units Module Level 5</a></li>
+          <li><a href="https://www.w3.org/TR/css-transforms-2/" target="_top">CSS Transforms Module Level 2</a></li>
+        </ol>
+      </section>
+    </main>
+
+    <script>
+      const inputs = document.querySelectorAll("input");
+      const scrim = document.querySelector(".scrim");
+      scrim.removeAttribute("id")
+
+      function check() {
+        if (
+          (
+            (document.querySelector("#tile-14").value.toLowerCase() === "sla" && document.querySelector("#tile-13").value.toLowerCase() === "an") ||
+            (document.querySelector("#tile-14").value.toLowerCase() === "la" && document.querySelector("#tile-13").value.toLowerCase() === "ans")
+          ) &&
+          document.querySelector("#tile-12").value.toLowerCase() === "tr" &&
+          document.querySelector("#tile-11").value.toLowerCase() === "at" &&
+          document.querySelector("#tile-10").value.toLowerCase() === "pe" &&
+          document.querySelector("#tile-9").value.toLowerCase() === "re" &&
+          document.querySelector("#tile-8").value.toLowerCase() === "fo" &&
+          (
+            (document.querySelector("#tile-7").value.toLowerCase() === "-be" && document.querySelector("#tile-6").value.toLowerCase() === "st") ||
+            (document.querySelector("#tile-7").value.toLowerCase() === "be" && document.querySelector("#tile-6").value.toLowerCase() === "st-")
+          ) &&
+          document.querySelector("#tile-5").value.toLowerCase() === "re" &&
+          document.querySelector("#tile-4").value.toLowerCase() === "fo" &&
+          document.querySelector("#tile-3").value.toLowerCase() === "-be" &&
+          document.querySelector("#tile-2").value.toLowerCase() === "wrap" &&
+          document.querySelector("#tile-1").value.toLowerCase() === "xt-" &&
+          document.querySelector("#tile-0").value.toLowerCase() === "te"
+        ) {
+          scrim.setAttribute("id", "scrim-good");
+          scrim.setAttribute("style", "display:grid");
+          scrim.querySelector("a").focus();
+        } else {
+          scrim.removeAttribute("id");
+          scrim.setAttribute("style", "");
+        }
+      }
+
+      for (let x = 0; x < inputs.length; x++) {
+        inputs[x].addEventListener("blur", check)
+      }
+    </script>
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+  </body>
+</html>
