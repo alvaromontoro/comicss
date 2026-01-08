@@ -99,33 +99,50 @@
     <main id="main" class="game-main">
       <h1>ABCnagrams Solution</h1>
       <p>This page contains the solution to the <a href="./">ABCnagrams game for January 7, 2026</a>.</p>
+      <p>
+        To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
+        them whenever you're ready.
+      </p>
+      <label for="show-answers" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+        <input type="checkbox" id="show-answers" role="switch" />
+        <span>Show answers</span>
+      </label>
+      <style>
+        ol li span {
+          filter: blur(0.25rem);
+          transition: filter 0.5s;
+        }
+        :has(#show-answers:checked) ol li span {
+          filter: blur(0);
+        }
+      </style>
       <ol>
-        <li>z-index</li>
-        <li>mask-mode</li>
-        <li>border</li>
-        <li>table-layout</li>
-        <li>content</li>
-        <li>tab-size</li>
-        <li>align-self</li>
-        <li>cursor</li>
-        <li>outline-color</li>
-        <li>border-top</li>
-        <li>quotes</li>
-        <li>grid</li>
-        <li>visibility</li>
-        <li>justify-self</li>
-        <li>margin</li>
-        <li>opacity</li>
-        <li>color</li>
-        <li>user-select</li>
-        <li>isolation</li>
-        <li>orphans</li>
-        <li>font-size</li>
-        <li>columns</li>
-        <li>border-width</li>
-        <li>font-variant</li>
-        <li>word-break</li>
-        <li>text-align</li>
+        <li><span>z-index</span></li>
+        <li><span>mask-mode</span></li>
+        <li><span>border</span></li>
+        <li><span>table-layout</span></li>
+        <li><span>content</span></li>
+        <li><span>tab-size</span></li>
+        <li><span>align-self</span></li>
+        <li><span>cursor</span></li>
+        <li><span>outline-color</span></li>
+        <li><span>border-top</span></li>
+        <li><span>quotes</span></li>
+        <li><span>grid</span></li>
+        <li><span>visibility</span></li>
+        <li><span>justify-self</span></li>
+        <li><span>margin</span></li>
+        <li><span>opacity</span></li>
+        <li><span>color</span></li>
+        <li><span>user-select</span></li>
+        <li><span>isolation</span></li>
+        <li><span>orphans</span></li>
+        <li><span>font-size</span></li>
+        <li><span>columns</span></li>
+        <li><span>border-width</span></li>
+        <li><span>font-variant</span></li>
+        <li><span>word-break</span></li>
+        <li><span>text-align</span></li>
       </ol>
     </main>
 
