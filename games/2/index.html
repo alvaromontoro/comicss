@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="../css/infinity-ring.css" />
-    <script src="../js/infinity-ring.js" defer></script>
+
   </head>
   <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -129,23 +129,31 @@
           <label for="tile-12">6. Moves things around</label>
         </div>
         <ul>
-          <li data-n="1"><input maxlength="4" id="tile-0"  class="word0 word5" value="" required pattern="[Tt][Ee]"></li>
-          <li data-n="0"><input maxlength="4" id="tile-1"  class="word0" value="" required pattern="[Xx][Tt]-"></li>
-          <li data-n="2"><input maxlength="4" id="tile-2"  class="word0 word1" value="" required pattern="[Ww][Rr][Aa][Pp]"></li>
-          <li data-n="0"><input maxlength="4" id="tile-3"  class="word1" value="" required pattern="-[Bb][Ee]"></li>
-          <li data-n="0"><input maxlength="4" id="tile-4"  class="word1" value="" required pattern="[Ff][Oo]"></li>
-          <li data-n="3"><input maxlength="4" id="tile-5"  class="word1 word2" value="" required pattern="[Rr][Ee]"></li>
-          <li data-n="0"><input maxlength="4" id="tile-6"  class="word2" value="" required pattern="[Ss][Tt]-?"></li>
-          <li data-n="0"><input maxlength="4" id="tile-7"  class="word2" value="" required pattern="-?[Bb][Ee]"></li>
-          <li data-n="0"><input maxlength="4" id="tile-8"  class="word2" value="" required pattern="[Ff][Oo]"></li>
-          <li data-n="4"><input maxlength="4" id="tile-9"  class="word2 word3" value="" required pattern="[Rr][Ee]"></li>
-          <li data-n="0"><input maxlength="4" id="tile-10" class="word3" value="" required pattern="[Pp][Ee]"></li>
-          <li data-n="5"><input maxlength="4" id="tile-11" class="word3 word4" value="" required pattern="[Aa][Tt]"></li>
-          <li data-n="6"><input maxlength="4" id="tile-12" class="word4 word5" value="" required pattern="[Tt][Rr]"></li>
-          <li data-n="0"><input maxlength="4" id="tile-13" class="word5" value="" required pattern="[Aa][Nn][Ss]?"></li>
-          <li data-n="0"><input maxlength="4" id="tile-14" class="word5" value="" required pattern="[Ss]?[Ll][Aa]"></li>
+          <li data-n="1"><input maxlength="4" id="tile-0"  autocomplete="off" value="" required class="word0 word5" pattern="[Tt][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-1"  autocomplete="off" value="" required class="word0" pattern="[Xx][Tt]-"></li>
+          <li data-n="2"><input maxlength="4" id="tile-2"  autocomplete="off" value="" required class="word0 word1" pattern="[Ww][Rr][Aa][Pp]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-3"  autocomplete="off" value="" required class="word1" pattern="-[Bb][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-4"  autocomplete="off" value="" required class="word1" pattern="[Ff][Oo]"></li>
+          <li data-n="3"><input maxlength="4" id="tile-5"  autocomplete="off" value="" required class="word1 word2" pattern="[Rr][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-6"  autocomplete="off" value="" required class="word2" pattern="[Ss][Tt]-?"></li>
+          <li data-n="0"><input maxlength="4" id="tile-7"  autocomplete="off" value="" required class="word2" pattern="-?[Bb][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-8"  autocomplete="off" value="" required class="word2" pattern="[Ff][Oo]"></li>
+          <li data-n="4"><input maxlength="4" id="tile-9"  autocomplete="off" value="" required class="word2 word3" pattern="[Rr][Ee]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-10" autocomplete="off" value="" required class="word3" pattern="[Pp][Ee]"></li>
+          <li data-n="5"><input maxlength="4" id="tile-11" autocomplete="off" value="" required class="word3 word4" pattern="[Aa][Tt]"></li>
+          <li data-n="6"><input maxlength="4" id="tile-12" autocomplete="off" value="" required class="word4 word5" pattern="[Tt][Rr]"></li>
+          <li data-n="0"><input maxlength="4" id="tile-13" autocomplete="off" value="" required class="word5" pattern="[Aa][Nn][Ss]?"></li>
+          <li data-n="0"><input maxlength="4" id="tile-14" autocomplete="off" value="" required class="word5" pattern="[Ss]?[Ll][Aa]"></li>
         </ul>
       </article>
+
+      <section class="scrim" id="scrim-good" aria-role="alert">
+        <div aria-live="assertive">
+          <h2>Congratulations!!</h2>
+          <p>You solved the puzzle!</h2>
+          <p>Go back to the <a href="/games">games page</a>.</p>
+        </div>
+      </section>
 
       <section>
         <h2>Hints</h2>
@@ -158,23 +166,48 @@
           <li><a href="https://www.w3.org/TR/css-transforms-2/" target="_top">CSS Transforms Module Level 2</a></li>
         </ol>
       </section>
-
-      <section class="scrim" id="scrim-good" aria-role="alert">
-        <div aria-live="assertive">
-          <h2>Congratulations!!</h2>
-          <p>You solved the puzzle!</h2>
-          <p>Go back to the <a href="/games">games page</a>.</p>
-        </div>
-      </section>
     </main>
 
-    <section class="scrim" open>
-      <div aria-live="polite">
-        <h2>Congratulations!!</h2>
-        <p>You solved the puzzle!</p>
-        <p>Go back to the <a href="/games">games page</a>.</p>
-      </div>
-    </section>
+    <script>
+      const inputs = document.querySelectorAll("input");
+      const scrim = document.querySelector(".scrim");
+      scrim.removeAttribute("id")
+
+      function check() {
+        if (
+          (
+            (document.querySelector("#tile-14").value.toLowerCase() === "sla" && document.querySelector("#tile-13").value.toLowerCase() === "an") ||
+            (document.querySelector("#tile-14").value.toLowerCase() === "la" && document.querySelector("#tile-13").value.toLowerCase() === "ans")
+          ) &&
+          document.querySelector("#tile-12").value.toLowerCase() === "tr" &&
+          document.querySelector("#tile-11").value.toLowerCase() === "at" &&
+          document.querySelector("#tile-10").value.toLowerCase() === "pe" &&
+          document.querySelector("#tile-9").value.toLowerCase() === "re" &&
+          document.querySelector("#tile-8").value.toLowerCase() === "fo" &&
+          (
+            (document.querySelector("#tile-7").value.toLowerCase() === "-be" && document.querySelector("#tile-6").value.toLowerCase() === "st") ||
+            (document.querySelector("#tile-7").value.toLowerCase() === "be" && document.querySelector("#tile-6").value.toLowerCase() === "st-")
+          ) &&
+          document.querySelector("#tile-5").value.toLowerCase() === "re" &&
+          document.querySelector("#tile-4").value.toLowerCase() === "fo" &&
+          document.querySelector("#tile-3").value.toLowerCase() === "-be" &&
+          document.querySelector("#tile-2").value.toLowerCase() === "wrap" &&
+          document.querySelector("#tile-1").value.toLowerCase() === "xt-" &&
+          document.querySelector("#tile-0").value.toLowerCase() === "te"
+        ) {
+          scrim.setAttribute("id", "scrim-good");
+          scrim.setAttribute("style", "display:grid");
+          scrim.querySelector("a").focus();
+        } else {
+          scrim.removeAttribute("id");
+          scrim.setAttribute("style", "");
+        }
+      }
+
+      for (let x = 0; x < inputs.length; x++) {
+        inputs[x].addEventListener("blur", check)
+      }
+    </script>
 
     <footer>
       Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
