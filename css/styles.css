@@ -144,6 +144,7 @@ main h1 {
 #comic-strip img {
   margin: 0.25rem;
   max-height: 1200px;
+  background: #eee;
 }
 
 #comic-strip.vertical img {
@@ -388,3 +389,55 @@ p.video a {
   }
 }
 
+
+
+
+
+
+
+/* Dark mode */
+:root {
+  color-scheme: light dark;
+  --accent: light-dark(#939, #66aaff);
+  --bg: light-dark(#fff, #222);
+  --fg: light-dark(#000, #eee);
+  --primary: light-dark(hsl(var(--primaryH), var(--primaryS), var(--primaryL)), #99aaff);
+  --primary-dark: light-dark(hsl(var(--primaryH), var(--primaryS), calc(var(--primaryL) * 0.5)), #bbccff);
+  --secondary: light-dark(hsl(var(--secondaryH), var(--secondaryS), var(--secondaryL)), #fff);
+  --secondary-lighter: light-dark(hsl(var(--secondaryH), var(--secondaryS), 96%), #333);
+  --secondary-bg: var(--bg);
+  --primary-lighter: light-dark(hsl(var(--primaryH), var(--primaryS), 96%), #111);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+a.skip-link {
+  background: light-dark(#fff, #000);
+  color: light-dark(#000, #fff);
+}
+
+.sitename,
+.page-title {
+  &, & a {
+    color: inherit; /* light-dark(#000, #fff); */
+  }
+
+  span {
+    color: light-dark(var(--accent), #66aaff);
+  }
+}
+
+[rel="about"] svg circle {
+    fill: #fff !important;
+    fill: var(--bg) !important;
+    fill: var(--bg, #fff) !important;
+}
+
+figure,
+#comic-strip {
+  border-color: light-dark(#ccc, #444);
+  background: light-dark(#eee, #181818);
+}
