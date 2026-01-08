@@ -1,0 +1,312 @@
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#fff, #222);
+  --fg: light-dark(#000, #eee);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.main {
+  margin: auto auto;
+  padding: 1em;
+  max-width: 1200px;
+  container-type: inline-size;
+}
+
+.game-main {
+  h1, h2 {
+    font-weight: 400;
+    color: #000;
+    color: light-dark(#000, #fff);
+  }
+
+  h2:not(.page-title) {
+    margin-block-end: 0em;
+    font-size: 1.25em;
+    padding: 0;
+    margin: 0;
+  }
+
+  li, p {
+    font-size: 1.25em;
+    line-height: 1.35;
+    max-width: 65ch;
+    font-weight: 300;
+  }
+
+  #instructions span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  article {
+    --color: #cef;
+    font-size: 1em;
+    display: block;
+    margin: 0;
+    margin-block-end: 3em;
+    margin-block-start: 2em;
+  }
+
+  .letters-found-section {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-block: 0.5em 2em;
+    background: linear-gradient(var(--bg) calc(100% - 1em), #0000);
+    z-index: 1;
+  }
+
+  .all-letters {
+    display: flex;
+    gap: 0.35em;
+    width: 100%;
+    text-align: center;
+    justify-content: start;
+    font-size: 1.25em;
+  
+      margin-top: 0.5em;
+    flex-wrap: wrap;
+    text-wrap: balance;
+    padding: 0;
+    
+    li {
+      list-style: "";
+      font-size: 0.6em;
+      border: 1px solid var(--fg);
+      aspect-ratio: 1;
+      width: 1.5em;
+      min-height: 1.5em;
+      min-width: 1.5em;
+      border-radius: 50%;
+      background: var(--bg);
+      display: grid;
+      place-items: center;
+      
+      &::before {
+        content: attr(data-letter);
+        content: attr(data-letter) / "";
+      }
+    }
+    
+      :has(input:valid ~ [data-letter="A"]) & [data-letter="A"],
+      :has(input:valid ~ [data-letter="B"]) & [data-letter="B"],
+      :has(input:valid ~ [data-letter="C"]) & [data-letter="C"],
+      :has(input:valid ~ [data-letter="D"]) & [data-letter="D"],
+      :has(input:valid ~ [data-letter="E"]) & [data-letter="E"],
+      :has(input:valid ~ [data-letter="F"]) & [data-letter="F"],
+      :has(input:valid ~ [data-letter="G"]) & [data-letter="G"],
+      :has(input:valid ~ [data-letter="H"]) & [data-letter="H"],
+      :has(input:valid ~ [data-letter="I"]) & [data-letter="I"],
+      :has(input:valid ~ [data-letter="J"]) & [data-letter="J"],
+      :has(input:valid ~ [data-letter="K"]) & [data-letter="K"],
+      :has(input:valid ~ [data-letter="L"]) & [data-letter="L"],
+      :has(input:valid ~ [data-letter="M"]) & [data-letter="M"],
+      :has(input:valid ~ [data-letter="N"]) & [data-letter="N"],
+      :has(input:valid ~ [data-letter="O"]) & [data-letter="O"],
+      :has(input:valid ~ [data-letter="P"]) & [data-letter="P"],
+      :has(input:valid ~ [data-letter="Q"]) & [data-letter="Q"],
+      :has(input:valid ~ [data-letter="R"]) & [data-letter="R"],
+      :has(input:valid ~ [data-letter="S"]) & [data-letter="S"],
+      :has(input:valid ~ [data-letter="T"]) & [data-letter="T"],
+      :has(input:valid ~ [data-letter="U"]) & [data-letter="U"],
+      :has(input:valid ~ [data-letter="V"]) & [data-letter="V"],
+      :has(input:valid ~ [data-letter="W"]) & [data-letter="W"],
+      :has(input:valid ~ [data-letter="X"]) & [data-letter="X"],
+      :has(input:valid ~ [data-letter="Y"]) & [data-letter="Y"],
+      :has(input:valid ~ [data-letter="Z"]) & [data-letter="Z"] 
+      { 
+        filter: invert(1);
+        &::before {
+          content: attr(data-letter);
+        }
+    }
+  }
+
+  ul#puzzle {
+    margin: 0;
+    padding: 0;
+    list-style: "";
+    width: 100%;
+    
+    li {
+  /*     display: flex;
+      flex-wrap: wrap; */
+      align-items: center;
+      justify-content: start;
+      overflow: hidden;
+      box-sizing: border-box;
+      gap: 0.5em;
+      padding: 0;
+      padding-inline: 1.25em;
+      padding-block-end: 1em;
+      border-block-end: 1px solid color-mix(in sRGB, var(--fg) 10%, #0000 90%);
+      margin-block-end: 1em;
+  /*     
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto auto; */
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      
+      &:has(:valid)::after {
+        content: "";
+        position: absolute;
+        width: 0.6em;
+        height: 0.3em;
+        border-left: 0.2em solid green;
+        border-bottom: 0.2em solid green;
+        top: 1em;
+        left: 0%;
+        transform: translate(0, -50%) rotate(-45deg);
+      }
+      
+      
+      .eq {
+        display: none;
+      }
+      
+      @media (width > 600px) {
+        display: grid;
+        grid-template-columns: 10em auto 2em auto 1fr;
+        
+        .eq {
+          display: block;
+        }
+      }
+      
+      
+      &:last-child {
+        border-block-end: none;
+      }
+      
+      [data-letter] {
+        box-sizing: border-box;
+        font-size: 1em;
+        width: 2em;
+        height: 2em;
+        border: 1px solid;
+        display: grid;
+        place-items: center;
+        background: color-mix(in sRGB, var(--fg) 10%, #0000 90%);
+        border-radius: 50%;
+        
+        &::before {
+          content: "?";
+          content: "?" / "Unknown letter";
+        }
+        
+        :has(input:valid) > &::before {
+          content: attr(data-letter);
+          content: attr(data-letter) / "Missing letter was " attr(data-letter);
+        }
+      }
+      
+      input {
+        box-sizing: border-box;
+        font-size: 1em;
+        min-width: 10em;
+        height: 2em;
+        padding: 0 0.5em;
+        text-transform: uppercase;
+        text-align: center;
+        border: 1px solid var(--fg);
+        border-radius: 0.125em;
+        background: color-mix(in sRGB, var(--fg) 2%, #0000 98%);
+        width: 100%;
+
+        &:valid {
+          color: light-dark(#080, #0c0);
+          background: light-dark(#0801, #0c01);
+          border: 1px solid;
+          
+          & ~ [data-letter] {
+            color: light-dark(#080, #0c0);
+            background: light-dark(#0801, #0c01);
+            border: 1px solid;
+            position: relative;
+          }
+        }
+        
+        &:focus-visible {
+          outline: 1px solid;
+          outline-offset: -3px;
+        }
+      }
+      
+      .hint {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  backdrop-filter: blur(0.5em);
+  place-items:center;
+  z-index: 1;
+  display: none;
+
+  :not(:has(:invalid)) & {
+    display: grid;
+  }
+
+  > div {
+    background: var(--bg);
+    border-radius: 0.5em;
+    padding: 2em;
+    font-family: Helvetica, sans-serif;
+    max-width: 300px;
+    width: 80%;
+
+    h2 {
+      margin-block: 0 2rem;
+      font-weight: 400;
+      color: #000;
+      color: light-dark(#000, #fff);
+    }
+
+    p {
+      margin-block: 1rem 0;
+      font-weight: 300;
+    }
+  }
+}
+
+/* fixes for the page */
+a, a:link, a:visited, a:active, a:focus {
+  color: light-dark(var(--primary), #66aaff);
+  text-decoration: none;
+}
+
+a.skip-link {
+  background: light-dark(#fff, #000);
+}
+
+.page-title {
+  &, & a {
+    color: light-dark(#000, #fff);
+  }
+  
+  span {
+    color: light-dark(var(--accent), #66aaff);
+  }
+}
+
+[rel="about"] svg circle {
+    fill: #fff !important;
+    fill: var(--bg) !important;
+    fill: var(--bg, #fff) !important;
+}

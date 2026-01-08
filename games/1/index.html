@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS - Games</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/abcnagrams.css" />
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+      <h1>ABCnagrams</h1>
+      <p id="instructions">
+        In this puzzle, you're given 26 scrambled clues, each representing a CSS property with one 
+        missing letter. Your task is to figure out the missing letter, add it back, and unscramble 
+        the result to reveal the correct CSS property. All missing letters are unique and don't repeat. 
+        In some cases, you may need to add a "-" to create the CSS property. The words and letters are 
+        not in alphabetical order. The first one has been solved as an example.
+      </p>
+
+      <article aria-describedby="instructions" role="application">
+        <div class="letters-found-section">
+          <h2 id="letters-found">Letters found</h2>
+          <ul class="all-letters" aria-labelledby="letters-found">
+            <li data-letter="A"></li>
+            <li data-letter="B"></li>
+            <li data-letter="C"></li>
+            <li data-letter="D"></li>
+            <li data-letter="E"></li>
+            <li data-letter="F"></li>
+            <li data-letter="G"></li>
+            <li data-letter="H"></li>
+            <li data-letter="I"></li>
+            <li data-letter="J"></li>
+            <li data-letter="K"></li>
+            <li data-letter="L"></li>
+            <li data-letter="M"></li>
+            <li data-letter="N"></li>
+            <li data-letter="O"></li>
+            <li data-letter="P"></li>
+            <li data-letter="Q"></li>
+            <li data-letter="R"></li>
+            <li data-letter="S"></li>
+            <li data-letter="T"></li>
+            <li data-letter="U"></li>
+            <li data-letter="V"></li>
+            <li data-letter="W"></li>
+            <li data-letter="X"></li>
+            <li data-letter="Y"></li>
+            <li data-letter="Z"></li>
+          </ul>
+        </div>
+        <ul id="puzzle">
+          <li>
+            <input type="text" value="z-index" required pattern="[Zz]-[Ii][Nn][Dd][Ee][Xx]" aria-label="Anagram of 'NIXED' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="Z"></div>
+            <span class="pl">+</span>
+            <div class="hint">NIXED</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Mm][Aa][Ss][Kk]-[Mm][Oo][Dd][Ee]" aria-label="Anagram of 'AS MODEM' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="K"></div>
+            <span class="pl">+</span>
+            <div class="hint">AS MODEM</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Bb][Oo][Rr][Dd][Ee][Rr]" aria-label="Anagram of 'ORDER' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="B"></div>
+            <span class="pl">+</span>
+            <div class="hint">ORDER</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Tt][Aa][Bb][Ll][Ee]-[Ll][Aa][Yy][Oo][Uu][Tt]" aria-label="Anagram of 'LOBULATE AT' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="Y"></div>
+            <span class="pl">+</span>
+            <div class="hint">LOBULATE AT</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Cc][Oo][Nn][Tt][Ee][Nn][Tt]" aria-label="Anagram of 'NO TENT' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="C"></div>
+            <span class="pl">+</span>
+            <div class="hint">NO TENT</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Tt][Aa][Bb]-[Ss][Ii][Zz][Ee]" aria-label="Anagram of 'BAIZES' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="T"></div>
+            <span class="pl">+</span>
+            <div class="hint">BAIZES</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Aa][Ll][Ii][Gg][Nn]-[Ss][Ee][Ll][Ff]" aria-label="Anagram of 'FALLINGS' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="E"></div>
+            <span class="pl">+</span>
+            <div class="hint">FALLINGS</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Cc][Uu][Rr][Ss][Oo][Rr]" aria-label="Anagram of 'CRUOR' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="S"></div>
+            <span class="pl">+</span>
+            <div class="hint">CRUOR</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Oo][Uu][Tt][Ll][Ii][Nn][Ee]-[Cc][Oo][Ll][Oo][Rr]" aria-label="Anagram of 'TOUR COLONEL' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="I"></div>
+            <span class="pl">+</span>
+            <div class="hint">TOUR COLONEL</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Bb][Oo][Rr][Dd][Ee][Rr]-[Tt][Oo][Pp]" aria-label="Anagram of 'OR DEBTOR' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="P"></div>
+            <span class="pl">+</span>
+            <div class="hint">OR DEBTOR</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Qq][Uu][Oo][Tt][Ee][Ss]" aria-label="Anagram of 'TOUSE' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="Q"></div>
+            <span class="pl">+</span>
+            <div class="hint">TOUSE</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Gg][Rr][Ii][Dd]" aria-label="Anagram of 'RID' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="G"></div>
+            <span class="pl">+</span>
+            <div class="hint">RID</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Vv][Ii][Ss][Ii][Bb][Ii][Ll][Ii][Tt][Yy]" aria-label="Anagram of 'I VISIT BY I' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="L"></div>
+            <span class="pl">+</span>
+            <div class="hint">I VISIT BY I</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Jj][Uu][Ss][Tt][Ii][Ff][Yy]-[Ss][Ee][Ll][Ff]" aria-label="Anagram of 'FISTFUL YES' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="J"></div>
+            <span class="pl">+</span>
+            <div class="hint">FISTFUL YES</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Mm][Aa][Rr][Gg][Ii][Nn]" aria-label="Anagram of 'GRAIN' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="M"></div>
+            <span class="pl">+</span>
+            <div class="hint">GRAIN</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Oo][Pp][Aa][Cc][Ii][Tt][Yy]" aria-label="Anagram of 'ATYPIC' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="O"></div>
+            <span class="pl">+</span>
+            <div class="hint">ATYPIC</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Cc][Oo][Ll][Oo][Rr]" aria-label="Anagram of 'LOCO' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="R"></div>
+            <span class="pl">+</span>
+            <div class="hint">LOCO</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Uu][Ss][Ee][Rr]-[Ss][Ee][Ll][Ee][Cc][Tt]" aria-label="Anagram of 'RESELECTS' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="U"></div>
+            <span class="pl">+</span>
+            <div class="hint">RESELECTS</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Ii][Ss][Oo][Ll][Aa][Tt][Ii][Oo][Nn]" aria-label="Anagram of 'INOSITOL' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="A"></div>
+            <span class="pl">+</span>
+            <div class="hint">INOSITOL</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Oo][Rr][Pp][Hh][Aa][Nn][Ss]" aria-label="Anagram of 'APRONS' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="H"></div>
+            <span class="pl">+</span>
+            <div class="hint">APRONS</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Ff][Oo][Nn][Tt]-[Ss][Ii][Zz][Ee]" aria-label="Anagram of 'IT ZONES' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="F"></div>
+            <span class="pl">+</span>
+            <div class="hint">IT ZONES</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Cc][Oo][Ll][Uu][Mm][Nn][Ss]" aria-label="Anagram of 'LOCUMS' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="N"></div>
+            <span class="pl">+</span>
+            <div class="hint">LOCUMS</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Bb][Oo][Rr][Dd][Ee][Rr]-[Ww][Ii][Dd][Tt][Hh]" aria-label="Anagram of 'BROTHER DID' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="W"></div>
+            <span class="pl">+</span>
+            <div class="hint">BROTHER DID</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Ff][Oo][Nn][Tt]-[Vv][Aa][Rr][Ii][Aa][Nn][Tt]" aria-label="Anagram of 'TORA INFANT' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="V"></div>
+            <span class="pl">+</span>
+            <div class="hint">TORA INFANT</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Ww][Oo][Rr][Dd]-[Bb][Rr][Ee][Aa][Kk]" aria-label="Anagram of 'WORK BEAR' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="D"></div>
+            <span class="pl">+</span>
+            <div class="hint">WORK BEAR</div>
+          </li>
+          <li>
+            <input type="text" required pattern="[Tt][Ee][Xx][Tt]-[Aa][Ll][Ii][Gg][Nn]" aria-label="Anagram of 'A LETTING' plus one letter">
+            <span class="eq">=</span>
+            <div data-letter="X"></div>
+            <span class="pl">+</span>
+            <div class="hint">A LETTING</div>
+          </li>
+        </ul>
+      </article>
+    </main>
+
+    <section class="scrim" open>
+      <div aria-live="polite">
+        <h2>Congratulations!!</h2>
+        <p>You solved the puzzle!</p>
+        <p>Go back to the <a href="/games">games page</a>.</p>
+      </div>
+    </section>
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+  </body>
+</html>

@@ -261,8 +261,17 @@ a.skip-link:focus {
   left: -10000in;
 }
 
+.games table tr th,
 .archive table tr th {
   text-align: left;
+}
+
+.games table tr th:first-of-type {
+  width: 70%;
+}
+
+.games table tr td:last-of-type {
+  text-align: right;
 }
 
 .archive table tr th:first-of-type {
