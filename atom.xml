@@ -4376,4 +4376,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Accordions</title>
+    <link href="https://comicss.art/comics/231" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/231/accordions.html"/>
+    <id>https://comicss.art/comics/231</id>
+    <updated>2026-01-12T00:00:00Z</updated>
+    <summary>New Cartoon: Accordions</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/231/accordions.png" alt="why was the web developer afraid of accordions? because the devil is in the details (and a cartoon of the devil with a pitchfork coming out of a web accordion/details)" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
