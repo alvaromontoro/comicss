@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/231/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/231/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Amatic SC';
+        src: url(/fonts/AmaticSC-Regular.ttf);
+      }
+
+      
+body {
+  background: #fcc;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: arial, sans-serif;
+}
+
+h1, h2 {
+  font-size: 6.5em;
+  font-family: 'amatic sc';
+  text-align: center;
+  line-height: 1;
+  scale: 1 0.9;
+}
+
+code {
+  font-size: 0.75em;
+  display: inline-block;
+  transform-origin: 50% 100%;
+  scale: 0.95 1.2;
+  font-family: courier;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  background: #ccc;
+  padding: 0.05em 0.2em;
+}
+
+
+article {
+  font-size: 1vmin;
+  width: 80em;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+details {
+  scale:1.35;
+  translate: 0 4em;
+  font-size: 2em;
+  margin: 10px 20px;
+  background: linear-gradient(#fff3,#fff6);
+  box-shadow: 
+    inset 0 5px 10px -5px #fff,
+    inset 0 -2px 4px -3px #0003,
+    0 10px 15px -5px #0003;
+  width: 60%;
+  max-width: 800px;
+  border-radius: 0.75em;
+  
+  summary {
+    padding: 1em;
+    position: relative;
+  }
+  
+  .devil {
+    position: absolute;
+    width:15em;
+    height: 10.5em;
+    bottom: 0;
+    right: 0.5em;
+    --skin: #d55;
+    overflow: hidden;
+    
+    & * {
+      position: absolute;
+      box-sizing: border-box;
+    }
+    
+    .pitchfork {
+      width: 4.5em;
+      height: 5.5em;
+      left: 2%;
+      border-radius: 100% / 120% 120% 50% 50%;
+      box-shadow: 
+        inset 0.35em -0.4em 0 -1px,
+        inset -0.35em -0.4em 0 -1px;
+      rotate: -6.66deg;
+      
+      &::after {
+        content: "";
+        width: 30%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        position: absolute;
+        top: 170%;
+        left: 50%;
+        translate: -50%;
+        background: var(--skin);
+      }
+      
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+        width: 14%;
+        height: 400%;
+        background: #000;
+        clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 0 100%);
+        border-radius: 100% / 200% 200% 50% 50%;
+      }
+    }
+    
+    .body {
+      width: 4.5em;
+      height: 11em;
+      background: var(--skin);
+      border-radius: 100% / 30% 30% 120% 120%;
+      left: 66.6%;
+      top: 75%;
+      translate: -54%;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        width: 15%;
+        height: 100%;
+        background: var(--skin);
+        transform-origin: 50% 0;
+        rotate: 35deg;
+        border-radius: 100% / 20% 20% 120% 120%;
+        top: 6%;
+        left: 8%;
+      }
+      
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15%;
+        height: 100%;
+        background: var(--skin);
+        transform-origin: 50% 0;
+        rotate: -35deg;
+        border-radius: 100% / 20% 20% 120% 120%;
+        top: 6%;
+        left: 79%;
+      }
+    }
+    
+    .head {
+      width: 8.25em;
+      height: 5.75em;
+      top: 16.66%;
+      left: 66.6%;
+      translate: -50%;
+      rotate: 6.66deg;
+      
+      .neck {
+        width: 10%;
+        height: 70%;
+        border-radius: 3em;
+        background: 
+          linear-gradient(#000 20%, #0000 90%),
+          var(--skin);
+        left: 50%;
+        top: 50%;
+        translate: -50% 0;
+        rotatE: -6.66deg;
+      }
+      
+      .horns {
+        width: 60%;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: inset 0 -1.5em 0 0.1em #000;
+        left: 52%;
+        top: 0;
+        translate: -50% -60%;
+      }
+      
+      .face {
+        inset: 0;
+        background: var(--skin);
+        border-radius: 60px / 40px;
+        corner-shape: superellipse(2);
+        
+/*         .eye {
+          --p: 30%;
+          --r: -10deg;
+          width: 18%;
+          height: 23%;
+          background: yellow;
+          border-radius: 0 120% 0 80%;
+          rotate: var(--r);
+          translate: -50% -50%;
+          top: 40%;
+          left: var(--p);
+          &~& {
+            scale: -1 1;
+            --r: 10deg;
+            left: calc(100% - var(--p));
+          }
+        } */
+        
+        .mouth {
+          left: 50%;
+          top: 75%;
+          width: 25%;
+          aspect-ratio: 2.5;
+          background: 
+            conic-gradient(from -30deg, var(--skin) 60deg, #0000 0) 0 0 / 50% 100%,
+            #000;
+          border-radius: 50% / 0 0 100% 100%;
+          translate: -50% -50%;
+        }
+        
+        .eye {
+          --p: 30%;
+          width: 18%;
+          aspect-ratio: 1;
+          background: radial-gradient(circle at 50% 55%, #000 40%, #ff0 0);
+          background: 
+            radial-gradient(at 35% 35%, #fff 20%, #000 calc(20% + 1px));
+          border-radius: 50%;
+          translate: -50% -50%;
+          top: 50%;
+          left: var(--p);
+          &~& {
+            left: calc(100% - var(--p));
+          }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>Why was the web developer<br>afraid of accordions?</h1>
+      <details>
+        <summary>Click to expand
+          <div class="devil">
+            <div class="pitchfork"></div>
+            <div class="body"></div>
+            <div class="head">
+              <div class="horns"></div>
+              <div class="neck"></div>
+              <div class="face">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+              </div>
+            </div>
+          </div>
+        </summary>
+      </details>
+      <h2>Because the devil<br>is in the <code>&lt;details&gt;</code></h2>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
