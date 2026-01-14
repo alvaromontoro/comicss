@@ -2306,5 +2306,15 @@
       <enclosure url="https://comicss.art/comics/230/monster-movie-auditions.png" length="153000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/231</guid>
+      <title>Accordions</title>
+      <link>https://comicss.art/comics/231</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/231/accordions.png" length="135000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

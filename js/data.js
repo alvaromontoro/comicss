@@ -1790,4 +1790,12 @@ const posts = [
     title: "Monster Movie Auditions",
     ariaLabel: "comic with 4 panels in a 2x2 grid titled 'monster movie auditions' showing Frankenstein's monster roaring, an alien speaking alienese, the devil saying 'I am here for your soul', and a regular person saying 'I use div as buttons'"
   },
+  {
+    id: 231,
+    uid: "accordions",
+    boxes: 1,
+    title: "Accordions",
+    vertical: true,
+    ariaLabel: "why was the web developer afraid of accordions? because the devil is in the details (and a cartoon of the devil with a pitchfork coming out of a web accordion/details)"
+  },
 ]
