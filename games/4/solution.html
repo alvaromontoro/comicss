@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
-    <meta name="keywords" content="comicss,webcomic,css,games,about,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,game,css games" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Games</title>
+    <title>comiCSS - Game 4 Solution</title>
 
     <meta property="og:title" content="comiCSS" />
     <meta property="og:type" content="website" />
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="games">
+  <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
     <header>
       <div>
@@ -96,67 +96,78 @@
       </nav>
     </header>
 
-    <main id="main">
-      <h1>Games</h1>
+    <main id="main" class="game-main">
+      <h1>Guess the Movie Solution</h1>
+      <p>This page contains the solution to the <a href="./">Guess the Movie game for October 27, 2025</a>.</p>
       <p>
-        <span class="sitename">comi<span>CSS</span></span> now has games! Over the past year, I've been working 
-        on creating a collection of CSS-based games (thanks everyone who tested them), and I'm excited to start 
-        adding them to the website on a regular basis. New games will be published every week on Wednesdays.
+        To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
+        them whenever you're ready.
       </p>
-      <p>
-        Some of these games are built entirely with CSS and will work even without JavaScript. Others will rely 
-        on JavaScript for additional functionality. In all cases, I'm taking a progressive enhancement approach to 
-        ensure a solid baseline experience while providing richer interactions where possible.
-      </p>
-      <table style="margin-bottom:5rem;">
-        <thead>
-          <tr>
-            <th>Game</th>
-            <th><span class="a11y-hidden">Solutions</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a href="/games/2">Infinite Ring (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/2/solution.html">Solution <span class="a11y-hidden">for Game 2</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/1">ABCnagrams (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/1/solution.html">Solution <span class="a11y-hidden">for Game 1</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/4">Guess the Movie (October 27, 2025)</a>
-            </td>
-            <td>
-              <a href="/games/4/solution.html">Solution <span class="a11y-hidden">for Game 4</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/3">Guess the Brand (February 27, 2023)</a>
-            </td>
-            <td>
-              <a href="/games/3/solution.html">Solution <span class="a11y-hidden">for Game 3</span></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>
-        <span class="sitename">comi<span>CSS</span></span> Games (<span class="sitename">game<span>CSS</span></span>?) 
-        is still a work in progress, and there's plenty more to come. If you have ideas, suggestions, or feedback, 
-        I'd love to hear from you—feel free to reach out through the <a href="/contact">contact page</a> and help 
-        shape what the platform becomes.
-      </p>
+      <label for="show-answers" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+        <input type="checkbox" id="show-answers" role="switch" />
+        <span>Show answers</span>
+      </label>
+      <style>
+        ol li span {
+          filter: blur(0.25rem);
+          transition: filter 0.5s;
+        }
+        :has(#show-answers:checked) ol li span {
+          filter: blur(0);
+        }
+      </style>
+      <ol>
+        <li><span>Django Unchained</span></li>
+        <li><span>Schindler's List</span></li>
+        <li><span>The Silence of the Lambs</span></li>
+        <li><span>Titanic</span></li>
+        <li><span>The Sixth Sense</span></li>
+        <li><span>The Last Picture Show</span></li>
+        <li><span>A Clockwork Orange</span></li>
+        <li><span>From Here to Eternity</span></li>
+        <li><span>Rebel Without a Cause</span></li>
+        <li><span>The Matrix</span></li>
+        <li><span>One Flew Over the Cuckoo's Nest</span></li>
+        <li><span>Seven Samurai</span></li>
+        <li><span>The Green Mile</span></li>
+        <li><span>Casablanca</span></li>
+        <li><span>12th Fail</span></li>
+        <li><span>The Dark Knight</span></li>
+        <li><span>The Dark Knight Rises</span></li>
+        <li><span>Three Idiots</span></li>
+        <li><span>Green Book</span></li>
+        <li><span>Mary and Max</span></li>
+        <li><span>The Third Man</span></li>
+        <li><span>Mr Smith Goes to Washington</span></li>
+        <li><span>The Wizard of Oz</span></li>
+        <li><span>The Fifth Element</span></li>
+        <li><span>Dune</span></li>
+        <li><span>Seven</span></li>
+        <li><span>The Great Dictator</span></li>
+        <li><span>North by Northwest</span></li>
+        <li><span>No Country for Old Men</span></li>
+        <li><span>Three Billboards Outside Ebbing, Missouri</span></li>
+        <li><span>My Neighbor Totoro</span></li>
+        <li><span>Children of Heaven</span></li>
+        <li><span>The Gold Rush</span></li>
+        <li><span>The Seventh Seal</span></li>
+        <li><span>Lost In Translation</span></li>
+        <li><span>28 Days Later</span></li>
+        <li><span>Manchester by the Sea</span></li>
+        <li><span>Children of Men</span></li>
+        <li><span>The Thin Red Line</span></li>
+        <li><span>High Noon</span></li>
+        <li><span>Apocalypse Now</span></li>
+        <li><span>The Sound of Music</span></li>
+        <li><span>The French Connection</span></li>
+        <li><span>Once</span></li>
+        <li><span>Army of Shadows</span></li>
+        <li><span>Sideways</span></li>
+        <li><span>Three Colors: Blue</span></li>
+        <li><span>Hidden Figures</span></li>
+        <li><span>Primary Colors</span></li>
+        <li><span>Orphan</span></li>
+      </ol>
     </main>
 
     <footer>

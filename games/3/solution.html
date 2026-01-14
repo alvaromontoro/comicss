@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
-    <meta name="keywords" content="comicss,webcomic,css,games,about,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,game,css games" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Games</title>
+    <title>comiCSS - Game 3 Solution</title>
 
     <meta property="og:title" content="comiCSS" />
     <meta property="og:type" content="website" />
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="games">
+  <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
     <header>
       <div>
@@ -96,67 +96,78 @@
       </nav>
     </header>
 
-    <main id="main">
-      <h1>Games</h1>
+    <main id="main" class="game-main">
+      <h1>Guess the Brand Solution</h1>
+      <p>This page contains the solution to the <a href="./">Guess the Brand game for February 27, 2023</a>.</p>
       <p>
-        <span class="sitename">comi<span>CSS</span></span> now has games! Over the past year, I've been working 
-        on creating a collection of CSS-based games (thanks everyone who tested them), and I'm excited to start 
-        adding them to the website on a regular basis. New games will be published every week on Wednesdays.
+        To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
+        them whenever you're ready.
       </p>
-      <p>
-        Some of these games are built entirely with CSS and will work even without JavaScript. Others will rely 
-        on JavaScript for additional functionality. In all cases, I'm taking a progressive enhancement approach to 
-        ensure a solid baseline experience while providing richer interactions where possible.
-      </p>
-      <table style="margin-bottom:5rem;">
-        <thead>
-          <tr>
-            <th>Game</th>
-            <th><span class="a11y-hidden">Solutions</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a href="/games/2">Infinite Ring (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/2/solution.html">Solution <span class="a11y-hidden">for Game 2</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/1">ABCnagrams (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/1/solution.html">Solution <span class="a11y-hidden">for Game 1</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/4">Guess the Movie (October 27, 2025)</a>
-            </td>
-            <td>
-              <a href="/games/4/solution.html">Solution <span class="a11y-hidden">for Game 4</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/3">Guess the Brand (February 27, 2023)</a>
-            </td>
-            <td>
-              <a href="/games/3/solution.html">Solution <span class="a11y-hidden">for Game 3</span></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>
-        <span class="sitename">comi<span>CSS</span></span> Games (<span class="sitename">game<span>CSS</span></span>?) 
-        is still a work in progress, and there's plenty more to come. If you have ideas, suggestions, or feedback, 
-        I'd love to hear from you—feel free to reach out through the <a href="/contact">contact page</a> and help 
-        shape what the platform becomes.
-      </p>
+      <label for="show-answers" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+        <input type="checkbox" id="show-answers" role="switch" />
+        <span>Show answers</span>
+      </label>
+      <style>
+        ol li span {
+          filter: blur(0.25rem);
+          transition: filter 0.5s;
+        }
+        :has(#show-answers:checked) ol li span {
+          filter: blur(0);
+        }
+      </style>
+      <ol>
+        <li><span>Target</span></li>
+        <li><span>Square</span></li>
+        <li><span>Zoom</span></li>
+        <li><span>LinkedIn</span></li>
+        <li><span>Red Bull</span></li>
+        <li><span>No Fear</span></li>
+        <li><span>Microsoft</span></li>
+        <li><span>QuickSilver</span></li>
+        <li><span>AES</span></li>
+        <li><span>3M</span></li>
+        <li><span>McDonald's</span></li>
+        <li><span>MasterCard</span></li>
+        <li><span>SquareSpace</span></li>
+        <li><span>GrayBaR</span></li>
+        <li><span>Six Flags</span></li>
+        <li><span>Capital One</span></li>
+        <li><span>Target</span></li>
+        <li><span>Red Monkey</span></li>
+        <li><span>Seven Eleven</span></li>
+        <li><span>Johnson & Johnson</span></li>
+        <li><span>National Geographic</span></li>
+        <li><span>XBox</span></li>
+        <li><span>Medium</span></li>
+        <li><span>Meta</span></li>
+        <li><span>T-Mobile</span></li>
+        <li><span>La Quinta</span></li>
+        <li><span>Mailchimp</span></li>
+        <li><span>Super 8</span></li>
+        <li><span>BMW</span></li>
+        <li><span>Q2</span></li>
+        <li><span>7-Up</span></li>
+        <li><span>UPS</span></li>
+        <li><span>Mitsubishi</span></li>
+        <li><span>Rolex</span></li>
+        <li><span>Instagram</span></li>
+        <li><span>Audi</span></li>
+        <li><span>Hasbro</span></li>
+        <li><span>Dairy Queen</span></li>
+        <li><span>YouTube</span></li>
+        <li><span>BlackBerry</span></li>
+        <li><span>Chanel</span></li>
+        <li><span>Tommy Hilfiger</span></li>
+        <li><span>Brother</span></li>
+        <li><span>Nutella</span></li>
+        <li><span>Olive Garden</span></li>
+        <li><span>TD Bank</span></li>
+        <li><span>Lidl</span></li>
+        <li><span>After Eight</span></li>
+        <li><span>H&R Block</span></li>
+        <li><span>Cheerios</span></li>
+      </ol>
     </main>
 
     <footer>
