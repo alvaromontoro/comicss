@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS - Game 4 Solution</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+      <h1>Guess the Movie Solution</h1>
+      <p>This page contains the solution to the <a href="./">Guess the Movie game for October 27, 2025</a>.</p>
+      <p>
+        To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
+        them whenever you're ready.
+      </p>
+      <label for="show-answers" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+        <input type="checkbox" id="show-answers" role="switch" />
+        <span>Show answers</span>
+      </label>
+      <style>
+        ol li span {
+          filter: blur(0.25rem);
+          transition: filter 0.5s;
+        }
+        :has(#show-answers:checked) ol li span {
+          filter: blur(0);
+        }
+      </style>
+      <ol>
+        <li><span>Django Unchained</span></li>
+        <li><span>Schindler's List</span></li>
+        <li><span>The Silence of the Lambs</span></li>
+        <li><span>Titanic</span></li>
+        <li><span>The Sixth Sense</span></li>
+        <li><span>The Last Picture Show</span></li>
+        <li><span>A Clockwork Orange</span></li>
+        <li><span>From Here to Eternity</span></li>
+        <li><span>Rebel Without a Cause</span></li>
+        <li><span>The Matrix</span></li>
+        <li><span>One Flew Over the Cuckoo's Nest</span></li>
+        <li><span>Seven Samurai</span></li>
+        <li><span>The Green Mile</span></li>
+        <li><span>Casablanca</span></li>
+        <li><span>12th Fail</span></li>
+        <li><span>The Dark Knight</span></li>
+        <li><span>The Dark Knight Rises</span></li>
+        <li><span>Three Idiots</span></li>
+        <li><span>Green Book</span></li>
+        <li><span>Mary and Max</span></li>
+        <li><span>The Third Man</span></li>
+        <li><span>Mr Smith Goes to Washington</span></li>
+        <li><span>The Wizard of Oz</span></li>
+        <li><span>The Fifth Element</span></li>
+        <li><span>Dune</span></li>
+        <li><span>Seven</span></li>
+        <li><span>The Great Dictator</span></li>
+        <li><span>North by Northwest</span></li>
+        <li><span>No Country for Old Men</span></li>
+        <li><span>Three Billboards Outside Ebbing, Missouri</span></li>
+        <li><span>My Neighbor Totoro</span></li>
+        <li><span>Children of Heaven</span></li>
+        <li><span>The Gold Rush</span></li>
+        <li><span>The Seventh Seal</span></li>
+        <li><span>Lost In Translation</span></li>
+        <li><span>28 Days Later</span></li>
+        <li><span>Manchester by the Sea</span></li>
+        <li><span>Children of Men</span></li>
+        <li><span>The Thin Red Line</span></li>
+        <li><span>High Noon</span></li>
+        <li><span>Apocalypse Now</span></li>
+        <li><span>The Sound of Music</span></li>
+        <li><span>The French Connection</span></li>
+        <li><span>Once</span></li>
+        <li><span>Army of Shadows</span></li>
+        <li><span>Sideways</span></li>
+        <li><span>Three Colors: Blue</span></li>
+        <li><span>Hidden Figures</span></li>
+        <li><span>Primary Colors</span></li>
+        <li><span>Orphan</span></li>
+      </ol>
+    </main>
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+  </body>
+</html>
