@@ -4395,4 +4395,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>The Wizard of UX</title>
+    <link href="https://comicss.art/comics/232" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/232/wizard-of-ux.html"/>
+    <id>https://comicss.art/comics/232</id>
+    <updated>2026-01-19T00:00:00Z</updated>
+    <summary>New Cartoon: The Wizard of UX</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/232/wizard-of-ux.png" alt="Minimalistic cartoon with the main character from the Wonderful Wizard of Oz stating what they want from the wizard: a lion wants courage, a scarecrow wants a brain, a tin woodman wants a brain, and the girl Dorothy wants 'web developers who care about accessibility'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

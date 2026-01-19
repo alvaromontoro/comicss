@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/232/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/232/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url(/fonts/SourceSans3.ttf);
+}
+
+html, body {
+  --orange: #f80;
+  --yellow: #fc0;
+  --brown: #963;
+  --gray1: #bbb;
+  --gray2: #d8d8d8;
+  --red: #d00;
+  --blue: skyblue;
+  --pink: #fca;
+  --bg: #fff;
+  background: var(--bg);
+}
+
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  aspect-ratio: 4;
+  display: flex;
+}
+
+.cartoon > div {
+  flex: 1;
+  position: relative;
+}
+
+.cartoon > div::before {
+  content: "";
+  transition: all 0.5s;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cartoon > div div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cartoon > div .speech {
+  background: #def;
+  padding: 1em 1.5em;
+  box-sizing: border-box;
+  height: fit-content;
+  width: fit-content;
+  translate: 0 -200%;
+  font-family: 'Source Sans 3', monospace, monospace;
+  font-size: 1.5vw;
+  white-space: pre-wrap;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cartoon > div .speech::before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  width: 20%;
+  height: 80%;
+  background: inherit;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  left: 60%;
+  transform: skew(20deg)
+}
+
+/* lion */
+.lion .speech {
+  left: -20%;
+}
+.lion .mane {
+  background: var(--orange);
+  clip-path: polygon(
+    50% 5%, 73% 8%, 87% 40%, 85% 80%, 70% 95%, 65% 93%, 60% 98%, 55% 95%, 50% 100%, 45% 95%, 40% 98%, 35% 93%, 30% 95%, 15% 80%, 13% 40%, 27% 8%
+  );
+}
+
+.lion .face {
+  background: var(--yellow);
+  clip-path: polygon(35% 25%, 40% 20%, 50% 22%, 60% 20%, 65% 25%, 70% 60%, 62% 75%, 53% 78%, 50% 76%, 47% 78%, 38% 75%, 30% 60%);
+}
+
+.lion .ears {
+  background: var(--yellow);
+  clip-path: polygon(40% 12%, 60% 12%, 75% 0%, 75% 17%, 60% 12%, 40% 12%, 25% 0%, 25% 17%)
+}
+
+.lion .nose {
+  background: var(--brown);
+  clip-path: polygon(45% 60%, 55% 60%, 50% 68%);
+}
+
+.lion::before {
+  background: var(--yellow);
+  clip-path: polygon(50% 0%, 52.5% 8%, 60% 8%, 54% 12%, 57% 20%, 50% 14%, 43% 20%, 46% 12%, 40% 8%, 47.5% 8%)
+}
+
+/* man1 */
+.man1 .speech {
+  left: -15%;
+  
+  &::before {
+    left: 80%;
+    transform: skew(8deg) !important;
+  }
+}
+
+.man1 .head {
+  background: var(--gray1);
+  clip-path: polygon(27% 25%, 73% 25%, 68% 77%, 55% 77%, 55% 95%, 45% 95%, 45% 77%, 32% 77%, 27% 25%)
+}
+
+.man1 .hat {
+  background: var(--gray2);
+  clip-path: polygon(26% 23%, 26% 26%, 74% 26%, 74% 23%, 53% 10%, 52% 0%, 48% 0%, 47% 10%);
+}
+
+.man1 .bowtie {
+  background: var(--gray2);
+  clip-path: polygon(37% 85%, 50% 90%, 63% 85%, 63% 100%, 50% 95%, 37% 100%)
+}
+
+.man1 .mouth {
+  background: var(--gray2);
+  clip-path: polygon(68% 77%, 32% 77%, 28% 50%, 30% 50%, 35% 67%, 65% 67%, 70% 50%, 72% 50%);
+}
+
+.man1::before {
+  background: var(--red);
+  clip-path: polygon(50% 20%, 40% 5%, 45% 0%, 50% 3%, 55% 0%, 60% 5%);
+}
+
+/* man 2 */
+.man2 .speech {
+  left: -15%;
+  
+  &::before {
+    left: 80%;
+    transform: skew(13deg) !important;
+  }
+}
+.man2 .hat {
+  background: var(--brown);
+  clip-path: polygon(5% 29%, 5% 30%, 50% 31%, 95% 30%, 95% 29%, 67% 24%, 55% 3%, 45% 0%, 33% 24%);
+}
+
+.man2 .face {
+  background: var(--yellow);
+  clip-path: polygon(35% 29%, 65% 29%, 72% 60%, 65% 75%, 65% 80%, 69% 88%, 50% 92%, 31% 88%, 35% 80%, 35% 75%, 28% 60%);
+}
+
+.man2 .tie {
+  background: var(--brown);
+  clip-path: polygon(34.5% 75.5%, 33.75% 77.5%, 34.5% 79%, 65.5% 79.5%, 66% 77.5%, 65.5% 76%)
+}
+
+.man2 .straw {
+  background: var(--orange);
+  clip-path: polygon(60% 65%, 65% 95%, 60% 92%, 57% 96%, 54% 93%, 50% 100%, 46% 93%, 43% 97%, 41% 92%, 35% 95%, 40% 65%);
+}
+
+.man2::before {
+  background: var(--pink);
+  background-image: linear-gradient(transparent 12%, rgba(0,0,0,0.1) 14%);
+  clip-path: polygon(56% 20%, 50% 12%, 42% 11%, 40% 5%, 43% 1%, 53% 0%, 57% 2%, 60% 6%, 58% 12%, 57% 13%, 54% 14%)
+}
+
+
+/* girl */
+.girl .speech {
+  left: -15%;
+  width: 150% !important;
+  translate: 0 -170% !important;
+  background: #fcf !important;
+  background: #dde0ff !important;
+  background: #e8ddff !important;
+  
+  &::before {
+    left: 80%;
+    width: 10% !important;
+    transform: skew(23deg) !important;
+    scale: -1 1;
+  }
+}
+.girl .face {
+  background: var(--pink);
+  top: 47%;
+  left: 50%;
+  width: 46%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  border-radius: 100% / 60% 60% 125% 125%;
+}
+
+.girl .skirt {
+  background: var(--blue);
+  clip-path: polygon(22% 100%, 25% 82%, 35% 80%, 37% 100%, 50% 100%, 63% 100%, 65% 80%, 75% 82%, 78% 100%)
+}
+
+.girl .hair {
+  top: -5%;
+  height: 105%;
+  background: var(--red);
+  clip-path: polygon(
+    50% 13%, 65% 12%, 75% 18%, 84% 40%, 82% 50%, 75% 65%, 90% 90%, 86% 97%, 80% 100%, 75% 88%, 73% 80%, 73% 65%, 70% 40%, 
+    50% 30%, 45% 36%, 46% 30%,
+    30% 40%, 27% 65%, 27% 80%, 25% 88%, 20% 100%, 14% 90%, 25% 65%, 18% 50%, 16% 40%, 25% 18%, 35% 12%
+  )
+}
+
+.girl .ties {
+  background: var(--blue);
+  clip-path: polygon(
+    68% 60%, 74% 64%, 80% 60%, 80% 68%, 74% 65%, 68% 68%, 68% 60%,
+    32% 60%, 26% 64%, 20% 60%, 20% 68%, 26% 65%, 32% 68%, 32% 60%
+  )
+}
+
+.girl::before {
+  background: var(--blue);
+  clip-path: polygon(42% 20%, 42% 10%, 39% 10%, 50% 0%, 61% 10%, 58% 10%, 58% 20%, 52% 20%, 52% 16%, 48% 16%, 48% 20%);
+}
+    </style>
+  </head>
+  <body>
+<div class="cartoon" role="img" aria-label="Minimalistic cartoon with the main character from the Wonderful Wizard of Oz stating what they want from the wizard: a lion wants courage, a scarecrow wants a brain, a tin woodman wants a brain, and the girl Dorothy wants 'web developers who care about accessibility'">
+  <div class="lion">
+    <div class="speech">COURAGE</div>
+    <div class="mane"></div>
+    <div class="face"></div>
+    <div class="ears"></div>
+    <div class="nose"></div>
+  </div>
+  <div class="man2">
+    <div class="speech">A BRAIN</div>
+    <div class="straw"></div>
+    <div class="face"></div>
+    <div class="tie"></div>
+    <div class="hat"></div>
+  </div>
+  <div class="man1">
+    <div class="speech">A HEART</div>
+    <div class="head"></div>
+    <div class="hat"></div>
+    <div class="bowtie"></div>
+    <div class="mouth"></div>
+  </div>
+  <div class="girl">
+    <div class="speech">web developers who care about accessibility</div>
+    <div class="face"></div>
+    <div class="skirt"></div>
+    <div class="hair"></div>
+    <div class="ties"></div>
+  </div>
+</div>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
