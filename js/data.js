@@ -1798,4 +1798,12 @@ const posts = [
     vertical: true,
     ariaLabel: "why was the web developer afraid of accordions? because the devil is in the details (and a cartoon of the devil with a pitchfork coming out of a web accordion/details)"
   },
+  {
+    id: 232,
+    uid: "wizard-of-ux",
+    boxes: 1,
+    title: "The Wizard of UX",
+    vertical: true,
+    ariaLabel: "Minimalistic cartoon with the main character from the Wonderful Wizard of Oz stating what they want from the wizard: a lion wants courage, a scarecrow wants a brain, a tin woodman wants a brain, and the girl Dorothy wants 'web developers who care about accessibility'"
+  },
 ]
