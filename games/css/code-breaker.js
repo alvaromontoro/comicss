@@ -7,7 +7,7 @@ document.querySelectorAll(".container").forEach(container => {
   inputNum.replaceWith(selectNum);
 
   const selectCC = document.createElement("select");
-  selectCC.innerHTML = `<option>--</option><option>C</option><option>CC</option>`;
+  selectCC.innerHTML = `<option>--</option><option value="C">↻</option><option value="CC">↺</option>`;
   const inputCC = container.querySelector('[placeholder="C/CC"]');
   selectCC.dataset.valid = inputCC.pattern == "(c|C)" ? "C" : "CC";
   inputCC.replaceWith(selectCC);
