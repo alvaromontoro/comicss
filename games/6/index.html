@@ -5,22 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
-    <meta name="keywords" content="comicss,webcomic,css,games,about,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,game,css games" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Games</title>
+    <title>comiCSS Game - CSS Colors</title>
 
     <meta property="og:title" content="comiCSS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://comicss.art" />
-    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:image" content="https://comicss.art/games/css/break-the-code.png" />
     <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://comicss.art/">
     <meta name="twitter:title" content="comiCSS">
     <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
-    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <meta name="twitter:image" content="https://comicss.art/games/css/break-the-code.png">
     <link rel="monetization" href="https://fynbos.me/alvaro">
 
     <link rel="shortcut icon" href="/favicon.png" />
@@ -28,8 +28,10 @@
 
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/code-breaker.css" />
+    <script defer src="../css/code-breaker.js"></script>
   </head>
-  <body class="games">
+  <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
     <header>
       <div>
@@ -96,84 +98,103 @@
       </nav>
     </header>
 
-    <main id="main">
-      <h1>Games</h1>
-      <p>
-        <span class="sitename">comi<span>CSS</span></span> now has games! Over the past year, I've been working 
-        on creating a collection of CSS-based games (thanks everyone who tested them), and I'm excited to start 
-        adding them to the website on a regular basis. New games will be published every week on Wednesdays.
-      </p>
-      <p>
-        Some of these games are built entirely with CSS and will work even without JavaScript. Others will rely 
-        on JavaScript for additional functionality. In all cases, I'm taking a progressive enhancement approach to 
-        ensure a solid baseline experience while providing richer interactions where possible.
-      </p>
-      <table style="margin-bottom:5rem;">
-        <thead>
-          <tr>
-            <th>Game</th>
-            <th><span class="a11y-hidden">Solutions</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a href="/games/6">Code Breaker (January 21, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/6/solution.html">Solution <span class="a11y-hidden">for Game 6</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/5">CSS Colors (January 14, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/5/solution.html">Solution <span class="a11y-hidden">for Game 5</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/2">Infinite Ring (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/2/solution.html">Solution <span class="a11y-hidden">for Game 2</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/1">ABCnagrams (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/1/solution.html">Solution <span class="a11y-hidden">for Game 1</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/4">Guess the Movie (October 27, 2025)</a>
-            </td>
-            <td>
-              <a href="/games/4/solution.html">Solution <span class="a11y-hidden">for Game 4</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/3">Guess the Brand (February 27, 2023)</a>
-            </td>
-            <td>
-              <a href="/games/3/solution.html">Solution <span class="a11y-hidden">for Game 3</span></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <main id="main" class="game-main">
+      <h1>Code Breaker</h1>
 
-      <p>
-        <span class="sitename">comi<span>CSS</span></span> Games (<span class="sitename">game<span>CSS</span></span>?) 
-        is still a work in progress, and there's plenty more to come. If you have ideas, suggestions, or feedback, 
-        I'd love to hear from you—feel free to reach out through the <a href="/contact">contact page</a> and help 
-        shape what the platform becomes.
-      </p>
+      <p>These three knobs control a safebox lock. Each knob corresponds to a CSS word. To unlock the safebox, turn the knobs so that the correct starting letter of each word is at the top.</p>
+      <ol>
+        <li>Determine how many positions each knob needs to be turned.</li>
+        <li>Specify the direction: C for clockwise or CC for counter-clockwise.</li>
+        <li>Enter the number of positions and the direction in the inputs below each knob.</li>
+        <li>Click "Check" to see if the safebox unlocks.</li>
+      </ol>
+      <p>Note: Each CSS word can be read either left-to-right or right-to-left (<b>whichever is the shortest distance</b>). Words may contain dashes but they are not displayed on the knob.</p>
+      <p>Example:</p>
+      <div class="knob" data-letter="1" data-num="6">
+        <span data-i="0">R</span>
+        <span data-i="1">O</span>
+        <span data-i="2">B</span>
+        <span data-i="3">R</span>
+        <span data-i="4">E</span>
+        <span data-i="5">D</span>
+      </div>
+      <p>The solution for this knob would be 2-CC because the knob would need to be turned two letters counter-clockwise to unlock (BORDER).</p>
+
+      <hr>
+    
+      <h2>The Game</h2>
+      <article class="maingame">
+        <section class="knobs">
+          <div class="container">
+            <div class="knob" data-letter="1" data-num="6">
+              <span data-i="0">R</span>
+              <span data-i="1">G</span>
+              <span data-i="2">I</span>
+              <span data-i="3">N</span>
+              <span data-i="4">M</span>
+              <span data-i="5">A</span>
+            </div>
+            <input placeholder="#" pattern="2" maxlength="1" required>
+            <input placeholder="C/CC" pattern="(c|C)" maxlength="2" required>
+          </div>
+          <div class="container">
+            <div class="knob" data-num="8">
+              <span data-i="0">V</span>
+              <span data-i="1">O</span>
+              <span data-i="2">W</span>
+              <span data-i="3">O</span>
+              <span data-i="4">L</span>
+              <span data-i="5">F</span>
+              <span data-i="6">R</span>
+              <span data-i="7">E</span>
+            </div>
+            <input placeholder="#" pattern="1" maxlength="1" required>
+            <input placeholder="C/CC" pattern="(c|C)(c|C)" maxlength="2" required>
+          </div>
+          <div class="container">
+            <div class="knob" data-letter="1" data-num="9">
+              <span data-i="0">R</span>
+              <span data-i="1">D</span>
+              <span data-i="2">B</span>
+              <span data-i="3">R</span>
+              <span data-i="4">E</span>
+              <span data-i="5">A</span>
+              <span data-i="6">K</span>
+              <span data-i="7">W</span>
+              <span data-i="8">O</span>
+            </div>
+            <input placeholder="#" pattern="2" maxlength="1" required>
+            <input placeholder="C/CC" pattern="(c|C)" maxlength="2" required>
+          </div>
+        </section>
+
+        <div class="button-group">
+          <button class="check">Check Puzzle</button>
+        </div>
+
+        <section class="scrim" id="scrim-good" aria-role="alert">
+          <div aria-live="assertive">
+            <h2>Congratulations!!</h2>
+            <p>You solved the puzzle!</p>
+          </div>
+        </section>
+
+        <section class="scrim" id="scrim-bad" aria-role="alert">
+          <div aria-live="assertive">
+            <h2>Oh-oh!!</h2>
+            <p>That's not the solution. Try again!</p>
+          </div>
+        </section>
+      </article>
     </main>
+
+    <section class="scrim">
+      <div aria-live="assertive">
+        <h2>Congratulations!!</h2>
+        <p>You solved the puzzle!</p>
+        <p>Go back to the <a href="/games">games page</a>.</p>
+      </div>
+    </section>
 
     <footer>
       Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
