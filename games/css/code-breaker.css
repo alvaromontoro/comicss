@@ -1,0 +1,213 @@
+.game-main {
+  margin-block-end: 10em;
+h1, h2 {
+  font-weight: 400;
+}
+
+p, li, summary {
+  font-size: 1.25em;
+  line-height: 1.35;
+  max-width: 65ch;
+  font-weight: 300;
+}
+}
+
+button {
+  display: block;
+  padding: 1em 2em;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 1em;
+  border-radius: 0.5em;
+  border: 1px solid #0000;
+  cursor: pointer;
+  margin: auto auto;
+  margin-block-start: 2em;
+}
+
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  backdrop-filter: blur(0.5em);
+  place-items:center;
+  display: none;
+  z-index: 2;
+  
+  &.visible {
+    display: grid;
+  }
+
+  > div {
+    background: var(--bg);
+    border-radius: 0.5em;
+    padding: 2em;
+    font-family: Helvetica, sans-serif;
+    max-width: 300px;
+    width: 80%;
+
+    h2 {
+      margin-block: 0 2rem;
+      font-weight: 400;
+    }
+
+    p {
+      margin-block: 1rem 0;
+      font-weight: 300;
+    }
+  }
+}
+
+body:has(:invalid):has(button:active) #scrim-bad,
+body:not(:has(:invalid)):has(button:active) #scrim-good {
+  display: grid;
+}
+
+
+
+.knob {
+  font-size: 1vmin;
+  width: 20em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #111 40%, #0000 0),
+    repeating-conic-gradient(#000 2.5deg, #fff6 5deg),
+    #111;
+  box-shadow: 
+    inset 0 0 0.5em 0.1em #000,
+    inset -2em 2em 3em #fff4,
+    inset 2em -2em 2em #0004,
+    -0.1em 0.1em 0.5em #0008;
+  margin: 3em;
+  position: relative;
+
+  /* remove this when sibling-index(), and typed attr() or sibling-count() are widely supported */
+  &[data-num="1"] { --n: 1; }
+  &[data-num="2"] { --n: 2; }
+  &[data-num="3"] { --n: 3; }
+  &[data-num="4"] { --n: 4; }
+  &[data-num="5"] { --n: 5; }
+  &[data-num="6"] { --n: 6; }
+  &[data-num="7"] { --n: 7; }
+  &[data-num="8"] { --n: 8; }
+  &[data-num="9"] { --n: 9; }
+  &[data-num="10"] { --n: 10; }
+  &[data-num="11"] { --n: 11; }
+  &[data-num="12"] { --n: 12; }
+
+  [data-i="0"] { --i: 0; }
+  [data-i="1"] { --i: 1; }
+  [data-i="2"] { --i: 2; }
+  [data-i="3"] { --i: 3; }
+  [data-i="4"] { --i: 4; }
+  [data-i="5"] { --i: 5; }
+  [data-i="6"] { --i: 6; }
+  [data-i="7"] { --i: 7; }
+  [data-i="8"] { --i: 8; }
+  [data-i="9"] { --i: 9; }
+  [data-i="10"] { --i: 10; }
+  [data-i="11"] { --i: 11; }
+  [data-i="12"] { --i: 12; }
+  /* END-remove */
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 1.25;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: red;
+    left: 50%;
+    top: 0;
+    translate: -50% -150%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 54%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(circle at 55% 40%, #fff3, #0000 50%),
+      #333;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    box-shadow:
+      inset -1em 1em 1em #fff2,
+      inset 1em -1em 1em #0002,
+      inset 0 0 0 2em #222,
+      inset 0 0 0.5em 1.75em #fff,
+      inset 1em -1em 0.5em 1.5em #0002,
+      -0.75em 0.75em 0.75em #0006;
+  }
+
+  span {
+    position: absolute;
+    font-size: 2.5em;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+    text-shadow: 
+      -1px 1px 1px #000,
+      0 0 2px #000;
+    translate: -50% -50%;
+    /* 
+    Update to use:
+      - sibling-index() instead of --i
+      - sibling-count() instead of --n
+    */
+    top: calc(50% + 38% * sin(var(--i) * (360deg / var(--n)) - 90deg));
+    left: calc(50% + 38% * cos(var(--i) * (360deg / var(--n)) - 90deg));
+  }
+}
+
+.knobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 1vmin;
+  gap: 5em;
+  width: 70em;
+  
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    
+    .knob {
+      grid-column: 1 / 3;
+    }
+    
+    input,
+    select {
+      font-size: 3em;
+      text-align: center;
+      height: 2em;
+      border: 1px solid #000 !important;
+      border-radius: 0.5em 0 0 0.5em;
+      width: 100%;
+      padding: 0;
+      box-sizing: border-box;
+      position: relative;
+      text-transform: uppercase;
+      min-width: unset;
+      
+      & ~ & {
+        border-radius: 0 0.5em 0.5em 0;
+      }
+      
+      & ~ select {
+        border-inline-start: 0;
+      }
+      
+      &:focus {
+        outline: 1px dashed;
+        outline-offset: 2px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
