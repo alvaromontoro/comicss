@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/233/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/233/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+.arm, .arm::before, .arm::after {
+  box-shadow: none !important;
+}
+
+css-panel:nth-child(3) {
+  .eye {
+    translate: -90%
+  }
+}
+css-panel:nth-child(5) {
+  css-person {
+    .arm ~ .arm {
+      scale: -1 1;
+      left: 15% !important;
+      top: 20%;
+      
+      &::before, &::after {
+      clip-path: none !important;
+      }
+    }
+    .head {
+      .face {
+         --skin: #fff;
+        .hair {
+          width: 125% !important;
+        }
+        
+        .ear {
+          background: #fff;
+          clip-path: none;
+          border-right-color: #fff;
+          border-bottom-color: #fff;
+          rotate: -45deg;
+          
+          &::after {
+            content:"";
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border: 0.4em solid;
+            left: 5.75em;
+            top: 5.75em;
+            translate: -0.3em -0.3em;
+            z-index: 313;
+            border-radius: 50%;
+            box-sizing: content-box;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%)
+          }
+        }
+        .mouth, .nose {
+          left: 50%;
+          translate: -50%
+        }
+        .nose {
+          left: 55%;
+        }
+        .eye {
+          left: 30%;
+          translatE: -50%;
+          
+          & ~ & {
+            left: 72%;
+          }
+        }
+        
+        .eyebrow {
+          left: 30%;
+          translatE: 0% -100% !important;
+          
+          & ~ & {
+            left: 72%;
+          }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Somewhere, someone">
+  <!-- Inspired by Liniers' Macanudo -->
+  <css-panel>
+    <css-speech top="20" left="25">Somewhere right now...</css-speech>
+    <css-person character="al" left="15"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech top="20" left="25">...Someone online...</css-speech>
+    <css-person character="al" left="15" arms="left-15 right--20 right-fold--20" mouth="side-right sided"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech top="20" left="20">...is creating an amazing demo.</css-speech>
+    <css-person character="al" left="15" arms="left-15 right--20 right-fold--20 left-fold--20" mouth="small sided"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech top="20" left="25">...And I can't wait to see it!</css-speech>
+    <css-person character="al" left="15" arms="left-15 right--20 right-fold--30 left-fold--20"></css-person>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

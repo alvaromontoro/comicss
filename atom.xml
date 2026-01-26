@@ -4414,4 +4414,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Somewhere, Someone</title>
+    <link href="https://comicss.art/comics/233" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/233/somewhere-someone.html"/>
+    <id>https://comicss.art/comics/233</id>
+    <updated>2026-01-26T00:00:00Z</updated>
+    <summary>New Cartoon: Somewhere, Someone</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/233/somewhere-someone.png" alt="comic strip with 4 panels in a 2x2 grid showing a character that says 'somewhere right now... someone online... is creating an amazing demo. [looking to the reader] ...And I can't wait to see it!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
