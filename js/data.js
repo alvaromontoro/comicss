@@ -1806,4 +1806,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Minimalistic cartoon with the main character from the Wonderful Wizard of Oz stating what they want from the wizard: a lion wants courage, a scarecrow wants a brain, a tin woodman wants a brain, and the girl Dorothy wants 'web developers who care about accessibility'"
   },
+  {
+    id: 233,
+    uid: "somewhere-someone",
+    boxes: 4,
+    title: "Somewhere, Someone",
+    ariaLabel: "comic strip with 4 panels in a 2x2 grid showing a character that says 'somewhere right now... someone online... is creating an amazing demo. [looking to the reader] ...And I can't wait to see it!'"
+  },
 ]
