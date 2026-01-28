@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS Game - </title>
+
+    <meta property="og:title" content="Chain - comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/games/css/chains.png" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="Chain - comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/games/css/chains.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/chains.css" />
+    <script defer src="../css/chains.js"></script>
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+      <h1>Chain</h1>
+      <p style="margin-bottom: 4em;">Find the seven hidden CSS words! One main word of 10 letters runs horizontally, and the remaining six words are 5 letters long and are read along the outer curved paths (either forward or backward as indicated by the hints.) Each curved word must start and end with letters chained to the main horizontal word.</p>
+
+      <article>
+        <section class="chain">
+          <input maxlength="1" required pattern="(c|C)" aria-describedby="hint-1 hint-2" aria-label="word 1, letter 1. word 2, letter 1" class="num num-1">
+          <input maxlength="1" required pattern="(l|L)" aria-describedby="hint-2" aria-label="word 2 letter 2" class="top top-1 pos-a">
+          <input maxlength="1" required pattern="(e|E)" aria-describedby="hint-2" aria-label="word 2 letter 3" class="top top-1 pos-b">
+          <input maxlength="1" required pattern="(a|A)" aria-describedby="hint-2" aria-label="word 2 letter 4" class="top top-1 pos-c">
+          <input maxlength="1" required pattern="(r|R)" aria-describedby="hint-1 hint-2" aria-label="word 1 letter 3. word 2 letter 5" class="num num-3">
+          <input maxlength="1" required pattern="(a|A)" aria-describedby="hint-1 hint-3" aria-label="word 1 letter 2. word 3 letter 1" class="num num-2">
+          <input maxlength="1" required pattern="(z|Z)" aria-describedby="hint-3" aria-label="word 3 letter 2" class="bot bot-1 pos-a">
+          <input maxlength="1" required pattern="(u|U)" aria-describedby="hint-3" aria-label="word 3 letter 3" class="bot bot-1 pos-b">
+          <input maxlength="1" required pattern="(r|R)" aria-describedby="hint-3" aria-label="word 3 letter 4" class="bot bot-1 pos-c">
+          <input maxlength="1" required pattern="(e|E)" aria-describedby="hint-1 hint-3 hint-4" aria-label="word 1 letter 4. word 3 letter 5. word 4 letter 1" class="num num-4">
+          <input maxlength="1" required pattern="(l|L)" aria-describedby="hint-4" aria-label="word 4 letter 2" class="top top-2 pos-a">
+          <input maxlength="1" required pattern="(a|A)" aria-describedby="hint-4" aria-label="word 4 letter 3" class="top top-2 pos-b">
+          <input maxlength="1" required pattern="(c|C)" aria-describedby="hint-4" aria-label="word 4 letter 4" class="top top-2 pos-c">
+          <input maxlength="1" required pattern="(s|S)" aria-describedby="hint-1 hint-4" aria-label="word 1 letter 6. word 4 letter 5" class="num num-6">
+          <input maxlength="1" required pattern="(t|T)" aria-describedby="hint-1 hint-5" aria-label="word 1 letter 5. word 5 letter 1" class="num num-5">
+          <input maxlength="1" required pattern="(o|O)" aria-describedby="hint-5" aria-label="word 5 letter 2" class="bot bot-2 pos-a">
+          <input maxlength="1" required pattern="(p|P)" aria-describedby="hint-5" aria-label="word 5 letter 3" class="bot bot-2 pos-b">
+          <input maxlength="1" required pattern="(y|Y)" aria-describedby="hint-5" aria-label="word 5 letter 4" class="bot bot-2 pos-c">
+          <input maxlength="1" required pattern="(h|H)" aria-describedby="hint-1 hint-5 hint-6" aria-label="word 1 letter 7. word 5 letter 5. word 6 letter 1" class="num num-7">
+          <input maxlength="1" required pattern="(c|C)" aria-describedby="hint-6" aria-label="word 6 letter 2" class="top top-3 pos-a">
+          <input maxlength="1" required pattern="(t|T)" aria-describedby="hint-6" aria-label="word 6 letter 3" class="top top-3 pos-b">
+          <input maxlength="1" required pattern="(i|I)" aria-describedby="hint-6" aria-label="word 6 letter 4" class="top top-3 pos-c">
+          <input maxlength="1" required pattern="(p|P)" aria-describedby="hint-1 hint-6" aria-label="word 1 letter 9. word 6 letter 5" class="num num-9">
+          <input maxlength="1" required pattern="(a|A)" aria-describedby="hint-1 hint-7" aria-label="word 1 letter 8. word 7 letter 1" class="num num-8">
+          <input maxlength="1" required pattern="(n|N)" aria-describedby="hint-7" aria-label="word 7 letter 2" class="bot bot-3 pos-a">
+          <input maxlength="1" required pattern="(g|G)" aria-describedby="hint-7" aria-label="word 7 letter 3" class="bot bot-3 pos-b">
+          <input maxlength="1" required pattern="(l|L)" aria-describedby="hint-7" aria-label="word 7 letter 4" class="bot bot-3 pos-c">
+          <input maxlength="1" required pattern="(e|E)" aria-describedby="hint-1 hint-7" aria-label="word 1 letter 10. word 7 letter 5" class="num num-0">
+        </section>
+
+        <div class="button-group">
+          <button class="check">Check Puzzle</button>
+        </div>
+        
+        <div>
+          <h2>Hints</h2>
+          <ul>
+            <li id="hint-1">1-10: Sets the style of the marker in editable elements</li>
+            <li id="hint-2">1-3: Avoids float clashing</li>
+            <li id="hint-3">2-4: Light blue color</li>
+            <li id="hint-4">6-4: Resizes elements</li>
+            <li id="hint-5">7-5: Trigonometric function</li>
+            <li id="hint-6">9-7: Specifies the perceived frequency of speech audio</li>
+            <li id="hint-7">8-10: CSS data type</li>
+          </ul>
+        </div>
+
+        <p>And, if you get stuck, you could always check the <a href="./solution.html">solution</a>.</p>
+      </article>
+
+      <div class="scrim" id="scrim-good" aria-role="alert">
+        <div aria-live="assertive">
+          <h2>Congratulations!!</h2>
+          <p>You solved the puzzle!</p>
+        </div>
+      </div>
+
+      <div class="scrim" id="scrim-bad" aria-role="alert">
+        <div aria-live="assertive">
+          <h2>Oh-oh!!</h2>
+          <p>That's not the solution. Try again!</p>
+        </div>
+      </div>
+    </main>
+
+    
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+  </body>
+</html>
