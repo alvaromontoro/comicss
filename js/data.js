@@ -1813,4 +1813,12 @@ const posts = [
     title: "Somewhere, Someone",
     ariaLabel: "comic strip with 4 panels in a 2x2 grid showing a character that says 'somewhere right now... someone online... is creating an amazing demo. [looking to the reader] ...And I can't wait to see it!'"
   },
+  {
+    id: 234,
+    uid: "webdev-conspiracy",
+    boxes: 1,
+    title: "Create Your Own Web Development Conspiracy",
+    vertical: true,
+    ariaLabel: "Mad lib game to create your own web development theory. Pick your birthday month from the first column, your favorite color from the second column, and your first initial from the third column, then check what conspiracy theory you came up with. You will need to visit the demo page to review all the options."
+  },
 ]

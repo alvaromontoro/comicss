@@ -2336,5 +2336,15 @@
       <enclosure url="https://comicss.art/comics/233/somewhere-someone.png" length="81000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/234</guid>
+      <title>Create Your Own Web Development Conspiracy</title>
+      <link>https://comicss.art/comics/234</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/234/webdev-conspiracy.png" length="444000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
