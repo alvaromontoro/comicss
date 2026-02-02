@@ -4433,4 +4433,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Create Your Own Web Development Conspiracy</title>
+    <link href="https://comicss.art/comics/234" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/234/webdev-conspiracy.html"/>
+    <id>https://comicss.art/comics/234</id>
+    <updated>2026-02-01T00:00:00Z</updated>
+    <summary>New Cartoon: Create Your Own Web Development Conspiracy</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/234/webdev-conspiracy.png" alt="Mad lib game to create your own web development theory. Pick your birthday month from the first column, your favorite color from the second column, and your first initial from the third column, then check what conspiracy theory you came up with. You will need to visit the demo page to review all the options." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
