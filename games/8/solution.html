@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
-    <meta name="keywords" content="comicss,webcomic,css,games,about,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,game,css games" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Games</title>
+    <title>comiCSS - Game 8 Solution</title>
 
-    <meta property="og:title" content="comiCSS" />
+    <meta property="og:title" content="Chain - comiCSS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://comicss.art" />
     <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
     <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://comicss.art/">
-    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:title" content="Chain - comiCSS">
     <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
     <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
     <link rel="monetization" href="https://fynbos.me/alvaro">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="games">
+  <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
     <header>
       <div>
@@ -96,99 +96,38 @@
       </nav>
     </header>
 
-    <main id="main">
-      <h1>Games</h1>
+    <main id="main" class="game-main">
+      <h1>4Connect Solution</h1>
+      <p>This page contains the solution to the <a href="./">4Connect game for February 4, 2026</a>.</p>
       <p>
-        <span class="sitename">comi<span>CSS</span></span> now has games! Over the past year, I've been working 
-        on creating a collection of CSS-based games (thanks everyone who tested them), and I'm excited to start 
-        adding them to the website on a regular basis. New games will be published every week on Wednesdays.
+        To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
+        them whenever you're ready. Or mouse over each answer to see it temporarily.
       </p>
-      <p>
-        Some of these games are built entirely with CSS and will work even without JavaScript. Others will rely 
-        on JavaScript for additional functionality. In all cases, I'm taking a progressive enhancement approach to 
-        ensure a solid baseline experience while providing richer interactions where possible.
-      </p>
-      <table style="margin-bottom:5rem;">
-        <thead>
-          <tr>
-            <th>Game</th>
-            <th><span class="a11y-hidden">Solutions</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a href="/games/8">4Connect (February 4, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/8/solution.html">Solution <span class="a11y-hidden">for Game 8</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/7">Chain (January 28, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/7/solution.html">Solution <span class="a11y-hidden">for Game 7</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/6">Code Breaker (January 21, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/6/solution.html">Solution <span class="a11y-hidden">for Game 6</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/5">CSS Colors (January 14, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/5/solution.html">Solution <span class="a11y-hidden">for Game 5</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/2">Infinite Ring (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/2/solution.html">Solution <span class="a11y-hidden">for Game 2</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/1">ABCnagrams (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/1/solution.html">Solution <span class="a11y-hidden">for Game 1</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/4">Guess the Movie (October 27, 2025)</a>
-            </td>
-            <td>
-              <a href="/games/4/solution.html">Solution <span class="a11y-hidden">for Game 4</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/3">Guess the Brand (February 27, 2023)</a>
-            </td>
-            <td>
-              <a href="/games/3/solution.html">Solution <span class="a11y-hidden">for Game 3</span></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>
-        <span class="sitename">comi<span>CSS</span></span> Games (<span class="sitename">game<span>CSS</span></span>?) 
-        is still a work in progress, and there's plenty more to come. If you have ideas, suggestions, or feedback, 
-        I'd love to hear from you—feel free to reach out through the <a href="/contact">contact page</a> and help 
-        shape what the platform becomes.
-      </p>
+      <label for="show-answers" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+        <input type="checkbox" id="show-answers" role="switch" />
+        <span>Show answers</span>
+      </label>
+      <style>
+        ol.answers li {
+          list-style: none;
+        }
+        ol.answers li span {
+          filter: blur(0.25rem);
+          transition: filter 1s;
+        }
+        :has(#show-answers:checked) ol li span {
+          filter: blur(0);
+        }
+        ol.answers li:hover span {
+          filter: blur(0);
+        }
+      </style>
+      <ol class="answers">
+        <li>Group 1 - <span>REDS: LightCoral, Salmon, Crimson, FireBrick</span></li>
+        <li>Group 2 - <span>BLUES: Turquoise, Cyan, Navy, CadetBlue</span></li>
+        <li>Group 3 - <span>YELLOWS: Moccasin, PeachPuff, LemonChiffon, Gold</span></li>
+        <li>Group 4 - <span>PURPLES: Lavender, Plum, Thistle, Orchid</span></li>
+      </ol>
     </main>
 
     <footer>
