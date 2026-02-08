@@ -4452,4 +4452,42 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Groundhog Day</title>
+    <link href="https://comicss.art/comics/235" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/235/groundhog-day.html"/>
+    <id>https://comicss.art/comics/235</id>
+    <updated>2026-02-02T00:00:00Z</updated>
+    <summary>New Cartoon: Groundhog Day</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/235/groundhog-day.png" alt="Illustration of a groundhog in kawaii style with the text 'If Phils sees his shadow... six more Tailwind classes!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
+  <entry>
+    <title>Biblically Accurate CSS</title>
+    <link href="https://comicss.art/comics/236" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/236/accurate-css.html"/>
+    <id>https://comicss.art/comics/236</id>
+    <updated>2026-02-03T00:00:00Z</updated>
+    <summary>New Cartoon: Biblically Accurate CSS</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/236/accurate-css.png" alt="The new CSS logo (a purple square with rounded corners and the letters CSS at the bottom right) with 6 wings and 11 eyes." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

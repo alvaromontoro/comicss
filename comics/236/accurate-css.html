@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #236: Biblically Accurate CSS</title>
+
+    <meta property="og:title" content="comiCSS #236: Biblically Accurate CSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/236" />
+    <meta property="og:image" content="https://comicss.art/comics/236/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/comics/236">
+    <meta name="twitter:title" content="comiCSS #236: Biblically Accurate CSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/236/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+            @font-face {
+        font-family: 'Bebas Neue';
+        src: url(/fonts/BebasNeue-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+body {
+  background: #ccc;
+  
+}
+
+article {
+  font-size: 1.125vmin;
+  width: 30em;
+  position: absolute;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+article *, 
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.wing {
+  --v: radial-gradient(#0000 0 0);
+  width: 130%;
+  height: 60%;
+  border-radius: 100% / 2em 50% 50% 150%;
+  transform-origin: 100% 20%;
+  background:
+    var(--v),
+    radial-gradient(40% 15% at 40% 15%, #fff 99%, #0000),
+    radial-gradient(30% 15% at 33% 16%, #0003 99%, #0000),
+    radial-gradient(40% 23% at 45% 33%, #fff 99%, #0000),
+    radial-gradient(30% 23% at 38% 34%, #0003 99%, #0000),
+    radial-gradient(40% 20% at 55% 55%, #fff 99%, #0000),
+    radial-gradient(30% 20% at 48% 56%, #0003 99%, #0000),
+    radial-gradient(40% 50% at 65% 55%, #fff 99%, #0000);
+}
+
+.wing-1 {
+  top: 47%;
+  right: 92%;
+  rotate: -20deg;
+  scale: 0.9 0.8;
+}
+
+.wing-2 {
+  top: 25%;
+  right: 80%;
+  scale: 1 0.9;
+  --v:
+    radial-gradient(55% 50% at 85% 105%, #000c, #0000);
+}
+
+.wing-3 {
+  top: 0%;
+  right: 90%;
+  scale: 1 0.9;
+  rotate: 20deg;
+  --v:
+    radial-gradient(52% 50% at 90% 110%, #0008, #0000);
+}
+
+.wing-4 {
+  top: 47%;
+  left: -42%;
+  rotate: 20deg;
+  scale: -0.9 0.8;
+}
+
+.wing-5 {
+  top: 25%;
+  left: -40%;
+  scale: -1 0.9;
+  --v:
+    radial-gradient(55% 50% at 90% 105%, #000c, #0000);
+}
+
+.wing-6 {
+  top: 0%;
+  left: -40%;
+  scale: -1 0.9;
+  rotate: -20deg;
+  --v:
+    radial-gradient(52% 50% at 90% 110%, #000a, #0000);
+}
+
+.eye {
+  width: 30%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, #000 30%, #ffc 0);
+  border-radius: 80% 0;
+}
+
+.eye-1 {
+  top: 50%;
+  left: 5%;
+}
+
+.eye-2 {
+  rotate: 20deg;
+  scale: 0.8;
+  top: 2%;
+  left: 8%;
+}
+
+.eye-3 {
+  rotate: 60deg;
+  left: 60%;
+  top: 0%;
+}
+
+.eye-4 {
+  rotate: 45deg;
+  top: 75%;
+  lefT: 75%;
+  translatE: -50% -50%;
+  scale: 0.8
+}
+
+.eye-5 {
+  rotate: 55deg;
+  left: 80%;
+  top: 50%;
+  translate: -50% -50%;
+  scale: 0.6;
+}
+
+.eye-6 {
+  rotate: 45deg;
+  left: 50%;
+  top: 35%;
+  translate: -50% -50%;
+  scale: 1.2;
+}
+
+.eye-7 {
+  rotate: 55deg;
+  left: 35%;
+  top: 90%;
+  translate: -50% -50%;
+  scale: 0.6;
+}
+
+.eye-8 {
+  rotate: 55deg;
+  left: 75%;
+  top: 93%;
+  translate: -50% -50%;
+  scale: 0.4;
+}
+
+.eye-9 {
+  rotate: -55deg;
+  left: 45%;
+  top: 65%;
+  translate: -50% -50%;
+  scale: 0.4;
+}
+
+.eye-0 {
+  rotate: -45deg;
+  left: 13%;
+  top: 40%;
+  translate: -50% -50%;
+  scale: 0.4;
+}
+
+.eye-a {
+  rotate: 55deg;
+  left: 88%;
+  top: 35%;
+  translate: -50% -50%;
+  scale: 0.4;
+}
+
+.css-logo.new {
+  width: 30em;
+  position: absolute;
+  aspect-ratio: 1;
+  background: rebeccapurple;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 0 20% 20% 20%;
+
+  &::before {
+    content: "CSS";
+    position: absolute;
+    bottom: 0%;
+    right: 8%;
+    color: #fff;
+    font-size: 15em;
+    font-family: 'Bebas Neue', 'Roboto Condensed', sans-serif;
+    line-height: 1;
+    scale: 1 0.9;
+  }
+}
+    </style>
+  </head>
+  <body>
+<article>
+  <div class="wing wing-3"></div>
+  <div class="wing wing-2"></div>
+  <div class="wing wing-1"></div>
+  <div class="wing wing-6"></div>
+  <div class="wing wing-5"></div>
+  <div class="wing wing-4"></div>
+  <div class="css-logo new"></div>
+  <div class="eye eye-1"></div>
+  <div class="eye eye-2"></div>
+  <div class="eye eye-3"></div>
+  <div class="eye eye-4"></div>
+  <div class="eye eye-5"></div>
+  <div class="eye eye-6"></div>
+  <div class="eye eye-7"></div>
+  <div class="eye eye-8"></div>
+  <div class="eye eye-9"></div>
+  <div class="eye eye-0"></div>
+  <div class="eye eye-a"></div>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

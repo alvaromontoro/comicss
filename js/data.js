@@ -1821,4 +1821,20 @@ const posts = [
     vertical: true,
     ariaLabel: "Mad lib game to create your own web development theory. Pick your birthday month from the first column, your favorite color from the second column, and your first initial from the third column, then check what conspiracy theory you came up with. You will need to visit the demo page to review all the options."
   },
+  {
+    id: 235,
+    uid: "groundhog-day",
+    boxes: 1,
+    title: "Groundhog Day",
+    vertical: true,
+    ariaLabel: "Illustration of a groundhog in kawaii style with the text 'If Phils sees his shadow... six more Tailwind classes!'"
+  },
+  {
+    id: 236,
+    uid: "accurate-css",
+    boxes: 1,
+    title: "Biblically Accurate CSS",
+    vertical: true,
+    ariaLabel: "The new CSS logo (a purple square with rounded corners and the letters CSS at the bottom right) with 6 wings and 11 eyes."
+  },
 ]
