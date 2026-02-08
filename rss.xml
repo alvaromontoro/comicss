@@ -2346,5 +2346,25 @@
       <enclosure url="https://comicss.art/comics/234/webdev-conspiracy.png" length="444000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/235</guid>
+      <title>Groundhog Day</title>
+      <link>https://comicss.art/comics/235</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/235/groundhog-day.png" length="150000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/236</guid>
+      <title>Biblically Accurate CSS</title>
+      <link>https://comicss.art/comics/236</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/236/accurate-css.png" length="150000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
