@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #237: Comics in CSS</title>
+
+    <meta property="og:title" content="comiCSS #237: Comics in CSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/237" />
+    <meta property="og:image" content="https://comicss.art/comics/237/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://comicss.art/comics/237">
+    <meta name="twitter:title" content="comiCSS #237: Comics in CSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/237/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-person {
+  --skin-color: #fff !important;
+}
+css-comic,
+css-speech {
+  --bg: #fff;
+}
+
+css-panel:nth-child(5) {
+/*   css-person[character="al"] {
+    .head {
+      .face {
+        background: var(--skin-color);
+        
+        .hair {
+          width: 125% !important;
+        }
+        
+        .ear {
+          background: var(--skin-color);
+          clip-path: none;
+          border-right-color: var(--skin-color);
+          border-bottom-color: var(--skin-color);
+          rotate: -45deg;
+          
+          &::after {
+            content:"";
+            width: 100%;
+            height: 100%;
+            background: var(--skin-color);
+            border: 0.4em solid;
+            left: 5.75em;
+            top: 5.75em;
+            translate: -0.3em -0.3em;
+            z-index: 313;
+            border-radius: 50%;
+            box-sizing: content-box;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%)
+          }
+        }
+        .mouth, .nose {
+          left: 50%;
+          translate: -50%
+        }
+        .nose {
+          left: 55%;
+        }
+        .eye {
+          left: 30%;
+          translatE: -50%;
+          
+          & ~ & {
+            left: 72%;
+          }
+        }
+        
+        .eyebrow {
+          left: 30%;
+          translatE: 0% -100% !important;
+          
+          & ~ & {
+            left: 72%;
+          }
+        }
+      }
+    }
+  } */
+  
+  css-person {
+    .head {
+      .face {
+        .eyebrow {
+          translate: -10%;
+        }
+        .eye {
+          left: 40%;
+          translatE: -50%;
+          
+          & ~ & {
+            left: 79%;
+          }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Comics in CSS">
+  <css-panel>
+    <css-speech top="15" left="10">I am coding a new comic with CSS</css-speech>
+    <css-person character="al" left="5" height="tall" arms="right--15 right-fold--10 left-20"></css-person>
+    <css-person character="jill" right="5" facing="left" mouth="smile small" arms="right--15 left-15"></css-person>
+  </css-panel>
+  <css-panel>
+<!--     <css-speech width="80" top="10" left="5" right-line line="left-70 long skew">Drawing a comic sounds fine but, why CSS? won't it look terrible?</css-speech> -->
+    <css-speech width="50" top="10" left="25" right-line line="left-70 long skew">Why with CSS? Won't it look terrible?</css-speech>
+    <css-person character="al" left="5" height="tall" mouth="smile small" eyebrows="high" arms="right--15 right-fold--5 left-15"></css-person>
+    <css-person character="jill" right="5" facing="left" eyebrows="suspicious low" mouth="surprise small sided" arms="right--15 right-fold--45"></css-person>
+  </css-panel>
+  <css-panel>
+    <css-speech top="10" left="5" width="85" line="left-30 skewer">It probably will. But, who cares?<br>Have you seen what's out there now?</css-speech>
+    <css-person character="al" left="5" height="tall" eyebrows="sad high" arms="right--25 left-25"></css-person>
+    <css-person character="jill" right="5" facing="left" mouth="small sided" arms="right--15 right-fold--15 left-15 left-fold--30"></css-person>
+  </css-panel>
+  <css-panel>
+    <css-person character="al" left="5" height="tall" eyebrows="high" mouth="sided side-right"></css-person>
+    <css-person character="jill" mouth="sided side-right" right="5" facing="left" eyebrows="high"></css-person>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

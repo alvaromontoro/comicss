@@ -1837,4 +1837,11 @@ const posts = [
     vertical: true,
     ariaLabel: "The new CSS logo (a purple square with rounded corners and the letters CSS at the bottom right) with 6 wings and 11 eyes."
   },
+  {
+    id: 237,
+    uid: "comics-in-css",
+    boxes: 4,
+    title: "Comics in CSS",
+    ariaLabel: "cartoon with 4 panels in a 2x2 grid showing two people talking. One says 'I am coding a new comic with CSS' The other one replies surprised 'Why with CSS? Won't it look terrible?' and the first one comes back with 'It probably will. But, who cares? Have you seen what's out there now?' Then both smile big while looking outside towards the reader."
+  },
 ]

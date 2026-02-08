@@ -2353,7 +2353,7 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/235/groundhog-day.png" length="150000" type="image/png" />
+      <enclosure url="https://comicss.art/comics/235/groundhog-day.png" length="117000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
     <item>
@@ -2363,7 +2363,17 @@
       <category>Comic strip</category>
       <description>A cartoon coded in CSS from comiCSS.</description>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://comicss.art/comics/236/accurate-css.png" length="150000" type="image/png" />
+      <enclosure url="https://comicss.art/comics/236/accurate-css.png" length="118000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/237</guid>
+      <title>Comics in CSS</title>
+      <link>https://comicss.art/comics/237</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/237/comics-in-css.png" length="136000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
   </channel>

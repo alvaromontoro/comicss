@@ -4490,4 +4490,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Comics in CSS</title>
+    <link href="https://comicss.art/comics/237" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/237/comics-in-css.html"/>
+    <id>https://comicss.art/comics/237</id>
+    <updated>2026-02-09T00:00:00Z</updated>
+    <summary>New Cartoon: Comics in CSS</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/237/comics-in-css.png" alt="cartoon with 4 panels in a 2x2 grid showing two people talking. One says 'I am coding a new comic with CSS' The other one replies surprised 'Why with CSS? Won't it look terrible?' and the first one comes back with 'It probably will. But, who cares? Have you seen what's out there now?' Then both smile big while looking outside towards the reader." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
