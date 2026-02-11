@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS Game - Sequences</title>
+
+    <meta property="og:title" content="Sequences - comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/games/css/sequences.png" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="Sequences - comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/games/css/sequences.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/sequences.css" />
+
+    <style>
+
+@keyframes tilecoloreasy {
+   0.0%, 10% { --c1: var(--fg); }
+  10.5%, 20% { --c1: #f00; --c2: var(--fg); }
+  20.5%, 30% { --c2: #f00; --c3: var(--fg); }
+  30.5%, 40% { --c3: #f00; --c4: var(--fg); }
+  40.5%, 50% { --c4: #f00; --c5: var(--fg); }
+  50.5%, 60% { --c5: #f00; --c6: var(--fg); }
+  60.5%, 70% { --c6: #f00; --c7: var(--fg); }
+  70.5%, 80% { --c7: #f00; --c8: var(--fg); }
+  80.5%, 90% { --c8: #f00; --c9: var(--fg); }
+  90.5%, 99% { --c9: #f00; --c10: var(--fg); }
+  100%       { 
+    --c1: #f00;
+    --c2: #f00;
+    --c3: #f00;
+    --c4: #f00;
+    --c5: #f00;
+    --c6: #f00;
+    --c7: #f00;
+    --c8: #f00;
+    --c9: #f00;
+    --c10: #f00;
+  }
+}
+
+@keyframes moveeasy {
+   0.0%, 10% { transform: none; }  
+  10.5%, 20% { transform: translate(-50%); }
+  20.5%, 30% { transform: translate(-50%) translate(100%, -50%); }
+  30.5%, 40% { transform: translate(-50%) translate(100%, -50%) rotate(90deg); }
+  40.5%, 50% { transform: translate(-50%) translate(100%, -50%) rotate(90deg) translate3d(50%, 0, 0); }
+  50.5%, 60% { transform: translate(-50%) translate(100%, -50%) rotate(90deg) translate3d(50%, 0, 0) rotate(90deg); }
+  60.5%, 70% { transform: translate(-50%) translate(100%, -50%) rotate(90deg) translate3d(50%, 0, 0) rotate(90deg) translate(50%, -50%); }
+  70.5%, 80% { transform: translate(-50%) translate(100%, -50%) rotate(90deg) translate3d(50%, 0, 0) rotate(90deg) translate(50%, -50%) rotate(45deg); }
+  80.5%, 90% { transform: translate(-50%) translate(100%, -50%) rotate(90deg) translate3d(50%, 0, 0) rotate(90deg) translate(50%, -50%) rotate(45deg) translate3d(0, 0, 0); }
+  90.5%, 99% { transform: translate(-50%) translate(100%, -50%) rotate(90deg) translate3d(50%, 0, 0) rotate(90deg) translate(50%, -50%) rotate(45deg) translate3d(0, 0, 0) rotate(0.125turn); }
+  100%       { transform: translate(-50%) translate(100%, -50%) rotate(90deg) translate3d(50%, 0, 0) rotate(90deg) translate(50%, -50%) rotate(45deg) translate3d(0, 0, 0) rotate(0.125turn) translateX(50%); }
+}
+
+
+@keyframes tilecolormedium {
+   0.00%,  6.66% { --c1: var(--fg); }
+   6.67%, 13.33% { --c1: #f00; --c2: var(--fg); }
+  13.34%, 20.00% { --c2: #f00; --c3: var(--fg); }
+  20.01%, 26.66% { --c3: #f00; --c4: var(--fg); }
+  26.67%, 33.33% { --c4: #f00; --c5: var(--fg); }
+  33.34%, 40.00% { --c5: #f00; --c6: var(--fg); }
+  40.01%, 46.66% { --c6: #f00; --c7: var(--fg); }
+  46.67%, 53.33% { --c7: #f00; --c8: var(--fg); }
+  53.34%, 60.00% { --c8: #f00; --c9: var(--fg); }
+  60.01%, 66.66% { --c9: #f00; --c10: var(--fg); }
+  66.67%, 73.33% { --c10: #f00; --c11: var(--fg); }
+  73.34%, 80.00% { --c11: #f00; --c12: var(--fg); }
+  80.01%, 86.66% { --c12: #f00; --c13: var(--fg); }
+  86.67%, 93.33% { --c13: #f00; --c14: var(--fg); }
+  93.34%, 99.99% { --c14: #f00; --c15: var(--fg); }
+  100%           { 
+    --c1: #f00;
+    --c2: #f00;
+    --c3: #f00;
+    --c4: #f00;
+    --c5: #f00;
+    --c6: #f00;
+    --c7: #f00;
+    --c8: #f00;
+    --c9: #f00;
+    --c10: #f00;
+    --c11: #f00;
+    --c12: #f00;
+    --c13: #f00;
+    --c14: #f00;
+    --c15: #f00;
+  }
+}
+
+@keyframes movemedium {
+   0.00%,  6.66% { transform: none ;}
+   6.99%, 13.33% { transform: scale(-1, -1); }
+  13.66%, 20.00% { transform: scale(-1, -1) translate3d(50%, -50%, 0); }
+  20.33%, 26.66% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg); }
+  26.99%, 33.33% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%); }
+  33.66%, 40.00% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg); }
+  40.33%, 46.66% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1); }
+  46.99%, 53.33% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn); }
+  53.66%, 60.00% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn) translate3d(0, 50%, 0); }
+  60.33%, 66.66% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn) translate3d(0, 50%, 0) rotate(-45deg); }
+  66.99%, 73.33% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn) translate3d(0, 50%, 0) rotate(-45deg) translate(70.71067812%); }
+  73.66%, 80.00% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn) translate3d(0, 50%, 0) rotate(-45deg) translate(70.71067812%) translateX(70.71067812%); }
+  80.33%, 86.66% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn) translate3d(0, 50%, 0) rotate(-45deg) translate(70.71067812%) translateX(70.71067812%) rotate(45deg); }
+  86.99%, 93.33% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn) translate3d(0, 50%, 0) rotate(-45deg) translate(70.71067812%) translateX(70.71067812%) rotate(45deg) translate3d(-50%, 0, 0); }
+  93.66%, 99.66% { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn) translate3d(0, 50%, 0) rotate(-45deg) translate(70.71067812%) translateX(70.71067812%) rotate(45deg) translate3d(-50%, 0, 0) scale(1, -1); }
+  100%           { transform: scale(-1, -1) translate3d(50%, -50%, 0) rotate(90deg) translate(50%) rotate(90deg) scale(-1, 1) rotate(0.5turn) translate3d(0, 50%, 0) rotate(-45deg) translate(70.71067812%) translateX(70.71067812%) rotate(45deg) translate3d(-50%, 0, 0) scale(1, -1) translateX(-50%); }
+}
+
+@keyframes tilecolor {
+  0%, 3.5% { --c1: var(--fg); }
+  4%, 7.5% { --c1: #f00; --c2: var(--fg); }
+  8%, 11.5% { --c2: #f00; --c3: var(--fg); }
+  12%, 15.5% { --c3: #f00; --c4: var(--fg); }
+  16%, 19.5% { --c4: #f00; --c5: var(--fg); }
+  20%, 23.5% { --c5: #f00; --c6: var(--fg); }
+  24%, 27.5% { --c6: #f00; --c7: var(--fg); }
+  28%, 31.5% { --c7: #f00; --c8: var(--fg); }
+  32%, 35.5% { --c8: #f00; --c9: var(--fg); }
+  36%, 39.5% { --c9: #f00; --c10: var(--fg); }
+  40%, 43.5%  { --c10: #f00; --c11: var(--fg); }
+  44%, 47.5%  { --c11: #f00; --c12: var(--fg); }
+  48%, 51.5%  { --c12: #f00; --c13: var(--fg); }
+  52%, 55.5%  { --c13: #f00; --c14: var(--fg); }
+  56%, 59.5%  { --c14: #f00; --c15: var(--fg); }
+  60%, 63.5%  { --c15: #f00; --c16: var(--fg); }
+  64%, 67.5%  { --c16: #f00; --c17: var(--fg); }
+  68%, 71.5%  { --c17: #f00; --c18: var(--fg); }
+  72%, 75.5%  { --c18: #f00; --c19: var(--fg); }
+  76%, 79.5%  { --c19: #f00; --c20: var(--fg); }
+  80%, 83.5%  { --c20: #f00; --c21: var(--fg); }
+  84%, 87.5%  { --c21: #f00; --c22: var(--fg); }
+  88%, 91.5%  { --c22: #f00; --c23: var(--fg); }
+  92%, 95.5%  { --c23: #f00; --c24: var(--fg); }
+  96%, 99.5%  { --c24: #f00; --c25: var(--fg); }
+  100% { 
+    --c1: #f00;
+    --c2: #f00;
+    --c3: #f00;
+    --c4: #f00;
+    --c5: #f00;
+    --c6: #f00;
+    --c7: #f00;
+    --c8: #f00;
+    --c9: #f00;
+    --c10: #f00;
+    --c11: #f00;
+    --c12: #f00;
+    --c13: #f00;
+    --c14: #f00;
+    --c15: #f00;
+    --c16: #f00;
+    --c17: #f00;
+    --c18: #f00;
+    --c19: #f00;
+    --c20: #f00;
+    --c21: #f00;
+    --c22: #f00;
+    --c23: #f00;
+    --c24: #f00;
+    --c25: #f00;
+  }
+}
+
+
+@keyframes move {
+  0%, 3.5% { transform: none; }
+  4%, 7.5% { transform: translate(50%); }
+  8%, 11.5% { transform: translate(50%) translate(-100%, 0); }
+  12%, 15.5% { transform: translate(50%) translate(-100%, 0) rotate(45deg); }
+  16%, 19.5% { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0); }
+  20%, 23.5% { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg); }
+  24%, 27.5% { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%); }
+  28%, 31.5% { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg); }
+  32%, 35.5% { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0); }
+  36%, 39.5% { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1); }
+  40%, 43.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%); }
+  44%, 47.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%); }
+  48%, 51.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1); }
+  52%, 55.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%); }
+  56%, 59.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)); }
+  60%, 63.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0); }
+  64%, 67.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1); }
+  68%, 71.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%); }
+  72%, 75.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%) scaleX(-1); }
+  76%, 79.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%) scaleX(-1) translate(50%, 100%); }
+  80%, 83.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%) scaleX(-1) translate(50%, 100%) scaleZ(1); }
+  84%, 87.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%) scaleX(-1) translate(50%, 100%) scaleZ(1) rotate(90deg); }
+  88%, 91.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%) scaleX(-1) translate(50%, 100%) scaleZ(1) rotate(90deg) translate(0, -50%); }
+  92%, 95.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%) scaleX(-1) translate(50%, 100%) scaleZ(1) rotate(90deg) translate(0, -50%) scaleZ(-1); }
+  96%, 99.5%  { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%) scaleX(-1) translate(50%, 100%) scaleZ(1) rotate(90deg) translate(0, -50%) scaleZ(-1) rotate(3.5turn); }
+  100% { transform: translate(50%) translate(-100%, 0) rotate(45deg) translate3d(70.71067812%, 0, 0) rotate(-90deg) translate(70.71067812%) rotate(45deg) translate3d(0, 0, 0) scale(-1) translateX(50%) translateY(-50%) scale(-1, 1) translate(50%, 50%) rotate(calc(Pi * 1rad)) translate3d(50%, 50%, 0) scaleY(-1) translate(50%) scaleX(-1) translate(50%, 100%) scaleZ(1) rotate(90deg) translate(0, -50%) scaleZ(-1) rotate(3.5turn) translate(50%, -100%); }
+}
+    </style>
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+      <h1>Sequences</h1>
+      <p id="instructions">
+        A board with 9 tiles. A sequence of CSS transforms. If the starting point is the center tile and facing right,
+        what would be the ending tile after executing all the transforms?
+      </p>
+
+      <hr>
+    
+      <section style="--animationmove: moveeasy;--animationtilecolor: tilecoloreasy; --animationstops: 10; --duration: 10s;">
+        <h2>Easy</h2>
+
+        <ul class="code">
+          <li>translate(-50%)</li>
+          <li>translate(100%, -50%)</li>
+          <li>rotate(90deg)</li>
+          <li>translate3d(50%, 0, 0)</li>
+          <li>rotate(90deg)</li>
+          <li>translate(50%, -50%)</li>
+          <li>rotate(45deg)</li>
+          <li>translate3d(0, 0, 0)</li>
+          <li>rotate(0.125turn)</li>
+          <li>translateX(50%)</li>
+        </ul>
+
+        <form class="board">
+          <input type="radio" name="tile" aria-label="top left">
+          <input type="radio" name="tile" aria-label="top middle">
+          <input type="radio" name="tile" aria-label="top right">
+          <input type="radio" name="tile" aria-label="center left">
+          <input type="radio" name="tile" aria-label="center middle" required>
+          <input type="radio" name="tile" aria-label="center right">
+          <input type="radio" name="tile" aria-label="bottom left">
+          <input type="radio" name="tile" aria-label="bottom middle">
+          <input type="radio" name="tile" aria-label="bottom right">
+          <div class="tile"></div>
+        </form>
+
+
+        <div class="button-group">
+        <button class="check">Check Puzzle</button>
+        <button class="animate">Animate Solution</button>
+        </div>
+        <div style="text-align: center;margin:0.5em auto 4em auto;">(Keep the button pressed)</div>
+
+        <section class="scrim" id="scrim-good" aria-role="alert">
+          <div aria-live="assertive">
+            <h2>Congratulations!!</h2>
+            <p>You solved the puzzle!</p>
+          </div>
+        </section>
+
+        <section class="scrim" id="scrim-bad" aria-role="alert">
+          <div aria-live="assertive">
+            <h2>Oh-oh!!</h2>
+            <p>That's not the solution. Try again!</p>
+          </div>
+        </section>
+      </section>
+      
+      <hr>
+
+      <section style="--animationmove: movemedium;--animationtilecolor: tilecolormedium; --animationstops: 15; --duration: 15s;">
+        <h2>Medium</h2>
+
+        <ul class="code">
+          <li>scale(-1, -1)</li>
+          <li>translate3d(50%, -50%, 0)</li>
+          <li>rotate(90deg)</li>
+          <li>translate(50%)</li>
+          <li>rotate(90deg)</li>
+          <li>scale(-1, 1)</li>
+          <li>rotate(0.5turn)</li>
+          <li>translate3d(0, 50%, 0)</li>
+          <li>rotate(-45deg)</li>
+          <li>translate(70.71%)</li>
+          <li>translateX(70.71%)</li>
+          <li>rotate(45deg)</li>
+          <li>translate3d(-50%, 0, 0)</li>
+          <li>scale(1, -1)</li>
+          <li>translateX(-50%)</li>
+        </ul>
+
+        <form class="board">
+          <input type="radio" name="tile" aria-label="top left">
+          <input type="radio" name="tile" aria-label="top middle">
+          <input type="radio" name="tile" aria-label="top right">
+          <input type="radio" name="tile" aria-label="center left">
+          <input type="radio" name="tile" aria-label="center middle">
+          <input type="radio" name="tile" aria-label="center right">
+          <input type="radio" name="tile" aria-label="bottom left" required>
+          <input type="radio" name="tile" aria-label="bottom middle">
+          <input type="radio" name="tile" aria-label="bottom right">
+          <div class="tile"></div>
+        </form>
+
+
+        <div class="button-group">
+        <button class="check">Check Puzzle</button>
+        <button class="animate">Animate Solution</button>
+        </div>
+        <div style="text-align: center;margin:0.5em auto 4em auto;">(Keep the button pressed)</div>
+
+        <section class="scrim" id="scrim-good" aria-role="alert">
+          <div aria-live="assertive">
+            <h2>Congratulations!!</h2>
+            <p>You solved the puzzle!</p>
+          </div>
+        </section>
+
+        <section class="scrim" id="scrim-bad" aria-role="alert">
+          <div aria-live="assertive">
+            <h2>Oh-oh!!</h2>
+            <p>That's not the solution. Try again!</p>
+          </div>
+        </section>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Hard</h2>
+
+        <ul class="code">
+          <li>translate(50%)</li>
+          <li>translate(-100%, 0)</li>
+          <li>rotate(45deg)</li>
+          <li>translate3d(70.71%, 0, 0)</li>
+          <li>rotate(-90deg)</li>
+          <li>translate(70.71%)</li>
+          <li>rotate(45deg)</li>
+          <li>translate3d(0, 0, 0)</li>
+          <li>scale(-1)</li>
+          <li>translateX(50%)</li>
+          <li>translateY(-50%)</li>
+          <li>scale(-1, 1)</li>
+          <li>translate(50%, 50%)</li>
+          <li>rotate(calc(Pi * 1rad))</li>
+          <li>translate3d(50%, 50%, 0)</li>
+          <li>scaleY(-1)</li>
+          <li>translate(50%)</li>
+          <li>scaleX(-1)</li>
+          <li>translate(50%, 100%)</li>
+          <li>scaleZ(1)</li>
+          <li>rotate(90deg)</li>
+          <li>translate(0, -50%)</li>
+          <li>scaleZ(-1)</li>
+          <li>rotate(3.5turn)</li>
+          <li>translate(50%, -100%)</li>
+        </ul>
+
+        <form class="board">
+          <input type="radio" name="tile" aria-label="top left">
+          <input type="radio" name="tile" aria-label="top middle">
+          <input type="radio" name="tile" aria-label="top right">
+          <input type="radio" name="tile" aria-label="center left" required>
+          <input type="radio" name="tile" aria-label="center middle">
+          <input type="radio" name="tile" aria-label="center right">
+          <input type="radio" name="tile" aria-label="bottom left">
+          <input type="radio" name="tile" aria-label="bottom middle">
+          <input type="radio" name="tile" aria-label="bottom right">
+          <div class="tile"></div>
+        </form>
+
+
+        <div class="button-group">
+        <button class="check">Check Puzzle</button>
+        <button class="animate">Animate Solution</button>
+        </div>
+        <div style="text-align: center;margin:0.5em auto 4em auto;">(Keep the button pressed)</div>
+
+        <section class="scrim" id="scrim-good" aria-role="alert">
+          <div aria-live="assertive">
+            <h2>Congratulations!!</h2>
+            <p>You solved the puzzle!</p>
+          </div>
+        </section>
+
+        <section class="scrim" id="scrim-bad" aria-role="alert">
+          <div aria-live="assertive">
+            <h2>Oh-oh!!</h2>
+            <p>That's not the solution. Try again!</p>
+          </div>
+        </section>
+      </section>
+
+      
+    </main>
+
+    
+
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+  </body>
+</html>
