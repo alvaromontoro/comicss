@@ -1844,4 +1844,12 @@ const posts = [
     title: "Comics in CSS",
     ariaLabel: "cartoon with 4 panels in a 2x2 grid showing two people talking. One says 'I am coding a new comic with CSS' The other one replies surprised 'Why with CSS? Won't it look terrible?' and the first one comes back with 'It probably will. But, who cares? Have you seen what's out there now?' Then both smile big while looking outside towards the reader."
   },
+  {
+    id: 238,
+    uid: "css-gnomes",
+    boxes: 1,
+    title: "CSS Gnomes",
+    vertical: true,
+    ariaLabel: "Drawing of two group of angry-looking gnomes arguing with each other. One side has hats with circles, the other side has hats with lines and they 'fight' about circles or lines. One of the gnomes with lined hat, his lines are not straight but slightly curved. The drawing has the text 'Little did the CSS gnomes know, there was a spy among them...'"
+  },
 ]
