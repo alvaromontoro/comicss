@@ -139,6 +139,11 @@ main h1 {
   background: #eee;
   margin: 1rem auto;
   padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 #comic-strip img {

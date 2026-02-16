@@ -4509,4 +4509,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>CSS Gnomes</title>
+    <link href="https://comicss.art/comics/238" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/238/css-gnomes.html"/>
+    <id>https://comicss.art/comics/238</id>
+    <updated>2026-02-16T00:00:00Z</updated>
+    <summary>New Cartoon: CSS Gnomes</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/238/css-gnomes.png" alt="Drawing of two group of angry-looking gnomes arguing with each other. One side has hats with circles, the other side has hats with lines and they 'fight' about circles or lines. One of the gnomes with lined hat, his lines are not straight but slightly curved. The drawing has the text 'Little did the CSS gnomes know, there was a spy among them...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

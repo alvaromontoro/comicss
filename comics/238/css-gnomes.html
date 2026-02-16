@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS - CSS Gnomes</title>
+
+    <meta property="og:title" content="comiCSS - CSS Gnomes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/238/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS - CSS Gnomes">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/238/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand';
+        src: url(/fonts/PatrickHand-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+article {
+  position: relative;
+  font-size: 1vmin;
+  width: 99em;
+  height: 40em;
+  border: 0.5em solid;
+  overflow: hidden;
+  background:
+    /* pompoms */
+    radial-gradient(circle at 6.25% 6%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 11% 6%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 12.75% 10%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 20.75% 6.5%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 28% 11%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 28.75% 6.75%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 64.25% 6.5%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 76.75% 8.5%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 80.75% 6%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 84.25% 6.4%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 93.5% 7%, #fff 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at 97.25% 6.3%, #fff 1em, #0000 calc(1em + 1px)),
+    
+    /* grass */
+    conic-gradient(at 50% 78%,#0000 170deg, #c1db9d 0 190deg, #0000 0) 0 78% / 0.5em 14% repeat-x,
+    conic-gradient(at 50% 0%,#0000 170deg, #c1db9d 0 185deg, #0000 0) 0.3em 80% / 2.3em 5% repeat-x,
+    conic-gradient(at 50% 0%,#0000 175deg, #c1db9d 0 190deg, #0000 0) 0.1em 80% / 1.9em 4% repeat-x,
+    conic-gradient(at 70% 0%,#0000 175deg, #c1db9d 0 195deg, #0000 0) 0.7em 80% / 1.7em 4% repeat-x,
+    
+    /* base bg */
+    linear-gradient(#cef 30%, #dff 80%, #0000 0),
+    linear-gradient(#c1db9d 80%, #b1cb8d ),
+    linear-gradient(#c1db9d 0 0),
+    
+    #ff45
+    ;
+  
+  *, *::before, *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin: 0;
+    font-family: 'Patrick Hand';
+    font-size: 2.75em;
+    top: 2%;
+    right: 2%;
+    z-index: 1;
+    color: #000;
+    text-shadow:
+      1px 0 #fff,
+      1px 1px #fff,
+      0 1px #fff,
+      -1px 1px #fff,
+      -1px 0 #fff,
+      -1px -1px #fff,
+      0px -1px #fff,
+      1px -1px #fff;
+  }
+  
+  
+  .speech {
+    width: 10em;
+    height: 14em;
+    background: red;
+    
+    &.speech1 {
+      background:
+        radial-gradient(farthest-side circle, #1d4986 50%, #0000 calc(50% + 0.5px)) 1.5em 1.5em / 3em 3em,
+        radial-gradient(farthest-side circle, #1d4986 50%, #0000 calc(50% + 0.5px)) 0 0 / 3em 3em,
+/*         radial-gradient(farthest-side circle at 50% 28%, #1d4986 25%, #0000 calc(25% + 1px)), */
+        #ffd500;
+      left: 41%;
+      top: 32.5%;
+      clip-path: polygon(0 0, 100% 0, 100% 55%, 65% 55%, 0 100%, 40% 55%, 0 55%);
+      z-index: 1;
+    }
+    
+    &.speech2 {
+      height: 16em;
+      background:
+        linear-gradient(#216869 1em, #0000 0) 0 0 / 100% 2em,
+        #8ac926;
+      clip-path: polygon(0 0, 100% 0, 100% 55%, 70% 55%, 100% 100%, 50% 55%, 0 55%);
+      top: 26%;
+      left: 48.6%;
+    }
+  }
+  
+  .gnome {
+    --hair: #642;
+    --skin: #fca;
+    --skin-dark: color-mix(in srgb, var(--skin) 97%, #000 3%);
+    --color: #c9c;
+    --color-dark: color-mix(in srgb, var(--color) 90%, #000 10%);
+    --angle: -2deg;
+    --pos: 60%;
+    --size: 2.5em;
+    --left: 20%;
+    --hair-bg: linear-gradient(#0000 0 0);
+    --eyebrows:linear-gradient(to bottom left, #0000 calc(30% - 0.5px), var(--hair) 30% 70%, #0000 calc(70% + 0.5px)) 50% 17.5% / 1.25em 0.5em no-repeat,
+      linear-gradient(to bottom right, #0000 calc(30% - 0.5px), var(--hair) 30% 70%, #0000 calc(70% + 0.5px)) 81% 16.5% / 1.25em 0.6em no-repeat;
+    --mouth: linear-gradient(#0000 0 0);
+    --eyes:
+      radial-gradient(circle at 50% 21%, #000 calc(0.3em - 0.5px), #0000 calc(0.3em + 0.5px)),
+      radial-gradient(circle at 75% 20%, #000 calc(0.3em - 0.5px), #0000 calc(0.3em + 0.5px));
+    --hand1: radial-gradient(circle at 79% 70%, var(--skin-dark) 1em, #0000 calc(1em + 1px));
+    --hand2: radial-gradient(circle at 20% 70%, var(--skin) 1em, #0000 calc(1em + 1px));
+    width: 6em;
+    height: 12em;
+    background: #f003;
+    bottom: 5%;
+    left: var(--left);
+    border-radius: 100% / 20%;
+    background:
+      var(--hand2),
+      var(--hair-bg),
+      /* eyebrows */
+      var(--eyebrows),
+      /* eyes */
+      var(--eyes),
+      /* mouth */
+      var(--mouth),
+      /* face */
+      radial-gradient(closest-side circle at 50% 20%, var(--skin) calc(100% - 1px), #0000),
+      radial-gradient(50% 15% at 52% 40%, var(--color-dark) 30%, #0000 calc(30% + 1px)),
+      /* body */
+      conic-gradient(at 52% -20%, #0000 166deg, var(--color) 0 196deg, #0000 0) 50% 100% / 100% 80% no-repeat,
+      var(--hand1)
+      ;
+    
+    &.b {
+      bottom: 4%;
+    }
+    
+    &::after {
+      content: "";
+      width: 70%;
+      height: 200%;
+      background: red;
+      bottom: 90%;
+      border-radius: 100% / 5%;
+      clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
+      transform-origin: 50% 102%;
+      left: 50%;
+      translatE: -50%;
+      rotate: var(--angle);
+      background: var(--color);
+    }
+    
+    &.dashed::after {
+      background:
+        linear-gradient(var(--color) 50%, #fff 0) 0 0 / 100% calc(var(--size) * 1.02);
+    }
+    
+    &.dashed.invert::after {
+      background:
+        linear-gradient(#fff 50%, var(--color) 0) 0 0 / 100% calc(var(--size) * 1.02);
+    }
+    
+    &.dotted::after {
+      background:
+        radial-gradient(farthest-side circle, var(--color) 50%, #0000 calc(50% + 0.5px)) calc(var(--pos) + var(--size) / 2) calc(var(--pos) + var(--size) / 2) / var(--size) var(--size),
+        radial-gradient(farthest-side circle, var(--color) 50%, #0000 calc(50% + 0.5px)) var(--pos) var(--pos) / var(--size) var(--size),
+        #fff;
+    }
+    
+    &.dotted.invert::after {
+      background:
+        radial-gradient(farthest-side circle, #fff 50%, #0000 calc(50% + 0.5px)) calc(var(--pos) + var(--size) / 2) calc(var(--pos) + var(--size) / 2) / var(--size) var(--size),
+        radial-gradient(farthest-side circle, #fff 50%, #0000 calc(50% + 0.5px)) var(--pos) var(--pos) / var(--size) var(--size),
+        var(--color);
+    }
+    
+    &.left {
+      scale: -1 1;
+    }
+    
+    &.spy::after {
+      background:
+        repeating-radial-gradient(50% 14% at 50% calc(var(--size) / 2), var(--color) 0 calc(var(--size) / 2), #fff 0 var(--size));
+      background:
+        repeating-radial-gradient(50% 14% at 50% calc(var(--size) / 2), var(--color) 0 calc(var(--size) / 2), #fff calc(var(--size) / 2 + 0.5px) calc(var(--size) - 0.5px), var(--color) var(--size));
+/*       background: 
+        repeating-radial-gradient(50% 14% at 50% calc(var(--size) / 2), var(--color) 1px calc(var(--size) / 2), #fff calc(var(--size) / 2 + 1px) var(--size)); */
+/*       background: 
+        repeating-radial-gradient(50% 14% at 50% calc(var(--size) / 2), var(--color) 0.5px calc(var(--size) / 2), #fff calc(var(--size) / 2 + 0.5px) calc(var(--size) - 0.5px), #fff var(--size)); */
+    }
+  }
+  
+  .gnome-01 {
+    --left: 2%;
+    --angle: 3deg;
+    --color: #ff595e;
+    --mouth: linear-gradient(to bottom right, #0000 35%, #000 0 70%, #0000 0) 60% 32% / 1.25em 0.3em no-repeat;
+    --hair-bg: 
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(30% 5% at 50% 8%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(20% 3% at 70% 9%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(10% 13% at 18% 18%, var(--hair) calc(100% - 1px), #0000);
+    
+  }
+  
+  .gnome-02 {
+    --left: 8%;
+    --angle: 0deg;
+    --color: #c9c;
+    --hair: #963;
+    --mouth: radial-gradient(circle at 60% 31%, #000 0.3em, #0000 calc(0.3em + 0.5px));
+    --hair-bg:
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 12% 24%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 11% 17%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 15% 10%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 30%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 18%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 25% 10%, var(--hair) 0.75em, #0000 calc(0.75em + 0.5px)),
+      radial-gradient(circle at 60% 9%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 70% 7%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px))
+      ;
+  }
+  
+  .gnome-04 {
+    --left: 15%;
+    --angle: -12deg;
+    --color: #f2b5d4;
+    --size: 3.5em;
+    --mouth: linear-gradient(#000 0 0) 60% 32% / 1.25em 0.25em no-repeat;
+    --hair-bg: 
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(15% 7% at 30% 8%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(25% 6% at 50% 8%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(18% 4% at 70% 7%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(12% 12% at 18% 20%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(10% 12% at 18% 24%, var(--hair) calc(100% - 1px), #0000);
+    
+  }
+  
+  .gnome-03 {
+    --left: 20%;
+    --angle: -5deg;
+    --color: #ffbf0a; /* #ffca3a; */
+    --mouth: radial-gradient(80% 100% at 50% 100%, #000 60%, #0000 calc(60% + 1px)) 60% 29% / 1em 0.5em no-repeat;
+    
+  }
+  
+  .gnome-06 {
+    --left:27%;--angle:-3deg;--color:#d4a373;--size:3.5em;
+    --hair: maroon;
+    --mouth: linear-gradient(185deg, #0000 calc(30% - 1px), #000 30% calc(75% - 1px), #0000 75%) 60% 32% / 1.25em 0.3em no-repeat;
+    --hair-bg:
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient( at 12% 24%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 11% 17%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 15% 12.5%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 30%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 20% 18%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 25% 10%, var(--hair) 0.75em, #0000 calc(0.75em + 0.5px)),
+      radial-gradient(circle at 60% 9%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 72% 8%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 45% 8%, var(--hair) 0.6em, #0000 calc(0.6em + 0.5px)),
+      radial-gradient(circle at 83% 9%, var(--hair) 0.4em, #0000 calc(0.4em + 0.5px));
+  }
+  
+  .gnome-05 {
+    --left:35%;--angle:-23deg;--color:#d44;
+    --hand1: linear-gradient(#0000 0 0);
+    --hand2: linear-gradient(#0000 0 0);
+    --mouth: 
+      radial-gradient(circle at 72% 32%, var(--skin) 0.4em, #0000 calc(0.4em + 0.5px)),
+    radial-gradient(50% 15% at 60% 31%, #000 20%, #0000 calc(20% + 1px)),
+      radial-gradient(circle at 14% 77%, var(--skin) 1em, #0000 calc(1em + 0.5px));
+    --hair-bg:
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient( at 12% 24%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 11% 17%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 15% 10%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 30%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 18%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 25% 10%, var(--hair) 0.75em, #0000 calc(0.75em + 0.5px)),
+      radial-gradient(circle at 60% 9%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 72% 8%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 45% 8%, var(--hair) 0.6em, #0000 calc(0.6em + 0.5px)),
+      radial-gradient(circle at 80% 5%, var(--hair) 0.7em, #0000 calc(0.7em + 0.5px));
+    
+    &::before {
+      content: "";
+      width: 6em;
+      height: 2em;
+      top: 31%;
+      left: 65%;
+      rotate: -6deg;
+      background:
+        radial-gradient(circle at 5em 1em, var(--skin) 1em, #0000 calc(1em + 0.5px)) no-repeat,
+        linear-gradient(var(--color) 0 0) 0 50% / 90% 40% no-repeat;
+    }
+  }
+  
+  .gnome-12 {
+    --left:59%;--angle: -5deg;--color:#a0c4ff;
+    --mouth:
+      radial-gradient(circle at 71% 33%, var(--skin) 0.4em, #0000 0),
+    radial-gradient(50% 12% at 60% 31%, #000 20%, #0000 calc(20% + 1px));
+    --hand1: linear-gradient(#0000 0 0);
+    --hand2: linear-gradient(#0000 0 0);
+    --hair-bg:
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient( at 14% 24%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 15% 17%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 17% 12.5%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 20% 32%, var(--hair) 0.4em, #0000 calc(0.4em + 0.5px)),
+      radial-gradient(circle at 20% 18%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 25% 10%, var(--hair) 0.75em, #0000 calc(0.75em + 0.5px)),
+      radial-gradient(circle at 60% 11%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(100% 70% at 72% 8%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 45% 10%, var(--hair) 0.6em, #0000 calc(0.6em + 0.5px)),
+      radial-gradient(circle at 83% 9%, var(--hair) 0.4em, #0000 calc(0.4em + 0.5px));
+    
+    &::before {
+      content: "";
+      width: 6em;
+      height: 2em;
+      top: 38%;
+      left: 65%;
+      rotate: 10deg;
+      background:
+        radial-gradient(circle at 5em 1em, var(--skin) 1em, #0000 calc(1em + 0.5px)) no-repeat,
+        linear-gradient(var(--color) 0 0) 0 50% / 90% 40% no-repeat;
+    }
+    
+    .arm {
+      position: absolute;
+      opacity: 1;
+      width: 6em;
+      height: 2em;
+      top: 48%;
+      left: -53%;
+      rotate: 140deg;
+      background:
+        radial-gradient(circle at 5em 1em, var(--skin) 1em, #0000 calc(1em + 0.5px)) no-repeat,
+        linear-gradient(var(--color) 0 0) 0 50% / 90% 40% no-repeat;
+    }
+  }
+  
+  .gnome-10 {
+    --left: 68%;--angle:  -13deg;--color:#ee6;--size:4em;
+    --mouth: radial-gradient(80% 120% at 50% 100%, #000 60%, #0000 calc(60% + 1px)) 62% 30% / 1em 0.5em no-repeat;
+    --hair: #963;
+    --hair-bg: 
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(30% 6% at 42% 8%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(20% 5% at 70% 7%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(10% 12% at 18% 18%, var(--hair) calc(100% - 1px), #0000);
+  }
+  
+  .gnome-11 {
+    --left: 75%;
+    --angle: -6deg;
+    --color:#7bf; /* #9df; */
+    --size:2em;
+    --mouth: linear-gradient(#000 0 0) 60% 32% / 1.25em 0.25em no-repeat;
+    --hair-bg:
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient( at 12% 24%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 11% 17%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 15% 12.5%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 30%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 20% 18%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 25% 10%, var(--hair) 0.75em, #0000 calc(0.75em + 0.5px)),
+      radial-gradient(circle at 60% 9%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 72% 8%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 45% 8%, var(--hair) 0.6em, #0000 calc(0.6em + 0.5px)),
+      radial-gradient(circle at 83% 9%, var(--hair) 0.4em, #0000 calc(0.4em + 0.5px));
+  }
+  
+  .gnome-08 {
+    --left:82%;--angle:2deg;--color:#ff6392;
+    --mouth: linear-gradient(185deg, #0000 calc(30% - 1px), #000 30% calc(75% - 1px), #0000 75%) 60% 32% / 1.25em 0.3em no-repeat;
+    --mouth: radial-gradient(circle at 62% 30%, #000 0.3em, #0000 calc(0.3em + 1px));
+    --eyebrows:
+      linear-gradient(var(--hair) 0 0) 80% 14% / 1em 0.3em no-repeat,
+      linear-gradient(var(--hair) 0 0) 50% 15% / 1em 0.3em no-repeat;
+    --eyes:
+      radial-gradient(circle at 50% 19.5%, #000 calc(0.3em - 0.5px), #0000 calc(0.3em + 0.5px)),
+      radial-gradient(circle at 75% 18.5%, #000 calc(0.3em - 0.5px), #0000 calc(0.3em + 0.5px));
+    --hair-bg:
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 12% 24%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 11% 17%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 15% 10%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 30%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 18%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 25% 10%, var(--hair) 0.75em, #0000 calc(0.75em + 0.5px)),
+      radial-gradient(circle at 60% 9%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 72% 8%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 45% 8%, var(--hair) 0.6em, #0000 calc(0.6em + 0.5px)),
+      radial-gradient(circle at 80% 9%, var(--hair) 0.4em, #0000 calc(0.4em + 0.5px))
+  }
+  
+  .gnome-09 {
+    --left: 87%;
+    --angle: -8deg;
+    --color:#c9c;
+    --hair:#864;
+    --mouth: linear-gradient(175deg, #0000 calc(25% - 1px), #000 25% calc(80% - 1px), #0000 80%) 60% 32% / 1.25em 0.35em no-repeat;
+    --hair-bg: 
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(30% 8% at 50% 8%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(20% 3% at 70% 9%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(10% 12% at 18% 18%, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(circle at 20% 31%, var(--hair) 0.4em, #0000 calc(0.4em + 0.5px));
+  }
+  
+  .gnome-07 {
+    --left:93%;
+    --angle: -3deg;
+    --color:#f48c06;
+    --hair: #f84;
+/*     --mouth: radial-gradient(circle at 62% 31%, #000 0.3em, #0000 calc(0.3em + 1px));
+    --eyebrows:
+      linear-gradient(var(--hair) 0 0) 80% 13% / 1em 0.3em no-repeat,
+      linear-gradient(var(--hair) 0 0) 50% 14% / 1em 0.3em no-repeat; */
+    --mouth: linear-gradient(185deg, #0000 calc(30% - 1px), #000 30% calc(75% - 1px), #0000 75%) 60% 32% / 1.25em 0.3em no-repeat;
+    --hair-bg:
+      radial-gradient(circle at 22% 24%, var(--skin) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 12% 24%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 11% 17%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 12%, var(--hair) 0.6em, #0000 calc(0.6em + 0.5px)),
+      radial-gradient(circle at 18% 30%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 18% 18%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 25% 10%, var(--hair) 0.75em, #0000 calc(0.75em + 0.5px)),
+      radial-gradient(circle at 60% 8%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px)),
+      radial-gradient(circle at 72% 7%, var(--hair) 0.5em, #0000 calc(0.5em + 0.5px))
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article role="img" aria-label="Drawing of two group of angry-looking gnomes arguing with each other. One side has hats with circles, the other side has hats with lines and they 'fight' about circles or lines.">
+      <h1>Little did the CSS gnomes know, there was a spy among them...</h1>
+      <!-- -->
+      <div class="gnome gnome-01 dotted invert"></div>
+      <div class="gnome gnome-02 dotted invert"></div>
+      <div class="gnome gnome-03 dotted"></div>
+      <div class="gnome gnome-04 dotted b invert"></div>
+      <div class="gnome gnome-05 dotted invert"></div>
+      <div class="gnome gnome-06 dotted b"></div>
+      <!-- -->
+      <div class="gnome gnome-07 left dashed invert"></div>
+      <div class="gnome gnome-08 left dashed invert"></div>
+      <div class="gnome gnome-09 left dashed b"></div>
+      <div class="gnome gnome-10 left dashed b"></div>
+      <div class="gnome gnome-11 left spy"></div>
+      <div class="gnome gnome-12 left dashed invert"><div class="arm"></div></div>
+      <!-- -->
+      <div class="speech speech1"></div>
+      <div class="speech speech2"></div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
