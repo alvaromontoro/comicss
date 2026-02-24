@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #239: 10,000 Steps</title>
+
+    <meta property="og:title" content="comiCSS #239: 10,000 Steps" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/239" />
+    <meta property="og:image" content="https://comicss.art/comics/239/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://comicss.art/comics/239">
+    <meta name="twitter:title" content="comiCSS #239: 10,000 Steps">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/239/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand';
+        src: url(/fonts/PatrickHand-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+@font-face {
+        font-family: 'Bebas Neue';
+        src: url(/fonts/BebasNeue-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      
+@property --a {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+
+@property --t {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+@keyframes exercise {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 40deg;
+  }
+}
+
+@keyframes exercise {
+  0%, 100% {
+    --a: 0deg;
+    --t: 0%;
+  }
+  50% {
+    --a: 40deg;
+    --t: -4%;
+  }
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 90em;
+  font-size: 1vmin;
+  aspect-ratio: 1;
+  gap: 1em;
+  
+  .yawn {
+    font-size: 1.75em;
+    font-family: 'Patrick Hand', roboto, helvetica, sans-serif;
+    rotate: -30deg;
+    top: 10%;
+    left: 46%;
+  }
+  
+  .speech {
+    font-size: 2.25em;
+    font-family: 'Patrick Hand', roboto, helvetica, sans-serif;
+    line-height: 1.15;
+    
+    &::before {
+      content: "";
+      width: 20%;
+      height: 80%;
+      background: radial-gradient(100% 100% at -5% -5%, #0000 90%, #000 0 99%, #0000);
+      top: 100%;
+    }
+  }
+  
+  section {
+    border: 0.5em solid;
+    border-radius: 0.25em;
+    position: relative;
+    overflow: clip;
+    
+    *, *::before, *::after {
+      position: absolute;
+      box-sizing: border-box;
+    }
+    
+    &:nth-child(1) {
+      .speech {
+        width: 45%;
+        left: 55%;
+        top: 15%;
+        
+        &::before {
+          height: 90%;
+          left: 20%;
+        }
+      }
+      .eye {
+        width: 8%;
+        height: 4%;
+        top: 45.5%;
+        left: 40%;
+        background: 
+          linear-gradient(to bottom left, #0000 40%, #000 0 51%, #0000 0),
+          linear-gradient(#0000 80%, #000 0);
+        border-radius:  0 100% 0 0;
+        translate: -50% -50%;
+        rotate: 2deg;
+        
+        & ~ & {
+          scale: -1 1;
+          left: 55%;
+          rotate: -1deg;
+        }
+      }
+      .mouth {
+        width: 4%;
+        height: 6%;
+        background: 
+          radial-gradient(100% 50% at 40% 90%, #d55 40%, #0000 calc(40% + 1px)),
+          #000;
+        border-radius: 50%;
+        rotate: 10deg;
+        left: 47%;
+        top: 51%;
+        translate: -50% -50%;
+      }
+      .arm {
+        width: 30%;
+        height: 1.66%;
+        background: #000;
+        top: 53%;
+        left: 0%;
+        rotate: 30deg;
+        
+        &::before {
+          content: "";
+          width: 22%;
+          aspect-ratio: 1;
+          background: #000;
+          translate: -50% -50%;
+          border-radius: 50%;
+        }
+        
+        & ~ & {
+          top: 55%;
+          scale: -1 1;
+          left: 59%;
+          rotatE: -20deg;
+        }
+      }
+    }
+    
+    &:nth-child(2) {
+      background: #234;
+      
+      code {
+        white-space: pre-wrap;
+        color: #eee;
+        font-size: 2.75em;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 80%;
+/*         animation: 1s exercise 5 steps(10000, end); */
+        
+        span {
+          position: relative;
+          
+          &.s, &.k { color: #ed7; }
+          &.n, &.v { color: #f94; }
+          &.p { color: #c9f; }
+        }
+      }
+    }
+    
+    &:nth-child(3) {
+      --a: 0deg;
+      --t: -4%;
+      animation: 1s exercise steps(10000, end) forwards ;
+      
+      .eye {
+        top: 45.5%;
+        left: 40%;
+        translate: -50% -50%;
+        width: 8%;
+        aspect-ratio: 1;
+        background: radial-gradient(circle at 30% 35%, #fff 15%, #000 0);
+        border-radius: 50%;
+        clip-path: polygon(0 5%, 100% 25%, 100% 100%, 0 100%);
+        &~& {
+          left: 54%;
+          clip-path: polygon(0 25%, 100% 5%, 100% 100%, 0 100%);
+        }
+      }
+      
+      .mouth {
+        width: 10%;
+        aspect-ratio: 1.2;
+        border-radius: 50%;
+        border: 0.5em solid #0000;
+        border-top-color: #000;
+        top: 55%;
+        left: 47%;
+        rotate: -5deg;
+        translate: -50% -50%;
+      }
+      
+      .speech {
+        top: 13%;
+        left: 60%;
+        text-align: center;
+        width: 30%;
+        line-height: 1;
+        &::before {
+          content: none;
+          width: 60%;
+          height: 300%;
+          background: radial-gradient(100% 120% at -5% 0%, #0000 90%, #000 0 99%, #0000);
+        }
+      }
+      
+      .arm {
+        width: 30%;
+        height: 10%;
+        background: radial-gradient(farthest-side at 50% 105%, #0000 85%, #000 0 calc(100% - 1px), #0000);
+        top: 55%;
+        left: 2%;
+        transform-origin: 100% 25%;
+        rotate: calc(-1 * var(--a) / 1.5);
+        
+        &::before {
+          content: "";
+          width: 22%;
+          aspect-ratio: 1;
+          background: #000;
+          border-radius: 50%;
+          top: 95%;
+          left: 0%;
+          translate: -40%;
+        }
+        
+        & ~ & {
+          scale: -1 -1;
+          left: 25%;
+          top: 60%;
+        }
+      }
+      
+      .leg {
+        rotate: calc(var(--a) + 2deg);
+        
+        & ~ & {
+          rotate: calc(-1 * var(--a));
+          bottom: var(--t);
+        }
+      }
+    }
+    
+    &:nth-child(4) {
+      .speech {
+        left: 15%;
+        top: 5%;
+        font-size: 3em;
+        
+        &::before {
+          width: 100%;
+          height: 300%;
+          right: 70%;
+          background: radial-gradient(100% 100% at -15% 0%, #0000 95%, #000 0 99%, #0000);
+          scale: -1;
+          top: 50%;
+          right: 103%;
+        }
+      }
+      .arm {
+        width: 400%;
+        aspect-ratio: 2;
+        border: 20em solid #000;
+        border-radius: 50%;
+        left: -120%;
+        top: 35%;
+        
+        &::before {
+          content: "";
+          width: 25%;
+          aspect-ratio: 1;
+          background: #000;
+          border-radius: 50%;
+          left: 55%;
+          translate: -20% -80%;
+        }
+      }
+      .screen {
+        --c: #96AED1;
+        width: 60%;
+        height: 65%;
+        border: 1.5em solid var(--c);
+        border-block: 3em solid var(--c);
+        border-radius: 15%;
+        box-sizing: content-box;
+        outline: 0.35em solid #000;
+        box-shadow:
+          inset 0 0 0 0.3em #000;
+        font-family: Helvetica, arial, verdana, sans-serif;
+        rotate: -5deg;
+        top: 20%;
+        left: 10%;
+        background: #fff;
+        
+        &::after {
+          content: "";
+          width: 30%;
+          aspect-ratio: 1;
+          top: 75%;
+          left: 53%;
+          translate: -50% -50%;
+          border-radiuS: 50%;
+          background:
+            radial-gradient(farthest-side, #fff 50%, #0000 0),
+            radial-gradient(farthest-side, limegreen 68%, #0000 0),
+            radial-gradient(farthest-side, #fff 80%, #0000 0),
+            conic-gradient(#69f 7deg, #ddd 0);
+        }
+        
+        &::before {
+          width: 7%;
+          height: 25%;
+          content: "";
+          top: 15%;
+          background: red;
+          left: calc(100% + 1.75em);
+          border-radius: 0 0.75em 0.75em 0;
+          border: 0.35em solid #000;
+          border-left: 0;
+          background:
+            linear-gradient(#0000 50%, #0008 0) 0 0 / 100% 0.45em,
+            #999;
+        }
+        
+        .time {
+          font-size: 2.5em;
+          right: 1em;
+          top: 1em;
+        }
+        
+        .steps {
+          font-size: 5em;
+          right: 0.5em;
+          top: 33%;
+          translate: 0 0%;
+          
+          &::before,
+          &::after {
+            --c: limegreen;
+            left: 0.1em;
+            top: 50%;
+            content: "";
+            width: 0.5em;
+            height: 0.8em;
+            background: 
+              radial-gradient(40% 50% at 50% 40%, var(--c) 80%, #0000 0),
+              radial-gradient(circle at 50% 80%, var(--c) 20%, #0000 0);
+            mask:
+              linear-gradient(#000 64%, #0000 0 70%, #000 0);
+            translate: -120% -40%;
+          }
+          
+          &::after {
+            translate: -200% -60%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.leg {
+  transform-origin: 10% 0;
+  rotatE: 0deg;
+  width: 6em;
+  height: 30%;
+  background: red;
+  bottom: 0;
+  background:
+    radial-gradient(50% 75% at 0 50%, #0000 calc(75% - 1px), #000 75% calc(100% - 1px), #0000),
+    radial-gradient(45% 14% at 55% 105%, #000 calc(100% - 1px), #0000);
+  left: 39%;
+  translate: -50%;
+  rotate: 2deg;
+  
+  & ~ & {
+    left: 54%;
+    rotate: -1deg;
+  }
+}
+
+.css-logo {
+  font-size: 0.55em;
+  width: 30em;
+  position: absolute;
+  aspect-ratio: 1;
+  background: rebeccapurple;
+  border-radius: 0 20% 20% 20%;
+  display: inline-block;
+  bottom: 26%;
+  left: 45%;
+  translate: -50%;
+
+  &::before {
+    content: "CSS";
+    position: absolute;
+    bottom: 0%;
+    right: 8%;
+    color: #fff;
+    font-size: 15em;
+    font-family: 'Bebas Neue', 'Roboto Condensed', sans-serif;
+    line-height: 1;
+    scale: 1 0.9;
+  }
+}
+    </style>
+  </head>
+  <body>
+<article>
+  <section>
+    <div class="yawn">*yawn*</div>
+    <div class="speech">5:30am! Time to rise and shine and exercise</div>
+    <div class="leg"></div>
+    <div class="leg"></div>
+    <div class="arm"></div>
+    <div class="arm"></div>
+    <div class="css-logo"></div>
+    <div class="eye"></div>
+    <div class="eye"></div>
+    <div class="mouth"></div>
+  </section>
+  <section>
+<code><span class="s">#css</span> {
+  <span class="p">animation</span>:
+    <span class="v">1s</span>
+    <span class="k">exercise</span>
+    <span class="s">steps</span>(<span class="n">10000</span>, <span class="k">end</span>)
+  ;
+}</code>
+  </section>
+  <section>
+    <div class="speech">*painful exercise noises*</div>
+    <div class="leg"></div>
+    <div class="leg"></div>
+    <div class="arm"></div>
+    <div class="arm"></div>
+    <div class="css-logo"></div>
+    <div class="eye"></div>
+    <div class="eye"></div>
+    <div class="mouth"></div>
+  </section>
+  <section>
+    <div class="speech">A new personal record!!</div>
+    <div class="arm"></div>
+    <div class="screen">
+      <div class="feet"></div>
+      <div class="time">5:31am</div>
+      <div class="steps">10,000</div>
+    </div>
+  </section>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
