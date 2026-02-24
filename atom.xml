@@ -4528,4 +4528,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>10,000 Steps</title>
+    <link href="https://comicss.art/comics/239" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/239/10000-steps.html"/>
+    <id>https://comicss.art/comics/239</id>
+    <updated>2026-02-23T00:00:00Z</updated>
+    <summary>New Cartoon: 10,000 Steps</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/239/10000-steps.png" alt="comic with 4 panels in a 2x2 grid showing a sleepy CSS logo yawning and saying '5:30am! Time to rise and shine and exercise', the there's some CSS code: 'animation: 1s exercise steps(10000, end);', then the CSS logo looks like running and the last panel is a close up of the podometer: 10000 steps, no minutes of exercise, and it is 5:31am." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

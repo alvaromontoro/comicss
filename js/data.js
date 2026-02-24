@@ -1852,4 +1852,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Drawing of two group of angry-looking gnomes arguing with each other. One side has hats with circles, the other side has hats with lines and they 'fight' about circles or lines. One of the gnomes with lined hat, his lines are not straight but slightly curved. The drawing has the text 'Little did the CSS gnomes know, there was a spy among them...'"
   },
+  {
+    id: 239,
+    uid: "10000-steps",
+    boxes: 4,
+    title: "10,000 Steps",
+    ariaLabel: "comic with 4 panels in a 2x2 grid showing a sleepy CSS logo yawning and saying '5:30am! Time to rise and shine and exercise', the there's some CSS code: 'animation: 1s exercise steps(10000, end);', then the CSS logo looks like running and the last panel is a close up of the podometer: 10000 steps, no minutes of exercise, and it is 5:31am."
+  },
 ]
