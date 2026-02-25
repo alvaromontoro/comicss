@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
-    <meta name="keywords" content="comicss,webcomic,css,games,about,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,game,css games" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Games</title>
+    <title>comiCSS - Game 10 Solution</title>
 
     <meta property="og:title" content="comiCSS" />
     <meta property="og:type" content="website" />
@@ -29,8 +29,7 @@
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-
-  <body class="games">
+  <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
     <header>
       <div>
@@ -97,115 +96,39 @@
       </nav>
     </header>
 
-    <main id="main">
-      <h1>Games</h1>
+    <main id="main" class="game-main">
+      <h1>Color Stairs Solution</h1>
+      <p>This page contains the solution to the <a href="./">Color Stairs game for February 25, 2026</a>.</p>
       <p>
-        <span class="sitename">comi<span>CSS</span></span> now has games! Over the past year, I've been working 
-        on creating a collection of CSS-based games (thanks everyone who tested them), and I'm excited to start 
-        adding them to the website on a regular basis. New games will be published every week on Wednesdays.
+        To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
+        them whenever you're ready.
       </p>
-      <p>
-        Some of these games are built entirely with CSS and will work even without JavaScript. Others will rely 
-        on JavaScript for additional functionality. In all cases, I'm taking a progressive enhancement approach to 
-        ensure a solid baseline experience while providing richer interactions where possible.
-      </p>
-      <table style="margin-bottom:5rem;">
-        <thead>
-          <tr>
-            <th>Game</th>
-            <th><span class="a11y-hidden">Solutions</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a href="/games/10">Color Stairs (February 25, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/10/solution.html">Solution <span class="a11y-hidden">for Game 10</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/9">Sequences (February 11, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/9/solution.html">Solution <span class="a11y-hidden">for Game 9</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/8">4Connect (February 4, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/8/solution.html">Solution <span class="a11y-hidden">for Game 8</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/7">Chain (January 28, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/7/solution.html">Solution <span class="a11y-hidden">for Game 7</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/6">Code Breaker (January 21, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/6/solution.html">Solution <span class="a11y-hidden">for Game 6</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/5">CSS Colors (January 14, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/5/solution.html">Solution <span class="a11y-hidden">for Game 5</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/2">Infinite Ring (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/2/solution.html">Solution <span class="a11y-hidden">for Game 2</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/1">ABCnagrams (January 7, 2026)</a>
-            </td>
-            <td>
-              <a href="/games/1/solution.html">Solution <span class="a11y-hidden">for Game 1</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/4">Guess the Movie (October 27, 2025)</a>
-            </td>
-            <td>
-              <a href="/games/4/solution.html">Solution <span class="a11y-hidden">for Game 4</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/games/3">Guess the Brand (February 27, 2023)</a>
-            </td>
-            <td>
-              <a href="/games/3/solution.html">Solution <span class="a11y-hidden">for Game 3</span></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <label for="show-answers" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+        <input type="checkbox" id="show-answers" role="switch" />
+        <span>Show answers</span>
+      </label>
+      <style>
+        ol li span {
+          filter: blur(0.25rem);
+          transition: filter 0.5s;
+        }
+        ol li span:hover,
+        :has(#show-answers:checked) ol li span {
+          filter: blur(0);
+        }
 
-      <p>
-        <span class="sitename">comi<span>CSS</span></span> Games (<span class="sitename">game<span>CSS</span></span>?) 
-        is still a work in progress, and there's plenty more to come. If you have ideas, suggestions, or feedback, 
-        I'd love to hear from you—feel free to reach out through the <a href="/contact">contact page</a> and help 
-        shape what the platform becomes.
-      </p>
+        
+      </style>
+      <ol>
+        <li><span>Orchid</span></li>
+        <li><span>Seashell</span></li>
+        <li><span>Fuchsia</span></li>
+        <li><span>LightCyan</span></li>
+        <li><span>MediumOrchid</span></li>
+        <li><span>LightSalmon</span></li>
+        <li><span>SaddleBrown</span></li>
+        <li><span>LightSeaGreen</span></li>
+      </ol>
     </main>
 
     <footer>

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS Game - Color Stairs</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/games/css/color-stairs.png" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/games/css/color-stairs.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/color-stairs.css" />
+    <script src="../css/color-stairs.js" defer></script>
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+      <h1>Color Stairs</h1>
+      <p id="instructions">
+        Do you know the names of the colors that form these stairs? The color swatches at the end of 
+        each one are your main hint, but if you need help, check out for more help after the puzzle!
+      </p>
+
+      <article id="game-main" aria-describedby="instructions" role="application">
+        <ul>
+          <li style="--c: orchid">
+            <input type="text" required pattern="[Oo]" maxlength="1" aria-label="word 1, letter 1" value="" aria-describedby="hint-1" data-first-tile="true">
+            <input type="text" required pattern="[Rr]" maxlength="1" aria-label="word 1, letter 2" value="">
+            <input type="text" required pattern="[Cc]" maxlength="1" aria-label="word 1, letter 3" value="C" readonly>
+            <input type="text" required pattern="[Hh]" maxlength="1" aria-label="word 1, letter 4" value="">
+            <input type="text" required pattern="[Ii]" maxlength="1" aria-label="word 1, letter 5" value="">
+            <input type="text" required pattern="[Dd]" maxlength="1" aria-label="word 1, letter 6" value="">
+            <input readonly disabled style="--w:3;--p:14;">
+          </li>
+          <li style="--c: seashell">
+            <input type="text" required pattern="[Ss]" maxlength="1" aria-label="word 2, letter 1" value="" aria-describedby="hint-2">
+            <input type="text" required pattern="[Ee]" maxlength="1" aria-label="word 2, letter 2" value="">
+            <input type="text" required pattern="[Aa]" maxlength="1" aria-label="word 2, letter 3" value="">
+            <input type="text" required pattern="[Ss]" maxlength="1" aria-label="word 2, letter 4" value="S" readonly>
+            <input type="text" required pattern="[Hh]" maxlength="1" aria-label="word 2, letter 5" value="">
+            <input type="text" required pattern="[Ee]" maxlength="1" aria-label="word 2, letter 6" value="">
+            <input type="text" required pattern="[Ll]" maxlength="1" aria-label="word 2, letter 7" value="" class="bb">
+            <input type="text" required pattern="[Ll]" maxlength="1" aria-label="word 2, letter 8" value="" class="bt bb">
+            <input readonly disabled style="--w:2;--p:15;">
+          </li>
+          <li style="--c: fuchsia">
+            <input type="text" required pattern="[Ff]" maxlength="1" aria-label="word 3, letter 1" value="" aria-describedby="hint-3">
+            <input type="text" required pattern="[Uu]" maxlength="1" aria-label="word 3, letter 2" value="">
+            <input type="text" required pattern="[Cc]" maxlength="1" aria-label="word 3, letter 3" value="">
+            <input type="text" required pattern="[Hh]" maxlength="1" aria-label="word 3, letter 4" value="">
+            <input type="text" required pattern="[Ss]" maxlength="1" aria-label="word 3, letter 5" value="S" readonly>
+            <input type="text" required pattern="[Ii]" maxlength="1" aria-label="word 3, letter 6" value="">
+            <input type="text" required pattern="[Aa]" maxlength="1" aria-label="word 3, letter 7" value="">
+            <input readonly disabled style="--w:4;--p:13;">
+          </li>
+          <li style="--c: lightcyan">
+            <input type="text" required pattern="[Ll]" maxlength="1" aria-label="word 4, letter 1" value="" aria-describedby="hint-6">
+            <input type="text" required pattern="[Ii]" maxlength="1" aria-label="word 4, letter 2" value="">
+            <input type="text" required pattern="[Gg]" maxlength="1" aria-label="word 4, letter 3" value="">
+            <input type="text" required pattern="[Hh]" maxlength="1" aria-label="word 4, letter 4" value="">
+            <input type="text" required pattern="[Tt]" maxlength="1" aria-label="word 4, letter 5" value="">
+            <input type="text" required pattern="[Cc]" maxlength="1" aria-label="word 4, letter 1" value="C" readonly>
+            <input type="text" required pattern="[Yy]" maxlength="1" aria-label="word 4, letter 7" value="">
+            <input type="text" required pattern="[Aa]" maxlength="1" aria-label="word 4, letter 8" value="">
+            <input type="text" required pattern="[Nn]" maxlength="1" aria-label="word 4, letter 9" value="" class="bt">
+            <input readonly disabled style="--w:3;--p:14;">
+          </li>
+          <li style="--c: mediumorchid">
+            <input type="text" required pattern="[Mm]" maxlength="1" aria-label="word 5, letter 1"  value="" aria-describedby="hint-7">
+            <input type="text" required pattern="[Ee]" maxlength="1" aria-label="word 5, letter 2"  value="">
+            <input type="text" required pattern="[Dd]" maxlength="1" aria-label="word 5, letter 3"  value="">
+            <input type="text" required pattern="[Ii]" maxlength="1" aria-label="word 5, letter 4"  value="">
+            <input type="text" required pattern="[Uu]" maxlength="1" aria-label="word 5, letter 5"  value="">
+            <input type="text" required pattern="[Mm]" maxlength="1" aria-label="word 5, letter 6"  value="">
+            <input type="text" required pattern="[Oo]" maxlength="1" aria-label="word 5, letter 7"  value="O" readonly>
+            <input type="text" required pattern="[Rr]" maxlength="1" aria-label="word 5, letter 8"  value="">
+            <input type="text" required pattern="[Cc]" maxlength="1" aria-label="word 5, letter 9"  value="">
+            <input type="text" required pattern="[Hh]" maxlength="1" aria-label="word 5, letter 10" value="">
+            <input type="text" required pattern="[Ii]" maxlength="1" aria-label="word 5, letter 11" value="" class="bb bt">
+            <input type="text" required pattern="[Dd]" maxlength="1" aria-label="word 5, letter 12" value="" class="bb bt">
+            <input readonly disabled style="--w:1;--p:16;">
+          </li>
+          <li style="--c: lightsalmon">
+            <input type="text" required pattern="[Ll]" maxlength="1" aria-label="word 6, letter 1"  value="" aria-describedby="hint-8">
+            <input type="text" required pattern="[Ii]" maxlength="1" aria-label="word 6, letter 2"  value="">
+            <input type="text" required pattern="[Gg]" maxlength="1" aria-label="word 6, letter 3"  value="">
+            <input type="text" required pattern="[Hh]" maxlength="1" aria-label="word 6, letter 4"  value="">
+            <input type="text" required pattern="[Tt]" maxlength="1" aria-label="word 6, letter 5"  value="">
+            <input type="text" required pattern="[Ss]" maxlength="1" aria-label="word 6, letter 6"  value="">
+            <input type="text" required pattern="[Aa]" maxlength="1" aria-label="word 6, letter 7"  value="">
+            <input type="text" required pattern="[Ll]" maxlength="1" aria-label="word 6, letter 8"  value="L" readonly>
+            <input type="text" required pattern="[Mm]" maxlength="1" aria-label="word 6, letter 9"  value="">
+            <input type="text" required pattern="[Oo]" maxlength="1" aria-label="word 6, letter 10" value="">
+            <input type="text" required pattern="[Nn]" maxlength="1" aria-label="word 6, letter 11" value="" class="bb">
+            <input readonly disabled style="--w:3;--p:14;">
+          </li>
+          <li style="--c: saddlebrown">
+            <input type="text" required pattern="[Ss]" maxlength="1" aria-label="word 7, letter 1"  value="" aria-describedby="hint-7">
+            <input type="text" required pattern="[Aa]" maxlength="1" aria-label="word 7, letter 2"  value="">
+            <input type="text" required pattern="[Dd]" maxlength="1" aria-label="word 7, letter 3"  value="">
+            <input type="text" required pattern="[Dd]" maxlength="1" aria-label="word 7, letter 4"  value="">
+            <input type="text" required pattern="[Ll]" maxlength="1" aria-label="word 7, letter 5"  value="">
+            <input type="text" required pattern="[Ee]" maxlength="1" aria-label="word 7, letter 6"  value="">
+            <input type="text" required pattern="[Bb]" maxlength="1" aria-label="word 7, letter 7"  value="">
+            <input type="text" required pattern="[Rr]" maxlength="1" aria-label="word 7, letter 8"  value="">
+            <input type="text" required pattern="[Oo]" maxlength="1" aria-label="word 7, letter 9"  value="O" readonly>
+            <input type="text" required pattern="[Ww]" maxlength="1" aria-label="word 7, letter 10" value="">
+            <input type="text" required pattern="[Nn]" maxlength="1" aria-label="word 7, letter 11" value="">
+            <input readonly disabled style="--w:4;--p:13;">
+          </li>
+          <li style="--c: lightseagreen">
+            <input type="text" required pattern="[Ll]" maxlength="1" aria-label="word 8, letter 1"  value="" aria-describedby="hint-8">
+            <input type="text" required pattern="[Ii]" maxlength="1" aria-label="word 8, letter 2"  value="">
+            <input type="text" required pattern="[Gg]" maxlength="1" aria-label="word 8, letter 3"  value="">
+            <input type="text" required pattern="[Hh]" maxlength="1" aria-label="word 8, letter 4"  value="">
+            <input type="text" required pattern="[Tt]" maxlength="1" aria-label="word 8, letter 5"  value="">
+            <input type="text" required pattern="[Ss]" maxlength="1" aria-label="word 8, letter 6"  value="">
+            <input type="text" required pattern="[Ee]" maxlength="1" aria-label="word 8, letter 7"  value="">
+            <input type="text" required pattern="[Aa]" maxlength="1" aria-label="word 8, letter 8"  value="">
+            <input type="text" required pattern="[Gg]" maxlength="1" aria-label="word 8, letter 9"  value="">
+            <input type="text" required pattern="[Rr]" maxlength="1" aria-label="word 8, letter 10" value="R" readonly>
+            <input type="text" required pattern="[Ee]" maxlength="1" aria-label="word 8, letter 11" value="">
+            <input type="text" required pattern="[Ee]" maxlength="1" aria-label="word 8, letter 12" value="">
+            <input type="text" required pattern="[Nn]" maxlength="1" aria-label="word 8, letter 13" value="" class="bt" data-last-tile="true">
+            <input readonly disabled style="--w:3;--p:14;">
+          </li>
+        </ul>
+      </article>
+
+      <section id="hints">
+        <h2>Hints</h2>
+
+        <ul>
+          <li>
+            <button style="--c: orchid" aria-label="word 1: C">C</button> &mdash;
+            <span id="hint-1">The name of a colorful flower.</span>
+          </li>
+          <li>
+            <button style="--c: seashell" aria-label="word 2: S">S</button> &mdash;
+            <span id="hint-2">She sells them by the sea shore.</span>
+          </li>
+          <li>
+            <button style="--c: fuchsia" aria-label="word 3: S">S</button> &mdash;
+            <span id="hint-3">The brightest pink.</span>
+          </li>
+          <li>
+            <button style="--c: lightcyan" aria-label="word 4: C">C</button> &mdash;
+            <span id="hint-4">A clearer version of a color also known as aqua.</span>
+          </li>
+          <li>
+            <button style="--c: mediumorchid" aria-label="word 5: O">O</button> &mdash;
+            <span id="hint-5">A darker version of the flower from C#1.</span>
+          </li>
+          <li>
+            <button style="--c: lightsalmon" aria-label="word 6: L">L</button> &mdash;
+            <span id="hint-6">A color based on a fish... but paler</span>
+          </li>
+          <li>
+            <button style="--c: saddlebrown" aria-label="word 7: O">O</button> &mdash;
+            <span id="hint-7">An <em>aceituna</em> with a dull brownish color.</span>
+          </li>
+          <li>
+            <button style="--c: lightseagreen" aria-label="word 8: R">R</button> &mdash;
+            <span id="hint-8">The color of the ocean in a clear day.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="scrim">
+        <div aria-live="assertive">
+          <h2>Congratulations!!</h2>
+          <p>You solved the puzzle!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+  </body>
+</html>
