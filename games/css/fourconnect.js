@@ -80,7 +80,6 @@ class FourConnect extends HTMLElement {
   }
 
   showWin() {
-    console.log
     this.shadow.querySelector(".scrim-good").classList.toggle("visible", true);
   }
 
