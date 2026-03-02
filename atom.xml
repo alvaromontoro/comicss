@@ -4547,4 +4547,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Pearly Gates</title>
+    <link href="https://comicss.art/comics/240" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/240/pearly-gates.html"/>
+    <id>https://comicss.art/comics/240</id>
+    <updated>2026-03-02T00:00:00Z</updated>
+    <summary>New Cartoon: Pearly Gates</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/240/pearly-gates.png" alt="Cartoon with two people at the gates of Heaven. One is checking a list saying 'Sorry, but web developers' admission is now inversely proportional to their number of HTML classes.' The other person looks concerned while wearing a t-shirt with the Tailwind logo. Off-panel, someone with a red hand holding a pitchfork says 'You are coming with me, buddy!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
