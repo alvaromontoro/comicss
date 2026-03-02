@@ -1859,4 +1859,12 @@ const posts = [
     title: "10,000 Steps",
     ariaLabel: "comic with 4 panels in a 2x2 grid showing a sleepy CSS logo yawning and saying '5:30am! Time to rise and shine and exercise', the there's some CSS code: 'animation: 1s exercise steps(10000, end);', then the CSS logo looks like running and the last panel is a close up of the podometer: 10000 steps, no minutes of exercise, and it is 5:31am."
   },
+  {
+    id: 240,
+    uid: "pearly-gates",
+    boxes: 1,
+    title: "Pearly Gates",
+    vertical: true,
+    ariaLabel: "Cartoon with two people at the gates of Heaven. One is checking a list saying 'Sorry, but web developers' admission is now inversely proportional to their number of HTML classes.' The other person looks concerned while wearing a t-shirt with the Tailwind logo. Off-panel, someone with a red hand holding a pitchfork says 'You are coming with me, buddy!'"
+  },
 ]
