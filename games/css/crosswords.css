@@ -1,0 +1,533 @@
+:root {
+  --across-1: "Function to read custom properties";
+  --across-2: "Property to set how objects should resize";
+  --across-6: "Global keyword to get value from parent";
+  --across-10: "Keyword used in animations and gradients";
+  --across-11: "Property used to colorize form controls";
+  --across-16: "Useful for SVG lines";
+  --across-19: "Upper position";
+  --across-20: "Sets the brightness of an audio";
+  --across-22: "Trigonometry function";
+  --across-24: "Property that applies graphical effects";
+  --across-25: "Warm color or a juicy fruit";
+  --across-28: "Useful to avoid floating crashes";
+  --across-29: "The insertion indicator in an input";
+  --across-31: "clip and scroll are values for this property";
+  --across-32: "Greenish-blueish color";
+  --across-33: "Now you see me...";
+  --across-34: "Shorthand including column-count";
+  --across-35: "This bold property goes with font";
+  --across-37: "A property or function useful for 3D";
+  --across-40: "Defines if an element creates a new stacking context";
+  --across-43: "Justify-..., align-...";
+  --across-45: "Unit for a fraction of the available free space";
+  --across-47: "An ocean-family color";
+  --across-49: "A pseudo-element that is not ::after";
+  --across-51: "With this property, you can scale, skew...";
+  --across-53: "Greenish-blueish color";
+  --across-54: "Function that ceils or floors a number";
+  --across-55: "Fading property";
+  --across-59: "Color or licquor";
+  --across-62: "Sets if an element is a block or an inline box";
+  --across-63: "Function that returns the smallest value";
+  --across-65: "Math constant equal to 3.14...";
+  --across-66: "A shade of gray, or a hat";
+  --across-67: "Color function introduced in 2020";
+  --across-70: "Space outside the box";
+  --across-72: "White";
+  --across-73: "Feature to write rules inside other rules";
+  --across-75: "Unit for angles";
+  --across-76: "Negates the inner selection";
+  --across-77: "...and now you don't";
+  --across-78: "Function to bring remote (or local) assets";
+  --across-80: "A light color to stop and smell";
+  --across-81: "A sweet color name";
+  --across-82: "CSS unit or programming language";
+
+  --down-1: "Unit relative to the viewport largest side";
+  --down-3: "Function used in mathematical operations";
+  --down-4: "Fancy CSS conditional";
+  --down-5: "Without this there's no before or after";
+  --down-7: "Position";
+  --down-8: "Keyword used in animations for the end state";
+  --down-9: "One of an element's main dimension";
+  --down-12: "It can be an arrow or a pointer";
+  --down-13: "Function and property to flip elements";
+  --down-14: "Defines the foreground value for text and decoration";
+  --down-15: "Unit for angles";
+  --down-17: "A list style (only value with a dash in this puzzle)";
+  --down-18: "A light color named after a president's daughter";
+  --down-21: "Pseudo-class when a field is not valid";
+  --down-23: "A unit equivalent to 2.54cm";
+  --down-26: "Keyword to determine position in gradients";
+  --down-27: "A filter that makes everything gray";
+  --down-30: "A display and the name of an HTML tag";
+  --down-32: "A light purple color";
+  --down-34: "A deprecated cropping property";
+  --down-36: "A border style";
+  --down-38: "The most famous CSS unit";
+  --down-39: "Property that sets the text trend";
+  --down-41: "A value of 39 down";
+  --down-42: "Logical operator for media queries";
+  --down-44: "Property or technology (without the box)";
+  --down-45: "Don't use it for layouts";
+  --down-46: "Pseudo targetting an element occupying all the screen";
+  --down-48: "Root unit";
+  --down-50: "It can be open or close";
+  --down-52: "A really bright pink";
+  --down-56: "Property or modifier for box-shadows";
+  --down-57: "A bright color";
+  --down-58: "A border property (only bottom-to-top value in the puzzle)";
+  --down-60: "Property specifying how words should be hyphenated";
+  --down-61: "Pseudo-class applied to the element indicated in the hash";
+  --down-64: "Property that can be sticky at times...";
+  --down-67: "Pseudo-class to indicate a dialog is in a particular state";
+  --down-68: "The opposite of right";
+  --down-69: "This keyword resets a property";
+  --down-71: "Function to read tag attributes";
+  --down-72: "System color applied to text inputs";
+  --down-74: "A really light and cool color";
+  --down-75: "A bright and warm color";
+  --down-79: "Unit that represents the line height";
+}
+
+
+@position-try --top-left {
+  left: anchor(left);
+  right: auto;
+  bottom: anchor(top);
+  top: auto;
+}
+
+@position-try --top-right {
+  left: auto;
+  right: anchor(right);
+  bottom: anchor(top);
+  top: auto;
+}
+
+@position-try --bottom-left {
+  left: anchor(left);
+  right: auto;
+  top: anchor(bottom);
+  bottom: auto;
+}
+
+@position-try --bottom-right {
+  left: auto;
+  right: anchor(right);
+  top: anchor(bottom);
+  bottom: auto;
+}
+
+:has(#mode:checked) article {
+  background: #000;
+  --extra: drop-shadow(0 0 0 #0007);
+}
+
+main {
+  li {
+    line-height: 1.4;
+  }
+
+  [for="mode"] {
+    display: inline-flex;
+    margin-bottom: 1em;
+    align-items: center;
+    border-radius: 2em;
+    padding: 0.125em;
+    padding-inline-end: 0.35em;
+
+    &:has(:focus-visible) {
+      outline: 1px solid var(--fg);
+      outline-offset: 2px;
+    }
+
+    @media print {
+      display: none;
+    }
+
+    input {
+      appearance: none;
+      height: 1em;
+      width: 2em;
+      color: var(--bg);
+      background: var(--fg) !important;
+      border-radius: 1em !important;
+      position: relative;
+      outline: none;
+      min-width: 0;
+      box-shadow: none;
+      border: 0;
+      margin-inline-end: 0.35em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0.7em;
+        height: 0.7em;
+        left: 25%;
+        top: 50%;
+        translate: -50% -50%;
+        background: var(--bg);
+        border-radius: 50%;
+        transition: left 0.3s;
+      }
+
+      &:checked::before {
+        left: 75%;
+      }
+    }
+  }
+
+  #hoverhint-processed,
+  #hoverhint {
+    border: 1px solid #0003;
+    border-radius: 1em;
+    max-width: 100%;
+    min-width: 150px;
+    padding: 1em;
+    display: block;
+    background: #ffc;
+    color: light-dark(var(--fg), var(--bg));
+    font-size: 1em;
+    z-index: 1;
+    display: none;
+    position-anchor: --hint-here;
+    position: fixed;
+    right: anchor(right);
+    bottom: anchor(top);
+    margin-block: 3px;
+    margin-inline: -3px;
+    position-try-fallbacks: --top-right, --top-left, --bottom-left, --bottom-right;
+    box-shadow:
+      0px 3px 16px -2px #000c
+      ;
+
+    p { margin: 0;}
+
+    p:not(:last-child) {
+      margin-block-end: 1em;
+    }
+  }
+}
+
+body:has([data-n] input:focus) #hoverhint-processed,
+body:has([data-n] input:focus) #hoverhint {
+  display: block !important;
+  white-space: pre-wrap;
+}
+
+#hoverhint::before,
+#hoverhint::after {
+  display: block;
+  margin-block: 0.5em;
+}
+
+body:has(:is([data-n="b"],[data-n="h"])[data-a="1"] input:focus) #hoverhint::before { content: "Across: " var(--across-1); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="2"] input:focus) #hoverhint::before { content: "Across: " var(--across-2); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="6"] input:focus) #hoverhint::before { content: "Across: " var(--across-6); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="10"] input:focus) #hoverhint::before { content: "Across: " var(--across-10); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="11"] input:focus) #hoverhint::before { content: "Across: " var(--across-11); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="16"] input:focus) #hoverhint::before { content: "Across: " var(--across-16); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="19"] input:focus) #hoverhint::before { content: "Across: " var(--across-19); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="20"] input:focus) #hoverhint::before { content: "Across: " var(--across-20); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="22"] input:focus) #hoverhint::before { content: "Across: " var(--across-22); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="24"] input:focus) #hoverhint::before { content: "Across: " var(--across-24); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="25"] input:focus) #hoverhint::before { content: "Across: " var(--across-25); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="28"] input:focus) #hoverhint::before { content: "Across: " var(--across-28); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="29"] input:focus) #hoverhint::before { content: "Across: " var(--across-29); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="31"] input:focus) #hoverhint::before { content: "Across: " var(--across-31); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="32"] input:focus) #hoverhint::before { content: "Across: " var(--across-32); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="33"] input:focus) #hoverhint::before { content: "Across: " var(--across-33); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="34"] input:focus) #hoverhint::before { content: "Across: " var(--across-34); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="35"] input:focus) #hoverhint::before { content: "Across: " var(--across-35); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="37"] input:focus) #hoverhint::before { content: "Across: " var(--across-37); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="40"] input:focus) #hoverhint::before { content: "Across: " var(--across-40); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="43"] input:focus) #hoverhint::before { content: "Across: " var(--across-43); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="45"] input:focus) #hoverhint::before { content: "Across: " var(--across-45); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="47"] input:focus) #hoverhint::before { content: "Across: " var(--across-47); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="49"] input:focus) #hoverhint::before { content: "Across: " var(--across-49); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="51"] input:focus) #hoverhint::before { content: "Across: " var(--across-51); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="53"] input:focus) #hoverhint::before { content: "Across: " var(--across-53); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="54"] input:focus) #hoverhint::before { content: "Across: " var(--across-54); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="55"] input:focus) #hoverhint::before { content: "Across: " var(--across-55); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="59"] input:focus) #hoverhint::before { content: "Across: " var(--across-59); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="62"] input:focus) #hoverhint::before { content: "Across: " var(--across-62); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="63"] input:focus) #hoverhint::before { content: "Across: " var(--across-63); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="65"] input:focus) #hoverhint::before { content: "Across: " var(--across-65); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="66"] input:focus) #hoverhint::before { content: "Across: " var(--across-66); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="67"] input:focus) #hoverhint::before { content: "Across: " var(--across-67); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="70"] input:focus) #hoverhint::before { content: "Across: " var(--across-70); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="72"] input:focus) #hoverhint::before { content: "Across: " var(--across-72); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="73"] input:focus) #hoverhint::before { content: "Across: " var(--across-73); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="75"] input:focus) #hoverhint::before { content: "Across: " var(--across-75); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="76"] input:focus) #hoverhint::before { content: "Across: " var(--across-76); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="77"] input:focus) #hoverhint::before { content: "Across: " var(--across-77); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="78"] input:focus) #hoverhint::before { content: "Across: " var(--across-78); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="80"] input:focus) #hoverhint::before { content: "Across: " var(--across-80); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="81"] input:focus) #hoverhint::before { content: "Across: " var(--across-81); }
+body:has(:is([data-n="b"],[data-n="h"])[data-a="82"] input:focus) #hoverhint::before { content: "Across: " var(--across-82); }
+
+body:has(:is([data-n="b"],[data-n="v"])[data-a="1"] input:focus) #hoverhint::after { content: "Down: " var(--down-1); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="3"] input:focus) #hoverhint::after { content: "Down: " var(--down-3); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="4"] input:focus) #hoverhint::after { content: "Down: " var(--down-4); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="5"] input:focus) #hoverhint::after { content: "Down: " var(--down-5); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="7"] input:focus) #hoverhint::after { content: "Down: " var(--down-7); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="8"] input:focus) #hoverhint::after { content: "Down: " var(--down-8); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="9"] input:focus) #hoverhint::after { content: "Down: " var(--down-9); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="12"] input:focus) #hoverhint::after { content: "Down: " var(--down-12); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="13"] input:focus) #hoverhint::after { content: "Down: " var(--down-13); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="14"] input:focus) #hoverhint::after { content: "Down: " var(--down-14); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="15"] input:focus) #hoverhint::after { content: "Down: " var(--down-15); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="17"] input:focus) #hoverhint::after { content: "Down: " var(--down-17); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="18"] input:focus) #hoverhint::after { content: "Down: " var(--down-18); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="21"] input:focus) #hoverhint::after { content: "Down: " var(--down-21); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="23"] input:focus) #hoverhint::after { content: "Down: " var(--down-23); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="26"] input:focus) #hoverhint::after { content: "Down: " var(--down-26); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="27"] input:focus) #hoverhint::after { content: "Down: " var(--down-27); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="30"] input:focus) #hoverhint::after { content: "Down: " var(--down-30); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="32"] input:focus) #hoverhint::after { content: "Down: " var(--down-32); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="34"] input:focus) #hoverhint::after { content: "Down: " var(--down-34); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="36"] input:focus) #hoverhint::after { content: "Down: " var(--down-36); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="38"] input:focus) #hoverhint::after { content: "Down: " var(--down-38); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="39"] input:focus) #hoverhint::after { content: "Down: " var(--down-39); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="41"] input:focus) #hoverhint::after { content: "Down: " var(--down-41); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="42"] input:focus) #hoverhint::after { content: "Down: " var(--down-42); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="44"] input:focus) #hoverhint::after { content: "Down: " var(--down-44); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="45"] input:focus) #hoverhint::after { content: "Down: " var(--down-45); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="46"] input:focus) #hoverhint::after { content: "Down: " var(--down-46); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="48"] input:focus) #hoverhint::after { content: "Down: " var(--down-48); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="50"] input:focus) #hoverhint::after { content: "Down: " var(--down-50); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="52"] input:focus) #hoverhint::after { content: "Down: " var(--down-52); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="56"] input:focus) #hoverhint::after { content: "Down: " var(--down-56); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="57"] input:focus) #hoverhint::after { content: "Down: " var(--down-57); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="58"] input:focus) #hoverhint::after { content: "Down: " var(--down-58); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="60"] input:focus) #hoverhint::after { content: "Down: " var(--down-60); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="61"] input:focus) #hoverhint::after { content: "Down: " var(--down-61); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="64"] input:focus) #hoverhint::after { content: "Down: " var(--down-64); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="67"] input:focus) #hoverhint::after { content: "Down: " var(--down-67); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="68"] input:focus) #hoverhint::after { content: "Down: " var(--down-68); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="69"] input:focus) #hoverhint::after { content: "Down: " var(--down-69); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="71"] input:focus) #hoverhint::after { content: "Down: " var(--down-71); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="72"] input:focus) #hoverhint::after { content: "Down: " var(--down-72); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="74"] input:focus) #hoverhint::after { content: "Down: " var(--down-74); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="75"] input:focus) #hoverhint::after { content: "Down: " var(--down-75); }
+body:has(:is([data-n="b"],[data-n="v"])[data-a="79"] input:focus) #hoverhint::after { content: "Down: " var(--down-79); }
+
+
+article {
+  --extra: drop-shadow(0 0 5px #0007);
+  font-size: 1vmin;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  width: 72em;
+  width: auto;
+  gap: 0;
+  aspect-ratio: 12/15;
+  background: #0000;
+  filter:
+    drop-shadow(2px 0 #000)
+    drop-shadow(-2px 0 #000)
+    drop-shadow(0 2px #000)
+    drop-shadow(0 -2px #000)
+    var(--extra)
+    ;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  break-after: page;
+
+  label {
+    width: 100%;
+    min-width:100%;
+    aspect-ratio: 1;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    span {
+      font-size: 1rem;
+      position: absolute;
+      line-height: 4;
+      color: #000;
+      width: 1px;
+      height: 1px;
+      overflow: clip;
+    }
+
+    &[data-n] {
+      &:has(:focus) {
+        anchor-name: --hint-here;
+      }
+
+      &::after {
+        position: absolute;
+        content: attr(data-a);
+        font-size: 1.125em;
+        top: 0.1em;
+        left: 0.2em;
+        line-height: 1;
+        font-family: Roboto, Helvetica, sans-serif;
+        color: #000;
+      }
+    }
+  }
+
+  input {
+    border: 1px solid #ccc !important;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 0 !important;
+    margin: 0;
+    box-sizing: border-box;
+    position: absolute;
+    font-size: 2.25em !important;
+    top: 0;
+    left: 0;
+    height: auto !important;
+    background: #fff;
+    text-align: center;
+    text-transform: uppercase !important;
+    color: #000;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    border-radius: 0 !important;
+
+    &:focus {
+      background: #def;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--fg);
+      outline-offset: -2px;
+    }
+  }
+}
+
+[data-c="1"] { grid-column: 1; }
+[data-c="2"] { grid-column: 2; }
+[data-c="3"] { grid-column: 3; }
+[data-c="4"] { grid-column: 4; }
+[data-c="5"] { grid-column: 5; }
+[data-c="6"] { grid-column: 6; }
+[data-c="7"] { grid-column: 7; }
+[data-c="8"] { grid-column: 8; }
+[data-c="9"] { grid-column: 9; }
+[data-c="10"] { grid-column: 10; }
+[data-c="11"] { grid-column: 11; }
+[data-c="12"] { grid-column: 12; }
+[data-c="13"] { grid-column: 13; }
+[data-c="14"] { grid-column: 14; }
+[data-c="15"] { grid-column: 15; }
+[data-c="16"] { grid-column: 16; }
+[data-c="17"] { grid-column: 17; }
+[data-c="18"] { grid-column: 18; }
+[data-c="19"] { grid-column: 19; }
+[data-c="20"] { grid-column: 20; }
+[data-c="21"] { grid-column: 21; }
+[data-c="22"] { grid-column: 22; }
+[data-c="23"] { grid-column: 23; }
+[data-c="24"] { grid-column: 24; }
+
+.hints {
+  display: grid;
+  font-size: 0.8em;
+  font-size: 0.9em;
+  margin-block-start: 2em;
+  gap: 3em;
+
+  @media (width > 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  ol {
+    margin: 0;
+    padding: 1em;
+
+    @media (width > 1000px) {
+      column-count: 2;
+      column-gap: 3em;
+    }
+
+    li {
+      list-style: attr(data-n);
+      padding-inline-start: 0.35em;
+
+      &::marker {
+        font-weight: bolder;
+        content: attr(data-n) "."
+      }
+
+      /*       &::before {
+      content: attr(data-n) ".";
+      font-weight: 700;
+      margin-inline-end: 0.35em;
+    } */
+    }
+  }
+}
+
+
+.scrim-processed,
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  backdrop-filter: blur(0.5em);
+  place-items:center;
+  display: none;
+  z-index: 2;
+
+  > div {
+    background: var(--bg);
+    border-radius: 0.5em;
+    padding: 2em;
+    font-family: Helvetica, sans-serif;
+    max-width: 300px;
+    width: 80%;
+
+    h2 {
+      margin-block: 0 2rem;
+      font-weight: 400;
+    }
+
+    p {
+      margin-block: 1rem 0;
+      font-weight: 300;
+    }
+  }
+}
+
+.scrim-processed.open,
+:not(:has(:invalid)) .scrim {
+  display: grid;
+}
+
+@media print {
+  header, footer, .game-description {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 0.5em;
+    /* bottom: 0%;
+    position: fixed;
+    left: 0%; 
+    color: #f001 !important;
+    z-index: 3; */
+
+    &::after {
+      content: " - comiCSS.art";
+    }
+  }
+  h2 {
+    font-size: 1rem;
+    margin: 0em;
+  }
+  li {
+    font-size: 0.9em;
+  }
+}
