@@ -379,8 +379,8 @@ article {
     width: 100%;
     aspect-ratio: 1;
     padding: 0 !important;
-    margin: 0;
-    box-sizing: border-box;
+    margin: 0 !important;
+    box-sizing: border-box !important;
     position: absolute;
     font-size: 2.25em !important;
     top: 0;
@@ -389,7 +389,7 @@ article {
     background: #fff;
     text-align: center;
     text-transform: uppercase !important;
-    color: #000;
+    color: #000 !important;
     min-width: 0 !important;
     min-height: 0 !important;
     border-radius: 0 !important;
