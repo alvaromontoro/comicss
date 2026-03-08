@@ -120,7 +120,7 @@ function checkSolution() {
   }
 }
 
-cw.addEventListener('keydown', (event) => {
+cw.addEventListener('keyup', (event) => {
   const input = event.target;
 
   if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
