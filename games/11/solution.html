@@ -108,6 +108,15 @@
         <span>Show answers</span>
       </label>
       <style>
+        main ol li {
+          list-style: attr(data-n);
+          padding-inline-start: 0.5em;
+        }
+
+        main ol li::marker {
+          font-weight: bold;
+        }
+
         main ol li span {
           filter: blur(0.25rem);
           transition: filter 0.5s;
