@@ -7,7 +7,7 @@
 
 @position-try --top-right {
   left: auto;
-  left: anchor(right);
+  right: anchor(right);
   bottom: anchor(top);
   top: auto;
 }
@@ -21,7 +21,7 @@
 
 @position-try --bottom-right {
   left: auto;
-  left: anchor(right);
+  right: anchor(right);
   top: anchor(bottom);
   bottom: auto;
 }
@@ -95,6 +95,7 @@ main {
     box-sizing: border-box;
     max-width: auto;
     min-width: 150px;
+    min-width: 200px;
     padding: 1em;
     display: block;
     background: #ffc;
@@ -102,14 +103,14 @@ main {
     font-size: 3em;
     z-index: 1;
     display: none;
-    position-anchor: --hint-here;
     position: fixed;
-    right: anchor(right);
-    bottom: anchor(top);
     margin-block: 3px;
     margin-inline: -3px;
     white-space: pre-wrap;
-    position-try-fallbacks: --top-left, --top-right,  --bottom-left, --bottom-right;
+    left: anchor(left);
+    bottom: anchor(top);
+    position-anchor: --hint-here;
+    position-try-fallbacks: --top-right,  --bottom-left, --bottom-right;
     box-shadow:
       0px 3px 16px -2px #000c
       ;
@@ -339,8 +340,7 @@ body:has(:is([data-o="b"],[data-o="d"])[data-n="96"] input:focus) #hoverhint::af
 body:has(:is([data-o="b"],[data-o="d"])[data-n="97"] input:focus) #hoverhint::after { content: "Down: " var(--down-97); }
 body:has(:is([data-o="b"],[data-o="d"])[data-n="98"] input:focus) #hoverhint::after { content: "Down: " var(--down-98); }
 body:has(:is([data-o="b"],[data-o="d"])[data-n="99"] input:focus) #hoverhint::after { content: "Down: " var(--down-99); }
-body:has(:is([data-o="b"],[data-o="d"])[data-n="100"] input:focus) #hoverhint::after { content: "Down: " var(--down-100);
-}
+body:has(:is([data-o="b"],[data-o="d"])[data-n="100"] input:focus) #hoverhint::after { content: "Down: " var(--down-100); }
 
 article {
   --extra: drop-shadow(0 0 5px #0007);
@@ -360,7 +360,7 @@ article {
     drop-shadow(-2px 0 #000)
     drop-shadow(0 2px #000)
     drop-shadow(0 -2px #000)
-    var(--extra)
+    /* var(--extra) */
     ;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
@@ -433,31 +433,6 @@ article {
   }
 }
 
-[data-c="1"] { grid-column: 1; }
-[data-c="2"] { grid-column: 2; }
-[data-c="3"] { grid-column: 3; }
-[data-c="4"] { grid-column: 4; }
-[data-c="5"] { grid-column: 5; }
-[data-c="6"] { grid-column: 6; }
-[data-c="7"] { grid-column: 7; }
-[data-c="8"] { grid-column: 8; }
-[data-c="9"] { grid-column: 9; }
-[data-c="10"] { grid-column: 10; }
-[data-c="11"] { grid-column: 11; }
-[data-c="12"] { grid-column: 12; }
-[data-c="13"] { grid-column: 13; }
-[data-c="14"] { grid-column: 14; }
-[data-c="15"] { grid-column: 15; }
-[data-c="16"] { grid-column: 16; }
-[data-c="17"] { grid-column: 17; }
-[data-c="18"] { grid-column: 18; }
-[data-c="19"] { grid-column: 19; }
-[data-c="20"] { grid-column: 20; }
-[data-c="21"] { grid-column: 21; }
-[data-c="22"] { grid-column: 22; }
-[data-c="23"] { grid-column: 23; }
-[data-c="24"] { grid-column: 24; }
-
 .hints {
   display: grid;
   font-size: 0.8em;
@@ -465,9 +440,9 @@ article {
   margin-block-start: 2em;
   gap: 3em;
 
-  @media (width > 600px) {
+  /* @media (width > 600px) {
     grid-template-columns: 1fr 1fr;
-  }
+  } */
 
   ol {
     margin: 0;
@@ -478,13 +453,21 @@ article {
       column-gap: 3em;
     }
 
+    @media print {
+      column-count: 2;
+      column-gap: 3em;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      break-after: page;
+    }
+
     li {
-      list-style: attr(data-o);
+      list-style: attr(data-n);
       padding-inline-start: 0.35em;
 
       &::marker {
         font-weight: bolder;
-        content: attr(data-o) "."
+        content: attr(data-n) "."
       }
 
       /*       &::before {

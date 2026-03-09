@@ -100,23 +100,26 @@
 
     <main id="main" class="game-main">
   
-      <h1>CroSSword</h1>
+      <h1>Crossword</h1>
 
       <div class="game-description">
         <p>
-          Fill the crossword with the correct letters. All words will be read from left-to-right or 
+          Fill the crossword with the correct letters. Words will be read from left-to-right or
           from top-to-bottom (unless otherwise indicated). Special characters like hyphens or colons
-          are omitted, so the answers will only contain letters (again, unless otherwise indicated). 
+          are omitted, so the answers will only contain letters (again, unless otherwise indicated).
         </p>
         <p>
-          Click on a cell to start typing, or use the tab key or arrow keys to navigate through the 
+          Type to move from cell to cell, or use the tab key or arrow keys to navigate through the
           crossword.
-        </p>
         <p>
-          The clues are the words themselves, but they are all related to CSS in some way. Good luck!
+          All related to HTML in some way. If you get stuck, you can find
+          <a href="./solution.html" style="display:inline">hints and the solution here</a>. Good luck!
         </p>
-        <p>
-          If you get stuck, you can find <a href="solution.html">hints and the solution here</a>.
+
+        <p class="note" style="font-size: 0.9em; border: 1px solid #0008; padding: 1em;line-height:1.2;background:#6c61">
+          Note: <code>dep.</code> in a clue, indicates that the solution refers to a deprecated, 
+          obsolete, or removed feature. <code>exp.</code> in a clue indicates that the feature is
+          experimental or it doesn't have full support.
         </p>
       </div>
 
@@ -129,2458 +132,2486 @@
 
 <style>
 #crossword {
-  --across-1: "(exp. attr.) Sets the value of the referenceTarget property of a ShadowRoot";
-  --across-2: "Property to set how objects should resize";
-  --across-6: "Global keyword to get value from parent";
-  --across-10: "Keyword used in animations and gradients";
-  --across-11: "Property used to colorize form controls";
-  --across-16: "Useful for SVG lines";
-  --across-19: "Upper position";
-  --across-20: "Sets the brightness of an audio";
-  --across-22: "Trigonometry function";
-  --across-24: "Property that applies graphical effects";
-  --across-25: "Warm color or a juicy fruit";
-  --across-28: "Useful to avoid floating crashes";
-  --across-29: "The insertion indicator in an input";
-  --across-31: "clip and scroll are values for this property";
-  --across-32: "Greenish-blueish color";
-  --across-33: "Now you see me...";
-  --across-34: "Shorthand including column-count";
-  --across-35: "This bold property goes with font";
-  --across-37: "A property or function useful for 3D";
-  --across-40: "Defines if an element creates a new stacking context";
-  --across-43: "Justify-..., align-...";
-  --across-45: "Unit for a fraction of the available free space";
-  --across-47: "An ocean-family color";
-  --across-49: "A pseudo-element that is not ::after";
-  --across-51: "With this property, you can scale, skew...";
-  --across-53: "Greenish-blueish color";
-  --across-54: "Function that ceils or floors a number";
-  --across-55: "Fading property";
-  --across-59: "Color or licquor";
-  --across-62: "Sets if an element is a block or an inline box";
-  --across-63: "Function that returns the smallest value";
-  --across-65: "Math constant equal to 3.14...";
-  --across-66: "A shade of gray, or a hat";
-  --across-67: "Color function introduced in 2020";
-  --across-70: "Space outside the box";
-  --across-72: "White";
-  --across-73: "Feature to write rules inside other rules";
-  --across-75: "Unit for angles";
-  --across-76: "Negates the inner selection";
-  --across-77: "...and now you don't";
-  --across-78: "Function to bring remote (or local) assets";
-  --across-80: "A light color to stop and smell";
-  --across-81: "A sweet color name";
-  --across-82: "CSS unit or programming language";
-
-  --down-1: "(ARIA) Role for a symbol formatted to appear above the normal text";
-  --down-2: "Rel value to indicate an alternative version of the page";
-  --down-3: "Event triggered when media stops or ends playing";
-  --down-5: "Without this there's no before or after";
-  --down-7: "Position";
-  --down-8: "Keyword used in animations for the end state";
-  --down-9: "One of an element's main dimension";
-  --down-12: "It can be an arrow or a pointer";
-  --down-13: "Function and property to flip elements";
-  --down-14: "Defines the foreground value for text and decoration";
-  --down-15: "Unit for angles";
-  --down-17: "A list style (only value with a dash in this puzzle)";
-  --down-18: "A light color named after a president's daughter";
-  --down-21: "Pseudo-class when a field is not valid";
-  --down-23: "A unit equivalent to 2.54cm";
-  --down-26: "Keyword to determine position in gradients";
-  --down-27: "A filter that makes everything gray";
-  --down-30: "A display and the name of an HTML tag";
-  --down-32: "A light purple color";
-  --down-34: "A deprecated cropping property";
-  --down-36: "A border style";
-  --down-38: "The most famous CSS unit";
-  --down-39: "Property that sets the text trend";
-  --down-41: "A value of 39 down";
-  --down-42: "Logical operator for media queries";
-  --down-44: "Property or technology (without the box)";
-  --down-45: "Don't use it for layouts";
-  --down-46: "Pseudo targetting an element occupying all the screen";
-  --down-48: "Root unit";
-  --down-50: "It can be open or close";
-  --down-52: "A really bright pink";
-  --down-56: "Property or modifier for box-shadows";
-  --down-57: "A bright color";
-  --down-58: "A border property (only bottom-to-top value in the puzzle)";
-  --down-60: "Property specifying how words should be hyphenated";
-  --down-61: "Pseudo-class applied to the element indicated in the hash";
-  --down-64: "Property that can be sticky at times...";
-  --down-67: "Pseudo-class to indicate a dialog is in a particular state";
-  --down-68: "The opposite of right";
-  --down-69: "This keyword resets a property";
-  --down-71: "Function to read tag attributes";
-  --down-72: "System color applied to text inputs";
-  --down-74: "A really light and cool color";
-  --down-75: "A bright and warm color";
-  --down-79: "Unit that represents the line height";
+  --across-1:   "(exp. attr.) Sets the value of the referenceTarget property of a ShadowRoot";
+  --across-10:  "Specifies a regular expression a value should match";
+  --across-12:  "Global attribute that provides a hit for a keyboard shortcut";
+  --across-14:  "Value to disable input prefill and autocomplete";
+  --across-16:  "This attribute indicates if details are expanded";
+  --across-17:  "An input type";
+  --across-18:  "This meta element sets the color of the interface surrounding the webpage";
+  --across-20:  "Anagram of a web direction input type";
+  --across-21:  "Semantic element to define contact information";
+  --across-22:  "Rel value indicating operations should block until a DOM node has been parsed";
+  --across-25:  "A list item element tag";
+  --across-26:  "A layout or an element to show tabular data";
+  --across-27:  "This tag creates adds a new line";
+  --across-28:  "Catalan language code";
+  --across-29:  "This attribute makes the element non-interactive and inaccessible";
+  --across-32:  "Image attribute to specify a dimension";
+  --across-34:  "(dep. tag) Used to contain frame elements";
+  --across-37:  "Tag that contains the description in a description list";
+  --across-38:  "Part of the table that contains the header";
+  --across-40:  "Represents small annotations usually used for showing the pronunciation of East Asian characters";
+  --across-41:  "Tag used to mark up te title of a creative work";
+  --across-42:  "(exp.) Wrapping value for textareas";
+  --across-44:  "The rel to a link to the authors site";
+  --across-45:  "(left-to-right) ARIA role equivalent to the more semantic td";
+  --across-46:  "Tag used to specify media resources in media elements";
+  --across-47:  "(exp.) HTML element which is a type of iframe with native privacy features";
+  --across-48:  "Tag that contains the ruby text component of a ruby annotation";
+  --across-49:  "An ordered list element";
+  --across-50:  "Element for self-contained content with an optional caption";
+  --across-51:  "Tag to add pictures and photos to the web";
+  --across-53:  "The value to wait for other content before loading";
+  --across-56:  "(dep.) Element used to delimit the base text component of a ruby annotation";
+  --across-57:  "(left-to-right) A table cell";
+  --across-58:  "The 'accordion component' in HTML";
+  --across-59:  "A form's method";
+  --across-61:  "(dep.) event attribute fired when a menu element is shown";
+  --across-62:  "Tag to identify computer code";
+  --across-63:  "This meta attribute can be used to refresh the page automatically";
+  --across-65:  "(dep.) HTML4 feature to display independent documents in a single page";
+  --across-67:  "(exp.) Attribute to define the color model";
+  --across-69:  "Lang value used when content is in Arabic";
+  --across-71:  "Child of colgroup used to define a column group";
+  --across-72:  "The legend describing a figure element";
+  --across-75:  "With aria- it defines the hierarchy of the element in the structure";
+  --across-77:  "Tag that contains the term in a description list";
+  --across-78:  "Tag to add a movie or clip to a webpage";
+  --across-79:  "Attribute to define the increment in a numeric input";
+  --across-81:  "ARIA role for range input widgets in which users can interact";
+  --across-82:  "Element that identifies a term to be defined";
+  --across-83:  "ARIA role for a widget that allows to select items from an organized collection.";
+  --across-84:  "Tag that represents content that was added";
+  --across-85:  "<header> has identifical meaning to this landmark";
+  --across-86:  "(exp.) Attribute to specify that a standard element will behave like a custom element";
+  --across-87:  "In a rel attribute, it indicates that the linked resource follows the current page";
+  --across-89:  "How Romanian developers may identify their pages in the html tag";
+  --across-90:  "Table cell, and one of 2-3 duplicated values because the puzzle creator is a dodo";
+  --across-91:  "(dep.) A possible media alignent or direction in a marquee";
+  --across-93:  "An input that accepts phone numbers";
+  --across-96:  "Tag that defines an image with multiple clickable areas";
+  --across-97:  "The declaration all HTML documents must start with";
+  --across-98:  "(left-to-right) Attribute that defines the dimensions of an input control";
+  --across-99:  "Element that opens/closes some details";
+  --across-103: "Event attribute triggered when metadatais received for a media resource";
+  
+  --down-1:   "Role for a symbol formatted to appear above the normal text";
+  --down-2:   "Rel value to indicate an alternative version of the page";
+  --down-3:   "Event attribute triggered when media stops or ends playing";
+  --down-4:   "Event attribute triggered when the element receives focus";
+  --down-5:   "This meta tag controls de HTTP Referer header of requests sent from the document";
+  --down-6:   "Form attribute that specifies how the browser should encode the data";
+  --down-7:   "(dep.) Attribute in script to register event listeners";
+  --down-8:   "Script attribute that specifies how/when the code should be processed";
+  --down-9:   "Meta tag specific for Google's crawlers and robots";
+  --down-11:  "Rel value to enhance security by preventing access to window.opener";
+  --down-13:  "Attribute that specifies if element should have spelling or grammar checks";
+  --down-15:  "Button attribute that specifies how browsers should encode linked form data";
+  --down-19:  "The lang value for this page ;)";
+  --down-23:  "A tag that provides flexibility when using image resources";
+  --down-24:  "One of the (optional) sections in a table";
+  --down-26:  "Rel value that links to a label that applies to the current document.";
+  --down-28:  "Like 41 across, but instead of a tag, an attribute for blockquote or q";
+  --down-30:  "Input attribute that prevents writing mode";
+  --down-31:  "Element to emphasize some text";
+  --down-33:  "Element with a collection of headings and subheadings";
+  --down-35:  "Attribute to automatically place keyboard focus in the element on load";
+  --down-36:  "(dep.) Attribute to provide the format of a meta value";
+  --down-39:  "Attribute to specify the language of the linked resource";
+  --down-41:  "An input type";
+  --down-43:  "An input type or a 'recenty added' tag";
+  --down-45:  "A required element in every fieldset";
+  --down-46:  "Element that contains CSS";
+  --down-49:  "An ordered list or the Lao language in reverse";
+  --down-50:  "Image property that specifies the priority to get that image relative to others";
+  --down-52:  "If a select has this attribute, you can pick more than one element";
+  --down-54:  "(exp.) Element to request user location data";
+  --down-55:  "(dep.) A classic moving element";
+  --down-58:  "Tag that links content with a machine readable translation";
+  --down-60:  "This HTML element holds HTML fragments that can be reused and generated";
+  --down-64:  "Tag that renders content exactly as it's written in the source code";
+  --down-66:  "A type of shape in an area element";
+  --down-68:  "Element used to draw grahics and animations via scripting";
+  --down-70:  "Tag that represents a key from the keyboard";
+  --down-73:  "Global attribute that provides the element with an unique name";
+  --down-74:  "Meta content to instruct search engines not to display a text snippet or video preview";
+  --down-75:  "Every input in a form should have one of this, preferably as a linked tag";
+  --down-76:  "(dep.) Image attribute that provided a longer more descriptive alternative text and description";
+  --down-77:  "(exp.) Input element that contains a set of <option> elements to choose form";
+  --down-79:  "A link target (without the _)";
+  --down-80:  "The image displayed while the video data is loaded";
+  --down-81:  "Attribute that allows inline CSS in an element";
+  --down-85:  "(dep.) CSS position and a value for the deprecated align attribute";
+  --down-88:  "Input type";
+  --down-92:  "Input type and tag with the property datetime (which is another input type)";
+  --down-94:  "Restrictive value for many attributes: role, inputmode, autocapitalize...";
+  --down-95:  "Element used to provide information about the document itself";
+  --down-100: "Yiddish language code";
+  --down-101: "Shorter restrictive value that becomes positive if read backwards";
+  --down-102: "(bottom-to-top) Required attribute when rel='preload' has been set on a link";
 }
 </style>
+
+<!--
+data-n: the clue number, if any
+data-o: the orientation of the clue, if any (a for across, d for down, b for both)
+data-a: the position of the letter across (if any, taking into account previous words)
+data-d: the position of the letter down (if any, taking into account previous words)
+
+If data-a is indicated, the letter is part of an across word; if data-d is indicated,
+the letter is part of a down word. If both are indicated, the letter is part of both 
+an across and a down word. If the value of data-a is "", the letter is not part of any 
+across word; if the value of data-d is "", the letter is not part of any down word.
+
+The HTML code below represents the crosswords tiles (label+input is a word, span is a 
+blank). The commented number in the HTML code indicates the beginning of each line in 
+the crossword.
+
+Puzzle schema and solution line by line (it's a 25x30 grid):
+  
+"SHADOWROOTREFERENCETARGET"
+"U L N   N E  N V    S O  "
+"PATTERN F F ACCESSKEY OFF"
+"E E N O OPEN T N P  N G O"
+"R RADIO C R  Y THEMECOLOR"
+"S N E P ULR  P   L N  E M"
+"C ADDRESS EXPECT LI TABLE"
+"R T   N  BR I  B C CA O N"
+"INERT E E   C  O HEIGHT C"
+"P  E FRAMESET DD C T G  T"
+"THEAD  U  C U  Y K E RUBY"
+" R D CITE HARD  S    O  P"
+"ME O H O  E E LLEC SOURCE"
+" FENCEDFRAME  E A RT P   "
+"OL L C O  E FIGURE Y  IMG"
+"LAZY K C G  E E C  L M U "
+" N  RB U E DT N H DETAILS"
+" GET ONSHOW CODE  A  R T "
+"   E X   L  H   HTTPEQUIV"
+"FRAME COLORSPACE  AR U P "
+" E P     C  R A K  E E L "
+" COL FIGCAPTION B N LEVEL"
+"DT A  D  T  O VIDEO A   O"
+"A STEP SLIDER A   S B DFN"
+"TREE O T O  INS BANNER  G"
+"A L IS Y NEXT  RO I L  TD"
+"LEFT TEL  M Y N T P  M  E"
+"I  I E E MAP DOCTYPE EZIS"
+"SUMMARY N I S N O E  T  C"
+"T  E  I ONLOADEDMETADATA "
+-->
+
+
 <article id="crossword">
-  <div id="hoverhint" class="hoverhint" role="alert"></div>
-  <!--
-  data-n: the clue number, if any
-  data-o: the orientation of the clue, if any (a for across, d for down, b for both)
-  data-a: the position of the letter across (if any, taking into account previous words)
-  data-d: the position of the letter down (if any, taking into account previous words)
-
-  If data-a is indicated, the letter is part of an across word; if data-d is indicated,
-  the letter is part of a down word. If both are indicated, the letter is part of both 
-  an across and a down word. If the value of data-a is "", the letter is not part of any 
-  across word; if the value of data-d is "", the letter is not part of any down word.
-
-  The HTML code below represents the crosswords tiles (label+input is a word, span is a 
-  blank). The commented number in the HTML code indicates the beginning of each line in 
-  the crossword.
-
-  Puzzle schema and solution line by line (it's a 25x30 grid):
-    
-  "SHADOWROOTREFERENCETARGET"
-  "U L N   N E  N V    S O  "
-  "PATTERN F F ACCESSKEY OFF"
-  "E E N O OPEN T N P  N G O"
-  "R RADIO C R  Y THEMECOLOR"
-  "S N E P ULR  P   L N  E M"
-  "C ADDRESS EXPECT LI TABLE"
-  "R T   N  BR I  B C CA O N"
-  "INERT E E   C  O HEIGHT C"
-  "P  E FRAMESET DD C T G  T"
-  "THEAD  U  C U  Y K E RUBY"
-  " R D CITE HARD  S    O  P"
-  "ME O H O  E E LLEC SOURCE"
-  " FENCEDFRAME  E A RT P   "
-  "OL L C O  E FIGURE Y  IMG"
-  "LAZY K C G  E E C  L M U "
-  " N  RB U E DT N H DETAILS"
-  " GET ONSHOW CODE  A  R T "
-  "   E X   L  H   HTTPEQUIV"
-  "FRAME COLORSPACE  AR U P "
-  " E P     C  R A K  E E L "
-  " COL FIGCAPTION B N LEVEL"
-  "DT A  D  T  O VIDEO A   O"
-  "A STEP SLIDER A   S B DFN"
-  "TREE O T O  INS BANNER  G"
-  "A L IS Y NEXT  RO I L  TD"
-  "LEFT TEL  M Y N T P  M  E"
-  "I  I E E MAP DOCTYPE EZIS"
-  "SUMMARY N I S N O E  T  C"
-  "T  E  I ONLOADEDMETADATA "
-  -->
-  <!-- 1 -->
-  <label data-n="1" data-o="b" data-a="1" data-d="1">
-    <input pattern="[sS]" maxlength="1" required>
-    <span>Across 1, letter 1. Down 1, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="2" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span>Across 1, letter 2.</span>
-  </label>
-  <label data-n="2" data-o="d" data-a="3" data-d="12">
-    <input pattern="[aA]" maxlength="1" required>
-    <span>Across 1, letter 3. Down 2, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="4" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span>Across 1, letter 4.</span>
-  </label>
-  <label data-n="3" data-o="d" data-a="5" data-d="21">
-    <input pattern="[oO]" maxlength="1" required>
-    <span>Across 1, letter 5. Down 3, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="6" data-d="">
-    <input pattern="[wW]" maxlength="1" required>
-    <span>Across 1, letter 6.</span>
-  </label>
-  <label data-n="" data-o="" data-a="7" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span>Across 1, letter 7.</span>
-  </label>
-  <label data-n="" data-o="" data-a="8" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span>Across 1, letter 8.</span>
-  </label>
-  <label data-n="4" data-o="d" data-a="9" data-d="28">
-    <input pattern="[oO]" maxlength="1" required>
-    <span>Across 1, letter 9. Down 4, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="10" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span>Across 1, letter 10.</span>
-  </label>
-  <label data-n="5" data-o="d" data-a="11" data-d="35">
-    <input pattern="[rR]" maxlength="1" required>
-    <span>Across 1, letter 11. Down 5, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="12" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span>Across 1, letter 12.</span>
-  </label>
-  <label data-n="" data-o="" data-a="13" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span>Across 1, letter 13.</span>
-  </label>
-  <label data-n="6" data-o="d" data-a="14" data-d="43">
-    <input pattern="[eE]" maxlength="1" required>
-    <span>Across 1, letter 14. Down 6, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="15" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span>Across 1, letter 15.</span>
-  </label>
-  <label data-n="7" data-o="d" data-a="16" data-d="50">
-    <input pattern="[eE]" maxlength="1" required>
-    <span>Across 1, letter 16. Down 7, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="17" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span>Across 1, letter 17.</span>
-  </label>
-  <label data-n="" data-o="" data-a="18" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span>Across 1, letter 18.</span>
-  </label>
-  <label data-n="" data-o="" data-a="19" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span>Across 1, letter 19.</span>
-  </label>
-  <label data-n="" data-o="" data-a="20" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span>Across 1, letter 20.</span>
-  </label>
-  <label data-n="8" data-o="d" data-a="21" data-d="55">
-    <input pattern="[aA]" maxlength="1" required>
-    <span>Across 1, letter 21. Down 8, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="22" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span>Across 1, letter 22.</span>
-  </label>
-  <label data-n="9" data-o="d" data-a="23" data-d="60">
-    <input pattern="[gG]" maxlength="1" required>
-    <span>Across 1, letter 23. Down 9, letter 1.</span>
-  </label>
-  <label data-n="" data-o="" data-a="24" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span>Across 1, letter 24.</span>
-  </label>
-  <label data-n="" data-o="" data-a="25" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span>Across 1, letter 25.</span>
-  </label>
-  <!-- 2 -->
-  <label data-n="" data-o="" data-a="" data-d="2">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="13">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="22">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="29">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="36">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="44">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="51">
-    <input pattern="[vV]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="56">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="61">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <!-- 3 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[kK]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 4 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 5 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 6 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 7 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[xX]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[bB]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 8 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[bB]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[bB]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 9 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 10 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 11 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[kK]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[bB]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 12 -->
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 13 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 14 -->
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <!-- 15 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 16 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[zZ]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[kK]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <!-- 17 -->
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[bB]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 18 -->
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[wW]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <!-- 19 -->
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[xX]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[hH]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[qQ]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[vV]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 20 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <!-- 21 -->
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[kK]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <!-- 22 -->
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[bB]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[vV]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 23 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[vV]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 24 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[bB]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 25 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[bB]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[gG]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 26 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[xX]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 27 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[fF]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 28 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[pP]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[zZ]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 29 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[uU]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[rR]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[yY]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[sS]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[cC]" maxlength="1" required>
-    <span></span>
-  </label>
-  <!-- 30 -->
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[iI]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[nN]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[lL]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[oO]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[mM]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[eE]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[dD]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[tT]" maxlength="1" required>
-    <span></span>
-  </label>
-  <label data-n="" data-o="" data-a="" data-d="">
-    <input pattern="[aA]" maxlength="1" required>
-    <span></span>
-  </label>
-  <span></span>
+<label data-n="1" data-o="b" data-a="1" data-d="1">
+  <input pattern="[sS]" maxlength="1" required data-first-across data-first-down>
+  <span>Across 1, letter 1. Down 1, letter 1.</span>
+</label>
+<label data-a="2">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Across 1, letter 2. </span>
+</label>
+<label data-a="3" data-o="d" data-n="2" data-d="12">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 1, letter 3. Down 2, letter 1.</span>
+</label>
+<label data-a="4">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 1, letter 4. </span>
+</label>
+<label data-a="5" data-o="d" data-n="3" data-d="21">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 1, letter 5. Down 3, letter 1.</span>
+</label>
+<label data-a="6">
+  <input pattern="[wW]" maxlength="1" required>
+  <span>Across 1, letter 6. </span>
+</label>
+<label data-a="7">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 1, letter 7. </span>
+</label>
+<label data-a="8">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 1, letter 8. </span>
+</label>
+<label data-a="9" data-o="d" data-n="4" data-d="28">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 1, letter 9. Down 4, letter 1.</span>
+</label>
+<label data-a="10">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 1, letter 10. </span>
+</label>
+<label data-a="11" data-o="d" data-n="5" data-d="35">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 1, letter 11. Down 5, letter 1.</span>
+</label>
+<label data-a="12">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 1, letter 12. </span>
+</label>
+<label data-a="13">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 1, letter 13. </span>
+</label>
+<label data-a="14" data-o="d" data-n="6" data-d="43">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 1, letter 14. Down 6, letter 1.</span>
+</label>
+<label data-a="15">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 1, letter 15. </span>
+</label>
+<label data-a="16" data-o="d" data-n="7" data-d="50">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 1, letter 16. Down 7, letter 1.</span>
+</label>
+<label data-a="17">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 1, letter 17. </span>
+</label>
+<label data-a="18">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 1, letter 18. </span>
+</label>
+<label data-a="19">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 1, letter 19. </span>
+</label>
+<label data-a="20">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 1, letter 20. </span>
+</label>
+<label data-a="21" data-o="d" data-n="8" data-d="55">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 1, letter 21. Down 8, letter 1.</span>
+</label>
+<label data-a="22">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 1, letter 22. </span>
+</label>
+<label data-a="23" data-o="d" data-n="9" data-d="60">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Across 1, letter 23. Down 9, letter 1.</span>
+</label>
+<label data-a="24">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 1, letter 24. </span>
+</label>
+<label data-a="25">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 1, letter 25. </span>
+</label>
+<label data-d="2">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Down 1, letter 2.</span>
+</label>
+<span></span>
+<label data-d="13">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Down 2, letter 2.</span>
+</label>
+<span></span>
+<label data-d="22">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 3, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="29">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 4, letter 2.</span>
+</label>
+<span></span>
+<label data-d="36">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 5, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="44">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 6, letter 2.</span>
+</label>
+<span></span>
+<label data-d="51">
+  <input pattern="[vV]" maxlength="1" required>
+  <span>Down 7, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="56">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Down 8, letter 2.</span>
+</label>
+<span></span>
+<label data-d="61">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 9, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-n="10" data-o="a" data-a="26" data-d="3">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 10, letter 1. Down 1, letter 3.</span>
+</label>
+<label data-a="27">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 10, letter 2. </span>
+</label>
+<label data-a="28" data-d="14">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 10, letter 3. Down 2, letter 3.</span>
+</label>
+<label data-a="29">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 10, letter 4. </span>
+</label>
+<label data-a="30" data-d="23">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 10, letter 5. Down 3, letter 3.</span>
+</label>
+<label data-a="31">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 10, letter 6. </span>
+</label>
+<label data-a="32" data-o="d" data-n="11" data-d="69">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 10, letter 7. Down 11, letter 1.</span>
+</label>
+<span></span>
+<label data-d="30">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Down 4, letter 3.</span>
+</label>
+<span></span>
+<label data-d="37">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Down 5, letter 3.</span>
+</label>
+<span></span>
+<label data-n="12" data-o="a" data-a="33">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 12, letter 1. </span>
+</label>
+<label data-a="34" data-d="45">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 12, letter 2. Down 6, letter 3.</span>
+</label>
+<label data-a="35">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 12, letter 3. </span>
+</label>
+<label data-a="36" data-d="52">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 12, letter 4. Down 7, letter 3.</span>
+</label>
+<label data-a="37">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 12, letter 5. </span>
+</label>
+<label data-a="38" data-o="d" data-n="13" data-d="77">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 12, letter 6. Down 13, letter 1.</span>
+</label>
+<label data-a="39">
+  <input pattern="[kK]" maxlength="1" required>
+  <span>Across 12, letter 7. </span>
+</label>
+<label data-a="40">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 12, letter 8. </span>
+</label>
+<label data-a="41" data-d="57">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Across 12, letter 9. Down 8, letter 3.</span>
+</label>
+<span></span>
+<label data-n="14" data-o="a" data-a="42" data-d="62">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 14, letter 1. Down 9, letter 3.</span>
+</label>
+<label data-a="43">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 14, letter 2. </span>
+</label>
+<label data-a="44" data-o="d" data-n="15" data-d="86">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 14, letter 3. Down 15, letter 1.</span>
+</label>
+<label data-d="4">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 1, letter 4.</span>
+</label>
+<span></span>
+<label data-d="15">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 2, letter 4.</span>
+</label>
+<span></span>
+<label data-d="24">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 3, letter 4.</span>
+</label>
+<span></span>
+<label data-d="70">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 11, letter 2.</span>
+</label>
+<span></span>
+<label data-n="16" data-o="a" data-a="45" data-d="31">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 16, letter 1. Down 4, letter 4.</span>
+</label>
+<label data-a="46">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 16, letter 2. </span>
+</label>
+<label data-a="47" data-d="38">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 16, letter 3. Down 5, letter 4.</span>
+</label>
+<label data-a="48">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 16, letter 4. </span>
+</label>
+<span></span>
+<label data-d="46">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 6, letter 4.</span>
+</label>
+<span></span>
+<label data-d="53">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 7, letter 4.</span>
+</label>
+<span></span>
+<label data-d="78">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 13, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="58">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 8, letter 4.</span>
+</label>
+<span></span>
+<label data-d="63">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Down 9, letter 4.</span>
+</label>
+<span></span>
+<label data-d="87">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 15, letter 2.</span>
+</label>
+<label data-d="5">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Down 1, letter 5.</span>
+</label>
+<span></span>
+<label data-n="17" data-o="a" data-a="49" data-d="16">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 17, letter 1. Down 2, letter 5.</span>
+</label>
+<label data-a="50">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 17, letter 2. </span>
+</label>
+<label data-a="51" data-d="25">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 17, letter 3. Down 3, letter 5.</span>
+</label>
+<label data-a="52">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 17, letter 4. </span>
+</label>
+<label data-a="53" data-d="71">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 17, letter 5. Down 11, letter 3.</span>
+</label>
+<span></span>
+<label data-d="32">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 4, letter 5.</span>
+</label>
+<span></span>
+<label data-d="39">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Down 5, letter 5.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="47">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Down 6, letter 5.</span>
+</label>
+<span></span>
+<label data-n="18" data-o="a" data-a="54" data-d="54">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 18, letter 1. Down 7, letter 5.</span>
+</label>
+<label data-a="55">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Across 18, letter 2. </span>
+</label>
+<label data-a="56" data-d="79">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 18, letter 3. Down 13, letter 3.</span>
+</label>
+<label data-a="57">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 18, letter 4. </span>
+</label>
+<label data-a="58" data-o="d" data-n="19" data-d="97">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 18, letter 5. Down 19, letter 1.</span>
+</label>
+<label data-a="59" data-d="59">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 18, letter 6. Down 8, letter 5.</span>
+</label>
+<label data-a="60">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 18, letter 7. </span>
+</label>
+<label data-a="61" data-d="64">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 18, letter 8. Down 9, letter 5.</span>
+</label>
+<label data-a="62">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 18, letter 9. </span>
+</label>
+<label data-a="63" data-d="88">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 18, letter 10. Down 15, letter 3.</span>
+</label>
+<label data-d="6">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Down 1, letter 6.</span>
+</label>
+<span></span>
+<label data-d="17">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 2, letter 6.</span>
+</label>
+<span></span>
+<label data-d="26">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 3, letter 6.</span>
+</label>
+<span></span>
+<label data-d="72">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 11, letter 4.</span>
+</label>
+<span></span>
+<label data-n="20" data-o="a" data-a="64" data-d="33">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Across 20, letter 1. Down 4, letter 6.</span>
+</label>
+<label data-a="65">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 20, letter 2. </span>
+</label>
+<label data-a="66" data-d="40">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 20, letter 3. Down 5, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="48">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 6, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="80">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Down 13, letter 4.</span>
+</label>
+<span></span>
+<label data-d="98">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 19, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="65">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 9, letter 6.</span>
+</label>
+<span></span>
+<label data-d="89">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Down 15, letter 4.</span>
+</label>
+<label data-d="7">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 1, letter 7.</span>
+</label>
+<span></span>
+<label data-n="21" data-o="a" data-a="67" data-d="18">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 21, letter 1. Down 2, letter 7.</span>
+</label>
+<label data-a="68">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 21, letter 2. </span>
+</label>
+<label data-a="69" data-d="27">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 21, letter 3. Down 3, letter 7.</span>
+</label>
+<label data-a="70">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 21, letter 4. </span>
+</label>
+<label data-a="71" data-d="73">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 21, letter 5. Down 11, letter 5.</span>
+</label>
+<label data-a="72">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 21, letter 6. </span>
+</label>
+<label data-a="73" data-d="34">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 21, letter 7. Down 4, letter 7.</span>
+</label>
+<span></span>
+<label data-n="22" data-o="a" data-a="74" data-d="41">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 22, letter 1. Down 5, letter 7.</span>
+</label>
+<label data-a="75">
+  <input pattern="[xX]" maxlength="1" required>
+  <span>Across 22, letter 2. </span>
+</label>
+<label data-a="76" data-o="d" data-n="23" data-d="99">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 22, letter 3. Down 23, letter 1.</span>
+</label>
+<label data-a="77" data-d="49">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 22, letter 4. Down 6, letter 7.</span>
+</label>
+<label data-a="78">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 22, letter 5. </span>
+</label>
+<label data-a="79" data-o="d" data-n="24" data-d="106">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 22, letter 6. Down 24, letter 1.</span>
+</label>
+<span></span>
+<label data-n="25" data-o="a" data-a="80" data-d="81">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 25, letter 1. Down 13, letter 5.</span>
+</label>
+<label data-a="81">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 25, letter 2. </span>
+</label>
+<span></span>
+<label data-n="26" data-o="b" data-a="82" data-d="111">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 26, letter 1. Down 26, letter 1.</span>
+</label>
+<label data-a="83">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 26, letter 2. </span>
+</label>
+<label data-a="84" data-d="66">
+  <input pattern="[bB]" maxlength="1" required>
+  <span>Across 26, letter 3. Down 9, letter 7.</span>
+</label>
+<label data-a="85">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 26, letter 4. </span>
+</label>
+<label data-a="86" data-d="90">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 26, letter 5. Down 15, letter 5.</span>
+</label>
+<label data-d="8">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Down 1, letter 8.</span>
+</label>
+<span></span>
+<label data-d="19">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 2, letter 8.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="74">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 11, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<label data-n="27" data-o="a" data-a="87">
+  <input pattern="[bB]" maxlength="1" required>
+  <span>Across 27, letter 1. </span>
+</label>
+<label data-a="88" data-d="42">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 27, letter 2. Down 5, letter 8.</span>
+</label>
+<span></span>
+<label data-d="100">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Down 23, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="107">
+  <input pattern="[bB]" maxlength="1" required>
+  <span>Down 24, letter 2.</span>
+</label>
+<span></span>
+<label data-d="82">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 13, letter 6.</span>
+</label>
+<span></span>
+<label data-n="28" data-o="b" data-a="89" data-d="114">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 28, letter 1. Down 28, letter 1.</span>
+</label>
+<label data-a="90" data-d="112">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 28, letter 2. Down 26, letter 2.</span>
+</label>
+<span></span>
+<label data-d="67">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 9, letter 8.</span>
+</label>
+<span></span>
+<label data-d="91">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 15, letter 6.</span>
+</label>
+<label data-n="29" data-o="a" data-a="91" data-d="9">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 29, letter 1. Down 1, letter 9.</span>
+</label>
+<label data-a="92">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 29, letter 2. </span>
+</label>
+<label data-a="93" data-d="20">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 29, letter 3. Down 2, letter 9.</span>
+</label>
+<label data-a="94" data-o="d" data-n="30" data-d="118">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 29, letter 4. Down 30, letter 1.</span>
+</label>
+<label data-a="95">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 29, letter 5. </span>
+</label>
+<span></span>
+<label data-d="75">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 11, letter 7.</span>
+</label>
+<span></span>
+<label data-o="d" data-n="31" data-d="126">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 31, letter 1.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="101">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 23, letter 3.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="108">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 24, letter 3.</span>
+</label>
+<span></span>
+<label data-n="32" data-o="a" data-a="96" data-d="83">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Across 32, letter 1. Down 13, letter 7.</span>
+</label>
+<label data-a="97">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 32, letter 2. </span>
+</label>
+<label data-a="98" data-d="115">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 32, letter 3. Down 28, letter 2.</span>
+</label>
+<label data-a="99" data-d="113">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Across 32, letter 4. Down 26, letter 3.</span>
+</label>
+<label data-a="100" data-o="d" data-n="33" data-d="128">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Across 32, letter 5. Down 33, letter 1.</span>
+</label>
+<label data-a="101" data-d="68">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 32, letter 6. Down 9, letter 9.</span>
+</label>
+<span></span>
+<label data-d="92">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 15, letter 7.</span>
+</label>
+<label data-d="10">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 1, letter 10.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="119">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 30, letter 2.</span>
+</label>
+<span></span>
+<label data-n="34" data-o="a" data-a="102">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 34, letter 1. </span>
+</label>
+<label data-a="103" data-d="76">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 34, letter 2. Down 11, letter 8.</span>
+</label>
+<label data-a="104" data-o="d" data-n="35" data-d="134">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 34, letter 3. Down 35, letter 1.</span>
+</label>
+<label data-a="105" data-d="127">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 34, letter 4. Down 31, letter 2.</span>
+</label>
+<label data-a="106">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 34, letter 5. </span>
+</label>
+<label data-a="107" data-o="d" data-n="36" data-d="143">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 34, letter 6. Down 36, letter 1.</span>
+</label>
+<label data-a="108">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 34, letter 7. </span>
+</label>
+<label data-a="109" data-d="102">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 34, letter 8. Down 23, letter 4.</span>
+</label>
+<span></span>
+<label data-n="37" data-o="a" data-a="110">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 37, letter 1. </span>
+</label>
+<label data-a="111" data-d="109">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 37, letter 2. Down 24, letter 4.</span>
+</label>
+<span></span>
+<label data-d="84">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 13, letter 8.</span>
+</label>
+<span></span>
+<label data-d="116">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 28, letter 3.</span>
+</label>
+<span></span>
+<label data-d="129">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Down 33, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="93">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 15, letter 8.</span>
+</label>
+<label data-n="38" data-o="a" data-a="112" data-d="11">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 38, letter 1. Down 1, letter 11.</span>
+</label>
+<label data-a="113" data-o="d" data-n="39" data-d="149">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Across 38, letter 2. Down 39, letter 1.</span>
+</label>
+<label data-a="114">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 38, letter 3. </span>
+</label>
+<label data-a="115" data-d="120">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 38, letter 4. Down 30, letter 3.</span>
+</label>
+<label data-a="116">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 38, letter 5. </span>
+</label>
+<span></span>
+<span></span>
+<label data-d="135">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Down 35, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="144">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 36, letter 2.</span>
+</label>
+<span></span>
+<label data-d="103">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Down 23, letter 5.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="110">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Down 24, letter 5.</span>
+</label>
+<span></span>
+<label data-d="85">
+  <input pattern="[kK]" maxlength="1" required>
+  <span>Down 13, letter 9.</span>
+</label>
+<span></span>
+<label data-d="117">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 28, letter 4.</span>
+</label>
+<span></span>
+<label data-n="40" data-o="a" data-a="117" data-d="130">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 40, letter 1. Down 33, letter 3.</span>
+</label>
+<label data-a="118">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Across 40, letter 2. </span>
+</label>
+<label data-a="119">
+  <input pattern="[bB]" maxlength="1" required>
+  <span>Across 40, letter 3. </span>
+</label>
+<label data-a="120" data-d="94">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Across 40, letter 4. Down 15, letter 9.</span>
+</label>
+<span></span>
+<label data-d="150">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Down 39, letter 2.</span>
+</label>
+<span></span>
+<label data-d="121">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Down 30, letter 4.</span>
+</label>
+<span></span>
+<label data-n="41" data-o="b" data-a="121" data-d="157">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 41, letter 1. Down 41, letter 1.</span>
+</label>
+<label data-a="122">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 41, letter 2. </span>
+</label>
+<label data-a="123" data-d="136">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 41, letter 3. Down 35, letter 3.</span>
+</label>
+<label data-a="124">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 41, letter 4. </span>
+</label>
+<span></span>
+<label data-n="42" data-o="a" data-a="125" data-d="145">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Across 42, letter 1. Down 36, letter 3.</span>
+</label>
+<label data-a="126">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 42, letter 2. </span>
+</label>
+<label data-a="127" data-d="104">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 42, letter 3. Down 23, letter 6.</span>
+</label>
+<label data-a="128">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 42, letter 4. </span>
+</label>
+<span></span>
+<span></span>
+<label data-o="d" data-n="43" data-d="165">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Down 43, letter 1.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="131">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 33, letter 4.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="95">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 15, letter 10.</span>
+</label>
+<label data-n="44" data-o="a" data-a="129">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 44, letter 1. </span>
+</label>
+<label data-a="130" data-d="151">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 44, letter 2. Down 39, letter 3.</span>
+</label>
+<span></span>
+<label data-d="122">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 30, letter 5.</span>
+</label>
+<span></span>
+<label data-d="158">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Down 41, letter 2.</span>
+</label>
+<span></span>
+<label data-d="137">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 35, letter 4.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="146">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 36, letter 4.</span>
+</label>
+<span></span>
+<label data-d="105">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 23, letter 7.</span>
+</label>
+<span></span>
+<label data-n="45" data-o="b" data-a="131" data-d="171">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 45, letter 1. Down 45, letter 1.</span>
+</label>
+<label data-a="132">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 45, letter 2. </span>
+</label>
+<label data-a="133" data-d="166">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 45, letter 3. Down 43, letter 2.</span>
+</label>
+<label data-a="134">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 45, letter 4. </span>
+</label>
+<span></span>
+<label data-n="46" data-o="b" data-a="135" data-d="177">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 46, letter 1. Down 46, letter 1.</span>
+</label>
+<label data-a="136">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 46, letter 2. </span>
+</label>
+<label data-a="137" data-d="132">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Across 46, letter 3. Down 33, letter 5.</span>
+</label>
+<label data-a="138">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 46, letter 4. </span>
+</label>
+<label data-a="139">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 46, letter 5. </span>
+</label>
+<label data-a="140" data-d="96">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 46, letter 6. Down 15, letter 11.</span>
+</label>
+<span></span>
+<label data-n="47" data-o="a" data-a="141" data-d="152">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 47, letter 1. Down 39, letter 4.</span>
+</label>
+<label data-a="142">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 47, letter 2. </span>
+</label>
+<label data-a="143" data-d="123">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 47, letter 3. Down 30, letter 6.</span>
+</label>
+<label data-a="144">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 47, letter 4. </span>
+</label>
+<label data-a="145" data-d="159">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 47, letter 5. Down 41, letter 3.</span>
+</label>
+<label data-a="146">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 47, letter 6. </span>
+</label>
+<label data-a="147" data-d="138">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 47, letter 7. Down 35, letter 5.</span>
+</label>
+<label data-a="148">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 47, letter 8. </span>
+</label>
+<label data-a="149">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 47, letter 9. </span>
+</label>
+<label data-a="150" data-d="147">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 47, letter 10. Down 36, letter 5.</span>
+</label>
+<label data-a="151">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 47, letter 11. </span>
+</label>
+<span></span>
+<span></span>
+<label data-d="172">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 45, letter 2.</span>
+</label>
+<span></span>
+<label data-d="167">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Down 43, letter 3.</span>
+</label>
+<span></span>
+<label data-n="48" data-o="a" data-a="152">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 48, letter 1. </span>
+</label>
+<label data-a="153" data-d="178">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 48, letter 2. Down 46, letter 2.</span>
+</label>
+<span></span>
+<label data-d="133">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 33, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-n="49" data-o="b" data-a="154" data-d="182">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 49, letter 1. Down 49, letter 1.</span>
+</label>
+<label data-a="155" data-d="153">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 49, letter 2. Down 39, letter 5.</span>
+</label>
+<span></span>
+<label data-d="124">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Down 30, letter 7.</span>
+</label>
+<span></span>
+<label data-d="160">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 41, letter 4.</span>
+</label>
+<span></span>
+<label data-d="139">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 35, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="148">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 36, letter 6.</span>
+</label>
+<span></span>
+<label data-n="50" data-o="b" data-a="156" data-d="184">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 50, letter 1. Down 50, letter 1.</span>
+</label>
+<label data-a="157">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 50, letter 2. </span>
+</label>
+<label data-a="158" data-d="173">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Across 50, letter 3. Down 45, letter 3.</span>
+</label>
+<label data-a="159">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Across 50, letter 4. </span>
+</label>
+<label data-a="160" data-d="168">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 50, letter 5. Down 43, letter 4.</span>
+</label>
+<label data-a="161">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 50, letter 6. </span>
+</label>
+<span></span>
+<label data-d="179">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Down 46, letter 3.</span>
+</label>
+<span></span>
+<span></span>
+<label data-n="51" data-o="a" data-a="162">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 51, letter 1. </span>
+</label>
+<label data-a="163" data-o="d" data-n="52" data-d="197">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 51, letter 2. Down 52, letter 1.</span>
+</label>
+<label data-a="164">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Across 51, letter 3. </span>
+</label>
+<label data-n="53" data-o="a" data-a="165" data-d="183">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 53, letter 1. Down 49, letter 2.</span>
+</label>
+<label data-a="166" data-d="154">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 53, letter 2. Down 39, letter 6.</span>
+</label>
+<label data-a="167">
+  <input pattern="[zZ]" maxlength="1" required>
+  <span>Across 53, letter 3. </span>
+</label>
+<label data-a="168" data-d="125">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Across 53, letter 4. Down 30, letter 8.</span>
+</label>
+<span></span>
+<label data-d="161">
+  <input pattern="[kK]" maxlength="1" required>
+  <span>Down 41, letter 5.</span>
+</label>
+<span></span>
+<label data-d="140">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 35, letter 7.</span>
+</label>
+<span></span>
+<label data-o="d" data-n="54" data-d="205">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Down 54, letter 1.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="185">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 50, letter 2.</span>
+</label>
+<span></span>
+<label data-d="174">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 45, letter 4.</span>
+</label>
+<span></span>
+<label data-d="169">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 43, letter 5.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="180">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Down 46, letter 4.</span>
+</label>
+<span></span>
+<label data-o="d" data-n="55" data-d="216">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Down 55, letter 1.</span>
+</label>
+<span></span>
+<label data-d="198">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Down 52, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="155">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 39, letter 7.</span>
+</label>
+<span></span>
+<span></span>
+<label data-n="56" data-o="a" data-a="169">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 56, letter 1. </span>
+</label>
+<label data-a="170" data-d="162">
+  <input pattern="[bB]" maxlength="1" required>
+  <span>Across 56, letter 2. Down 41, letter 6.</span>
+</label>
+<span></span>
+<label data-d="141">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Down 35, letter 8.</span>
+</label>
+<span></span>
+<label data-d="206">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 54, letter 2.</span>
+</label>
+<span></span>
+<label data-n="57" data-o="a" data-a="171">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 57, letter 1. </span>
+</label>
+<label data-a="172" data-d="186">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 57, letter 2. Down 50, letter 3.</span>
+</label>
+<span></span>
+<label data-d="175">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 45, letter 5.</span>
+</label>
+<span></span>
+<label data-d="170">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Down 43, letter 6.</span>
+</label>
+<span></span>
+<label data-n="58" data-o="b" data-a="173" data-d="223">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 58, letter 1. Down 58, letter 1.</span>
+</label>
+<label data-a="174" data-d="181">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 58, letter 2. Down 46, letter 5.</span>
+</label>
+<label data-a="175">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 58, letter 3. </span>
+</label>
+<label data-a="176" data-d="217">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 58, letter 4. Down 55, letter 2.</span>
+</label>
+<label data-a="177">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 58, letter 5. </span>
+</label>
+<label data-a="178" data-d="199">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 58, letter 6. Down 52, letter 3.</span>
+</label>
+<label data-a="179">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 58, letter 7. </span>
+</label>
+<span></span>
+<label data-n="59" data-o="a" data-a="180" data-d="156">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Across 59, letter 1. Down 39, letter 8.</span>
+</label>
+<label data-a="181">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 59, letter 2. </span>
+</label>
+<label data-a="182" data-o="d" data-n="60" data-d="227">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 59, letter 3. Down 60, letter 1.</span>
+</label>
+<span></span>
+<label data-n="61" data-o="a" data-a="183" data-d="163">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 61, letter 1. Down 41, letter 7.</span>
+</label>
+<label data-a="184">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 61, letter 2. </span>
+</label>
+<label data-a="185" data-d="142">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 61, letter 3. Down 35, letter 9.</span>
+</label>
+<label data-a="186">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Across 61, letter 4. </span>
+</label>
+<label data-a="187" data-d="207">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 61, letter 5. Down 54, letter 3.</span>
+</label>
+<label data-a="188">
+  <input pattern="[wW]" maxlength="1" required>
+  <span>Across 61, letter 6. </span>
+</label>
+<span></span>
+<label data-n="62" data-o="a" data-a="189" data-d="187">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 62, letter 1. Down 50, letter 4.</span>
+</label>
+<label data-a="190">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 62, letter 2. </span>
+</label>
+<label data-a="191" data-d="176">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 62, letter 3. Down 45, letter 6.</span>
+</label>
+<label data-a="192">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 62, letter 4. </span>
+</label>
+<span></span>
+<span></span>
+<label data-d="224">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Down 58, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="218">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Down 55, letter 3.</span>
+</label>
+<span></span>
+<label data-d="200">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 52, letter 4.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="228">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 60, letter 2.</span>
+</label>
+<span></span>
+<label data-d="164">
+  <input pattern="[xX]" maxlength="1" required>
+  <span>Down 41, letter 8.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="208">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Down 54, letter 4.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="188">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Down 50, letter 5.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-n="63" data-o="a" data-a="193">
+  <input pattern="[hH]" maxlength="1" required>
+  <span>Across 63, letter 1. </span>
+</label>
+<label data-a="194">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 63, letter 2. </span>
+</label>
+<label data-a="195" data-d="225">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 63, letter 3. Down 58, letter 3.</span>
+</label>
+<label data-a="196" data-o="d" data-n="64" data-d="235">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 63, letter 4. Down 64, letter 1.</span>
+</label>
+<label data-a="197">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 63, letter 5. </span>
+</label>
+<label data-a="198" data-d="219">
+  <input pattern="[qQ]" maxlength="1" required>
+  <span>Across 63, letter 6. Down 55, letter 4.</span>
+</label>
+<label data-a="199">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Across 63, letter 7. </span>
+</label>
+<label data-a="200" data-d="201">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 63, letter 8. Down 52, letter 5.</span>
+</label>
+<label data-a="201">
+  <input pattern="[vV]" maxlength="1" required>
+  <span>Across 63, letter 9. </span>
+</label>
+<label data-n="65" data-o="a" data-a="202">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 65, letter 1. </span>
+</label>
+<label data-a="203" data-o="d" data-n="66" data-d="238">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 65, letter 2. Down 66, letter 1.</span>
+</label>
+<label data-a="204">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 65, letter 3. </span>
+</label>
+<label data-a="205" data-d="229">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 65, letter 4. Down 60, letter 3.</span>
+</label>
+<label data-a="206">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 65, letter 5. </span>
+</label>
+<span></span>
+<label data-n="67" data-o="a" data-a="207">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 67, letter 1. </span>
+</label>
+<label data-a="208">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 67, letter 2. </span>
+</label>
+<label data-a="209">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 67, letter 3. </span>
+</label>
+<label data-a="210" data-d="209">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 67, letter 4. Down 54, letter 5.</span>
+</label>
+<label data-a="211">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 67, letter 5. </span>
+</label>
+<label data-a="212">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 67, letter 6. </span>
+</label>
+<label data-a="213" data-d="189">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 67, letter 7. Down 50, letter 6.</span>
+</label>
+<label data-a="214">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 67, letter 8. </span>
+</label>
+<label data-a="215" data-o="d" data-n="68" data-d="242">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 67, letter 9. Down 68, letter 1.</span>
+</label>
+<label data-a="216">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 67, letter 10. </span>
+</label>
+<span></span>
+<span></span>
+<label data-n="69" data-o="a" data-a="217" data-d="226">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 69, letter 1. Down 58, letter 4.</span>
+</label>
+<label data-a="218" data-d="236">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 69, letter 2. Down 64, letter 2.</span>
+</label>
+<span></span>
+<label data-d="220">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Down 55, letter 5.</span>
+</label>
+<span></span>
+<label data-d="202">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 52, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="239">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 66, letter 2.</span>
+</label>
+<span></span>
+<label data-d="230">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 60, letter 4.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="210">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 54, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="190">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Down 50, letter 7.</span>
+</label>
+<span></span>
+<label data-d="243">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Down 68, letter 2.</span>
+</label>
+<span></span>
+<label data-o="d" data-n="70" data-d="248">
+  <input pattern="[kK]" maxlength="1" required>
+  <span>Down 70, letter 1.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="237">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 64, letter 3.</span>
+</label>
+<span></span>
+<label data-d="221">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 55, letter 6.</span>
+</label>
+<span></span>
+<label data-d="203">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Down 52, letter 7.</span>
+</label>
+<span></span>
+<span></span>
+<label data-n="71" data-o="a" data-a="219" data-d="240">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 71, letter 1. Down 66, letter 3.</span>
+</label>
+<label data-a="220">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 71, letter 2. </span>
+</label>
+<label data-a="221" data-d="231">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 71, letter 3. Down 60, letter 5.</span>
+</label>
+<span></span>
+<label data-n="72" data-o="a" data-a="222">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 72, letter 1. </span>
+</label>
+<label data-a="223" data-o="d" data-n="73" data-d="251">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 72, letter 2. Down 73, letter 1.</span>
+</label>
+<label data-a="224">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Across 72, letter 3. </span>
+</label>
+<label data-a="225">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 72, letter 4. </span>
+</label>
+<label data-a="226" data-d="211">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 72, letter 5. Down 54, letter 7.</span>
+</label>
+<label data-a="227">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 72, letter 6. </span>
+</label>
+<label data-a="228">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 72, letter 7. </span>
+</label>
+<label data-a="229" data-d="191">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 72, letter 8. Down 50, letter 8.</span>
+</label>
+<label data-a="230">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 72, letter 9. </span>
+</label>
+<label data-a="231" data-d="244">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 72, letter 10. Down 68, letter 3.</span>
+</label>
+<span></span>
+<label data-d="249">
+  <input pattern="[bB]" maxlength="1" required>
+  <span>Down 70, letter 2.</span>
+</label>
+<span></span>
+<label data-o="d" data-n="74" data-d="253">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 74, letter 1.</span>
+</label>
+<span></span>
+<label data-n="75" data-o="b" data-a="232" data-d="262">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 75, letter 1. Down 75, letter 1.</span>
+</label>
+<label data-a="233" data-d="222">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 75, letter 2. Down 55, letter 7.</span>
+</label>
+<label data-a="234">
+  <input pattern="[vV]" maxlength="1" required>
+  <span>Across 75, letter 3. </span>
+</label>
+<label data-a="235" data-d="204">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 75, letter 4. Down 52, letter 8.</span>
+</label>
+<label data-a="236" data-o="d" data-n="76" data-d="267">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 75, letter 5. Down 76, letter 1.</span>
+</label>
+<label data-n="77" data-o="b" data-a="237" data-d="275">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 77, letter 1. Down 77, letter 1.</span>
+</label>
+<label data-a="238" data-d="241">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 77, letter 2. Down 66, letter 4.</span>
+</label>
+<span></span>
+<label data-d="232">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Down 60, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="252">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Down 73, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="212">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 54, letter 8.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="192">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 50, letter 9.</span>
+</label>
+<span></span>
+<label data-n="78" data-o="a" data-a="239" data-d="245">
+  <input pattern="[vV]" maxlength="1" required>
+  <span>Across 78, letter 1. Down 68, letter 4.</span>
+</label>
+<label data-a="240">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 78, letter 2. </span>
+</label>
+<label data-a="241" data-d="250">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 78, letter 3. Down 70, letter 3.</span>
+</label>
+<label data-a="242">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 78, letter 4. </span>
+</label>
+<label data-a="243" data-d="254">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 78, letter 5. Down 74, letter 2.</span>
+</label>
+<span></span>
+<label data-d="263">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Down 75, letter 2.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="268">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 76, letter 2.</span>
+</label>
+<label data-d="276">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Down 77, letter 2.</span>
+</label>
+<span></span>
+<label data-n="79" data-o="b" data-a="244" data-d="283">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 79, letter 1. Down 79, letter 1.</span>
+</label>
+<label data-a="245" data-d="233">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 79, letter 2. Down 60, letter 7.</span>
+</label>
+<label data-a="246">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 79, letter 3. </span>
+</label>
+<label data-a="247" data-o="d" data-n="80" data-d="287">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 79, letter 4. Down 80, letter 1.</span>
+</label>
+<span></span>
+<label data-n="81" data-o="b" data-a="248" data-d="293">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 81, letter 1. Down 81, letter 1.</span>
+</label>
+<label data-a="249">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 81, letter 2. </span>
+</label>
+<label data-a="250" data-d="213">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 81, letter 3. Down 54, letter 9.</span>
+</label>
+<label data-a="251">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 81, letter 4. </span>
+</label>
+<label data-a="252">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 81, letter 5. </span>
+</label>
+<label data-a="253" data-d="193">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 81, letter 6. Down 50, letter 10.</span>
+</label>
+<span></span>
+<label data-d="246">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Down 68, letter 5.</span>
+</label>
+<span></span>
+<span></span>
+<span></span>
+<label data-d="255">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Down 74, letter 3.</span>
+</label>
+<span></span>
+<label data-d="264">
+  <input pattern="[bB]" maxlength="1" required>
+  <span>Down 75, letter 3.</span>
+</label>
+<span></span>
+<label data-n="82" data-o="a" data-a="254">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 82, letter 1. </span>
+</label>
+<label data-a="255">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 82, letter 2. </span>
+</label>
+<label data-a="256" data-d="269">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 82, letter 3. Down 76, letter 3.</span>
+</label>
+<label data-n="83" data-o="a" data-a="257" data-d="277">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 83, letter 1. Down 77, letter 3.</span>
+</label>
+<label data-a="258">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 83, letter 2. </span>
+</label>
+<label data-a="259" data-d="284">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 83, letter 3. Down 79, letter 2.</span>
+</label>
+<label data-a="260" data-d="234">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 83, letter 4. Down 60, letter 8.</span>
+</label>
+<span></span>
+<label data-d="288">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 80, letter 2.</span>
+</label>
+<span></span>
+<label data-d="294">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 81, letter 2.</span>
+</label>
+<span></span>
+<label data-d="214">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 54, letter 10.</span>
+</label>
+<span></span>
+<span></span>
+<label data-n="84" data-o="a" data-a="261" data-d="194">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 84, letter 1. Down 50, letter 11.</span>
+</label>
+<label data-a="262">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 84, letter 2. </span>
+</label>
+<label data-a="263" data-d="247">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 84, letter 3. Down 68, letter 6.</span>
+</label>
+<span></span>
+<label data-n="85" data-o="b" data-a="264" data-d="298">
+  <input pattern="[bB]" maxlength="1" required>
+  <span>Across 85, letter 1. Down 85, letter 1.</span>
+</label>
+<label data-a="265">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 85, letter 2. </span>
+</label>
+<label data-a="266" data-d="256">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 85, letter 3. Down 74, letter 4.</span>
+</label>
+<label data-a="267">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 85, letter 4. </span>
+</label>
+<label data-a="268" data-d="265">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 85, letter 5. Down 75, letter 4.</span>
+</label>
+<label data-a="269">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 85, letter 6. </span>
+</label>
+<span></span>
+<span></span>
+<label data-d="270">
+  <input pattern="[gG]" maxlength="1" required>
+  <span>Down 76, letter 4.</span>
+</label>
+<label data-d="278">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Down 77, letter 4.</span>
+</label>
+<span></span>
+<label data-d="285">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Down 79, letter 3.</span>
+</label>
+<span></span>
+<label data-n="86" data-o="a" data-a="270">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 86, letter 1. </span>
+</label>
+<label data-a="271" data-d="289">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 86, letter 2. Down 80, letter 3.</span>
+</label>
+<span></span>
+<label data-d="295">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Down 81, letter 3.</span>
+</label>
+<span></span>
+<label data-n="87" data-o="a" data-a="272" data-d="215">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 87, letter 1. Down 54, letter 11.</span>
+</label>
+<label data-a="273" data-o="d" data-n="88" data-d="304">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 87, letter 2. Down 88, letter 1.</span>
+</label>
+<label data-a="274">
+  <input pattern="[xX]" maxlength="1" required>
+  <span>Across 87, letter 3. </span>
+</label>
+<label data-a="275" data-d="195">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 87, letter 4. Down 50, letter 12.</span>
+</label>
+<span></span>
+<span></span>
+<label data-n="89" data-o="a" data-a="276">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 89, letter 1. </span>
+</label>
+<label data-a="277" data-d="299">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 89, letter 2. Down 85, letter 2.</span>
+</label>
+<span></span>
+<label data-d="257">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Down 74, letter 5.</span>
+</label>
+<span></span>
+<label data-d="266">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Down 75, letter 5.</span>
+</label>
+<span></span>
+<span></span>
+<label data-n="90" data-o="a" data-a="278">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 90, letter 1. </span>
+</label>
+<label data-a="279" data-d="271">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 90, letter 2. Down 76, letter 5.</span>
+</label>
+<label data-n="91" data-o="a" data-a="280" data-d="279">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 91, letter 1. Down 77, letter 5.</span>
+</label>
+<label data-a="281">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 91, letter 2. </span>
+</label>
+<label data-a="282" data-d="286">
+  <input pattern="[fF]" maxlength="1" required>
+  <span>Across 91, letter 3. Down 79, letter 4.</span>
+</label>
+<label data-a="283" data-o="d" data-n="92" data-d="309">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 91, letter 4. Down 92, letter 1.</span>
+</label>
+<span></span>
+<label data-n="93" data-o="a" data-a="284" data-d="290">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 93, letter 1. Down 80, letter 4.</span>
+</label>
+<label data-a="285">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 93, letter 2. </span>
+</label>
+<label data-a="286" data-d="296">
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 93, letter 3. Down 81, letter 4.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="305">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Down 88, letter 2.</span>
+</label>
+<span></span>
+<label data-d="196">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Down 50, letter 13.</span>
+</label>
+<span></span>
+<label data-o="d" data-n="94" data-d="313">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 94, letter 1.</span>
+</label>
+<span></span>
+<label data-d="300">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 85, letter 3.</span>
+</label>
+<span></span>
+<label data-d="258">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Down 74, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<label data-o="d" data-n="95" data-d="317">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Down 95, letter 1.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="272">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 76, letter 6.</span>
+</label>
+<label data-d="280">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Down 77, letter 6.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="310">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Down 92, letter 2.</span>
+</label>
+<span></span>
+<label data-d="291">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 80, letter 5.</span>
+</label>
+<span></span>
+<label data-d="297">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 81, letter 5.</span>
+</label>
+<span></span>
+<label data-n="96" data-o="a" data-a="287">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 96, letter 1. </span>
+</label>
+<label data-a="288" data-d="306">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 96, letter 2. Down 88, letter 3.</span>
+</label>
+<label data-a="289">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 96, letter 3. </span>
+</label>
+<span></span>
+<label data-n="97" data-o="a" data-a="290">
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 97, letter 1. </span>
+</label>
+<label data-a="291" data-d="314">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 97, letter 2. Down 94, letter 2.</span>
+</label>
+<label data-a="292">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Across 97, letter 3. </span>
+</label>
+<label data-a="293" data-d="301">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 97, letter 4. Down 85, letter 4.</span>
+</label>
+<label data-a="294">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Across 97, letter 5. </span>
+</label>
+<label data-a="295" data-d="259">
+  <input pattern="[pP]" maxlength="1" required>
+  <span>Across 97, letter 6. Down 74, letter 7.</span>
+</label>
+<label data-a="296">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 97, letter 7. </span>
+</label>
+<span></span>
+<label data-n="98" data-o="a" data-a="297" data-d="318">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 98, letter 1. Down 95, letter 2.</span>
+</label>
+<label data-a="298">
+  <input pattern="[zZ]" maxlength="1" required>
+  <span>Across 98, letter 2. </span>
+</label>
+<label data-a="299">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Across 98, letter 3. </span>
+</label>
+<label data-a="300" data-d="273">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 98, letter 4. Down 76, letter 7.</span>
+</label>
+<label data-n="99" data-o="a" data-a="301" data-d="281">
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Across 99, letter 1. Down 77, letter 7.</span>
+</label>
+<label data-a="302">
+  <input pattern="[uU]" maxlength="1" required>
+  <span>Across 99, letter 2. </span>
+</label>
+<label data-a="303">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 99, letter 3. </span>
+</label>
+<label data-a="304" data-d="311">
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 99, letter 4. Down 92, letter 3.</span>
+</label>
+<label data-a="305">
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 99, letter 5. </span>
+</label>
+<label data-a="306" data-d="292">
+  <input pattern="[rR]" maxlength="1" required>
+  <span>Across 99, letter 6. Down 80, letter 6.</span>
+</label>
+<label data-a="307" data-o="d" data-n="100" data-d="321">
+  <input pattern="[yY]" maxlength="1" required>
+  <span>Across 99, letter 7. Down 100, letter 1.</span>
+</label>
+<span></span>
+<label data-o="d" data-n="101" data-d="323">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 101, letter 1.</span>
+</label>
+<span></span>
+<label data-d="307">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Down 88, letter 4.</span>
+</label>
+<span></span>
+<label data-o="d" data-n="102" data-d="325" data-last-across>
+  <input pattern="[sS]" maxlength="1" required>
+  <span>Down 102, letter 1.</span>
+</label>
+<span></span>
+<label data-d="315">
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Down 94, letter 3.</span>
+</label>
+<span></span>
+<label data-d="302">
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Down 85, letter 5.</span>
+</label>
+<span></span>
+<label data-d="260">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 74, letter 8.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="319">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 95, letter 3.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="274">
+  <input pattern="[cC]" maxlength="1" required>
+  <span>Down 76, letter 8.</span>
+</label>
+<label data-d="282">
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Down 77, letter 8.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="312">
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Down 92, letter 4.</span>
+</label>
+<span></span>
+<span></span>
+<label data-d="322">
+  <input pattern="[iI]" maxlength="1" required>
+  <span>Down 100, letter 2.</span>
+</label>
+<span></span>
+<label data-n="103" data-o="a" data-a="308" data-d="324" data-last-across>
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 103, letter 1. Down 101, letter 2.</span>
+</label>
+<label data-a="309" data-last-across>
+  <input pattern="[nN]" maxlength="1" required>
+  <span>Across 103, letter 2. </span>
+</label>
+<label data-a="310" data-d="308" data-last-across>
+  <input pattern="[lL]" maxlength="1" required>
+  <span>Across 103, letter 3. Down 88, letter 5.</span>
+</label>
+<label data-a="311" data-last-across>
+  <input pattern="[oO]" maxlength="1" required>
+  <span>Across 103, letter 4. </span>
+</label>
+<label data-a="312" data-d="326" data-last-across data-last-down>
+  <input pattern="[aA]" maxlength="1" required data-last-down>
+  <span>Across 103, letter 5. Down 102, letter 2.</span>
+</label>
+<label data-a="313" data-last-across>
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 103, letter 6. </span>
+</label>
+<label data-a="314" data-d="316" data-last-across>
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 103, letter 7. Down 94, letter 4.</span>
+</label>
+<label data-a="315" data-last-across>
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 103, letter 8. </span>
+</label>
+<label data-a="316" data-d="303" data-last-across>
+  <input pattern="[mM]" maxlength="1" required>
+  <span>Across 103, letter 9. Down 85, letter 6.</span>
+</label>
+<label data-a="317" data-last-across>
+  <input pattern="[eE]" maxlength="1" required>
+  <span>Across 103, letter 10. </span>
+</label>
+<label data-a="318" data-d="261" data-last-across>
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 103, letter 11. Down 74, letter 9.</span>
+</label>
+<label data-a="319" data-last-across>
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 103, letter 12. </span>
+</label>
+<label data-a="320" data-last-across>
+  <input pattern="[dD]" maxlength="1" required>
+  <span>Across 103, letter 13. </span>
+</label>
+<label data-a="321" data-d="320" data-last-across>
+  <input pattern="[aA]" maxlength="1" required>
+  <span>Across 103, letter 14. Down 95, letter 4.</span>
+</label>
+<label data-a="322" data-last-across>
+  <input pattern="[tT]" maxlength="1" required>
+  <span>Across 103, letter 15. </span>
+</label>
+<label data-a="323" data-last-across>
+  <input pattern="[aA]" maxlength="1" required data-last-across>
+  <span>Across 103, letter 16. </span>
+</label>
+<span></span>
+<div id="hoverhint" class="hoverhint" role="alert"></div>
 </article>
-
 
 
       <div class="hints" tabindex="-1">
         <section>
           <h2>Across</h2>
           <ol class="across">
-            <li data-n="1">Function to read custom properties</li>
-            <li data-n="2">Property to set how objects should resize</li>
-            <li data-n="6">Global keyword to get value from parent</li>
-            <li data-n="10">Keyword used in animations and gradients</li>
-            <li data-n="11">Property used to colorize form controls</li>
-            <li data-n="16">Useful for SVG lines</li>
-            <li data-n="19">Upper position</li>
-            <li data-n="20">Sets the brightness of an audio</li>
-            <li data-n="22">Trigonometry function</li>
-            <li data-n="24">Property that applies graphical effects</li>
-            <li data-n="25">Warm color or a juicy fruit</li>
-            <li data-n="28">Useful to avoid floating crashes</li>
-            <li data-n="29">The insertion indicator in an input</li>
-            <li data-n="31">clip and scroll are values for this property</li>
-            <li data-n="32">Greenish-blueish color</li>
-            <li data-n="33">Now you see me...</li>
-            <li data-n="34">Shorthand including column-count</li>
-            <li data-n="35">This bold property goes with font</li>
-            <li data-n="37">A property or function useful for 3D</li>
-            <li data-n="40">Defines if an element creates a new stacking context</li>
-            <li data-n="43">Justify-..., align-...</li>
-            <li data-n="45">Unit for a fraction of the available free space</li>
-            <li data-n="47">An ocean-family color</li>
-            <li data-n="49">A pseudo-element that is not ::after</li>
-            <li data-n="51">With this property, you can scale, skew...</li>
-            <li data-n="53">Greenish-blueish color</li>
-            <li data-n="54">Function that ceils or floors a number</li>
-            <li data-n="55">Fading property</li>
-            <li data-n="59">Color or licquor</li>
-            <li data-n="62">Sets if an element is a block or an inline box</li>
-            <li data-n="63">Function that returns the smallest value</li>
-            <li data-n="65">Math constant equal to 3.14...</li>
-            <li data-n="66">A shade of gray, or a hat</li>
-            <li data-n="67">Color function introduced in 2020</li>
-            <li data-n="70">Space outside the box</li>
-            <li data-n="72">White</li>
-            <li data-n="73">Feature to write rules inside other rules</li>
-            <li data-n="75">Unit for angles</li>
-            <li data-n="76">Negates the inner selection</li>
-            <li data-n="77">...and now you don't</li>
-            <li data-n="78">Function to bring remote (or local) assets</li>
-            <li data-n="80">A light color to stop and smell</li>
-            <li data-n="81">A sweet color name</li>
-            <li data-n="82">CSS unit or programming language</li>
+            <li id="hint-across-1"   data-n="1"  >(exp. attr.) Sets the value of the referenceTarget property of a ShadowRoot</li>
+            <li id="hint-across-10"  data-n="10" >Specifies a regular expression a value should match</li>
+            <li id="hint-across-12"  data-n="12" >Global attribute that provides a hit for a keyboard shortcut</li>
+            <li id="hint-across-14"  data-n="14" >Value to disable input prefill and autocomplete</li>
+            <li id="hint-across-16"  data-n="16" >This attribute indicates if details are expanded</li>
+            <li id="hint-across-17"  data-n="17" >An input type</li>
+            <li id="hint-across-18"  data-n="18" >This meta element sets the color of the interface surrounding the webpage</li>
+            <li id="hint-across-20"  data-n="20" >Anagram of a web direction input type</li>
+            <li id="hint-across-21"  data-n="21" >Semantic element to define contact information</li>
+            <li id="hint-across-22"  data-n="22" >Rel value indicating operations should block until a DOM node has been parsed</li>
+            <li id="hint-across-25"  data-n="25" >A list item element tag</li>
+            <li id="hint-across-26"  data-n="26" >A layout or an element to show tabular data</li>
+            <li id="hint-across-27"  data-n="27" >This tag creates adds a new line</li>
+            <li id="hint-across-28"  data-n="28" >Catalan language code</li>
+            <li id="hint-across-29"  data-n="29" >This attribute makes the element non-interactive and inaccessible</li>
+            <li id="hint-across-32"  data-n="32" >Image attribute to specify a dimension</li>
+            <li id="hint-across-34"  data-n="34" >(dep. tag) Used to contain frame elements</li>
+            <li id="hint-across-37"  data-n="37" >Tag that contains the description in a description list</li>
+            <li id="hint-across-38"  data-n="38" >Part of the table that contains the header</li>
+            <li id="hint-across-40"  data-n="40" >Represents small annotations usually used for showing the pronunciation of East Asian characters</li>
+            <li id="hint-across-41"  data-n="41" >Tag used to mark up te title of a creative work</li>
+            <li id="hint-across-42"  data-n="42" >(exp.) Wrapping value for textareas</li>
+            <li id="hint-across-44"  data-n="44" >The rel to a link to the authors site</li>
+            <li id="hint-across-45"  data-n="45" >(left-to-right) ARIA role equivalent to the more semantic td</li>
+            <li id="hint-across-46"  data-n="46" >Tag used to specify media resources in media elements</li>
+            <li id="hint-across-47"  data-n="47" >(exp.) HTML element which is a type of iframe with native privacy features</li>
+            <li id="hint-across-48"  data-n="48" >Tag that contains the ruby text component of a ruby annotation</li>
+            <li id="hint-across-49"  data-n="49" >An ordered list element</li>
+            <li id="hint-across-50"  data-n="50" >Element for self-contained content with an optional caption</li>
+            <li id="hint-across-51"  data-n="51" >Tag to add pictures and photos to the web</li>
+            <li id="hint-across-53"  data-n="53" >The value to wait for other content before loading</li>
+            <li id="hint-across-56"  data-n="56" >(dep.) Element used to delimit the base text component of a ruby annotation</li>
+            <li id="hint-across-57"  data-n="57" >(left-to-right) A table cell</li>
+            <li id="hint-across-58"  data-n="58" >The 'accordion component' in HTML</li>
+            <li id="hint-across-59"  data-n="59" >A form's method</li>
+            <li id="hint-across-61"  data-n="61" >(dep.) event attribute fired when a menu element is shown</li>
+            <li id="hint-across-62"  data-n="62" >Tag to identify computer code</li>
+            <li id="hint-across-63"  data-n="63" >This meta attribute can be used to refresh the page automatically</li>
+            <li id="hint-across-65"  data-n="65" >(dep.) HTML4 feature to display independent documents in a single page</li>
+            <li id="hint-across-67"  data-n="67" >(exp.) Attribute to define the color model</li>
+            <li id="hint-across-69"  data-n="69" >Lang value used when content is in Arabic</li>
+            <li id="hint-across-71"  data-n="71" >Child of colgroup used to define a column group</li>
+            <li id="hint-across-72"  data-n="72" >The legend describing a figure element</li>
+            <li id="hint-across-75"  data-n="75" >With aria- it defines the hierarchy of the element in the structure</li>
+            <li id="hint-across-77"  data-n="77" >Tag that contains the term in a description list</li>
+            <li id="hint-across-78"  data-n="78" >Tag to add a movie or clip to a webpage</li>
+            <li id="hint-across-79"  data-n="79" >Attribute to define the increment in a numeric input</li>
+            <li id="hint-across-81"  data-n="81" >ARIA role for range input widgets in which users can interact</li>
+            <li id="hint-across-82"  data-n="82" >Element that identifies a term to be defined</li>
+            <li id="hint-across-83"  data-n="83" >ARIA role for a widget that allows to select items from an organized collection.</li>
+            <li id="hint-across-84"  data-n="84" >Tag that represents content that was added</li>
+            <li id="hint-across-85"  data-n="85" >&lt;header&gt; has identifical meaning to this landmark</li>
+            <li id="hint-across-86"  data-n="86" >(exp.) Attribute to specify that a standard element will behave like a custom element</li>
+            <li id="hint-across-87"  data-n="87" >In a rel attribute, it indicates that the linked resource follows the current page</li>
+            <li id="hint-across-89"  data-n="89" >How Romanian developers may identify their pages in the html tag</li>
+            <li id="hint-across-90"  data-n="90" >Table cell, and the only duplicated value because the puzzle creator is a dodo</li>
+            <li id="hint-across-91"  data-n="91" >(dep.) A possible media alignent or direction in a marquee</li>
+            <li id="hint-across-93"  data-n="93" >An input that accepts phone numbers</li>
+            <li id="hint-across-96"  data-n="96" >Tag that defines an image with multiple clickable areas</li>
+            <li id="hint-across-97"  data-n="97" >The declaration all HTML documents must start with</li>
+            <li id="hint-across-98"  data-n="98" >(left-to-right) Attribute that defines the dimensions of an input control</li>
+            <li id="hint-across-99"  data-n="99" >Element that opens/closes some details</li>
+            <li id="hint-across-103" data-n="103">Event attribute triggered when metadatais received for a media resource</li>
           </ol>
         </section>
         <section>
           <h2>Down</h2>
           <ol class="down">
-            <li data-n="1">Unit relative to the viewport largest side</li>
-            <li data-n="3">Function used in mathematical operations</li>
-            <li data-n="4">Fancy CSS conditional</li>
-            <li data-n="5">Without this there's no before or after</li>
-            <li data-n="7">Position</li>
-            <li data-n="8">Keyword used in animations for the end state</li>
-            <li data-n="9">One of an element's main dimension</li>
-            <li data-n="12">It can be an arrow or a pointer</li>
-            <li data-n="13">Function and property to flip elements</li>
-            <li data-n="14">Defines the foreground value for text and decoration</li>
-            <li data-n="15">Unit for angles</li>
-            <li data-n="17">A list style (only value with a dash in this puzzle)</li>
-            <li data-n="18">A light color named after a president's daughter</li>
-            <li data-n="21">Pseudo-class when a field is not valid</li>
-            <li data-n="23">A unit equivalent to 2.54cm</li>
-            <li data-n="26">Keyword to determine position in gradients</li>
-            <li data-n="27">A filter that makes everything gray</li>
-            <li data-n="30">A display and the name of an HTML tag</li>
-            <li data-n="32">A light purple color</li>
-            <li data-n="34">A deprecated cropping property</li>
-            <li data-n="36">A border style</li>
-            <li data-n="38">The most famous CSS unit</li>
-            <li data-n="39">Property that sets the text trend</li>
-            <li data-n="41">A value of 39 down</li>
-            <li data-n="42">Logical operator for media queries</li>
-            <li data-n="44">Property or technology (without the box)</li>
-            <li data-n="45">Don't use it for layouts</li>
-            <li data-n="46">Pseudo targetting an element occupying all the screen</li>
-            <li data-n="48">Root unit</li>
-            <li data-n="50">It can be open or close</li>
-            <li data-n="52">A really bright pink</li>
-            <li data-n="56">Property or modifier for box-shadows</li>
-            <li data-n="57">A bright color</li>
-            <li data-n="58">A border property (only bottom-to-top value in the puzzle)</li>
-            <li data-n="60">Property specifying how words should be hyphenated</li>
-            <li data-n="61">Pseudo-class applied to the element indicated in the hash</li>
-            <li data-n="64">Property that can be sticky at times...</li>
-            <li data-n="67">Pseudo-class to indicate a dialog is in a particular state</li>
-            <li data-n="68">The opposite of right</li>
-            <li data-n="69">This keyword resets a property</li>
-            <li data-n="71">Function to read tag attributes</li>
-            <li data-n="72">System color applied to text inputs</li>
-            <li data-n="74">A really light and cool color</li>
-            <li data-n="75">A bright and warm color</li>
-            <li data-n="79">Unit that represents the line height</li>
+            <li id="hint-down-1"   data-n="1"  >Role for a symbol formatted to appear above the normal text</li>
+            <li id="hint-down-2"   data-n="2"  >Rel value to indicate an alternative version of the page</li>
+            <li id="hint-down-3"   data-n="3"  >Event attribute triggered when media stops or ends playing</li>
+            <li id="hint-down-4"   data-n="4"  >Event attribute triggered when the element receives focus</li>
+            <li id="hint-down-5"   data-n="5"  >This meta tag controls de HTTP Referer header of requests sent from the document</li>
+            <li id="hint-down-6"   data-n="6"  >Form attribute that specifies how the browser should encode the data</li>
+            <li id="hint-down-7"   data-n="7"  >(dep.) Attribute in script to register event listeners</li>
+            <li id="hint-down-8"   data-n="8"  >Script attribute that specifies how/when the code should be processed</li>
+            <li id="hint-down-9"   data-n="9"  >Meta tag specific for Google's crawlers and robots</li>
+            <li id="hint-down-11"  data-n="11" >Rel value to enhance security by preventing access to window.opener</li>
+            <li id="hint-down-13"  data-n="13" >Attribute that specifies if element should have spelling or grammar checks</li>
+            <li id="hint-down-15"  data-n="15" >Button attribute that specifies how browsers should encode linked form data</li>
+            <li id="hint-down-19"  data-n="19" >The lang value for this page ;)</li>
+            <li id="hint-down-23"  data-n="23" >A tag that provides flexibility when using image resources</li>
+            <li id="hint-down-24"  data-n="24" >One of the (optional) sections in a table</li>
+            <li id="hint-down-26"  data-n="26" >Rel value that links to a label that applies to the current document.</li>
+            <li id="hint-down-28"  data-n="28" >Like 41 across, but instead of a tag, an attribute for blockquote or q</li>
+            <li id="hint-down-30"  data-n="30" >Input attribute that prevents writing mode</li>
+            <li id="hint-down-31"  data-n="31" >Element to emphasize some text</li>
+            <li id="hint-down-33"  data-n="33" >Element with a collection of headings and subheadings</li>
+            <li id="hint-down-35"  data-n="35" >Attribute to automatically place keyboard focus in the element on load</li>
+            <li id="hint-down-36"  data-n="36" >(dep.) Attribute to provide the format of a meta value</li>
+            <li id="hint-down-39"  data-n="39" >Attribute to specify the language of the linked resource</li>
+            <li id="hint-down-41"  data-n="41" >An input type</li>
+            <li id="hint-down-43"  data-n="43" >An input type or a 'recenty added' tag</li>
+            <li id="hint-down-45"  data-n="45" >A required element in every fieldset</li>
+            <li id="hint-down-46"  data-n="46" >Element that contains CSS</li>
+            <li id="hint-down-49"  data-n="49" >An ordered list or the Lao language in reverse</li>
+            <li id="hint-down-50"  data-n="50" >Image property that specifies the priority to get that image relative to others</li>
+            <li id="hint-down-52"  data-n="52" >If a select has this attribute, you can pick more than one element</li>
+            <li id="hint-down-54"  data-n="54" >(exp.) Element to request user location data</li>
+            <li id="hint-down-55"  data-n="55" >(dep.) A classic moving element</li>
+            <li id="hint-down-58"  data-n="58" >Tag that links content with a machine readable translation</li>
+            <li id="hint-down-60"  data-n="60" >This HTML element holds HTML fragments that can be reused and generated</li>
+            <li id="hint-down-64"  data-n="64" >Tag that renders content exactly as it's written in the source code</li>
+            <li id="hint-down-66"  data-n="66" >A type of shape in an area element</li>
+            <li id="hint-down-68"  data-n="68" >Element used to draw grahics and animations via scripting</li>
+            <li id="hint-down-70"  data-n="70" >Tag that represents a key from the keyboard</li>
+            <li id="hint-down-73"  data-n="73" >Global attribute that provides the element with an unique name</li>
+            <li id="hint-down-74"  data-n="74" >Meta content to instruct search engines not to display a text snippet or video preview</li>
+            <li id="hint-down-75"  data-n="75" >Every input in a form should have one of this, preferably as a linked tag</li>
+            <li id="hint-down-76"  data-n="76" >(dep.) Image attribute that provided a longer more descriptive alternative text and description</li>
+            <li id="hint-down-77"  data-n="77" >(exp.) Input element that contains a set of &lt;option&gt; elements to choose form</li>
+            <li id="hint-down-79"  data-n="79" >A link target (without the _)</li>
+            <li id="hint-down-80"  data-n="80" >The image displayed while the video data is loaded</li>
+            <li id="hint-down-81"  data-n="81" >Attribute that allows inline CSS in an element</li>
+            <li id="hint-down-85"  data-n="85" >(dep.) CSS position and a value for the deprecated align attribute</li>
+            <li id="hint-down-88"  data-n="88" >Input type</li>
+            <li id="hint-down-92"  data-n="92" >Input type and tag with the property datetime (which is another input type)</li>
+            <li id="hint-down-94"  data-n="94" >Restrictive value for many attributes: role, inputmode, autocapitalize...</li>
+            <li id="hint-down-95"  data-n="95" >Element used to provide information about the document itself</li>
+            <li id="hint-down-100" data-n="100">Yiddish language code</li>
+            <li id="hint-down-101" data-n="101">Shorter restrictive value that becomes positive if read backwards</li>
+            <li id="hint-down-102" data-n="102">(bottom-to-top) Required attribute when rel='preload' has been set on a link</li>
           </ol>
         </section>
       </div>
