@@ -1,0 +1,544 @@
+@position-try --top-left {
+  left: anchor(left);
+  right: auto;
+  bottom: anchor(top);
+  top: auto;
+}
+
+@position-try --top-right {
+  left: auto;
+  right: anchor(right);
+  bottom: anchor(top);
+  top: auto;
+}
+
+@position-try --bottom-left {
+  left: anchor(left);
+  right: auto;
+  top: anchor(bottom);
+  bottom: auto;
+}
+
+@position-try --bottom-right {
+  left: auto;
+  right: anchor(right);
+  top: anchor(bottom);
+  bottom: auto;
+}
+
+:has(#mode:checked) article {
+  background: #000;
+  --extra: ; /* drop-shadow(0 0 0 #0007); */
+  border: 2px solid #000;
+  filter: var(--extra);
+}
+
+main {
+  li {
+    line-height: 1.4;
+  }
+
+  [for="mode"] {
+    display: inline-flex;
+    margin-bottom: 1em;
+    align-items: center;
+    border-radius: 2em;
+    padding: 0.125em;
+    padding-inline-end: 0.35em;
+
+    &:has(:focus-visible) {
+      outline: 1px solid var(--fg);
+      outline-offset: 2px;
+    }
+
+    @media print {
+      display: none;
+    }
+
+    input {
+      appearance: none;
+      height: 1em;
+      width: 2em;
+      color: var(--bg);
+      background: var(--fg) !important;
+      border-radius: 1em !important;
+      position: relative;
+      outline: none;
+      min-width: 0;
+      box-shadow: none;
+      border: 0;
+      margin-inline-end: 0.35em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0.7em;
+        height: 0.7em;
+        left: 25%;
+        top: 50%;
+        translate: -50% -50%;
+        background: var(--bg);
+        border-radius: 50%;
+        transition: left 0.3s;
+      }
+
+      &:checked::before {
+        left: 75%;
+      }
+    }
+  }
+
+  #hoverhint-processed,
+  #hoverhint {
+    border: 1px solid #0003;
+    border-radius: 1em;
+    box-sizing: border-box;
+    max-width: auto;
+    min-width: 150px;
+    min-width: 200px;
+    padding: 1em;
+    display: block;
+    background: #ffc;
+    color: light-dark(var(--fg), var(--bg));
+    font-size: 3em;
+    z-index: 1;
+    display: none;
+    position: fixed;
+    margin-block: 3px;
+    margin-inline: -3px;
+    white-space: pre-wrap;
+    left: anchor(left);
+    bottom: anchor(top);
+    position-anchor: --hint-here;
+    position-try-fallbacks: --top-right,  --bottom-left, --bottom-right;
+    box-shadow:
+      0px 3px 16px -2px #000c
+      ;
+
+    p { margin: 0;}
+
+    p:not(:last-child) {
+      margin-block-end: 1em;
+    }
+
+    @media (width > 450px) {
+      font-size: 2em;
+    }
+  }
+}
+
+body:has(:is([data-o="b"],[data-o="a"],[data-o="d"]) input:focus) #hoverhint-processed,
+body:has(:is([data-o="b"],[data-o="a"],[data-o="d"]) input:focus) #hoverhint {
+  display: block !important;
+  white-space: pre-wrap;
+}
+
+#hoverhint::before,
+#hoverhint::after {
+  display: block;
+  margin-block: 0.5em;
+}
+
+/* Don't do this at home! */
+body:has(:is([data-o="b"],[data-o="a"])[data-n="1"] input:focus) #hoverhint::before { content: "Across: " var(--across-1); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="2"] input:focus) #hoverhint::before { content: "Across: " var(--across-2); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="3"] input:focus) #hoverhint::before { content: "Across: " var(--across-3); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="4"] input:focus) #hoverhint::before { content: "Across: " var(--across-4); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="5"] input:focus) #hoverhint::before { content: "Across: " var(--across-5); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="6"] input:focus) #hoverhint::before { content: "Across: " var(--across-6); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="7"] input:focus) #hoverhint::before { content: "Across: " var(--across-7); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="8"] input:focus) #hoverhint::before { content: "Across: " var(--across-8); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="9"] input:focus) #hoverhint::before { content: "Across: " var(--across-9); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="10"] input:focus) #hoverhint::before { content: "Across: " var(--across-10); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="11"] input:focus) #hoverhint::before { content: "Across: " var(--across-11); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="12"] input:focus) #hoverhint::before { content: "Across: " var(--across-12); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="13"] input:focus) #hoverhint::before { content: "Across: " var(--across-13); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="14"] input:focus) #hoverhint::before { content: "Across: " var(--across-14); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="15"] input:focus) #hoverhint::before { content: "Across: " var(--across-15); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="16"] input:focus) #hoverhint::before { content: "Across: " var(--across-16); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="17"] input:focus) #hoverhint::before { content: "Across: " var(--across-17); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="18"] input:focus) #hoverhint::before { content: "Across: " var(--across-18); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="19"] input:focus) #hoverhint::before { content: "Across: " var(--across-19); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="20"] input:focus) #hoverhint::before { content: "Across: " var(--across-20); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="21"] input:focus) #hoverhint::before { content: "Across: " var(--across-21); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="22"] input:focus) #hoverhint::before { content: "Across: " var(--across-22); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="23"] input:focus) #hoverhint::before { content: "Across: " var(--across-23); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="24"] input:focus) #hoverhint::before { content: "Across: " var(--across-24); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="25"] input:focus) #hoverhint::before { content: "Across: " var(--across-25); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="26"] input:focus) #hoverhint::before { content: "Across: " var(--across-26); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="27"] input:focus) #hoverhint::before { content: "Across: " var(--across-27); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="28"] input:focus) #hoverhint::before { content: "Across: " var(--across-28); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="29"] input:focus) #hoverhint::before { content: "Across: " var(--across-29); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="30"] input:focus) #hoverhint::before { content: "Across: " var(--across-30); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="31"] input:focus) #hoverhint::before { content: "Across: " var(--across-31); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="32"] input:focus) #hoverhint::before { content: "Across: " var(--across-32); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="33"] input:focus) #hoverhint::before { content: "Across: " var(--across-33); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="34"] input:focus) #hoverhint::before { content: "Across: " var(--across-34); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="35"] input:focus) #hoverhint::before { content: "Across: " var(--across-35); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="36"] input:focus) #hoverhint::before { content: "Across: " var(--across-36); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="37"] input:focus) #hoverhint::before { content: "Across: " var(--across-37); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="38"] input:focus) #hoverhint::before { content: "Across: " var(--across-38); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="39"] input:focus) #hoverhint::before { content: "Across: " var(--across-39); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="40"] input:focus) #hoverhint::before { content: "Across: " var(--across-40); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="41"] input:focus) #hoverhint::before { content: "Across: " var(--across-41); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="42"] input:focus) #hoverhint::before { content: "Across: " var(--across-42); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="43"] input:focus) #hoverhint::before { content: "Across: " var(--across-43); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="44"] input:focus) #hoverhint::before { content: "Across: " var(--across-44); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="45"] input:focus) #hoverhint::before { content: "Across: " var(--across-45); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="46"] input:focus) #hoverhint::before { content: "Across: " var(--across-46); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="47"] input:focus) #hoverhint::before { content: "Across: " var(--across-47); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="48"] input:focus) #hoverhint::before { content: "Across: " var(--across-48); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="49"] input:focus) #hoverhint::before { content: "Across: " var(--across-49); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="50"] input:focus) #hoverhint::before { content: "Across: " var(--across-50); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="51"] input:focus) #hoverhint::before { content: "Across: " var(--across-51); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="52"] input:focus) #hoverhint::before { content: "Across: " var(--across-52); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="53"] input:focus) #hoverhint::before { content: "Across: " var(--across-53); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="54"] input:focus) #hoverhint::before { content: "Across: " var(--across-54); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="55"] input:focus) #hoverhint::before { content: "Across: " var(--across-55); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="56"] input:focus) #hoverhint::before { content: "Across: " var(--across-56); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="57"] input:focus) #hoverhint::before { content: "Across: " var(--across-57); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="58"] input:focus) #hoverhint::before { content: "Across: " var(--across-58); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="59"] input:focus) #hoverhint::before { content: "Across: " var(--across-59); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="60"] input:focus) #hoverhint::before { content: "Across: " var(--across-60); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="61"] input:focus) #hoverhint::before { content: "Across: " var(--across-61); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="62"] input:focus) #hoverhint::before { content: "Across: " var(--across-62); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="63"] input:focus) #hoverhint::before { content: "Across: " var(--across-63); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="64"] input:focus) #hoverhint::before { content: "Across: " var(--across-64); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="65"] input:focus) #hoverhint::before { content: "Across: " var(--across-65); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="66"] input:focus) #hoverhint::before { content: "Across: " var(--across-66); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="67"] input:focus) #hoverhint::before { content: "Across: " var(--across-67); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="68"] input:focus) #hoverhint::before { content: "Across: " var(--across-68); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="69"] input:focus) #hoverhint::before { content: "Across: " var(--across-69); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="70"] input:focus) #hoverhint::before { content: "Across: " var(--across-70); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="71"] input:focus) #hoverhint::before { content: "Across: " var(--across-71); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="72"] input:focus) #hoverhint::before { content: "Across: " var(--across-72); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="73"] input:focus) #hoverhint::before { content: "Across: " var(--across-73); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="74"] input:focus) #hoverhint::before { content: "Across: " var(--across-74); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="75"] input:focus) #hoverhint::before { content: "Across: " var(--across-75); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="76"] input:focus) #hoverhint::before { content: "Across: " var(--across-76); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="77"] input:focus) #hoverhint::before { content: "Across: " var(--across-77); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="78"] input:focus) #hoverhint::before { content: "Across: " var(--across-78); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="79"] input:focus) #hoverhint::before { content: "Across: " var(--across-79); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="80"] input:focus) #hoverhint::before { content: "Across: " var(--across-80); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="81"] input:focus) #hoverhint::before { content: "Across: " var(--across-81); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="82"] input:focus) #hoverhint::before { content: "Across: " var(--across-82); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="83"] input:focus) #hoverhint::before { content: "Across: " var(--across-83); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="84"] input:focus) #hoverhint::before { content: "Across: " var(--across-84); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="85"] input:focus) #hoverhint::before { content: "Across: " var(--across-85); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="86"] input:focus) #hoverhint::before { content: "Across: " var(--across-86); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="87"] input:focus) #hoverhint::before { content: "Across: " var(--across-87); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="88"] input:focus) #hoverhint::before { content: "Across: " var(--across-88); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="89"] input:focus) #hoverhint::before { content: "Across: " var(--across-89); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="90"] input:focus) #hoverhint::before { content: "Across: " var(--across-90); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="91"] input:focus) #hoverhint::before { content: "Across: " var(--across-91); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="92"] input:focus) #hoverhint::before { content: "Across: " var(--across-92); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="93"] input:focus) #hoverhint::before { content: "Across: " var(--across-93); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="94"] input:focus) #hoverhint::before { content: "Across: " var(--across-94); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="95"] input:focus) #hoverhint::before { content: "Across: " var(--across-95); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="96"] input:focus) #hoverhint::before { content: "Across: " var(--across-96); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="97"] input:focus) #hoverhint::before { content: "Across: " var(--across-97); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="98"] input:focus) #hoverhint::before { content: "Across: " var(--across-98); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="99"] input:focus) #hoverhint::before { content: "Across: " var(--across-99); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="100"] input:focus) #hoverhint::before { content: "Across: " var(--across-100); }
+
+body:has(:is([data-o="b"],[data-o="d"])[data-n="1"] input:focus) #hoverhint::after { content: "Down: " var(--down-1); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="2"] input:focus) #hoverhint::after { content: "Down: " var(--down-2); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="3"] input:focus) #hoverhint::after { content: "Down: " var(--down-3); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="4"] input:focus) #hoverhint::after { content: "Down: " var(--down-4); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="5"] input:focus) #hoverhint::after { content: "Down: " var(--down-5); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="6"] input:focus) #hoverhint::after { content: "Down: " var(--down-6); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="7"] input:focus) #hoverhint::after { content: "Down: " var(--down-7); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="8"] input:focus) #hoverhint::after { content: "Down: " var(--down-8); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="9"] input:focus) #hoverhint::after { content: "Down: " var(--down-9); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="10"] input:focus) #hoverhint::after { content: "Down: " var(--down-10); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="11"] input:focus) #hoverhint::after { content: "Down: " var(--down-11); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="12"] input:focus) #hoverhint::after { content: "Down: " var(--down-12); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="13"] input:focus) #hoverhint::after { content: "Down: " var(--down-13); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="14"] input:focus) #hoverhint::after { content: "Down: " var(--down-14); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="15"] input:focus) #hoverhint::after { content: "Down: " var(--down-15); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="16"] input:focus) #hoverhint::after { content: "Down: " var(--down-16); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="17"] input:focus) #hoverhint::after { content: "Down: " var(--down-17); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="18"] input:focus) #hoverhint::after { content: "Down: " var(--down-18); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="19"] input:focus) #hoverhint::after { content: "Down: " var(--down-19); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="20"] input:focus) #hoverhint::after { content: "Down: " var(--down-20); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="21"] input:focus) #hoverhint::after { content: "Down: " var(--down-21); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="22"] input:focus) #hoverhint::after { content: "Down: " var(--down-22); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="23"] input:focus) #hoverhint::after { content: "Down: " var(--down-23); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="24"] input:focus) #hoverhint::after { content: "Down: " var(--down-24); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="25"] input:focus) #hoverhint::after { content: "Down: " var(--down-25); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="26"] input:focus) #hoverhint::after { content: "Down: " var(--down-26); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="27"] input:focus) #hoverhint::after { content: "Down: " var(--down-27); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="28"] input:focus) #hoverhint::after { content: "Down: " var(--down-28); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="29"] input:focus) #hoverhint::after { content: "Down: " var(--down-29); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="30"] input:focus) #hoverhint::after { content: "Down: " var(--down-30); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="31"] input:focus) #hoverhint::after { content: "Down: " var(--down-31); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="32"] input:focus) #hoverhint::after { content: "Down: " var(--down-32); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="33"] input:focus) #hoverhint::after { content: "Down: " var(--down-33); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="34"] input:focus) #hoverhint::after { content: "Down: " var(--down-34); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="35"] input:focus) #hoverhint::after { content: "Down: " var(--down-35); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="36"] input:focus) #hoverhint::after { content: "Down: " var(--down-36); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="37"] input:focus) #hoverhint::after { content: "Down: " var(--down-37); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="38"] input:focus) #hoverhint::after { content: "Down: " var(--down-38); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="39"] input:focus) #hoverhint::after { content: "Down: " var(--down-39); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="40"] input:focus) #hoverhint::after { content: "Down: " var(--down-40); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="41"] input:focus) #hoverhint::after { content: "Down: " var(--down-41); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="42"] input:focus) #hoverhint::after { content: "Down: " var(--down-42); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="43"] input:focus) #hoverhint::after { content: "Down: " var(--down-43); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="44"] input:focus) #hoverhint::after { content: "Down: " var(--down-44); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="45"] input:focus) #hoverhint::after { content: "Down: " var(--down-45); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="46"] input:focus) #hoverhint::after { content: "Down: " var(--down-46); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="47"] input:focus) #hoverhint::after { content: "Down: " var(--down-47); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="48"] input:focus) #hoverhint::after { content: "Down: " var(--down-48); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="49"] input:focus) #hoverhint::after { content: "Down: " var(--down-49); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="50"] input:focus) #hoverhint::after { content: "Down: " var(--down-50); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="51"] input:focus) #hoverhint::after { content: "Down: " var(--down-51); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="52"] input:focus) #hoverhint::after { content: "Down: " var(--down-52); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="53"] input:focus) #hoverhint::after { content: "Down: " var(--down-53); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="54"] input:focus) #hoverhint::after { content: "Down: " var(--down-54); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="55"] input:focus) #hoverhint::after { content: "Down: " var(--down-55); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="56"] input:focus) #hoverhint::after { content: "Down: " var(--down-56); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="57"] input:focus) #hoverhint::after { content: "Down: " var(--down-57); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="58"] input:focus) #hoverhint::after { content: "Down: " var(--down-58); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="59"] input:focus) #hoverhint::after { content: "Down: " var(--down-59); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="60"] input:focus) #hoverhint::after { content: "Down: " var(--down-60); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="61"] input:focus) #hoverhint::after { content: "Down: " var(--down-61); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="62"] input:focus) #hoverhint::after { content: "Down: " var(--down-62); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="63"] input:focus) #hoverhint::after { content: "Down: " var(--down-63); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="64"] input:focus) #hoverhint::after { content: "Down: " var(--down-64); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="65"] input:focus) #hoverhint::after { content: "Down: " var(--down-65); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="66"] input:focus) #hoverhint::after { content: "Down: " var(--down-66); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="67"] input:focus) #hoverhint::after { content: "Down: " var(--down-67); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="68"] input:focus) #hoverhint::after { content: "Down: " var(--down-68); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="69"] input:focus) #hoverhint::after { content: "Down: " var(--down-69); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="70"] input:focus) #hoverhint::after { content: "Down: " var(--down-70); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="71"] input:focus) #hoverhint::after { content: "Down: " var(--down-71); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="72"] input:focus) #hoverhint::after { content: "Down: " var(--down-72); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="73"] input:focus) #hoverhint::after { content: "Down: " var(--down-73); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="74"] input:focus) #hoverhint::after { content: "Down: " var(--down-74); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="75"] input:focus) #hoverhint::after { content: "Down: " var(--down-75); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="76"] input:focus) #hoverhint::after { content: "Down: " var(--down-76); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="77"] input:focus) #hoverhint::after { content: "Down: " var(--down-77); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="78"] input:focus) #hoverhint::after { content: "Down: " var(--down-78); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="79"] input:focus) #hoverhint::after { content: "Down: " var(--down-79); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="80"] input:focus) #hoverhint::after { content: "Down: " var(--down-80); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="81"] input:focus) #hoverhint::after { content: "Down: " var(--down-81); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="82"] input:focus) #hoverhint::after { content: "Down: " var(--down-82); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="83"] input:focus) #hoverhint::after { content: "Down: " var(--down-83); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="84"] input:focus) #hoverhint::after { content: "Down: " var(--down-84); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="85"] input:focus) #hoverhint::after { content: "Down: " var(--down-85); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="86"] input:focus) #hoverhint::after { content: "Down: " var(--down-86); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="87"] input:focus) #hoverhint::after { content: "Down: " var(--down-87); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="88"] input:focus) #hoverhint::after { content: "Down: " var(--down-88); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="89"] input:focus) #hoverhint::after { content: "Down: " var(--down-89); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="90"] input:focus) #hoverhint::after { content: "Down: " var(--down-90); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="91"] input:focus) #hoverhint::after { content: "Down: " var(--down-91); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="92"] input:focus) #hoverhint::after { content: "Down: " var(--down-92); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="93"] input:focus) #hoverhint::after { content: "Down: " var(--down-93); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="94"] input:focus) #hoverhint::after { content: "Down: " var(--down-94); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="95"] input:focus) #hoverhint::after { content: "Down: " var(--down-95); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="96"] input:focus) #hoverhint::after { content: "Down: " var(--down-96); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="97"] input:focus) #hoverhint::after { content: "Down: " var(--down-97); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="98"] input:focus) #hoverhint::after { content: "Down: " var(--down-98); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="99"] input:focus) #hoverhint::after { content: "Down: " var(--down-99); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="100"] input:focus) #hoverhint::after { content: "Down: " var(--down-100); }
+
+article {
+  --extra: drop-shadow(0 0 5px #0007);
+  font-size: 1vmin;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  width: 75em;
+  width: auto;
+  max-width: 100%;
+  gap: 0;
+  aspect-ratio: 5/6;
+  background: #0000;
+  border: 2px solid #0000;
+  filter:
+    drop-shadow(2px 0 #000)
+    drop-shadow(-2px 0 #000)
+    drop-shadow(0 2px #000)
+    drop-shadow(0 -2px #000)
+    /* var(--extra) */
+    ;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  break-after: page;
+
+  label {
+    width: 100%;
+    min-width:100%;
+    aspect-ratio: 1;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    span {
+      font-size: 1rem;
+      position: absolute;
+      line-height: 4;
+      color: #000;
+      width: 1px;
+      height: 1px;
+      overflow: clip;
+    }
+
+    &[data-o] {
+      &:has(:focus) {
+        anchor-name: --hint-here;
+      }
+
+      &::after {
+        position: absolute;
+        content: attr(data-n);
+        font-size: 1.125em;
+        top: 0.1em;
+        left: 0.2em;
+        line-height: 1;
+        font-family: Roboto, Helvetica, sans-serif;
+        color: #000;
+      }
+    }
+  }
+
+  input {
+    border: 1px solid #ccc !important;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    position: absolute;
+    font-size: 2.25em !important;
+    top: 0;
+    left: 0;
+    height: auto !important;
+    background: #fff;
+    text-align: center;
+    text-transform: uppercase !important;
+    color: #000 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    border-radius: 0 !important;
+
+    &:focus {
+      background: #def;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--fg);
+      outline-offset: -2px;
+    }
+  }
+}
+
+.hints {
+  display: grid;
+  font-size: 0.8em;
+  font-size: 0.9em;
+  margin-block-start: 2em;
+  gap: 3em;
+
+  /* @media (width > 600px) {
+    grid-template-columns: 1fr 1fr;
+  } */
+
+  ol {
+    margin: 0;
+    padding: 1em;
+
+    @media (width > 1000px) {
+      column-count: 2;
+      column-gap: 3em;
+    }
+
+    @media print {
+      column-count: 2;
+      column-gap: 3em;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      break-after: page;
+    }
+
+    li {
+      list-style: attr(data-n);
+      padding-inline-start: 0.35em;
+
+      &::marker {
+        font-weight: bolder;
+        content: attr(data-n) "."
+      }
+
+      /*       &::before {
+      content: attr(data-o) ".";
+      font-weight: 700;
+      margin-inline-end: 0.35em;
+    } */
+    }
+  }
+}
+
+
+.scrim-processed,
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  backdrop-filter: blur(0.5em);
+  place-items:center;
+  display: none;
+  z-index: 2;
+
+  > div {
+    background: var(--bg);
+    border-radius: 0.5em;
+    padding: 2em;
+    font-family: Helvetica, sans-serif;
+    max-width: 300px;
+    width: 80%;
+
+    h2 {
+      margin-block: 0 2rem;
+      font-weight: 400;
+    }
+
+    p {
+      margin-block: 1rem 0;
+      font-weight: 300;
+    }
+  }
+}
+
+.scrim-processed.open,
+:not(:has(:invalid)) .scrim {
+  display: grid;
+}
+
+@media print {
+  header, footer, .game-description {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 0.5em;
+    /* bottom: 0%;
+    position: fixed;
+    left: 0%; 
+    color: #f001 !important;
+    z-index: 3; */
+
+    &::after {
+      content: " - comiCSS.art";
+    }
+  }
+  h2 {
+    font-size: 1rem;
+    margin: 0em;
+  }
+  li {
+    font-size: 0.9em;
+  }
+}
