@@ -240,6 +240,11 @@ body:has(:is([data-o="b"],[data-o="a"])[data-n="97"] input:focus) #hoverhint::be
 body:has(:is([data-o="b"],[data-o="a"])[data-n="98"] input:focus) #hoverhint::before { content: "Across: " var(--across-98); }
 body:has(:is([data-o="b"],[data-o="a"])[data-n="99"] input:focus) #hoverhint::before { content: "Across: " var(--across-99); }
 body:has(:is([data-o="b"],[data-o="a"])[data-n="100"] input:focus) #hoverhint::before { content: "Across: " var(--across-100); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="101"] input:focus) #hoverhint::before { content: "Across: " var(--across-101); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="102"] input:focus) #hoverhint::before { content: "Across: " var(--across-102); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="103"] input:focus) #hoverhint::before { content: "Across: " var(--across-103); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="104"] input:focus) #hoverhint::before { content: "Across: " var(--across-104); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="105"] input:focus) #hoverhint::before { content: "Across: " var(--across-105); }
 
 body:has(:is([data-o="b"],[data-o="d"])[data-n="1"] input:focus) #hoverhint::after { content: "Down: " var(--down-1); }
 body:has(:is([data-o="b"],[data-o="d"])[data-n="2"] input:focus) #hoverhint::after { content: "Down: " var(--down-2); }
@@ -341,6 +346,11 @@ body:has(:is([data-o="b"],[data-o="d"])[data-n="97"] input:focus) #hoverhint::af
 body:has(:is([data-o="b"],[data-o="d"])[data-n="98"] input:focus) #hoverhint::after { content: "Down: " var(--down-98); }
 body:has(:is([data-o="b"],[data-o="d"])[data-n="99"] input:focus) #hoverhint::after { content: "Down: " var(--down-99); }
 body:has(:is([data-o="b"],[data-o="d"])[data-n="100"] input:focus) #hoverhint::after { content: "Down: " var(--down-100); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="101"] input:focus) #hoverhint::after { content: "Down: " var(--down-101); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="102"] input:focus) #hoverhint::after { content: "Down: " var(--down-102); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="103"] input:focus) #hoverhint::after { content: "Down: " var(--down-103); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="104"] input:focus) #hoverhint::after { content: "Down: " var(--down-104); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="105"] input:focus) #hoverhint::after { content: "Down: " var(--down-105); }
 
 article {
   --extra: drop-shadow(0 0 5px #0007);
