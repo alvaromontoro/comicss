@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #242: The Perfect CSS Stylesheet Should Be... (v2)</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/242/the-perfect-css-stylesheet-should-be-2" />
+    <meta property="og:image" content="https://comicss.art/comics/242/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://comicss.art/comics/242/the-perfect-css-stylesheet-should-be-2">
+    <meta name="twitter:title" content="comiCSS #242: The Perfect CSS Stylesheet Should Be... (v2)">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/242/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body {
+  background: #fd52
+}
+
+article {
+  font-size: 1vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: max-content;
+  margin: 2em;
+}
+
+h1 {
+  font-family: Atma;
+  font-size: 4em;
+  font-weight: 600;
+  border-bottom: 4px dotted #a9d4de;
+  padding-inline: 1em 2em;
+  text-shadow:
+    1px 1px #fff;
+  
+  span {
+    text-shadow: none;
+    font-weight: 900;
+    background-image: 
+/*       radial-gradient(circle at 30% 50%, #f005, #f000 50%), */
+/*       radial-gradient(circle at 70% 50%, #3f35, #f000 50%), */
+      linear-gradient(45deg, #117e9c, #8c5ad3);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+  }
+}
+
+ul {
+  list-style: "";
+  margin: 0;
+  padding: 0;
+  line-height: 2.1;
+  font-size: 3em;
+  font-family: Atma;
+  font-weight: 500;
+  padding-left: 1em;
+
+  span {
+    font-weight: 600;
+    background: #fd7;
+    display: inline-block;
+    padding: 0 0.5em;
+    border-radius: 0.25em;
+    line-height: 1.66;
+    padding-inline-start: 1.5em;
+    border-radius: 3em 1em 1em 3em;
+    --background: #fd7;
+    background: var(--background);
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0.8em;
+      translate: -50% -50%;
+      border-radius: 50%;
+      aspect-ratio: 1;
+      width: 0.6em;
+      background: red;
+      background: #4323;
+      background: hsl(from var(--background) h s calc(l * 0.8) / alpha);
+    }
+  }
+}
+
+code {
+  font-family: 'Jetbrains Mono', monospace, monospace;
+  font-size: 0.9em;
+  display: inline-block;
+  padding: 0 0.5em;
+  border-radius: 0.25em;
+  line-height: 1.66;
+  background: #e8e8e8;
+}
+
+:nth-child(4n - 3) > span {
+  --background: #fcd5ce;
+}
+
+:nth-child(5n - 2) > span {
+  --background: #a9d4de;
+}
+
+:nth-child(7n - 3) > span {
+  --background: #d0d5fd;
+}
+
+
+:nth-child(6n - 4) > span {
+  --background: #c6def1;
+}
+    </style>
+  </head>
+  <body>
+<article>
+  <h1>The perfect <span>CSS stylesheet</span> should be...</h1>
+  <ul>
+    <li>
+      <span>Visible</span> as <code>display:none</code>
+    </li>
+    <li><span>Clear</span> as <code>filter:blur(50px)</code></li>
+    <li><span>Sharp</span> as <code>image-rendering:pixelated</code></li>
+    <li><span>Always on top</span> as <code>z-index:-1</code></li>
+    <li><span>Actionable</span> as <code>pointer-events:none</code></li>
+    <li><span>Dynamic</span> as <code>animation-play-state:paused</code></li>
+    <li><span>Fast</span> as <code>animation-delay:1000s</code></li>
+    <li><span>Consistent</span> as <code>order:random(1,999)</code></li>
+    <li><span>Restrained</span> as <code>overflow:visible</code></li>
+    <li><span>All-round</span> as <code>border-radius:0</code></li>
+    <li><span>Straight</span> as <code>text-decoration-style:wavy</code></li>
+    <li><span>Readable</span> as <code>background:currentColor</code></li>
+    <li><span>Bold</span> as <code>font-weight:100</code></li>
+    <li><span>Maintainable</span> as <code>!important</li>
+  </ul>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
