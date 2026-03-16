@@ -1878,7 +1878,7 @@ const posts = [
   {
     id: 242,
     uid: "the-perfect-css-stylesheet-should-be-2",
-    boxes: 1,
+    boxes: 2,
     title: "The Perfect CSS Stylesheet Should Be... (v2)",
     vertical: true,
     ariaLabel: "The perfect CSS stylesheet should be... Visible as display:none; Clear as filter:blur(50px); Sharp as image-rendering:pixelated; Always on top as z-index:-1; Actionable as pointer-events:none; Dynamic as animation-play-state:paused; Fast as animation-delay:1000s; Consistent as order:random(1,999); Restrained as overflow:visible; All-round as border-radius:0; Straight as text-decoration-style:wavy; Readable as background:currentColor; Bold as font-weight:100; Maintainable as !important."
