@@ -4585,4 +4585,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>The Perfect CSS Stylesheet Should Be... (v2)</title>
+    <link href="https://comicss.art/comics/242" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/242/the-perfect-css-stylesheet-should-be-2.html"/>
+    <id>https://comicss.art/comics/242</id>
+    <updated>2026-03-16T00:00:01Z</updated>
+    <summary>New Cartoon: The Perfect CSS Stylesheet Should Be... (v2)</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/242/the-perfect-css-stylesheet-should-be-2.png" alt="The perfect CSS stylesheet should be... Visible as display:none; Clear as filter:blur(50px); Sharp as image-rendering:pixelated; Always on top as z-index:-1; Actionable as pointer-events:none; Dynamic as animation-play-state:paused; Fast as animation-delay:1000s; Consistent as order:random(1,999); Restrained as overflow:visible; All-round as border-radius:0; Straight as text-decoration-style:wavy; Readable as background:currentColor; Bold as font-weight:100; Maintainable as !important." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
