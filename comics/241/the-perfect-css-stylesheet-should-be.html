@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #241: The Perfect CSS Stylesheet Should Be...</title>
+
+    <meta property="og:title" content="comiCSS #241: The Perfect CSS Stylesheet Should Be..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/241" />
+    <meta property="og:image" content="https://comicss.art/comics/241/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://comicss.art/comics/241">
+    <meta name="twitter:title" content="comiCSS #241: The Perfect CSS Stylesheet Should Be...">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/241/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Patrick Hand SC';
+  src: url(/fonts/PatrickHandSC.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Londrina Solid';
+  src: url(/fonts/LondrinaSolid-Regular.ttf);
+}
+@font-face {
+  font-family: 'Londrina Solid';
+  font-weight: bold;
+  src: url(/fonts/LondrinaSolid-Black.ttf);
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #fd4;
+  font-size: 1.3vmin;
+  font-family: 'Londrina Solid';
+
+  article {
+    position: absolute;
+    position: relative;
+    /*     top: 50%;
+    left: 50%;
+    translatE: -50% -50%; */
+    width: 95em;
+    aspect-ratio: 3/2;
+/*     outline: 1px dashed red; */
+    margin: 3em;
+  }
+
+  h1 {
+    text-align: center;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 4em;
+    text-shadow: 0.075em 0.075em #fff;
+    text-shadow: 0.05em 0.05em #fff;
+    line-height: 1.05;
+    font-weight: 400;
+    color: #000;
+
+    span {
+      display: block;
+      font-size: 1.1em;
+    }
+  }
+
+
+  section {
+    font-size: 1.15em;
+    position: absolute;
+    width: 14em;
+    aspect-ratio: 1;
+    aoutline: 1px dashed red;
+
+    & h2 {
+      font-size: 1.1em;
+      font-family: 'Bebas Neue','Londrina Solid', Helvetica, Arial, sans-serif;
+      font-family: 'Londrina Solid', Helvetica, Arial, sans-serif;
+      margin: 0;
+      font-weight: 400;
+      line-height: 1;
+
+      & span,
+      & code {
+        font-family: inherit;
+        font-size: 1.35em;
+        text-shadow: -0.025em 0.025em #fff;
+      }
+
+      & span {
+        font-size: 1.5em;
+      }
+    }
+
+    [role="img"] {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 90%;
+      height: 90%;
+
+      & *,
+      & *::before,
+      & *::after {
+        position: absolute;
+        box-sizing: border-box;
+      }
+
+      .logo.css {
+        width: 38%;
+        aspect-ratio: 22 / 25;
+        background: lch(35.76% 89.61 293.02);
+        clip-path: polygon(0 0, 100% 0, 90% 90%, 50% 100%, 10% 90%);
+        bottom: 15%;
+        left: 35%;
+        transform: translate(-50%, 0%);
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: #ffffff18;
+          clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+          mix-blend-mode: plus-lighter;
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: hsl(0, 0%, 93%);
+          clip-path: polygon(18.5% 18.5%, 81.5% 18.5%, 76% 74%, 50% 80.5%, 24% 74%, 22.25% 57%, 34.25% 57%, 35% 65.5%, 50% 69%, 65% 65.5%, 66% 51.5%, 22% 51.5%, 20.75% 40.5%, 66.5% 40.5%, 67.5% 29.5%, 19.5% 29.5%);
+        }
+      }
+
+      .character {
+        width: 35%;
+        height: 50%;
+        bottom: 2%;
+
+        .body {
+          bottom: 30%;
+          left: 0;
+          width: 100%;
+          height: 70%;
+          border: 0.2em solid;
+          border-radius: 0.75em;
+          background: #ddd;
+          box-sizing: border-box;
+
+          .drop {
+            width: 1em;
+            height: 1em;
+            transform: rotate(45deg);
+            background: #8ff;
+            border-radius: 0 50% 50% 50%;
+            border: 0.125em solid;
+            top: 58%;
+            left: 73%;
+          }
+
+          .mouth {
+            width: 20%;
+            height: 0.3em;
+            background: black;
+            border-radius: 50% / 0 0 100% 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 150%);
+
+            &.left {
+              left: 42%;
+            }
+
+            &.right {
+              left: 58%;
+            }
+
+            &.sad {
+              transform: scaleY(-1) translate(-50%, -150%);
+            }
+
+            &.scared {
+              transform: scaleY(-1) translate(-50%, -150%);
+              clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%)
+            }
+          }
+
+          .eyes {
+            width: 60%;
+            height: 0.35em;
+            background: 
+              radial-gradient(closest-side circle at 15% 50%, #000 96%, #0000),
+              radial-gradient(closest-side circle at 85% 50%, #000 96%, #0000);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            &.left {
+              left: 42%;
+            }
+
+            &.right {
+              left: 58%;
+            }
+
+            &.angry {
+              clip-path: polygon(0 0, 50% 30%, 100% 0, 100% 100%, 0 100%);
+            }
+          }
+        }
+
+        .legs {
+          width: 35%;
+          height: 55%;
+          border-radius: 50%;
+          border: 0.2em solid;
+          bottom: -18%;
+          left: 50%;
+          transform: translate(-50%, 0);
+          clip-path: polygon(-100% 0, 200% 0, 200% 67.5%, -100% 67.5%);
+
+          &::before,
+          &::after {
+            content: "";
+            width: 100%;
+            height: 15%;
+            background: #000;
+            top: 62%;
+            border-radius: 50%;
+            transform: translate(-100%, 0)
+          }
+
+          &::after {
+            left: 100%;
+            transform: none;
+          }
+        }
+      }
+
+      .shadow {
+        width: 100%;
+        height: 5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 100%;
+        background: #0001;
+        border-radius: 50% / 0 0 100% 100%;
+      }
+
+      .bubble {
+        --c: #00f;
+        --c2: #fff;
+        --string: radial-gradient(80% 150% at 20% 0, #0000 50%, var(--c) 0 56.5%, #0000 0) 20% 50% / 80% 80% no-repeat;
+        width: 60%;
+        height: 70%;
+        top: 10%;
+        left: 50%;
+
+        &::after {
+          top: 0%;
+          left: 6%;
+          font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', 'Amatic SC', Helvetica, Arial, sans-serif;
+          font-size: 0.8em;
+          display: grid;
+          place-items: center;
+          text-align: center;
+          width: 80%;
+          height: 50%;
+          line-height: 0.85;
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 80%;
+          background: 
+            radial-gradient(45% 32% at 45% 32%, var(--c) 99%, #ffc0),
+            radial-gradient(25% 15% at 65% 22%, var(--c) 99%, #ffc0),
+            var(--string),
+            var(--c2);
+          box-shadow: 0 0 0 1em var(--c2);
+          filter: blur(0.3em) contrast(100) sepia(1) brightness(5) ;
+          mix-blend-mode: multiply;
+          mask:
+          linear-gradient(#0000 0%, #000 0 100%, #0000 0);
+        }
+      }
+    }
+  }
+
+
+
+  /* clear */
+  section.a1 {
+    top: 35%;
+    left: 2%;
+
+    .bubble {
+      --c: #f5b704 !important;
+      --c2: #0000 !important;
+      translate: -20% 20%;
+
+      &::before{
+        filter: none !important;
+        mix-blend-mode: initial !important;
+      }
+
+      &::after {
+        content: "I've never seen myself better"
+      }
+    }
+
+    [role="img"] {
+      filter: blur(0.25em);
+    }
+  }
+
+  /* visible */
+  section.a2 {
+    bottom: 0%;
+    right: 0.5%;
+
+    .bubble {
+      width: 45%;
+      height: 45%;
+      top: 30%;
+      left: 0;
+
+      --string: radial-gradient(80% 150% at 80% 0, #0000 50%, #00f 0 57.2%, #0000 0) 20% 45% / 80% 100% no-repeat;
+
+      &::after {
+        content: "I am also clothes:none";
+      }
+    }
+  }
+  
+  /* always on top */
+  section.a3 {
+    top: 0%;
+    left: 0%;
+    
+    .bubble {
+      left: 34%;
+      top: 5%;
+      --string: radial-gradient(120% 80% at 80% 80%, #0000 47%, #00f 0 55%, #0000 0) 0% 50% / 80% 110% no-repeat;
+      width: 55%;
+      height: 45%;
+      
+      &::before {
+        background:
+          var(--string),
+          radial-gradient(at 65% 50%, #00f 40%, #0000 0),
+          #fff;
+      }
+      
+      &::after {
+        content: "HELP!!";
+        font-size: 1.2em;
+        font-weight: bold;
+        place-items: end;
+      }
+    }
+    
+    .character {
+      left: 45%;
+      bottom: 4%;
+      translate: -50%;
+      rotate: -4deg;
+      width: 40%;
+    }
+    
+    .papers {
+      --aux: conic-gradient(from -30deg at 10% 50%, #000 95deg, #0000 0) 15% 49% / 100% 15% no-repeat;
+      width: 33%;
+      height: 50%;
+      border: 0.2em solid;
+      background: 
+        var(--aux),
+        repeating-linear-gradient(#0000 0 5%, #0001 0 6%),
+        repeating-linear-gradient(#0000 0 12%, #0001 0 13%),
+        #fff;
+      bottom: 0;
+      left: -5%;
+      border-radius: 8% 5% 0 0;
+    }
+    
+    .paper1 {
+      left: 40%;
+      height: 45%;
+      translate: -50%;
+      --aux:
+        conic-gradient(from -60deg at 90% 50%, #000 95deg, #0000 0) 55% 70% / 100% 20% no-repeat,
+        conic-gradient(from -60deg at 70% 30%, #000 95deg, #0000 0) 55% 34% / 100% 20% no-repeat;
+      border-radius: 4% 4% 0 0;
+    }
+    
+    .paper2 {
+      left: 70%;
+      translate: -50%;
+      height: 53%;
+      border-radius: 0 10% 0 0;
+      --aux:
+        conic-gradient(from -60deg at 90% 50%, #000 95deg, #0000 0) 55% 30% / 100% 10% no-repeat,
+        conic-gradient(from -30deg at 30% 50%, #000 95deg, #0000 0) 15% 32% / 100% 15% no-repeat,
+        conic-gradient(from -60deg at 65% 50%, #000 95deg, #0000 0) 55% 93% / 100% 10% no-repeat,
+        conic-gradient(from -60deg at 95% 50%, #000 95deg, #0000 0) 100% 0% / 100% 15% no-repeat;
+    }
+  }
+
+  /* sharp */
+  section.a4 {
+    top: 72%;
+    left: 41%;
+    
+    .bubble {
+      top: 17%;
+      left: 37%;
+      
+      &::after {
+        content: "I feel square"
+      }
+    }
+    
+    [role="img"] {
+      &::before {
+        font-size: 0.45em;
+        content: "";
+        width: 1em;
+        position: absolute;
+        aspect-ratio: 1;
+        top: 6em;
+        left: 1em;
+        box-shadow:
+          13em 4em #e6ac02,
+          14em 4em #e6ac02,
+          15em 4em #d19c02,
+          16em 4em #e6ac02,
+          17em 4em #d19c02,
+          18em 4em #d19c02,
+          19em 4em #d19c02,
+          15em 5em #e6ac02,
+          16em 5em #d19c02,
+          17em 5em #e6ac02,
+          18em 5em #c59400,
+          19em 5em #d19c02,
+          3em 12em #b9b9b9,
+          4em 13em #bebebe,
+          5em 13em #a9a9a9,
+          6em 12em #c3c3c3,
+          7em 12em #d5d5d5,
+          0 8em #ceb55c,
+          1em 8em #b4b4b4,
+          2em 8em #b4b4b4,
+          3em 8em #b4b4b4,
+          4em 8em #b4b4b4,
+          5em 8em #b4b4b4,
+          6em 8em #b4b4b4,
+          7em 8em #b4b4b4,
+          8em 8em #ceb55c,
+          0 9em #b4b4b4,
+          0 10em #b4b4b4,
+          0 11em #b4b4b4,
+          0 12em #b4b4b4,
+          0 13em #b4b4b4,
+          0 14em #b4b4b4,
+          0 15em #b4b4b4,
+          0 16em #ceb55c,
+          1em 16em #b4b4b4,
+          2em 16em #b4b4b4,
+          1em 21em #c9ad35,
+          2em 21em #baa030,
+          3em 16em #b1aca0,
+          3em 17em #cfb236,
+          3em 18em #cfb236,
+          3em 19em #cfb236,
+          3em 20em #d8bb39,
+          3em 21em #dcbe39,
+          3em 17em #cfb236,
+          4em 16em #b4b4b4,
+          5em 16em #b1aca0,
+          5em 17em #cfb236,
+          5em 18em #cfb236,
+          5em 19em #cfb236,
+          5em 20em #d8bb39,
+          5em 21em #dcbe39,
+          6em 21em #baa030,
+          7em 21em #c9ad35,
+          6em 16em #b4b4b4,
+          7em 16em #b4b4b4,
+          8em 9em #b4b4b4,
+          8em 10em #b4b4b4,
+          8em 11em #b4b4b4,
+          8em 12em #b4b4b4,
+          8em 13em #b4b4b4,
+          8em 14em #b4b4b4,
+          8em 15em #b4b4b4,
+          8em 16em #ceb55c,
+          4em 12em 0 4em #ddd,
+          12em 1em #f9c223,
+          11em 1em #fcd037,
+          10em 2em #fcd037,
+          10em 3em #f9c223,
+          10em 4em #f9c223,
+          10em 5em #f9c223,
+          10em 6em #fcd037,
+          14em 0em #fcd037,
+          15em 0em #fcd037,
+          16em 0em #f9c223,
+          17em 0em #fcd037,
+          18em 0em #fcd037,
+          9em 4em #fcd037,
+          20em 1em #f9c223,
+          21em 1em #fcd037,
+          22em 2em #fcd037,
+          22em 3em #f9c223,
+          22em 4em #f9c223,
+          22em 5em #f9c223,
+          22em 6em #fcd037,
+          20em 7em #f9c223,
+          21em 7em #fcd037,
+          19em 8em #f9c223,
+          11em 7em #fcd037,
+          12em 7em #f9c223,
+          13em 8em #f9c223,
+          14em 8em #f5b704,
+          15em 8em #f5b704,
+          16em 8em #f5b704,
+          17em 8em #f5b704,
+          18em 8em #f5b704,
+          13em 9em #fdcd31,
+          14em 9em #f9c223,
+          15em 9em #fac82b,
+          11em 10em #f9c223,
+          12em 10em #f9c223,
+          13em 10em #f9c223,
+          13em 4em 0 2em #f5b704,
+          16em 4em 0 3em #f5b704,
+          19em 4em 0 2em #f5b704;
+      }
+    }
+  }
+  
+  /* actionable */
+  section.a5 {
+    top: 69%;
+    left: 0;
+    
+    .bubble {
+      --string: radial-gradient(120% 80% at 100% 60%, #0000 47%, #00f 0 55%, #0000 0) 0% 20% / 80% 50% no-repeat;
+      top: 15%;
+      left: -2%;
+      height: 40%;
+
+      &::before {
+        background:
+          var(--string),
+          radial-gradient(100% 30% at 45% 15%, #00f 45%, #0000 0),
+          #fff;
+        height: 200%;
+      }
+      &::after {
+        content: "Can't touch this!";
+        top: 5%;
+      }
+    }
+    
+    .character {
+      scale: -1 1;
+      left: 30%;
+      
+      .body {
+        &::before {
+          acontent: "";
+          width: 50%;
+          height: 50%;
+          top: 80%;
+          left: -0.2em;
+          background: black;
+          border-radius: 0 100% 0 0;
+        }
+        
+        &::after {
+          acontent: "";
+          width: 40%;
+          height: 50%;
+          top: 80%;
+          right: -0.2em;
+          background: black;
+          border-radius: 100% 0 0 0;
+        }
+      }
+      .mouth {top:60%!important;}
+      .glasses {
+        width: 35%;
+        height: 30%;
+        left: 79%;
+        top: 54%;
+        translate: -50% -50%;
+        
+        &::after {
+          content: "";
+          width: 40%;
+          height: 15%;
+          background:#000;
+          right: 95%;
+          top: 25%;
+        }
+        
+        &::before {
+          content: "";
+          inset: 0;
+          border: 0.15em solid;
+          border-radius: 0.4em;
+          filter: drop-shadow(-1.8em 0)
+        }
+      }
+      .legs {
+        rotate: 5deg;
+        height: 70%;
+        top: 53%;
+        left: 45%;
+        border-color: #d00;
+        background:
+          radial-gradient(180% 100% at 50% 100%, #0000 63%, #d00 calc(63% + 1px))
+      }
+    }
+  }
+  
+  /* dynamic */
+  section.a6 {
+    top: 31%;
+    left: 65%;
+    
+    .bubble {
+      top: 13%;
+      left: 39%;
+      
+      &::before {
+        --string:
+          radial-gradient(farthest-side at 0 0, #0000 41%, #00f 0 50%, #0000 0) 0 80% / 60% 80% no-repeat
+          ;
+        height: 100%;
+        background:
+          var(--string),
+          radial-gradient(50% 20% at 45% 25%, #00f 90%, #0000 0),
+          #fff;
+      }
+      &::after {
+        content: "How about a nap? \a It is a bit late.";
+        content: "Look at me (not) move!";
+        white-space: pre-wrap;
+        text-wrap: balance;
+        line-height: 1.1;
+      }
+    }
+    .character {
+      .body {
+        bottom: 28%;
+        transform-origin: 50% 100%;
+        rotate: 3deg;
+        
+        .mouth {
+          scale: 1 -1;
+          top: 70%;
+          height: 5%;
+        }
+        
+        .eyes {
+          clip-path: polygon(0 30%, 50% 20%, 100% 30%, 100% 100%, 0 100%);
+        }
+      }
+    }
+  }
+  
+  /* consistent */
+  section.a7 {
+    top: 64%;
+    left: 20%;
+    left: 20.5%;
+    top: 32%;
+    
+    .bubble {
+      left: 40%;
+      
+      &::after {
+        content: "Consistency and order are key";
+        margin: 0.5em 0 0 0.75em
+      }
+      &::before {
+        height: 120%;
+        width: 120%;
+        --string:
+          radial-gradient(farthest-side at 0 0, #0000 43%, #00f 0 50%, #0000 0) 0 100% / 100% 80% no-repeat
+          ;
+        background:
+          var(--string),
+          radial-gradient(50% 20% at 45% 25%, #00f 70%, #0000 0),
+          #fff;
+      }
+    }
+    
+    .character {
+      .arm1 {
+        width: 40%;
+        height: 40%;
+        border: 0.2em solid;
+        border-radius: 100% 0 0 80% / 50%;
+        border-right: 0;
+        transform-origin: 100% 0;
+        rotate: -40deg;
+        left: -43%;
+        top: 70%;
+      }
+      
+      .arm2 {
+        width: 40%;
+        height: 40%;
+        border: 0.2em solid;
+        border-radius: 0 100% 100% 0 / 50%;
+        border-left: 0;
+        transform-origin: 100% 0;
+        rotate: 40deg;
+        left: 95%;
+        top: 95%;
+      }
+      
+      .boxes {
+        width: 95%;
+        display: flex;
+        bottom: -10%;
+        left: 4%;
+        border-bottom: 0.5em solid;
+        
+        .box {
+          font-size: 0.7em;
+          position: relative;
+          border: 0.2em solid;
+          background: white;
+          flex: 1;
+          aspect-ratio: 1;
+          display: grid;
+          place-items: center;
+          order: random(1, 9999);
+          
+          &:nth-child(2) {
+            translate: 0 -0.1em;
+          }
+        }
+      }
+    }
+  }
+  
+  /* restrained */
+  section.a8 {
+    top: 66%;
+    left: 61.5%;
+    
+    
+    .character {
+      
+      .body {
+        height: 80%;
+        overflow: visible;
+        font-size: 0.75em;
+        font-family: monospace, monospace;
+        white-space: pre-wrap;
+      }
+      .mouth {
+        scale: 1.2 -1.2;
+        rotate: -5deg;
+        top: 75% !important;
+      }
+      
+      .eyes {
+        scale: 1 1.2;
+        clip-path: polygon(0 20%, 50% -10%, 100% 20%, 100% 100%, 0 100%);
+      }
+    }
+    
+    .bubble {
+      width: 67%;
+      height: 48%;
+      top: 20%;
+      left: 35%;
+
+      &:before {
+        --string:
+          radial-gradient(farthest-side at 0 30%, #0000 40%, #00f 0 50%, #0000 0) 40% 100% / 80% 100% no-repeat
+          ;
+        height: 120%;
+        background:
+          var(--string),
+          radial-gradient(50% 25% at 45% 22%, #00f 90%, #0000 0),
+          #fff;
+      }
+      &::after {
+        content: "Everything is contained and under control";
+      }
+    }
+  }
+  
+  /* all-round */
+  section.a9 {
+    top: 41%;
+    right: 0%;
+    
+    .bubble {
+      top: 15%;
+      left: 35%;
+      height: 55%;
+      --string: radial-gradient(80% 100% at -20% 0, #0000 90%, #00f 0 99%, #0000 0) 30% 100% / 80% 100% no-repeat;
+      &::after {
+        content: "I will be there! and I will be square!";
+        content: "I am well rounded... ...emotionally";
+      }
+    }
+    
+    .character {
+      .body {
+        border-radius: 0;
+        
+        .mouth {
+          top: 45%;
+          height: 11%;
+        }
+      }
+      .legs {
+        left: 55%;
+        top: 52%;
+        height: 70%;
+        width: 30%;
+        scale: 1.2 1;
+      }
+    }
+  }
+  
+  /* readable */
+  section.a10 {
+    left: 62.5%;
+    top: 0%;
+    
+    .bubble {
+      
+      top: 17%;
+      left: -10%;
+      &::before {
+        --string: radial-gradient(farthest-side at 100% 0%, #0000 45%, #00f 60%, #0000 0)0 100% / 100% 100% no-repeat;
+        height: 120%;
+        background:
+          var(--string),
+          radial-gradient(50% 25% at 45% 22%, #00f 90%, #0000 0),
+          #fff;
+      }
+      &::after {
+        height: fit-content;
+        max-height: 3lh;
+        top: 15%;
+        content: "Legbility is my top priority... or one of them... kind of...";
+        background:
+          linear-gradient(#0000 20%, currentcolor 0) 0 0 / 100% 1lh;
+      }
+    }
+    
+    .character {
+      scale: -1 1;
+      left: 54%;
+      .body {
+        .eyes {
+          height: 13%;
+        }
+        div.mouth {
+          aspect-ratio: 0.8 !important;
+          height: auto;
+          background: #000;
+          border-radius: 50%;
+          scale: 0.5;
+          top: 40% !important;
+          left: 55% !important;
+        }
+      }
+    }
+  }
+  
+  /* maintainable */
+  section.a11 {
+    top: 64%;
+    left: 20%;
+    top: 12%;
+    left: 42.5%;
+    
+    .whisper {
+      font-size: 0.6em;
+      font-family: 'Patrick Hand SC';
+      top:65%;
+      left: 40%;
+      rotate: 5deg;
+      white-space:pre;
+    }
+    
+    .character {
+      .body {
+        .mouth {
+          scale: 0.7 1;
+          translate: -10%;
+        }
+      }
+    }
+    
+    .bubble {
+      top:8%;
+      left: 37%;
+      &::after {
+        content: "color: !important position: !important margin: !important font: !important"
+  
+      }
+      &::before {
+      --string: radial-gradient(farthest-side at 0% 0%, #0000 48%, #00f 60%, #0000 0)0 100% / 100% 100% no-repeat;
+        height: 120%;
+        background:
+          var(--string),
+          radial-gradient(50% 25% at 45% 22%, #00f 90%, #0000 0),
+          #fff;
+      }
+    }
+  }
+  
+  /* fast */
+  section.a12 {
+    left: 23%;
+    top: 2%;
+    
+    .bubble {
+      height: 50%;
+      top: 25%;
+      left: 36%;
+      
+      &::before {
+        --string: radial-gradient(farthest-side at -10% 10%, #0000 45%, #00f 60%, #0000 0)0 100% / 100% 100% no-repeat;
+        height: 150%;
+        background:
+          var(--string),
+          radial-gradient(50% 25% at 45% 19%, #00f 80%, #0000 0),
+          #fff;
+      }
+      &::after {
+        top: 2%;
+        content: "I am speed! \a ...I mean... \a I will be speed!";
+        white-space: pre-wrap;
+      }
+    }
+    div.character {
+      .body {
+        &::before {
+          content: "";
+          width: 100%;
+          height: 20%;
+          border-block: 0.18em solid;
+          background: #fff;
+          top: 15%;
+          transform: skewY(-2deg);
+        }
+        
+        div.mouth {
+          height: 4%;
+          bordeR: 0.15em solid;
+          background: #fff;
+          border-radius: 4em;
+          box-sizing: content-box;
+        }
+      }
+    }
+  }
+  
+  /* bold */
+  section.a13 {
+    top: 5%;
+    right: -1%;
+    
+    .bubble {
+      height: 40%;
+      left: 20%;
+      top: 16%;
+      &::before {
+        --string: radial-gradient(farthest-side at -10% 10%, #0000 40%, #00f 60%, #0000 0)0 100% / 100% 100% no-repeat;
+        height: 130%;
+        background:
+          var(--string),
+          radial-gradient(50% 25% at 45% 19%, #00f 80%, #0000 0),
+          #fff;
+      }
+      &::after {
+        content: "I always make bold statements";
+        scale: 0.85 1.2;
+        letter-spacing: -0.025em;
+      }
+    }
+    
+    div.character.character-1 {
+      left: -10%;
+      .body {
+        left: 50%;
+        translatE: -50%;
+         height: 120%;
+        width: 70%;
+        border-width: 0.1em;
+      }
+      .legs {
+        border-width: 0.1em;
+      }
+    }
+    
+    div.character.character-2 {
+      left: 46%;
+      scale: -1 1;
+      .body {
+        transform-origin: 50% 100%;
+        rotate: -2deg;
+        left: 50%;
+        translatE: -50%;
+         height: 50%;
+        width: 140%;
+        border-width: 0.25em;
+        .eyes {
+          width: 30%;
+        }
+        
+        .mouth {
+          width: 12%;
+          scale: 1 -1;
+          top: 80% !important;
+          rotate: -4deg;
+        }
+      }
+      .legs {
+        border-width: 0.25em;
+      }
+    }
+  }
+  
+  /* straight */
+  section.a14 {
+    top: 12%;
+    left: 41.5%;
+    top: 64%;
+    left: 19%;
+    
+    .line {
+      left: -8%;
+      top: 55%;
+      width: 20%;
+      font-size: 2em;
+      text-decoration: underline wavy #d00;
+    }
+    
+    .bubble {
+      top: 14%;
+      left: 15%;
+      
+      &::before {
+        --string: radial-gradient(farthest-side at 110% 10%, #0000 43%, #00f 60%, #0000 0)0 0% / 80% 90% no-repeat;
+        height: 100%;
+        background:
+          var(--string),
+          radial-gradient(50% 25% at 45% 19%, #00f 80%, #0000 0),
+          #fff;
+      }
+      &::after {
+        top: -5%;
+        content: "Ahh! A perfectly straight and direct line";
+        text-wrap: balance;
+        content: "Ahh! A perfectly straight line!";
+      }
+    }
+    
+    .character {
+      left: auto;
+      right: 0;
+      scale: -1 1;
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<article>
+  <h1>The Perfect <span>CSS Stylesheet</span> Should Be...</h1>
+
+  <!-- Clear - done -->
+  <section class="a1">
+    <h2><span>Clear</span> as <br><code>&nbsp;&nbsp;filter:blur(50px)</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visible - done -->
+  <section class="a2">
+    <h2 style="text-align:center;"><span>Visible</span> as <code>display:none</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+    </div>
+  </section>
+
+  <!-- Always on top -->
+  <section class="a3">
+    <h2><span>Always on top</span> as<br>&nbsp;&nbsp;&nbsp;&nbsp;<code>z-index:-1</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="body"></div>
+      </div>
+      <div class="papers paper0"></div>
+      <div class="papers paper2"></div>
+      <div class="papers paper1"></div>
+    </div>
+  </section>
+
+  <!-- Sharp -->
+  <section class="a4">
+    <h2><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sharp</span> as <br><code style="font-size: 1.25em;white-space:pre">image-rendering:pixelated</code></h2>
+    <div role="img">
+    </div>
+  </section>
+
+  <!-- Actionable -->
+  <section class="a5">
+    <h2><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Actionable</span> as <br><code>&nbsp;&nbsp;pointer-events:none</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="glasses"></div>
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic -->
+  <section class="a6">
+    <h2><span>Dynamic</span> as <br><code style="margin-lefT:-0.4em;font-size: 1.25em;white-space:pre">animation-play-state:paused</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consistent -->
+  <section class="a7">
+    <h2><span>Consistent</span> as <code>order:random(1,999)</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+          <div class="arm arm1"></div>
+          <div class="arm arm2"></div>
+          <div class="boxes">
+            <div class="box">3</div>
+            <div class="box">1</div>
+            <div class="box">4</div>
+            <div class="box">2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restrained -->
+  <section class="a8">
+    <h2><span>Restrained</span> as <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overflow:visible</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">display:grid; place&#8209;items:center; overflow:visible; font&#8209;size:0.75em; white&#8209;space:pre&#8209;wrap; font&#8209;family:monospace,monospace; box&#8209;sizing:border&#8209;box; scale:1&nbsp;1.2;
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All-round -->
+  <section class="a9">
+    <h2><span>All-round</span> as <br><code>&nbsp;&nbsp;&nbsp;border-radius:0</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Readable -->
+  <section class="a10">
+    <h2><span>Readable</span> as <code>background:currentColor</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintainable -->
+  <section class="a11">
+    <h2><span>Maintainable</span> as <code>&nbsp;&nbsp;!important</code></h2>
+    <div role="img">
+      <div class="whisper">...we will deal with that later...</div>
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fast -->
+  <section class="a12">
+    <h2><span>&nbsp;&nbsp;Fast</span> as<br> <code>animation-delay:1000s</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bold -->
+  <section class="a13">
+    <h2><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bold</span> as <br><code>font-weight:100</code></h2>
+    <div role="img">
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+      
+      <div class="character character-2">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Straight -->
+  <section class="a14">
+    <h2><span>&nbsp;&nbsp;Straight</span> as<br><code style="white-space:pre;">text-decoration-style:wavy</code></h2>
+    <div role="img">
+      <div class="line">A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</div>
+      <div class="bubble"></div>
+      <div class="character character-1">
+        <div class="legs"></div>
+        <div class="shadow"></div>
+        <div class="body">
+          <div class="eyes right"></div>
+          <div class="mouth right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

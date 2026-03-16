@@ -1867,4 +1867,12 @@ const posts = [
     vertical: true,
     ariaLabel: "Cartoon with two people at the gates of Heaven. One is checking a list saying 'Sorry, but web developers' admission is now inversely proportional to their number of HTML classes.' The other person looks concerned while wearing a t-shirt with the Tailwind logo. Off-panel, someone with a red hand holding a pitchfork says 'You are coming with me, buddy!'"
   },
+  {
+    id: 241,
+    uid: "the-perfect-css-stylesheet-should-be",
+    boxes: 1,
+    title: "The Perfect CSS Stylesheet Should Be...",
+    vertical: true,
+    ariaLabel: "The perfect CSS stylesheet should be... Visible as display:none; Clear as filter:blur(50px); Sharp as image-rendering:pixelated; Always on top as z-index:-1; Actionable as pointer-events:none; Dynamic as animation-play-state:paused; Fast as animation-delay:1000s; Consistent as order:random(1,999); Restrained as overflow:visible; All-round as border-radius:0; Straight as text-decoration-style:wavy; Readable as background:currentColor; Bold as font-weight:100; Maintainable as !important."
+  },
 ]
