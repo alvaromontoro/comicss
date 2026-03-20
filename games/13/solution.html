@@ -9,16 +9,16 @@
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Game 7 Solution</title>
+    <title>comiCSS - Game 13 Solution</title>
 
-    <meta property="og:title" content="Chain - comiCSS" />
+    <meta property="og:title" content="Branches - comiCSS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://comicss.art" />
     <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
     <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://comicss.art/">
-    <meta name="twitter:title" content="Chain - comiCSS">
+    <meta name="twitter:title" content="Branches - comiCSS">
     <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
     <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
     <link rel="monetization" href="https://fynbos.me/alvaro">
@@ -97,8 +97,8 @@
     </header>
 
     <main id="main" class="game-main">
-      <h1>Chain Solution</h1>
-      <p>This page contains the solution to the <a href="./">Chain game for January 28, 2026</a>.</p>
+      <h1>Branches Solution</h1>
+      <p>This page contains the solution to the <a href="./">Branches game for March 19, 2026</a>.</p>
       <p>
         To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
         them whenever you're ready. Or mouse over each answer to see it temporarily.
@@ -108,32 +108,35 @@
         <span>Show answers</span>
       </label>
       <style>
-        ol.answers li {
-          list-style: none;
-          display: grid;
-          grid-template-columns: 2.5em auto;
-          gap: 0.25em;
+        .solution-image {
+          filter: blur(2em);
+          rotate: 180deg;
+          transition: filter 1s, rotate 0.5s;
+          margin-top: 2em;
         }
+
         ol.answers li span {
           filter: blur(0.25rem);
           transition: filter 1s;
         }
-        :has(#show-answers:checked) ol li span {
-          filter: blur(0);
-        }
+        :has(#show-answers:checked) ol li span,
+        :has(#show-answers:checked) .solution-image,
+        .solution-image:hover,
         ol.answers li:hover span {
           filter: blur(0);
+          rotate: 0deg;
         }
       </style>
       <ol class="answers">
-        <li>1-10: <span>CARET-SHAPE</span></li>
-        <li>1-3: <span>CLEAR</span></li>
-        <li>2-4: <span>AZURE</span></li>
-        <li>6-4: <span>SCALE (as ELACS)</span></li>
-        <li>7-5: <span>HYPOT (as TOPYH)</span></li>
-        <li>9-7: <span>PITCH (as HCTIP)</span></li>
-        <li>8-10: <span>ANGLE</span></li>
+        <li><span>BACKGROUND</span> (root)</li>
+        <li><span>SIZE</span></li>
+        <li><span>POSITION</span></li>
+        <li><span>ATTACHMENT</span></li>
+        <li><span>COLOR</span></li>
+        <li><span>REPEAT</span></li>
+        <li><span>IMAGE</span></li>
       </ol>
+      <img class="solution-image" src="./solution.webp" alt="A diagram showing the seven words identified by colors." />
     </main>
 
     <footer>
