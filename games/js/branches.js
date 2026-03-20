@@ -164,6 +164,14 @@ function stopDragging() {
   lastDraggedIndex = -1;
 }
 
+function getButtonAtPoint(x, y) {
+  const element = document.elementFromPoint(x, y);
+  if (element && element.classList.contains("board") === false) {
+    return element.closest(".board button");
+  }
+  return null;
+}
+
 buttons.forEach((button, index) => {
   button.addEventListener("pointerdown", function(event) {
     if (event.button !== 0 || button.classList.contains("solved")) {
@@ -176,15 +184,26 @@ buttons.forEach((button, index) => {
     handleSelection(button, index);
     event.preventDefault();
   });
+});
 
-  button.addEventListener("pointerenter", function() {
-    if (!isDragging || lastDraggedIndex === index) {
-      return;
-    }
+board.addEventListener("pointermove", function(event) {
+  if (!isDragging) {
+    return;
+  }
 
-    lastDraggedIndex = index;
-    handleSelection(button, index);
-  });
+  const button = getButtonAtPoint(event.clientX, event.clientY);
+  if (!button) {
+    return;
+  }
+
+  const buttonIndex = Array.from(buttons).indexOf(button);
+  if (buttonIndex === -1 || lastDraggedIndex === buttonIndex) {
+    return;
+  }
+
+  lastDraggedIndex = buttonIndex;
+  handleSelection(button, buttonIndex);
+  event.preventDefault();
 });
 
 board.addEventListener("pointerleave", stopDragging);
