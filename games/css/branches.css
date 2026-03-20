@@ -26,11 +26,15 @@ dialog button,
 .buttons button {
   background: #36d;
   color: #fff;
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 0.25em;
   height: 3em;
   font-size: 1em;
   padding: 0;
+
+  &:hover {
+    background: #47e !important;
+  }
 }
 
 dialog button {
@@ -48,6 +52,7 @@ article {
   container-type: inline-size;
   width: var(--size);
   margin: auto;
+  margin-bottom: 4em;
 
   @media (width > 500px) {
     --size: 400px;
@@ -202,5 +207,13 @@ article {
       transform: translate(-75%, 0%);
       background: var(--bgColor);
     }
+  }
+}
+
+
+.game-main {
+  h2 {
+    text-align: center;
+    font-size: var(--font);
   }
 }
