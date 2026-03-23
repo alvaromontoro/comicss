@@ -4604,4 +4604,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Hopscotch</title>
+    <link href="https://comicss.art/comics/243" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/243/hopscotch.html"/>
+    <id>https://comicss.art/comics/243</id>
+    <updated>2026-03-23T00:00:00Z</updated>
+    <summary>New Cartoon: Hopscotch</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/243/hopscotch.png" alt="cartoon with two tall panels diplaying an aereal view of a kid next to a hopscotch game drawn on the ground. Both panels have some CSS code that make the hopscotch a flex display. In the first panel, the CSS has align-items:center and all the numbers are together as they'd be in a traditional hopscotch game. In the second panel, the CSS selector is .hopscotch.expert-mode and it has align-items:space-between, so all the rows of numbers are widely separated." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -1883,4 +1883,11 @@ const posts = [
     vertical: true,
     ariaLabel: "The perfect CSS stylesheet should be... Visible as display:none; Clear as filter:blur(50px); Sharp as image-rendering:pixelated; Always on top as z-index:-1; Actionable as pointer-events:none; Dynamic as animation-play-state:paused; Fast as animation-delay:1000s; Consistent as order:random(1,999); Restrained as overflow:visible; All-round as border-radius:0; Straight as text-decoration-style:wavy; Readable as background:currentColor; Bold as font-weight:100; Maintainable as !important."
   },
+  {
+    id: 243,
+    uid: "hopscotch",
+    boxes: 2,
+    title: "Hopscotch",
+    ariaLabel: "cartoon with two tall panels diplaying an aereal view of a kid next to a hopscotch game drawn on the ground. Both panels have some CSS code that make the hopscotch a flex display. In the first panel, the CSS has align-items:center and all the numbers are together as they'd be in a traditional hopscotch game. In the second panel, the CSS selector is .hopscotch.expert-mode and it has align-items:space-between, so all the rows of numbers are widely separated."
+  },
 ]

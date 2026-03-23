@@ -2426,5 +2426,15 @@
       <enclosure url="https://comicss.art/comics/242/the-perfect-css-stylesheet-should-be-2.png" length="254000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/243</guid>
+      <title>Hopscotch</title>
+      <link>https://comicss.art/comics/243</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/243/hopscotch.png" length="141000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
