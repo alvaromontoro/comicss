@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: Hopscotch</title>
+
+    <meta property="og:title" content="comiCSS: Hopscotch" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/243" />
+    <meta property="og:image" content="https://comicss.art/comics/243/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://comicss.art/comics/243">
+    <meta name="twitter:title" content="comiCSS: Hopscotch">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/243/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+  --floor: #777;
+  --shadow: #666;
+  --chalk: #fffc;
+  font-size: 1.1vmin;
+  width: 90em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+
+  section {
+    border: 0.5em solid;
+    position: relative;
+    aspect-ratio: 0.5;
+    perspective: 50em;
+    overflow: hidden;
+    background: 
+      linear-gradient(to bottom left, #fff2, #00000018),
+      var(--floor);
+
+    *, *::before, *::after {
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      width: 100%;
+      font-size: 4em;
+      border-bottom: 0.125em solid;
+      text-align: center;
+      margin: 0;
+      background: #ffc;
+      font-family: 'Amatic SC';
+
+      span {
+        position: relative;
+        scale: 1 0.85;
+        display: inline-block;
+      }
+    }
+    
+    .code {
+      top: 2%;
+      left: 50%;
+      translate: -50%;
+      width: 60%;
+      background: 
+        radial-gradient(circle at 1em 1em, #d55 0.35em, #0000 calc(0.35em + 1px)),
+        radial-gradient(circle at 2.1em 1em, #dd5 0.35em, #0000 calc(0.35em + 1px)),
+        radial-gradient(circle at 3.2em 1em, #5d5 0.35em, #0000 calc(0.35em + 1px)),
+        #222;
+      border-radius: 0.5em;
+      white-space: pre-wrap;
+      color: #eee;
+      font-family: monospace, monospace;
+      font-size: 1.6em;
+      padding: 1em 1em 0em 1.5em;
+      line-height: 1.5;
+      font-size: 1.35em;
+      
+      * { position: relative; }
+      
+      .p { color: #d9d; }
+      .s { color: #dd5; }
+      .v { color: #d85; }
+    }
+
+    .sidewalk {
+      width: 60%;
+      height: 75%;
+      left: 50%;
+      translate: -50% 0%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      bottom: 4%;
+      font-size: 0.8em;
+/*       rotate: 180deg; */
+
+      * {
+        position: relative;
+      }
+
+      > div {
+        display: flex;
+        
+        &:nth-child(1) { translate: 0 0.3em; }
+        &:nth-child(2) { translate: 0 0.6em; }
+        &:nth-child(3) { translate: 0 0.2em; }
+        &:nth-child(4) { translate: 0 0.3em; }
+        &:nth-child(5) { translate: 0 0.1em; }
+        &:nth-child(6) { translate: 0 0.1em; }
+      }
+
+      .num {
+        border: 0.1em solid var(--chalk);
+        color: var(--chalk);
+        font-size: 2.3em;
+        padding: 0.3em 0.75em;
+        font-family: 'Patrick Hand';
+        font-weight: 600;
+      }
+    }
+
+    &:nth-child(2) {
+      .person {
+        top: 85%;
+      }
+      .code {
+        width: 75%;
+      }
+      .sidewalk {
+        justify-content: space-between;
+        
+        .num {
+         font-size: 2.3em;
+        }
+      }
+    }
+  }
+}
+
+.person {
+  width: 6em;
+  height: 3em;
+  scale: 0.8;
+  rotate: 45deg;
+  top: 70%;
+  left: 30%;
+  --shirt: #69f;
+  --hair: #531;
+  
+  &::after {
+    content: "";
+    inset: 0;
+    background:
+      radial-gradient(closest-side circle, var(--hair) calc(100% - 1px), #0000),
+      radial-gradient(50% 35% at 50% 55%, var(--shirt) calc(100% - 1px), #0000)
+  }
+  
+  &::before {
+    content: "";
+    width: 100%;
+    height: 500%;
+    background: linear-gradient(var(--shadow) 80%, #0000 0), radial-gradient(25% 12% at 50% 88%, var(--shadow) 99.99999%,#0000);
+    top: 50%;
+    clip-path: polygon(18% 0, 28% 0, 48% 35%, 52% 35%, 72% 0, 82% 0, 80% 55%, 80% 60%, 90% 35%, 100% 37%, 87% 78%, 83% 80%, 80% 100%, 20% 100%, 17% 80%, 0 37%, 10% 35%, 20% 60%, 20% 55%);
+    mask: linear-gradient(#000, #000c);
+  }
+  
+  &.person-2 {
+    --shirt: #ddc;
+    rotate: 5deg;
+    left: 50%;
+    translate: -50%;
+    top: 75%;
+    &::before {
+      transform-origin: 50% 0;
+      transform: skew(-45deg) scale(1, 0.7);
+    }
+  }
+  
+  .drop {
+    width: 20%;
+    aspect-ratio: 1;
+    background: 
+      radial-gradient(circle at 45% 69%, #fff 20%, #0ff 0);
+    z-index: 1;
+    border-radius: 0 50% 50% 50%;
+    left: 65%;
+    top: 45%;
+    rotate: 0deg;
+  }
+}
+    </style>
+  </head>
+  <body>
+<article>
+  <section>
+<!--     <h2>
+      <span>Flex Hopscotch</span>
+    </h2> -->
+    <div class="person person-1"></div>
+<!--     <div class="person person-2"></div> -->
+    <div class="code">
+<span class="s">.hopscotch</span> {
+<span class="p">  display</span>: <span class="v">flex</span>;
+<span class="p">  align-items</span>: <span class="v">center</span>;
+<span>}</span>
+    </div>
+    <div class="sidewalk">
+      <div class="num">10</div>
+      <div>
+        <div class="num">9</div>
+        <div class="num">8</div>
+      </div>
+      <div class="num">7</div>
+      <div>
+        <div class="num">6</div>
+        <div class="num">5</div>
+      </div>
+      <div class="num">4</div>
+      <div>
+        <div class="num">3</div>
+        <div class="num">2</div>
+      </div>
+      <div class="num">1</div>
+    </div>
+  </section>
+  <section>
+<!--     <h2>
+      <span>Flex Hopscotch Expert Mode</span>
+    </h2> -->
+    <div class="person person-1"><div class="drop"></div></div>
+<!--     <div class="person person-2"></div> -->
+    <div class="code">
+<span class="s">.hopscotch.expert-mode</span> {
+<span class="p">  display</span>: <span class="v">flex</span>;
+<span class="p">  justify-content</span>: <span class="v">space-between</span>;
+<span>}</span>
+    </div>
+    <div class="sidewalk">
+      <div class="num">10</div>
+      <div>
+        <div class="num">9</div>
+        <div class="num">8</div>
+      </div>
+      <div class="num">7</div>
+      <div>
+        <div class="num">6</div>
+        <div class="num">5</div>
+      </div>
+      <div class="num">4</div>
+      <div>
+        <div class="num">3</div>
+        <div class="num">2</div>
+      </div>
+      <div class="num">1</div>
+    </div>
+  </section>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
