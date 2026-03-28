@@ -1,9 +1,13 @@
+let WIDTH = 25; // total number of columns
+let HEIGHT = 30; // total number of rows
+let PUZZLEID = 0; // unique identifier for the current puzzle, used for saving/loading
+
 // Track the current direction (across or down)
 let currentDirection = 'across';
-const MAX = 103; // total number of words
 const cw = document.querySelector('#crossword');
 const inputs = cw.querySelectorAll('input[pattern]');
 const scrim = document.querySelector('.scrim');
+const tools = document.querySelector('.game-tools');
 
 // // DELETE! for testing purposes while developing the game
 // cw.querySelectorAll('input[pattern]').forEach((i, idx) => {
@@ -11,6 +15,12 @@ const scrim = document.querySelector('.scrim');
 //     i.value = i.getAttribute('pattern')[1];
 //   }
 // });
+
+function updateValues(width, height, id) {
+  WIDTH = width;
+  HEIGHT = height;
+  PUZZLEID = id;
+}
 
 // add a close button to the solution modal
 scrim.setAttribute('class', 'scrim-processed');
@@ -21,12 +31,49 @@ closeButton.addEventListener('click', () => {
 });
 scrim.querySelector('div').appendChild(closeButton);
 
+// create new button for clearing puzzle
+const clearButton = document.createElement('button');
+clearButton.textContent = 'Clear';
+clearButton.addEventListener('click', () => {
+  if (!confirm('Are you sure you want to clear the puzzle?')) {
+    return;
+  }
+  inputs.forEach(input => {
+    input.classList.toggle('invalid', false);
+    input.value = '';
+  });
+  scrim.classList.remove('open');
+  savePuzzle();
+});
+tools.querySelector('.game-buttons').appendChild(clearButton);
+
+const checkButton = document.querySelector('#check-puzzle');
+checkButton.setAttribute('id', 'check-puzzle-processed');
+checkButton.addEventListener('click', () => {
+  inputs.forEach(input => input.classList.toggle('invalid', input.value !== '' && !input.checkValidity()));
+  checkSolution();
+});
+
+function savePuzzle() {
+  const data = Array.from(inputs).map(input => input.value);
+  localStorage.setItem(`crossword-puzzle-${PUZZLEID}`, JSON.stringify(data));
+}
+
+function loadPuzzle() {
+  const data = JSON.parse(localStorage.getItem(`crossword-puzzle-${PUZZLEID}`) || '[]');
+  if (data.length === inputs.length) {
+    inputs.forEach((input, idx) => input.value = data[idx]);
+  }
+}
+
 // check if there are still invalid/missing letters
 function checkSolution() {
   const error = cw.querySelector('input:invalid');
   if (!error) {
     scrim.classList.add('open');
   }
+
+  savePuzzle();
 }
 
 // initialize the tabbing functionality
@@ -85,7 +132,7 @@ function moveRight(input) {
   const label = input.parentElement;
   const tiles = label.parentElement.children;
   const index = [...tiles].indexOf(label);
-  const max = index + 25 - index%25;
+  const max = index + WIDTH - index % WIDTH;
   const pos = index + 1;
 
   // the for loop is to move/limit movement across the whole row, not only word
@@ -103,7 +150,7 @@ function moveLeft(input) {
   const label = input.parentElement;
   const tiles = label.parentElement.children;
   const index = [...tiles].indexOf(label);
-  const min = Math.floor(index / 25) * 25;
+  const min = Math.floor(index / WIDTH) * WIDTH;
   const pos = index - 1;
 
   // the for loop is to move/limit movement across the whole row, not only word
@@ -121,7 +168,7 @@ function moveUp(input) {
   const label = input.parentElement;
   const tiles = label.parentElement.children;
   const index = [...tiles].indexOf(label);
-  const pos = index - 25;
+  const pos = index - WIDTH;
   if (tiles[pos] && tiles[pos].tagName.toLowerCase() !== 'span') {
     tiles[pos].focus();
     return true;
@@ -134,7 +181,7 @@ function moveDown(input) {
   const label = input.parentElement;
   const tiles = label.parentElement.children;
   const index = [...tiles].indexOf(label);
-  const pos = index + 25;
+  const pos = index + WIDTH;
   if (tiles[pos] && tiles[pos].tagName.toLowerCase() !== 'span') {
     tiles[pos].focus();
     return true;
@@ -168,6 +215,7 @@ cw.addEventListener('keydown', (event) => {
     event.preventDefault();
     moveNext(input);
     checkSolution();
+    input.classList.toggle('invalid', false);
     return;
   }
 

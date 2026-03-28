@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="../css/crosswords2.css" />
-    <script src="../js/crosswords2.js" defer></script>
   </head>
   <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -124,11 +123,15 @@
       </div>
 
       
-
-      <label for="mode">
-        <input id="mode" type="checkbox" role="switch" checked>
-        Solid background
-      </label>
+      <div class="game-tools">
+        <label for="mode">
+          <input id="mode" type="checkbox" role="switch" checked>
+          Solid background
+        </label>
+        <div class="game-buttons">
+          <button id="check-puzzle">Check Puzzle</button>
+        </div>
+      </div>
 
 <style>
 #crossword {
@@ -2635,5 +2638,11 @@ Puzzle schema and solution line by line (it's a 25x30 grid):
       &mdash; <a href="/atom.xml">Atom Feed</a>
       &mdash; <a href="/rss.xml">RSS Feed</a>
     </footer>
+
+    <script src="../js/crosswords2.js"></script>
+    <script>
+      updateValues(25, 30, 12);
+      loadPuzzle();
+    </script>
   </body>
 </html>

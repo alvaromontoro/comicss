@@ -40,7 +40,6 @@ main {
 
   [for="mode"] {
     display: inline-flex;
-    margin-bottom: 1em;
     align-items: center;
     border-radius: 2em;
     padding: 0.125em;
@@ -245,6 +244,16 @@ body:has(:is([data-o="b"],[data-o="a"])[data-n="102"] input:focus) #hoverhint::b
 body:has(:is([data-o="b"],[data-o="a"])[data-n="103"] input:focus) #hoverhint::before { content: "Across: " var(--across-103); }
 body:has(:is([data-o="b"],[data-o="a"])[data-n="104"] input:focus) #hoverhint::before { content: "Across: " var(--across-104); }
 body:has(:is([data-o="b"],[data-o="a"])[data-n="105"] input:focus) #hoverhint::before { content: "Across: " var(--across-105); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="106"] input:focus) #hoverhint::before { content: "Across: " var(--across-106); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="107"] input:focus) #hoverhint::before { content: "Across: " var(--across-107); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="108"] input:focus) #hoverhint::before { content: "Across: " var(--across-108); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="109"] input:focus) #hoverhint::before { content: "Across: " var(--across-109); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="110"] input:focus) #hoverhint::before { content: "Across: " var(--across-110); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="111"] input:focus) #hoverhint::before { content: "Across: " var(--across-111); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="112"] input:focus) #hoverhint::before { content: "Across: " var(--across-112); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="113"] input:focus) #hoverhint::before { content: "Across: " var(--across-113); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="114"] input:focus) #hoverhint::before { content: "Across: " var(--across-114); }
+body:has(:is([data-o="b"],[data-o="a"])[data-n="115"] input:focus) #hoverhint::before { content: "Across: " var(--across-115); }
 
 body:has(:is([data-o="b"],[data-o="d"])[data-n="1"] input:focus) #hoverhint::after { content: "Down: " var(--down-1); }
 body:has(:is([data-o="b"],[data-o="d"])[data-n="2"] input:focus) #hoverhint::after { content: "Down: " var(--down-2); }
@@ -351,6 +360,16 @@ body:has(:is([data-o="b"],[data-o="d"])[data-n="102"] input:focus) #hoverhint::a
 body:has(:is([data-o="b"],[data-o="d"])[data-n="103"] input:focus) #hoverhint::after { content: "Down: " var(--down-103); }
 body:has(:is([data-o="b"],[data-o="d"])[data-n="104"] input:focus) #hoverhint::after { content: "Down: " var(--down-104); }
 body:has(:is([data-o="b"],[data-o="d"])[data-n="105"] input:focus) #hoverhint::after { content: "Down: " var(--down-105); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="106"] input:focus) #hoverhint::after { content: "Down: " var(--down-106); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="107"] input:focus) #hoverhint::after { content: "Down: " var(--down-107); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="108"] input:focus) #hoverhint::after { content: "Down: " var(--down-108); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="109"] input:focus) #hoverhint::after { content: "Down: " var(--down-109); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="110"] input:focus) #hoverhint::after { content: "Down: " var(--down-110); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="111"] input:focus) #hoverhint::after { content: "Down: " var(--down-111); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="112"] input:focus) #hoverhint::after { content: "Down: " var(--down-112); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="113"] input:focus) #hoverhint::after { content: "Down: " var(--down-113); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="114"] input:focus) #hoverhint::after { content: "Down: " var(--down-114); }
+body:has(:is([data-o="b"],[data-o="d"])[data-n="115"] input:focus) #hoverhint::after { content: "Down: " var(--down-115); }
 
 article {
   --extra: drop-shadow(0 0 5px #0007);
@@ -393,6 +412,7 @@ article {
       width: 1px;
       height: 1px;
       overflow: clip;
+      clip-path: polygon(0 0, 0 0, 0 0);
     }
 
     &[data-o] {
@@ -435,6 +455,12 @@ article {
 
     &:focus {
       background: #def;
+    }
+
+    &.invalid {
+      background:
+        radial-gradient(farthest-side circle at 50% 50%, #0000 85%, #d55 0 95%, #0000 0),
+       #fdd;
     }
 
     &:focus-visible {
@@ -552,4 +578,28 @@ article {
   li {
     font-size: 0.9em;
   }
+
+  .game-tools {
+    display: none !important;
+  }
+}
+
+body:has(#check-puzzle:active) {
+  article {
+    input:valid {
+      background: #cfc;
+    }
+    input:invalid {
+      background:
+        radial-gradient(farthest-side circle at 50% 50%, #0000 85%, #d55 0 95%, #0000 0),
+       #fdd;
+    }
+  }
+}
+
+.game-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 1em;
 }
