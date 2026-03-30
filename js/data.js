@@ -1890,4 +1890,11 @@ const posts = [
     title: "Hopscotch",
     ariaLabel: "cartoon with two tall panels diplaying an aereal view of a kid next to a hopscotch game drawn on the ground. Both panels have some CSS code that make the hopscotch a flex display. In the first panel, the CSS has align-items:center and all the numbers are together as they'd be in a traditional hopscotch game. In the second panel, the CSS selector is .hopscotch.expert-mode and it has align-items:space-between, so all the rows of numbers are widely separated."
   },
+  {
+    id: 244,
+    uid: "common-enemy",
+    boxes: 4,
+    title: "Setting Aside Differences",
+    ariaLabel: "comic with 4 panels in a 2x2 grid, two characters are arguing and getting more and more confrontational about grid or flexbox, then a third character pops in and suggest float:left, and the two characters unite to beat the third character"
+  },
 ]
