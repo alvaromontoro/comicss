@@ -273,11 +273,24 @@ a.skip-link:focus {
 }
 
 .games table tr th:first-of-type {
-  width: 70%;
+  width: 100%;
+}
+
+.games table tr td {
+  vertical-align: middle;
 }
 
 .games table tr td:last-of-type {
   text-align: right;
+}
+
+.games table tr td img {
+  width: 3em;
+  height: 3em;
+  border: 2px solid;
+  vertical-align: middle;
+  margin-inline-end: 0.5em;
+  border-radius: 0.5em;
 }
 
 .archive table tr th:first-of-type {
