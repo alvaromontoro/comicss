@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #244: A Common Enemy</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/244/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/244/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+
+[arms~="left-70"] .arm ~ .arm {
+  rotate: 60deg !important;
+  top: 12%;
+  left: 5% !important;
+  
+  &::before {
+    clip-path: none !important;
+  }
+  &::after {
+    translate: 50% 105%;
+    rotate: -120deg !important;
+  }
+}
+
+[arms~="left-45"] .arm ~ .arm { 
+  rotate: 35deg !important; 
+  top: 14%;
+  left: 5% !important;
+  
+  &::before {
+    clip-path: none !important;
+  }
+}
+
+css-panel {
+  &:nth-child(2) {
+    css-person[character="al"] {
+      rotate: 1deg;
+    }
+    css-person[character="john"] {
+      rotate: -1deg;
+    }
+  }
+  
+  &:nth-child(3) {
+    css-speech {
+      &::before {
+        transform: skew(0deg);
+      }
+    }
+    css-person[character="al"] {
+      rotate: 2deg;
+      
+      .face {
+        --skin: linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, linear-gradient(#f003, #f000 75%), #fff;
+      }
+    }
+    css-person[character="john"] {
+      rotate: -2.5deg;
+      .face {
+        --skin: linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, linear-gradient(#f003, #f000 75%), #fff;
+      }
+    }
+  }
+  
+  &:nth-child(4) {
+    css-person[character="al"] {
+      .eye {
+        translate: 50% 0 !important;
+      }
+    }
+    
+    css-person[character="john"] {
+      .head {
+        .face {
+          .eye {
+            left: 35%;
+            
+            & ~ & {
+              left:70%;
+            }
+          }
+        }
+      }
+    }
+    
+    css-person[character="steve"] {
+      rotate: -20deg;
+      
+      .head {
+        .face {
+          .eye {
+            left: 35%;
+            
+            & ~ & {
+              left:70%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  &:nth-child(5) {
+    .skull {
+      --c: #bbb;
+      width: 4em;
+      aspect-ratio: 1;
+      left: 46%;
+      top: 29%;
+      translate: -50% -50%;
+      background:
+        radial-gradient(circle at 35% 45%, #fff 0.4em, #0000 0),
+        radial-gradient(circle at 65% 45%, #fff 0.4em, #0000 0),
+/*         radial-gradient(circle at 43% 64%, #fff 0.15em, #0000 0),
+        radial-gradient(circle at 57% 64%, #fff 0.15em, #0000 0), */
+        radial-gradient(circle at 50% 40%, var(--c) 1.5em, #0000 calc(1.5em + 1px)),
+        linear-gradient(var(--c) 0 0) 30% 90% / 0.6em 1em,
+        linear-gradient(var(--c) 0 0) 50% 90% / 0.6em 1em,
+        linear-gradient(var(--c) 0 0) 72% 90% / 0.6em 1em,
+        #f000;
+      background-repeat: no-repeat;
+    }
+    .wavy-line {
+      height: 0;
+      text-decoration: underline wavy #ccc;
+      font-size: 3em;
+      font-family: monospace, monospace;
+      rotate: 90deg;
+      line-height: 0;
+      left: 50%;
+      top: 55%;
+      translate: -50% -50%;
+    }
+    .line {
+      border-bottom: 0.35em solid;
+      width: 2em;
+      
+      &.line-1 {
+        rotate: -50deg;
+        top: 92%;
+        left: 90%;
+      }
+      
+      &.line-2 {
+        rotate: -60deg;
+        top: 95%;
+        left: 66%;
+      }
+      
+      &.line-3 {
+        rotate: -60deg;
+        top: 89%;
+        left: 65%;
+      }
+      &.line-4 {
+        rotate: 10deg;
+        top: 81%;
+        left: 84%;
+      }
+      
+      &.line-5 {
+        rotate: 10deg;
+        top: 79.75%;
+        left: 84.5%;
+        width: 1.5em;
+      }
+     
+      &.line-6 {
+        rotate: -48deg;
+        top: 85.5%;
+        left: 7%;
+        width: 3em;
+      }
+      
+      &.line-7 {
+        rotate: -82deg;
+        top: 96%;
+        left: 9%;
+        width: 2.5em;
+      }
+    }
+    css-person[character="al"] {
+      .face {
+        --skin: linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, linear-gradient(#f002, #f000 50%), #fff;
+      }
+    }
+    css-person[character="steve"] {
+      rotate: -95deg;
+      translate: 0 82%;
+      
+      .hand {
+        top: 20%;
+        left: 300%;
+        
+        &::before {
+          content:"";
+          position: absolute;
+          width: 150%;
+          height: 100%;
+          border-bottom: 0.4em solid;
+          rotate: -5deg;
+          translate: -150% 30%;
+          filter: drop-shadow(0 0.8em) drop-shadow(0 -2.2em);
+          clip-path: polygon(0 -200%, 80% -100%, 100% 100%, 50% 200%, 20% 200%, 0 100%)
+        }
+        
+        &::after {
+          content: "";
+          width: 200%;
+          height: 200%;
+          position: absolute;
+          background: radial-gradient(farthest-side at 100% 100%, #0000 calc(99% - 0.4em), #000 0 99%, #0000) 5% 25% / 50% 60%, radial-gradient(farthest-side at 110% 110%, #0000 calc(99% - 0.4em), #000 0 99%, #0000) 35% 40% / 50% 50%, radial-gradient(130% 100% at 100% 100%, #0000 calc(99% - 0.4em), #000 0 99%, #0000) 70% 65% / 40% 50%, radial-gradient(130% 100% at 100% 100%, #0000 calc(99% - 0.4em), #000 0 99%, #0000) 65% 100% / 40% 50%, #f000;
+          background-repeat: no-repeat;
+          bottom:0;
+          mix-blend-mode: lighten;
+        }
+      }
+    }
+    
+    css-person[character="john"] {
+      rotate: -20deg;
+      translate: 0 5%;
+      
+      .hand {
+        top: 66%;
+        left: 20% !important;
+      }
+      
+      .face {
+        --skin: linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, linear-gradient(#f002, #f000 50%), #fff;
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="Setting Aside Differences">
+  <css-panel>
+    <css-speech line="longer" top="5" left="20"><code>display: flex;</code></css-speech>
+    <css-speech line="left-50" left="40" right-line style="top:17.5%"><code>display: grid;</code></css-speech>
+    <css-person character="al" left="5" mouth="frown small sided" eyebrows="angry high"></css-person>
+    <css-person character="john" facing="left" right="5" mouth="frown small sided" eyebrows="angry high"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech line="longer left-30" top="5" left="10" style="font-weight:bold"><code>display: flex;</code></css-speech>
+    <css-speech line="left-35" left="30" right-line style="top:17.5%;font-weight:bold;"><code>display: grid;</code></css-speech>
+    <css-person character="al" left="5" mouth="frown sided side-right" eyebrows="angry"></css-person>
+    <css-person character="john" facing="left" right="25" mouth="frown side-left" eyebrows="angry "></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech line="left-70 longer skewer" top="10" left="35" right-line><code>float: left;</code></css-speech>
+    <css-person character="al" left="5" mouth="frown sided side-right small" eyebrows="angry low"></css-person>
+    <css-person character="john" facing="left" right="30" mouth="surprise small side-left" eyebrows="suspicious angry"></css-person>
+    <css-person character="steve" left="70" arms="left-30 right--30" eyebrows="high"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech type="whisper" top="90" left="30" rotate="10" style="top:92%">*kick*</css-speech>
+    <css-speech type="whisper" top="95" left="35" rotate="-6">*kick*</css-speech>
+    <css-speech type="whisper" top="90" left="55" rotate="10" style="top: 88%; left:52%">*punch*</css-speech>
+    <css-speech type="whisper" top="90" left="50" rotate="-10" style="top:93%">*punch*</css-speech>
+    <css-person character="al" left="5" mouth="frown sided side-right" rotate="6" eyebrows="angry low" arms="left-45 left-fold--20 right--20 right-fold--20"></css-person>
+    <css-person character="john" facing="left" right="10" mouth="sad small side-right" eyebrows="angry low" arms="left-70 left-fold--120 right--50 right-fold--30"></css-person>
+    <css-person character="steve" left="25" arms="left--40 right--80 right-fold--15" eyebrows="high"></css-person>
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+<!--     <div class="line line-3"></div> -->
+    <div class="line line-4"></div>
+    <div class="line line-5"></div>
+    <div class="line line-6"></div>
+    <div class="line line-7"></div>
+    <div class="skull"></div>
+    <div class="wavy-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

@@ -2436,5 +2436,15 @@
       <enclosure url="https://comicss.art/comics/243/hopscotch.png" length="141000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/244</guid>
+      <title>Setting Aside Differences</title>
+      <link>https://comicss.art/comics/244</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/244/common-enemy.png" length="169000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

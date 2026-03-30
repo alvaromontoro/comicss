@@ -4623,4 +4623,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Setting Aside Differences</title>
+    <link href="https://comicss.art/comics/244" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/244/common-enemy.html"/>
+    <id>https://comicss.art/comics/244</id>
+    <updated>2026-03-30T00:00:00Z</updated>
+    <summary>New Cartoon: Setting Aside Differences</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/244/common-enemy.png" alt="comic with 4 panels in a 2x2 grid, two characters are arguing and getting more and more confrontational about grid or flexbox, then a third character pops in and suggest float:left, and the two characters unite to beat the third character" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
