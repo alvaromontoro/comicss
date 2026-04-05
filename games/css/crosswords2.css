@@ -602,4 +602,11 @@ body:has(#check-puzzle:active) {
   justify-content: space-between;
   align-items: center;
   margin-block-end: 1em;
+
+  .game-buttons {
+    button {
+      background: #36c;
+      color: #fff;
+    }
+  }
 }
