@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS Game - Crossword</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/games/images/crosswords2.png" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/games/images/crosswords2.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/crosswords2.css" />
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+  
+      <h1>Crossword</h1>
+
+      <div class="game-description">
+        <p>
+          Fill the crossword with the correct letters. Words will be read from left-to-right or
+          from top-to-bottom (unless otherwise indicated). Special characters like hyphens or colons
+          are omitted, so the answers will only contain letters (again, unless otherwise indicated).
+        </p>
+        <p>
+          Type to move from cell to cell, or use the tab key or arrow keys to navigate through the
+          crossword. The puzzle will autosave as you fill it, so you can come back later if you want 
+          to take a break.
+        </p>
+
+        <p>
+          All related to HTML in some way. If you get stuck, you can find
+          <a href="./solution.html" style="display:inline">hints and the solution here</a>. Good luck!
+        </p>
+
+        <p class="note" style="font-size: 0.9em; border: 1px solid #0008; padding: 1em;line-height:1.2;background:#6c61">
+          Note: <code>dep.</code> in a clue, indicates that the solution refers to a deprecated, 
+          obsolete, or removed feature. <code>exp.</code> in a clue indicates that the feature is
+          experimental or it doesn't have full support.
+        </p>
+      </div>
+
+      <div class="game-tools">
+        <label for="mode">
+          <input id="mode" type="checkbox" role="switch" checked>
+          Solid background
+        </label>
+        <div class="game-buttons">
+          <button id="check-puzzle">Check Puzzle</button>
+        </div>
+      </div>
+
+<style>
+
+#crossword {
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  aspect-ratio: 24 / 9;
+
+  --across-2:   "(dep.) Attribute used in marquee to specify where the content should scroll towards";
+  --across-7:   "(same as down 8) Element used for a list";
+  --across-9:   "Element with the description in a description list";
+  --across-10:  "Attribute to indicate the media should play with no sound";
+  --across-12:  "Element part of a table";
+  --across-13:  "Element to include or import JS code in the document";
+
+  --down-1:   "Input attribute with a regular expression the value must match";
+  --down-2:   "Required preamble found at the top of all HTML documents";
+  --down-3:   "Attribute that specifies the radio input is selected by default";
+  --down-4:   "Inputmode value to hint the browser to use a virtual keyboard with numbers";
+  --down-5:   "Element with the contact information for the author";
+  --down-6:   "Attribute with values auto, hint, or manual that designates the elements as a [name of attribute]";
+  --down-8:   "(bottom-to-top) Element used for a list";
+  --down-9:   "Lang value to indicate the content is in German";
+  --down-11:  "Keyword used to specify the final state of an animation in the kwyframes rule";
+
+}
+</style>
+
+  <article id="crossword">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-o="d" data-n="1" data-d="1">
+    <input pattern="[pP]" maxlength="1" required="" data-first-down="">
+    <span>Down 1, letter 1.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-n="2" data-o="b" data-a="1" data-d="8">
+    <input pattern="[dD]" maxlength="1" required="">
+    <span>Across 2, letter 1. Down 2, letter 1.</span>
+  </label>
+  <label data-a="2">
+    <input pattern="[iI]" maxlength="1" required="">
+    <span>Across 2, letter 2. </span>
+  </label>
+  <label data-a="3">
+    <input pattern="[rR]" maxlength="1" required="">
+    <span>Across 2, letter 3. </span>
+  </label>
+  <label data-a="4">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Across 2, letter 4. </span>
+  </label>
+  <label data-a="5" data-o="d" data-n="3" data-d="15">
+    <input pattern="[cC]" maxlength="1" required="">
+    <span>Across 2, letter 5. Down 3, letter 1.</span>
+  </label>
+  <label data-a="6">
+    <input pattern="[tT]" maxlength="1" required="">
+    <span>Across 2, letter 6. </span>
+  </label>
+  <label data-a="7">
+    <input pattern="[iI]" maxlength="1" required="">
+    <span>Across 2, letter 7. </span>
+  </label>
+  <label data-a="8">
+    <input pattern="[oO]" maxlength="1" required="">
+    <span>Across 2, letter 8. </span>
+  </label>
+  <label data-a="9" data-o="d" data-n="4" data-d="22">
+    <input pattern="[nN]" maxlength="1" required="">
+    <span>Across 2, letter 9. Down 4, letter 1.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-o="d" data-n="5" data-d="29">
+    <input pattern="[aA]" maxlength="1" required="">
+    <span>Down 5, letter 1.</span>
+  </label>
+  <span></span>
+  <label data-o="d" data-n="6" data-d="36">
+    <input pattern="[pP]" maxlength="1" required="">
+    <span>Down 6, letter 1.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="2">
+    <input pattern="[aA]" maxlength="1" required="">
+    <span>Down 1, letter 2.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="9">
+    <input pattern="[oO]" maxlength="1" required="">
+    <span>Down 2, letter 2.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="16">
+    <input pattern="[hH]" maxlength="1" required="">
+    <span>Down 3, letter 2.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-n="7" data-o="a" data-a="10" data-d="23">
+    <input pattern="[uU]" maxlength="1" required="">
+    <span>Across 7, letter 1. Down 4, letter 2.</span>
+  </label>
+  <label data-a="11" data-o="d" data-n="8" data-d="43">
+    <input pattern="[lL]" maxlength="1" required="">
+    <span>Across 7, letter 2. Down 8, letter 1.</span>
+  </label>
+  <span></span>
+  <label data-n="9" data-o="b" data-a="12" data-d="45">
+    <input pattern="[dD]" maxlength="1" required="">
+    <span>Across 9, letter 1. Down 9, letter 1.</span>
+  </label>
+  <label data-a="13" data-d="30">
+    <input pattern="[dD]" maxlength="1" required="">
+    <span>Across 9, letter 2. Down 5, letter 2.</span>
+  </label>
+  <span></span>
+  <label data-d="37">
+    <input pattern="[oO]" maxlength="1" required="">
+    <span>Down 6, letter 2.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="3">
+    <input pattern="[tT]" maxlength="1" required="">
+    <span>Down 1, letter 3.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="10">
+    <input pattern="[cC]" maxlength="1" required="">
+    <span>Down 2, letter 3.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="17">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Down 3, letter 3.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-n="10" data-o="a" data-a="14" data-d="24">
+    <input pattern="[mM]" maxlength="1" required="">
+    <span>Across 10, letter 1. Down 4, letter 3.</span>
+  </label>
+  <label data-a="15" data-d="44">
+    <input pattern="[uU]" maxlength="1" required="">
+    <span>Across 10, letter 2. Down 8, letter 2.</span>
+  </label>
+  <label data-a="16" data-o="d" data-n="11" data-d="47">
+    <input pattern="[tT]" maxlength="1" required="">
+    <span>Across 10, letter 3. Down 11, letter 1.</span>
+  </label>
+  <label data-a="17" data-d="46">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Across 10, letter 4. Down 9, letter 2.</span>
+  </label>
+  <label data-a="18" data-d="31">
+    <input pattern="[dD]" maxlength="1" required="">
+    <span>Across 10, letter 5. Down 5, letter 3.</span>
+  </label>
+  <span></span>
+  <label data-d="38">
+    <input pattern="[pP]" maxlength="1" required="">
+    <span>Down 6, letter 3.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-n="12" data-o="a" data-a="19" data-d="4">
+    <input pattern="[tT]" maxlength="1" required="">
+    <span>Across 12, letter 1. Down 1, letter 4.</span>
+  </label>
+  <label data-a="20">
+    <input pattern="[fF]" maxlength="1" required="">
+    <span>Across 12, letter 2. </span>
+  </label>
+  <label data-a="21">
+    <input pattern="[oO]" maxlength="1" required="">
+    <span>Across 12, letter 3. </span>
+  </label>
+  <label data-a="22">
+    <input pattern="[oO]" maxlength="1" required="">
+    <span>Across 12, letter 4. </span>
+  </label>
+  <label data-a="23" data-d="11">
+    <input pattern="[tT]" maxlength="1" required="">
+    <span>Across 12, letter 5. Down 2, letter 4.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="18">
+    <input pattern="[cC]" maxlength="1" required="">
+    <span>Down 3, letter 4.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="25">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Down 4, letter 4.</span>
+  </label>
+  <span></span>
+  <label data-d="48">
+    <input pattern="[oO]" maxlength="1" required="">
+    <span>Down 11, letter 2.</span>
+  </label>
+  <span></span>
+  <label data-d="32">
+    <input pattern="[rR]" maxlength="1" required="">
+    <span>Down 5, letter 4.</span>
+  </label>
+  <span></span>
+  <label data-d="39">
+    <input pattern="[oO]" maxlength="1" required="">
+    <span>Down 6, letter 4.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="5">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Down 1, letter 5.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="12">
+    <input pattern="[yY]" maxlength="1" required="">
+    <span>Down 2, letter 5.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="19">
+    <input pattern="[kK]" maxlength="1" required="">
+    <span>Down 3, letter 5.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="26">
+    <input pattern="[rR]" maxlength="1" required="">
+    <span>Down 4, letter 5.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="33">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Down 5, letter 5.</span>
+  </label>
+  <span></span>
+  <label data-d="40">
+    <input pattern="[vV]" maxlength="1" required="">
+    <span>Down 6, letter 5.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="6">
+    <input pattern="[rR]" maxlength="1" required="">
+    <span>Down 1, letter 6.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="13">
+    <input pattern="[pP]" maxlength="1" required="">
+    <span>Down 2, letter 6.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="20">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Down 3, letter 6.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="27">
+    <input pattern="[iI]" maxlength="1" required="">
+    <span>Down 4, letter 6.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="34">
+    <input pattern="[sS]" maxlength="1" required="">
+    <span>Down 5, letter 6.</span>
+  </label>
+  <span></span>
+  <label data-d="41">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Down 6, letter 6.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="7">
+    <input pattern="[nN]" maxlength="1" required="">
+    <span>Down 1, letter 7.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="14">
+    <input pattern="[eE]" maxlength="1" required="">
+    <span>Down 2, letter 7.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="21">
+    <input pattern="[dD]" maxlength="1" required="">
+    <span>Down 3, letter 7.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-d="28">
+    <input pattern="[cC]" maxlength="1" required="">
+    <span>Down 4, letter 7.</span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <label data-n="13" data-o="a" data-a="24" data-d="35" data-last-across="">
+    <input pattern="[sS]" maxlength="1" required="">
+    <span>Across 13, letter 1. Down 5, letter 7.</span>
+  </label>
+  <label data-a="25">
+    <input pattern="[cC]" maxlength="1" required="" data-last-across="">
+    <span>Across 13, letter 2. </span>
+  </label>
+  <label data-a="26" data-d="42">
+    <input pattern="[rR]" maxlength="1" required="" data-last-across="">
+    <span>Across 13, letter 3. Down 6, letter 7.</span>
+  </label>
+  <label data-a="27">
+    <input pattern="[iI]" maxlength="1" required="" data-last-across="">
+    <span>Across 13, letter 4. </span>
+  </label>
+  <label data-a="28">
+    <input pattern="[pP]" maxlength="1" required="" data-last-across="">
+    <span>Across 13, letter 5. </span>
+  </label>
+  <label data-a="29">
+    <input pattern="[tT]" maxlength="1" required="" data-last-across="">
+    <span>Across 13, letter 6. </span>
+  </label>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <div class="hoverhint" role="alert" id="hoverhint"></div>
+  </article>
+      <div class="hints" tabindex="-1">
+        <section>
+          <h2>Across</h2>
+          <ol class="across">
+            <li id="hint-across-2"   data-n="2"  >(dep.) Attribute used in marquee to specify where the content should scroll towards</li>
+            <li id="hint-across-7"   data-n="7"  >(same as down 8) Element used for a list</li>
+            <li id="hint-across-9"   data-n="9"  >Element with the description in a description list</li>
+            <li id="hint-across-10"  data-n="10" >Attribute to indicate the media should play with no sound</li>
+            <li id="hint-across-12"  data-n="12" >Element part of a table</li>
+            <li id="hint-across-13"  data-n="13" >Element to include or import JS code in the document</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Down</h2>
+          <ol class="down">
+            <li id="hint-down-1"   data-n="1"  >Input attribute with a regular expression the value must match</li>
+            <li id="hint-down-2"   data-n="2"  >Required preamble found at the top of all HTML documents</li>
+            <li id="hint-down-3"   data-n="3"  >Attribute that specifies the radio input is selected by default</li>
+            <li id="hint-down-4"   data-n="4"  >Inputmode value to hint the browser to use a virtual keyboard with numbers</li>
+            <li id="hint-down-5"   data-n="5"  >Element with the contact information for the author</li>
+            <li id="hint-down-6"   data-n="6"  >Attribute with values auto, hint, or manual that designates the elements as a [name of attribute]</li>
+            <li id="hint-down-8"   data-n="8"  >(bottom-to-top) Element used for a list</li>
+            <li id="hint-down-9"   data-n="9"  >Lang value to indicate the content is in German</li>
+            <li id="hint-down-11"  data-n="11" >Keyword used to specify the final state of an animation in the kwyframes rule</li>
+          </ol>
+        </section>
+      </div>
+
+    </main>
+
+    <section class="scrim">
+      <div aria-live="polite">
+        <h2>Congratulations!!</h2>
+        <p>You solved the puzzle!</p>
+        <p>Go back to the <a href="/games">games page</a> for more games.</p>
+      </div>
+    </section>
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+
+    <script src="../js/crosswords2.js"></script>
+    <script>
+      updateValues(24, 9, 19);
+      loadPuzzle();
+    </script>
+    <style>
+      article, ol {
+        break-after: avoid !important;
+        margin-bottom: 2em;
+      }
+      @media print {
+        ol {
+          column-count: 1 !important;
+        }
+        .hints {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </body>
+</html>

@@ -199,6 +199,27 @@ cw.addEventListener('keydown', (event) => {
       currentDirection = 'down';
       updateFocusableInputs('down');
       document.querySelector('input[data-first-down]').focus();
+      return
+    }
+
+    if (currentDirection === 'down') {
+      let auxInput = input;
+
+      while (auxInput) {
+        let n = auxInput.parentElement.dataset.d;
+        if (event.shiftKey) {
+          n = auxInput.parentElement.dataset.d/1 - 1;
+        } else {
+          n = auxInput.parentElement.dataset.d/1 + 1;
+        }
+        const next = document.querySelector(`label[data-d="${n}"]`);
+        auxInput = next?.querySelector('input');
+        if (next && (next.dataset.o === 'd' || next.dataset.o === 'b')) {
+          event.preventDefault();
+          next.querySelector('input').focus();
+          return;
+        }
+      }
     }
   }
 
