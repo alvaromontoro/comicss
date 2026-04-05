@@ -4642,4 +4642,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>-webkit-box-reflect</title>
+    <link href="https://comicss.art/comics/245" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/245/webkit-box-reflect.html"/>
+    <id>https://comicss.art/comics/245</id>
+    <updated>2026-04-06T00:00:00Z</updated>
+    <summary>New Cartoon: -webkit-box-reflect</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/245/webkit-box-reflect.png" alt="Cartoon of a CSS rule looking at its reflection with the text -webkit-box-reflect isn’t standard... but it already sees itself there" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

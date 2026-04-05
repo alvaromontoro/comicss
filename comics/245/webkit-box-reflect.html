@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #245: -webkit-box-reflect</title>
+
+    <meta property="og:title" content="comiCSS #245: -webkit-box-reflect" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/245" />
+    <meta property="og:image" content="https://comicss.art/comics/245/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://comicss.art/comics/245">
+    <meta name="twitter:title" content="comiCSS #245: -webkit-box-reflect">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/245/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Amatic SC';
+        src: url(/fonts/AmaticSC-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+        font-size: 1vmin;
+        width: 80em;
+        aspect-ratio: 1;
+        border: 0.5em solid;
+        background: #ffe6bb;
+        font-family: 'Amatic SC';
+        position: relative;
+        
+        &::after {
+          content: "*Except on Firefox :(";
+          position: absolute;
+          font-weight: 700;
+          scale: 1 0.8;
+          font-size: 2.5em;
+          bottom: 0;
+          right: 1%;
+        }
+
+        *, *::before, *::after {
+          position: absolute;
+          box-sizing: border-box;
+          margin: 0;
+        }
+
+        p {
+          left: 50%;
+          translate: -50% -50%;
+          font-size: 7.5em;
+          scale: 1 0.85;
+          white-space: pre;
+          letter-spacing: -0.03em;
+          font-weight: 500;
+          text-shadow:
+            1px 1px 1px #5555;
+        }
+        p:nth-child(1) {
+          top: 10%;
+        }
+
+        p:nth-child(2) {
+          top: 90%;
+        }
+
+        #webkit-box-reflect {
+          width: 40%;
+          height: 50%;
+          left: 27.5%;
+          top: 50%;
+          translate: -50% -50%;
+          -webkit-box-reflect: right 10%;
+
+          &::before {
+            content: "";
+            width: 70%;
+            height: 5%;
+            top: 100%;
+            left: 55%;
+            translate: -50%;
+            border-radius: 50% / 0 0 100% 100%;
+            background: #0001;
+          }
+
+
+          .speech {
+            right: 10%;
+            font-size: 4em;
+            line-height: 1;
+            text-align: center;
+            font-weight: bold;
+
+            &::before {
+              content:"";
+              width: 25%;
+              height: 180%;
+              border: 0.075em solid;
+              border-radius: 0 0 100% 0;
+              border-top: 0;
+              border-left: 0;
+              top: 125%;
+              left: 32%;
+              mask: conic-gradient(at 25% 1%, #0000 25%, #000 0 45%, #0000 0);
+              rotate: -15deg;
+            }
+          }
+
+          .leg {
+            transform-origin: 50% 0;
+            width: 25%;
+            height: 40%;
+            bottom: 0;
+            transform: translate(-50%) skew(-5deg);
+            left: 45%;
+            background: 
+              radial-gradient(50% 80% at 0 50%, #0000 80%, #000 calc(80% + 1px) calc(100% - 1px), #0000),
+              radial-gradient(60% 15% at 60% 100%, #000 50%, #0000 calc(50% + 1px)),
+              #f000;
+
+            & ~ & {
+              left: 63%;
+              transform: translate(-50%) skew(5deg);
+            }
+          }
+
+          .body {
+            --c: #fff;
+            --s: #000;
+            width: 65%;
+            height: 40%;
+            background: #f004;
+            top: 50%;
+            lefT: 50%;
+            translate: -50% -50%;
+            rotate: -3deg;
+            background:
+              radial-gradient(10% 27% at 10% 27%, var(--c) 99%, #0000),
+              radial-gradient(10% 27% at 10% 73%, var(--c) 99%, #0000),
+              radial-gradient(10% 27% at 90% 27%, var(--c) 99%, #0000),
+              radial-gradient(10% 27% at 90% 73%, var(--c) 99%, #0000),
+              conic-gradient(at 0 50%, #0000 50deg, var(--c) 0 130deg, #0000 0) 0 0 / 50% 100% no-repeat,
+              conic-gradient(at 100% 50%, #0000 230deg, var(--c) 0 310deg, #0000 0) 100% 0 / 50% 100% no-repeat,
+              linear-gradient(90deg, var(--c) 0 0) 50% 50% / 80% 100% no-repeat,
+              #f000;
+            filter: drop-shadow(-0.5em 0 var(--s))
+              drop-shadow(0.5em 0 var(--s));
+            &::before {
+              content: "-webkit-box-reflect: right 10%";
+              left: 7%;
+              top: 4%;
+              font-size: 1em;
+              font-family: monospace, monospace;
+            }
+
+            .eye {
+              width: 15%;
+              aspect-ratio: 1;
+              background: 
+                radial-gradient(circle at 33% 33%, #fff 20%, #0000 calc(20% + 1px)),
+                radial-gradient(circle at 17% 63%, #fff 9%, #0000 calc(9% + 1px)),
+                #000;
+              border-radius: 50%;
+              left: 40%;
+              top: 60%;
+              translatE: -50% -50%;
+              box-shadow: -1.8em 1.5em 0 -0.5em #f004;
+
+              & ~ & {
+                left: 70%;
+                box-shadow: 1.8em 1.5em 0 -0.5em #f004;
+              }
+            }
+
+            .mouth {
+              width: 15%;
+              aspect-ratio: 2;
+              background: 
+                radial-gradient(at 30% 100%, #c00 30%, #800 0);
+              top: 75%;
+              left: 55%;
+              translatE: -50% -50%;
+              rotate: 8deg;
+              border-radius: 50% / 0 0 100% 100%;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <p>-webkit-box-reflect isn’t standard...</p>
+      <p>...but it already sees itself there.</p>
+      <div id="webkit-box-reflect">
+        <div class="speech">Hey, good lookin'!</div>
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="body">
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+    </article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
