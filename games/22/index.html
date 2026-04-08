@@ -9,18 +9,18 @@
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Game 21 Solution</title>
+    <title>comiCSS Games: 4Connect</title>
 
-    <meta property="og:title" content="4Connect - comiCSS" />
+    <meta property="og:title" content="comiCSS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://comicss.art" />
-    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:image" content="https://comicss.art/games/images/fourconnect.png" />
     <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://comicss.art/">
-    <meta name="twitter:title" content="4Connect - comiCSS">
+    <meta name="twitter:title" content="comiCSS">
     <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
-    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <meta name="twitter:image" content="https://comicss.art/games/images/fourconnect.png">
     <link rel="monetization" href="https://fynbos.me/alvaro">
 
     <link rel="shortcut icon" href="/favicon.png" />
@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <script src="../js/fourconnect.js" defer></script>
+
   </head>
   <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -97,37 +99,16 @@
     </header>
 
     <main id="main" class="game-main">
-      <h1>4Connect Solution</h1>
-      <p>This page contains the solution to the <a href="./">4Connect game for April 7, 2026</a>.</p>
-      <p>
-        To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
-        them whenever you're ready. Or mouse over each answer to see it temporarily.
+      
+      <h1>4Connect</h1>
+      <p id="instructions">
+        This board contains 4 groups of 4 related web development terms. Your goal is to connect those 
+        terms in fewer than 4 attempts.
       </p>
-      <label for="show-answers" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
-        <input type="checkbox" id="show-answers" role="switch" />
-        <span>Show answers</span>
-      </label>
-      <style>
-        ol.answers li {
-          list-style: none;
-        }
-        ol.answers li span {
-          filter: blur(0.25rem);
-          transition: filter 1s;
-        }
-        :has(#show-answers:checked) ol li span {
-          filter: blur(0);
-        }
-        ol.answers li:hover span {
-          filter: blur(0);
-        }
-      </style>
-      <ol class="answers">
-        <li>Group 1 - <span>FLEX-: basis, flow, wrap, shrink</span></li>
-        <li>Group 2 - <span>FONT-: palette, family, kerning, variant</span></li>
-        <li>Group 3 - <span>GRID-: area, template, row, column</span></li>
-        <li>Group 4 - <span>INLINE: grid, border, overflow, padding</span></li>
-      </ol>
+
+      <article id="game-main">
+        <four-connect data='[{"name":"Colors", "values":["moccasin","khaki","tan","yellow"]},{"name":"HTML Tags", "values":["image","var","progress","slot"]},{"name":"Hiding Content", "values": ["visibility","display","clip-path","mask"]},{"name":"Functions", "values": ["sin","round","opacity","sepia"]}]'></four-connect>
+      </article>
     </main>
 
     <footer>
