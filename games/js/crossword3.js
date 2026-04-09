@@ -235,6 +235,27 @@ const cwg = {
           cwg.currentDirection = 'down';
           cwg._updateFocusableInputs('down');
           document.querySelector('label[data-d="1"] input').focus();
+          return; 
+        }
+
+        if (currentDirection === 'down') {
+          let auxInput = input;
+
+          while (auxInput) {
+            let n = auxInput.parentElement.dataset.d;
+            if (event.shiftKey) {
+              n = auxInput.parentElement.dataset.d/1 - 1;
+            } else {
+              n = auxInput.parentElement.dataset.d/1 + 1;
+            }
+            const next = document.querySelector(`label[data-d="${n}"]`);
+            auxInput = next?.querySelector('input');
+            if (next && (next.dataset.o === 'd' || next.dataset.o === 'b')) {
+              event.preventDefault();
+              next.querySelector('input').focus();
+              return;
+            }
+          }
         }
       }
 
