@@ -282,9 +282,17 @@ h2 {
     transition: background-color 0.25s, color 0.25s, order 0.25s;
     view-transition-name: match-element;
 
+    &:hover {
+      background: light-dark(#ccc, #777);
+    }
+
     &[data-selected] {
       background: light-dark(#666, #ddd);
       color: light-dark(#eee, #000);
+
+      &:hover {
+      background: light-dark(#555, #eee);
+    }
     }
 
     &.shake {
