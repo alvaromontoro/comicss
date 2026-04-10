@@ -291,8 +291,8 @@ h2 {
       color: light-dark(#eee, #000);
 
       &:hover {
-      background: light-dark(#555, #eee);
-    }
+        background: light-dark(#555, #eee);
+      }
     }
 
     &.shake {
