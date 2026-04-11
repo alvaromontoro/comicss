@@ -166,6 +166,13 @@ html, body {
         left: 0%;
         transform: translate(0, -50%) rotate(-45deg);
       }
+
+      input {
+        order: 2;
+      }
+      div, span {
+        order: 1;
+      }
       
       
       .eq {
@@ -176,6 +183,8 @@ html, body {
         display: grid;
         grid-template-columns: 10em auto 2em auto 1fr;
         
+        input, div, span { order: unset; }
+
         .eq {
           display: block;
         }
