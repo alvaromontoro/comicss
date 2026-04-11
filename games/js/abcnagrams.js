@@ -1,8 +1,13 @@
 let PUZZLEID = 0;
 
+const scrim = document.querySelector(".scrim");
 const inputs = document.querySelectorAll("input[pattern]");
 inputs.forEach(i => {
-  i.addEventListener("input", savePuzzle);
+  i.addEventListener("input", () => {
+    savePuzzle();
+    console.log(document.querySelectorAll("input:invalid").length)
+    scrim.classList.toggle("open", !document.querySelectorAll("input:invalid").length);
+  });
 });
 
 function restartPuzzle() {
@@ -29,8 +34,14 @@ function initializeGame(id) {
   button.textContent = "Clear puzzle";
   button.style = "margin: auto 0 2em auto; display: flex; align-items: center;";
   button.onclick = restartPuzzle;
-
   document.querySelector("article").prepend(button);
+
+  scrim.classList = "scrim-processed";
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "View solution";
+  closeButton.style = "margin-top: 1em;";
+  closeButton.onclick = () => scrim.classList.toggle("open", false);
+  scrim.querySelector("div").appendChild(closeButton);
 
   loadPuzzle();
 }

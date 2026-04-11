@@ -258,7 +258,7 @@ html, body {
   }
 }
 
-
+.scrim-processed,
 .scrim {
   position: fixed;
   inset: 0;
@@ -267,10 +267,6 @@ html, body {
   place-items:center;
   z-index: 1;
   display: none;
-
-  :not(:has(:invalid)) & {
-    display: grid;
-  }
 
   > div {
     background: var(--bg);
@@ -292,6 +288,11 @@ html, body {
       font-weight: 300;
     }
   }
+}
+
+.scrim-processed.open,
+:not(:has(:invalid)) .scrim {
+  display: grid;
 }
 
 /* fixes for the page */
