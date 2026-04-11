@@ -5,7 +5,6 @@ const inputs = document.querySelectorAll("input[pattern]");
 inputs.forEach(i => {
   i.addEventListener("input", () => {
     savePuzzle();
-    console.log(document.querySelectorAll("input:invalid").length)
     scrim.classList.toggle("open", !document.querySelectorAll("input:invalid").length);
   });
 });
