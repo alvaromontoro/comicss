@@ -1659,4 +1659,10 @@
     <changefreq>never</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://comicss.art/games/26</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
