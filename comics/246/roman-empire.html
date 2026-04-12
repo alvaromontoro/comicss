@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: Why web development failed in the Roman Empire</title>
+
+    <meta property="og:title" content="comiCSS: Why web development failed in the Roman Empire" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/246/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS: Why web development failed in the Roman Empire">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/246/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-title { 
+  background: #ffd;
+  display: flex;
+  
+  span {
+    font-size: 0.8em;
+    position: relative;
+  }
+}
+
+css-person:not([character="al"]) {
+  .eyebrow {
+    scale: 1 1.125;
+  }
+}
+
+css-person, .css-person {
+  .head {
+    .neck {
+      border-bottom-color: var(--skin-color);
+    }
+  }
+  .body {
+    .arm {
+      &::after,
+      &::before {
+        box-shadow: none;
+        background: var(--skin);
+        border-inline: 0.4em solid;
+        box-sizing: content-box;
+      }
+
+      &::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+        background: 
+          linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em,
+          linear-gradient(#e33 50%, #000 0 calc(50% + 0.4em), #0000 0),
+          var(--skin-color)
+          ;
+      }
+
+      & ~ & {
+        left: -10%;
+      }
+    }
+    .chest {
+      border: 0.4em solid;
+      background: 
+        radial-gradient(250% 80% at 53% 0%, var(--skin-color) 0 6%, #000 0 calc(6% + 0.5em), #e33 0 22%, #0000 0),
+        linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em,
+        repeating-radial-gradient(200% 50% at 50% 5%, #000 0 0.6em, gray calc(0.6em + 1px) 25%),
+        var(--skin);
+    }
+  }
+
+  .extra {
+    z-index: 9999;
+
+    &.pad {
+      scale: -0.5 1;
+      width: 30%;
+      height: 40%;
+      background: 
+        linear-gradient(90deg, gray 30%, #0000 0) no-repeat,
+        radial-gradient(75% 40% at 0 100%, gray calc(100% - 1px), #0000) no-repeat;
+      border-radius: 100% / 10%;
+      filter:
+        drop-shadow(-0.7em 0)
+        drop-shadow(0.7em 0)
+        drop-shadow(0 0.4em 0)
+        drop-shadow(0 -0.2em 0);
+      transform: skewY(10deg);
+      top: 13%;
+      left: 53.5%;
+
+      & ~ & {
+        background: 
+        linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0.035em 0 / 100% 0.6em repeat-y,
+        linear-gradient(90deg, gray 30%, #0000 0) no-repeat,
+        radial-gradient(75% 40% at 0 100%, gray calc(100% - 1px), #0000) no-repeat;
+        filter:
+        drop-shadow(-0.4em 0)
+        drop-shadow(0.4em 0)
+        drop-shadow(0 0.4em 0)
+        drop-shadow(0 -0.2em 0);
+        scale: 1 1;
+        z-index: 999;
+        left: 24.75%;
+      }
+    }
+
+    &.hat {
+      width: 55%;
+      height: 20%;
+      background: 
+        linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em,
+        gray;
+      border-radius: 6em 6em 0 0;
+      left: 49%;
+      top: 5%;
+      translate: -50% -50%;
+      border: 0.4em solid;
+      rotate: -3deg;
+      scale: 1;
+      
+      &::after {
+        height: 35%;
+        aspect-ratio: 1;
+        border: 0.4em solid;
+        background: gray;
+        content: "";
+        border-radius: 100% / 20% 20% 0 0;
+        left: 50%;
+        translate: -50% -95%;
+        rotate: -2deg;
+      }
+
+      &::before {
+        content: ""; /* "SPQR"; */
+        display: grid;
+        place-items: center;
+        padding-inline-start: 1em;
+        width: 110%;
+        height: 60%;
+        border: 0.4em solid;
+        background: gray;
+        box-shadow: inset 0 0 0 0.5em  gold;
+        border-radius: 50% / 100% 100% 20% 10%;
+        bottom: -10%;
+      }
+    }
+
+    &.shoulder-pad {
+      width: 30%;
+      height: 13%;
+      background: 
+/*         linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, */
+        gray;
+      border: 0.4em solid;
+      border-radius: 100% / 30% 40% 50% 100%;
+      top: 58%;
+      left: 17%;
+      rotate: -14deg;
+
+      & ~ & {
+        scale: -0.9 0.95;
+        left: 52%;
+        rotate: 14deg;
+      }
+    }
+
+  }
+}
+
+css-panel:nth-child(4) {
+  css-person {
+    rotate: 2deg;
+    
+    &[character="al"] {
+      rotate: -2deg;
+    }
+  }
+  css-speech:nth-child(1) {    
+    &::before {
+      transform: skew(-7deg);
+      left: 70%;
+    }
+  }
+}
+
+css-panel:nth-child(5) {
+  css-person:not([character="al"]) {
+    rotate: 2deg;
+    .head {
+      .face {
+        .eye {
+          left: 75% !important;
+          
+          & ~ & {
+            left: 37% !important;
+          }
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="Why web development failed in the Roman Empire...
+">
+  <css-panel>
+    <css-speech width="85" left="5" top="10" line="left-30 skew">And for this element I need a size of 56... Hey, Gridius Maximus! What was the large viewport inline unit?</css-speech>
+<!--     <css-speech width="90" left="0" top="10" line="left-30 skew">And for this element I need a size of 56... Hmmm... Hey, Gridius Maximus! What was the large viewport inline unit?</css-speech> -->
+    <css-person left="5" arms="left-15 right--25 right-fold--10">
+      <div class="extra pad"></div>
+      <div class="extra shoulder-pad"></div>
+      <div class="extra shoulder-pad"></div>
+      <div class="extra pad"></div>
+      <div class="extra hat"></div>
+    </css-person>
+    <css-person character="al" facing="left" right="5" mouth=" flat sided side-right" eyebrows="high">
+      <div class="extra shoulder-pad"></div>
+      <div class="extra shoulder-pad"></div>
+    </css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech left="45" top="5" line="left-80 longer skew" right-line><code style="font-size:1.15em">lvi</code></css-speech>
+    <css-speech left="15" top="25" line="left-30 short" >No, the CSS unit!</css-speech>
+    <css-person left="5" mouth="small sided">
+      <div class="extra pad"></div>
+      <div class="extra shoulder-pad"></div>
+      <div class="extra shoulder-pad"></div>
+      <div class="extra pad"></div>
+      <div class="extra hat"></div>
+    </css-person>
+    <css-person character="al" facing="left" right="5" mouth="small sided side-right" arms="left-15 right--15 left-fold--10">
+      <div class="extra shoulder-pad"></div>
+      <div class="extra shoulder-pad"></div>
+    </css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech left="50" top="5" line="left-80 longer skew" right-line><code style="font-size:1.15em;font-weight:bold;">LVI!</code></css-speech>
+    <css-speech left="15" top="25" line="left-25 short skewer">That's what <b>I</b> said!</css-speech>
+    <css-person left="5" arms="left-25 right--25 right-fold--20" mouth="frown side-left" eyebrows="angry">
+      <div class="extra pad"></div>
+      <div class="extra shoulder-pad"></div>
+      <div class="extra shoulder-pad"></div>
+      <div class="extra pad"></div>
+      <div class="extra hat"></div>
+    </css-person>
+    <css-person character="al" facing="left" right="5" mouth="small frown sided side-right" eyebrows="suspicious angry" arms="left-25 right--25">
+      <div class="extra shoulder-pad"></div>
+      <div class="extra shoulder-pad"></div>
+    </css-person>
+  </css-panel>
+  
+  <css-panel>
+<!--     <css-speech left="10" width="70" top="15" line="left-25 skewer">No! The CSS uni... <b>Forget it!</b> Let's go conquer Hispania!</css-speech> -->
+    <css-speech left="10" width="75" top="15" line="left-25 skewer">Forget the Caesar's Styli Schedae. Let’s go conquer Hispania again!</css-speech>
+    
+    <css-person left="5" arms="left-15 right--25 right-fold--10" mouth="frown side-right sided" eyebrows="angry low thick" facing="left">
+      <div style="inset:0; rotate: 2deg; translate:-0.2em 0; z-index:99999">
+      <div class="extra pad"></div>
+      <div class="extra pad"></div>
+      <div class="extra hat"></div>
+      </div>
+      <div class="extra shoulder-pad"></div>
+      <div class="extra shoulder-pad"></div>
+    </css-person>
+    <css-person character="al" facing="left" right="5" mouth="small yawn sided side-right" eyebrows="sad high">
+      <div class="extra shoulder-pad"></div>
+      <div class="extra shoulder-pad"></div>
+    </css-person>
+  </css-panel>
+</css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
