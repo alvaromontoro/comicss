@@ -4661,4 +4661,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Why web development failed in the Roman Empire</title>
+    <link href="https://comicss.art/comics/246" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/246/roman-empire.html"/>
+    <id>https://comicss.art/comics/246</id>
+    <updated>2026-04-13T00:00:00Z</updated>
+    <summary>New Cartoon: Why web development failed in the Roman Empire</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/246/roman-empire.png" alt="cartoon with 4 panels showing two Roman Empire soldiers, one asks the other 'And for this element I need a size of 56... Hey, Gridius Maximus! What was the large viewport inline unit?' the other one answers 'lvi' and the first one replies 'No, the CSS unit!' The second one answers again 'LVI!' and the first one replies 'That's what I said! Forget the Caesar's Styli Schedae. Let's go conquer Hispania again!' angrily" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
