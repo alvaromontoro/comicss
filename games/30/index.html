@@ -9,18 +9,18 @@
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Game 27 Solution</title>
+    <title>comiCSS Game - Branches</title>
 
     <meta property="og:title" content="Branches - comiCSS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://comicss.art" />
-    <meta property="og:image" content="https://comicss.art/images/thumb.jpg" />
+    <meta property="og:image" content="https://comicss.art/games/images/branches.png" />
     <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://comicss.art/">
     <meta name="twitter:title" content="Branches - comiCSS">
     <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
-    <meta name="twitter:image" content="https://comicss.art/images/thumb.jpg">
+    <meta name="twitter:image" content="https://comicss.art/games/images/branches.png">
     <link rel="monetization" href="https://fynbos.me/alvaro">
 
     <link rel="shortcut icon" href="/favicon.png" />
@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/branches.css" />
+    <script defer src="../js/branches.js"></script>
   </head>
   <body class="game">
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -97,45 +99,85 @@
     </header>
 
     <main id="main" class="game-main">
-      <h1>Branches Solution</h1>
-      <p>This page contains the solution to the <a href="./">Branches game for April 13, 2026</a>.</p>
+      <h1>Branches</h1>
       <p>
-        To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
-        them whenever you're ready. Or mouse over each answer to see it temporarily.
+        Find the theme words that "branch out" from the root word (all related to CSS). 
+        Click, tap or drag letters to connect them and create words, then submit the word to
+        check if it is valid. If you make a mistake, don't worry! Clicking on the last selected 
+        letter will unselect it, and you can always clear the whole word to start over.
+        The root word (all the other words are related to it somewhow) will go from one side 
+        of the board to the other. Words can branch in any direction, each letter will be 
+        next to the previous one (horizontally, vertically or diagonally).
       </p>
-      <label for="show-answers" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
-        <input type="checkbox" id="show-answers" role="switch" />
-        <span>Show answers</span>
-      </label>
-      <style>
-        ol.answers li {
-          font-size: 1.4em;
-          margin-bottom: 0.5em;
-        }
+      <p style="margin-bottom: 4em;">
+        If you get stuck, you can always check the <a href="./solution.html">hints and solutions</a> page.
+      </p>
+      <article class="game-main">
+        <h2>Between Brackets</h2>
+        <div class="current-word"></div>
 
-        ol.answers li span {
-          filter: blur(0.5rem);
-          transition: filter 1s;
-        }
+        <div class="board">
+          <button data-word="2" data-letter="1">A</button>
+          <button data-word="2" data-letter="0">L</button>
+          <button data-word="3" data-letter="2">A</button>
+          <button data-word="3" data-letter="1">E</button>
+          <button data-word="1" data-letter="3">N</button>
+          <button data-word="1" data-letter="2">A</button>
+          <button data-word="2" data-letter="2">B</button>
+          <button data-word="3" data-letter="3">D</button>
+          <button data-word="4" data-letter="1">I</button>
+          <button data-word="4" data-letter="2">D</button>
+          <button data-word="3" data-letter="0">H</button>
+          <button data-word="1" data-letter="1">P</button>
+          <button data-word="2" data-letter="3">E</button>
+          <button data-word="4" data-letter="0">V</button>
+          <button data-word="5" data-letter="3">N</button>
+          <button data-word="5" data-letter="2">I</button>
+          <button data-word="4" data-letter="3">E</button>
+          <button data-word="1" data-letter="0">S</button>
+          <button data-word="2" data-letter="4">L</button>
+          <button data-word="0" data-letter="0">H</button>
+          <button data-word="5" data-letter="1">A</button>
+          <button data-word="5" data-letter="0">M</button>
+          <button data-word="0" data-letter="7">S</button>
+          <button data-word="4" data-letter="4">O</button>
+          <button data-word="0" data-letter="1">T</button>
+          <button data-word="6" data-letter="3">Y</button>
+          <button data-word="6" data-letter="2">D</button>
+          <button data-word="6" data-letter="1">O</button>
+          <button data-word="6" data-letter="0">B</button>
+          <button data-word="0" data-letter="6">G</button>
+          <button data-word="7" data-letter="0">P</button>
+          <button data-word="0" data-letter="2">M</button>
+          <button data-word="0" data-letter="3">L</button>
+          <button data-word="0" data-letter="4">T</button>
+          <button data-word="0" data-letter="5">A</button>
+          <button data-word="8" data-letter="2">O</button>
+          <button data-word="7" data-letter="2">O</button>
+          <button data-word="7" data-letter="1">R</button>
+          <button data-word="8" data-letter="5">R</button>
+          <button data-word="8" data-letter="4">E</button>
+          <button data-word="8" data-letter="3">T</button>
+          <button data-word="8" data-letter="1">O</button>
+          <button data-word="7" data-letter="3">G</button>
+          <button data-word="7" data-letter="4">R</button>
+          <button data-word="7" data-letter="5">E</button>
+          <button data-word="7" data-letter="6">S</button>
+          <button data-word="7" data-letter="7">S</button>
+          <button data-word="8" data-letter="0">F</button>
+        </div>
+        <div class="buttons">
+          <button>Clear</button>
+          <button>Submit</button>
+        </div>
+      </article>
 
-        :has(#show-answers:checked) ol li span,
-        :has(#show-answers:checked) .solution-image,
-        .solution-image:hover,
-        ol.answers li:hover span {
-          filter: blur(0);
-          rotate: 0deg;
-        }
-      </style>
-      <ol class="answers">
-        <li><span style="border:2px none">BORDERSTYLE (BORDER-STYLE)</span> (root)</li>
-        <li><span style="border:2px double">DOUBLE</span></li>
-        <li><span style="border:2px solid">SOLID</span></li>
-        <li><span style="border:2px none">NONE</span></li>
-        <li><span style="border:2px dashed">DASHED</span></li>
-        <li><span style="border:2px groove">GROOVE</span></li>
-        <li><span style="border:2px ridge">RIDGE</span></li>
-        <li><span style="border:2px inset">INSET</span></li>
-      </ol>
+      <dialog id="congrats">
+        <h2>Congratulations!</h2>
+        <p>You completed the puzzle</p>
+        <button>Close</button>
+      </dialog>
+
     </main>
 
     <footer>
