@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: Conference FOMO Now and Then</title>
+
+    <meta property="og:title" content="comiCSS: Conference FOMO Now and Then" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/247/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS: Conference FOMO Now and Then">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/247/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: bold;
+  src: url(/fonts/Roboto-Bold.ttf);
+}
+
+css-comic {
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  h1, footer { grid-column: 1 / -1; }
+  
+  css-title { background: #ffd;}
+  
+  css-person[character="john"] {
+    bottom: 3%;
+  }
+}
+
+css-panel:nth-of-type(3) {
+  css-person {
+    .head {
+      .face {
+        rotate: -3deg;
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(6) {
+  css-speech[type="whisper"] {
+    &::before {
+      content:"";
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      background: none;
+      border: 0.175em solid;
+      transform: none;
+      clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+      left: 80%;
+      top: 70%;
+    }  
+  }
+  
+  css-person[character="al"] {
+    .head {
+      .face {
+        rotate: -3deg;
+        background: 
+          linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, 
+          linear-gradient(#7c31, #7c30),
+          white;
+      }
+    }
+  }
+  
+  css-person[character="jill"] {
+    .head {
+      .hair-back {
+        rotate: 2deg;
+        translate: 3%;
+      }
+      .face {
+        rotate: 2deg;
+        translate: 3%;
+        background: 
+          linear-gradient(45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, 
+          linear-gradient(#ff000028, #f000 70%),
+          #e8e8e8;
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(2),
+css-panel:nth-of-type(5){
+  section {
+    font-family: Roboto;
+    font-size: 6em;
+    font-weight: 900;
+    width: 120%;
+    height: 120%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    line-height: 0.96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    span {
+      position: relative;
+      color: #222;
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Conference FOMO Now and Then">
+  <css-panel>
+    <css-title>Around 10 Years Ago...</css-title>
+    <css-speech top="10">MyFavoriteConference just released their schedule for this year. Let's check it out!</css-speech>
+    <css-speech type="whisper" top="60" left="65" rotate="-7" style="scale:1.5">Heck yeah!</css-speech>
+    <css-person character="al" eyebrows="high" arms="left-15 right--15" height="tall"></css-person>
+    <css-person character="jill" left="35" mouth="sided side-right" arms="right--25"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <section><div><span style="color:orange">Ember</span> <span style="color:orange">Web</span> <span style="color:#326de6">Kubernetes</span> <span style="color:rebeccapurple">CSS</span> <span style="color:darkorange">HTML</span> <span style="color:skyblue">Cloud</span> <span style="color:#552ed8">C#</span> <span style="color:gold">JavaScript</span> <span style="color:#0769AD">jQuery</span> <span style="color:#FF9900">AWS</span> <span style="color:green">Hacks</span> <span style="color:#008AD7">Azur</span> <span style="color:#123962">Blockchain</span> <span style="color:orangered">Web</span> <span style="color:gold">JS</span> <span style="color:#4870ff">Web3</span> <span style="background-image: linear-gradient(45deg, #117e9c, hotpink, green, orange); background-clip: text;  -webkit-background-clip: text; color: transparent;">UI/UX</span> <span style="color:#326de6">K8S</span> <span style="color:#61DBFB">React</span> <span style="color:#C3002F">Angular</span> <span style="color:#0769AD">XM<span> <span style="color:#5382a1">Java</span> <span style="color:#1D63ED">Docker</span> <span style="color:#06b6d4">Tail wind</span></div></section>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech top="5" left="5" width="80" line="left-75" right-line>Dude! Look at that line-up and all those topics! I can't go this year and I'm already getting FOMO!</css-speech>
+    <css-speech type="whisper" width="20" top="65" left="10" rotate="-7" style="scale:1.5">So much<br>FOMO!</css-speech>
+    <css-person character="al" eyebrows="high" arms="left-20 right--15 left-fold--20" facing="left" mouth="sided side-right" right="5" height="tall"></css-person>
+    <css-person character="jill" mouth="sided side-right small" eyebrows="high sad" arms="right--25 right-fold--20"  facing="left" right="40"></css-person>
+  </css-panel>
+  
+  <css-panel>
+    <css-title>10 Days Ago...</css-title>
+    <css-speech top="10">MyFavoriteConference just released their schedule for this year. Let's check it out!</css-speech>
+    <css-speech type="whisper" top="60" left="65" rotate="-7" style="scale:1.5">Heck yeah!</css-speech>
+    <css-person character="al" eyebrows="high" arms="left-15 right--15"  height="tall"></css-person>
+    <css-person character="jill" left="35" mouth="sided side-right" arms="right--25"></css-person>
+  </css-panel>
+  
+  <css-panel>
+<!--     <section><div><span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span style="color:#326de6">Kubernetes</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span style="color:#552ed8;">C#</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span style="color:#777">Agentic AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span style="color:rebeccapurple">CSS</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span style="color:#777">ML</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span></div></section> -->
+    <section><div><span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span style="color:#777">ML</span> <span style="color:#777">AI agents</span> <span style="color:rebeccapurple">CSS</span> <span style="color:#552ed8">C#</span> <span style="color:#326de6">Kubernetes</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span> <span>AI</span></div></section>
+  </css-panel>
+  
+  <css-panel>
+    <css-speech top="5" left="5" width="80" line="left-75" right-line>Man, I think I'm getting old! Look at that line-up and all those topics... but I'm not feeling any FOMO!</css-speech>
+<!--     <css-speech top="10" left="15" width="65" line="left-75" right-line style="top:8%;">Man, I think I'm getting old! I'm not feeling any FOMO!</css-speech> -->
+<!--     <css-speech type="whisper" width="25" top="65" left="5" rotate="-7" style="scale:1.5;left:2%;top:58%">It's not you the one getting old</css-speech> -->
+    <css-speech type="whisper" width="25" top="65" left="5" rotate="-7" style="scale:1.5;left:3%;top:58%">It's not you who's getting old</css-speech>
+    
+    <css-person character="al" eyebrows="sad low" arms="left-15 right--10 right-fold--10" facing="left" mouth="frown small side-left" right="5" height="tall"></css-person>
+    <css-person character="jill" mouth="frown sided side-right" eyebrows="angry low" arms="left-20 right--20 right-fold--20"  facing="left" right="40" style="right:38%"></css-person>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

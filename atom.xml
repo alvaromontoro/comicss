@@ -4680,4 +4680,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Conference FOMO Then and Now</title>
+    <link href="https://comicss.art/comics/247" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/247/conference-fomo.html"/>
+    <id>https://comicss.art/comics/247</id>
+    <updated>2026-04-20T00:00:00Z</updated>
+    <summary>New Cartoon: Conference FOMO Then and Now</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/247/conference-fomo.png" alt="comic with 6 panels in a 3x2 grid. Both rows follow a similar pattern with two characters looking forward to a conference lineup and schedule and then their reaction to it. Top row: the conference content is colorful and full of different languages and technologies, character 1 says 'Dude! Look at that line-up and all those topics! I can't go this year and I'm already getting FOMO!' and character 2 replies 'so much FOMO!'. Bottom row: the conference content is basically monochrome with AI repeating as topic and just a few different things; character 1 says 'Man, I think I'm getting old! Look at that line-up and all those topics... but I'm not feeling any FOMO!' and character 2 replies 'It's not you who's getting old'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
