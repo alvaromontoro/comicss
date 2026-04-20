@@ -1912,4 +1912,12 @@ const posts = [
     title: "Why web development failed in the Roman Empire",
     ariaLabel: "cartoon with 4 panels showing two Roman Empire soldiers, one asks the other 'And for this element I need a size of 56... Hey, Gridius Maximus! What was the large viewport inline unit?' the other one answers 'lvi' and the first one replies 'No, the CSS unit!' The second one answers again 'LVI!' and the first one replies 'That's what I said! Forget the Caesar's Styli Schedae. Let’s go conquer Hispania again!' angrily"
   },
+  {
+    id: 247,
+    uid: "conference-fomo",
+    boxes: 2,
+    horizontal: true,
+    title: "Conference FOMO Then and Now",
+    ariaLabel: "comic with 6 panels in a 3x2 grid. Both rows follow a similar pattern with two characters looking forward to a conference lineup and schedule and then their reaction to it. Top row: the conference content is colorful and full of different languages and technologies, character 1 says 'Dude! Look at that line-up and all those topics! I can't go this year and I'm already getting FOMO!' and character 2 replies 'so much FOMO!'. Bottom row: the conference content is basically monochrome with AI repeating as topic and just a few different things; character 1 says 'Man, I think I'm getting old! Look at that line-up and all those topics... but I'm not feeling any FOMO!' and character 2 replies 'It's not you who's getting old'"
+  },
 ]
