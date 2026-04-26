@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: Beware of CSS!</title>
+
+    <meta property="og:title" content="comiCSS: Beware of CSS!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/248/" />
+    <meta property="og:image" content="https://comicss.art/comics/248/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/comics/248/">
+    <meta name="twitter:title" content="comiCSS: Beware of CSS!">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/248/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+css-person[character="john"] {
+  css-prop {
+    scale: -1.1 1.1;
+    z-index: 1;
+  }
+
+  css-prop.hand {
+    aspect-ratio: 1;
+    background: linear-gradient(-45deg, #fff0 0 0.25em, #000 0 0.5em, #fff0 0) 0 0 / 100% 0.6em, white;
+    border: 0.4em solid;
+    border-radius: 50%;
+    top: 150%;
+    translate: -50% -50%;
+    width: 3em;
+    top: 50%;
+    left: 50%;
+    z-index:9999;
+    top: 85%;
+    left: 92%;
+  }
+
+  .body {
+    .hand {
+      top: 47%;
+      left: 220%;
+    }
+    .arm {
+      & ~ & {
+        &::after {
+          rotate: -78deg !important
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(1) {
+  css-person[character="jill"] {
+    .body {
+      .hand {
+        left: 159%;
+        top: 18%;
+      }
+      .arm ~ .arm::after {
+        rotate: -95deg !important;
+      }
+    }
+    .head {
+      .face {
+        .mouth {
+          scale: 0.6;
+        }
+        .eye {
+          translate: -80% 0;
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(2) {
+  css-person[character="john"] {
+    css-prop {
+      translate: 10% -255%;
+    }
+
+    css-prop.hand {
+      top: 88%;
+      left: 80%;
+    }
+
+    .head .face .eye {
+      translate: 10% 25%;
+    }
+
+    .body {
+      .hand {
+        top: 42%;
+        left: 225%;
+      }
+      .arm {
+        & ~ & {
+          &::after {
+            rotate: -98deg !important
+          }
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(3) {
+  css-person[character="jill"] {
+    .body .arm::before {
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .head {
+      .face {
+        .eyebrow {
+          & ~ & {
+            translate: 0 -120%;
+          }
+        }
+      }
+    }
+  }
+
+  css-person[character="john"] {
+    css-prop {
+      translate: 10% -255%;
+    }
+
+    css-prop.hand {
+      top: 100%;
+      left: 89%;
+    }
+
+    .head .face {
+      .eye {
+        translate: 13% 30%;
+      }
+      .mouth {
+        scale: 0.9;
+      }
+    }
+
+    .body {
+      .hand {
+        top: 42%;
+        left: 225%;
+      }
+      .arm {
+        & ~ & {
+          &::after {
+            rotate: -69deg !important
+          }
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(4) {
+  css-person[character="john"] {
+    css-prop {
+      translate: 15% -320%;
+    }
+
+    css-prop.hand {
+      top: 101%;
+    }
+
+    .body .hand {
+      top: 38%;
+      left: 230%;
+    }
+  }
+ 
+
+  css-person[character="jill"] {
+    .body {
+      .hand {
+        left: 159%;
+        top: 18%;
+      }
+      .arm ~ .arm::after {
+        rotate: -95deg !important;
+      }
+    }
+    .head {
+      .face {
+        .eye {
+          translate: 15% -20%;
+          clip-path: polygon(0 10%, 100% 10%, 100% 100%, 0 100%);
+        }
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+<css-comic title="Beware of CSS!">
+  <css-panel>
+    <css-speech type="whisper" rotate="10" left="10" top="80" style="top:79%;left:12%">*CSS*</css-speech>
+    <css-speech type="whisper" rotate="-10" left="5" top="75" style="left:9%">*CSS*</css-speech>
+    <css-person character="john" facing="left" left="70" eyes="" eyebrows="high" mouth="frown side-left" height="tall" arms="left--25 left-fold--40 right--20 right-fold--90">
+      <css-prop type="laptop" left="80" top="85" style="top:87%;rotate:7deg;left:78%;"></css-prop>
+      <css-prop class="hand"></css-prop>
+    </css-person>
+    <css-prop type="chair" top="80" left="25" rotate="3"></css-prop>
+    <css-person character="jill" facing="left" right="50" eyes="" eyebrows="high sad" mouth="yawn sided" arms="left--35 left-fold--90" style="translate:0 7%"></css-person>
+    <css-prop type="counter" right="70" style="translate: 0 30%">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+    <css-speech width="65" line="long left-70 skew" right-line top="5" left="25">You should stop using CSS! It's bad for your website!</css-speech>
+  </css-panel>
+
+  <css-panel>
+    <css-person character="john" facing="left" left="70" eyes="" eyebrows="" mouth="small frown sided side-right" height="tall" arms="left--35 left-fold--40 right--25 right-fold--90">
+      <css-prop type="laptop" left="80" top="85" style="top:87%;rotate:7deg;left:78%;"></css-prop>
+      <css-prop class="hand"></css-prop>
+    </css-person>
+    <css-prop type="chair" top="80" left="25" rotate="3"></css-prop>
+    <css-person character="jill" facing="left" right="50" eyes="" eyebrows="high sad" mouth="yawn sided" style="translate:0 7%"></css-person>
+    <css-prop type="counter" right="70" style="translate: 0 30%">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+    <css-speech width="90" line="left-80" right-line top="15" left="0" style="width:90%">It says it here on this company's website!</css-speech>
+  </css-panel>
+
+  <css-panel>
+    <css-person character="john" facing="left" left="70" eyes="" eyebrows="low" mouth="frown sided" height="tall" arms="left--35 left-fold--40 right--25 right-fold--90">
+      <css-prop type="laptop" left="80" top="85" style="top:87%;rotate:7deg;left:78%;"></css-prop>
+      <css-prop class="hand"></css-prop>
+    </css-person>
+    <css-prop type="chair" top="80" left="20" rotate="3" facing="left"></css-prop>
+    <css-person character="jill" right="50" eyes="" eyebrows="" mouth="sad small sided side-right" arms="right--30" style="translate:0 7%;rotate:-3deg"></css-person>
+    <css-prop type="counter" right="70" style="translate: 0 30%">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+<!--     <css-speech width="90" line="left-80 skew" right-line top="5" left="5" style="left:3%;width:87%">...It also says that CSS is dead, best practices are bad, and recommends using tables and floats for layout, and...</css-speech> -->
+    <css-speech width="80" line="left-75 skewer" right-line top="5" left="10">...It also says that CSS is dead, best practices are bad, recommends tables and floats for layout, and...</css-speech>
+  </css-panel>
+
+  <css-panel>
+    <css-person character="john" facing="left" left="70" eyes="" eyebrows="high" mouth="frown sided small" height="tall" arms="left--35 left-fold--40 right--25 right-fold--90">
+      <css-prop type="laptop" left="80" top="85" style="top:87%;rotate:7deg;left:78%;"></css-prop>
+      <css-prop class="hand"></css-prop>
+    </css-person>
+    <css-prop type="chair" top="80" left="25" rotate="3"></css-prop>
+    <css-person character="jill" facing="left" right="50" eyes="" eyebrows="" mouth="frown sided side-left small" arms="left--35 left-fold--90" style="translate:0 7%; rotate: -2deg"></css-person>
+    <css-prop type="counter" right="70" style="translate: 0 30%">
+      <css-prop type="laptop" left="15"></css-prop>
+    </css-prop>
+    <css-speech width="70" line="longer left-30" top="5" left="15" style="top:8%;width:67%">And let me guess... the solution is their style library?</css-speech>
+    <css-speech type="whisper" rotate="2" width="30" left="10" top="80" style="top:55%;left:48%;font-size: 1.4em">Wait... How did you know?</css-speech>
+    <css-speech type="whisper" rotate="10" left="10" top="80" style="top:79%;left:12%">*CSS*</css-speech>
+    <css-speech type="whisper" rotate="-10" left="5" top="75" style="left:9%">*CSS*</css-speech>
+  </css-panel>
+</css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
