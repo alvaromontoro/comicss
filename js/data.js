@@ -1920,4 +1920,11 @@ const posts = [
     title: "Conference FOMO Then and Now",
     ariaLabel: "comic with 6 panels in a 3x2 grid. Both rows follow a similar pattern with two characters looking forward to a conference lineup and schedule and then their reaction to it. Top row: the conference content is colorful and full of different languages and technologies, character 1 says 'Dude! Look at that line-up and all those topics! I can't go this year and I'm already getting FOMO!' and character 2 replies 'so much FOMO!'. Bottom row: the conference content is basically monochrome with AI repeating as topic and just a few different things; character 1 says 'Man, I think I'm getting old! Look at that line-up and all those topics... but I'm not feeling any FOMO!' and character 2 replies 'It's not you who's getting old'"
   },
+  {
+    id: 248,
+    uid: "beware-of-css",
+    boxes: 4,
+    title: "Beware of CSS!",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. One character is typing CSS on a computer, another one interrupts and says 'You should stop using CSS! It's bad for your website! It says it here on this company's website! ...It also says that CSS is dead, best practices are bad, recommends tables and floats for layout, and...' The first character retakes writing CSS and interrupts 'And let me guess... the solution is their style library?' The second character is surprised 'Wait... How did you know?'"
+  },
 ]
