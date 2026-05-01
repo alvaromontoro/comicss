@@ -84,6 +84,7 @@
 
   article {
     --color: #cef;
+    font-size: 2.5vw;
     font-size: 2.5cqi;
     display: inline-flex;
     flex-direction: column;

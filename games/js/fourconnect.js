@@ -214,12 +214,17 @@ class FourConnect extends HTMLElement {
     shadow.innerHTML = `
 <style>
 article {
-  --size: 100cqi;
+  --size: 100vw;
   --gap: 1em;
-  --font: 1.5cqi;
+  --font: 1.5vw;
   container-type: inline-size;
   width: 100%;
   margin: auto;
+
+  @supports (width: 100cqi) {
+    --size: 100cqi;
+    --font: 1.5cqi;
+  }
 
   @media (width > 600px) {
     --size: 500px;
@@ -228,7 +233,11 @@ article {
 
   @media (width > 1000px) {
     --size: 750px;
-    --font: 1.25cqi;
+    --font: 1.25vw;
+
+    @supports (width: 75cqi) {
+      --font: 1.25cqi;
+    }
   }
 }
 
