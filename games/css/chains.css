@@ -1,23 +1,18 @@
-/* :root {
-  color-scheme: light dark;
-  
-}
-
-body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: Roboto, Helvetica, sans-serif;
-  margin: 2em;
-} */
 .game-main {
   & {
-    --bg: light-dark(#eee, #222);
-    --fg: light-dark(#000, #eee);
-    --tile-bg: light-dark(#e8f5ff, #30383f);
+    --bg: #eee;
+    --fg: #000;
+    --tile-bg: #e8f5ff;
     margin: auto auto;
     max-width: 1200px;
     width: 100%;
     container-type: inline-size;
+
+    @supports (color: light-dark(#000, #fff)) {
+      --bg: light-dark(#eee, #222);
+      --fg: light-dark(#000, #eee);
+      --tile-bg: light-dark(#e8f5ff, #30383f);
+    }
   }
 
   h1, h2 {

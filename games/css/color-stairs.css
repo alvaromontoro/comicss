@@ -39,7 +39,11 @@ p {
     font-size: 1em;
     border: 1px solid #0000;
     color: var(--fg);
-    background: color-mix(in sRGB, var(--bg) 50%, light-dark(#0005, #fff8) 50%);
+    background: 80808022;;
+
+    @supports (color: color-mix(in sRGB, var(--bg) 50%, light-dark(#0005, #fff8) 50%)) {
+      background: color-mix(in sRGB, var(--bg) 50%, light-dark(#0005, #fff8) 50%);
+    }
     
     &:active,
     &:focus-visible {

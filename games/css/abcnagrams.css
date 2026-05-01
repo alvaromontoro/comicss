@@ -1,7 +1,14 @@
 :root {
-  color-scheme: light dark;
-  --bg: light-dark(#fff, #222);
-  --fg: light-dark(#000, #eee);
+  --bg: #fff;
+  --fg: #000;
+}
+
+@supports (color: light-dark(#000, #fff)) {
+  :root {
+    color-scheme: light dark;
+    --bg: light-dark(#fff, #222);
+    --fg: light-dark(#000, #eee);
+  }
 }
 
 html, body {
@@ -231,11 +238,15 @@ html, body {
         width: 100%;
 
         &:valid {
+          color: #080;
+          background: #0801;
           color: light-dark(#080, #0c0);
           background: light-dark(#0801, #0c01);
           border: 1px solid;
           
           & ~ [data-letter] {
+            color: #080;
+            background: #0801;
             color: light-dark(#080, #0c0);
             background: light-dark(#0801, #0c01);
             border: 1px solid;
@@ -297,20 +308,24 @@ html, body {
 
 /* fixes for the page */
 a, a:link, a:visited, a:active, a:focus {
+  color: var(--primary);
   color: light-dark(var(--primary), #66aaff);
   text-decoration: none;
 }
 
 a.skip-link {
+  background: #fff;
   background: light-dark(#fff, #000);
 }
 
 .page-title {
   &, & a {
+    color: #000;
     color: light-dark(#000, #fff);
   }
   
   span {
+    color: var(--accent);
     color: light-dark(var(--accent), #66aaff);
   }
 }

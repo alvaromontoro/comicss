@@ -45,14 +45,21 @@ article {
   --size: 90vw;
   --gap: 2vw;
   --font: 5vw;
-  --color-text: light-dark(#222, #ddd);
-  --button-active: light-dark(#ddd, #444);
-  --button-solved: light-dark(gold, teal);
-  --button-topic: light-dark(teal, goldenrod);
+  --color-text: #222;
+  --button-active: #ddd;
+  --button-solved: gold;
+  --button-topic: teal;
   container-type: inline-size;
   width: var(--size);
   margin: auto;
   margin-bottom: 4em;
+
+  @supports (color: light-dark(#000, #fff)) {
+    --color-text: light-dark(#222, #ddd);
+    --button-active: light-dark(#ddd, #444);
+    --button-solved: light-dark(gold, teal);
+    --button-topic: light-dark(teal, goldenrod);
+  }
 
   @media (width > 500px) {
     --size: 400px;
@@ -139,6 +146,7 @@ article {
       
       &[data-word="0"] {
         --bgColor: var(--button-topic);
+        color: #fff;
         color: light-dark(#fff, #000);
       }
     }

@@ -98,6 +98,7 @@ main {
     padding: 1em;
     display: block;
     background: #ffc;
+    color: var(--fg);
     color: light-dark(var(--fg), var(--bg));
     font-size: 3em;
     z-index: 1;
