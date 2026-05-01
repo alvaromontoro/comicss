@@ -290,7 +290,7 @@ h2 {
     }
 
     &[data-selected] {
-      background: #666
+      background: #666;
       color: #eee;
       background: light-dark(#666, #ddd);
       color: light-dark(#eee, #000);

@@ -1,11 +1,11 @@
 :root {
+  color-scheme: light dark;
   --bg: #fff;
   --fg: #000;
 }
 
 @supports (color: light-dark(#000, #fff)) {
   :root {
-    color-scheme: light dark;
     --bg: light-dark(#fff, #222);
     --fg: light-dark(#000, #eee);
   }
