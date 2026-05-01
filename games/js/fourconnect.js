@@ -214,7 +214,7 @@ class FourConnect extends HTMLElement {
     shadow.innerHTML = `
 <style>
 article {
-  --size: 100vw;
+  --size: 100%;
   --gap: 1em;
   --font: 1.5vw;
   container-type: inline-size;
@@ -228,12 +228,17 @@ article {
 
   @media (width > 600px) {
     --size: 500px;
+    --font: 7.5px;
     width: var(--size);
+
+    @supports (width: 75cqi) {
+      --font: 1.5cqi;
+    }
   }
 
   @media (width > 1000px) {
     --size: 750px;
-    --font: 1.25vw;
+    --font: 9px;
 
     @supports (width: 75cqi) {
       --font: 1.25cqi;
@@ -255,6 +260,7 @@ h2 {
   gap: var(--gap);
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  aspect-ratio: 1;
 
   @media (width > 1000px) {
     height: calc(var(--size) * 0.6);
