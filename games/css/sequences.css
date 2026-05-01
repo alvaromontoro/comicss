@@ -129,8 +129,8 @@ section:has(.animate:active) .code {
     box-sizing: border-box;
     position: absolute;
     appearance: none;
-    width: 15vw !important;
-    height: 15vw !important;
+    width: 15% !important;
+    height: 15% !important;
     width: 15cqi !important;
     height: 15cqi !important;
     border: 1px solid !important;
