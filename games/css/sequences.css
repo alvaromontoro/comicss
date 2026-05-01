@@ -129,6 +129,8 @@ section:has(.animate:active) .code {
     box-sizing: border-box;
     position: absolute;
     appearance: none;
+    width: 15% !important;
+    height: 15% !important;
     width: 15cqi !important;
     height: 15cqi !important;
     border: 1px solid !important;
@@ -136,6 +138,7 @@ section:has(.animate:active) .code {
     margin: 0;
     padding: 0;
     background: var(--bg);
+    box-shadow: inset 0 0 0 2px var(--bg);
     box-shadow: inset 0 0 0 1cqi var(--bg);
     cursor: pointer;
 

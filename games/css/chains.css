@@ -29,6 +29,7 @@
   .button-group {
     /* width: 70em; */
     margin-block: 2em 4em;
+    font-size: 1.2vw;
     font-size: 1.2cqi;
   }
 
@@ -89,6 +90,8 @@ body:not(:has(:invalid)) #scrim-good {
 /** GAME *******/
 
 .chain {
+  font-size: 1.2vw;
+  font-size: min(1.2vw, 14px);
   font-size: 1.2cqi;
   height: 30em;
   width: 70em;
