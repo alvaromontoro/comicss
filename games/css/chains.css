@@ -91,7 +91,7 @@ body:not(:has(:invalid)) #scrim-good {
 
 .chain {
   font-size: 1.2vw;
-  font-size: min(1.2vw, 14.4px);
+  font-size: min(1.2vw, 14px);
   font-size: 1.2cqi;
   height: 30em;
   width: 70em;
