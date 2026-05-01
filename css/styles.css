@@ -416,15 +416,30 @@ p.video a {
 /* Dark mode */
 :root {
   color-scheme: light dark;
-  --accent: light-dark(#939, #66aaff);
-  --bg: light-dark(#fff, #222);
-  --fg: light-dark(#000, #eee);
-  --primary: light-dark(hsl(var(--primaryH), var(--primaryS), var(--primaryL)), #99aaff);
-  --primary-dark: light-dark(hsl(var(--primaryH), var(--primaryS), calc(var(--primaryL) * 0.5)), #bbccff);
-  --secondary: light-dark(hsl(var(--secondaryH), var(--secondaryS), var(--secondaryL)), #fff);
-  --secondary-lighter: light-dark(hsl(var(--secondaryH), var(--secondaryS), 96%), #333);
+  --accent: #939;
+  --bg: #fff;
+  --fg: #000;
+  --primary:hsl(var(--primaryH), var(--primaryS), var(--primaryL));
+  --primary-dark: hsl(var(--primaryH), var(--primaryS), calc(var(--primaryL) * 0.5));
+  --secondary: hsl(var(--secondaryH), var(--secondaryS), var(--secondaryL));
+  --secondary-lighter: hsl(var(--secondaryH), var(--secondaryS), 96%);
   --secondary-bg: var(--bg);
-  --primary-lighter: light-dark(hsl(var(--primaryH), var(--primaryS), 96%), #111);
+  --primary-lighter: hsl(var(--primaryH), var(--primaryS), 96%);
+}
+
+@supports (color: light-dark(#000, #fff)) {
+  :root {
+    color-scheme: light dark;
+    --accent: light-dark(#939, #66aaff);
+    --bg: light-dark(#fff, #222);
+    --fg: light-dark(#000, #eee);
+    --primary: light-dark(hsl(var(--primaryH), var(--primaryS), var(--primaryL)), #99aaff);
+    --primary-dark: light-dark(hsl(var(--primaryH), var(--primaryS), calc(var(--primaryL) * 0.5)), #bbccff);
+    --secondary: light-dark(hsl(var(--secondaryH), var(--secondaryS), var(--secondaryL)), #fff);
+    --secondary-lighter: light-dark(hsl(var(--secondaryH), var(--secondaryS), 96%), #333);
+    --secondary-bg: var(--bg);
+    --primary-lighter: light-dark(hsl(var(--primaryH), var(--primaryS), 96%), #111);
+  }
 }
 
 html, body {

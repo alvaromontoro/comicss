@@ -39,7 +39,11 @@
       font-size: 1em;
       border: 1px solid #0000;
       color: var(--fg);
-      background: color-mix(in sRGB, var(--bg) 50%, light-dark(#0005, #fff8) 50%);
+      background: #80808022;
+
+      @supports (color: color-mix(in sRGB, var(--bg) 50%, light-dark(#0005, #fff8) 50%)) {
+        background: color-mix(in sRGB, var(--bg) 50%, light-dark(#0005, #fff8) 50%);
+      }
       
       &:active,
       &:focus-visible {
@@ -180,8 +184,10 @@
 
         &[readonly] {
           border-inline-end: max(2px, 0.05em) solid #000;
+          background: var(--color);
           background: light-dark(var(--color), var(--bg));
           pointer-events: none;
+          color: #000;
           color: light-dark(#000, #fff);
         }
 

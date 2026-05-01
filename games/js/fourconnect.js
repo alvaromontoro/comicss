@@ -275,6 +275,8 @@ h2 {
     height: 100%;
     border: 0;
     border-radius: 0.25em;
+    background: #ddd;
+    color: #000;
     background: light-dark(#ddd, #666);
     color: light-dark(#000, #eee);
     font-weight: 500;
@@ -283,14 +285,18 @@ h2 {
     view-transition-name: match-element;
 
     &:hover {
+      background: #ccc;
       background: light-dark(#ccc, #777);
     }
 
     &[data-selected] {
+      background: #666;
+      color: #eee;
       background: light-dark(#666, #ddd);
       color: light-dark(#eee, #000);
 
       &:hover {
+        background: #555;
         background: light-dark(#555, #eee);
       }
     }
