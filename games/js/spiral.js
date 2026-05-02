@@ -40,6 +40,9 @@ board.addEventListener("keydown", e => {
   checkWin();
 })
 
+board.addEventListener("change", checkWin);
+board.addEventListener("input", checkWin);
+
 // document.querySelectorAll("input").forEach((el, idx) => {
 //   if (idx !== 0) { el.value = el.pattern[1]; }
 // });
