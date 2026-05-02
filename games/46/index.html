@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS Game - Spiral</title>
+
+    <meta property="og:title" content="Spiral - comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/games/images/spiral.png" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="Spiral - comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/games/images/spiral.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/spiral.css" />
+    <script defer src="../js/spiral.js"></script>
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+      <h1>Spiral</h1>
+      <p>
+        In this game, the last letter of each term is the first letter of the next one, and all words are 
+        connected forming a counter-clockwise spiral chain. Use the clues at the bottom to find the missing 
+        words and complete the spiral.
+      </p>
+      <p style="margin-bottom: 4em;">
+        If you get stuck, you can always check the <a href="./solution.html">hints and solutions</a> page.
+      </p>
+      
+<article>
+  <section class="board">
+    <label data-order="0" data-number="1" class="t r b">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-1">
+      <span>Word 1, letter 1.</span>
+    </label>
+    <label data-order="1" data-number="2" class="t l">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-1 hint-2">
+      <span>Word 1, letter 2. Word 2, letter 1.</span>
+    </label>
+    <label data-order="2" data-number="3" class="b l">
+      <input maxlength="1" required="" pattern="(r|R)" aria-describedby="hint-2 hint-3">
+      <span>Word 2, letter 2. Word 3, letter 1.</span>
+    </label>
+    <label data-order="3" class="b">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-3">
+      <span>Word 3, letter 2.</span>
+    </label>
+    <label data-order="4" data-number="4" class="b r">
+      <input maxlength="1" required="" pattern="(d|D)" aria-describedby="hint-3 hint-4">
+      <span>Word 3, letter 3. Word 4, letter 1.</span>
+    </label>
+    <label data-order="5" class="r">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-4">
+      <span>Word 4, letter 2.</span>
+    </label>
+    <label data-order="6" data-number="5" class="r t">
+      <input maxlength="1" required="" pattern="(g|G)" aria-describedby="hint-4 hint-5">
+      <span>Word 4, letter 3. Word 5, letter 1.</span>
+    </label>
+    <label data-order="7" class="t">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-5">
+      <span>Word 5, letter 2.</span>
+    </label>
+    <label data-order="8" class="t">
+      <input maxlength="1" required="" pattern="(l|L)" aria-describedby="hint-5">
+      <span>Word 5, letter 3.</span>
+    </label>
+    <label data-order="9" data-number="6" class="t l">
+      <input maxlength="1" required="" pattern="(d|D)" aria-describedby="hint-5 hint-6">
+      <span>Word 5, letter 4. Word 6, letter 1</span>
+    </label>
+    <label data-order="10" class="l">
+      <input maxlength="1" required="" pattern="(i|I)" aria-describedby="hint-6">
+      <span>Word 6, letter 2.</span>
+    </label>
+    <label data-order="11" class="l">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-6">
+      <span>Word 6, letter 3.</span>
+    </label>
+    <label data-order="12" data-number="7" class="l b">
+      <input maxlength="1" required="" pattern="(c|C)" aria-describedby="hint-6 hint-7">
+      <span>Word 6, letter 4. Word 7 letter 1.</span>
+    </label>
+    
+    <label data-order="13" class="b">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-">
+      <span>Word 7, letter 2.</span>
+    </label>
+    <label data-order="14" class="b">
+      <input maxlength="1" required="" pattern="(r|R)" aria-describedby="hint-">
+      <span>Word 7, letter 3.</span>
+    </label>
+    <label data-order="15" class="b">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 7, letter 4.</span>
+    </label>
+    <label data-order="16" data-number="8" class="r b">
+      <input maxlength="1" required="" pattern="(l|L)" aria-describedby="hint-">
+      <span>Word 7, letter 5. Word 8, letter 1.</span>
+    </label>
+    <label data-order="17" class="r">
+      <input maxlength="1" required="" pattern="(v|V)" aria-describedby="hint-">
+      <span>Word 8, letter 2.</span>
+    </label>
+    <label data-order="18" class="r">
+      <input maxlength="1" required="" pattern="(m|M)" aria-describedby="hint-">
+      <span>Word 8, letter 3.</span>
+    </label>
+    <label data-order="19" class="r">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 8, letter 4.</span>
+    </label>
+    <label data-order="20" data-number="9" class="t r">
+      <input maxlength="1" required="" pattern="(x|X)" aria-describedby="hint-">
+      <span>Word 8, letter 5. Word 9, letter 1.</span>
+    </label>
+    <label data-order="21" class="t">
+      <input maxlength="1" required="" pattern="(l|L)" aria-describedby="hint-">
+      <span>Word 9, letter 2.</span>
+    </label>
+    <label data-order="22" class="t">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 9, letter 3.</span>
+    </label>
+    <label data-order="23" class="t">
+      <input maxlength="1" required="" pattern="(r|R)" aria-describedby="hint-">
+      <span>Word 9, letter 4.</span>
+    </label>
+    <label data-order="24" class="t">
+      <input maxlength="1" required="" pattern="(g|G)" aria-describedby="hint-">
+      <span>Word 9, letter 5.</span>
+    </label>
+    <label data-order="25" data-number="10" class="l t">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 9, letter 6. Word 10, letter 1.</span>
+    </label>
+    <label data-order="26" class="l">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 10, letter 2.</span>
+    </label>
+    <label data-order="27" class="l">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-">
+      <span>Word 10, letter 3.</span>
+    </label>
+    <label data-order="28" class="l">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 10, letter 4.</span>
+    </label>
+    <label data-order="29" class="l">
+      <input maxlength="1" required="" pattern="(i|I)" aria-describedby="hint-">
+      <span>Word 10, letter 5.</span>
+    </label>
+    <label data-order="30" data-number="11" class="b l">
+      <input maxlength="1" required="" pattern="(n|N)" aria-describedby="hint-">
+      <span>Word 10, letter 6. Word 11, letter 1.</span>
+    </label>
+    <label data-order="31" class="b">
+      <input maxlength="1" required="" pattern="(r|R)" aria-describedby="hint-">
+      <span>Word 11, letter 2.</span>
+    </label>
+    <label data-order="32" class="b">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 11, letter 3.</span>
+    </label>
+    <label data-order="33" class="b">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-">
+      <span>Word 11, letter 4.</span>
+    </label>
+    <label data-order="34" class="b">
+      <input maxlength="1" required="" pattern="(i|I)" aria-describedby="hint-">
+      <span>Word 11, letter 5.</span>
+    </label>
+    <label data-order="35" class="b">
+      <input maxlength="1" required="" pattern="(z|Z)" aria-describedby="hint-">
+      <span>Word 11, letter 6.</span>
+    </label>
+    <label data-order="36" data-number="12" class="r b">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 11, letter 7. Word 12, letter 1.</span>
+    </label>
+    <label data-order="37" class="r">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 12, letter 2.</span>
+    </label>
+    <label data-order="38" class="r">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-">
+      <span>Word 12, letter 3.</span>
+    </label>
+    <label data-order="39" class="r">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 12, letter 4.</span>
+    </label>
+    <label data-order="40" class="r">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-">
+      <span>Word 12, letter 5.</span>
+    </label>
+    <label data-order="41" class="r">
+      <input maxlength="1" required="" pattern="(u|U)" aria-describedby="hint-">
+      <span>Word 12, letter 6.</span>
+    </label>
+    <label data-order="42" data-number="13" class="t r">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 12, letter 7. Word 13, letter 1.</span>
+    </label>
+    <label data-order="43" class="t">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 13, letter 2.</span>
+    </label>
+    <label data-order="44" class="t">
+      <input maxlength="1" required="" pattern="(x|X)" aria-describedby="hint-">
+      <span>Word 13, letter 3.</span>
+    </label>
+    <label data-order="45" class="t">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 13, letter 4.</span>
+    </label>
+    <label data-order="46" class="t">
+      <input maxlength="1" required="" pattern="(w|W)" aria-describedby="hint-">
+      <span>Word 13, letter 5.</span>
+    </label>
+    <label data-order="47" class="t">
+      <input maxlength="1" required="" pattern="(r|R)" aria-describedby="hint-">
+      <span>Word 13, letter 6.</span>
+    </label>
+    <label data-order="48" class="t">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 13, letter 7.</span>
+    </label>
+    <label data-order="49" data-number="14" class="t l">
+      <input maxlength="1" required="" pattern="(p|P)" aria-describedby="hint-">
+      <span>Word 13, letter 8. Word 14, letter 1.</span>
+    </label>
+    <label data-order="50" class="l">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-">
+      <span>Word 14, letter 2.</span>
+    </label>
+    <label data-order="51" class="l">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-">
+      <span>Word 14, letter 3.</span>
+    </label>
+    <label data-order="52" class="l">
+      <input maxlength="1" required="" pattern="(i|I)" aria-describedby="hint-">
+      <span>Word 14, letter 4.</span>
+    </label>
+    <label data-order="53" class="l">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 14, letter 5.</span>
+    </label>
+    <label data-order="54" class="l">
+      <input maxlength="1" required="" pattern="(i|I)" aria-describedby="hint-">
+      <span>Word 14, letter 6.</span>
+    </label>
+    <label data-order="55" class="l">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-">
+      <span>Word 14, letter 7.</span>
+    </label>
+    <label data-order="56" data-number="15" class="l b">
+      <input maxlength="1" required="" pattern="(n|N)" aria-describedby="hint-">
+      <span>Word 14, letter 8. Word 15, letter 1.</span>
+    </label>
+    <label data-order="57" class="b">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 15, letter 2.</span>
+    </label>
+    <label data-order="58" class="b">
+      <input maxlength="1" required="" pattern="(h|H)" aria-describedby="hint-">
+      <span>Word 15, letter 3.</span>
+    </label>
+    <label data-order="59" class="b">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-">
+      <span>Word 15, letter 4.</span>
+    </label>
+    <label data-order="60" class="b">
+      <input maxlength="1" required="" pattern="(f|F)" aria-describedby="hint-">
+      <span>Word 15, letter 5.</span>
+    </label>
+    <label data-order="61" class="b">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 15, letter 6.</span>
+    </label>
+    <label data-order="62" class="b">
+      <input maxlength="1" required="" pattern="(y|Y)" aria-describedby="hint-">
+      <span>Word 15, letter 7.</span>
+    </label>
+    <label data-order="63" class="b">
+      <input maxlength="1" required="" pattern="(p|P)" aria-describedby="hint-">
+      <span>Word 15, letter 8.</span>
+    </label>
+    <label data-order="64" data-number="16" class="r b">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 15, letter 9. Word 16, letter 1.</span>
+    </label>
+    <label data-order="65" class="r">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 16, letter 2.</span>
+    </label>
+    <label data-order="66" class="r">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-">
+      <span>Word 16, letter 3.</span>
+    </label>
+    <label data-order="67" class="r">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 16, letter 4.</span>
+    </label>
+    <label data-order="68" class="r">
+      <input maxlength="1" required="" pattern="(i|I)" aria-describedby="hint-">
+      <span>Word 16, letter 5.</span>
+    </label>
+    <label data-order="69" class="r">
+      <input maxlength="1" required="" pattern="(n|N)" aria-describedby="hint-">
+      <span>Word 16, letter 6.</span>
+    </label>
+    <label data-order="70" class="r">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-">
+      <span>Word 16, letter 7.</span>
+    </label>
+    <label data-order="71" class="r">
+      <input maxlength="1" required="" pattern="(u|U)" aria-describedby="hint-">
+      <span>Word 16, letter 8.</span>
+    </label>
+    <label data-order="72" data-number="17" class="r t">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 16, letter 9. Word 17, letter 1.</span>
+    </label>
+    <label data-order="73" class="t">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 17, letter 2.</span>
+    </label>
+    <label data-order="74" class="t">
+      <input maxlength="1" required="" pattern="(x|X)" aria-describedby="hint-">
+      <span>Word 17, letter 3.</span>
+    </label>
+    <label data-order="75" class="t">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 17, letter 4.</span>
+    </label>
+    <label data-order="76" class="t">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-">
+      <span>Word 17, letter 5.</span>
+    </label>
+    <label data-order="77" class="t">
+      <input maxlength="1" required="" pattern="(h|H)" aria-describedby="hint-">
+      <span>Word 17, letter 6.</span>
+    </label>
+    <label data-order="78" class="t">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 17, letter 7.</span>
+    </label>
+    <label data-order="79" class="t">
+      <input maxlength="1" required="" pattern="(d|D)" aria-describedby="hint-">
+      <span>Word 17, letter 8.</span>
+    </label>
+    <label data-order="80" class="t">
+      <input maxlength="1" required="" pattern="(o|O)" aria-describedby="hint-">
+      <span>Word 17, letter 9.</span>
+    </label>
+    <label data-order="81" data-number="18" class="t l">
+      <input maxlength="1" required="" pattern="(w|W)" aria-describedby="hint-">
+      <span>Word 17, letter 10. Word 18, letter 1.</span>
+    </label>
+    <label data-order="82" class="l">
+      <input maxlength="1" required="" pattern="(h|H)" aria-describedby="hint-">
+      <span>Word 18, letter 2.</span>
+    </label>
+    <label data-order="83" class="l">
+      <input maxlength="1" required="" pattern="(i|I)" aria-describedby="hint-">
+      <span>Word 18, letter 3.</span>
+    </label>
+    <label data-order="84" class="l">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 18, letter 4.</span>
+    </label>
+    <label data-order="85" class="l">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 18, letter 5.</span>
+    </label>
+    <label data-order="86" class="l">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-">
+      <span>Word 18, letter 6.</span>
+    </label>
+    <label data-order="87" class="l">
+      <input maxlength="1" required="" pattern="(p|P)" aria-describedby="hint-">
+      <span>Word 18, letter 7.</span>
+    </label>
+    <label data-order="88" class="l">
+      <input maxlength="1" required="" pattern="(a|A)" aria-describedby="hint-">
+      <span>Word 18, letter 8.</span>
+    </label>
+    <label data-order="89" class="l">
+      <input maxlength="1" required="" pattern="(c|C)" aria-describedby="hint-">
+      <span>Word 18, letter 9.</span>
+    </label>
+    <label data-order="90" data-number="19" class="b l">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 18, letter 10. Word 19, letter 1.</span>
+    </label>
+    <label data-order="91" class="b">
+      <input maxlength="1" required="" pattern="(m|M)" aria-describedby="hint-">
+      <span>Word 19, letter 2.</span>
+    </label>
+    <label data-order="92" class="b">
+      <input maxlength="1" required="" pattern="(p|P)" aria-describedby="hint-">
+      <span>Word 19, letter 3.</span>
+    </label>
+    <label data-order="93" class="b">
+      <input maxlength="1" required="" pattern="(t|T)" aria-describedby="hint-">
+      <span>Word 19, letter 4.</span>
+    </label>
+    <label data-order="94" class="b">
+      <input maxlength="1" required="" pattern="(y|Y)" aria-describedby="hint-">
+      <span>Word 19, letter 5.</span>
+    </label>
+    <label data-order="95" class="b">
+      <input maxlength="1" required="" pattern="(c|C)" aria-describedby="hint-">
+      <span>Word 19, letter 6.</span>
+    </label>
+    <label data-order="96" class="b">
+      <input maxlength="1" required="" pattern="(e|E)" aria-describedby="hint-">
+      <span>Word 19, letter 7.</span>
+    </label>
+    <label data-order="97" class="b">
+      <input maxlength="1" required="" pattern="(l|L)" aria-describedby="hint-">
+      <span>Word 19, letter 8.</span>
+    </label>
+    <label data-order="98" class="b">
+      <input maxlength="1" required="" pattern="(l|L)" aria-describedby="hint-">
+      <span>Word 19, letter 9.</span>
+    </label>
+    <label data-order="99" class="b r">
+      <input maxlength="1" required="" pattern="(s|S)" aria-describedby="hint-">
+      <span>Word 19, letter 10.</span>
+    </label>
+  </section>
+  
+  <section class="hints">
+    <h2>Hints</h2>
+    <ol>
+      <li id="hint-1">Keyframes end rule keyword</li>
+      <li id="hint-2">Logical operator in media queries</li>
+      <li id="hint-3">A named primary color</li>
+      <li id="hint-4">Unit for angles</li>
+      <li id="hint-5">A really valuable color</li>
+      <li id="hint-6">Compact and rounded list style</li>
+      <li id="hint-7">A shade of the primary color from #3</li>
+      <li id="hint-8">Relative unit representing 1% of the larger value between lvw and lvh</li>
+      <li id="hint-9">Font size really big keyword</li>
+      <li id="hint-10">Timing function that starts slow and accelerates at the end</li>
+      <li id="hint-11">Cursor value to show the element can be moved upward</li>
+      <li id="hint-12">Timing function that starts fast and decelerates at the end</li>
+      <li id="hint-13">CSS property that can be pretty</li>
+      <li id="hint-14">Property that sets how an element is positioned in a document</li>
+      <li id="hint-15">Pseudo-class that matches elements based on their position</li>
+      <li id="hint-16">Timing function that starts slow, accelerates in the middle, and ends slow</li>
+      <li id="hint-17">Property that adds a shadow to a text</li>
+      <li id="hint-18">It sets how to handle spaces, tabs, and line breaks in the text</li>
+      <li id="hint-19">Sets whether borders appear around &lt;table&gt; cells that have no content</li>
+    </ol>
+  </section>
+</article>
+
+      <dialog id="congrats" class="congrats">
+        <h2>Congratulations!</h2>
+        <p>You completed the puzzle</p>
+      </dialog>
+
+    </main>
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+  </body>
+</html>

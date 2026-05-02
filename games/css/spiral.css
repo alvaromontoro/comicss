@@ -1,0 +1,302 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fff;
+  --fg: #000;
+  --line: #ccc;
+  --tile: #fff;
+  --active: #cff;
+}
+
+@supports (color: light-dark(#000, #fff)) {
+  :root {
+    --bg: light-dark(#fff, #222);
+    --fg: light-dark(#000, #eee);
+    --line: light-dark(#ccc, #555);
+    --tile: light-dark(#fff, #666);
+    --active: light-dark(#cff, #369);
+  }
+}
+
+article {
+  font-size: 0.8vmin;
+  font-size: max(0.8vmin, 3px);
+  font-family: Helvetica, Arial, sans-serif;
+  
+  @media (width > 900px) {
+    font-size: 6px;
+  }
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 100em;
+  aspect-ratio: 1;
+  background: var(--bg);
+}
+
+.board input {
+  border: 0 solid #0000 !important;
+  min-width: 0;
+  text-align: center;
+  box-shadow:
+    var(--t), var(--r), var(--b), var(--l),
+    inset 0 0 0 1px var(--line);
+  text-transform: uppercase;
+  font-size: 5em;
+  outline-offset: -5px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--fg);
+  background: var(--tile);
+  border-radius: 0 !important;
+}
+
+.board input:focus {
+  background: var(--active);
+}
+
+.board input:focus-visible {
+  outline: 1px solid;
+}
+
+.board label {
+  --t: inset 0 0 0 #0000;
+  --r: inset 0 0 0 #0000;
+  --b: inset 0 0 0 #0000;
+  --l: inset 0 0 0 #0000;
+  --x: 1;
+  --y: 1;
+  grid-column: var(--x);
+  grid-row: var(--y);
+  position: relative;
+}
+
+.board label.t { --t: inset  0px  3px #000; }
+.board label.r { --r: inset -3px  0px #000; }
+.board label.b { --b: inset  0px -3px #000; }
+.board label.l { --l: inset  3px  0px #000; }
+
+.board label span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  mask: conic-gradient(#0000 0 0);
+}
+
+.board label[data-number]::after {
+  content: attr(data-number);
+  content: attr(data-number) / "";
+  position: absolute;
+  font-size: 2em;
+  top: 0.25em;
+  left: 0.5em;
+  pointer-events: none;
+}
+
+label[data-order="0"] { --x: 6; --y: 5; }
+label[data-order="1"] { --x: 5; --y: 5; }
+label[data-order="2"] { --x: 5; --y: 6; }
+label[data-order="3"] { --x: 6; --y: 6; }
+label[data-order="4"] { --x: 7; --y: 6; }
+label[data-order="5"] { --x: 7; --y: 5; }
+label[data-order="6"] { --x: 7; --y: 4; }
+label[data-order="7"] { --x: 6; --y: 4; }
+label[data-order="8"] { --x: 5; --y: 4; }
+label[data-order="9"] { --x: 4; --y: 4; }
+label[data-order="10"] { --x: 4; --y: 5; }
+label[data-order="11"] { --x: 4; --y: 6; }
+label[data-order="12"] { --x: 4; --y: 7; }
+label[data-order="13"] { --x: 5; --y: 7; }
+label[data-order="14"] { --x: 6; --y: 7; }
+label[data-order="15"] { --x: 7; --y: 7; }
+label[data-order="16"] { --x: 8; --y: 7; }
+label[data-order="17"] { --x: 8; --y: 6; }
+label[data-order="18"] { --x: 8; --y: 5; }
+label[data-order="19"] { --x: 8; --y: 4; }
+
+label[data-order="20"] { --x: 8; --y: 3; }
+label[data-order="21"] { --x: 7; --y: 3; }
+label[data-order="22"] { --x: 6; --y: 3; }
+label[data-order="23"] { --x: 5; --y: 3; }
+label[data-order="24"] { --x: 4; --y: 3; }
+label[data-order="25"] { --x: 3; --y: 3; }
+label[data-order="26"] { --x: 3; --y: 4; }
+label[data-order="27"] { --x: 3; --y: 5; }
+label[data-order="28"] { --x: 3; --y: 6; }
+label[data-order="29"] { --x: 3; --y: 7; }
+
+label[data-order="30"] { --x: 3; --y: 8; }
+label[data-order="31"] { --x: 4; --y: 8; }
+label[data-order="32"] { --x: 5; --y: 8; }
+label[data-order="33"] { --x: 6; --y: 8; }
+label[data-order="34"] { --x: 7; --y: 8; }
+label[data-order="35"] { --x: 8; --y: 8; }
+label[data-order="36"] { --x: 9; --y: 8; }
+label[data-order="37"] { --x: 9; --y: 7; }
+label[data-order="38"] { --x: 9; --y: 6; }
+label[data-order="39"] { --x: 9; --y: 5; }
+
+label[data-order="40"] { --x: 9; --y: 4; }
+label[data-order="41"] { --x: 9; --y: 3; }
+label[data-order="42"] { --x: 9; --y: 2; }
+label[data-order="43"] { --x: 8; --y: 2; }
+label[data-order="44"] { --x: 7; --y: 2; }
+label[data-order="45"] { --x: 6; --y: 2; }
+label[data-order="46"] { --x: 5; --y: 2; }
+label[data-order="47"] { --x: 4; --y: 2; }
+label[data-order="48"] { --x: 3; --y: 2; }
+label[data-order="49"] { --x: 2; --y: 2; }
+
+label[data-order="50"] { --x: 2; --y: 3; }
+label[data-order="51"] { --x: 2; --y: 4; }
+label[data-order="52"] { --x: 2; --y: 5; }
+label[data-order="53"] { --x: 2; --y: 6; }
+label[data-order="54"] { --x: 2; --y: 7; }
+label[data-order="55"] { --x: 2; --y: 8; }
+label[data-order="56"] { --x: 2; --y: 9; }
+label[data-order="57"] { --x: 3; --y: 9; }
+label[data-order="58"] { --x: 4; --y: 9; }
+label[data-order="59"] { --x: 5; --y: 9; }
+
+label[data-order="60"] { --x: 6; --y: 9; }
+label[data-order="61"] { --x: 7; --y: 9; }
+label[data-order="62"] { --x: 8; --y: 9; }
+label[data-order="63"] { --x: 9; --y: 9; }
+label[data-order="64"] { --x: 10; --y: 9; }
+label[data-order="65"] { --x: 10; --y: 8; }
+label[data-order="66"] { --x: 10; --y: 7; }
+label[data-order="67"] { --x: 10; --y: 6; }
+label[data-order="68"] { --x: 10; --y: 5; }
+label[data-order="69"] { --x: 10; --y: 4; }
+
+label[data-order="70"] { --x: 10; --y: 3; }
+label[data-order="71"] { --x: 10; --y: 2; }
+label[data-order="72"] { --x: 10; --y: 1; }
+label[data-order="73"] { --x: 9; --y: 1; }
+label[data-order="74"] { --x: 8; --y: 1; }
+label[data-order="75"] { --x: 7; --y: 1; }
+label[data-order="76"] { --x: 6; --y: 1; }
+label[data-order="77"] { --x: 5; --y: 1; }
+label[data-order="78"] { --x: 4; --y: 1; }
+label[data-order="79"] { --x: 3; --y: 1; }
+
+label[data-order="80"] { --x: 2; --y: 1; }
+label[data-order="81"] { --x: 1; --y: 1; }
+label[data-order="82"] { --x: 1; --y: 2; }
+label[data-order="83"] { --x: 1; --y: 3; }
+label[data-order="84"] { --x: 1; --y: 4; }
+label[data-order="85"] { --x: 1; --y: 5; }
+label[data-order="86"] { --x: 1; --y: 6; }
+label[data-order="87"] { --x: 1; --y: 7; }
+label[data-order="88"] { --x: 1; --y: 8; }
+label[data-order="89"] { --x: 1; --y: 9; }
+
+label[data-order="90"] { --x: 1; --y: 10; }
+label[data-order="91"] { --x: 2; --y: 10; }
+label[data-order="92"] { --x: 3; --y: 10; }
+label[data-order="93"] { --x: 4; --y: 10; }
+label[data-order="94"] { --x: 5; --y: 10; }
+label[data-order="95"] { --x: 6; --y: 10; }
+label[data-order="96"] { --x: 7; --y: 10; }
+label[data-order="97"] { --x: 8; --y: 10; }
+label[data-order="98"] { --x: 9; --y: 10; }
+label[data-order="99"] { --x: 10; --y: 10; }
+
+
+.hints {
+  font-size: 1rem !important;
+}
+
+.hints li {
+  font-size: 1.25rem !important;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+
+dialog {
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+  box-shadow: 0 0 0 100vmax #0007 !important;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(0.5em);
+}
+
+dialog button,
+.buttons button {
+  background: #36d;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25em;
+  height: 3em;
+  font-size: 1em;
+  padding: 0;
+
+  &:hover {
+    background: #47e !important;
+  }
+}
+
+dialog button {
+  padding: 0 1.5em;
+}
+
+:root:not(:has(input:invalid)) .congrats {
+  display: block;
+}
+
+@media print {
+  html, body, .hints, .hints li {
+    font-size: 14px !important;
+  }
+
+  h1 {
+    font-size: 1.25em;
+  }
+
+  h1::before {
+    content: "comiCSS "
+  }
+
+  .hints ol {
+    columns: 2;
+    column-gap: 2.5em;
+  }
+
+  .hints h2 {
+    font-size: 1.125em !important;
+  }
+
+  .hints ol li {
+    font-size: 12.5px !important;
+    margin-bottom: 0.1em;
+  }
+
+  article {
+    font-size: 4px;
+  }
+
+  .board {
+    margin: auto auto;
+  }
+
+  header, footer, h1 + p + p {
+    display: none !important;
+  }
+}
