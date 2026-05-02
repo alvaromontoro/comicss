@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,bluesky,alvaro_montoro,alvaro montoro,alvaro,montoro,games" />
+    <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="theme-color" content="#993399" />
+
+    <title>comiCSS Game - Word Gambit</title>
+
+    <meta property="og:title" content="Word Gambit - comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/games/images/word-gambit.png" />
+    <meta property="og:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="Word Gambit - comiCSS">
+    <meta name="twitter:description" content="comiCSS Games: games about CSS. Coded in CSS (mostly).">
+    <meta name="twitter:image" content="https://comicss.art/games/images/word-gambit.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/css/almond.lite.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="../css/word-gambit.css" />
+    <script defer src="../js/word-gambit.js"></script>
+  </head>
+  <body class="game">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div>
+        <h2 class="page-title"><a href="/" rel="up">comi<span>c</span><span>ss</span></a></h2>
+        <p>A webcomic about CSS. Coded in CSS.</p>
+      </div>
+      <nav aria-label="primary">
+        <ul>
+          <li>
+            <a href="/archive/" rel="archives">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M12,30 5,30 5,5 95,5 95,30 88,30 88,95 12,95 12,30 88,30" />
+                <rect rx="3" ry="3" x="30" width="40" y="45" height="15" />
+              </svg><span>Archive</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,30 30,95 5,95 5,70 70,5Z M5,95 12,88 M45,95 55,95 M65,95 75,95 M85,95 95,95" />
+              </svg><span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" rel="about">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M50,40 C85,60 95,80 95,95 95,95 5,95 5,95 5,80 15,60 50,40Z" />
+                <circle cx="50" cy="30" r="25" style="fill:#fff" />
+              </svg><span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="/games/" aria-current="page">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M38,5 62,5 62,38 95,38 95,62 62,62 62,95 38,95 38,62 5,62 5,38 38,38Z" />
+              </svg><span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/comicss.art" rel="external author">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M95,15 95,75 55,75 35,95 35,75 5,75 5,15Z" stroke-linejoin="round" />
+              </svg><span>Bluesky</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://comicss.printify.me" rel="external payment nofollow">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M0,5 15,5 35,75 85,75 95,25 18,25" stroke-linejoin="round" />
+                <circle cx="40" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+                <circle cx="80" cy="90" r="10" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Store</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/alvaromontoro" rel="external payment">
+              <svg width="1em" height="2em" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M9,0 9,100" style="stroke-width:18" />
+                <circle cx="62" cy="38" r="38" style="fill:currentColor; stroke-width: 0" />
+              </svg><span>Patreon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="game-main">
+      <h1>Word Gambit</h1>
+      <p>
+        Start at the highlighted cell and move like a chess knight to find the hidden sentence.
+        With one restriction: you cannot visit the same tile twice.
+      </p>
+      <p style="margin-bottom: 4em;">
+        If you get stuck, you can always check the <a href="./solution.html">hints and solutions</a> page.
+      </p>
+      
+      <article class="wordgambit">
+        <label>
+          <input type="checkbox" role="switch" id="show-hints"> Show hints for next step.
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" role="switch" id="only-valids"> Only valid cells can be selected.
+        </label>
+        <div class="board">
+          <label data-order="0" data-idx="0" data-potential="true" data-first="true">
+            <input type="checkbox">
+            CSS
+          </label>
+          <label data-order="27" data-idx="1">
+            <input type="checkbox">
+            COR
+          </label>
+          <label data-order="8" data-idx="2">
+            <input type="checkbox">
+            GUA
+          </label>
+          <label data-order="19" data-idx="3">
+            <input type="checkbox">
+            DI
+          </label>
+          <label data-order="2" data-idx="4">
+            <input type="checkbox">
+            AM
+          </label>
+          <label data-order="29" data-idx="5">
+            <input type="checkbox">
+            TO
+          </label>
+          <label data-order="9" data-idx="6">
+            <input type="checkbox">
+            GES
+          </label>
+          <label data-order="20" data-idx="7">
+            <input type="checkbox">
+            ZED
+          </label>
+          <label data-order="1" data-idx="8">
+            <input type="checkbox">
+            IS
+          </label>
+          <label data-order="28" data-idx="9">
+            <input type="checkbox">
+            DING
+          </label>
+          <label data-order="15" data-idx="10">
+            <input type="checkbox">
+            AND
+          </label>
+          <label data-order="18" data-idx="11">
+            <input type="checkbox">
+            DAR
+          </label>
+          <label data-order="34" data-idx="12">
+            <input type="checkbox">
+            TI
+          </label>
+          <label data-order="7" data-idx="13">
+            <input type="checkbox">
+            LAN
+          </label>
+          <label data-order="26" data-idx="14">
+            <input type="checkbox">
+            AC
+          </label>
+          <label data-order="17" data-idx="15">
+            <input type="checkbox">
+            STAN
+          </label>
+          <label data-order="30" data-idx="16">
+            <input type="checkbox">
+            W3C
+          </label>
+          <label data-order="3" data-idx="17">
+            <input type="checkbox">
+            ONG
+          </label>
+          <label data-order="21" data-idx="18">
+            <input type="checkbox">
+            AC
+          </label>
+          <label data-order="10" data-idx="19">
+            <input type="checkbox">
+            OF
+          </label>
+          <label data-order="33" data-idx="20">
+            <input type="checkbox">
+            CA
+          </label>
+          <label data-order="14" data-idx="21">
+            <input type="checkbox">
+            WEB
+          </label>
+          <label data-order="25" data-idx="22">
+            <input type="checkbox">
+            SERS
+          </label>
+          <label data-order="16" data-idx="23">
+            <input type="checkbox">
+            IS
+          </label>
+          <label data-order="6" data-idx="24">
+            <input type="checkbox">
+            RE
+          </label>
+          <label data-order="35" data-idx="25">
+            <input type="checkbox">
+            ONS.
+          </label>
+          <label data-order="12" data-idx="26">
+            <input type="checkbox">
+            OP
+          </label>
+          <label data-order="23" data-idx="27">
+            <input type="checkbox">
+            WEB
+          </label>
+          <label data-order="4" data-idx="28">
+            <input type="checkbox">
+            THE
+          </label>
+          <label data-order="31" data-idx="29">
+            <input type="checkbox">
+            SPEC
+          </label>
+          <label data-order="11" data-idx="30">
+            <input type="checkbox">
+            THE
+          </label>
+          <label data-order="22" data-idx="31">
+            <input type="checkbox">
+            ROSS
+          </label>
+          <label data-order="5" data-idx="32">
+            <input type="checkbox">
+            CO
+          </label>
+          <label data-order="32" data-idx="33">
+            <input type="checkbox">
+            IFI
+          </label>
+          <label data-order="13" data-idx="34">
+            <input type="checkbox">
+            EN
+          </label>
+          <label data-order="24" data-idx="35">
+            <input type="checkbox">
+            BROW
+          </label>
+        </div>
+        <div class="hint">&nbsp;</div>
+      </article>
+
+      <dialog id="congrats">
+        <h2>Congratulations!</h2>
+        <p>You completed the puzzle</p>
+        <button>Close</button>
+      </dialog>
+
+    </main>
+
+    <footer>
+      Copyright &copy; 2021-2026. <a href="https://alvaromontoro.com" rel="author external">Alvaro Montoro</a>
+      &mdash; <a href="/atom.xml">Atom Feed</a>
+      &mdash; <a href="/rss.xml">RSS Feed</a>
+    </footer>
+  </body>
+</html>
