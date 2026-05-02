@@ -1,0 +1,179 @@
+article.wordgambit {
+  font-size: 1vmin;
+
+  @media (min-width: 800px) {
+    font-size: 6px;
+  }
+}
+
+article > label {
+  font-size: 3em;
+  font-family: helvetica, arial, verdana, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.25em;
+  margin-block-end: 0.75em;
+  
+  &:nth-of-type(2) {
+    margin-block-end: 1.5em;
+  }
+  
+  input {
+    font-size: 1em;
+    appearance: none;
+    width: 2em !important;
+    height: 1em;
+    border: 1px solid #000 !important;
+    border: 1px solid light-dark(#000, #fff) !important;
+    background: #000 !important;
+    border-radius: 4em !important;
+    position: relative;
+    box-sizing: content-box !important;
+    
+    &::before {
+      content: "NO";
+      border: 1px solid #fff;
+      background: #fff;
+      color: #000;
+      border-radius: 50%;
+      width: 2em;
+      height: 2em;
+      overflow: hidden;
+      position: absolute;
+      display: grid;
+      place-items: center;
+      font-size: 0.4em;
+      top: 50%;
+      left: 25%;
+      translate: -50% -50%;
+      transition: left 0.25s;
+    }
+    
+    &:checked::before {
+      content: "YES";
+      left: 75%;
+    }
+  }
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 72em;
+  aspect-ratio: 1;
+  border: 0.5em solid #888;
+  background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0) 0 0 / 24em 24em;
+  background-color: #000;
+  /* margin: auto auto; */
+
+  label {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    mix-blend-mode: difference;
+    display: grid;
+    place-items: center;
+    font-size: 3em;
+    font-family: helvetica, arial, verdana, sans-serif;
+    position: relative;
+
+    &[data-first] {
+      background: radial-gradient(farthest-side circle, #0000 calc(90% - 0.2em), #ff0 calc(90% - 0.2em + 1px) calc(90% - 1px), #0000 90%);
+      font-weight: bold;
+    }
+
+    &:has(:checked) {
+      background: #808080;
+      inset: 0;
+      color: #fff;
+      mix-blend-mode: unset;
+    }
+
+    &[data-first]:has(:checked) {
+      background: radial-gradient(farthest-side circle, #0000 calc(90% - 0.2em), #ff0 calc(90% - 0.2em + 1px) calc(90% - 1px), #0000 90%), #808080;
+    }
+
+    &[data-clicked] {
+      outline: 2px dashed #000;
+      outline-offset: -3px;
+    }
+
+
+    &[data-current] {
+      outline: 3px dashed aqua !important;
+      outline-offset: -4px;
+    }
+
+    :has(#show-hints:checked) &[data-potential] {
+      color: #000;
+      background: 
+        linear-gradient(#ae3 0 0) 50% 50% / 80% 80% no-repeat;
+      background: 
+        radial-gradient(farthest-side circle, #ae3 80%, #0000 calc(80% + 1px));
+      mix-blend-mode: unset;
+    }
+
+    &::before {
+      content: attr(data-clicked);
+      position: absolute;
+      top: 0.25em;
+      left: 0.25em;
+      font-size: 0.75em;
+      color: #fff;
+    }
+
+    input {
+      position: absolute;
+      appearance: none;
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.hint {
+  text-align: center;
+  font-size: 3em;
+  font-family: Helvetica, Arial, sans-serif;
+  max-width: 24em;
+  margin-block: 2em;
+}
+
+
+
+dialog {
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(0.5em);
+}
+
+dialog button,
+.buttons button {
+  background: #36d;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25em;
+  height: 3em;
+  font-size: 1em;
+  padding: 0;
+
+  &:hover {
+    background: #47e !important;
+  }
+}
+
+dialog button {
+  padding: 0 1.5em;
+}
