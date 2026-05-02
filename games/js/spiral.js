@@ -25,11 +25,16 @@ board.addEventListener("keydown", e => {
     }
     return;
   }
+
+  if (e.key === 'Tab') {
+    return;
+  }
+
+  e.preventDefault();
   
   if (e.key.length === 1 && ((e.key >= 'a' && e.key <= 'z') || (e.key >= 'A' && e.key <= 'Z'))) {
     input.value = e.key;
     document.querySelector(`label[data-order="${input.parentNode.dataset.order/1+1}"] input`)?.focus();
-    e.preventDefault();
   }
 
   checkWin();
