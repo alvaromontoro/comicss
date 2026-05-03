@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: Maslow's Hierarchy of Needs</title>
+
+    <meta property="og:title" content="comiCSS: Maslow's Hierarchy of Needs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/249/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS: Maslow's Hierarchy of Needs">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/249/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+
+      @font-face {
+        font-family: 'Oswald';
+        src: url(/fonts/Oswald.ttf);
+      }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+article {
+  font-size: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 99em;
+  gap: 2em;
+}
+
+hgroup {
+  text-align: center;
+}
+
+h2 {
+  font-family: "Oswald", "Bebas Neue";
+  font-weight: 400;
+  font-size: 2.75em;
+  align-text: center;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+hgroup p {
+  margin: 0;
+  margin-block-end: 1em;
+  font-family: "Oswald", "Bebas Neue";
+  font-weight: 200;
+  font-size: 2.5em;
+}
+
+.triangle {
+  width: 85%;
+  aspect-ratio: 1.1;
+  margin: auto;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  p {
+    flex: 2;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    font-family: "Oswald", "Bebas Neue";
+    font-weight: 300;
+    font-size: 1.75em;
+    
+    &:nth-child(1) { flex: 3; background: #7cf; }
+    &:nth-child(2) { background: #9e7; }
+    &:nth-child(3) { background: #fe9; }
+    &:nth-child(4) { background: #fa7; }
+    &:nth-child(5) { background: #f88; }
+  }
+}
+
+section:nth-child(1) {
+  .triangle {
+    p:nth-child(1) {
+      text-align: center;
+      line-height: 1;
+      padding-top: 1em;
+      box-sizing: border-box;
+    }
+  }
+}
+
+section:nth-child(2) {
+  .triangle {
+    p:nth-child(3) { flex: 6; font-size: 2.5em;}
+    
+    p:nth-child(1) {
+      flex: 3;
+      text-align: center;
+      line-height: 1;
+      padding-top: 1em;
+      abox-sizing: border-box;
+    }
+  }
+}
+
+section:nth-child(3) {
+  .triangle {
+    clip-path: polygon(
+        49% 1%, 51% 0%, 95% 95%, 90% 100%, 0 100%, 12.5% 75%, 12.5% 50%, 25% 50%
+      );
+    
+    p {
+      padding-top: 0.5em;
+      font-size: 10em;
+      font-weight: 900;
+      position: relative;
+      
+      &::after {
+        content: "AI";
+        position: relative;
+        color: #fff;
+        text-shadow: 0 0 0.25em #38b;
+      }
+      
+      &::before {
+        content: "AI";
+        position: absolute;
+        color: #5ad;
+        font-size: 0.5em;
+        top: -10%;
+        font-weight: 200;
+        letter-spacing: -0.01em;
+        scale: 1 0.6;
+        filter: drop-shadow(0em 2em)
+          drop-shadow(1em 3em)
+          drop-shadow(-1em 3em)
+          drop-shadow(1em 3em)
+          drop-shadow(-1em 3em)
+          drop-shadow(0em 2em)
+          drop-shadow(0em 2em)
+          drop-shadow(0em 2em)
+          drop-shadow(0em 2em)
+          drop-shadow(0em 2em);
+        font-size: 0.4em;
+        filter:
+          drop-shadow(1em 0.75em)
+          drop-shadow(-1em 0.75em)
+          drop-shadow(1em 0.75em)
+          drop-shadow(-1em 0.75em)
+           drop-shadow(1em 0.75em)
+          drop-shadow(-1em 0.75em)
+         /* drop-shadow(1em 0.75em)
+          drop-shadow(-1em 0.75em)
+          drop-shadow(0em 1.5em)*/
+          drop-shadow(0em 1.5em) 
+          drop-shadow(0em 1.5em)
+          drop-shadow(0em 1.5em)
+          drop-shadow(0em 1.5em)
+          drop-shadow(0em 1.5em)
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+  <section>
+    <hgroup>
+<!--       <h2>Maslow's Hierarchy of Needs</h2> -->
+      <h2>Maslow's Pyramid of Needs</h2>
+      <p>(Abraham Maslow)
+    </hgroup>
+    <div class="triangle">
+      <p>Self<br>Actuali-<br>zation</p>
+      <p>Esteem</p>
+      <p>Love &amp; Belonging</p>
+      <p>Safety Needs</p>
+      <p>Psychological Needs</p>
+    </div>
+  </section>
+  <section>
+    <hgroup>
+      <!--       <h2>Maslow's Hierarchy of Needs</h2> -->
+      <h2>Maslow's Pyramid of Needs</h2>
+      <p>(Corporate Executive)
+    </hgroup>
+    <div class="triangle">
+      <p>Exec<br>Bonus</p>
+      <p>Corporate Profit</p>
+      <p>AI</p>
+    </div>
+  </section>
+  <section>
+    <hgroup>
+<!--       <h2>MAIslow's HAIrAIrchy of NAIds</h2> -->
+      <h2>MAIslow's PAIrAImid of NAIds</h2>
+      <p>(AI CompAIny)
+    </hgroup>
+    <div class="triangle">
+      <p></p>
+    </div>
+  </section>
+</article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
