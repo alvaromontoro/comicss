@@ -2486,5 +2486,15 @@
       <enclosure url="https://comicss.art/comics/248/beware-of-css.png" length="230000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/249</guid>
+      <title>Maslow's Hierarchy of Needs</title>
+      <link>https://comicss.art/comics/249</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/249/maslow.png" length="179000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

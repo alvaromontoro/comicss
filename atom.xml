@@ -4718,4 +4718,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Maslow's Hierarchy of Needs</title>
+    <link href="https://comicss.art/comics/249" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/249/maslow.html"/>
+    <id>https://comicss.art/comics/249</id>
+    <updated>2026-05-04T00:00:00Z</updated>
+    <summary>New Cartoon: Maslow's Hierarchy of Needs</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/249/maslow.png" alt="graphic with 3 pyramids. The first one is labeled 'Maslow's Pyramid of Needs' and has the classic levels from bottom to top: psychological needs, safety needs, love and belonging, estemm, and self-actualization. The second one is labeled 'Maslow's Pyramid of Needs (Corporate version)' it only has 3 levels from bottom to top: AI (occupies 3/5), corporote profit, and exec bonus. The last pyramid is labeled 'MAIslow's PAIrAImid of NAIds (AI CompAIny version), the pyramid is misshapen, corners are cut, and there's only one level AI with many AIs written in the background." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
