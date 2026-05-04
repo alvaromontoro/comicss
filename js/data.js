@@ -1927,4 +1927,12 @@ const posts = [
     title: "Beware of CSS!",
     ariaLabel: "comic with 4 panels in a 2x2 grid. One character is typing CSS on a computer, another one interrupts and says 'You should stop using CSS! It's bad for your website! It says it here on this company's website! ...It also says that CSS is dead, best practices are bad, recommends tables and floats for layout, and...' The first character retakes writing CSS and interrupts 'And let me guess... the solution is their style library?' The second character is surprised 'Wait... How did you know?'"
   },
+  {
+    id: 249,
+    uid: "maslow",
+    boxes: 1,
+    title: "Maslow's Hierarchy of Needs",
+    vertical: true,
+    ariaLabel: "graphic with 3 pyramids. The first one is labeled 'Maslow's Pyramid of Needs' and has the classic levels from bottom to top: psychological needs, safety needs, love and belonging, estemm, and self-actualization. The second one is labeled 'Maslow's Pyramid of Needs (Corporate version)' it only has 3 levels from bottom to top: AI (occupies 3/5), corporote profit, and exec bonus. The last pyramid is labeled 'MAIslow's PAIrAImid of NAIds (AI CompAIny version), the pyramid is misshapen, corners are cut, and there's only one level AI with many AIs written in the background."
+  },
 ]
