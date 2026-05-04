@@ -1933,6 +1933,6 @@ const posts = [
     boxes: 1,
     title: "Maslow's Hierarchy of Needs",
     vertical: true,
-    ariaLabel: "graphic with 3 pyramids. The first one is labeled 'Maslow's Pyramid of Needs' and has the classic levels from bottom to top: psychological needs, safety needs, love and belonging, estemm, and self-actualization. The second one is labeled 'Maslow's Pyramid of Needs (Corporate version)' it only has 3 levels from bottom to top: AI (occupies 3/5), corporote profit, and exec bonus. The last pyramid is labeled 'MAIslow's PAIrAImid of NAIds (AI CompAIny version), the pyramid is misshapen, corners are cut, and there's only one level AI with many AIs written in the background."
+    ariaLabel: "graphic with 3 pyramids. The first one is labeled 'Maslow's Pyramid of Needs' and has the classic levels from bottom to top: physiological needs, safety needs, love and belonging, esteem, and self-actualization. The second one is labeled 'Maslow's Pyramid of Needs (Corporate version)' it only has 3 levels from bottom to top: AI (occupies 3/5), corporate profit, and exec bonus. The last pyramid is labeled 'MAIslow's PAIrAImid of NAIds (AI CompAIny version), the pyramid is misshapen, corners are cut, and there's only one level AI with many AIs written in the background."
   },
 ]
