@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="/css/almond.lite.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/games/css/index.css" />
   </head>
 
   <body class="games">
@@ -101,14 +102,68 @@
       <h1>Games</h1>
       <p>
         <span class="sitename">comi<span>CSS</span></span> now has games! Over the past year, I've been working 
-        on creating a collection of CSS-based games (thanks everyone who tested them), and I'm excited to start 
-        adding them to the website on a regular basis. New games will be published every week on Wednesdays.
+        on a collection of CSS-based games. Some can run entirely with CSS, while others use JavaScript. My goal
+        is a progressive enhancement approach to ensure a solid baseline experience with the most CSS possible.
       </p>
-      <p>
-        Some of these games are built entirely with CSS and will work even without JavaScript. Others will rely 
-        on JavaScript for additional functionality. In all cases, I'm taking a progressive enhancement approach to 
-        ensure a solid baseline experience while providing richer interactions where possible.
-      </p>
+
+      <search role="search">
+        <input type="search" placeholder="Search games..." aria-label="Search games" id="search-input" />
+        <select id="filter-category" aria-label="Filter by category">
+          <option value="all">All Games</option>
+          <option value="fourconnect">4Connect</option>
+          <option value="abcnagrams">ABCnagrams</option>
+          <option value="branches">Branches</option>
+          <option value="chain">Chain</option>
+          <option value="code-breaker">Code Breaker</option>
+          <option value="crossword">Crossword</option>
+          <option value="guess-the">Guess the...</option>
+          <option value="infinite-ring">Infinite Ring</option>
+          <option value="sequences">Sequences</option>
+          <option value="spiral">Spiral</option>
+          <option value="stairs">Stairs</option>
+          <option value="word-gambit">Word Gambit</option>
+        </select>
+        <select id="sort-by" aria-label="Sort by">
+          <option value="new">Sort (newest)</option>
+          <option value="old">Sort (oldest)</option>
+        </select>
+        <div>
+          <label for="show-solved" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="show-solved" role="switch" />
+            <span>Show solved games</span>
+          </label>
+        </div>
+      </search>
+
+      <ul class="game-list">
+        <li>
+          <img src="./images/icon-spiral.webp" alt="" />
+          <div>
+            <hgroup>
+              <h2>Spiral</h2>
+              <p><time datetime="2026-05-04">May 4, 2026</time></p>
+            </hgroup>
+            <p>Crossword where all words are connected forming a spiral chain</p>
+          </div>
+          <a href="/games/48">
+            Play <span class="a11y-hidden">Spiral #48</span>
+          </a>
+        </li>
+
+        <li>
+          <img src="./images/icon-fourconnect.webp" alt="" />
+          <div>
+            <hgroup>
+              <h2>4Connect</h2>
+              <p><time datetime="2026-05-03">May 3, 2026</time></p>
+            </hgroup>
+            <p>Four groups of four related terms to be guessed in four of fewer attempts.</p>
+          </div>
+          <a href="/games/47">
+            Play <span class="a11y-hidden">4Connect #47</span>
+          </a>
+        </li>
+      </ul>
 
       <table style="margin-bottom:5rem;">
         <thead>

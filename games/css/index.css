@@ -1,0 +1,149 @@
+search {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-block: 2em;
+}
+
+input[type="search"] {
+  grid-column: 1/-1;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M36,36 20,20' stroke='%23ccc' stroke-width='3' /><circle cx='15' cy='15' r='14' fill='white' stroke='%23ccc' stroke-width='2' /></svg>") 0.5rem 50% / auto 60% no-repeat;
+  padding-inline-start: 2.25em;
+}
+
+select {
+  min-width: 3em;
+}
+
+@media (min-width: 768px) {
+  search {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  input[type="search"] {
+    grid-column: 1;
+  }
+}
+
+/****/
+
+.game-list {
+  margin: 0;
+  padding: 0;
+  list-style: "";
+  display: grid;
+  gap: 2em;
+}
+
+.game-list li {
+  padding: 0.5em;
+  margin-inline: -0.5em;
+  position: relative;
+  display: grid;
+  grid-template-columns: 3em 1fr auto;
+  gap: 1rem;
+  border-radius: 0.5em;
+  max-width: 100%;
+}
+
+.game-list li::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: var(--fg);
+  opacity: 0.25;
+  grid-column: 1/-1;
+  position: absolute;
+  top: 100%;
+  translate: 0 1em;
+  pointer-events: none;
+}
+
+.game-list li img {
+  width: 3em;
+  height: 3em;
+  border: 2px solid;
+  vertical-align: middle;
+  margin-inline-end: 0.5em;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+}
+
+.game-list li hgroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.game-list li h2 {
+  margin: 0;
+  display: inline-block;
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.game-list li hgroup p {
+  line-height: 1;
+}
+
+.game-list li p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.game-list li > div > p {
+  line-height: 1.25;
+  margin-top: 0.5em;
+}
+
+.game-list li time {
+  margin: 0;
+  display: inline-block;
+  font-size: 1em;
+  opacity: 0.6;
+}
+
+.game-list li a {
+  outline: none;
+}
+
+.game-list li a::after {
+  content: "\203A";
+}
+
+.game-list li a::before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.5em;
+  opacity: 0.6;
+  position: absolute;
+  inset: 0;
+}
+
+.game-list li:hover,
+.game-list li:focus-within {
+  outline: 1px dashed var(--primary);
+  outline-offset: 0.125em;
+}
+
+.game-list li:hover a,
+.game-list li:focus-within a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .game-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .game-list li hgroup p {
+    display: inline;
+  }
+
+  .game-list li time::before {
+    content: " \25cf  ";
+    opacity: 0.25;
+  }
+}
