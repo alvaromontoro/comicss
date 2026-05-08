@@ -9,7 +9,7 @@
     <meta name="description" content="comiCSS Games: games about CSS. Coded in CSS (mostly)." />
     <meta name="theme-color" content="#993399" />
 
-    <title>comiCSS - Game 45 Solution</title>
+    <title>comiCSS - Game 52 Solution</title>
 
     <meta property="og:title" content="Word Gambit - comiCSS" />
     <meta property="og:type" content="website" />
@@ -98,7 +98,7 @@
 
     <main id="main" class="game-main">
       <h1>Word Gambit Solution</h1>
-      <p>This page contains the solution to the <a href="./">Word Gambit game for May 1, 2026</a>.</p>
+      <p>This page contains the solution to the <a href="./">Word Gambit game for May 8, 2026</a>.</p>
       <p>
         To avoid spoilers, all answers are hidden by default. You can use the toggle to reveal 
         them whenever you're ready. Or mouse over each answer to see it temporarily.
@@ -108,22 +108,21 @@
         <span>Show answers</span>
       </label>
       <style>
-        .answers p {
+        .answers blockquote {
           filter: blur(0.5rem);
           transition: filter 1s;
         }
-        :has(#show-answers:checked) .answers p,
-        .answers p:hover {
+        :has(#show-answers:checked) .answers blockquote,
+        .answers blockquote:hover {
           filter: blur(0);
         }
       </style>
       <section class="answers">
         <h2>Quote</h2>
-        <p>CSS is among the core languages of the open web and is standardized across web browsers according to W3C specifications.</p>
-        <h2>Source</h2>
-        <p>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Docs: CSS</a>
-        </p>
+        <blockquote>
+          <p>Program testing can be a very effective way to show the presence of bugs, but it is hopelessly inadequate for showing their absence.</p>
+          <cite>Edsger W. Dijkstra, The Humble Programmer (1972)</cite>
+        </blockquote>
       </section>
     </main>
 
