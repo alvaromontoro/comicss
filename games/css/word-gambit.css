@@ -1,8 +1,12 @@
 article.wordgambit {
-  font-size: 1vmin;
-
-  @media (min-width: 800px) {
-    font-size: 6px;
+  font-size: 1.2vmin;
+  width: 73em;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  
+  @media (width >= 500px) {
+    font-size: 1vmin;
   }
 }
 
@@ -13,11 +17,6 @@ article > label {
   align-items: center;
   justify-content: start;
   gap: 0.25em;
-  margin-block-end: 0.75em;
-  
-  &:nth-of-type(2) {
-    margin-block-end: 1.5em;
-  }
   
   input {
     font-size: 1em;
@@ -30,6 +29,8 @@ article > label {
     border-radius: 4em !important;
     position: relative;
     box-sizing: content-box !important;
+    padding: 0 !important;
+    box-shadow: none !important;
     
     &::before {
       content: "NO";
@@ -58,6 +59,7 @@ article > label {
 }
 
 .board {
+  border-radius: 2em;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -66,7 +68,7 @@ article > label {
   border: 0.5em solid #888;
   background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0) 0 0 / 24em 24em;
   background-color: #000;
-  /* margin: auto auto; */
+  margin: auto auto;
 
   label {
     position: relative;
@@ -78,6 +80,11 @@ article > label {
     font-size: 3em;
     font-family: helvetica, arial, verdana, sans-serif;
     position: relative;
+    
+    &:nth-child(1)  { border-radius: 0.5em 0 0 0; }
+    &:nth-child(6)  { border-radius: 0 0.5em 0 0; }
+    &:nth-child(31) { border-radius: 0 0 0 0.5em; }
+    &:nth-child(36) { border-radius: 0 0 0.5em 0; }
 
     &[data-first] {
       background: radial-gradient(farthest-side circle, #0000 calc(90% - 0.2em), #ff0 calc(90% - 0.2em + 1px) calc(90% - 1px), #0000 90%);
@@ -88,12 +95,13 @@ article > label {
       background: #808080;
       inset: 0;
       color: #fff;
+      color: #E3E3E3;
       mix-blend-mode: unset;
     }
 
-    &[data-first]:has(:checked) {
+    /* &[data-first]:has(:checked) {
       background: radial-gradient(farthest-side circle, #0000 calc(90% - 0.2em), #ff0 calc(90% - 0.2em + 1px) calc(90% - 1px), #0000 90%), #808080;
-    }
+    } */
 
     &[data-clicked] {
       outline: 2px dashed #000;
@@ -101,26 +109,30 @@ article > label {
     }
 
 
-    &[data-current] {
-      outline: 3px dashed aqua !important;
+    &[aria-current] {
+      background: #a0a0a0;
+      background: #05C3DD;
+      outline: 2px dashed aqua !important;
       outline-offset: -4px;
+      color: #034A54;
     }
 
     :has(#show-hints:checked) &[data-potential] {
       color: #000;
       background: 
-        linear-gradient(#ae3 0 0) 50% 50% / 80% 80% no-repeat;
+        radial-gradient(farthest-side circle, #ae3 65%, #ae30 calc(95% + 1px));
       background: 
-        radial-gradient(farthest-side circle, #ae3 80%, #0000 calc(80% + 1px));
+        radial-gradient(farthest-side circle, #ae3 60%, #ae30);
       mix-blend-mode: unset;
     }
 
     &::before {
       content: attr(data-clicked);
       position: absolute;
-      top: 0.25em;
-      left: 0.25em;
-      font-size: 0.75em;
+      top: 0.65em;
+      left: 0.65em;
+      font-size: 0.7em;
+      font-weight: 400;
       color: #fff;
     }
 
@@ -140,10 +152,36 @@ article > label {
   font-size: 3em;
   font-family: Helvetica, Arial, sans-serif;
   max-width: 24em;
-  margin-block: 2em;
+  margin: auto auto;
+  margin-block-start: 2em;
 }
 
+#undo {
+  justify-self: end;
+  align-self: end;
+  margin-block: 1em;
+  font-size: 2.5em;
+  background: #000;
+  color: #fff;
+  border: 0;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  transition:  background 0.25s;
+  font-weight: 400 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#undo:hover,
+#undo:focus {
+  background: #333;
+}
+
+#undo:active {
+  background: #666;
+  transition:  background 0s;
+}
 
 dialog {
   background: var(--bg) !important;
