@@ -21,13 +21,13 @@ function clearClicked(num) {
     steps[x].querySelector("input").checked = false;
   }
   if (steps[num-2]) {
-    steps[num-2].dataset.current = true;
+    steps[num-2].setAttribute("aria-current", true);
   }
   step = board.querySelectorAll("label[data-clicked]").length + 1;
 }
 
 function highlightPotential() {
-  const current = board.querySelector("[data-current]");
+  const current = board.querySelector("[aria-current]");
   if (current) {
     const idx = current.dataset.idx / 1;
 
@@ -64,7 +64,7 @@ function checkEnd() {
   if (labels.length !== 36) {
     return false;
   }
-  
+
   return [...labels].every(el => el.dataset.order/1 === el.dataset.clicked-1);
 }
 
@@ -73,21 +73,25 @@ board.addEventListener("click", function(e) {
     e.stopPropagation();
     const label = e.target;
     
-    if (document.querySelector("#only-valids").checked && !label.dataset.potential && !label.dataset.clicked && board.querySelector("[data-clicked]")) {
+    // if (document.querySelector("#only-valids").checked && !label.dataset.potential && !label.dataset.clicked && board.querySelector("[data-clicked]")) {
+    //   e.preventDefault();
+    //   return;
+    // }
+    if ((document.querySelector("#only-valids").checked && label.dataset.potential === undefined) || label.dataset.clicked) {
       e.preventDefault();
       return;
     }
     
-    board.querySelector("[data-current]")?.removeAttribute("data-current");
+    board.querySelector("[aria-current]")?.removeAttribute("aria-current");
     board.querySelectorAll("[data-potential]").forEach(el => el.removeAttribute("data-potential"));
 
     if (!label.dataset.clicked) {
       label.dataset.clicked = step;
-      label.dataset.current = true;
+      label.setAttribute("aria-current", true);
       step++;
-    } else {
-      e.preventDefault();
-      clearClicked(label.dataset.clicked/1);
+    // } else {
+    //   e.preventDefault();
+    //   clearClicked(label.dataset.clicked/1);
     }
 
     highlightPotential();
@@ -99,3 +103,24 @@ board.addEventListener("click", function(e) {
   }
 });
 
+document.querySelector("#undo").addEventListener("click", function() {
+  if (step > 1) {
+    step--;
+    const prevLabel = document.querySelector(`[data-clicked="${step}"]`);
+    prevLabel.querySelector("input").checked = false;
+    prevLabel.removeAttribute("data-clicked");
+    prevLabel.removeAttribute("aria-current");
+
+    board.querySelectorAll("[data-potential]").forEach(el => el.removeAttribute("data-potential"));
+    
+    if (step > 1) {
+      document.querySelector(`[data-clicked="${step-1}"]`).setAttribute("aria-current",true);
+    } else {
+      document.querySelector("[data-first]").dataset.potential = true;
+    }
+      
+      highlightPotential();
+      hint.textContent = getText();
+    
+  }
+})
