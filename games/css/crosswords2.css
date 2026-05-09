@@ -480,7 +480,8 @@ article {
 
   ol {
     margin: 0;
-    padding: 1em;
+    overflow: visible;
+    padding: 0;
 
     @media (width > 1000px) {
       column-count: 2;
@@ -493,9 +494,6 @@ article {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
       break-after: page;
-      overflow: visible;
-      margin: 0;
-      padding: 0;
     }
 
     li {
