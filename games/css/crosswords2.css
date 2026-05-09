@@ -471,16 +471,12 @@ article {
   }
 }
 
-.hints {
+#hints {
   display: grid;
   font-size: 0.8em;
   font-size: 0.9em;
   margin-block-start: 2em;
   gap: 3em;
-
-  /* @media (width > 600px) {
-    grid-template-columns: 1fr 1fr;
-  } */
 
   ol {
     margin: 0;
