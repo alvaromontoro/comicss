@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: Web Styles Astrology</title>
+
+    <meta property="og:title" content="comiCSS: Web Styles Astrology" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/250" />
+    <meta property="og:image" content="https://comicss.art/comics/250/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://comicss.art/comics/250">
+    <meta name="twitter:title" content="comiCSS: Web Styles Astrology">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/250/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Oswald';
+  src: url(/fonts/Oswald.ttf);
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  src: url(/fonts/PTSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(/fonts/Raleway.ttf);
+}
+
+article {
+  margin: 40px;
+  font-size: max(1vmin, 1px);
+  width: 90em;
+  aspect-ratio: 1;
+  border: 0.5em solid #000;
+  border-radius: 50%;
+  position: relative;
+  font-family: 'PT Sans',Raleway, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  transition: rotate 0.5s;
+
+  background:
+    radial-gradient(farthest-side, #fff 25%, #0000 calc(25% + 1px)),
+    linear-gradient(0deg, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0),
+    linear-gradient(30deg, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0),
+    linear-gradient(60deg, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0),
+    linear-gradient(90deg, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0),
+    linear-gradient(120deg, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0),
+    linear-gradient(150deg, #0000 calc(50% - 0.2em), #000 0 calc(50% + 0.2em), #0000 0),
+    radial-gradient(farthest-side, #fff 25%, #000 calc(25% + 1px) calc(25% + 0.4em), #0000 calc(25% + 0.4em + 1px) 40%, #000 calc(40% + 1px) calc(40% + 0.4em), #0000 calc(40% + 0.4em + 1px), #fff8 0 90%, #000 calc(90% + 1px) calc(90% + 0.4em), #0000 calc(90% + 0.4em + 1px)),
+    conic-gradient(#bbefff 30deg, #bc6bff 0 60deg, #eec 0 90deg, #a76ce1 0 120deg, #76b510 0 150deg,  #ef655c 0 180deg, #70eed0 0 210deg, #ff9ce2 0 240deg, #6a88f9 0 270deg, #42abef 0 300deg, #9ecaee 0 330deg, #ccc 0),
+    #f003;
+
+  span {
+    --mid:  calc(sibling-count() / 2);
+    display: inline-block;
+    rotate: calc((sibling-index() - var(--mid)) * var(--angle));
+    translate: 0 calc((sibling-index() - var(--mid)) * (sibling-index() - var(--mid)) * var(--top));
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translatE: -50% -50%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 22%;
+    text-wrap: balance;
+    font-size: 4.75em;
+    line-height: 1.14;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    transition: rotate 0.5s;
+    
+    > span {
+      --angle: 12deg;
+      --top: 0.05em;
+      position: absolute;
+      left: 50%;
+      top: -100%;
+      translate: -50% -50%;
+      rotate: -5deg;
+      white-space: nowrap;
+      font-weight: 400;
+      font-size: 0.8em;
+      letter-spacing:0em;
+      
+      & > span:last-child {
+        transform: translate(-0.03em, 0.12em);
+      }
+      
+      
+      &:nth-of-type(2) {
+        --angle: -10deg;
+        --top: -0.05em;
+        top: 170%;
+        rotate: 5deg;
+        afont-size: 1.1em;
+        
+        & > span:last-child {
+          transform: translate(-0.04em, 0.075em);
+        }
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    inset: 0;
+  }
+
+  li {
+    --angle: calc((sibling-index() - 1) * 30deg + 15deg);
+    text-align: center;
+    height: 50%;
+    width: 25%;
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 100%;
+    transform: translate(-50%, -100%) rotate(var(--angle));
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block-end: 20em;
+    box-sizing: border-box;
+    text-wrap: balance;
+
+    hgroup {
+      h2 {
+        text-align: center;
+        font-size: 2.1em;
+        margin: 0;
+        padding: 0;
+        line-height: 2em;
+        font-weight: 700;
+
+        span {
+          --angle: 1.25deg;
+          --top: 0.007em;
+          text-transform: uppercase;
+        }
+      }
+
+      p {
+        margin-block-start: 2em !important;
+        width: 45%;
+        aspect-ratio: 0.8;
+        margin: auto auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        text-indent: -100vmax;
+        overflow: hidden;
+      }
+    }
+
+    div {
+      --top: 0.01em;
+      --angle: 2.5deg;
+      font-size: 2em;
+    }
+
+
+    > div {
+      width: 50%;
+      margin: auto auto;
+      font-size: 2em;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      font-size: 4em;
+      bottom: 21.25%;
+      left: 50%;
+      translate: -50% -50%;
+      /*       rotate: calc(var(--angle) * -1) */
+    }
+
+    &:nth-child(1)::after { content: "♈︎"; }
+    &:nth-child(2)::after { content: "♉︎"; }
+    &:nth-child(3)::after { content: "♊︎"; }
+    &:nth-child(4)::after { content: "♋︎"; }
+    &:nth-child(5)::after { content: "♌︎"; }
+    &:nth-child(6)::after { content: "♍︎"; }
+    &:nth-child(7)::after { content: "♎︎"; }
+    &:nth-child(8)::after { content: "♏︎"; }
+    &:nth-child(9)::after { content: "♐︎"; }
+    &:nth-child(10)::after { content: "♑︎"; }
+    &:nth-child(11)::after { content: "♒︎"; }
+    &:nth-child(12)::after { content: "♓︎"; }
+
+    &:nth-child(1 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/tailwind-logo.svg"); }
+    &:nth-child(2 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/bootstrap-logo.svg"); }
+    &:nth-child(3 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/uno-logo.svg"); }
+    &:nth-child(4 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/css-logo.svg"); }
+    &:nth-child(5 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/gsap-logo.png"); }
+    &:nth-child(6 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/normalize-logo.svg"); }
+    &:nth-child(7 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/bulma-logo.svg"); }
+    &:nth-child(8 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/sass-logo.svg"); }
+    &:nth-child(9 ) hgroup p { background-image: url("https://assets.codepen.io/1506195/openprops-logo.png"); }
+    &:nth-child(10) hgroup p { background-image: url("https://assets.codepen.io/1506195/foundation-logo.svg"); }
+    &:nth-child(11) hgroup p { background-image: url("https://assets.codepen.io/1506195/material-ui-logo.png"); }
+    &:nth-child(12) hgroup p { background-image: url("https://assets.codepen.io/1506195/threejs-logo.svg"); }
+
+    /*     &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9) {
+    h2 {
+    line-height: 2.1em;
+    scale: -1 -1;
+  }
+  } */
+
+  }
+}
+
+body[data-angle="0"]  article { rotate: 0deg; }
+body[data-angle="1"]  article { rotate: -15deg; }
+body[data-angle="2"]  article { rotate: -45deg; }
+body[data-angle="3"]  article { rotate: -75deg; }
+body[data-angle="4"]  article { rotate: -105deg; }
+body[data-angle="5"]  article { rotate: -135deg; }
+body[data-angle="6"]  article { rotate: -165deg; }
+body[data-angle="7"]  article { rotate: -195deg; }
+body[data-angle="8"]  article { rotate: -225deg; }
+body[data-angle="9"]  article { rotate: -255deg; }
+body[data-angle="10"] article { rotate: -285deg; }
+body[data-angle="11"] article { rotate: -315deg; }
+body[data-angle="12"] article { rotate: -345deg; }
+
+body[data-angle="0"]  h1 { rotate: 0deg; }
+body[data-angle="1"]  h1 { rotate: 15deg; }
+body[data-angle="2"]  h1 { rotate: 45deg; }
+body[data-angle="3"]  h1 { rotate: 75deg; }
+body[data-angle="4"]  h1 { rotate: 105deg; }
+body[data-angle="5"]  h1 { rotate: 135deg; }
+body[data-angle="6"]  h1 { rotate: 165deg; }
+body[data-angle="7"]  h1 { rotate: 195deg; }
+body[data-angle="8"]  h1 { rotate: 225deg; }
+body[data-angle="9"]  h1 { rotate: 255deg; }
+body[data-angle="10"] h1 { rotate: 285deg; }
+body[data-angle="11"] h1 { rotate: 315deg; }
+body[data-angle="12"] h1 { rotate: 345deg; }
+    </style>
+  </head>
+  <body>
+
+    <select onchange="body.dataset.angle = this.value" style="margin: 0 40px 40px">
+  <option value="0" >Select a sign...</option>
+  <option value="11">Aquarius - Material UI</option>
+  <option value="1" >Aries - TailwindCSS</option>
+  <option value="4" >Cancer - CSS</option>
+  <option value="10">Capricorn - Foundation</option>
+  <option value="3" >Gemini - UnoCSS</option>
+  <option value="5" >Leo - Bootstrap</option>
+  <option value="7" >Libra - Bulma</option>
+  <option value="12">Pisces - ThreeJS</option>
+  <option value="9" >Sagittarius - Open-Props</option>
+  <option value="8" >Scorpio - Sass</option>
+  <option value="2" >Taurus - Bootstrap</option>
+  <option value="6" >Virgo - Materialize</option>
+</select>
+
+<article>
+  <h1>
+    Web Style
+    <span role="text" arial-label="Astrology">
+      <span>A</span><span>s</span><span>t</span><span>r</span><span>o</span><span>l</span><span>o</span><span>g</span><span>y</span>
+    </span>
+    <span role="text" arial-label="Circle">
+      <span>C</span><span>i</span><span>r</span><span>c</span><span>l</span><span>e</span>
+    </span>
+  </h1>
+  <ul>
+    <li>
+      <hgroup>
+        <h2 aria-label="Aries">
+          <span>A</span><span>r</span><span>i</span><span>e</span><span>s</span>
+        </h2>
+        <p>Tailwind CSS</p>
+      </hgroup>
+      <div role="group" aria-label="Impulsive, Energetic">
+        <p><span>I</span><span>m</span><span>p</span><span>u</span><span>l</span><span>s</span><span>i</span><span>v</span><span>e</span></p>
+        <p><span>E</span><span>n</span><span>e</span><span>r</span><span>g</span><span>e</span><span>t</span><span>i</span><span>c</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Taurus">
+          <span>T</span><span>a</span><span>u</span><span>r</span><span>u</span><span>s</span>
+        </h2>
+        <p>Bootstrap</p>
+      </hgroup>
+      <div role="group" aria-label="Stable, Reliable">
+        <p><span>S</span><span>t</span><span>a</span><span>b</span><span>l</span><span>e</span></p>
+        <p><span>R</span><span>e</span><span>l</span><span>i</span><span>a</span><span>b</span><span>l</span><span>e</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Gemini">
+          <span>G</span><span>e</span><span>m</span><span>i</span><span>n</span><span>i</span>
+        </h2>
+        <p>jQuery UI</p>
+      </hgroup>
+      <div role="group" aria-label="Curious, Adaptable">
+        <p><span>C</span><span>u</span><span>r</span><span>i</span><span>o</span><span>u</span><span>s</span></p>
+        <p><span>A</span><span>d</span><span>a</span><span>p</span><span>t</span><span>a</span><span>b</span><span>l</span><span>e</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Cancer">
+          <span>C</span><span>a</span><span>n</span><span>c</span><span>e</span><span>r</span>
+        </h2>
+        <p>CSS</p>
+      </hgroup>
+      <div role="group" aria-label="Supportive, Protective">
+        <p><span>S</span><span>u</span><span>p</span><span>p</span><span>o</span><span>r</span><span>t</span><span>i</span><span>v</span><span>e</span></p>
+        <p><span>P</span><span>r</span><span>o</span><span>t</span><span>e</span><span>c</span><span>t</span><span>i</span><span>v</span><span>e</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Leo">
+          <span>L</span><span>e</span><span>o</span>
+        </h2>
+        <p>GreenSock</p>
+      </hgroup>
+      <div role="group" aria-label="Expressive, Dramatic">
+        <p><span>E</span><span>x</span><span>p</span><span>r</span><span>e</span><span>s</span><span>s</span><span>i</span><span>v</span><span>e</span></p>
+        <p><span>D</span><span>r</span><span>a</span><span>m</span><span>a</span><span>t</span><span>i</span><span>c</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Virgo">
+          <span>V</span><span>i</span><span>r</span><span>g</span><span>o</span>
+        </h2>
+        <p>Normalize.css</p>
+      </hgroup>
+      <div role="group" aria-label="Organized, Precise">
+        <p><span>O</span><span>r</span><span>g</span><span>a</span><span>n</span><span>i</span><span>z</span><span>e</span><span>d</span></p>
+        <p><span>P</span><span>r</span><span>e</span><span>c</span><span>i</span><span>s</span><span>e</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Libra">
+          <span>L</span><span>i</span><span>b</span><span>r</span><span>a</span>
+        </h2>
+        <p>Bulma</p>
+      </hgroup>
+      <div role="group" aria-label="Balanced, Elegant">
+        <p><span>B</span><span>a</span><span>l</span><span>a</span><span>n</span><span>c</span><span>e</span><span>d</span></p>
+        <p><span>E</span><span>l</span><span>e</span><span>g</span><span>a</span><span>n</span><span>t</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Scorpio">
+          <span>S</span><span>c</span><span>o</span><span>r</span><span>p</span><span>i</span><span>o</span>
+        </h2>
+        <p>Sass</p>
+      </hgroup>
+      <div role="group" aria-label="Intense, Layered">
+        <p><span>I</span><span>n</span><span>t</span><span>e</span><span>n</span><span>s</span><span>e</span></p>
+        <p><span>L</span><span>a</span><span>y</span><span>e</span><span>r</span><span>e</span><span>d</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Sagittarius">
+          <span>S</span><span>a</span><span>g</span><span>i</span><span>t</span><span>t</span><span>a</span><span>r</span><span>i</span><span>u</span><span>s</span>
+        </h2>
+        <p>Open Props</p>
+      </hgroup>
+      <div role="group" aria-label="Adventurous, Flexible">
+        <p><span>A</span><span>d</span><span>v</span><span>e</span><span>n</span><span>t</span><span>u</span><span>r</span><span>o</span><span>u</span><span>s</span></p>
+        <p><span>F</span><span>l</span><span>e</span><span>x</span><span>i</span><span>b</span><span>l</span><span>e</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Capricorn">
+          <span>C</span><span>a</span><span>p</span><span>r</span><span>i</span><span>c</span><span>o</span><span>r</span><span>n</span>
+        </h2>
+        <p>Foundation</p>
+      </hgroup>
+      <div role="group" aria-label="Disciplined, Scalable">
+        <p><span>D</span><span>i</span><span>s</span><span>c</span><span>i</span><span>p</span><span>l</span><span>i</span><span>n</span><span>e</span><span>d</span></p>
+        <p><span>S</span><span>c</span><span>a</span><span>l</span><span>a</span><span>b</span><span>l</span><span>e</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Aquarius">
+          <span>A</span><span>q</span><span>u</span><span>a</span><span>r</span><span>i</span><span>u</span><span>s</span>
+        </h2>
+        <p>Material UI</p>
+      </hgroup>
+      <div role="group" aria-label="Innovative, Futuristic">
+        <p><span>I</span><span>n</span><span>n</span><span>o</span><span>v</span><span>a</span><span>t</span><span>i</span><span>v</span><span>e</span></p>
+        <p><span>F</span><span>u</span><span>t</span><span>u</span><span>r</span><span>i</span><span>s</span><span>t</span><span>i</span><span>c</span></p>
+      </div> 
+    </li>
+    <li>
+      <hgroup>
+        <h2 aria-label="Pisces">
+          <span>P</span><span>i</span><span>s</span><span>c</span><span>e</span><span>s</span>
+        </h2>
+        <p>Three.js</p>
+      </hgroup>
+      <div role="group" aria-label="Dreamy, Artistic">
+        <p><span>D</span><span>r</span><span>e</span><span>a</span><span>m</span><span>y</span></p>
+        <p><span>A</span><span>r</span><span>t</span><span>i</span><span>s</span><span>t</span><span>i</span><span>c</span></p>
+      </div> 
+    </li>
+  </ul>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

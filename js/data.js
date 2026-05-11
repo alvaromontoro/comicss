@@ -1935,4 +1935,12 @@ const posts = [
     vertical: true,
     ariaLabel: "graphic with 3 pyramids. The first one is labeled 'Maslow's Pyramid of Needs' and has the classic levels from bottom to top: physiological needs, safety needs, love and belonging, esteem, and self-actualization. The second one is labeled 'Maslow's Pyramid of Needs (Corporate version)' it only has 3 levels from bottom to top: AI (occupies 3/5), corporate profit, and exec bonus. The last pyramid is labeled 'MAIslow's PAIrAImid of NAIds (AI CompAIny version), the pyramid is misshapen, corners are cut, and there's only one level AI with many AIs written in the background."
   },
+  {
+    id: 250,
+    uid: "astrology",
+    boxes: 1,
+    title: "Web Styles Astrology",
+    vertical: true,
+    ariaLabel: "disc with the title 'Web Style Astrology Circle' divided in 12 sections with the logos of some styling technologies associated to an astrological sign and a description. Aquarius is Material UI (innovative and futuristic), Aries is TailwindCSS (impulsive and energetic), Cancer is CSS (supportive and protective), Capricorn is Foundation (disciplined and scalable), Gemini is UnoCSS (curious and adaptable), Leo is GreenSock (expressive and dramatic), Libra is Bulma (balanced and elegant), Pisces is ThreeJS (dreamy and artistic), Sagittarius is Open-Props (adventurous and flexible), Scorpio is Sass (intense and layered), Taurus is Bootstrap (stable and reliable), and Virgo is materialize (organized and precise)"
+  },
 ]

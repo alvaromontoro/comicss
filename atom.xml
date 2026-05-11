@@ -4737,4 +4737,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Web Styles Astrology</title>
+    <link href="https://comicss.art/comics/250" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/250/astrology.html"/>
+    <id>https://comicss.art/comics/250</id>
+    <updated>2026-05-11T00:00:00Z</updated>
+    <summary>New Cartoon: Web Styles Astrology</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/250/astrology.png" alt="disc with the title 'Web Style Astrology Circle' divided in 12 sections with the logos of some styling technologies associated to an astrological sign and a description. Aquarius is Material UI (innovative and futuristic), Aries is TailwindCSS (impulsive and energetic), Cancer is CSS (supportive and protective), Capricorn is Foundation (disciplined and scalable), Gemini is UnoCSS (curious and adaptable), Leo is GreenSock (expressive and dramatic), Libra is Bulma (balanced and elegant), Pisces is ThreeJS (dreamy and artistic), Sagittarius is Open-Props (adventurous and flexible), Scorpio is Sass (intense and layered), Taurus is Bootstrap (stable and reliable), and Virgo is materialize (organized and precise)" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
