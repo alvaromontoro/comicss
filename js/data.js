@@ -1943,4 +1943,11 @@ const posts = [
     vertical: true,
     ariaLabel: "disc with the title 'Web Style Astrology Circle' divided in 12 sections with the logos of some styling technologies associated to an astrological sign and a description. Aquarius is Material UI (innovative and futuristic), Aries is TailwindCSS (impulsive and energetic), Cancer is CSS (supportive and protective), Capricorn is Foundation (disciplined and scalable), Gemini is UnoCSS (curious and adaptable), Leo is GreenSock (expressive and dramatic), Libra is Bulma (balanced and elegant), Pisces is ThreeJS (dreamy and artistic), Sagittarius is Open-Props (adventurous and flexible), Scorpio is Sass (intense and layered), Taurus is Bootstrap (stable and reliable), and Virgo is materialize (organized and precise)"
   },
+  {
+    id: 251,
+    uid: "the-cursed-stylesheet",
+    boxes: 4,
+    title: "The Cursed Stylesheet",
+    ariaLabel: "Comic strip with 4 panels in a 2x2 grid titled 'the cursed stylesheet'. A character is talking to a priest 'I tell you, father, there's something wrong with my website. It is not wrong, but it feels cursed, like it is possessed'. The priest replies 'Nonsense, all you have to do is open the developer tools and review the... DEAR GOD!!' The code inside the  website is visible: body{cursor:wait;filter:hue-rotate(340deg);line-height:1.12;rotate:0.5deg;text-shadow: 0 0 0.5px color-mix(currentcolor, #0008);*{pointer-events:none}}. In the last panel, the priest is exorcising the computer 'The power of CSS compels you! The power of CSS compels you!' while sprinkling holy water onto the computer."
+  },
 ]
