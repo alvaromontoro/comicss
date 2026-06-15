@@ -4756,4 +4756,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>The Cursed Stylesheet</title>
+    <link href="https://comicss.art/comics/251" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/251/the-cursed-stylesheet.html"/>
+    <id>https://comicss.art/comics/251</id>
+    <updated>2026-06-15T00:00:00Z</updated>
+    <summary>New Cartoon: The Cursed Stylesheet</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/251/the-cursed-stylesheet.png" alt="Comic strip with 4 panels in a 2x2 grid titled 'the cursed stylesheet'. A character is talking to a priest 'I tell you, father, there's something wrong with my website. It is not wrong, but it feels cursed, like it is possessed'. The priest replies 'Nonsense, all you have to do is open the developer tools and review the... DEAR GOD!!' The code inside the  website is visible: body{cursor:wait;filter:hue-rotate(340deg);line-height:1.12;rotate:0.5deg;text-shadow: 0 0 0.5px color-mix(currentcolor, #0008);*{pointer-events:none}}. In the last panel, the priest is exorcising the computer 'The power of CSS compels you! The power of CSS compels you!' while sprinkling holy water onto the computer." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
