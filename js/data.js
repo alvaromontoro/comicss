@@ -1950,4 +1950,12 @@ const posts = [
     title: "The Cursed Stylesheet",
     ariaLabel: "Comic strip with 4 panels in a 2x2 grid titled 'the cursed stylesheet'. A character is talking to a priest 'I tell you, father, there's something wrong with my website. It is not wrong, but it feels cursed, like it is possessed'. The priest replies 'Nonsense, all you have to do is open the developer tools and review the... DEAR GOD!!' The code inside the  website is visible: body{cursor:wait;filter:hue-rotate(340deg);line-height:1.12;rotate:0.5deg;text-shadow: 0 0 0.5px color-mix(currentcolor, #0008);*{pointer-events:none}}. In the last panel, the priest is exorcising the computer 'The power of CSS compels you! The power of CSS compels you!' while sprinkling holy water onto the computer."
   },
+  {
+    id: 252,
+    uid: "always",
+    boxes: 1,
+    title: "It's Always...",
+    vertical: true,
+    ariaLabel: "The CSS logo with arms, legs, and sad eyes saying: It's always :where() is CSS and never :how() is CSS"
+  },
 ]
