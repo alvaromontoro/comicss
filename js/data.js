@@ -1958,4 +1958,12 @@ const posts = [
     vertical: true,
     ariaLabel: "The CSS logo with arms, legs, and sad eyes saying: It's always :where() is CSS and never :how() is CSS"
   },
+  {
+    id: 253,
+    uid: "bside",
+    boxes: 1,
+    title: "B-Side",
+    vertical: true,
+    ariaLabel: "The existence of aside implies the existence of bside (next to a cassette tape)"
+  },
 ]
