@@ -1966,4 +1966,11 @@ const posts = [
     vertical: true,
     ariaLabel: "The existence of aside implies the existence of bside (next to a cassette tape)"
   },
+  {
+    id: 254,
+    uid: "border-collie",
+    boxes: 4,
+    title: "Border Collie",
+    ariaLabel: "Four crops of the same photo: border collie (the image occupies the whole square), padding collie (the image has a narrow blank space around it, less of the dog is seen), content collie (the blank space cropping the photo is larger), and text collie (the dog is seen through the text)"
+  },
 ]

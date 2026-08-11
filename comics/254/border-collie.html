@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #254: Border Collie</title>
+
+    <meta property="og:title" content="comiCSS #254: Border Collie" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/254/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://comicss.art/comics/254">
+    <meta name="twitter:title" content="comiCSS #254: Border Collie">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/254/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+@font-face {
+  font-family: 'Bowlby One SC';
+  src: url(/fonts/BowlbyOneSC.ttf);
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 630px;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  text-align: center;
+  margin: 0.25em;
+}
+
+div {
+  /* Photo by Baptist Standaert on Unsplash: https://unsplash.com/photos/long-coated-black-and-white-dog-during-daytime-mx0DEnfYxic */
+  width: 400px;
+  height: 400px; background:url(./collie.webp);
+  background-size: 170% auto;
+  background-position: 55% 30%;
+  background-clip: border-box;
+  box-sizing: border-box;
+  border: 50px solid #0000;
+  padding: 50px;
+  outline: 2px solid #000;
+}
+
+
+div.border { background-clip: border-box; }
+div.padding { background-clip: padding-box; }
+div.content { background-clip: content-box; }
+div.text {
+  display: grid;
+  place-items: center;
+  background-clip: text;
+  font-size: 75px;
+  font-weight: 900;
+  text-transform:uppercase;
+  font-family: 'Bowlby One SC', Helvetica, Arial, sans-serif;
+  color: #0000;
+  text-align: center;
+  line-height: 0.85;
+  padding: 0;
+  border: 0;
+  
+}
+
+div.text span {
+  margin-top: -20px;
+}
+    </style>
+  </head>
+  <body>
+<article>
+  <section>
+    <h2>Border Collie</h2>
+    <div class="border"></div>
+  </section>
+  <section>
+    <h2>Padding Collie</h2>
+    <div class="padding"></div>
+  </section>
+  <section>
+    <h2>Content Collie</h2>
+    <div class="content"></div>
+  </section>
+  <section>
+    <h2>Text Collie</h2>
+    <div class="text"><span>text collie</span></div>
+  </section>
+</article>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

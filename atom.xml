@@ -4813,4 +4813,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Border Collie</title>
+    <link href="https://comicss.art/comics/254" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/254/border-collie.html"/>
+    <id>https://comicss.art/comics/254</id>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <summary>New Cartoon: Border Collie</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/254/border-collie.png" alt="Four crops of the same photo: border collie (the image occupies the whole square), padding collie (the image has a narrow blank space around it, less of the dog is seen), content collie (the blank space cropping the photo is larger), and text collie (the dog is seen through the text)" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
