@@ -4832,4 +4832,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Yellow</title>
+    <link href="https://comicss.art/comics/255" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/255/yellow.html"/>
+    <id>https://comicss.art/comics/255</id>
+    <updated>2026-08-24T00:00:00Z</updated>
+    <summary>New Cartoon: Yellow</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/255/yellow.png" alt="cartoon with four cups filled with a yellow liquid, all look really happy (specially the last one). The first one says 'I am #fe2!' The second one says 'I am #ff0!' The third one says 'I am #ef3!' And the last one says 'I am #pee!!!'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

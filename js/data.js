@@ -1973,4 +1973,12 @@ const posts = [
     title: "Border Collie",
     ariaLabel: "Four crops of the same photo: border collie (the image occupies the whole square), padding collie (the image has a narrow blank space around it, less of the dog is seen), content collie (the blank space cropping the photo is larger), and text collie (the dog is seen through the text)"
   },
+  {
+    id: 255,
+    uid: "yellow",
+    boxes: 1,
+    title: "Yellow",
+    vertical: true,
+    ariaLabel: "cartoon with four cups filled with a yellow liquid, all look really happy (specially the last one). The first one says 'I am #fe2!' The second one says 'I am #ff0!' The third one says 'I am #ef3!' And the last one says 'I am #pee!!!'"
+  },
 ]
