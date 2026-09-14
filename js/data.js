@@ -1981,4 +1981,11 @@ const posts = [
     vertical: true,
     ariaLabel: "cartoon with four cups filled with a yellow liquid, all look really happy (specially the last one). The first one says 'I am #fe2!' The second one says 'I am #ff0!' The third one says 'I am #ef3!' And the last one says 'I am #pee!!!'"
   },
+  {
+    id: 256,
+    uid: "css-like-a-restaurant",
+    boxes: 4,
+    title: "If CSS was like going to a restaurant",
+    ariaLabel: "comic with 4 panels. a person types color:blue on a computer, a second person labelled CSS shows up and says 'here is your blue text' (with the text in blue), then a third panel with awkward silence and in the last panel CSS shows up a tablet asking for a tip and says 'aren't you forgetting something?'"
+  },
 ]

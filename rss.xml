@@ -2556,5 +2556,15 @@
       <enclosure url="https://comicss.art/comics/255/yellow.png" length="227000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/256</guid>
+      <title>If CSS was like going to a restaurant</title>
+      <link>https://comicss.art/comics/256</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/256/css-like-a-restaurant.png" length="308000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: CSS Like a Restaurant</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/256/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/256/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+
+    <style>
+      
+css-panel:nth-of-type(1) {
+  css-person[character="al"] {
+    .body {
+      .hand {
+        left: 160%;
+        top: 21%;
+      }
+      .arm ~ .arm::after {
+        rotate: -95deg !important;
+      }
+    }
+    .head {
+      .face {
+        .eye {
+          translate: 30% 30%;
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(2) {
+  css-speech {
+    color: blue;
+    border-color: #000;
+    &::after, &::before {
+      color: #000;
+    }
+  }
+  css-person[character="john"] {
+    .body {
+      .hand {
+        left: 230%;
+        top: 44%;
+      }
+    }
+  }
+  css-person[character="al"] {
+    .body {
+      .hand {
+        left: 160%;
+        top: 21%;
+      }
+      .arm ~ .arm::after {
+        rotate: -95deg !important;
+      }
+    }
+    .head {
+      .face {
+        .eye {
+          translate: -50% 0%;
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(3) {
+  css-person[character="al"] {
+    .head {
+      .face {
+        .eye {
+          translate: -50% -20%;
+          scale: 1 0.9;
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(4) {
+  css-person[character="al"] {
+    .head {
+      .face {
+        .mouth {
+          translate: -40% 0;
+        }
+        .eye {
+          translate: -35% -10%;
+        }
+      }
+    }
+  }
+
+    css-person[character="john"] {
+    .body {
+      .hand {
+        left: 155%;
+        top: 34%;
+      }
+    }
+  }
+
+  css-prop[class="tablet"] {
+    scale:-1 1;
+    left: 75%;
+    az-index: 9; 
+    top: 45%;
+    border: 0.5em solid #333;
+    border-radius: 1em;
+    background:
+      linear-gradient(#222 0 0) 50% 0 / 20% 10% no-repeat,
+    #fff;
+    scale: -0.7 0.7;
+    width: 95%;
+    padding: 3em 1em;
+    padding-bottom: 1.5em;
+    rotate: -5deg;
+    transform: perspective(1000px) rotate3d(0,1,0,-30deg);
+    box-shadow: 0.4em 0 #000, 0.4em 0.1em #000;
+    * {  position: relative; }
+
+    h2 {
+      font-size: 2.5em;
+      text-align:center;
+    }
+    div {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      font-size: 1.66em;
+      background: #00f;
+      color: #fff;
+      border: none;
+      padding: 0.25em 0.5em;
+      margin: 0.2em;
+      border-radius: 0.3em;
+      cursor: pointer;
+    }
+  }
+}
+
+css-code {
+  background: #123;
+  color: #fff;
+  white-space: pre;
+  font-family: monospace, monospace;
+  font-size: 1.5em;
+  padding: 1.5em 2em;
+  border-radius: 1em;
+  line-height: 1.4;
+
+  &::before {
+    content: "";
+    width: 1.15em;
+    height: 4em;
+    background: inherit;
+    top: 95%;
+    left: 20%;
+    transform: skew(-30deg)
+  }
+
+  &::after {
+    content: "";
+    width: 1.125em;
+    height: 6.6em;
+    left: 8.5%;
+    background: inherit;
+    top: calc(95% + 3.9em);
+    transform: skew(-5deg) rotate(0deg);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  * { position: relative; }
+  .s { color: #ee8; }
+  .p { color: #ebe; }
+  .v { color: #fc5; }
+}
+    </style>
+  </head>
+  <body>
+    <css-comic title="If web development was like going to a restaurant (I)">
+      <css-panel>
+        <css-code left="10" top="10"><span class="s">body</span> {
+  <span class="p">color</span>: <span class="v">blue</span>;
+}</css-code>
+        <css-speech type="whisper" rotate="10" left="10" top="80" style="top:79%;left:12%">*CSS*</css-speech>
+        <css-speech type="whisper" rotate="-10" left="5" top="75" style="left:9%">*CSS*</css-speech>
+        <css-prop type="chair" top="80" left="30" rotate="3"></css-prop>
+        <css-person character="al" facing="left" right="45" eyes="" eyebrows="high" mouth="smile small" arms="left--35 left-fold--90" style="translate:0 7%"></css-person>
+        <css-prop type="counter" right="70" style="translate: 0 30%">
+          <css-prop type="laptop" left="15"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-person character="john" facing="left" left="70" eyes="" eyebrows="high" mouth="frown small side-left" height="tall" arms="left-10 left-fold--10 right--20 right-fold--90">
+          <css-prop class="hand"></css-prop>
+        </css-person>
+        <css-prop type="chair" top="80" left="25" rotate="3"></css-prop>
+        <css-person character="al" facing="left" right="50" eyes="" eyebrows="high" mouth="happy small" arms="left--35 left-fold--90" style="translate:0 7%"></css-person>
+        <css-prop type="counter" right="70" style="translate: 0 30%">
+          <css-prop type="laptop" left="15"></css-prop>
+        </css-prop>
+        <css-speech width="55" line="long left-70 skew" right-line top="5" left="25">The text you ordered.</css-speech>
+  
+      </css-panel>
+
+      <css-panel>
+                <css-speech type="whisper" rotate="-10" left="65" top="65">*AHEM*</css-speech>
+
+        <css-person character="john" facing="left" left="70" eyes="" eyebrows="high" mouth="flat small" height="tall" arms="left-10 left-fold--5 right--10">
+          <css-prop class="hand"></css-prop>
+        </css-person>
+        <css-prop type="chair" top="80" left="25" rotate="3"></css-prop>
+        <css-person character="al" facing="left" right="50" eyes="" eyebrows="high suspicious angry" mouth="no-mouth" arms="left--25 left-fold--20 right--45 right-fold--20" style="translate:0 7%"></css-person>
+        <css-prop type="counter" right="70" style="translate: 0 30%">
+          <css-prop type="laptop" left="15"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-person character="john" facing="left" left="70" eyes="" eyebrows="high" mouth=" small side-left" height="tall" arms="left--30 left-fold--90 right--10 right-fold--10">
+          <css-prop class="hand"></css-prop>
+          <css-prop class="tablet">
+            <h2>--tip</h2>
+            <div>
+              <button>20%</button>
+              <button>25%</button>
+              <button>30%</button>
+            </div>
+            <div style="margin-top:0.75em;font-size: 1.5em;font-family:monospace,monospace;">!important</div>
+          </css-prop>
+        </css-person>
+        <css-prop type="chair" top="80" left="25" rotate="3"></css-prop>
+        <css-person character="al" facing="left" right="50" eyes="" eyebrows="low" mouth="frown small sided side-left" arms="left--35 left-fold--90" style="translate:0 7%"></css-person>
+        <css-prop type="counter" right="70" style="translate: 0 30%">
+          <css-prop type="laptop" left="15"></css-prop>
+        </css-prop>
+        <css-speech width="85" line="long left-80 skewer" right-line top="10" left="5">If you could answer one last question.</css-speech>
+  
+      </css-panel>
+    </css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
