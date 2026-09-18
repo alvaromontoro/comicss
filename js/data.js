@@ -1988,4 +1988,12 @@ const posts = [
     title: "If CSS was like going to a restaurant",
     ariaLabel: "comic with 4 panels. a person types color:blue on a computer, a second person labelled CSS shows up and says 'here is your blue text' (with the text in blue), then a third panel with awkward silence and in the last panel CSS shows up a tablet asking for a tip and says 'aren't you forgetting something?'"
   },
+  {
+    id: 257,
+    uid: "nobody-will-remember",
+    boxes: 2,
+    title: "Nobody Will Remember...",
+    vertical: true,
+    ariaLabel: "Nobody will remember... Your salary; How busy you were; How long you worked; How many fancy cars you had. People will remember... How much you loved CSS; The amount of CSS facts you knew; If you ever found a neat CSS trick; If you shared how cool CSS is."
+  },
 ]
