@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: Nobody Will Remember...</title>
+
+    <meta property="og:title" content="comiCSS: Nobody Will Remember..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/257" />
+    <meta property="og:image" content="https://comicss.art/comics/257/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/comics/257">
+    <meta name="twitter:title" content="comiCSS: Nobody Will Remember...">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/257/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand';
+        src: url(/fonts/PatrickHand-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      
+article {
+  font-family: 'Patrick HAnd', 'Atma', 'Amatic SC', Helvetica, Arial, sans-serif;
+
+  section {
+    display: grid;
+    grid-template-columns: 200px auto;
+    position: relative;
+    align-items: center;
+    gap: 1em 2em;
+    padding: 2em;
+    margin-block-end: 3em;
+    width: fit-content;
+    
+    &::before {
+      content: "";
+      display: block;
+      aspect-ratio: 1;
+      height: 200px;
+      width: 200px;
+      grid-row: 2;
+      grid-column: 1;
+      border: 2px solid #000;
+      border-radius: 50%;
+      background:
+        linear-gradient(#0000 49.5%, #000 0 50.5%, #0000 0),
+        linear-gradient(90deg, #0000 49.5%, #000 0 50.5%, #0000 0),
+        conic-gradient(#c6c 25%, #6ce 0 50%, #ee6 0 75%, #6c6 0);
+    }
+
+    h2 {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: 600;
+      margin-block: 0.25em;
+    }
+    
+    ul {
+      li {
+        font-weight: 500;
+        font-size: 1.75em;
+        list-style: "- ";
+        line-height: 1.5;
+/*         margin-block: 0.1em; */
+/*         scale: 1 0.9; */
+      }
+    }
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <section>
+        <h2>Nobody will remember...</h2>
+        <ul>
+          <li>Your salary.</li>
+          <li>How busy you were.</li>
+          <li>How long you worked.</li>
+          <li>How many fancy cars you had.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>People will remember...</h2>
+        <ul>
+          <li>How much you loved CSS.</li>
+          <li>The amount of CSS facts you knew.</li>
+          <li>That time you coded some neat CSS art.</li>
+          <li>If you shared how cool CSS is.</li>
+        </ul>
+      </section>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

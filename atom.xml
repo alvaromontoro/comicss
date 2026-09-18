@@ -4870,4 +4870,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Nobody Will Remember...</title>
+    <link href="https://comicss.art/comics/257" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/257/nobody-will-remember.html"/>
+    <id>https://comicss.art/comics/257</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>New Cartoon: Nobody Will Remember...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/257/nobody-will-remember.png" alt="Nobody will remember... Your salary; How busy you were; How long you worked; How many fancy cars you had. People will remember... How much you loved CSS; The amount of CSS facts you knew; If you ever found a neat CSS trick; If you shared how cool CSS is." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
