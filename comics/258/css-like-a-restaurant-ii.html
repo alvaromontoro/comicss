@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS #258: If CSS was like going to a restaurant (II)</title>
+
+    <meta property="og:title" content="comiCSS #258: If CSS was like going to a restaurant (II)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/258" />
+    <meta property="og:image" content="https://comicss.art/comics/258/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://comicss.art/comics/258">
+    <meta name="twitter:title" content="comiCSS #258: If CSS was like going to a restaurant (II)">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/258/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+      @font-face {
+        font-family: 'Roboto';
+        src: url(/fonts/Roboto-Regular.ttf);
+      }
+
+css-panel:nth-of-type(1) {
+  &::after { content:  none; }
+  css-person[character="al"] {
+    .body {
+      .hand {
+        left: 166%;
+        top: 24%;
+      }
+    }
+    .head {
+      .face {
+        .eye {
+          translate: 10% 10%;
+        }
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(2) {
+  &::after { top: 73%; right: 7.5%; }
+
+  .lines {
+    rotate: 31deg;
+    top: 93%;
+    left: 66.6%;
+  }
+  css-person[character="al"] {
+    .head .face {
+      .mouth {
+        scale: 1 !important;
+      }
+      .eye {
+        translate: -40% 0;
+      }
+    }
+  }
+  css-person[character="john"] {
+    .body {
+      .arm ~ .arm {
+        top: 15%;
+        left: 8% !important;
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(3) {
+  &::after { top: 74%; right: 32%; scale: -1 1; }
+
+  .lines {
+    rotate: -41deg;
+    top: 91%;
+    left: 88%;
+  }
+
+  css-person[character="john"] {
+    .body {
+      .arm ~ .arm {
+        top: 15%;
+        left: 8% !important;
+        rotate: 40deg !important;
+        translate: 10% -5%;
+      }
+    }
+    .head {
+      &::before {
+        scale: -0.9 1;
+      }
+      &::after {
+        top: 60%;
+      }
+    }
+  }
+}
+
+css-panel:nth-of-type(4) {
+  &::after { top: 75%; right: 4%; width: 2.5em;
+  height: 2.5em; }
+
+  .lines {
+    rotate: 31deg;
+    top: 91%;
+    left: 73%;
+    filter: drop-shadow(-0.4em -0.25em #000);
+  }
+
+  css-person[character="al"] {
+    .head .face {
+      .mouth {
+        scale: 0.95 !important;
+      }
+      .eye {
+        translate: -40% 0;
+      }
+    }
+  }
+  css-person[character="john"] {
+    .body {
+      .arm ~ .arm {
+        top: 15%;
+        left: 8% !important;
+      }
+    }
+    .head {
+      rotate: -1deg;
+      &::after {
+        top: 62%;
+        left: -2%;
+      }
+    }
+  }
+}
+
+css-person[character="john"] {
+  top: 57%;
+  .head {
+    &::before {
+      content: "JS";
+      background: #f7df1e;
+      top: 135%;
+      font-size: 2em;
+      padding: 0.25em 0.1em 0em 0.4em;
+      left: 55%;
+      translate: -50%;
+      font-family: 'Roboto', Helvetica, sans-serif, sans-serif;
+      scale: 0.95 1;
+      transform: skew(3deg);
+    }
+
+    &::after {
+      content: "";
+      width: 0.3em;
+      height: 2em;
+      background: #000;
+      top: 50%;
+      filter: drop-shadow(-0.5em -0.5em) drop-shadow(-0.5em 0.5em)
+    }
+    .face {
+      width: 85%;
+      height: 85%;
+      left: 50%;
+      translate: -50%;
+      bottom: -5%;
+    }
+  }
+  .body {
+    .chest {
+      background: #f7df1e;
+      border: 0.4em solid;
+    }
+    .arm {
+      width: 11.5%;
+
+      &::before {
+        background: #f7df1e !important;
+        box-shadow: 0.3em 0  #000 , -0.3em 0  #000 ;
+        background: linear-gradient(#f7df1e 30%, #000 0 calc(30% + 0.3em), #fff 0) !important;
+        
+      }
+      
+    }
+  }
+}
+
+css-panel::after {
+  content: "";
+  width: 3em;
+  height: 3em;
+  box-shadow: inset -0.4em -0.25em #000;
+  border-radius: 0  0 100% 0;
+  position: absolute;
+}
+
+.panel-content {
+  inset: 0;
+  filter: drop-shadow(1px 0 #fff) drop-shadow(-1px 0 #fff) drop-shadow(0 1px #fff) drop-shadow(0 -1px #fff);
+}
+
+.yell {
+  inset: -5%;
+  font-size: 4em;
+  word-break: break-word;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #dcc400;
+}
+
+.lines {
+    width: 0.25em;
+    height: 2em;
+    background: #000;
+    top: 10%;
+    left: 10%;
+    filter: drop-shadow(-0.4em 0.25em)
+}
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="If web development was like going to a restaurant (II)">
+      <css-panel>
+        <css-speech type="whisper" rotate="10" left="10" top="75" style="top:75%;left:12%">*CSS*</css-speech>
+        <css-speech type="whisper" rotate="-10" left="5" top="70" style="left:9%">*CSS*</css-speech>
+        <css-prop type="chair" top="75" left="30" rotate="3"></css-prop>
+        <css-person character="al" facing="left" right="45" eyes="" eyebrows="high" mouth="smile small" arms="left--45 left-fold--80 right--40 right-fold--85"></css-person>
+        <css-prop type="counter" right="70">
+          <css-prop type="laptop" left="15"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <!-- <css-person character="john" facing="left" left="70" eyes="" eyebrows="high sad" chest="thin" mouth="frown small side-left" height="tall" arms="left-10 left-fold--10 right--20 right-fold--90">
+          <css-prop class="hand"></css-prop>
+        </css-person> -->
+        <div class="panel-content yell">
+          AAAAAAAAAAAAAAAAH!!AAAAAAAAAAAAAAAAH!AAAAAAAAAAAAAAAAH!!!!AAAAAAAAAAAAAAAAH!AAAAAAAAAAAAAAAAH!!AAAAAAAAAAAAAAAAH!!AAAAAAAAAAAAAAAAH!!!!AAAAAAAAAAAAAAAAH!AAAAAAAAAAAAAAAAH!!
+        </div>
+        <div class="panel-content">
+          <div class="lines"></div>
+          <css-person character="john" left="60" eyes="" eyebrows="high" mouth="side-left" height="tall" arms="left-30 left-fold--90 right--30 right-fold--10" style="rotate:3deg"></css-person>
+          <css-prop type="chair" top="75" left="25" rotate="3"></css-prop>
+          <css-person character="al" facing="left" right="50" eyes="" eyebrows="sad angry high" mouth="yawn small" arms="left--30 left-fold--70"></css-person>
+          <css-prop type="counter" right="70">
+            <css-prop type="laptop" left="15"></css-prop>
+          </css-prop>
+        </div>
+      </css-panel>
+
+      <css-panel>
+        <div class="panel-content yell">
+          GH!AAAAAAAAAH!!AAAAAAAAAAAAAAAH!AAAAAAAAAA!AAAAAAAAAAAAAAAAAAAH!!!!AAAAAAAAAAAAAAAAAAAAH!AAAAAAAAH!!AAAAAAAAAAAAAAAAH!!AAAAAAAAAAAAAAAAH!!!!AAAAAAAAAAAAAAAAH!AAAAAAAAAAAAAAAAH!!
+        </div>
+        <div class="panel-content">
+          <div class="lines"></div>
+          <css-person character="john" facing="left" left="60" eyes="" eyebrows="high" mouth="" height="tall" arms="left-30 left-fold--5 right--40" style="rotate:-3deg">
+            <css-prop class="hand"></css-prop>
+          </css-person>
+          <css-prop type="chair" top="75" left="25" rotate="3"></css-prop>
+          <css-person character="al" facing="left" right="50" eyes="" eyebrows="high suspicious angry" mouth="frown small" arms="left--25 left-fold--20 right--45 right-fold--20"></css-person>
+          <css-prop type="counter" right="70">
+            <css-prop type="laptop" left="15"></css-prop>
+          </css-prop>
+        </div>
+      </css-panel>
+
+      <css-panel>
+        <div class="panel-content yell">
+          AAAAAAAAAH!AAAAAAAAAAH!!AAAAAAAAAAAAAAAAH!AAAAAAAAAAAAAAAAH!!!!AAAAAAAAAAAAAAAAH!AAAAAAH!!AAAAAAAAAAAAAAAAH!!AAAAAAAAAAAAAAAAH!!!!AAAAAAAAAAAAAAAAH!AAAAAAAAAAAAAAAAH!!
+        </div>
+        <div class="panel-content">
+          <div class="lines"></div>
+          <css-person character="john" left="65" eyes="" eyebrows="high" mouth="side-left" height="tall" arms="left-30 left-fold--90 right--70 right-fold--40" style="rotate:2deg"></css-person>
+          <css-prop type="chair" top="75" left="25" rotate="3"></css-prop>
+          <css-person character="al" facing="left" right="50" eyes="" eyebrows="low" mouth="frown sided side-left" arms="left--25 left-fold--60 right--30"></css-person>
+          <css-prop type="counter" right="70">
+            <css-prop type="laptop" left="15"></css-prop>
+          </css-prop>
+        </div>
+      </css-panel>
+    </css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
