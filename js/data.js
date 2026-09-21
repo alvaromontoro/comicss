@@ -1996,4 +1996,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Nobody will remember... Your salary; How busy you were; How long you worked; How many fancy cars you had. People will remember... How much you loved CSS; The amount of CSS facts you knew; If you ever found a neat CSS trick; If you shared how cool CSS is."
   },
+  {
+    id: 258,
+    uid: "css-like-a-restaurant-ii",
+    boxes: 4,
+    title: "If CSS was like going to a restaurant (II)",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. A person is typing some CSS on a laptop and getting more and more annoyed as a kid identidied as JS keeps running in the background and yelling"
+  },
 ]
