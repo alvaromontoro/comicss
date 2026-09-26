@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v1/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v1/comicss.art.css">
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      css-panel {
+        grid-column: 1 / -1;
+        aspect-ratio: auto;
+        width: 85em;
+        height: 33.33em;
+      }
+
+      css-person {
+        scale: 0.9;
+
+        &[facing="left"] {
+          scale: -0.9 0.9 !important;
+        }
+      }
+
+      [character="jill"] {
+        left: 3em;
+      }
+
+      [character="al"] {
+        left: 26em;
+      }
+
+      [character="john"] {
+        top: 23%;;
+        left: 47em;
+      }
+      [character="sia"] {
+        left: 68em;
+      }
+      [character="steve"] {
+        left: 88em;
+
+        .head {
+          .face {
+            border-radius: 5em 5em 3em 3em;
+          }
+        }
+      }
+
+      css-prop[type="table"] {
+        bottom: 0;
+        right: 0;
+        width: 88%;
+        height: 3em;
+        background:
+          /* repeating-linear-gradient(-45deg, #000 0 0.2em, #fff 0 0.4em) 0 0 / 100% 1.25em repeat-x, */
+         white;
+        border-left: 0.3em solid black;
+        border-top: 0.3em solid black;
+        position: absolute;
+        z-index: 9;
+
+        &::before {
+          content: "";
+          width: 101%;
+          height: 1.5em;
+          border: 0.3em solid black;
+          border-right: 0;
+          position: absolute;
+          top: -0.75em;
+          right: 0;
+          background: #ddd;
+        }
+      }
+      css-prop[type="chair"],
+      css-prop[type="laptop"] {
+        scale: 0.8 !important;
+      }
+
+      css-prop[type="laptop"][left="70"] {
+        &::before {
+          transform: skew(-10deg)
+        }
+      }
+
+      css-panel a {
+        outline: 5px auto rgba(0, 150, 255, 1);
+        /* Use a border to apply the outline */
+        border: 1px solid rgba(0, 0, 0, 0);
+        padding: 0.5em 0.75em;
+        font-size: 1.5em;
+        top: 1.5em;
+        left: 1.5em;
+      }
+
+      css-panel:nth-of-type(1) {
+
+      }
+
+      css-panel:nth-of-type(2) {
+        [character="john"] {
+          rotate:2deg;
+          translate: 1em;
+        }
+        [character="al"] {
+          .body {
+            .hand {
+              scale: 0.9;
+              left: 155%;
+              top: 40%;
+            }
+          }
+        }
+      }
+
+      css-panel:nth-of-type(3) {
+        [character="jill"] {
+          .head {
+            .eye {
+              translate: 25% -30%;
+            }
+          }
+        }
+        [character="john"] {
+          rotate: -2deg;
+          .head {
+            rotate: -4deg;
+            left: 46%;
+          }
+        }
+        [character="sia"] {
+          .head {
+            rotate: -4deg;
+            left: 46%;
+          }
+        }
+
+        [character="al"] {
+          .body {
+            .hand {
+              scale: 0.9;
+              left: 167%;
+              top: 43%;
+            }
+          }
+        }
+
+        [character="steve"] {
+          rotate:-1deg;
+        }
+      }
+
+      css-panel:nth-of-type(4) {
+        
+      }
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="Skip to Main Content">
+      <css-panel>
+        <css-speech style="white-space:pre;" line="left-15 skew">Before starting the meeting, let's introduce ourselves and go through the 31-point agenda</css-speech>
+        <css-prop type="chair" top="60" style="left:29%"></css-prop>
+        <css-prop type="chair" top="55" rotate="5" style="left:48%"></css-prop>
+        <css-prop type="chair" rotate="2" style="left:66%;top:57%;"></css-prop>
+        <css-prop type="chair" top="60" rotate="-2" style="left:84%;"></css-prop>
+        <css-prop type="chair" style="left:4%;top:61%;scale:-0.8 0.8 !important;"></css-prop>
+        <css-person character="jill" arms="left-fold--80"></css-person>
+        <css-person character="al" eyebrows="sad high" mouth="no-mouth" facing="left"></css-person>
+        <css-person character="john" mouth="no-mouth" facing="left"></css-person>
+        <css-person character="sia" mouth="no-mouth" facing="left" eyebrows="angry high" skin="deep" chest="thin" hair="curly long" arms="left-15 right--15" eyebrows="high"></css-person>
+        <css-person character="steve" mouth="frown small" eyebrows="sad" arms="left-20" facing="left" chest="medium" skin="medium"></css-person>
+        <css-prop type="table">
+          <css-prop type="laptop" left="5"></css-prop>
+          <css-prop type="laptop" left="70"></css-prop>
+        </css-prop>
+      </css-panel>
+      <css-panel>
+        <css-speech type="whisper" rotate="-10" style="left:23.4%;top:72%">*Tab*</css-speech>
+        <css-prop type="chair" top="60" style="left:29%"></css-prop>
+        <css-prop type="chair" top="55" rotate="5" style="left:48%"></css-prop>
+        <css-prop type="chair" rotate="2" style="left:66%;top:57%;"></css-prop>
+        <css-prop type="chair" top="60" rotate="-2" style="left:84%;"></css-prop>
+        <css-prop type="chair" style="left:4%;top:61%;scale:-0.8 0.8 !important;"></css-prop>
+        <css-person character="jill" mouth="small sided" arms="left-fold--30"></css-person>
+        <css-person character="al" eyebrows="sad" mouth="no-mouth" facing="left" arms="left--25 left-fold--90">
+          <css-prop class="hand"></css-prop>
+        </css-person>
+        <css-person character="john" mouth="no-mouth" facing="left"></css-person>
+        <css-person character="sia" mouth="flat sided side-left" facing="left" skin="deep" chest="thin" hair="curly long" arms="left-15 right--15"></css-person>
+        <css-person character="steve" mouth="no-mouth" arms="left-20" facing="left" chest="medium" skin="medium"></css-person>
+        <css-prop type="table">
+          <css-prop type="laptop" left="5"></css-prop>
+          <css-prop type="laptop" left="70"></css-prop>
+        </css-prop>
+      </css-panel>
+      <css-panel>
+        <a href="#">Skip to main content</a>
+        <css-speech type="whisper" rotate="10" style="left:23%;top:72%">*Enter*</css-speech>
+        <css-prop type="chair" top="60" style="left:29%"></css-prop>
+        <css-prop type="chair" top="55" rotate="5" style="left:48%"></css-prop>
+        <css-prop type="chair" rotate="2" style="left:66%;top:57%;"></css-prop>
+        <css-prop type="chair" top="60" rotate="-2" style="left:84%;"></css-prop>
+        <css-prop type="chair" style="left:4%;top:61%;scale:-0.8 0.8 !important;"></css-prop>
+        <css-person character="jill" mouth="small surprise" arms="left-15 left-fold--10" eyebrows="suspicious angry"></css-person>
+        <css-person character="al" eyebrows="high" mouth="no-mouth" facing="left"  arms="left--30 left-fold--80">
+          <css-prop class="hand"></css-prop>
+        </css-person>
+        <css-person character="john" eyebrows="high" mouth="no-mouth" facing="left" arms="left-25"></css-person>
+        <css-person character="sia" mouth="no-mouth" eyebrows="high" facing="left" skin="deep" chest="thin" hair="curly long" arms="left-15 right--20 left-20"></css-person>
+        <css-person character="steve" mouth="no-mouth" eyebrows="high" arms="left-15"  skin="medium" facing="left" chest="medium"></css-person>
+        <css-prop type="table">
+          <css-prop type="laptop" left="5"></css-prop>
+          <css-prop type="laptop" left="70"></css-prop>
+        </css-prop>
+      </css-panel>
+      <css-panel>
+        <css-speech left="5" line="left-15 skew">Ok. So let's start with the main topic.</css-speech>
+
+        <css-prop type="chair" top="60" style="left:29%"></css-prop>
+        <css-prop type="chair" top="55" rotate="5" style="left:48%"></css-prop>
+        <css-prop type="chair" rotate="2" style="left:66%;top:57%;"></css-prop>
+        <css-prop type="chair" top="60" rotate="-2" style="left:84%;"></css-prop>
+        <css-prop type="chair" style="left:4%;top:61%;scale:-0.8 0.8 !important;"></css-prop>
+        <css-person character="jill" arms="right--30 left--10 left-fold--60"></css-person>
+        <css-person character="al" mouth="small sided side-right" facing="left"></css-person>
+        <css-person character="john" eyebrows="high" mouth="" facing="left"></css-person>
+        <css-person character="sia" mouth="sided" facing="left" skin="deep" chest="thin" hair="curly long" arms="left-15 right--15"></css-person>
+        <css-person character="steve" mouth=" side-right" eyebrows="high" arms="left-20" facing="left"  skin="medium" chest="medium"></css-person>
+        <css-prop type="table">
+          <css-prop type="laptop" left="5"></css-prop>
+          <css-prop type="laptop" left="70"></css-prop>
+        </css-prop>
+      </css-panel>
+    </css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
