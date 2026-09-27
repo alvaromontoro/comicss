@@ -2011,4 +2011,12 @@ const posts = [
     title: "Skip to content",
     ariaLabel: "comic with 4 stacked panels, showing a meeting in which the leads says 'Before we start the meeting, let's introduce ourselves and go through the agenda'. One of the people clicks tab on the laptop, a 'Skip to content' link pops up at the top and he taps it with his hand. The last panel, the lead says 'Ok, let's jump straight to point 1 of the day...'"
   },
+  {
+    id: 260,
+    uid: "agi",
+    boxes: 1,
+    title: "AGI",
+    vertical: true,
+    ariaLabel: "cartoon with a washing machine in front of a toaster. They both have a microphone, and the washing machine says 'Welcome to the Wash and Dry podcast, I am your host Landry and today we have a guest that is what's hot right now'. Then the toaster and the washing machine start saying 'Bro' alternatively to each other for a while."
+  },
 ]

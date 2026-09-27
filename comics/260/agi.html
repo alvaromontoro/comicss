@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: AGI</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/260/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/260/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        src: url(/fonts/PatrickHand-Regular.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      div[role="img"] {
+        position: relative;
+        font-size: 1vmin;
+        width: 90em;
+        aspect-ratio: 0.85;
+        font-family: 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, Arial, sans-serif;
+
+        *, *::before, *::after {
+          box-sizing: border-box;
+          position: absolute;
+        }
+      }
+
+      .whisper {
+        font-size: 2em;
+
+        &.whisper-1 {
+          width: 14%;
+          text-align: center;
+          line-height: 1;
+          top: 81%;
+          left: 43%;
+          rotate: -4deg;
+        }
+        &.whisper-2 {
+          top: 85%;
+          left: 59%;
+          rotate: 4deg;
+        }
+      }
+
+      .bubble {
+        --colordeg: 140deg; 
+        font-size: 2.25em;
+
+        &::before {
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-color: #fff;
+          box-shadow: 0 0 0 2em #fff;
+          mix-blend-mode: multiply;
+          filter: blur(0.2em) contrast(20)  sepia() brightness(250%) hue-rotate(var(--colordeg));
+        }
+
+        & span {
+          width: 100%;
+          text-align: center;
+          white-space: pre-wrap;
+        }
+
+        &.blue {
+          --colordeg: 0deg;
+        }
+      }
+
+      #alt {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        mask: conic-gradient(#0000 0 0)
+      }
+
+      section {
+        inset: 0;
+
+        .bubble:nth-of-type(1) {
+          width: 50%;
+          height: 70%;
+          left: 20%;
+          top: 5%;
+          font-size: 2.5em;
+
+          .accent {
+            position: relative;
+            top: 0.25em;
+            font-style: normal;
+          }
+
+          &::before {
+            background:
+              radial-gradient(30% 12% at 30% 12%, #f00 99%, #0000),
+              radial-gradient(50% 12% at 50% 12%, #f00 99%, #0000),
+              radial-gradient(20% 10% at 80% 12%, #f00 99%, #0000),
+              radial-gradient(20% 8% at 75% 16%, #f00 99%, #0000),
+              radial-gradient(12% 5% at 64% 38%, #f00 99%, #0000),
+              radial-gradient(13% 5% at 60% 58%, #f00 99%, #0000),
+              radial-gradient(15% 5% at 58% 79%, #f00 99%, #0000),
+              radial-gradient(80% 120% at 0% 25%, #0000 78.5%, #f00 0 90%, #0000 0) 60% 100% / 40% 80% no-repeat,
+              #fff;
+            background:
+              radial-gradient(30% 12% at 30% 12%, #f00 99%, #0000),
+              radial-gradient(50% 12% at 50% 12%, #f00 99%, #0000),
+              radial-gradient(20% 10% at 80% 12%, #f00 99%, #0000),
+              radial-gradient(20% 8% at 75% 16%, #f00 99%, #0000),
+              radial-gradient(14% 5% at 64% 38%, #f00 99%, #0000),
+              radial-gradient(16% 6% at 60% 58%, #f00 99%, #0000),
+              radial-gradient(14% 5.5% at 58% 79%, #f00 99%, #0000),
+              radial-gradient(80% 120% at 0% 25%, #0000 78.5%, #f00 0 90%, #0000 0) 60% 100% / 40% 80% no-repeat,
+              #fff;
+          }
+
+          span {
+            font-size: 1.25em;
+
+            &:nth-of-type(1) {
+              top: -1%;
+              padding: 1em;
+              left: 0%;
+              line-height: 1.1;
+            }
+            &:nth-of-type(2) {
+              top: 35%;
+              left: 14%;
+            }
+            &:nth-of-type(3) {
+              top: 55%;
+              left: 10%;
+              
+            }
+            &:nth-of-type(4) {
+              top: 75.5%;
+              left: 8%;
+              font-size: 1.5em;
+            }
+          }
+        }
+
+        .bubble:nth-of-type(2) {
+          top: 20.5%;
+          width: 35%;
+          height: 70%;
+          left: 48%;
+
+          &::before {
+            background:
+              radial-gradient(22% 5% at 50% 8%, #f00 99%, #0000),
+              radial-gradient(17% 5% at 52% 28%, #f00 99%, #0000),
+              radial-gradient(19% 5% at 53% 48%, #f00 99%, #0000),
+              radial-gradient(20% 5% at 55% 69%, #f00 99%, #0000),
+              radial-gradient(80% 125% at 100% 15%, #0000 75%, #f00 0 90%, #0000 0) 60% 30% / 40% 88% no-repeat,
+              #fff;
+            background:
+              radial-gradient(18% 5% at 50% 8%, #f00 99%, #0000),
+              radial-gradient(26% 6% at 52% 28%, #f00 99%, #0000),
+              radial-gradient(30% 5.5% at 53% 48%, #f00 99%, #0000),
+              radial-gradient(22% 5.5% at 55% 69%, #f00 99%, #0000),
+              radial-gradient(80% 125% at 100% 15%, #0000 75%, #f00 0 90%, #0000 0) 60% 30% / 40% 88% no-repeat,
+              #fff;
+          }
+
+
+          span {
+            font-size: 1.5em;
+            &:nth-of-type(1) {
+              top: 5%;
+              left: 0%;
+            }
+            &:nth-of-type(2) {
+              top: 25%;
+              left: 2%;
+            }
+            &:nth-of-type(3) {
+              top: 44.75%;
+              left: 3%;
+            }
+            &:nth-of-type(4) {
+              top: 65.75%;
+              left: 6%;
+            }
+          }
+        }
+
+        .washing-machine {
+          width: 39%;
+          aspect-ratio: 1.2;
+          border-radius: 1em;
+          bottom: 0;
+          left: 3%;
+          box-shadow: 
+            inset #0001 10em 0 5em -5em,
+            inset 9em 0 #eee,
+            inset #0003 calc(9.5em + 3px) 0 0.5em -1em;
+          background:
+            linear-gradient(#0000 20%, #0002 0 calc(20% + 1px), #eee 0),
+            linear-gradient(#0008 0 0) 96% 5% / 5% 5%,
+            radial-gradient(circle at 87% 7.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 82% 7.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 77% 7.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 72% 7.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 82% 13.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 77% 13.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 72% 13.5%, #0002 0.75em, #0000 0),
+            linear-gradient(90deg, #0000 55%, #0002 0 calc(55% + 1px), #eee0 0),
+            #eee;
+
+            box-shadow: 
+            inset 9em 0 #d2d2d2;
+            background:
+            linear-gradient(#0001 0 0) 35% 95% / 18% 12%,
+            linear-gradient(#0000 20%, #0002 0 calc(20% + 1px), #e3e3e3 0),
+            linear-gradient(#0008 0 0) 96% 5% / 5% 5%,
+            radial-gradient(circle at 87% 7.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 82% 7.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 77% 7.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 72% 7.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 82% 13.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 77% 13.5%, #0002 0.75em, #0000 0),
+            radial-gradient(circle at 72% 13.5%, #0002 0.75em, #0000 0),
+            linear-gradient(90deg, #0000 55%, #0002 0 calc(55% + 1px), #eee0 0),
+            #e3e3e3;
+            background-repeat: no-repeat;
+
+            &::before {
+              --x: #bef;
+              content: "";
+              width: 48%;
+              aspect-ratio: 1;
+              border-radius: 50%;
+              background:
+              radial-gradient(50% 50% at 70% 100%, var(--x) 40%, #0000 0),
+              radial-gradient(80% 50% at 30% 100%, var(--x) 40%, #0000 0),
+              radial-gradient(40% 50% at 50% 100%, var(--x) 40%, #0000 0),
+               #456;
+              top: 57%;
+              left: 67.7%;
+              translate: -50% -50%;
+              border: 2em solid #ccc;
+              box-shadow:
+                inset -1em 0 #bbb,
+                inset 0.2em 0 #ccc,
+                 -1.5em 0 #bbb;
+            }
+
+            &::after {
+              content: "";
+              width: 13%;
+              height: 11%;
+              border-radius: 100% / 100% 50% 50% 100%;
+              background:
+                linear-gradient(#0002 0 0) 20% 50% / 0.2em 50% no-repeat,
+                linear-gradient(#0002 0 0) 30% 50% / 0.2em 50% no-repeat,
+                linear-gradient(#0002 0 0) 40% 50% / 0.2em 50% no-repeat,
+               #ccc;
+              top: 57%;
+              left: 82%;
+              translate: -50% -50%;
+              box-shadow:
+                inset 0.2em 0 #ccc,
+                 -0.75em 0 #aaa;
+            }
+        }
+
+        .toaster {
+          width: 22%;
+          height: 12%;
+          background: #ccc;
+          border-radius: 3em 3em 1em 1em;
+          bottom: 0.5em;
+          left: 69%;
+          box-shadow: inset -4em 0 #fff4;
+          background:
+            linear-gradient(90deg, #333 0.6em, #777 0) 97% 40% / 3em 1em,
+            linear-gradient(#000 0 0) 91% 50% / 0.5em 4em,
+            linear-gradient(#0000 90%, #000 0),
+            #ccc
+          ;
+          background-repeat: no-repeat;
+
+          &::before {
+            content: '';
+            width: 1em;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: #000;
+            top: 100%;
+            left: 2.5em;
+            translate: 0 -50%;
+            mix-blend-mode: darken;
+            box-shadow:
+              9.5em 0 #000,
+              14em 0 #555
+          }
+
+          &::after {
+            content: '';
+            width:50%;
+            height: 30%;
+            background: red;
+            bottom: 100%;
+            left: 50%;
+            translate: -50% 0;
+            background:
+              radial-gradient(50% 40% at 50% 40%, #fea 99%, transparent 0),
+              radial-gradient(50% 60% at 50% 95%, #fea 99%, transparent 0);
+              filter: drop-shadow(-0.15em 0 #c96) drop-shadow(0 -0.2em #c96) drop-shadow(0.7em 0 #c96);
+          }
+        }
+      }
+
+      .microphone {
+        width: 5em;
+        height: 6em;
+        background: #000;
+        bottom: 0;
+        left: 47%;
+        background:
+          radial-gradient(50% 50% at 50% 100%, #000 99%, #0000) 50% 100% / 100% 50% no-repeat,
+          linear-gradient(90deg, #000 0 0) 50% 0 / 0.6em 100% no-repeat;
+
+        &::before {
+          content: "";
+          width: 140%;
+          height: 30%;
+          background: #555;
+          left: 50%;
+          translate: -50% -20%;
+          rotate: 20deg;
+          clip-path: polygon(0 0, 100% 25%, 100% 75%, 0% 100%);
+        }
+
+        &::after {
+          content: "";
+          width: 70%;
+          aspect-ratio: 1;
+          background:
+            repeating-linear-gradient(45deg, #0000 0 2px, #000 0 4px),
+            repeating-linear-gradient(135deg, #0000 0 2px, #000 0 4px),
+          #444;
+          left: 0%;
+          top: 0;
+          border-radius: 50%;
+          translate: -50% -60%;
+          
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inspired by Flavita Banana's cartoon at El Pais: https://elpais.com/opinion/2026-09-27/flavita-banana-autoconciencia.html -->
+
+    <div id="agi-podcast-cartoon" role="img" aria-labelledby="alt">
+      <div id="alt">cartoon with a washing machine in front of a toaster. They both have a microphone, and the washing machine says 'Welcome to the Wash and Dry podcast, I am your host Landry and today we have a guest that is what's hot right now'. Then the toaster and the washing machine start saying 'Bro' alternatively to each other for a while</div>
+      <section>
+        <!-- <div class="bubble">
+          <span>Welcome to the Wash and Dry podcast! I am your host Landry, and today we have a guest that is what<i class="accent">'</i>s hot right now...</span>
+          <span>Bro</span>
+          <span>Bro</span>
+          <span>Bro!</span>
+        </div>
+        <div class="bubble blue">
+          <span>Bro</span>
+          <span>Bro!</span>
+          <span style="font-style: italic;">Bro...</span>
+          <span>Bro.</span>
+        </div> -->
+        <div class="bubble">
+          <!-- <span>Welcome to the Wash and Dry podcast! I am your host Landry, and today we have a guest that is what<i class="accent">'</i>s hot right now...</span> -->
+          <span style="top:1%">Welcome to the Wash & Toasty podcast! Humanity finally achieved AGI, what are your first thoughts?</span>
+          <span>Oh, bro</span>
+          <span>But bro...</span>
+          <span>Bro?</span>
+        </div>
+        <div class="bubble blue">
+          <span>Bro</span>
+          <span>Yeah, bro.</span>
+          <span>Then... bro!</span>
+          <span style="font-style: italic;">Brooo...</span>
+        </div>
+        <div class="whisper whisper-1">And then I was like... Bro!</div>
+        <div class="whisper whisper-2">Broooooo...</div>
+        <div class="washing-machine"></div>
+        <div class="toaster"></div>
+        <div class="microphone"></div>
+      </section>
+    </div>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
