@@ -4908,4 +4908,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Skip to content</title>
+    <link href="https://comicss.art/comics/259" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/259/skip-to-content.html"/>
+    <id>https://comicss.art/comics/259</id>
+    <updated>2026-09-28T00:00:00Z</updated>
+    <summary>New Cartoon: Skip to content</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/259/skip-to-content.png" alt="comic with 4 stacked panels, showing a meeting in which the leads says 'Before we start the meeting, let's introduce ourselves and go through the agenda'. One of the people clicks tab on the laptop, a 'Skip to content' link pops up at the top and he taps it with his hand. The last panel, the lead says 'Ok, let's jump straight to point 1 of the day...'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

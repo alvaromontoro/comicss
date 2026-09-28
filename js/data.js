@@ -2003,4 +2003,12 @@ const posts = [
     title: "If CSS was like going to a restaurant (II)",
     ariaLabel: "comic with 4 panels in a 2x2 grid. A person is typing some CSS on a laptop and getting more and more annoyed as a kid identidied as JS keeps running in the background and yelling"
   },
+  {
+    id: 259,
+    uid: "skip-to-content",
+    boxes: 4,
+    horizontal: true,
+    title: "Skip to content",
+    ariaLabel: "comic with 4 stacked panels, showing a meeting in which the leads says 'Before we start the meeting, let's introduce ourselves and go through the agenda'. One of the people clicks tab on the laptop, a 'Skip to content' link pops up at the top and he taps it with his hand. The last panel, the lead says 'Ok, let's jump straight to point 1 of the day...'"
+  },
 ]
