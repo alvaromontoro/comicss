@@ -4927,4 +4927,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>AGI</title>
+    <link href="https://comicss.art/comics/260" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/260/agi.html"/>
+    <id>https://comicss.art/comics/260</id>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>New Cartoon: AGI</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/260/agi.png" alt="cartoon with a washing machine in front of a toaster. They both have a microphone, and the washing machine says 'Welcome to the Wash and Dry podcast, I am your host Landry and today we have a guest that is what's hot right now'. Then the toaster and the washing machine start saying 'Bro' alternatively to each other for a while." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -2596,5 +2596,15 @@
       <enclosure url="https://comicss.art/comics/259/skip-to-content.png" length="616000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/260</guid>
+      <title>AGI</title>
+      <link>https://comicss.art/comics/260</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/260/agi.png" length="206000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>
