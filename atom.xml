@@ -4946,4 +4946,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>Nobody Expects...</title>
+    <link href="https://comicss.art/comics/261" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/261/nobody-expects.html"/>
+    <id>https://comicss.art/comics/261</id>
+    <updated>2026-10-04T00:00:00Z</updated>
+    <summary>New Cartoon: Nobody Expects...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/261/nobody-expects.png" alt="Nobody expects the-inquisition lang=es" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
