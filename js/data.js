@@ -2025,6 +2025,6 @@ const posts = [
     boxes: 1,
     title: "Nobody Expects...",
     vertical: true,
-    ariaLabel: "Nobody expects the-inquisition lang=en"
+    ariaLabel: "Nobody expects the-inquisition lang=es"
   },
 ]
