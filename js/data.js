@@ -2027,4 +2027,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Nobody expects the-inquisition lang=es"
   },
+  {
+    id: 262,
+    uid: "the-present",
+    boxes: 4,
+    title: "The Present",
+    ariaLabel: "comic strip with 4 panels showing two characters walking and talking: the past is far gone, the present is past; the other answers and the future is now? the first one replies yes, because we used a negative animation-delay"
+  },
 ]

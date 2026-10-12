@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: The Present</title>
+
+    <meta property="og:title" content="comiCSS: The Present" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art/comics/262/the-present.html" />
+    <meta property="og:image" content="https://comicss.art/comics/262/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/comics/262/the-present.html">
+    <meta name="twitter:title" content="comiCSS: The Present">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/262/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v2/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v2/comicss.art.css">
+
+    <style>
+      css-comic { padding-inline: 4rem;}
+      css-person[character="al"] {
+        top: 47%;
+
+        css-panel:nth-of-type(3) & {
+          .eye {
+            translate: -50% 0;
+          }
+          .eyebrow {
+            rotate: 10deg;
+            translate: 0 -10% !important;
+          }
+          .eyebrow:not(.eyebrow ~ .eyebrow) {
+            translate: 0 -100% !important;
+            rotate: -10deg;
+          }
+        }
+
+        css-panel:nth-of-type(4) & {
+          .eye {
+            translate: -30% 0;
+          }
+        }
+      }
+
+      css-person[character="john"] {
+        css-panel:nth-of-type(3) & {
+          .eye {
+            translate: 30% 15%;
+          }
+        }
+      }
+      
+
+      /* 3x1 version */
+      css-comic[grid="3x1"] {
+        css-panel:nth-of-type(2) {
+          display:none;
+        }
+        .onlye3x1 {
+          left: 37%;
+          top: 12%;
+
+          &::before {
+            left: -5%;
+            top: 75%;
+            transform: skew(-40deg);
+            mix-blend-mode: lighten;
+          }
+        }
+      }
+      css-comic:not([grid="3x1"]) {
+        .onlye3x1 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="The Present">
+      <css-panel>
+        <css-speech line="longer" left="15">The past is long gone...</css-speech>
+        <css-speech class="onlye3x1" width="45" left="35">...The present is already past...</css-speech>
+        <css-person character="john" left="5" height="tall" arms="right--15 right-fold--10 left-20 left-fold--20"></css-person>
+        <css-person character="al" mouth="small" left="40" arms="left--10 left-fold--30 right-0 right-fold--5"></css-person>
+      </css-panel>
+
+      <css-panel>
+        <css-speech line="long" top="10" left="15">...the present is already past...</css-speech>
+        <css-person character="john" left="10" height="tall" arms="right--5 right-fold--10 left-5 left-fold--20"></css-person>
+        <css-person character="al" mouth="small sided side-right" left="45" arms="left-20 left-fold--30 right-20 right-fold--10"></css-person>
+      </css-panel>
+
+      <css-panel>
+        <css-speech line="left-45" top="10" left="50" style="top:12%">...and the future is now?</css-speech>
+        <css-person character="john" mouth="smile small" left="15" height="tall" arms="right--10 right-fold--10 left-15 left-fold--20"></css-person>
+        <css-person rotate="2" character="al" mouth="happy sided side-right" left="50" arms="left-15 right--20 right-fold--25"></css-person>
+      </css-panel>
+
+      <css-panel>
+        <css-speech line="long left-35 skew" width="65" top="5" left="20">Of course! We set <code style="font-size: 0.975em;background:#ddd;padding: 0 0.25em;">animation-delay: -10s;</code>!</css-speech>
+        <css-person rotate="-1" character="john" eyebrows="high" left="20" height="tall" arms="right--25 right-fold--5 left-25"></css-person>
+        <css-person character="al" mouth="small" left="60" arms="left-20 left-fold--30 right-20 right-fold--5"></css-person>
+      </css-panel>
+    </css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
