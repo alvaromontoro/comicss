@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/265/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/265/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v2/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v2/comicss.art.css">
+
+    <style>
+      css-panel h2 {
+        font-size: 2.5em;
+        font-weight: 200;
+        letter-spacing:-0.025em;
+        top: 5%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+      
+      css-panel:not(:nth-of-type(3)) {
+        css-speech[type="screen-message"] {
+          width: 90%;
+          top: 10%;
+          text-align: left;
+          padding: 1.5em;
+
+          &::before {
+            transform: skew(-5deg);
+            height: 9em !important;
+          }
+
+          &::after {
+            width: 7em;
+            height: 3.5em;
+            background: 
+            radial-gradient(circle at 25% 50%, #ddd 1.25em, #0000 0),
+            radial-gradient(circle at 25% 50%, #000 0.5em, #0000 1.5em),
+             #666;
+            content: "OFF";
+            border-radius: 4em;
+            right: 0;
+            top: 50%;
+            translate: -3em -50%;
+            padding: 0em 0.75em;
+            font-size: 0.5em;
+            display: flex;
+            align-items: center;
+            color: #000;
+            font-weight: 900;
+          }
+        }
+
+        &:nth-of-type(1) {
+          css-speech[type="screen-message"]::after {
+            content: "ON" !important;
+            padding: 0em 1.2em;
+            justify-content: end;
+            background: 
+              radial-gradient(circle at 75% 50%, #ddd 1.25em, #0000 0),
+              radial-gradient(circle at 75% 50%, #000 0.5em, #0000 1.5em),
+              #9c5;
+          }
+        }
+
+      }
+      css-panel:last-of-type {
+        .mouth {
+          clip-path: polygon(0 10%, 100% 40%, 100% 100%, 0 100%); 
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- <css-comic title="Ungovernable">
+      <css-panel>
+        <css-speech type="screen-message"  line=" left-65" right-line>
+          AI-assisted development
+        </css-speech>
+        <css-speech type="whisper" top="80" left="50" rotate="10">*click*</css-speech>
+        <css-prop facing="left" type="chair" top="75" left="20" rotate="-6"></css-prop>
+        <css-person character="al" left="20" mouth="no-mouth" arms="right--30 right-fold--90 left-20 left-fold--20" hands="236x35"></css-person>
+        <css-prop type="counter" left="40" style="width:70%">
+          <css-prop type="laptop" facing="left" left="15"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <h2>Become&nbsp;Ungovernable</h2>
+        <css-speech type="whisper" top="80" left="50" rotate="10" style="top:79%">*type*</css-speech>
+        <css-speech type="whisper" top="75" left="45" rotate="-6">*type*</css-speech>
+        <css-speech type="whisper" top="70" left="50" rotate="7" style="top:71%">*type*</css-speech>
+        <css-prop facing="left" type="chair" top="75" left="20" rotate="-6"></css-prop>
+        <css-person character="al" left="20" rotate="3" eyebrows="high sad" mouth="smile sided side-right" arms="right--40 right-fold--10 left--45 left-fold--65" hands="190x32 236x34"></css-person>
+        <css-prop type="counter" left="40" style="width:70%">
+          <css-prop type="laptop" facing="left" left="15"></css-prop>
+        </css-prop>
+      </css-panel>
+    </css-comic> -->
+
+    <css-comic title="Ungovernable" grid="3x1">
+      <css-panel>
+        <css-speech type="screen-message"  line=" left-65" right-line>
+          AI-assisted development
+        </css-speech>
+        <css-speech type="whisper" top="65" left="45" rotate="-5">Hmm...</css-speech>
+        <css-prop facing="left" type="chair" top="75" left="20" rotate="-6"></css-prop>
+        <css-person character="al" left="20" eyebrows="low" head="rotate-3" rotate="-2" mouth="no-mouth" arms="right--35 right-fold--90 left-15 left-fold--20"></css-person>
+        <css-prop type="counter" left="40" style="width:70%">
+          <css-prop type="laptop" facing="left" left="15"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-speech type="screen-message"  line=" left-65" right-line>
+          AI-assisted development
+        </css-speech>
+        <css-speech type="whisper" top="80" left="50" rotate="10">*click*</css-speech>
+        <css-prop facing="left" type="chair" top="75" left="20" rotate="-6"></css-prop>
+        <css-person character="al" left="20" mouth="no-mouth" arms="right--30 right-fold--90 left-20 left-fold--20" hands="236x35"></css-person>
+        <css-prop type="counter" left="40" style="width:70%">
+          <css-prop type="laptop" facing="left" left="15"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <h2>Become&nbsp;Ungovernable</h2>
+        <css-speech type="whisper" top="80" left="50" rotate="10" style="top:79%">*type*</css-speech>
+        <css-speech type="whisper" top="75" left="45" rotate="-6">*type*</css-speech>
+        <css-speech type="whisper" top="70" left="50" rotate="7" style="top:71%">*type*</css-speech>
+        <css-prop facing="left" type="chair" top="75" left="20" rotate="-6"></css-prop>
+        <css-person character="al" left="20" rotate="3" eyebrows="high sad" mouth="smile sided side-right" arms="right--40 right-fold--10 left--45 left-fold--65" hands="190x32 236x34"></css-person>
+        <css-prop type="counter" left="40" style="width:70%">
+          <css-prop type="laptop" facing="left" left="15"></css-prop>
+        </css-prop>
+      </css-panel>
+    </css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
