@@ -2034,4 +2034,11 @@ const posts = [
     title: "The Present",
     ariaLabel: "comic strip with 4 panels showing two characters walking and talking: the past is far gone, the present is past; the other answers and the future is now? the first one replies yes, because we used a negative animation-delay"
   },
+  {
+    id: 263,
+    uid: "one-last-line",
+    boxes: 4,
+    title: "One Last Line",
+    ariaLabel: "Comic in a 2x2 grid showing a character in front of a computer and the grim reaper coming for him 'John, I am here to take your soul'. The character begs to let them finish the project 'Wait! No! I still have so many things to do! So much code to write!'. Death lets them write one last line of code but 'Make it matter. Make it something that's really you. Something thoughtful' Then the person starts typing 'Claude: Write a line of code that makes people believe that I wrote it myself, but...' to the desperation of Death"
+  },
 ]

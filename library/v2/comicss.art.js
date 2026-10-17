@@ -73,6 +73,7 @@ templatePerson.innerHTML = `
     <div class="arm"></div>
     <div class="hand"></div>
     <div class="hand"></div>
+    <css-prop></css-prop>
   </div>
   <div class="head">
     <div class="hair-back"></div>
@@ -100,6 +101,11 @@ class CSSPerson extends HTMLElement {
         const pos = positions.split("x");
         this.querySelectorAll(".hand")[index].style = `top: ${pos[1]}%; left: ${pos[0]}%;`;
       });
+    }
+
+    const propType = this.getAttribute("prop-type");
+    if (propType) {
+      this.querySelector("css-prop").setAttribute("type", propType);
     }
   }
 }
