@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS: One Last Line of Code</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/263/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/263/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v2/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v2/comicss.art.css">
+
+    <style>
+      .hand { z-index: 2; }
+      css-prop[type="scythe"] {
+        font-size: var(--fs);
+        height: 200%;
+        /* border: 0.35em solid #000; */
+        top: -100%;
+        width: 1.25em;
+        &::before {
+          /* border: 0.35em solid #000; */
+        }
+      }
+      css-panel:nth-of-type(1) {
+        css-prop[type="scythe"] {
+          top: -100%;
+          rotate: -7deg;
+          right:159%;
+        }
+      }
+
+      css-panel:nth-of-type(2) {
+        css-prop[type="scythe"] {
+          top: -100%;
+          rotate: -2deg;
+          right:153%;
+        }
+      }
+
+      css-panel:nth-of-type(3) {
+        css-prop[type="scythe"] {
+          top: -100%;
+          rotate: -12deg;
+          right:194%;
+        }
+        css-speech {
+          span {
+            font-size: 0.9em;
+            opacity: 0.75;
+          }
+        }
+      }
+
+      css-panel:nth-of-type(4) {
+        css-prop[type="scythe"] {
+          top: -43%;
+          rotate: -50deg;
+          right:163%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="One Last Line of Code">
+      <css-panel>
+        <!-- <css-prop type="scythe" top="25" right="90" rotate="-7" style="right:89%"></css-prop> -->
+        <css-person character="death" prop-type="scythe" left="10" arms="left-12 left-fold--5 right--50 right-fold--90" hands="-33x90 240x5"></css-person>
+        <css-speech left="10" line="skewest long left-30">John, I'm here to take your soul.</css-speech>
+        <css-prop facing="left" type="chair" top="75" left="50" rotate="-6"></css-prop>
+        <css-person character="john" left="50" eyebrows="sad high" mouth="surprise small" arms="right--15 right-fold--10 left-20 left-fold--20"></css-person>
+        <css-prop type="counter" left="70">
+          <css-prop type="laptop" facing="left" left="20"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <!-- <css-prop type="scythe" top="25" right="90" rotate="-3" style="right:88%;"></css-prop> -->
+        <css-person character="death" prop-type="scythe" left="10" arms="left-20 left-fold--10 right--15 right-fold--5"  hands="-50x89 162x88"></css-person>
+        <css-speech line="longer left-50" top="0" width="80" left="10" right-line style="top:3%">Wait! No! I still have so many things to do! So much code to write!</css-speech>
+        <css-prop type="chair" top="75" left="60" rotate="4"></css-prop>
+        <css-person character="john" head="rotate--1" facing="left" top="50" rotate="3" mouth="frown sided" eyebrows="sad" left="50" arms="right--15 right-fold--0 left-20 left-fold--20"></css-person>
+        <css-prop type="counter" left="70">
+          <css-prop type="laptop" facing="left" left="20"></css-prop>
+        </css-prop>  
+      </css-panel>
+
+      <css-panel>
+        
+        <!-- <css-prop type="scythe" top="30" right="90" rotate="-14" style="right:95%;"></css-prop> -->
+        <css-person character="death" prop-type="scythe" head="rotate-4" rotate="2" left="10" arms="left-25 left-fold--20 right--10 right-fold--15"  hands="-45x89 160x85"></css-person>
+        <css-speech line="skewest left-40">Ok. I'll let you write <b>one last line of code</b>. Make it matter. Make it something that's really you. Something thoughtful a<span>n<span>d<span>.<span>.<span>.</span></span></span></span></span></css-speech>
+        <css-speech type="whisper" top="80" left="75" rotate="-10">*type*</css-speech>
+        <css-speech type="whisper" top="75" left="78" rotate="20">*type*</css-speech>
+        <css-prop facing="left" type="chair" top="75" left="50" rotate="-6"></css-prop>
+        <css-person character="john" left="50" arms="right--30 right-fold--10 left--20 left-fold--90"  hands="158x38"></css-person>
+        <css-prop type="counter" left="70">
+          <css-prop type="laptop" facing="left" left="20"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <!-- <css-speech type="screen-message" line="longest left-85" right-line>Claude: write a line of code that when people see it they think it is something I wrote myself but...</css-speech> -->
+        <css-person character="death" prop-type="scythe" mouth="aaa" head="rotate--8" eyes="angry" left="10" arms="left-5 left-fold--30 right--15 right-fold--15"  hands="55x88 180x85">
+        </css-person>
+        <!-- <css-prop type="scythe" top="45" right="90" style="rotate:-50deg;top:42%;"></css-prop> -->
+        <css-speech type="screen-message" width="80" left="10" line="longest left-85" right-line>Claude: Write a line of code that makes people believe that I wrote it myself, but...</css-speech>
+        <css-speech type="whisper" top="40" left="30" rotate="-10" style="left:33%">Oh! For fuck's sake!</css-speech>
+        <css-speech type="whisper" top="75" left="75" rotate="-20">*type*</css-speech>
+        <css-speech type="whisper" top="80" left="78" rotate="10">*type*</css-speech>
+        <css-prop facing="left" type="chair" top="75" left="50" rotate="-6"></css-prop>
+        <css-person character="john" head="rotate-3" rotate="1" left="50" arms="right--25 right-fold--40 left--25 left-fold--90"  hands="160x35 210x37"></css-person>
+        <css-prop type="counter" left="70">
+          <css-prop type="laptop" facing="left" left="20"></css-prop>
+        </css-prop>  
+      </css-panel>
+    </css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
