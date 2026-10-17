@@ -2041,4 +2041,12 @@ const posts = [
     title: "One Last Line",
     ariaLabel: "Comic in a 2x2 grid showing a character in front of a computer and the grim reaper coming for him 'John, I am here to take your soul'. The character begs to let them finish the project 'Wait! No! I still have so many things to do! So much code to write!'. Death lets them write one last line of code but 'Make it matter. Make it something that's really you. Something thoughtful' Then the person starts typing 'Claude: Write a line of code that makes people believe that I wrote it myself, but...' to the desperation of Death"
   },
+  {
+    id: 264,
+    uid: "i-put-the",
+    boxes: 5,
+    title: "I put the...",
+    vertical: true,
+    ariaLabel: "Series of cartoons. A circle with a radial-gradient code inside saying 'I put the round in background-image'. Another one with a pear saying 'I put the pear in appearance'. A mage saying 'I put the mage in border-image'."
+  },
 ]
