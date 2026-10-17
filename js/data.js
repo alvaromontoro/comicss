@@ -2049,4 +2049,11 @@ const posts = [
     vertical: true,
     ariaLabel: "Series of cartoons. A circle with a radial-gradient code inside saying 'I put the round in background-image'. Another one with a pear saying 'I put the pear in appearance'. A mage saying 'I put the mage in border-image'."
   },
+  {
+    id: 265,
+    uid: "ungovernable",
+    boxes: 2,
+    title: "Become Ungovernable",
+    ariaLabel: "comic strip with 2 panels showing a developer clicking to disable the AI option in an IDE, then starts coding manually, with the text Become Ungovernable"
+  },
 ]
