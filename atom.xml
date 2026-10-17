@@ -5003,4 +5003,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>I put the...</title>
+    <link href="https://comicss.art/comics/264" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/264/i-put-the.html"/>
+    <id>https://comicss.art/comics/264</id>
+    <updated>2026-10-16T00:00:00Z</updated>
+    <summary>New Cartoon: I put the...</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/264/i-put-the.png" alt="Series of cartoons. A circle with a radial-gradient code inside saying 'I put the round in background-image'. Another one with a pear saying 'I put the pear in appearance'. A mage saying 'I put the mage in border-image'." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
