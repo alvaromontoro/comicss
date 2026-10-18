@@ -2054,6 +2054,6 @@ const posts = [
     uid: "ungovernable",
     boxes: 3,
     title: "Become Ungovernable",
-    ariaLabel: "comic strip with 3 panels showing a developer clicking to disable the AI option in an IDE, then starts coding manually, with the text Become Ungovernable"
+    ariaLabel: "comic strip with 3 panels titled Become Ungovernable, showing a developer clicking to disable the AI option in an IDE, then starts merrily coding manually."
   },
 ]
