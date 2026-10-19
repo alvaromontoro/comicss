@@ -4984,4 +4984,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>One Last Line</title>
+    <link href="https://comicss.art/comics/263" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/263/one-last-line.html"/>
+    <id>https://comicss.art/comics/263</id>
+    <updated>2026-10-19T00:00:00Z</updated>
+    <summary>New Cartoon: One Last Line</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/263/one-last-line.png" alt="Comic in a 2x2 grid showing a character in front of a computer and the grim reaper coming for him 'John, I am here to take your soul'. The character begs to let them finish the project 'Wait! No! I still have so many things to do! So much code to write!'. Death lets them write one last line of code but 'Make it matter. Make it something that's really you. Something thoughtful' Then the person starts typing 'Claude: Write a line of code that makes people believe that I wrote it myself, but...' to the desperation of Death" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
