@@ -2044,9 +2044,9 @@ const posts = [
   {
     id: 264,
     uid: "i-put-the",
-    boxes: 5,
+    boxes: 1,
     title: "I put the...",
     vertical: true,
-    ariaLabel: "Series of cartoons. A circle with a radial-gradient code inside saying 'I put the round in background-image'. Another one with a pear saying 'I put the pear in appearance'. A mage saying 'I put the mage in border-image'."
+    ariaLabel: "A circle with a radial-gradient code inside saying 'I put the round in background-image'"
   },
 ]

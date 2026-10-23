@@ -13,13 +13,13 @@
     <meta property="og:title" content="comiCSS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://comicss.art" />
-    <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
+    <meta property="og:image" content="https://comicss.art/comics/264/thumb.png" />
     <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://comicss.art/">
     <meta name="twitter:title" content="comiCSS">
     <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
-    <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
+    <meta name="twitter:image" content="https://comicss.art/comics/264/thumb.png">
     <link rel="monetization" href="https://fynbos.me/alvaro">
 
     <link rel="shortcut icon" href="/favicon.png" />
@@ -27,15 +27,257 @@
     <style>
       @font-face {
         font-family: 'Patrick Hand SC';
-        src: url(/fonts/PatrickHandSC.ttf);
+        src: url(/fonts/PatrickHand-Regular.ttf);
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
 
-      
+      body {
+        /* margin: 0;
+        display: grid;
+        place-items: center; */
+        margin: 60px;
+        min-height: 100vh;
+        background: #fd4;
+      }
+
+      article {
+        font-size: 1vmin;
+        margin: 3em;
+        width: 80em;
+        height: 80em;
+        position: relative;
+        margin-bottom: 13em;
+
+        *, *::before, *::after {
+          box-sizing: border-box;
+          position: absolute;
+        }
+
+        .speech {
+          --string: radial-gradient(90% 145% at 5% 20%, #0000 49%, #00f 0 57%, #0000 0) 20% 45% / 80% 100% no-repeat;
+          --height: 25%;
+          --width: 47%;
+          width: var(--width);
+          height: 60%;
+          display: grid;
+          place-items: center;
+          text-align: center;
+          font-family: 'Patrick Hand SC', cursive;
+
+          & > div {
+            padding-inline: 1em;
+            padding-bottom: calc(100% - var(--height) * 2);
+            font-size: 3.75em;
+            line-height: 1.1;
+
+            code {
+              font-size: 0.8em;
+            }
+
+            span {
+              display: inline-block;
+              translate: 0 0.1em;
+            }
+          }
+
+          * {
+            position: relative;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            background: 
+              radial-gradient(50% var(--height) at 50% var(--height), #00f 99%, #ffc0), 
+              radial-gradient(25% 15% at 65% 22%, #00f 99%, #ffc0),
+              var(--string),
+              #fff;
+            box-shadow: 0 0 0 1em #fff;
+            filter: blur(1em) contrast(100) sepia(1) brightness(5);
+            mix-blend-mode: multiply;
+          }
+        }
+      }
+
+      #round {
+        .speech {
+          top: -3%;
+          right: 0;
+          left: auto;
+        }
+        .radial-gradient {
+          width: 45%;
+          height: 72%;
+          bottom: 3%;
+          left: 3%;
+
+          .body {
+            width: 100%;
+            aspect-ratio: 1;
+            background: radial-gradient(closest-side, mediumseagreen calc(100% - 1px), #0000);
+          }
+
+          .shadow {
+            width: 110%;
+            height: 2em;
+            border-radius: 50%;
+            background: #0002;
+            top: 100%;
+            left: -3%;
+            translate: 0 -50%;
+          }
+
+          .eye {
+            width: 5em;
+            aspect-ratio: 2;
+            border-radius: 50% / 100% 100% 0 0;
+            background: radial-gradient(50% 100% at 50% 100%, #0000 60%, #000 0 calc(100% - 1px), #0000);
+            top: 30%;
+            left: 65%;
+            translate: -50% -50%;
+            rotate: 3deg;
+
+            & ~ & {
+              left: 85%;
+            }
+          }
+
+          .mouth {
+            width: 3.5em;
+            aspect-ratio: 2;
+            border-radius: 50% / 0 0 100% 100%;
+            background: radial-gradient(50% 50% at 30% 80%, red 80%, maroon 0);
+            top: 37%;
+            left: 75%;
+            translate: -50% -50%;
+            rotate: 0deg;
+          }
+
+          .text {
+            inset: 0;
+
+            span {
+              position: absolute;
+              top: 31.25%;
+              left: 50%;
+              color: #0008;
+              font-size: 3.25em;
+              font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              transform: translate(-50%, -50%) rotate(-90deg) rotate(calc(sibling-index() * 8deg)) translate(0, -4.75em);
+            }
+          }
+
+          .leg {
+            width: 30%;
+            height: 50%;
+            bottom: 0;
+            left: 28%;
+            transform: skew(-8deg);
+            background:
+              radial-gradient(30% 110% at 0 60%, #0000 calc(43% - 1px), #000 43% calc(75% - 1px), #0000 75%),
+              radial-gradient(45% 10% at 55% 100%, #000 calc(100% - 1px), #0000);
+            ;
+
+            & ~ & {
+              transform: skew(3deg);
+              left: 60%;
+            }
+          }
+        }
+      }
+
+      #lip {
+        font-size: 5px;
+
+        .speech {
+          --string: radial-gradient(100% 140% at 10% 20%, #0000 49%, #00f 0 57%, #0000 0) 20% 45% / 80% 90% no-repeat;
+          height: 55%;
+          display: grid;
+          place-items: center;
+
+          &::before {
+            background: 
+              radial-gradient(40% var(--height) at 50% var(--height), #00f 99%, #ffc0), 
+              radial-gradient(25% 15% at 65% 22%, #00f 99%, #ffc0),
+              var(--string),
+              #fff;
+          }
+        }
+        .lip {
+          top: 35%;
+          width: 40em;
+          height: 20em;
+          background: red;
+          color: red;
+          clip-path: path(evenodd,"M0,50 C0,50 50,0 100,30 150,0 200,50 200,50 180,100 100,100 100,100 100,100 20,100 0,50 100,50 80,50 100,55 120,50 100,50 200,50 150,60 120,60 100,60 80,60 20,55 0,50");
+          display: grid;
+          place-items: center;
+
+          & > div {
+            margin-top: 1.75em;
+            text-align: center;
+            font-size: 2.5em;
+            color: maroon;
+            position: relative;
+            line-height: 1.2;
+            font-family: monospace, monospace;
+            text-wrap: balance;
+          }
+        }
+      }
     </style>
   </head>
   <body>
 
+    
+    <article id="round">
+      <div class="speech" style="left:50%;">
+        <div>I put the <span>"</span>round<span>"</span> in <code>backg<b>round</b>-image</code></div>
+      </div>
+      <div class="radial-gradient">
+        <div class="shadow"></div>
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="body"></div>
+        <div class="text">
+          <span>R</span>
+          <span>A</span>
+          <span>D</span>
+          <span>I</span>
+          <span>A</span>
+          <span>L</span>
+          <span>-</span>
+          <span>G</span>
+          <span>R</span>
+          <span>A</span>
+          <span>D</span>
+          <span>I</span>
+          <span>E</span>
+          <span>N</span>
+          <span>T</span>
+        </div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+    </article>
+
+
+
+        
+    <article id="lip">
+      <div class="speech" style="left:53%;">
+        <div>I put the <span>"</span>lip<span>"</span> in <code>c<b>lip</b>-path</code></div>
+      </div>
+      <div class="lip">
+        <div>
+          clip-path: path(evenodd, "M0,50 C0,50 50,0 100,30 150,0 200,50 200,50 180,100 100,100 100,100 100,100 20,100 0,50 100,50 80,50 100,55 120,50 100,50 200,50 150,60 120,60 100,60 80,60 20,55 0,50");
+        </div>
+      </div>
+    </article>
+    
     <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
   </body>
   </html>
