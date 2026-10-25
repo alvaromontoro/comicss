@@ -2056,4 +2056,12 @@ const posts = [
     title: "Become Ungovernable",
     ariaLabel: "comic strip with 3 panels titled Become Ungovernable, showing a developer clicking to disable the AI option in an IDE, then starts merrily coding manually."
   },
+  {
+    id: 266,
+    uid: "css-math",
+    boxes: 9,
+    horizontal: true,
+    title: "CSS Math Dance Moves",
+    ariaLabel: "Cartoon with the same cartoon character the arms representing the results of different CSS math functions, so they look like dance moves"
+  },
 ]

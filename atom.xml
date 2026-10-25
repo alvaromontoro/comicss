@@ -5041,4 +5041,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>CSS Math Dance Moves</title>
+    <link href="https://comicss.art/comics/266" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/266/css-math.html"/>
+    <id>https://comicss.art/comics/266</id>
+    <updated>2026-10-23T00:00:00Z</updated>
+    <summary>New Cartoon: CSS Math Dance Moves</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/266/css-math.png" alt="Cartoon with the same cartoon character the arms representing the results of different CSS math functions, so they look like dance moves" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

@@ -2656,5 +2656,15 @@
       <enclosure url="https://comicss.art/comics/265/ungovernable.png" length="188000" type="image/png" />
       <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
     </item>
+    <item>
+      <guid isPermaLink="true">https://comicss.art/comics/266</guid>
+      <title>CSS Math Dance Moves</title>
+      <link>https://comicss.art/comics/266</link>
+      <category>Comic strip</category>
+      <description>A cartoon coded in CSS from comiCSS.</description>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://comicss.art/comics/266/css-math.png" length="150000" type="image/png" />
+      <author>alvaromontoro@gmail.com (Alvaro Montoro)</author>
+    </item>
   </channel>
 </rss>

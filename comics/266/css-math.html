@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/266/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/266/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <style>
+      @font-face {
+        font-family: 'Patrick Hand SC';
+        src: url(/fonts/PatrickHandSC.ttf);
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      article {
+        --bg:
+        linear-gradient(90deg, #fff0 0.1em, #fff 0.4em),
+         repeating-linear-gradient(45deg, #0000 0 0.2em, #000 0 0.4em) 0 0 / 0.4em 100% repeat-y,
+         #fff;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        font-size: 1vmin;
+        font-family: 'Patrick Hand SC', sans-serif;
+        width: 98em;
+
+        h1 {
+          grid-column: 1 / -1;
+          text-align: center;
+          margin: 0;
+          font-size: 6em;
+        }
+
+        h2 {
+          text-align: center;
+          margin: 0;
+          border-bottom: 0.2em solid #000;
+          font-size: 2.5em;
+          text-transform: uppercase;
+          padding: 0.25em 0;
+          background: #ffd;
+        }
+
+        section {
+          position: relative;
+          border: 0.5em solid #000;
+          background: 
+            /* linear-gradient(#c9c2, #c9c0 50%), */
+            linear-gradient(#fff0 13%, #fff 16%),
+            repeating-linear-gradient(45deg, #0000 0 0.2em, #000 0 0.4em),
+            #fff;
+
+          .character {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            position: relative;
+
+            *, *::before,
+            *::after {
+              box-sizing: border-box;
+              position: absolute;
+            }
+
+            .body {
+              width: 6em;
+              height: 40%;
+              border: 0.5em solid #000;
+              border-bottom: 0;
+              bottom: 0;
+              left: 50%;
+              translate: -50%;
+              border-radius: 1em 1em 0 0;
+              background: #000;
+            }
+
+            .arm {
+              --width: 11;
+              --arm: 1;
+              width: calc(var(--width) * 1em);
+              bottom: 40%;
+              left: 50%;
+              translate: -50% 1.5em;
+              height: 1em;
+              display: flex;
+              gap: 0;
+
+              &.arm-1 {
+                translate: 3em 1.5em;
+                --arm: -1;
+              }
+
+              &.arm-2 {
+                translate: calc(-3em - var(--width) * 1em) 1.5em;
+                flex-direction: row-reverse;
+
+                & > div {
+                  background: #000; blue;
+                }
+              }
+
+              & > div {
+                height: 1em;
+                width: 1em;
+                margin: 0;
+                padding: 0;
+                transform: translate(0, var(--y));
+                background:#000; red;
+                flex: 1;
+                position: relative;
+
+                &:last-child {
+                  min-width: 3em;
+                  min-height: 3em;
+                  border: 0.35em solid #000;
+                  background: #fff;
+                  border-radius: 50%;
+                  translate: 0 -25%;
+                  background: var(--bg);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .func-n .character {
+        .arm {
+          > div {
+            --n: 0em;
+            --y: var(--n);
+          }
+        }
+      }
+
+      .func-x .character {
+        .arm {
+          --width: 9;
+
+          > div {
+            height: 1.35em;
+            --y: calc(sibling-index() * calc(var(--width) / sibling-count() * 1em * vaR(--arm)));
+          }
+        }
+      }
+
+      .func-abs .character {
+        .arm {
+          --width: 9;
+
+          > div {
+            height: 1.35em;
+            --y: calc(abs(sibling-index() * calc(var(--width) / sibling-count())) * -1em);
+          }
+        }
+      }
+
+      .func-sin .character {
+        .arm {
+          --width: 11;
+
+          > div {
+            height: 1.35em;
+            --y: calc(sin(sibling-index() / 36 * 3.14159) * 3em * var(--arm));
+          }
+        }
+      }
+
+      .func-cos .character {
+        .arm {
+          --width: 10;
+
+          > div {
+            height: 1.35em;
+            --y: calc(3em + cos(sibling-index() / 36 * 3.14159) * 3em * var(--arm));
+          }
+
+          &.arm-2 > div {
+            --y: calc(3em + cos(sibling-index() / 36 * 3.14159) * 3em * var(--arm) * -1);
+          }
+        }
+      }
+
+      .func-tan .character {
+        .arm {
+          --width: 9;
+
+          > div {
+            height: 1.35em;
+            --y: calc(tan((sibling-index() - 1) / (sibling-count() - 1) * 60deg) * 5em * var(--arm));
+          }
+        }
+      }
+
+      .func-atan .character {
+        .arm {
+          --width: 12;
+
+          > div {
+            height: 1.35em;
+            --y: calc(11em + atan((-1 * sibling-index() - (sibling-count() - 1)) / (sibling-count() - 1)) / 1rad * -14em * var(--arm));
+          }
+
+          &.arm-2 > div {--y: calc(-11em + atan((-1 * sibling-index() - (sibling-count() - 1)) / (sibling-count() - 1)) / 1rad * -14em * var(--arm));
+          }
+        }
+      }
+
+      .func-asin .character {
+        .arm {
+          --width: 9;
+
+          > div {
+            height: 1.35em;
+            --y: calc(0em + asin(1 * (sibling-index() - 1 ) / (sibling-count() - 1)) / 1rad * -5em );
+          }
+
+          &.arm-2 > div {
+            --y: calc(0em + asin(1 * (sibling-index() - 1) / (sibling-count() - 1)) / 1rad * 5em );
+          }
+        }
+      }
+
+      .func-acos .character {
+        .arm {
+          --width: 9;
+
+          > div {
+            height: 1.35em;
+            --y: calc(acos(1 - (sibling-index() - 1) / (sibling-count() - 1)) / 1rad * 5em);
+            --y: calc(-8em + (acos(1 + (sibling-index() - 1) / (sibling-count() - 1) - 1) - 180deg) / 1rad * 5em * var(--arm));
+            /* &:last-child {
+              translate: -5% -50%;
+            } */
+          }
+          
+          &.arm-2 > div {
+            --y: calc(acos(1 - (sibling-index() - 1) / (sibling-count() - 1)) / 1rad * -5em);
+            --y: calc(8em + (acos(1 + (sibling-index() - 1) / (sibling-count() - 1) - 1) - 180deg) / 1rad * 5em * var(--arm));
+        /* &:last-child {
+              translate: 5% 0%;
+            } */
+          }
+        }
+      }
+
+
+      .func-pow .character {
+        .arm {
+          --width: 9;
+
+          > div {
+            height: 1.35em;
+            --y: calc(pow((sibling-index() - 1) / (sibling-count() - 1), 2) * 9em * -1);
+            --y: calc(pow((sibling-index() - 1) / 36, 2) * 8em * -1);
+          }
+        }
+      }
+
+      .func-log .character {
+        .arm {
+          --width: 11;
+
+          > div {
+            height: 1.35em;
+            --y: calc(3em + log(0.8 - (sibling-index() + 1) / (sibling-count() - 1) * var(--arm) / 2) * 10em);
+          }
+        }
+      }
+
+      .func-sqrt .character {
+        .arm {
+          --width: 12;
+           &.arm-1 {
+                translate: 2.75em 1.5em;
+                --arm: -1;
+              }
+
+              &.arm-2 {
+                translate: calc(-2.75em - var(--width) * 1em) 1.5em;
+              }
+
+          > div {
+            height: 1.35em;
+            --y: calc(3em +  sqrt((sibling-index() - 1) / (sibling-count() - 1)) * -12em);
+          }
+        }
+      }
+
+      .head {
+        width: 21%;
+        border: 0.35em solid #000;
+        background:
+         var(--bg);
+        left: 50%;
+        translate: -50%;
+        top: 22%;
+        height: 33%;
+        border-radius: 1em 1em 2.25em 2.25em;
+        corner-shape: squircle;
+        border-radius: 3em 1em 80% 90%;
+        border-radius: 80% 80% 90% 100%;
+
+        &::before {
+          content:"";
+          width: 23%;
+          height: 25%;
+          border: inherit;
+          background: var(--bg);
+          border-radius: 100% / 0 0 1em 1em;
+          top: 100%;
+          left: 50%;
+          translate: -50% 0;
+        }
+
+        .nose {
+          width: 18%;
+          aspect-ratio: 0.8;
+          border: inherit;
+          background: #fff;
+          border: 0.35em solid #000;
+          border-left: 0;
+          border-radius: 100% / 0 100% 100% 0;
+          top: 59%;
+          left: 51.5%;
+        }
+
+        .eyes {
+          width: 56%;
+          height: 14%;
+          left: 54%;
+          translate: -50% -50%;
+          top: 47%;
+          display: flex;
+          justify-content: space-between;
+
+          &::before, &::after {
+            height: 100%;
+            width: 16%;
+            border-radius: 5em;
+            background: #000;
+            content: "";
+            position: relative;
+          }
+        }
+
+        .ears {
+          width: calc(100% + 2.5em);
+          height: 2em;
+          top: 60%;
+          left: 50%;
+          translate: -50% -50%;
+          display: flex;
+          justify-content: space-between;
+
+          &::before, &::after {
+            content: "";
+            position: relative;
+            width: 1.25em;
+            height: 2.5em;
+            background: #f004;
+            border-radius: 100% 0 0 100% / 50%;
+            border: 0.35em solid #000;
+            background: var(--bg);
+          }
+
+          &::after {
+            border-radius: 0 100% 100% 0 / 50%;
+          }
+        }
+
+        .eyebrows {
+          width: 70%;
+          height: 14%;
+          left: 54%;
+          translate: -50% -50%;
+          top: 37%;
+          display: flex;
+          justify-content: space-between;
+
+          &::before, &::after {
+            height: 40%;
+            width: 38%;
+            border-radius: 50% /  100% 0.5em 0.5em 0;
+            background: #000;
+            content: "";
+            position: relative;
+          }
+
+          &::after {
+            border-radius: 50% /  0.5em 100% 0 0.5em;
+          }
+
+          section:nth-child(4n - 1) & {
+            top: 33%;
+          }
+
+          section:nth-child(4n) & {
+            rotate: 3deg;
+          }
+        }
+
+        .mouth {
+          width: 30%;
+          left: 55%;
+          translate: -50% 0;
+          aspect-ratio: 2.75;
+          background: #000;
+          border-radius: 50% / 0 0 100% 100%;
+          top: 82%;
+
+          section:nth-child(4n) & {
+            rotate: -3deg;
+          }
+
+          section:nth-child(3n) & {
+            rotate: 6deg;
+          }
+
+          section:nth-child(5n - 2) & {
+            translate: -55% 0;
+          }
+
+          section:nth-child(4n - 3) & {
+            translate: -45% 0;
+          }
+        }
+
+        .hair {
+          width: 130%;
+          height: 25%;
+          background: #000;
+          border-radius: 50% / 100% 100% 0 0;
+          bottom: 95%;
+          transform-origin: 0 0;
+          rotate: 8deg;
+
+          left: 5%;
+          bottom: 92%;
+
+          &::before {
+            width: 110%;
+            height: 100%;
+            background: #000;
+            border-radius: 50% / 100% 100% 0 0;
+            transform-origin: 0 100%;
+            rotate: -5deg;
+            content: "";
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <article>
+      <h1>CSS Math Dance Moves</h1>
+      <section class="func-n">
+        <h2>--y: var(--n)</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-x">
+        <h2>--y: var(--x)</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-abs">
+        <h2>--y: abs(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-sin">
+        <h2>--y: SIN(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-cos">
+        <h2>--y: COS(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-tan">
+        <h2>--y: tan(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-pow">
+        <h2>--y: pow(var(--X), 2)</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="func-sqrt">
+        <h2>--y: sqrt(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-log">
+        <h2>--y: log(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-atan">
+        <h2>--y: atan(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-asin">
+        <h2>--y: asin(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-acos">
+        <h2>--y: acos(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
