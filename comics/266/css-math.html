@@ -68,6 +68,7 @@
             linear-gradient(#fff0 13%, #fff 16%),
             repeating-linear-gradient(45deg, #0000 0 0.2em, #000 0 0.4em),
             #fff;
+          /* overflow: hidden; */
 
           .character {
             width: 100%;
@@ -201,11 +202,12 @@
 
       .func-tan .character {
         .arm {
-          --width: 9;
+          --width: 8;
 
           > div {
-            height: 1.35em;
-            --y: calc(tan((sibling-index() - 1) / (sibling-count() - 1) * 60deg) * 5em * var(--arm));
+            height: 2.25em;
+            --y: calc(tan((sibling-index() - 1) / (sibling-count() - 1) * 120deg) * 1em * var(--arm));
+            --y: calc(tan((sibling-index() - 1) / (sibling-count() - 1) * 60deg) * 10em * var(--arm));
           }
         }
       }
@@ -474,7 +476,7 @@
   <body>
 
     <article>
-      <h1>CSS Math Dance Moves</h1>
+      <h1>CSS Math Dance</h1>
       <section class="func-n">
         <h2>--y: var(--n)</h2>
         <div class="character">
@@ -538,69 +540,7 @@
           </div>
         </div>
       </section>
-      <section class="func-sin">
-        <h2>--y: SIN(var(--X))</h2>
-        <div class="character">
-          <div class="arm arm-1">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-          </div>
-          <div class="arm arm-2">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-          </div>
-          <div class="body"></div>
-          <div class="head">
-            <div class="eyes"></div><div class="eyebrows"></div>
-            <div class="mouth"></div><div class="ears"></div>
-            <div class="nose"></div><div class="hair"></div>
-          </div>
-        </div>
-      </section>
-      <section class="func-cos">
-        <h2>--y: COS(var(--X))</h2>
-        <div class="character">
-          <div class="arm arm-1">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-          </div>
-          <div class="arm arm-2">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-          </div>
-          <div class="body"></div>
-          <div class="head">
-            <div class="eyes"></div><div class="eyebrows"></div>
-            <div class="mouth"></div><div class="ears"></div>
-            <div class="nose"></div><div class="hair"></div>
-          </div>
-        </div>
-      </section>
-      <section class="func-tan">
-        <h2>--y: tan(var(--X))</h2>
-        <div class="character">
-          <div class="arm arm-1">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-          </div>
-          <div class="arm arm-2">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-          </div>
-          <div class="body"></div>
-          <div class="head">
-            <div class="eyes"></div><div class="eyebrows"></div>
-            <div class="mouth"></div><div class="ears"></div>
-            <div class="nose"></div><div class="hair"></div>
-          </div>
-        </div>
-      </section>
+      
       <section class="func-pow">
         <h2>--y: pow(var(--X), 2)</h2>
         <div class="character">
@@ -622,7 +562,6 @@
           </div>
         </div>
       </section>
-      
       <section class="func-sqrt">
         <h2>--y: sqrt(var(--X))</h2>
         <div class="character">
@@ -665,6 +604,72 @@
           </div>
         </div>
       </section>
+
+      <section class="func-tan">
+        <h2>--y: tan(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-sin">
+        <h2>--y: SIN(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      <section class="func-cos">
+        <h2>--y: COS(var(--X))</h2>
+        <div class="character">
+          <div class="arm arm-1">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="arm arm-2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+          <div class="body"></div>
+          <div class="head">
+            <div class="eyes"></div><div class="eyebrows"></div>
+            <div class="mouth"></div><div class="ears"></div>
+            <div class="nose"></div><div class="hair"></div>
+          </div>
+        </div>
+      </section>
+      
+
       <section class="func-atan">
         <h2>--y: atan(var(--X))</h2>
         <div class="character">

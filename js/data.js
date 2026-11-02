@@ -2061,7 +2061,7 @@ const posts = [
     uid: "css-math",
     boxes: 9,
     horizontal: true,
-    title: "CSS Math Dance Moves",
+    title: "CSS Math Dance",
     ariaLabel: "Cartoon with the same cartoon character the arms representing the results of different CSS math functions, so they look like dance moves"
   },
 ]
