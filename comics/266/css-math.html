@@ -290,17 +290,19 @@
         .arm {
           --width: 12;
            &.arm-1 {
-                translate: 2.75em 1.5em;
-                --arm: -1;
+                translate: 2.75em 0.5em;
+                --arm: 1;
               }
 
               &.arm-2 {
                 translate: calc(-2.75em - var(--width) * 1em) 1.5em;
+                --arm: -1;
+                /* opacity: 0; Should I remove instead of accepting default error? */
               }
 
           > div {
             height: 1.35em;
-            --y: calc(3em +  sqrt((sibling-index() - 1) / (sibling-count() - 1)) * -12em);
+            --y: calc(3em +  sqrt(var(--arm) * (sibling-index() - 1) / (sibling-count() - 1)) * -12em);
           }
         }
       }
