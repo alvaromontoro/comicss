@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/268/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/268/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v2/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v2/comicss.art.css">
+
+    <style>
+      css-speech[type="screen-message"] {
+        text-align: left;
+
+        &::before {
+          height: 7em !important;
+          transform-origin: 50% 0;
+          transform: skew(-20deg);
+        }
+
+        p {
+          margin-block: 0.25em;
+        }
+
+        span.g { color: #0c0; }
+        span.r { color: #f77; }
+        span.c { color: #ff0; }
+      }
+
+      css-person[character="john"] {
+        bottom: -2% !important;
+      }
+
+      css-person[character="steve"] {
+        bottom: 7% !important;
+
+        .chest {
+          box-shadow: 0 4em;
+        }
+      }
+
+      css-panel:nth-of-type(1) {
+        
+        css-speech:nth-of-type(2) {
+          font-size:1.5em;
+          left: 57%;
+
+          &::before {
+            transform: rotate(90deg) scale(-1, 1) skew(-20deg) !important;
+            right: calc(100% + 0.45em) !important;
+            left: auto !important;
+            top: 30%;
+          }
+        }
+      }
+
+      css-panel:nth-of-type(2) {
+        css-speech:nth-of-type(1) {
+          &::before {
+            left: 22%;
+            height: 9em;
+          }
+        }
+
+        css-person[character="john"] {
+          .eyebrow {
+            rotate: 6deg;
+
+            & ~ & { 
+              rotate: -4deg;
+            }
+          }
+        }
+
+        css-person[character="steve"] {
+          bottom: 8% !important;
+          rotate: -4deg;
+        }
+      }
+
+      css-panel:nth-of-type(4) {
+        css-speech[type="screen-message"] {
+          top: 13%;
+
+          &::before {
+            height: 8em !important;
+            transform: skew(-15deg);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <css-comic title="PR Review">
+      <css-panel>
+        <css-speech type="screen-message" line="left-10" left="10">
+          <p>PR by John:  <span class="g">+2,231</span> <span class="r">-1,913</span></p>
+          <p>PR by Sean:  <span class="g">+3,793</span> <span class="r">-3,312</span></p>
+          <p>PR by Luke:  <span class="g">+1,168</span> <span class="r">-927</span></p>
+          <p>PR by John:  <span class="g">+2,926</span> <span class="r">-2,738</span></p>
+          <p>PR by Steve: <span class="g">+2</span> <span class="r">-1</span></p>
+        </css-speech>
+        <!-- <css-speech line="skewest short left-5" top="40" left="50" style="top:40%;font-size:1.5em;">Hey, Steve...</css-speech> -->
+        <css-speech line="skewest short left-5" top="50" left="55">Hey, Steve...</css-speech>
+        <css-speech type="whisper" top="70" left="20" rotate="-5">Hmm...</css-speech>
+        <css-prop  type="chair" top="75" left="35" rotate="6"></css-prop>
+        <css-person facing="left" character="john" left="25" eyebrows="low" mouth="no-mouth" arms="right--35 right-fold--90 left-20 left-fold--40"></css-person>
+        <css-prop type="counter" right="60" style="width:70%">
+          <css-prop type="laptop" left="50"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-speech line="longest skew left-20" right-line>Did you use AI on your latest PR?</css-speech>
+        <!-- <css-speech width="50" line="left-80 skewer short" top="15" left="25" right-line style="top:13%;">No. It was a one-liner fix in CSS, so I went ahead and...</css-speech> -->
+        <css-speech width="60" line="left-65 skewer" top="15" left="25" right-line style="top:13%;">No. It was a one-liner CSS fix, so I didn't bother...</css-speech>
+        <css-prop type="chair" facing="left" top="75" left="25" rotate="-6"></css-prop>
+        <css-person character="john" left="25" head="rotate--4" eyebrows="low" mouth="frown small sided side-right" arms="right--35 right-fold--20 left-25 left-fold--20"></css-person>
+        <css-person character="steve" facing="left" left="70" arms="right--15 right-fold--20 left-20"></css-person>
+        <css-prop type="counter" right="60" style="width:70%">
+          <css-prop type="laptop" left="50"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-speech width="85" left="5" line="long skew left-45">Look, Steve, we are an "AI-first, AI-only" company. It keeps code clean and maintainable. So, please, update your PR and use AI this time.</css-speech>
+        <!-- <css-speech  line="long skew left-45">Look, we are an AI-first, AI-only company. It keeps code clean and maintainable. Update your PR and use AI this time.</css-speech> -->
+        <css-speech type="whisper" top="65" left="70" rotate="-8">...ok...</css-speech>
+        <css-prop type="chair" facing="left" top="75" left="25" rotate="-6"></css-prop>
+        <css-person character="john" left="25" head="rotate--4" eyebrows="low" mouth="frown small sided side-left" arms="right--35 right-fold--90 left-15 left-fold--20" hands="230x47"></css-person>
+        <css-person character="steve" facing="left" left="70" mouth="surprise small sided side-right" eyebrows="high sad" arms="left-10 left-fold--5 right--10 right-fold--10"></css-person>
+        <css-prop type="counter" right="60" style="width:70%">
+          <css-prop type="laptop" left="50"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-title>A few minutes later...</css-title>
+        <css-speech type="screen-message" line="left-10" left="5">
+          <p><span class="c">*update*</span></p>
+          <p>PR by Steve: <span class="g">+2,638</span> <span class="r">-2,391</span></p>
+        </css-speech>
+        <css-speech type="whisper" top="80" left="20" rotate="-8" style="top:78%;left:19%;">*approve*</css-speech>
+
+        <css-prop  type="chair" top="75" left="35" rotate="6"></css-prop>
+        <css-person facing="left" character="john" left="25" mouth="smile small sided side-right" arms="right--40 right-fold--0 left--25 left-fold--90" hands="180x34 135x38"></css-person>
+        <css-prop type="counter" right="60" style="width:70%">
+          <css-prop type="laptop" left="50"></css-prop>
+        </css-prop>
+      </css-panel>
+    </css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
