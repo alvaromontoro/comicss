@@ -2064,4 +2064,11 @@ const posts = [
     title: "CSS Math Dance",
     ariaLabel: "Cartoon with the same cartoon character the arms representing the results of different CSS math functions, so they look like dance moves"
   },
+  {
+    id: 267,
+    uid: "edits",
+    boxes: 4,
+    title: "Logo Edits",
+    ariaLabel: "Comic with 4 panels in a 2x2 grid showing the CSS logo (a purple square with the letters CSS inside). Someone off-panel saying 'make it brighter' so in the second panel it looks brighter. 'Make it darker', so in the third panel it looks considerably darker. 'You know what, let's start again!', so the fourth panel is the old CSS logo by itself (a blue shield with the number 3 in white inside)"
+  },
 ]
