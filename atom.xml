@@ -5098,4 +5098,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>shape-outside</title>
+    <link href="https://comicss.art/comics/269" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/269/shape-outside.html"/>
+    <id>https://comicss.art/comics/269</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <summary>New Cartoon: shape-outside</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/269/shape-outside.png" alt="Cartoon with 4 panels in a 2x2 grid. Showing a man and a woman in front of a computer. The woman says 'With this trick, I use SVG and CSS shape-O-U-T-S-I-D-E to make text wrap around shapes!'. The man looks confused 'O-U-T-S-I-D-E? They don't you just say shape-outside?' The woman facepalms while their dog pops up in the last panel 'woof?'" /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

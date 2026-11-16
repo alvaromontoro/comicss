@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/269/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/269/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v2/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v2/comicss.art.css">
+
+    <style>
+      css-person[character="jill"] {
+        bottom: -4% !important;
+      }
+
+      css-person[character="al"] {
+        bottom: 9%;
+        .body {
+          .chest {
+            box-shadow: 0 2em #000;
+          }
+        }
+      }
+
+      css-person[character="dog"] {
+        --skin-color: #fd8;
+        width: 30%;
+
+        .ear {
+              background: #000;
+              width: 26%;
+              height: 30%;
+              border-radius: 5em;
+              clip-path: polygon(0 30%, 0 0, 100% 0, 100% 100%, 70% 100%);
+              transform: scale(-1,1) rotate(210deg) skewY(20deg);
+              top: 23%;
+              z-index: -1;
+              left: 52% !important;
+            }
+
+        .body {
+          .chest {
+            width: 170%;
+            left: 10%;
+            background: 
+              linear-gradient(#000 0 0) 88% 100% / 0.35em 60% no-repeat,
+              linear-gradient(90deg, #000 0.3em, #0000 0 2em, #000 0 2.3em, #0000 0) 100% 80% / 60% 50% no-repeat,
+              radial-gradient(10% 50% at 100% 30%, #0000 calc(100% - 0.2em - 1px), #000 0 calc(100% - 1px), var(--skin-color));
+              ;var(--skin-color);
+            border: 0.4em solid #000;
+            border-right: 0;
+            border-radius: 70% 0 0 0;
+          }
+          
+          .arm {
+            display: none;
+          }
+        }
+
+        .head {
+          height: 40%;
+          width: 50%;
+          top: 15.6%;
+          left: 60%;
+          rotate: -20deg;
+
+          .neck {
+            display: none;
+          }
+
+          .face {
+            border-radius: 100% 100% 90% 90% / 60% 70% 100% 10%;
+            border-bottom-color: #0000;
+
+            .eyebrow {
+              border-radius: 50% / 100% 100% 0 0;
+              translate: 0 -200%;
+            }
+
+            .eye {
+              width: 7%;
+              height: 14%;
+              left: 45%;
+
+              & ~ & {
+                left: 84%;
+              }
+            }
+
+            .nose {
+              width: 140%;
+              height: 50%;
+              background: 
+                radial-gradient(40% 70% at 80% 30%, #000 20%, #0000 0),
+                linear-gradient(#000 0 0) 82% 100% / 0.225em 70% no-repeat,
+                var(--skin-color);
+              transform-origin: 0 0;
+              transform: skew(-10deg);
+              left: 0%;
+              clip-path: polygon(70% 0, 40% 20%, 20% 20%,  30% 90%, 40% 90%, 40% 200%, 100% 200%, 100% 0);
+            
+              &::before {
+                content: "";
+                width: 20%;
+                height: 30%;
+                border: 0.34em solid #000;
+                background: #d99;
+                left: 66%;
+                border-radius: 50% / 0 0 100% 100%;
+                top: 100%;
+              }
+            }
+
+            .ear {
+              background: #000;
+              width: 70%;
+              height: 66%;
+              border-radius: 2em;
+              clip-path: polygon(0 30%, 0 0, 100% 0, 100% 100%, 70% 100%);
+              transform: rotate(-130deg) skewY(20deg);
+              top: 20%;
+              left: 0% !important;
+              z-index: 1;
+            }
+          }
+        }
+      }
+      
+
+      css-panel:nth-of-type(1) {
+        css-speech::before {
+          transform: skew(20deg);
+        }
+        css-person[character="al"] {
+          .body {
+            .arm:not(.arm ~ .arm) {
+              &::after {
+                left: 50%;
+                top: 2%;
+                rotate: -107deg;
+              }
+            }
+          }
+        }
+
+        css-person[character="jill"] {
+          .body {
+            .arm:not(.arm ~ .arm) {
+              &::after {
+                left: 50%;
+                top: 2%;
+                rotate: -123deg;
+              }
+            }
+          }
+        }
+      }
+
+      css-panel:nth-of-type(2) {
+      }
+
+      css-panel:nth-of-type(3) {
+        css-person[character="jill"] {
+          .head {
+            .face {
+              .eye {
+                translate: -60% -12%;
+              }
+            }
+          }
+        }
+      }
+
+      css-panel:nth-of-type(4) {
+        css-person[character="al"] {
+          .head {
+            .face {
+              .eye {
+                translate: -50% 10%;
+              }
+            }
+          }
+        }
+      }
+
+      css-panel:not(:nth-of-type(4)) {
+        css-person[character="dog"] {
+          rotate: -20deg;
+          top: 89%;
+          translate: 8%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <css-comic title="Working with your best friend">
+      <css-panel>
+        <css-person facing="left" character="dog" left="75" top="65" eyebrows="high" mouth="no-mouth" arms="right--35 right-fold--90 left-20 left-fold--40">
+          <div class="ear" style="left:150%"></div>
+        </css-person>
+        <css-speech width="75" line="longer left-35" right-line>With this trick, I use SVG and CSS shape-O-U-T-S-I-D-E to make text wrap around shapes!</css-speech>
+
+        <!-- <css-speech width="80" line="longer left-35" right-line>With this T-R-I-C-K, I use SVG and CSS shape-O-U-T-S-I-D-E to make text wrap around shapes!</css-speech> -->
+        <!-- <css-speech width="85" line="longer left-30" right-line>...with this T-R-I-C-K, I give the text funny shapes with an SVG combined with CSS using shape-O-U-T-S-I-D-E</css-speech> -->
+        <!-- <css-speech width="85" line="longer left-30" right-line>...and then I give the text some funny shape with an SVG combined with CSS using shape-O-U-T-S-I-D-E</css-speech> -->
+        <css-person facing="left" character="al" left="45" head="rotate-2" mouth="flat small" arms="right--35 right-fold--110 left-15 left-fold--10" hands="215x38"></css-person>
+        <css-prop  type="chair" top="80" left="20" rotate="6"></css-prop>
+        <css-person facing="left" character="jill" left="10" eyebrows="high" mouth="" arms="right--45 right-fold--110 left--20 left-fold--100" hands="183x0"></css-person>
+        <css-prop type="counter" right="75" style="width:70%">
+          <css-prop type="laptop" left="55"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-person facing="left" character="dog" left="75" top="65" eyebrows="high" mouth="no-mouth" arms="right--35 right-fold--90 left-20 left-fold--40">
+          <div class="ear" style="left:150%"></div>
+        </css-person>
+        <css-speech top="10" left="20" line=" left-60" right-line>O-U-T-S-I-D-E?</css-speech>
+        <!-- <css-speech top="5" left="20" line=" left-60" right-line>T-R-I-C-K?<br>O-U-T-S-I-D-E?</css-speech> -->
+        <!-- <css-speech top="10" left="5" line=" left-60" right-line>T-R-I-C-K? O-U-T-S-I-D-E?</css-speech> -->
+        <!-- <css-speech type="whisper" top="35" left="60" style="top:26%;font-size:2em">?</css-speech> -->
+        <css-person facing="left" character="al" head="rotate-3" left="45" eyebrows="suspicious low" mouth="small frown sided side-right" arms="right--15 right-fold--15 left-20 left-fold--40"></css-person>
+        <css-prop  type="chair" top="80" left="20" rotate="6"></css-prop>
+        <css-person facing="left" character="jill" left="10" eyebrows="" mouth="small" arms="right--35 right-fold--90 left--40 left-fold--40" hands="156x27"></css-person>
+        <css-prop type="counter" right="75" style="width:70%">
+          <css-prop type="laptop" left="55"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-person facing="left" character="dog" left="75" top="65" eyebrows="high" mouth="no-mouth" arms="right--35 right-fold--90 left-20 left-fold--40">
+          <div class="ear" style="left:150%"></div>
+        </css-person>
+        <css-speech type="whisper" top="65" left="5" rotate="2" style="top:67%;left:7%">WAIT</css-speech>
+        <css-speech type="whisper" top="70" rotate="-8" style="left:8%;font-size:1.5em;font-weight:bold">NO!</css-speech>
+        <css-speech top="5" left="15" width="50" line="skew left-55" right-line style="top:6%">Why don't you just say <code>shape-outside</code>?</css-speech>
+        <css-person facing="left" character="al" left="45" eyebrows=" surprised" mouth="frown small sided side-right" arms="right--20 right-fold--5 left-20 left-fold--0"></css-person>
+        <css-prop  type="chair" top="80" left="20" rotate="6"></css-prop>
+        <css-person facing="left" character="jill" left="10" eyebrows="high" mouth="frown sided" arms="right--35 right-fold--90 left-20 left-fold--40"></css-person>
+        <css-prop type="counter" right="75" style="width:70%">
+          <css-prop type="laptop" left="55"></css-prop>
+        </css-prop>
+      </css-panel>
+
+      <css-panel>
+        <css-speech type="whisper" rotate="-10" top="60" left="40" style="top:62%;">...oops...</css-speech>
+        <css-speech type="whisper" rotate="-5" top="65" left="75" style="top:68%;font-weight:900">WOOF?</css-speech>
+        <css-person facing="left" character="dog" left="75" top="65" eyebrows="high" mouth="no-mouth" arms="right--35 right-fold--90 left-20 left-fold--40">
+          <div class="ear" style="left:150%"></div>
+        </css-person>
+        <css-person facing="left" character="al" left="45" eyebrows="high" mouth="surprise small" arms="right--10 right-fold--5 left-10 left-fold--0"></css-person>
+        <css-prop  type="chair" top="80" left="20" rotate="6"></css-prop>
+        <css-person facing="left" face="annoyed" character="jill" left="10" eyebrows="low" mouth="no-mouth" arms="right--35 right-fold--90 left-15 left-fold--40"></css-person>
+        <css-prop type="counter" right="75" style="width:70%">
+          <css-prop type="laptop" left="55"></css-prop>
+        </css-prop>
+      </css-panel>
+    </css-comic>
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>
