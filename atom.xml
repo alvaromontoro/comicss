@@ -5079,4 +5079,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>PR Review</title>
+    <link href="https://comicss.art/comics/268" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/268/pr-review.html"/>
+    <id>https://comicss.art/comics/268</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <summary>New Cartoon: PR Review</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/268/pr-review.png" alt="Comic with 4 panels in a 2x2 grid. A person is reviewing PRs with thousands of line of code, when he runs into a PR that is only 3 lines of code. He asks the developer if he used AI for it, the developer answers no because it was a quick and easy change. The first person asks for the developer to use AI and is happy when he sees a 1,200 line of code change." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>

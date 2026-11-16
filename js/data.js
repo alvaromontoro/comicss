@@ -2071,4 +2071,11 @@ const posts = [
     title: "Logo Edits",
     ariaLabel: "Comic with 4 panels in a 2x2 grid showing the CSS logo (a purple square with the letters CSS inside). Someone off-panel saying 'make it brighter' so in the second panel it looks brighter. 'Make it darker', so in the third panel it looks considerably darker. 'You know what, let's start again!', so the fourth panel is the old CSS logo by itself (a blue shield with the number 3 in white inside)"
   },
+  {
+    id: 268,
+    uid: "pr-review",
+    boxes: 4,
+    title: "PR Review",
+    ariaLabel: "Comic with 4 panels in a 2x2 grid. A person is reviewing PRs with thousands of line of code, when he runs into a PR that is only 3 lines of code. He asks the developer if he used AI for it, the developer answers no because it was a quick and easy change. The first person asks for the developer to use AI and is happy when he sees a 1,200 line of code change."
+  },
 ]
