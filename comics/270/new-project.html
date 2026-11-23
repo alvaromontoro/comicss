@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alvaro Montoro (alvaromontoro@gmail.com)" />
+    <meta name="keywords" content="comicss,webcomic,css,alvaro montoro,alvaro,montoro" />
+    <meta name="description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+
+    <title>comiCSS</title>
+
+    <meta property="og:title" content="comiCSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comicss.art" />
+    <meta property="og:image" content="https://comicss.art/comics/___/thumb.png" />
+    <meta property="og:description" content="comiCSS: A webcomic about CSS. Coded in CSS." />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://comicss.art/">
+    <meta name="twitter:title" content="comiCSS">
+    <meta name="twitter:description" content="comiCSS: A webcomic about CSS. Coded in CSS.">
+    <meta name="twitter:image" content="https://comicss.art/comics/___/thumb.png">
+    <link rel="monetization" href="https://fynbos.me/alvaro">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <script src="../../library/v2/comicss.art.js" defer></script>
+    <link rel="stylesheet" href="../../library/v2/comicss.art.css">
+
+    <style>
+      css-panel:not(:nth-of-type(4)) {
+        background: linear-gradient(#69f4, #69f0 40%);
+        background: linear-gradient(#38BDF844, #69f0 40%);
+      }
+      
+      css-panel:nth-of-type(2) {
+        css-person[character="jill"] {
+          .head {
+            .face {
+              .eyebrow ~ .eyebrow { /*:not(.eyebrow ~ .eyebrow) {*/
+                translate: 0 -80%;
+              }
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <css-comic title="Next Project">
+      <css-panel>
+        <css-speech top="15" left="5" line="skewer left-25">Let's use Tailwind in our next project.</css-speech>
+        <css-person character="john" left="5" height="tall" mouth="side-right sided" arms="left-25 left-fold--5 right--20 right-fold--10"></css-person>
+        <css-person character="jill" mouth="small sided side-right" right="5" facing="left"></css-person>
+      </css-panel>
+
+      <css-panel>
+        <css-person character="john" left="5" eyebrows="high" height="tall" arms="left-fold--10 right--15"></css-person>
+        <css-person character="jill" eyebrows="angry" mouth="small flat sided" right="5" facing="left" arms="left-15 right--10"></css-person>
+      </css-panel>
+
+      <css-panel>
+        <css-speech top="25" left="50" line="left-65 skewer" right-line style="left:48%">No.</css-speech>
+
+        <css-person character="john" mouth="sided side-right frown small" left="5" height="tall" arms="left-15 right--15"></css-person>
+        <css-person character="jill" eyebrows="high" right="5" facing="left" arms="left-20 right--25"></css-person>
+      </css-panel>
+
+      <css-panel>
+        <div style="left:50%;top:50%;translate:-50% -50%;font-size:4em;">The End.</div>
+      </css-panel>
+    </css-comic>
+
+    <a href="/" style="position: fixed; bottom: 1rem; right: 1rem;" rel="up">See more comics</a>
+  </body>
+  </html>

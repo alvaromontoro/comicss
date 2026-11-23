@@ -2085,4 +2085,11 @@ const posts = [
     title: "shape-outside",
     ariaLabel: "Cartoon with 4 panels in a 2x2 grid. Showing a man and a woman in front of a computer. The woman says 'With this trick, I use SVG and CSS shape-O-U-T-S-I-D-E to make text wrap around shapes!'. The man looks confused 'O-U-T-S-I-D-E? They don't you just say shape-outside?' The woman facepalms while their dog pops up in the last panel 'woof?'"
   },
+  {
+    id: 270,
+    uid: "new-project",
+    boxes: 4,
+    title: "New Project",
+    ariaLabel: "comic with 4 panels in a 2x2 grid. Two characters look at each other, one says Let's use Tailwind in our next project. In the second panel the characters look at each other in silence. In the third panel the second character says No. The last panel is just the words The End."
+  },
 ]

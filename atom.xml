@@ -5117,4 +5117,23 @@
       <uri>https://alvaromontoro.com</uri>
     </author>
   </entry>
+  <entry>
+    <title>New Project</title>
+    <link href="https://comicss.art/comics/270" />
+    <link rel="alternate" type="text/html" href="https://comicss.art/comics/270/new-project.html"/>
+    <id>https://comicss.art/comics/270</id>
+    <updated>2026-11-21T00:00:00Z</updated>
+    <summary>New Cartoon: New Project</summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><img src="https://comicss.art/comics/270/new-project.png" alt="comic with 4 panels in a 2x2 grid. Two characters look at each other, one says Let's use Tailwind in our next project. In the second panel the characters look at each other in silence. In the third panel the second character says No. The last panel is just the words The End." /></p>
+      </div>
+    </content>
+    <rights>Copyright 2026 Alvaro Montoro</rights>
+    <author>
+      <name>Alvaro Montoro</name>
+      <email>alvaromontoro@gmail.com</email>
+      <uri>https://alvaromontoro.com</uri>
+    </author>
+  </entry>
 </feed>
