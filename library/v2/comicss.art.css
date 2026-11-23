@@ -656,11 +656,22 @@ css-person,
     }
 
     .face {
-      background: var(--skin);
+      --secondary: linear-gradient(#0000, #0000 50%);
+      background: 
+        var(--secondary),
+        var(--skin);
       border: 0.4em solid;
       border-radius: 3em;
       height: 100%;
       width: 100%;
+
+      [face="angry"] & {
+        --secondary: linear-gradient(#f004, #0000 50%);
+      }
+
+      [face="annoyed"] & {
+        --secondary: linear-gradient(#00f2, #0000 70%);
+      }
 
       [head="bald"] & {
         border-radius: 5em 5em 3em 3em;
@@ -716,6 +727,17 @@ css-person,
 
         [mouth~="no-mouth"] & {
           display: none;
+        }
+
+        [mouth~="oops"] & {
+          width: 40%;
+          height: 10%;
+          border: 0.35em solid;
+          border-radius: 4em;
+          background:
+          repeating-linear-gradient(90deg, #0000 0 20%, #000 0 25%),
+            linear-gradient(#0000 40%, #000 0 65%, #0000 0),
+            #fff;
         }
         
         [mouth~="smile"] & {

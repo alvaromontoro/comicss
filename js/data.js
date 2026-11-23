@@ -2078,4 +2078,11 @@ const posts = [
     title: "PR Review",
     ariaLabel: "Comic with 4 panels in a 2x2 grid. A person is reviewing PRs with thousands of line of code, when he runs into a PR that is only 3 lines of code. He asks the developer if he used AI for it, the developer answers no because it was a quick and easy change. The first person asks for the developer to use AI and is happy when he sees a 1,200 line of code change."
   },
+  {
+    id: 269,
+    uid: "shape-outside",
+    boxes: 4,
+    title: "shape-outside",
+    ariaLabel: "Cartoon with 4 panels in a 2x2 grid. Showing a man and a woman in front of a computer. The woman says 'With this trick, I use SVG and CSS shape-O-U-T-S-I-D-E to make text wrap around shapes!'. The man looks confused 'O-U-T-S-I-D-E? They don't you just say shape-outside?' The woman facepalms while their dog pops up in the last panel 'woof?'"
+  },
 ]
